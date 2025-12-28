@@ -1,23 +1,26 @@
-import string
 from decimal import Decimal
+
 from django.conf import settings
-from django.db import models
-from django.urls import reverse
 from django.core.exceptions import ValidationError
 from django.core.validators import FileExtensionValidator
 from django.db import connection
+from django.db import models
 from django.db.models import Sum, F, Value as V
 from django.db.models.functions import Coalesce
-from treebeard.mp_tree import MP_Node, get_result_class
+from django.urls import reverse
+from treebeard.mp_tree import MP_Node
+
 from construbot.core import utils
 from construbot.users.models import Company
 
 
 # Create your models here.
 class Contraparte(models.Model):
-    """El modelo que representa la relación entre una
-    empresa (Company) perteneciente al comprador (Customer)
-    y su contraparte en relaciones comerciales (modelo actual)"""
+    """
+        El modelo que representa la relación entre una
+        empresa (Company) perteneciente al comprador (Customer)
+        y su contraparte en relaciones comerciales (modelo actual)
+    """
     TIPOS = (
         ('CLIENTE', 'Cliente'), ('DESTAJISTA', 'Destajista'), ('SUBCONTRATISTA', 'Subcontratista')
     )
@@ -106,7 +109,7 @@ class Destinatario(models.Model):
         return self.destinatario_text
 
 
-class ContratoSet(models.QuerySet):
+class ContratoSet(models.Manager):
 
     def asignaciones(self, user, model):
         # asumimos que el atributo en el modelo Contrato
@@ -134,7 +137,7 @@ class Contrato(MP_Node):
     anticipo = models.DecimalField('anticipo', max_digits=4, decimal_places=2, default=0.0)
 
     objects = models.Manager()
-    especial = ContratoSet.as_manager()
+    especial = ContratoSet()
 
     @classmethod
     def get_last_root_node(cls):
@@ -690,9 +693,9 @@ class Vertices(models.Model):
 
 class ImageEstimateConceptSet(models.QuerySet):
 
-    def size_per_customer(self, customer):
+    def size_per_company(self, company):
         return self.filter(
-                estimateconcept__concept__project__cliente__company__customer=customer
+                estimateconcept__concept__project__cliente__company_=company
             ).aggregate(Sum('size'))['size__sum']
 
 

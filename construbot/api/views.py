@@ -1,5 +1,5 @@
 import json
-from operator import itemgetter
+
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Group
 from django.core.exceptions import ValidationError
@@ -7,18 +7,21 @@ from rest_framework import generics
 from rest_framework.permissions import IsAdminUser
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from construbot.users.models import Company, Customer, NivelAcceso
-from construbot.api.serializers import CustomerSerializer, UserSerializer
-from construbot.proyectos.models import Contraparte, Sitio, Destinatario, \
-    Contrato, Estimate, Concept, Units, EstimateConcept
+
+from construbot.users.models import Company, NivelAcceso
+from construbot.api.serializers import UserSerializer
+from construbot.proyectos.models import (
+    Contraparte,
+    Sitio,
+    Destinatario,
+    Contrato,
+    Estimate,
+    Concept,
+    Units,
+    EstimateConcept
+)
 
 User = get_user_model()
-
-
-class CustomerList(generics.ListCreateAPIView):
-    permission_classes = (IsAdminUser,)
-    serializer_class = CustomerSerializer
-    queryset = Customer.objects.all()
 
 
 class UserRetrive(generics.RetrieveAPIView):
@@ -40,15 +43,13 @@ def email_uniqueness(request):
 
 
 @api_view(['POST'])
-def create_customer_user_and_company(request):
+def create_company_user_and_company(request):
     group_a, a_created = Group.objects.get_or_create(name='Administrators')
     group_p, b_created = Group.objects.get_or_create(name='Proyectos')
     group_u, c_created = Group.objects.get_or_create(name='Users')
-    customer = Customer.objects.create(customer_name=request.data.get('customer'))
-    company = Company.objects.create(customer=customer, company_name=request.data.get('company'))
+    company = Company.objects.create(company_name=request.data.get('company'))
     nivel, nivel_created = NivelAcceso.objects.get_or_create(nivel=request.data.get('permission_level', 1))
     user = User(
-        customer=customer,
         username=request.data.get('name'),
         email=request.data.get('email'),
         nivel_acceso=nivel
@@ -59,7 +60,7 @@ def create_customer_user_and_company(request):
     except ValidationError as e:
         return Response({'success': False, 'errors': e})
     user.save()
-    user.company.add(Company.objects.get(id=company.id))
+    user.company = Company.objects.get(id=company.id)
     user.groups.add(*[group_a, group_p, group_u])
     return Response(
         {
@@ -86,9 +87,8 @@ class DataMigration(object):
         for nombre, obj in json_data.items():
             company, company_created = Company.objects.get_or_create(
                 company_name=obj['company'],
-                customer=request.user.customer
             )
-            request.user.company.add(company)
+            request.user.company = company
             cliente, cliente_created = Contraparte.objects.get_or_create(
                 company=company,
                 cliente_name=obj['cliente_name'],
@@ -102,9 +102,8 @@ class DataMigration(object):
         for nombre, obj in json_data.items():
             company, company_created = Company.objects.get_or_create(
                 company_name=obj['company'],
-                customer=request.user.customer
             )
-            request.user.company.add(company)
+            request.user.company = company
             cliente, cliente_created = Contraparte.objects.get_or_create(
                 company=company,
                 cliente_name='Migracion',
@@ -121,9 +120,8 @@ class DataMigration(object):
     def destinatario_migration(request):
         company, company_created = Company.objects.get_or_create(
             company_name=request.data.get('company'),
-            customer=request.user.customer
         )
-        request.user.company.add(company)
+        request.user.company = company
         cliente, cliente_created = Contraparte.objects.get_or_create(
             company=company,
             cliente_name=request.data.get('cliente'),
@@ -143,9 +141,9 @@ class DataMigration(object):
         for obj in data:
             company, company_created = Company.objects.get_or_create(
                 company_name=obj['company'],
-                customer=request.user.customer
+
             )
-            request.user.company.add(company)
+            request.user.company = company
             cliente, cliente_created = Contraparte.objects.get_or_create(
                 company=company,
                 cliente_name=obj['cliente'],

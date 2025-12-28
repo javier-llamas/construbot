@@ -24,7 +24,7 @@ class FunctionalTest(StaticLiveServerTestCase):
         self.actions = ActionChains(self.browser)
         self.user_factory = user_factories.UserFactory
         self.user = self.user_factory()
-        company_test = user_factories.CompanyFactory(customer=self.user.customer)
+        company_test = user_factories.CompanyFactory()
         admin = user_factories.GroupFactory(name='Administrators')
         users = user_factories.GroupFactory(name='users')
         proyects = user_factories.GroupFactory(name='proyectos')

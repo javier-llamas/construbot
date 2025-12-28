@@ -1,12 +1,12 @@
-from django import forms
-from django.urls import reverse
-from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from django.utils.translation import ugettext_lazy as _
-from django.contrib.auth.models import Group
-from django.contrib.auth.forms import ReadOnlyPasswordHashField
-from .models import Company
 from dal import autocomplete
+from django import forms
+from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, ReadOnlyPasswordHashField
+from django.contrib.auth.models import Group
+from django.urls import reverse
+from django.utils.translation import ugettext_lazy as _
+
+from .models import Company
 
 User = get_user_model()
 
@@ -18,12 +18,13 @@ class UserForm(UserCreationForm):
     )
 
     def signup(self, request, user):
-        empresa = Company.objects.create(company_name=self.cleaned_data['company'], customer=user.customer)
+        empresa = Company.objects.create(company_name=self.cleaned_data['company'])
         user_group, created = Group.objects.get_or_create(name='Users')
         proyectos_groups, proy_created = Group.objects.get_or_create(name='Proyectos')
-        user.company.add(empresa)
+        user.company = empresa
         user.groups.add(user_group)
         user.groups.add(proyectos_groups)
+        user.save()
 
     class Meta:
         model = User
@@ -31,7 +32,6 @@ class UserForm(UserCreationForm):
             'is_new',
             'openpay',
             'password',
-            'customer',
             'company',
             'last_login',
             'is_superuser',
@@ -51,7 +51,7 @@ class UsuarioInterno(UserCreationForm):
 
     def __init__(self, user, *args, **kwargs):
         super(UsuarioInterno, self).__init__(*args, **kwargs)
-        self.fields['company'].queryset = Company.objects.filter(customer=user.customer)
+        self.fields['company'].queryset = Company.objects.get(pk=user.company.pk)
 
     def save(self, commit=True):
         user = super(UsuarioInterno, self).save(commit=True)
@@ -101,7 +101,6 @@ class UsuarioInterno(UserCreationForm):
         }
         widgets = {
             'groups': forms.HiddenInput(),
-            'customer': forms.HiddenInput(),
             'nivel_acceso': autocomplete.ModelSelect2(
                 url='proyectos:nivelacceso-autocomplete'
             ),
@@ -162,7 +161,6 @@ class UsuarioEdit(UserChangeForm):
         }
         widgets = {
             'password': forms.HiddenInput(),
-            'customer': forms.HiddenInput(),
             'company': autocomplete.ModelSelect2Multiple(
                 url='proyectos:company-autocomplete',
                 attrs={
@@ -190,7 +188,6 @@ class UsuarioEditNoAdmin(UserChangeForm):
         }
         widgets = {
             'password': forms.HiddenInput(),
-            'customer': forms.HiddenInput(),
             'company': autocomplete.ModelSelect2Multiple(
                 url='proyectos:company-autocomplete',
                 attrs={
@@ -218,12 +215,12 @@ class CompanyForm(forms.ModelForm):
             'company_name': 'Nombre corto de la empresa, con la cual sea más sencillo identificarla.',
         }
         widgets = {
-            'customer': forms.HiddenInput(),
         }
 
     def save(self):
         company = super(CompanyForm, self).save()
-        self.user.company.add(company.id)
+        self.user.company = company
+        self.user.save()
         return company
 
 
@@ -241,5 +238,4 @@ class CompanyEditForm(forms.ModelForm):
             'company_name': 'Nombre corto'
         }
         widgets = {
-            'customer': forms.HiddenInput(),
         }

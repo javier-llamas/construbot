@@ -1,16 +1,32 @@
 import importlib
-from django.conf import settings
+
 from django import http
-from django.contrib.auth import get_user_model
+from django.conf import settings
 from django.core.exceptions import PermissionDenied
-from django.urls import reverse
+from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404, redirect
-from django.views.generic import View, DetailView, ListView, RedirectView, UpdateView, CreateView, TemplateView, DeleteView
-from django.http import JsonResponse
-from .auth import AuthenticationTestMixin
+from django.urls import reverse
+from django.views.generic import (
+    View,
+    DetailView,
+    ListView,
+    RedirectView,
+    UpdateView,
+    CreateView,
+    TemplateView,
+    DeleteView
+)
+
 from .apps import UsersConfig
+from .auth import AuthenticationTestMixin
+from .forms import (
+    UsuarioInterno,
+    UsuarioEdit,
+    UsuarioEditNoAdmin,
+    CompanyForm,
+    CompanyEditForm
+)
 from .models import Company
-from .forms import UsuarioInterno, UsuarioEdit, UsuarioEditNoAdmin, CompanyForm, CompanyEditForm
 
 try:
     Authclass = importlib.import_module(settings.CONSTRUBOT_AUTHORIZATION_CLASS)
@@ -49,9 +65,6 @@ class UsersMenuMixin(Authclass.AuthenticationTestMixin):
             'User': {
                 'company': self.request.user.currently_at
             },
-            'Company': {
-                'customer': self.request.user.customer
-            }
         }
         return company_query[opcion]
 
@@ -59,7 +72,7 @@ class UsersMenuMixin(Authclass.AuthenticationTestMixin):
 class UserMixin(UsersMenuMixin):
 
     def check_obj_permissions(self, obj):
-        if self.request.user.customer != obj.customer and self.request.user.nivel_acceso.nivel < 5:
+        if self.request.user.company != obj.company and self.request.user.nivel_acceso.nivel < 5:
             raise PermissionDenied('El usuario no tiene acceso a permisos fuera de su cuenta.')
 
     def get_nivel_permiso(self):
@@ -71,7 +84,7 @@ class UserMixin(UsersMenuMixin):
     def get_object(self, queryset=None):
         if not self.kwargs.get('username', None):
             return self.request.user
-        return User.objects.select_related('customer').get(username=self.kwargs['username'])
+        return User.objects.get(username=self.kwargs['username'])
 
 
 class UserDetailView(UserMixin, DetailView):
@@ -104,7 +117,7 @@ class RemoveIsNewUserStatus(View):
         obj = User.objects.get(pk=self.kwargs['pk'])
         obj.is_new = False
         obj.save()
-        return JsonResponse({'exito': True})
+        return http.JsonResponse({'exito': True})
 
 
 class UserUpdateView(UserMixin, UpdateView):
@@ -149,7 +162,6 @@ class UserCreateView(UsersMenuMixin, CreateView):
 
     def get_initial(self):
         initial = super(UserCreateView, self).get_initial()
-        initial['customer'] = self.request.user.customer
         return initial
 
 
@@ -167,7 +179,6 @@ class CompanyCreateView(UsersMenuMixin, CreateView):
 
     def get_initial(self):
         initial = super(CompanyCreateView, self).get_initial()
-        initial['customer'] = self.request.user.customer
         return initial
 
 
@@ -222,7 +233,7 @@ class UserListView(UsersMenuMixin, ListView):
 
     def get_context_data(self, **kwargs):
         context = super(UserListView, self).get_context_data(**kwargs)
-        context['special_users'] = User.objects.filter(customer=self.request.user.customer).filter(company__isnull=True)
+        context['special_users'] = User.objects.filter(company__isnull=True)
         return context
 
 
@@ -230,37 +241,13 @@ class CompanyChangeView(AuthenticationTestMixin, TemplateView):
     app_label_name = 'redirect'
 
     def get(self, request, *args, **kwargs):
-        new_company = get_object_or_404(
-            Company,
-            company_name=self.kwargs['company'],
-            customer=self.request.user.customer
-        )
-        if new_company in self.request.user.company.all():
-            self.request.user.currently_at = new_company
-            self.request.user.save()
-            return http.HttpResponse(self.request.user.currently_at.company_name)
-        else:
-            raise PermissionDenied(
-                f'El usuario {self.request.user.username} no tiene acceso a {new_company.company_name}'
-            )
+        raise NotImplementedError("Este metodo ya no esta soportado.")
 
 
 class CompanyChangeViewFromList(CompanyChangeView):
 
     def get(self, request, *args, **kwargs):
-        new_company = get_object_or_404(
-            Company,
-            pk=self.kwargs['pk'],
-            customer=self.request.user.customer
-        )
-        if new_company in self.request.user.company.all():
-            self.request.user.currently_at = new_company
-            self.request.user.save()
-            return redirect('proyectos:proyect_dashboard')
-        else:
-            raise PermissionDenied(
-                f'El usuario {self.request.user.username} no tiene acceso a {new_company.company_name}'
-            )
+        raise NotImplementedError("Este metodo ya no esta soportado.")
 
 
 class CompanyListView(UsersMenuMixin, ListView):

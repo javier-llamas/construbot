@@ -58,10 +58,10 @@ class _PasswordChangeView(BaseContext, AuthenticationTestMixin, PasswordChangeVi
     def get_object(self, queryset=None):
         if not self.kwargs.get('username', None):
             return self.request.user
-        return User.objects.select_related('customer').get(username=self.kwargs['username'])
+        return User.objects.get(username=self.kwargs['username'])
 
     def check_obj_permissions(self, obj):
-        if self.request.user.customer != obj.customer and self.request.user.nivel_acceso.nivel < 5:
+        if self.request.user.nivel_acceso.nivel < 5:
             raise PermissionDenied('El usuario no tiene acceso a permisos fuera de su cuenta.')
 
     def get_form_class(self):

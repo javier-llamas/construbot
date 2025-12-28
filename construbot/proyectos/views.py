@@ -1,22 +1,46 @@
 import importlib
-import json
 from decimal import Decimal
+
 from django import shortcuts
 from django.conf import settings
-from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView, TemplateView
+from django.views.generic import (
+    ListView,
+    CreateView,
+    DetailView,
+    UpdateView,
+    DeleteView,
+    TemplateView
+)
 from django.urls import reverse, reverse_lazy
 from django.db.models import Max, F, Q
 from django.db.models.functions import Lower
 from django.http import JsonResponse
 from django.contrib.auth import get_user_model
 from openpyxl import load_workbook
+
 from construbot.users.models import Company, NivelAcceso
 from construbot.proyectos import forms
 from construbot.core.utils import BasicAutocomplete, get_object_403_or_404
+
 from .apps import ProyectosConfig
-from .models import Contrato, Contraparte, Sitio, Units, Concept, Destinatario, Estimate, Retenciones
-from .utils import contratosvigentes, estimacionespendientes_facturacion, estimacionespendientes_pago,\
-    totalsinfacturar, total_sinpago, path_processing
+from .models import (
+    Contrato,
+    Contraparte,
+    Sitio,
+    Units,
+    Concept,
+    Destinatario,
+    Estimate,
+    Retenciones
+)
+from .utils import (
+    contratosvigentes,
+    estimacionespendientes_facturacion,
+    estimacionespendientes_pago,
+    totalsinfacturar,
+    total_sinpago,
+    path_processing
+)
 
 try:
     auth = importlib.import_module(settings.CONSTRUBOT_AUTHORIZATION_CLASS)

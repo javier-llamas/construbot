@@ -19,22 +19,16 @@ class Round(Func):
 def get_directory_path(instance, filename):
     date_str = strftime('%Y-%m-%d-%H-%M-%S')
     instance_model = instance._meta.verbose_name_plural
-    instance_customer = instance.contraparte.company.customer
     instance_company = instance.contraparte.company.company_name
-    return '{0}-{1}/{2}/{3}/{4}-{5}'.format(
-        instance_customer.id, instance_customer.customer_name, instance_company, instance_model, date_str, filename
-    )
+    return f'{instance_company}/{instance_model}/{date_str}-{filename}'
 
 
 def get_image_directory_path(instance, filename):
     date_str = strftime('%Y-%m-%d-%H-%M-%S')
     instance_model = instance._meta.verbose_name_plural
-    instance_customer = instance.estimateconcept.concept.project.contraparte.company.customer
     instance_company = instance.estimateconcept.concept.project.contraparte.company.company_name
 
-    return '{0}-{1}/{2}/{3}/{4}-{5}'.format(
-        instance_customer.id, instance_customer.customer_name, instance_company, instance_model, date_str, filename
-    )
+    return f'{instance_company}/{instance_model}/{date_str}-{filename}'
 
 
 def get_object_403_or_404(model, user, **kwargs):

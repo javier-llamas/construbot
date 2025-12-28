@@ -1,29 +1,14 @@
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.validators import validate_email
-from django.urls import reverse
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
-
-
-class Customer(models.Model):
-    customer_name = models.CharField(max_length=120, blank=True, null=True)
-
-    class Meta:
-        verbose_name = 'Customer'
-        verbose_name_plural = 'Customers'
-
-    def __str__(self):
-        if self.customer_name is not None:
-            return self.customer_name
-        else:
-            return str(self.id)
 
 
 class Company(models.Model):
     full_name = models.CharField(max_length=250, blank=True, null=True)
     company_name = models.CharField(max_length=120)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'Company'
@@ -55,11 +40,6 @@ class ExtendUserManager(UserManager):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         try:
-            customer = Customer.objects.get(id=1)
-        except ObjectDoesNotExist:
-            customer = Customer.objects.create()
-        extra_fields.setdefault('customer', customer)
-        try:
             nivel = NivelAcceso.objects.get(nivel=6)
         except ObjectDoesNotExist:
             nivel = NivelAcceso.objects.create(nombre='Superuser', nivel=6)
@@ -85,11 +65,7 @@ class NivelAcceso(models.Model):
 
 class AbstractConstrubotUser(AbstractUser):
 
-    company = models.ManyToManyField(Company)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    currently_at = models.ForeignKey(
-        Company, on_delete=models.SET_NULL, blank=True, null=True, related_name='currently_at'
-    )
+    company = models.ForeignKey(Company, on_delete=models.CASCADE, blank=True, null=True)
     last_updated = models.DateTimeField(auto_now=True)
     name = models.CharField(_('Name of User'), blank=True, max_length=255)
     puesto = models.CharField(max_length=75, blank=True, null=True)
