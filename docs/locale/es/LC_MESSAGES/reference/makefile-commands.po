@@ -11,305 +11,306 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../reference/makefile-commands.rst:3
 msgid "Makefile Commands"
-msgstr ""
+msgstr "Comandos de archivos Make"
 
 #: ../../reference/makefile-commands.rst:5
 msgid "Complete reference for development Makefile commands."
-msgstr ""
+msgstr "Referencia completa para el desarrollo de comandos Makefile."
 
 #: ../../reference/makefile-commands.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../reference/makefile-commands.rst:10
 msgid "Construbot includes a Makefile with convenient development commands."
 msgstr ""
+"Construbot incluye un Makefile con convenientes comandos de desarrollo."
 
 #: ../../reference/makefile-commands.rst:12
 msgid "**Location:** ``/Makefile`` (project root)"
-msgstr ""
+msgstr "**Ubicación:** ``/Makefile`` (raíz del proyecto)"
 
 #: ../../reference/makefile-commands.rst:15
 msgid "Docker Commands"
-msgstr ""
+msgstr "Comandos acoplables"
 
 #: ../../reference/makefile-commands.rst:18
 msgid "Development"
-msgstr ""
+msgstr "Desarrollo"
 
 #: ../../reference/makefile-commands.rst:20
 msgid "**make dev**"
-msgstr ""
+msgstr "**hacer desarrollador**"
 
 #: ../../reference/makefile-commands.rst:22
 msgid "Start development environment"
-msgstr ""
+msgstr "Iniciar entorno de desarrollo"
 
 #: ../../reference/makefile-commands.rst:30
 msgid "**make buildev**"
-msgstr ""
+msgstr "**hacer buildev**"
 
 #: ../../reference/makefile-commands.rst:32
 msgid "Build and start development environment"
-msgstr ""
+msgstr "Construir e iniciar un entorno de desarrollo."
 
 #: ../../reference/makefile-commands.rst:39
 msgid "**make buildprod**"
-msgstr ""
+msgstr "**hacer buildprod**"
 
 #: ../../reference/makefile-commands.rst:41
 msgid "Build production environment"
-msgstr ""
+msgstr "Construir un entorno de producción"
 
 #: ../../reference/makefile-commands.rst:49
 msgid "Container Management"
-msgstr ""
+msgstr "Gestión de contenedores"
 
 #: ../../reference/makefile-commands.rst:51
 msgid "**make down**"
-msgstr ""
+msgstr "**hacer abajo**"
 
 #: ../../reference/makefile-commands.rst:53
 msgid "Stop all containers"
-msgstr ""
+msgstr "Detener todos los contenedores"
 
 #: ../../reference/makefile-commands.rst:59
 msgid "**make clean**"
-msgstr ""
+msgstr "**hacer limpio**"
 
 #: ../../reference/makefile-commands.rst:61
 msgid "Remove all containers"
-msgstr ""
+msgstr "Retire todos los contenedores"
 
 #: ../../reference/makefile-commands.rst:67
 msgid "**make cleandb**"
-msgstr ""
+msgstr "**hacer cleandb**"
 
 #: ../../reference/makefile-commands.rst:69
 msgid "Remove database containers and volumes"
-msgstr ""
+msgstr "Eliminar contenedores y volúmenes de bases de datos"
 
 #: ../../reference/makefile-commands.rst:76
 msgid "**make cleanhard**"
-msgstr ""
+msgstr "**hacer limpio**"
 
 #: ../../reference/makefile-commands.rst:78
 msgid "Remove everything (containers, volumes, images)"
-msgstr ""
+msgstr "Eliminar todo (contenedores, volúmenes, imágenes)"
 
 #: ../../reference/makefile-commands.rst:86
 msgid "Database Commands"
-msgstr ""
+msgstr "Comandos de base de datos"
 
 #: ../../reference/makefile-commands.rst:88
 msgid "**make migrations**"
-msgstr ""
+msgstr "**realizar migraciones**"
 
 #: ../../reference/makefile-commands.rst:90
 msgid "Create and apply migrations"
-msgstr ""
+msgstr "Crear y aplicar migraciones"
 
 #: ../../reference/makefile-commands.rst:97
 msgid "**make superuser**"
-msgstr ""
+msgstr "**hacer superusuario**"
 
 #: ../../reference/makefile-commands.rst:99
 msgid "Create Django superuser"
-msgstr ""
+msgstr "Crear superusuario Django"
 
 #: ../../reference/makefile-commands.rst:106
 msgid "**make poblar**"
-msgstr ""
+msgstr "**hacer poblar**"
 
 #: ../../reference/makefile-commands.rst:108
 msgid "Populate database with test data"
-msgstr ""
+msgstr "Llenar la base de datos con datos de prueba"
 
 #: ../../reference/makefile-commands.rst:116
 msgid "Development Tools"
-msgstr ""
+msgstr "Herramientas de desarrollo"
 
 #: ../../reference/makefile-commands.rst:118
 msgid "**make shell**"
-msgstr ""
+msgstr "**hacer concha**"
 
 #: ../../reference/makefile-commands.rst:120
 msgid "Open Django shell"
-msgstr ""
+msgstr "Abrir el shell de Django"
 
 #: ../../reference/makefile-commands.rst:127
 msgid "**make runserver**"
-msgstr ""
+msgstr "**crear servidor de ejecución**"
 
 #: ../../reference/makefile-commands.rst:129
 msgid "Run server without Docker"
-msgstr ""
+msgstr "Ejecutar servidor sin Docker"
 
 #: ../../reference/makefile-commands.rst:138
 msgid "Testing Commands"
-msgstr ""
+msgstr "Comandos de prueba"
 
 #: ../../reference/makefile-commands.rst:140
 msgid "**make test**"
-msgstr ""
+msgstr "**hacer prueba**"
 
 #: ../../reference/makefile-commands.rst:142
 msgid "Run full test suite with coverage"
-msgstr ""
+msgstr "Ejecute un conjunto de pruebas completo con cobertura"
 
 #: ../../reference/makefile-commands.rst:149
 msgid "**make localtest**"
-msgstr ""
+msgstr "**hacer prueba local**"
 
 #: ../../reference/makefile-commands.rst:151
 msgid "Run tests locally (no Docker)"
-msgstr ""
+msgstr "Ejecute pruebas localmente (sin Docker)"
 
 #: ../../reference/makefile-commands.rst:157
 msgid "**make warningtest**"
-msgstr ""
+msgstr "**hacer prueba de advertencia**"
 
 #: ../../reference/makefile-commands.rst:159
 msgid "Run tests with warnings enabled"
-msgstr ""
+msgstr "Ejecute pruebas con las advertencias habilitadas"
 
 #: ../../reference/makefile-commands.rst:165
 msgid "**make current**"
-msgstr ""
+msgstr "**actualizar**"
 
 #: ../../reference/makefile-commands.rst:167
 msgid "Run tests tagged as 'current'"
-msgstr ""
+msgstr "Ejecutar pruebas etiquetadas como 'actuales'"
 
 #: ../../reference/makefile-commands.rst:175
 msgid "Requirements Management"
-msgstr ""
+msgstr "Gestión de requisitos"
 
 #: ../../reference/makefile-commands.rst:177
 msgid "**make mkenv**"
-msgstr ""
+msgstr "**hacer mkenv**"
 
 #: ../../reference/makefile-commands.rst:179
 msgid "Sync local requirements"
-msgstr ""
+msgstr "Sincronizar requisitos locales"
 
 #: ../../reference/makefile-commands.rst:186
 msgid "**make pipcompile**"
-msgstr ""
+msgstr "**hacer pipcompile**"
 
 #: ../../reference/makefile-commands.rst:188
 msgid "Compile requirements files"
-msgstr ""
+msgstr "Compilar archivos de requisitos"
 
 #: ../../reference/makefile-commands.rst:196
 msgid "Documentation Commands"
-msgstr ""
+msgstr "Comandos de documentación"
 
 #: ../../reference/makefile-commands.rst:198
 msgid "These commands are in ``docs/Makefile``:"
-msgstr ""
+msgstr "Estos comandos están en ``docs/Makefile``:"
 
 #: ../../reference/makefile-commands.rst:200
 msgid "**make html**"
-msgstr ""
+msgstr "**hacer html**"
 
 #: ../../reference/makefile-commands.rst:202
 msgid "Build English documentation"
-msgstr ""
+msgstr "Construir documentación en inglés"
 
 #: ../../reference/makefile-commands.rst:210
 msgid "**make html-es**"
-msgstr ""
+msgstr "**hacer html-es**"
 
 #: ../../reference/makefile-commands.rst:212
 msgid "Build Spanish documentation"
-msgstr ""
+msgstr "Construir documentación en español"
 
 #: ../../reference/makefile-commands.rst:220
 msgid "**make html-all**"
-msgstr ""
+msgstr "**hacer html-todo**"
 
 #: ../../reference/makefile-commands.rst:222
 msgid "Build both English and Spanish"
-msgstr ""
+msgstr "Construye inglés y español."
 
 #: ../../reference/makefile-commands.rst:229
 msgid "**make update-translations**"
-msgstr ""
+msgstr "**realizar traducciones actualizadas**"
 
 #: ../../reference/makefile-commands.rst:231
 msgid "Update translation files"
-msgstr ""
+msgstr "Actualizar archivos de traducción"
 
 #: ../../reference/makefile-commands.rst:239
 msgid "**make livehtml**"
-msgstr ""
+msgstr "**hacer livehtml**"
 
 #: ../../reference/makefile-commands.rst:241
 msgid "Auto-rebuild documentation"
-msgstr ""
+msgstr "Documentación de reconstrucción automática"
 
 #: ../../reference/makefile-commands.rst:250
 msgid "Common Workflows"
-msgstr ""
+msgstr "Flujos de trabajo comunes"
 
 #: ../../reference/makefile-commands.rst:253
 msgid "Fresh Start"
-msgstr ""
+msgstr "Nuevo comienzo"
 
 #: ../../reference/makefile-commands.rst:262
 msgid "Daily Development"
-msgstr ""
+msgstr "Desarrollo diario"
 
 #: ../../reference/makefile-commands.rst:272
 msgid "Reset Database"
-msgstr ""
+msgstr "Restablecer base de datos"
 
 #: ../../reference/makefile-commands.rst:282
 msgid "Update Dependencies"
-msgstr ""
+msgstr "Actualizar dependencias"
 
 #: ../../reference/makefile-commands.rst:291
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../reference/makefile-commands.rst:293
 msgid "**Command not found:**"
-msgstr ""
+msgstr "**Comando no encontrado:**"
 
 #: ../../reference/makefile-commands.rst:295
 msgid "Ensure you're in project root directory."
-msgstr ""
+msgstr "Asegúrate de estar en el directorio raíz del proyecto."
 
 #: ../../reference/makefile-commands.rst:297
 msgid "**Permission denied:**"
-msgstr ""
+msgstr "**Permiso denegado:**"
 
 #: ../../reference/makefile-commands.rst:299
 msgid "Run with sudo or fix Docker permissions:"
-msgstr ""
+msgstr "Ejecute con sudo o corrija los permisos de Docker:"
 
 #: ../../reference/makefile-commands.rst:306
 msgid "**Port already in use:**"
-msgstr ""
+msgstr "**Puerto ya en uso:**"
 
 #: ../../reference/makefile-commands.rst:308
 msgid "Stop conflicting services:"
-msgstr ""
+msgstr "Detenga los servicios conflictivos:"
 
 #: ../../reference/makefile-commands.rst:315
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../reference/makefile-commands.rst:317
 msgid ":doc:`/developer/installation/docker-setup` - Docker setup guide"
@@ -322,4 +323,3 @@ msgstr ""
 #: ../../reference/makefile-commands.rst:319
 msgid ":doc:`/contributor/testing/index` - Testing guide"
 msgstr ""
-

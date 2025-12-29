@@ -11,373 +11,395 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/installation/index.rst:3
 msgid "Installation"
-msgstr ""
+msgstr "Instalación"
 
 #: ../../developer/installation/index.rst:5
 msgid ""
-"This section covers how to install and set up Construbot for development."
-" You can choose between Docker-based development (recommended) or local "
+"This section covers how to install and set up Construbot for development. "
+"You can choose between Docker-based development (recommended) or local "
 "development."
 msgstr ""
+"Esta sección cubre cómo instalar y configurar Construbot para el desarrollo."
+" Puedes elegir entre desarrollo basado en Docker (recomendado) o desarrollo "
+"local."
 
 #: ../../developer/installation/index.rst:9
 msgid "Table of Contents"
-msgstr ""
+msgstr "Tabla de contenido"
 
 #: ../../developer/installation/index.rst:12
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../developer/installation/index.rst:14
 msgid "Construbot supports two installation methods:"
-msgstr ""
+msgstr "Construbot admite dos métodos de instalación:"
 
 #: ../../developer/installation/index.rst:16
 msgid ""
-"**Docker-based Development (Recommended)** - Containerized environment "
-"with all dependencies"
+"**Docker-based Development (Recommended)** - Containerized environment with "
+"all dependencies"
 msgstr ""
+"**Desarrollo basado en Docker (recomendado)**: entorno en contenedores con "
+"todas las dependencias"
 
 #: ../../developer/installation/index.rst:17
 msgid "**Local Development** - Traditional virtual environment setup"
-msgstr ""
+msgstr "**Desarrollo local** - Configuración del entorno virtual tradicional"
 
 #: ../../developer/installation/index.rst:19
 msgid "Both methods provide a complete development environment with:"
-msgstr ""
+msgstr "Ambos métodos proporcionan un entorno de desarrollo completo con:"
 
 #: ../../developer/installation/index.rst:21
 msgid "PostgreSQL database"
-msgstr ""
+msgstr "base de datos postgresql"
 
 #: ../../developer/installation/index.rst:22
 msgid "Redis for caching and Celery"
-msgstr ""
+msgstr "Redis para almacenamiento en caché y apio"
 
 #: ../../developer/installation/index.rst:23
 msgid "MailHog for email testing (Docker only)"
-msgstr ""
+msgstr "MailHog para pruebas de correo electrónico (solo Docker)"
 
 #: ../../developer/installation/index.rst:24
 msgid "All Python dependencies"
-msgstr ""
+msgstr "Todas las dependencias de Python"
 
 #: ../../developer/installation/index.rst:27
 msgid "Prerequisites"
-msgstr ""
+msgstr "Requisitos previos"
 
 #: ../../developer/installation/index.rst:30
 msgid "Docker Method"
-msgstr ""
+msgstr "Método acoplable"
 
 #: ../../developer/installation/index.rst:32
 #: ../../developer/installation/index.rst:52
 msgid "Required:"
-msgstr ""
+msgstr "Requerido:"
 
 #: ../../developer/installation/index.rst:34
 msgid "Docker Desktop (includes Docker and Docker Compose)"
-msgstr ""
+msgstr "Docker Desktop (incluye Docker y Docker Compose)"
 
 #: ../../developer/installation/index.rst:35
 #: ../../developer/installation/index.rst:57
 msgid "Git"
-msgstr ""
+msgstr "git"
 
 #: ../../developer/installation/index.rst:36
 msgid "Make (usually pre-installed on macOS/Linux)"
-msgstr ""
+msgstr "Make (normalmente preinstalado en macOS/Linux)"
 
 #: ../../developer/installation/index.rst:38
 msgid "**Docker Desktop versions:**"
-msgstr ""
+msgstr "**Versiones de escritorio de Docker:**"
 
 #: ../../developer/installation/index.rst:40
 msgid ""
 "**macOS/Windows:** Download from https://www.docker.com/products/docker-"
 "desktop"
 msgstr ""
+"**macOS/Windows:** Descargar desde https://www.docker.com/products/docker-"
+"desktop"
 
 #: ../../developer/installation/index.rst:41
 msgid "**Linux:** Install Docker Engine and Docker Compose separately"
-msgstr ""
+msgstr "**Linux:** Instale Docker Engine y Docker Compose por separado"
 
 #: ../../developer/installation/index.rst:43
 msgid "**Minimum requirements:**"
-msgstr ""
+msgstr "**Requisitos mínimos:**"
 
 #: ../../developer/installation/index.rst:45
 msgid "4 GB RAM allocated to Docker"
-msgstr ""
+msgstr "4 GB de RAM asignados a Docker"
 
 #: ../../developer/installation/index.rst:46
 msgid "10 GB free disk space"
-msgstr ""
+msgstr "10 GB de espacio libre en disco"
 
 #: ../../developer/installation/index.rst:47
 msgid "Docker Compose v2.0+"
-msgstr ""
+msgstr "Docker Compose v2.0+"
 
 #: ../../developer/installation/index.rst:50
 msgid "Local Method"
-msgstr ""
+msgstr "Método local"
 
 #: ../../developer/installation/index.rst:54
 msgid "Python 3.9.17 or higher"
-msgstr ""
+msgstr "Python 3.9.17 o superior"
 
 #: ../../developer/installation/index.rst:55
 msgid "PostgreSQL 12+"
-msgstr ""
+msgstr "PostgreSQL 12+"
 
 #: ../../developer/installation/index.rst:56
 msgid "Redis 6+"
-msgstr ""
+msgstr "Redis 6+"
 
 #: ../../developer/installation/index.rst:58
 msgid "pip and virtualenv"
-msgstr ""
+msgstr "pip y virtualenv"
 
 #: ../../developer/installation/index.rst:60
 msgid "**Installation guides:**"
-msgstr ""
+msgstr "**Guías de instalación:**"
 
 #: ../../developer/installation/index.rst:62
 msgid "**macOS:** Use Homebrew: ``brew install python@3.9 postgresql redis``"
 msgstr ""
+"**macOS:** Utilice Homebrew: ``brew install python@3.9 postgresql redis``"
 
 #: ../../developer/installation/index.rst:63
 msgid ""
 "**Ubuntu/Debian:** ``sudo apt-get install python3.9 postgresql redis-"
 "server``"
 msgstr ""
+"**Ubuntu/Debian:** ``sudo apt-get install python3.9 postgresql redis-"
+"server``"
 
 #: ../../developer/installation/index.rst:64
 msgid "**Windows:** Download installers from official websites"
-msgstr ""
+msgstr "**Windows:** Descargue instaladores de sitios web oficiales"
 
 #: ../../developer/installation/index.rst:67
 msgid "Quick Start"
-msgstr ""
+msgstr "Inicio rápido"
 
 #: ../../developer/installation/index.rst:70
 msgid "Docker Method (5 minutes)"
-msgstr ""
+msgstr "Método Docker (5 minutos)"
 
 #: ../../developer/installation/index.rst:87
 msgid "**That's it!** The application is now running with:"
-msgstr ""
+msgstr "**¡Eso es todo!** La aplicación ahora se está ejecutando con:"
 
 #: ../../developer/installation/index.rst:89
 msgid "Django on http://localhost:8000"
-msgstr ""
+msgstr "Django en http://localhost:8000"
 
 #: ../../developer/installation/index.rst:90
 msgid "MailHog on http://localhost:8025"
-msgstr ""
+msgstr "MailHog en http://localhost:8025"
 
 #: ../../developer/installation/index.rst:91
 msgid "PostgreSQL on localhost:5432"
-msgstr ""
+msgstr "PostgreSQL en localhost: 5432"
 
 #: ../../developer/installation/index.rst:92
 msgid "Redis on localhost:6379"
-msgstr ""
+msgstr "Redis en localhost: 6379"
 
 #: ../../developer/installation/index.rst:95
 msgid "Local Method (10 minutes)"
-msgstr ""
+msgstr "Método Local (10 minutos)"
 
 #: ../../developer/installation/index.rst:127
 msgid "Next Steps"
-msgstr ""
+msgstr "Próximos pasos"
 
 #: ../../developer/installation/index.rst:129
 msgid "After installation:"
-msgstr ""
+msgstr "Después de la instalación:"
 
 #: ../../developer/installation/index.rst:131
 msgid "**Populate test data:** Run ``make poblar`` to add sample data"
 msgstr ""
+"**Completar datos de prueba:** Ejecute ``make poblar`` para agregar datos de"
+" muestra"
 
 #: ../../developer/installation/index.rst:132
 msgid "**Explore the dashboard:** Log in with your superuser credentials"
 msgstr ""
+"**Explore el panel:** Inicie sesión con sus credenciales de superusuario"
 
 #: ../../developer/installation/index.rst:133
 msgid "**Read the architecture docs:** :doc:`../architecture/overview`"
 msgstr ""
+"**Lea los documentos de arquitectura:** :doc:`../architecture/overview`"
 
 #: ../../developer/installation/index.rst:134
 msgid "**Check configuration options:** :doc:`configuration`"
-msgstr ""
+msgstr "**Verifique las opciones de configuración:** :doc:`configuración`"
 
 #: ../../developer/installation/index.rst:137
 msgid "Detailed Guides"
-msgstr ""
+msgstr "Guías detalladas"
 
 #: ../../developer/installation/index.rst:148
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../developer/installation/index.rst:151
 msgid "Docker Issues"
-msgstr ""
+msgstr "Problemas con Docker"
 
 #: ../../developer/installation/index.rst:153
 msgid "**\"Port already in use\" error:**"
-msgstr ""
+msgstr "**Error \"Puerto ya en uso\":**"
 
 #: ../../developer/installation/index.rst:161
 msgid "**\"No space left on device\":**"
-msgstr ""
+msgstr "**\"No queda espacio en el dispositivo\":**"
 
 #: ../../developer/installation/index.rst:169
 msgid "**Containers won't start:**"
-msgstr ""
+msgstr "**Los contenedores no se inician:**"
 
 #: ../../developer/installation/index.rst:181
 msgid "Local Installation Issues"
-msgstr ""
+msgstr "Problemas de instalación local"
 
 #: ../../developer/installation/index.rst:183
 msgid "**\"pg_config executable not found\":**"
-msgstr ""
+msgstr "**\"ejecutable pg_config no encontrado\":**"
 
 #: ../../developer/installation/index.rst:191
 msgid "**\"Python.h: No such file\":**"
-msgstr ""
+msgstr "**\"Python.h: No existe tal archivo\":**"
 
 #: ../../developer/installation/index.rst:199
 msgid "**Database connection errors:**"
-msgstr ""
+msgstr "**Errores de conexión a la base de datos:**"
 
 #: ../../developer/installation/index.rst:201
 msgid "Check your ``.env`` file:"
-msgstr ""
+msgstr "Verifique su archivo ``.env``:"
 
 #: ../../developer/installation/index.rst:207
 msgid "Make sure PostgreSQL is running:"
-msgstr ""
+msgstr "Asegúrese de que PostgreSQL se esté ejecutando:"
 
 #: ../../developer/installation/index.rst:215
 msgid "Environment Variables"
-msgstr ""
+msgstr "Variables de entorno"
 
 #: ../../developer/installation/index.rst:217
 msgid "**Missing .env file:**"
-msgstr ""
+msgstr "**Falta el archivo .env:**"
 
 #: ../../developer/installation/index.rst:219
 msgid "Copy the example file:"
-msgstr ""
+msgstr "Copie el archivo de ejemplo:"
 
 #: ../../developer/installation/index.rst:225
 msgid "**Required variables not set:**"
-msgstr ""
+msgstr "**Variables requeridas no configuradas:**"
 
 #: ../../developer/installation/index.rst:227
 msgid "Minimum required variables:"
-msgstr ""
+msgstr "Variables mínimas requeridas:"
 
 #: ../../developer/installation/index.rst:236
 msgid "See :doc:`configuration` for complete reference."
-msgstr ""
+msgstr "Consulte :doc:`configuration` para obtener una referencia completa."
 
 #: ../../developer/installation/index.rst:239
 msgid "Common Questions"
-msgstr ""
+msgstr "Preguntas comunes"
 
 #: ../../developer/installation/index.rst:241
 msgid "**Q: Which method should I use?**"
-msgstr ""
+msgstr "**P: ¿Qué método debo utilizar?**"
 
 #: ../../developer/installation/index.rst:243
 msgid "A: Docker is recommended for most developers. It provides:"
 msgstr ""
+"R: Se recomienda Docker para la mayoría de los desarrolladores. Proporciona:"
 
 #: ../../developer/installation/index.rst:245
 msgid "Consistent environment across all platforms"
-msgstr ""
+msgstr "Entorno consistente en todas las plataformas"
 
 #: ../../developer/installation/index.rst:246
 msgid "No need to install PostgreSQL/Redis locally"
-msgstr ""
+msgstr "No es necesario instalar PostgreSQL/Redis localmente"
 
 #: ../../developer/installation/index.rst:247
 msgid "Easy cleanup (``make clean``)"
-msgstr ""
+msgstr "Fácil limpieza (\"hacer limpio\")"
 
 #: ../../developer/installation/index.rst:248
 msgid "Closer to production environment"
-msgstr ""
+msgstr "Más cerca del entorno de producción"
 
 #: ../../developer/installation/index.rst:250
 msgid "Use local development if:"
-msgstr ""
+msgstr "Utilice el desarrollo local si:"
 
 #: ../../developer/installation/index.rst:252
 msgid "You already have PostgreSQL/Redis installed"
-msgstr ""
+msgstr "Ya tienes instalado PostgreSQL/Redis"
 
 #: ../../developer/installation/index.rst:253
 msgid "You need to integrate with other local services"
-msgstr ""
+msgstr "Necesitas integrarte con otros servicios locales."
 
 #: ../../developer/installation/index.rst:254
 msgid "You prefer traditional Python development"
-msgstr ""
+msgstr "Prefieres el desarrollo tradicional de Python"
 
 #: ../../developer/installation/index.rst:256
 msgid "**Q: Can I switch between methods?**"
-msgstr ""
+msgstr "**P: ¿Puedo cambiar entre métodos?**"
 
 #: ../../developer/installation/index.rst:258
 msgid ""
-"A: Yes! The codebase is the same. Just change the ``USE_DOCKER`` "
-"environment variable."
+"A: Yes! The codebase is the same. Just change the ``USE_DOCKER`` environment"
+" variable."
 msgstr ""
+"R: ¡Sí! La base del código es la misma. Simplemente cambie la variable de "
+"entorno ``USE_DOCKER``."
 
 #: ../../developer/installation/index.rst:260
 msgid "**Q: How do I update my installation?**"
-msgstr ""
+msgstr "**P: ¿Cómo actualizo mi instalación?**"
 
 #: ../../developer/installation/index.rst:262
 #: ../../developer/installation/index.rst:273
 msgid "A:"
-msgstr ""
+msgstr "A:"
 
 #: ../../developer/installation/index.rst:271
 msgid "**Q: Where is the database data stored?**"
-msgstr ""
+msgstr "**P: ¿Dónde se almacenan los datos de la base de datos?**"
 
 #: ../../developer/installation/index.rst:275
 msgid "**Docker:** In a Docker volume named ``construbot_postgres_data``"
 msgstr ""
+"**Docker:** En un volumen de Docker llamado ``construbot_postgres_data``"
 
 #: ../../developer/installation/index.rst:276
 msgid "**Local:** In your PostgreSQL data directory (depends on installation)"
 msgstr ""
+"**Local:** En su directorio de datos de PostgreSQL (depende de la "
+"instalación)"
 
 #: ../../developer/installation/index.rst:278
 msgid ""
 "To reset the database: ``make cleandb`` (Docker) or drop/recreate the "
 "database manually (local)."
 msgstr ""
+"Para restablecer la base de datos: ``make cleandb`` (Docker) o "
+"elimine/recree la base de datos manualmente (local)."
 
 #: ../../developer/installation/index.rst:281
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/installation/index.rst:283
 msgid ""
@@ -394,6 +416,6 @@ msgid ":doc:`/contributor/development-setup` - Contributing to Construbot"
 msgstr ""
 
 #: ../../developer/installation/index.rst:286
-msgid ":doc:`/reference/makefile-commands` - Complete Makefile command reference"
+msgid ""
+":doc:`/reference/makefile-commands` - Complete Makefile command reference"
 msgstr ""
-

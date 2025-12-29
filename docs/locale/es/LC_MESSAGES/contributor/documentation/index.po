@@ -11,139 +11,141 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../contributor/documentation/index.rst:3
 msgid "Documentation"
-msgstr ""
+msgstr "Documentación"
 
 #: ../../contributor/documentation/index.rst:5
 msgid "Guide for contributing to Construbot documentation."
-msgstr ""
+msgstr "Guía para contribuir a la documentación de Construbot."
 
 #: ../../contributor/documentation/index.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../contributor/documentation/index.rst:10
 msgid ""
 "Construbot documentation uses Sphinx with reStructuredText (RST) and "
 "supports bilingual builds (English/Spanish)."
 msgstr ""
+"La documentación de Construbot utiliza Sphinx con reStructuredText (RST) y "
+"admite compilaciones bilingües (inglés/español)."
 
 #: ../../contributor/documentation/index.rst:12
 msgid "**Location:** ``/docs/``"
-msgstr ""
+msgstr "**Ubicación:** ``/docs/``"
 
 #: ../../contributor/documentation/index.rst:15
 msgid "Building Documentation"
-msgstr ""
+msgstr "Documentación de construcción"
 
 #: ../../contributor/documentation/index.rst:17
 msgid "**Build English docs:**"
-msgstr ""
+msgstr "**Crear documentos en inglés:**"
 
 #: ../../contributor/documentation/index.rst:25
 msgid "**Build Spanish docs:**"
-msgstr ""
+msgstr "**Crear documentos en español:**"
 
 #: ../../contributor/documentation/index.rst:32
 msgid "**Auto-rebuild (live preview):**"
-msgstr ""
+msgstr "**Reconstrucción automática (vista previa en vivo):**"
 
 #: ../../contributor/documentation/index.rst:40
 msgid "Writing Documentation"
-msgstr ""
+msgstr "Redacción de documentación"
 
 #: ../../contributor/documentation/index.rst:42
 msgid "**RST Syntax:**"
-msgstr ""
+msgstr "**Sintaxis RST:**"
 
 #: ../../contributor/documentation/index.rst:69
 msgid "**Links:**"
-msgstr ""
+msgstr "**Campo de golf:**"
 
 #: ../../contributor/documentation/index.rst:77
 msgid "**Cross-references:**"
-msgstr ""
+msgstr "**Referencias cruzadas:**"
 
 #: ../../contributor/documentation/index.rst:85
 msgid "Documentation Structure"
-msgstr ""
+msgstr "Estructura de la documentación"
 
 #: ../../contributor/documentation/index.rst:97
 msgid "**Follow existing structure** when adding new pages."
-msgstr ""
+msgstr "**Siga la estructura existente** al agregar nuevas páginas."
 
 #: ../../contributor/documentation/index.rst:100
 msgid "Style Guide"
-msgstr ""
+msgstr "Guía de estilo"
 
 #: ../../contributor/documentation/index.rst:102
 msgid "**1. Clear and concise**"
-msgstr ""
+msgstr "**1. Claro y conciso**"
 
 #: ../../contributor/documentation/index.rst:104
 msgid "**2. Code examples**"
-msgstr ""
+msgstr "**2. Ejemplos de código**"
 
 #: ../../contributor/documentation/index.rst:106
 msgid "Include working code examples."
-msgstr ""
+msgstr "Incluya ejemplos de código de trabajo."
 
 #: ../../contributor/documentation/index.rst:108
 msgid "**3. Spanish terms**"
-msgstr ""
+msgstr "**3. Términos en español**"
 
 #: ../../contributor/documentation/index.rst:110
 msgid "Use pattern: \"Contracts (Spanish: Contratos)\""
-msgstr ""
+msgstr "Patrón de uso: \"Contracts (Español: Contratos)\""
 
 #: ../../contributor/documentation/index.rst:112
 msgid "**4. Cross-references**"
-msgstr ""
+msgstr "**4. Referencias cruzadas**"
 
 #: ../../contributor/documentation/index.rst:114
 msgid "Link to related pages."
-msgstr ""
+msgstr "Enlace a páginas relacionadas."
 
 #: ../../contributor/documentation/index.rst:116
 msgid "**5. Consistent formatting**"
-msgstr ""
+msgstr "**5. Formato consistente**"
 
 #: ../../contributor/documentation/index.rst:118
 msgid "Follow existing page structure."
-msgstr ""
+msgstr "Siga la estructura de página existente."
 
 #: ../../contributor/documentation/index.rst:121
 msgid "Translation Workflow"
-msgstr ""
+msgstr "Flujo de trabajo de traducción"
 
 #: ../../contributor/documentation/index.rst:123
 msgid "**Extract strings:**"
-msgstr ""
+msgstr "**Extraer cadenas:**"
 
 #: ../../contributor/documentation/index.rst:130
 msgid "**Update translations:**"
-msgstr ""
+msgstr "**Actualizar traducciones:**"
 
 #: ../../contributor/documentation/index.rst:136
 msgid "**Edit .po files:**"
-msgstr ""
+msgstr "**Editar archivos .po:**"
 
 #: ../../contributor/documentation/index.rst:143
 msgid "**Build Spanish version:**"
-msgstr ""
+msgstr "**Construir versión en español:**"
 
 #: ../../contributor/documentation/index.rst:150
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../contributor/documentation/index.rst:152
 msgid ":doc:`../getting-started` - Contributor setup"
@@ -156,4 +158,3 @@ msgstr ""
 #: ../../contributor/documentation/index.rst:154
 msgid ":doc:`/reference/glossary` - Spanish→English terms"
 msgstr ""
-

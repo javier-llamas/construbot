@@ -11,45 +11,47 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../reference/index.rst:3
 msgid "Reference"
-msgstr ""
+msgstr "Referencia"
 
 #: ../../reference/index.rst:5
 msgid "Quick reference documentation for Construbot."
-msgstr ""
+msgstr "Documentación de referencia rápida para Construbot."
 
 #: ../../reference/index.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../reference/index.rst:10
 msgid "This section provides quick reference material for all users:"
 msgstr ""
+"Esta sección proporciona material de referencia rápida para todos los "
+"usuarios:"
 
 #: ../../reference/index.rst:12
 msgid "**Glossary** - Spanish→English term translations"
-msgstr ""
+msgstr "**Glosario** - Traducciones de términos español→inglés"
 
 #: ../../reference/index.rst:13
 msgid "**Makefile Commands** - Development command reference"
-msgstr ""
+msgstr "**Comandos Makefile**: referencia de comandos de desarrollo"
 
 #: ../../reference/index.rst:14
 msgid "**Settings** - Configuration options"
-msgstr ""
+msgstr "**Configuración** - Opciones de configuración"
 
 #: ../../reference/index.rst:17
 msgid "Quick Links"
-msgstr ""
+msgstr "Enlaces rápidos"
 
 #: ../../reference/index.rst:19
 msgid ":doc:`glossary` - Spanish→English glossary"
@@ -62,4 +64,3 @@ msgstr ""
 #: ../../reference/index.rst:21
 msgid ":doc:`/_glossary/domain-terms` - Complete 100+ term glossary"
 msgstr ""
-

@@ -11,183 +11,187 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/api/index.rst:3
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: ../../developer/api/index.rst:5
 msgid "REST API documentation for Construbot."
-msgstr ""
+msgstr "Documentación API REST para Construbot."
 
 #: ../../developer/api/index.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../developer/api/index.rst:10
 msgid ""
-"Construbot provides a REST API built with Django REST Framework for "
-"mobile apps and external integrations."
+"Construbot provides a REST API built with Django REST Framework for mobile "
+"apps and external integrations."
 msgstr ""
+"Construbot proporciona una API REST creada con Django REST Framework para "
+"aplicaciones móviles e integraciones externas."
 
 #: ../../developer/api/index.rst:12
 msgid "**Base URL:** ``/api/v1/``"
-msgstr ""
+msgstr "**URL base:** ``/api/v1/``"
 
 #: ../../developer/api/index.rst:14
 msgid "**Authentication:** JWT (JSON Web Tokens)"
-msgstr ""
+msgstr "**Autenticación:** JWT (tokens web JSON)"
 
 #: ../../developer/api/index.rst:16
 msgid "**Format:** JSON"
-msgstr ""
+msgstr "**Formato:** JSON"
 
 #: ../../developer/api/index.rst:19
 msgid "Quick Start"
-msgstr ""
+msgstr "Inicio rápido"
 
 #: ../../developer/api/index.rst:21
 msgid "**1. Obtain Token:**"
-msgstr ""
+msgstr "**1. Obtener ficha:**"
 
 #: ../../developer/api/index.rst:32
 msgid "**2. Use Token:**"
-msgstr ""
+msgstr "**2. Usar ficha:**"
 
 #: ../../developer/api/index.rst:39
 msgid "**3. Refresh Token:**"
-msgstr ""
+msgstr "**3. Actualizar token:**"
 
 #: ../../developer/api/index.rst:47
 msgid "Authentication"
-msgstr ""
+msgstr "Autenticación"
 
 #: ../../developer/api/index.rst:49
 msgid "**JWT Tokens:**"
-msgstr ""
+msgstr "**Fichas JWT:**"
 
 #: ../../developer/api/index.rst:51
 msgid "Access token lifetime: 1 hour"
-msgstr ""
+msgstr "Duración del token de acceso: 1 hora"
 
 #: ../../developer/api/index.rst:52
 msgid "Refresh token lifetime: 7 days"
-msgstr ""
+msgstr "Duración del token de actualización: 7 días"
 
 #: ../../developer/api/index.rst:53
 msgid "Tokens rotate on refresh"
-msgstr ""
+msgstr "Los tokens rotan al actualizar"
 
 #: ../../developer/api/index.rst:55
 msgid "**Header format:**"
-msgstr ""
+msgstr "**Formato de encabezado:**"
 
 #: ../../developer/api/index.rst:61
 msgid "**Endpoints:**"
-msgstr ""
+msgstr "**Puntos finales:**"
 
 #: ../../developer/api/index.rst:63
 msgid "``POST /api/v1/api-token-auth/`` - Obtain token pair"
-msgstr ""
+msgstr "``POST /api/v1/api-token-auth/`` - Obtener par de tokens"
 
 #: ../../developer/api/index.rst:64
 msgid "``POST /api/v1/api-token-refresh/`` - Refresh access token"
-msgstr ""
+msgstr "``POST /api/v1/api-token-refresh/`` - Actualizar token de acceso"
 
 #: ../../developer/api/index.rst:65
 msgid "``POST /api/v1/api-token-verify/`` - Verify token validity"
-msgstr ""
+msgstr "``POST /api/v1/api-token-verify/`` - Verificar la validez del token"
 
 #: ../../developer/api/index.rst:68
 msgid "API Endpoints"
-msgstr ""
+msgstr "Puntos finales API"
 
 #: ../../developer/api/index.rst:70
 msgid "**Contracts:**"
-msgstr ""
+msgstr "**Contratos:**"
 
 #: ../../developer/api/index.rst:72
 msgid "``GET /api/v1/contracts/`` - List contracts"
-msgstr ""
+msgstr "``GET /api/v1/contracts/`` - Listar contratos"
 
 #: ../../developer/api/index.rst:73
 msgid "``POST /api/v1/contracts/`` - Create contract"
-msgstr ""
+msgstr "``POST /api/v1/contracts/`` - Crear contrato"
 
 #: ../../developer/api/index.rst:74
 msgid "``GET /api/v1/contracts/:id/`` - Retrieve contract"
-msgstr ""
+msgstr "``GET /api/v1/contracts/:id/`` - Recuperar contrato"
 
 #: ../../developer/api/index.rst:75
 msgid "``PUT /api/v1/contracts/:id/`` - Update contract"
-msgstr ""
+msgstr "``PUT /api/v1/contracts/:id/`` - Actualizar contrato"
 
 #: ../../developer/api/index.rst:76
 msgid "``DELETE /api/v1/contracts/:id/`` - Delete contract"
-msgstr ""
+msgstr "``DELETE /api/v1/contracts/:id/`` - Eliminar contrato"
 
 #: ../../developer/api/index.rst:78
 msgid "**Estimates:**"
-msgstr ""
+msgstr "**Estimaciones:**"
 
 #: ../../developer/api/index.rst:80
 msgid "``GET /api/v1/estimates/`` - List estimates"
-msgstr ""
+msgstr "``GET /api/v1/estimates/`` - Lista de estimaciones"
 
 #: ../../developer/api/index.rst:81
 msgid "``POST /api/v1/estimates/`` - Create estimate"
-msgstr ""
+msgstr "``POST /api/v1/estimates/`` - Crear estimación"
 
 #: ../../developer/api/index.rst:83
 msgid "**Counterparties:**"
-msgstr ""
+msgstr "**Contrapartes:**"
 
 #: ../../developer/api/index.rst:85
 msgid "``GET /api/v1/contrapartes/`` - List counterparties"
-msgstr ""
+msgstr "``GET /api/v1/contrapartes/`` - Listar contrapartes"
 
 #: ../../developer/api/index.rst:86
 msgid "``POST /api/v1/contrapartes/`` - Create counterparty"
-msgstr ""
+msgstr "``POST /api/v1/contrapartes/`` - Crear contraparte"
 
 #: ../../developer/api/index.rst:89
 msgid "Response Format"
-msgstr ""
+msgstr "Formato de respuesta"
 
 #: ../../developer/api/index.rst:91
 msgid "**Success (200):**"
-msgstr ""
+msgstr "**Éxito (200):**"
 
 #: ../../developer/api/index.rst:110
 msgid "**Error (400):**"
-msgstr ""
+msgstr "**Error (400):**"
 
 #: ../../developer/api/index.rst:122
 msgid "Permissions"
-msgstr ""
+msgstr "Permisos"
 
 #: ../../developer/api/index.rst:124
 msgid "**All endpoints require authentication.**"
-msgstr ""
+msgstr "**Todos los puntos finales requieren autenticación.**"
 
 #: ../../developer/api/index.rst:126
 msgid "**Company scoping:** Results filtered by user's active_company."
 msgstr ""
+"**Alcance de la empresa:** Resultados filtrados por empresa_activa del "
+"usuario."
 
 #: ../../developer/api/index.rst:128
 msgid "**Permission levels:** See :doc:`../architecture/permission-levels`"
-msgstr ""
+msgstr "**Niveles de permiso:** Ver :doc:`../architecture/permission-levels`"
 
 #: ../../developer/api/index.rst:131
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/api/index.rst:133
 msgid ":doc:`../architecture/overview` - Architecture"
@@ -200,4 +204,3 @@ msgstr ""
 #: ../../developer/api/index.rst:135
 msgid ":doc:`../installation/index` - Development setup"
 msgstr ""
-

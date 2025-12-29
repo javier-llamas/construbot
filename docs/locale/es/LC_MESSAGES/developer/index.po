@@ -11,435 +11,449 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/index.rst:3
 msgid "Developer Documentation"
-msgstr ""
+msgstr "Documentación del desarrollador"
 
 #: ../../developer/index.rst:5
 msgid ""
 "Welcome to the Construbot Developer Documentation! This section provides "
-"technical information for developers who want to install, deploy, or "
-"extend Construbot."
+"technical information for developers who want to install, deploy, or extend "
+"Construbot."
 msgstr ""
+"¡Bienvenido a la documentación para desarrolladores de Construbot! Esta "
+"sección proporciona información técnica para desarrolladores que desean "
+"instalar, implementar o ampliar Construbot."
 
 #: ../../developer/index.rst:8
 msgid ""
 "**Looking for user documentation?** See the :doc:`/user-guide/index` "
 "instead."
 msgstr ""
+"**¿Busca documentación de usuario?** Consulte :doc:`/user-guide/index` en su"
+" lugar."
 
 #: ../../developer/index.rst:11
 msgid "Quick Links"
-msgstr ""
+msgstr "Enlaces rápidos"
 
 #: ../../developer/index.rst:41
 msgid "Technical Overview"
-msgstr ""
+msgstr "Descripción técnica"
 
 #: ../../developer/index.rst:43
 msgid "**Technology Stack:**"
-msgstr ""
+msgstr "**Pila de tecnología:**"
 
 #: ../../developer/index.rst:45
 msgid "**Framework:** Django 3.2.19"
-msgstr ""
+msgstr "**Marco:** Django 3.2.19"
 
 #: ../../developer/index.rst:46
 msgid "**Language:** Python >=3.9.17"
-msgstr ""
+msgstr "**Idioma:** Python >=3.9.17"
 
 #: ../../developer/index.rst:47
 msgid "**Database:** PostgreSQL"
-msgstr ""
+msgstr "**Base de datos:** PostgreSQL"
 
 #: ../../developer/index.rst:48
 msgid "**Cache/Queue:** Redis"
-msgstr ""
+msgstr "**Caché/Cola:** Redis"
 
 #: ../../developer/index.rst:49
 msgid "**Task Queue:** Celery 5.2.7"
-msgstr ""
+msgstr "**Cola de tareas:** Apio 5.2.7"
 
 #: ../../developer/index.rst:50
 msgid "**API:** Django REST Framework + SimpleJWT"
-msgstr ""
+msgstr "**API:** Marco REST de Django + SimpleJWT"
 
 #: ../../developer/index.rst:51
 msgid "**Frontend:** Bootstrap 4 + jQuery"
-msgstr ""
+msgstr "**Frontend:** Bootstrap 4 + jQuery"
 
 #: ../../developer/index.rst:53
 msgid "**Key Features:**"
-msgstr ""
+msgstr "**Características clave:**"
 
 #: ../../developer/index.rst:55
 msgid "Multi-tenant architecture (Customer → Company → User)"
-msgstr ""
+msgstr "Arquitectura multiinquilino (Cliente → Empresa → Usuario)"
 
 #: ../../developer/index.rst:56
 msgid "Hierarchical data structures (django-treebeard)"
-msgstr ""
+msgstr "Estructuras de datos jerárquicas (django-treebeard)"
 
 #: ../../developer/index.rst:57
 msgid "JWT-based API authentication"
-msgstr ""
+msgstr "Autenticación API basada en JWT"
 
 #: ../../developer/index.rst:58
 msgid "Autocomplete widgets (django-autocomplete-light)"
-msgstr ""
+msgstr "Widgets de autocompletar (django-autocomplete-light)"
 
 #: ../../developer/index.rst:59
 msgid "PDF generation"
-msgstr ""
+msgstr "generación de PDF"
 
 #: ../../developer/index.rst:60
 msgid "Excel import/export"
-msgstr ""
+msgstr "Importación/exportación de Excel"
 
 #: ../../developer/index.rst:61
 msgid "Celery task processing"
-msgstr ""
+msgstr "Procesamiento de tareas de apio"
 
 #: ../../developer/index.rst:64
 msgid "Project Structure"
-msgstr ""
+msgstr "Estructura del proyecto"
 
 #: ../../developer/index.rst:93
 msgid "Quick Start"
-msgstr ""
+msgstr "Inicio rápido"
 
 #: ../../developer/index.rst:95
 msgid "**For Docker:**"
-msgstr ""
+msgstr "**Para Docker:**"
 
 #: ../../developer/index.rst:111
 msgid "**For Local Development:**"
-msgstr ""
+msgstr "**Para Desarrollo Local:**"
 
 #: ../../developer/index.rst:128
 msgid "**See:** :doc:`installation/index` for detailed instructions."
 msgstr ""
+"**Consulte:** :doc:`installation/index` para obtener instrucciones "
+"detalladas."
 
 #: ../../developer/index.rst:131
 msgid "Development Workflow"
-msgstr ""
+msgstr "Flujo de trabajo de desarrollo"
 
 #: ../../developer/index.rst:133
 msgid "**Setup**: Install using Docker or local environment"
-msgstr ""
+msgstr "**Configuración**: instalar usando Docker o un entorno local"
 
 #: ../../developer/index.rst:134
 msgid "**Configure**: Set environment variables in ``.env``"
-msgstr ""
+msgstr "**Configurar**: Establecer variables de entorno en ``.env``"
 
 #: ../../developer/index.rst:135
 msgid "**Migrate**: Run database migrations"
-msgstr ""
+msgstr "**Migrar**: ejecutar migraciones de bases de datos"
 
 #: ../../developer/index.rst:136
 msgid "**Populate**: Use ``make poblar`` for test data"
-msgstr ""
+msgstr "**Rellenar**: Utilice ``hacer poblar`` para los datos de prueba"
 
 #: ../../developer/index.rst:137
 msgid "**Develop**: Make changes, run tests"
-msgstr ""
+msgstr "**Desarrollar**: realizar cambios, ejecutar pruebas"
 
 #: ../../developer/index.rst:138
 msgid "**Test**: Run ``make test`` before committing"
-msgstr ""
+msgstr "**Prueba**: Ejecute ``hacer prueba`` antes de confirmar"
 
 #: ../../developer/index.rst:139
 msgid "**Deploy**: Follow deployment guides"
-msgstr ""
+msgstr "**Implementación**: siga las guías de implementación"
 
 #: ../../developer/index.rst:142
 msgid "Documentation Sections"
-msgstr ""
+msgstr "Secciones de documentación"
 
 #: ../../developer/index.rst:159
 msgid "Key Concepts for Developers"
-msgstr ""
+msgstr "Conceptos clave para desarrolladores"
 
 #: ../../developer/index.rst:162
 msgid "Multi-Tenancy"
-msgstr ""
+msgstr "Multi-inquilino"
 
 #: ../../developer/index.rst:164
 msgid "Construbot uses a three-level hierarchy:"
-msgstr ""
+msgstr "Construbot utiliza una jerarquía de tres niveles:"
 
 #: ../../developer/index.rst:166
 msgid "**Customer** (users.models.Customer) - Top-level account"
-msgstr ""
+msgstr "**Cliente** (usuarios.modelos.Cliente) - Cuenta de nivel superior"
 
 #: ../../developer/index.rst:167
 msgid "**Company** (users.models.Company) - Business entity"
-msgstr ""
+msgstr "**Empresa** (usuarios.modelos.Empresa) - Entidad comercial"
 
 #: ../../developer/index.rst:168
 msgid "**User** (users.models.User) - Individual with permissions"
-msgstr ""
+msgstr "**Usuario** (usuarios.modelos.Usuario) - Individuo con permisos"
 
 #: ../../developer/index.rst:170
 msgid "All data models are scoped to a Company for isolation."
 msgstr ""
+"Todos los modelos de datos tienen como ámbito de aislamiento una empresa."
 
 #: ../../developer/index.rst:172
 msgid "**Learn more:** :doc:`architecture/multi-tenancy`"
-msgstr ""
+msgstr "**Más información:** :doc:`arquitectura/multi-inquilino`"
 
 #: ../../developer/index.rst:175
 msgid "Custom User Model"
-msgstr ""
+msgstr "Modelo de usuario personalizado"
 
 #: ../../developer/index.rst:177
 msgid "``AUTH_USER_MODEL = 'users.User'``"
-msgstr ""
+msgstr "``AUTH_USER_MODEL = 'usuarios.Usuario'``"
 
 #: ../../developer/index.rst:179
 msgid "Email-based authentication (not username)"
-msgstr ""
+msgstr "Autenticación basada en correo electrónico (no nombre de usuario)"
 
 #: ../../developer/index.rst:180
 msgid "Company relationships (ManyToMany)"
-msgstr ""
+msgstr "Relaciones con la empresa (muchos a muchos)"
 
 #: ../../developer/index.rst:181
 msgid "Permission levels (1-6)"
-msgstr ""
+msgstr "Niveles de permiso (1-6)"
 
 #: ../../developer/index.rst:182
 msgid "Currently active company tracking"
-msgstr ""
+msgstr "Seguimiento de la empresa actualmente activa"
 
 #: ../../developer/index.rst:184
 msgid "**Learn more:** :doc:`models/users`"
-msgstr ""
+msgstr "**Más información:** :doc:`modelos/usuarios`"
 
 #: ../../developer/index.rst:187
 msgid "Settings Structure"
-msgstr ""
+msgstr "Estructura de configuración"
 
 #: ../../developer/index.rst:189
 msgid "Environment-based settings in ``construbot/config/settings/``:"
 msgstr ""
+"Configuraciones basadas en el entorno en ``construbot/config/settings/``:"
 
 #: ../../developer/index.rst:191
 msgid "``base.py`` - Shared configuration"
-msgstr ""
+msgstr "``base.py`` - Configuración compartida"
 
 #: ../../developer/index.rst:192
 msgid "``local.py`` - Development settings"
-msgstr ""
+msgstr "``local.py`` - Configuración de desarrollo"
 
 #: ../../developer/index.rst:193
 msgid "``test.py`` - Testing configuration"
-msgstr ""
+msgstr "``test.py`` - Configuración de prueba"
 
 #: ../../developer/index.rst:194
 msgid "``production.py`` - Production settings"
-msgstr ""
+msgstr "``producción.py`` - Configuración de producción"
 
 #: ../../developer/index.rst:196
 msgid "Controlled via ``DJANGO_SETTINGS_MODULE`` environment variable."
 msgstr ""
+"Controlado mediante la variable de entorno ``DJANGO_SETTINGS_MODULE``."
 
 #: ../../developer/index.rst:198
 msgid "**Learn more:** :doc:`architecture/settings-structure`"
-msgstr ""
+msgstr "**Más información:** :doc:`arquitectura/configuración-estructura`"
 
 #: ../../developer/index.rst:201
 msgid "Hierarchical Models"
-msgstr ""
+msgstr "Modelos Jerárquicos"
 
 #: ../../developer/index.rst:203
 msgid ""
-"The Contrato (Contract) model uses django-treebeard's Materialized Path "
-"for hierarchical relationships:"
+"The Contrato (Contract) model uses django-treebeard's Materialized Path for "
+"hierarchical relationships:"
 msgstr ""
+"El modelo Contrato utiliza la Ruta Materializada de django-treebeard para "
+"relaciones jerárquicas:"
 
 #: ../../developer/index.rst:205
 msgid "Parent contracts with sub-contracts"
-msgstr ""
+msgstr "Contratos matrices con subcontratos"
 
 #: ../../developer/index.rst:206
 msgid "Tree queries for financial aggregation"
-msgstr ""
+msgstr "Consultas de árbol para agregación financiera."
 
 #: ../../developer/index.rst:207
 msgid "Move operations for reorganization"
-msgstr ""
+msgstr "Mover operaciones para reorganización"
 
 #: ../../developer/index.rst:209
 msgid "**Learn more:** :doc:`models/proyectos`"
-msgstr ""
+msgstr "**Más información:** :doc:`modelos/proyectos`"
 
 #: ../../developer/index.rst:212
 msgid "API Authentication"
-msgstr ""
+msgstr "Autenticación API"
 
 #: ../../developer/index.rst:214
 msgid "REST API uses JWT tokens:"
-msgstr ""
+msgstr "La API REST utiliza tokens JWT:"
 
 #: ../../developer/index.rst:226
 msgid "**Learn more:** :doc:`api/authentication`"
-msgstr ""
+msgstr "**Más información:** :doc:`api/authentication`"
 
 #: ../../developer/index.rst:229
 msgid "Library Mode"
-msgstr ""
+msgstr "Modo biblioteca"
 
 #: ../../developer/index.rst:231
 msgid "Set ``CONSTRUBOT_AS_LIBRARY=True`` to:"
-msgstr ""
+msgstr "Establezca ``CONSTRUBOT_AS_LIBRARY=True`` en:"
 
 #: ../../developer/index.rst:233
 msgid "Disable standalone features (admin, accounts)"
-msgstr ""
+msgstr "Deshabilitar funciones independientes (administrador, cuentas)"
 
 #: ../../developer/index.rst:234
 msgid "Use Construbot as a Django app in your project"
-msgstr ""
+msgstr "Utilice Construbot como una aplicación Django en su proyecto"
 
 #: ../../developer/index.rst:235
 msgid "Integrate with existing authentication"
-msgstr ""
+msgstr "Integrar con la autenticación existente"
 
 #: ../../developer/index.rst:237
 msgid "**Learn more:** :doc:`library-mode`"
-msgstr ""
+msgstr "**Más información:** :doc:`modo-biblioteca`"
 
 #: ../../developer/index.rst:240
 msgid "Development Tools"
-msgstr ""
+msgstr "Herramientas de desarrollo"
 
 #: ../../developer/index.rst:243
 msgid "Makefile Commands"
-msgstr ""
+msgstr "Comandos de archivos Make"
 
 #: ../../developer/index.rst:245
 msgid "The project includes a comprehensive Makefile:"
-msgstr ""
+msgstr "El proyecto incluye un Makefile completo:"
 
 #: ../../developer/index.rst:260
 msgid "**Full reference:** :doc:`/reference/makefile-commands`"
-msgstr ""
+msgstr "**Referencia completa:** :doc:`/reference/makefile-commands`"
 
 #: ../../developer/index.rst:263
 msgid "Testing"
-msgstr ""
+msgstr "Pruebas"
 
 #: ../../developer/index.rst:279
 msgid "**Learn more:** :doc:`/contributor/testing/index`"
-msgstr ""
+msgstr "**Más información:** :doc:`/contributor/testing/index`"
 
 #: ../../developer/index.rst:282
 msgid "Code Quality"
-msgstr ""
+msgstr "Calidad del código"
 
 #: ../../developer/index.rst:284
 msgid "**Style**: Follow PEP 8"
-msgstr ""
+msgstr "**Estilo**: Sigue PEP 8"
 
 #: ../../developer/index.rst:285
 msgid "**Docstrings**: Google/NumPy style"
-msgstr ""
+msgstr "**Cadenas de documentos**: estilo Google/NumPy"
 
 #: ../../developer/index.rst:286
 msgid "**Type Hints**: Encouraged but not required"
-msgstr ""
+msgstr "**Sugerencias de tipo**: recomendado pero no obligatorio"
 
 #: ../../developer/index.rst:287
 #, python-format
 msgid "**Testing**: Aim for >80% coverage"
-msgstr ""
+msgstr "**Pruebas**: Apunta a una cobertura >80%"
 
 #: ../../developer/index.rst:289
 msgid "**Learn more:** :doc:`/contributor/code-style`"
-msgstr ""
+msgstr "**Más información:** :doc:`/contributor/code-style`"
 
 #: ../../developer/index.rst:292
 msgid "Contributing"
-msgstr ""
+msgstr "Contribuyendo"
 
 #: ../../developer/index.rst:294
 msgid "Want to contribute to Construbot?"
-msgstr ""
+msgstr "¿Quieres contribuir a Construbot?"
 
 #: ../../developer/index.rst:296
 msgid "**Fork** the repository"
-msgstr ""
+msgstr "**Bifurcar** el repositorio"
 
 #: ../../developer/index.rst:297
 msgid "**Clone** your fork"
-msgstr ""
+msgstr "**Clonar** tu tenedor"
 
 #: ../../developer/index.rst:298
 msgid "**Create** a feature branch"
-msgstr ""
+msgstr "**Crear** una rama de funciones"
 
 #: ../../developer/index.rst:299
 msgid "**Make** your changes"
-msgstr ""
+msgstr "**Haz** tus cambios"
 
 #: ../../developer/index.rst:300
 msgid "**Test** thoroughly"
-msgstr ""
+msgstr "**Prueba** a fondo"
 
 #: ../../developer/index.rst:301
 msgid "**Submit** a pull request"
-msgstr ""
+msgstr "**Enviar** una solicitud de extracción"
 
 #: ../../developer/index.rst:303
 msgid "**See:** :doc:`/contributor/index` for detailed guidelines."
 msgstr ""
+"**Consulte:** :doc:`/contributor/index` para obtener pautas detalladas."
 
 #: ../../developer/index.rst:306
 msgid "Support & Resources"
-msgstr ""
+msgstr "Soporte y recursos"
 
 #: ../../developer/index.rst:308
 msgid "**GitHub Repository**: https://github.com/javier-llamas/construbot"
-msgstr ""
+msgstr "**Repositorio GitHub**: https://github.com/javier-llamas/construbot"
 
 #: ../../developer/index.rst:309
 msgid "**Issue Tracker**: https://github.com/javier-llamas/construbot/issues"
 msgstr ""
+"**Seguimiento de problemas**: https://github.com/javier-"
+"llamas/construbot/issues"
 
 #: ../../developer/index.rst:310
 msgid "**License**: GNU Affero General Public License v3 (AGPLv3)"
-msgstr ""
+msgstr "**Licencia**: Licencia pública general GNU Affero v3 (AGPLv3)"
 
 #: ../../developer/index.rst:311
 msgid "**Documentation**: https://construbot.readthedocs.io"
-msgstr ""
+msgstr "**Documentación**: https://construbot.readthedocs.io"
 
 #: ../../developer/index.rst:314
 msgid "Need Help?"
-msgstr ""
+msgstr "¿Necesitar ayuda?"
 
 #: ../../developer/index.rst:316
 msgid "**Installation Issues**: See :doc:`installation/index`"
-msgstr ""
+msgstr "**Problemas de instalación**: consulte :doc:`installation/index`"
 
 #: ../../developer/index.rst:317
 msgid "**Deployment Problems**: Check :doc:`deployment/index`"
-msgstr ""
+msgstr "**Problemas de implementación**: Verifique :doc:`deployment/index`"
 
 #: ../../developer/index.rst:318
 msgid "**API Questions**: Review :doc:`api/index`"
-msgstr ""
+msgstr "**Preguntas sobre API**: Revisión :doc:`api/index`"
 
 #: ../../developer/index.rst:319
 msgid "**Bug Reports**: :doc:`/contributor/issue-reporting`"
-msgstr ""
-
+msgstr "**Informes de errores**: :doc:`/contributor/issue-reporting`"

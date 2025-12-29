@@ -11,213 +11,213 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../contributor/code-style.rst:3
 msgid "Code Style"
-msgstr ""
+msgstr "Estilo de código"
 
 #: ../../contributor/code-style.rst:5
 msgid "Code style guidelines for Construbot contributions."
-msgstr ""
+msgstr "Pautas de estilo de código para contribuciones de Construbot."
 
 #: ../../contributor/code-style.rst:8
 msgid "Python Style"
-msgstr ""
+msgstr "Estilo pitón"
 
 #: ../../contributor/code-style.rst:11
 msgid "Follow PEP 8"
-msgstr ""
+msgstr "Siga PEP 8"
 
 #: ../../contributor/code-style.rst:13
 msgid "**Code formatting:**"
-msgstr ""
+msgstr "**Formato de código:**"
 
 #: ../../contributor/code-style.rst:15
 msgid "4 spaces for indentation (no tabs)"
-msgstr ""
+msgstr "4 espacios para sangría (sin pestañas)"
 
 #: ../../contributor/code-style.rst:16
 msgid "Max line length: 100 characters (not strict 79)"
-msgstr ""
+msgstr "Longitud máxima de línea: 100 caracteres (no estricto 79)"
 
 #: ../../contributor/code-style.rst:17
 msgid "2 blank lines between top-level functions/classes"
-msgstr ""
+msgstr "2 líneas en blanco entre funciones/clases de nivel superior"
 
 #: ../../contributor/code-style.rst:18
 msgid "1 blank line between methods"
-msgstr ""
+msgstr "1 línea en blanco entre métodos"
 
 #: ../../contributor/code-style.rst:20
 msgid "**Use Black:**"
-msgstr ""
+msgstr "**Usar negro:**"
 
 #: ../../contributor/code-style.rst:26
 msgid "**Use isort:**"
-msgstr ""
+msgstr "**Usar isorción:**"
 
 #: ../../contributor/code-style.rst:33
 msgid "Naming Conventions"
-msgstr ""
+msgstr "Convenciones de nomenclatura"
 
 #: ../../contributor/code-style.rst:54
 msgid "Type Hints"
-msgstr ""
+msgstr "Consejos de tipo"
 
 #: ../../contributor/code-style.rst:56
 msgid "**Encouraged but not required:**"
-msgstr ""
+msgstr "**Se recomienda pero no es obligatorio:**"
 
 #: ../../contributor/code-style.rst:64
 msgid "Docstrings"
-msgstr ""
+msgstr "cadenas de documentos"
 
 #: ../../contributor/code-style.rst:66
 msgid "**Use Google style:**"
-msgstr ""
+msgstr "**Usa el estilo de Google:**"
 
 #: ../../contributor/code-style.rst:87
 msgid "Django Style"
-msgstr ""
+msgstr "Estilo Django"
 
 #: ../../contributor/code-style.rst:90
 msgid "Model Best Practices"
-msgstr ""
+msgstr "Modelo de mejores prácticas"
 
 #: ../../contributor/code-style.rst:92
 msgid "**Always include company:**"
-msgstr ""
+msgstr "**Incluye siempre compañía:**"
 
 #: ../../contributor/code-style.rst:99
 msgid "**Use verbose_name:**"
-msgstr ""
+msgstr "**Usar nombre_detallado:**"
 
 #: ../../contributor/code-style.rst:110
 msgid "**Meta options:**"
-msgstr ""
+msgstr "**Metaopciones:**"
 
 #: ../../contributor/code-style.rst:120
 msgid "View Best Practices"
-msgstr ""
+msgstr "Ver mejores prácticas"
 
 #: ../../contributor/code-style.rst:122
 msgid "**Use class-based views:**"
-msgstr ""
+msgstr "**Usar vistas basadas en clases:**"
 
 #: ../../contributor/code-style.rst:137
 msgid "**Always scope to company:**"
-msgstr ""
+msgstr "**Siempre alcance a la empresa:**"
 
 #: ../../contributor/code-style.rst:148
 msgid "Query Optimization"
-msgstr ""
+msgstr "Optimización de consultas"
 
 #: ../../contributor/code-style.rst:150
 msgid "**Use select_related:**"
-msgstr ""
+msgstr "**Usar select_ related:**"
 
 #: ../../contributor/code-style.rst:160
 msgid "**Use prefetch_related:**"
-msgstr ""
+msgstr "**Usar prefetch_relacionado:**"
 
 #: ../../contributor/code-style.rst:167
 msgid "Security"
-msgstr ""
+msgstr "Seguridad"
 
 #: ../../contributor/code-style.rst:169
 msgid "**Never trust user input:**"
-msgstr ""
+msgstr "**Nunca confíes en la entrada del usuario:**"
 
 #: ../../contributor/code-style.rst:178
 msgid "**Use get_object_or_404:**"
-msgstr ""
+msgstr "**Utilice get_object_or_404:**"
 
 #: ../../contributor/code-style.rst:184
 msgid "**Check permissions:**"
-msgstr ""
+msgstr "**Verificar permisos:**"
 
 #: ../../contributor/code-style.rst:192
 msgid "Testing Style"
-msgstr ""
+msgstr "Estilo de prueba"
 
 #: ../../contributor/code-style.rst:194
 msgid "**Clear test names:**"
-msgstr ""
+msgstr "**Borrar nombres de pruebas:**"
 
 #: ../../contributor/code-style.rst:204
 msgid "**Use setUp for common data:**"
-msgstr ""
+msgstr "**Utilice la configuración para datos comunes:**"
 
 #: ../../contributor/code-style.rst:215
 msgid "**One assertion per test (ideally):**"
-msgstr ""
+msgstr "**Una afirmación por prueba (idealmente):**"
 
 #: ../../contributor/code-style.rst:224
 msgid "Git Commit Messages"
-msgstr ""
+msgstr "Mensajes de confirmación de Git"
 
 #: ../../contributor/code-style.rst:226
 msgid "**Format:**"
-msgstr ""
+msgstr "**Formato:**"
 
 #: ../../contributor/code-style.rst:237
 msgid "**Good examples:**"
-msgstr ""
+msgstr "**Buenos ejemplos:**"
 
 #: ../../contributor/code-style.rst:250
 msgid "**Bad examples:**"
-msgstr ""
+msgstr "**Malos ejemplos:**"
 
 #: ../../contributor/code-style.rst:260
 msgid "Common Patterns"
-msgstr ""
+msgstr "Patrones comunes"
 
 #: ../../contributor/code-style.rst:262
 msgid "**Factory pattern for tests:**"
-msgstr ""
+msgstr "**Patrón de fábrica para pruebas:**"
 
 #: ../../contributor/code-style.rst:277
 msgid "**Context manager for transactions:**"
-msgstr ""
+msgstr "**Administrador de contexto para transacciones:**"
 
 #: ../../contributor/code-style.rst:287
 msgid "**Queryset methods:**"
-msgstr ""
+msgstr "**Métodos de conjunto de consultas:**"
 
 #: ../../contributor/code-style.rst:299
 msgid "Tools"
-msgstr ""
+msgstr "Herramientas"
 
 #: ../../contributor/code-style.rst:301
 msgid "**Linting:**"
-msgstr ""
+msgstr "**Pelusa:**"
 
 #: ../../contributor/code-style.rst:311
 msgid "**Formatting:**"
-msgstr ""
+msgstr "**Formato:**"
 
 #: ../../contributor/code-style.rst:321
 msgid "**Type checking (optional):**"
-msgstr ""
+msgstr "**Comprobación de tipo (opcional):**"
 
 #: ../../contributor/code-style.rst:328
 msgid "Pre-commit Hooks"
-msgstr ""
+msgstr "Ganchos de compromiso previo"
 
 #: ../../contributor/code-style.rst:330
 msgid "**Recommended .pre-commit-config.yaml:**"
-msgstr ""
+msgstr "**Recomendado .pre-commit-config.yaml:**"
 
 #: ../../contributor/code-style.rst:351
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../contributor/code-style.rst:353
 msgid ":doc:`getting-started` - Development setup"
@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../../contributor/code-style.rst:355
 msgid "`PEP 8 <https://pep8.org/>`_"
-msgstr ""
+msgstr "`PEP 8 <https://pep8.org/>`_"
 
 #: ../../contributor/code-style.rst:356
 msgid ""
@@ -237,4 +237,6 @@ msgid ""
 "<https://docs.djangoproject.com/en/dev/internals/contributing/writing-"
 "code/coding-style/>`_"
 msgstr ""
-
+"`Estilo de codificación Django "
+"<https://docs.djangoproject.com/en/dev/internals/contributing/writing-"
+"code/coding-style/>`_"

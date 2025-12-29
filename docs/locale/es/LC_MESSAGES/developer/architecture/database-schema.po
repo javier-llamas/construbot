@@ -11,245 +11,245 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/architecture/database-schema.rst:3
 msgid "Database Schema"
-msgstr ""
+msgstr "Esquema de base de datos"
 
 #: ../../developer/architecture/database-schema.rst:5
 msgid "Database design and relationships in Construbot."
-msgstr ""
+msgstr "Diseño y relaciones de bases de datos en Construbot."
 
 #: ../../developer/architecture/database-schema.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../developer/architecture/database-schema.rst:10
 msgid "**Database:** PostgreSQL 12+"
-msgstr ""
+msgstr "**Base de datos:** PostgreSQL 12+"
 
 #: ../../developer/architecture/database-schema.rst:12
 msgid "**Key model groups:**"
-msgstr ""
+msgstr "**Grupos de modelos clave:**"
 
 #: ../../developer/architecture/database-schema.rst:14
 msgid "**Users & Auth:** User, Company, Customer, NivelAcceso"
-msgstr ""
+msgstr "**Usuarios y Autenticación:** Usuario, Empresa, Cliente, NivelAcceso"
 
 #: ../../developer/architecture/database-schema.rst:15
 msgid "**Contracts:** Contrato (hierarchical), Contraparte, Sitio"
-msgstr ""
+msgstr "**Contratos:** Contrato (jerárquico), Contraparte, Sitio"
 
 #: ../../developer/architecture/database-schema.rst:16
 msgid "**Financials:** Estimate, Concept, Retenciones"
-msgstr ""
+msgstr "**Finanzas:** Estimación, Concepto, Retenciones"
 
 #: ../../developer/architecture/database-schema.rst:17
 msgid "**Configuration:** Account settings, Units"
-msgstr ""
+msgstr "**Configuración:** Configuración de cuenta, Unidades"
 
 #: ../../developer/architecture/database-schema.rst:20
 msgid "Core Relationships"
-msgstr ""
+msgstr "Relaciones centrales"
 
 #: ../../developer/architecture/database-schema.rst:23
 msgid "Multi-Tenancy Structure"
-msgstr ""
+msgstr "Estructura de arrendamiento múltiple"
 
 #: ../../developer/architecture/database-schema.rst:33
 msgid "**Foreign keys:**"
-msgstr ""
+msgstr "**Claves externas:**"
 
 #: ../../developer/architecture/database-schema.rst:35
 msgid "Company → Customer"
-msgstr ""
+msgstr "Empresa → Cliente"
 
 #: ../../developer/architecture/database-schema.rst:36
 msgid "User ↔ Company (ManyToMany through UserCompany)"
-msgstr ""
+msgstr "Usuario ↔ Empresa (ManyToMany a través de UserCompany)"
 
 #: ../../developer/architecture/database-schema.rst:37
 msgid "All business models → Company"
-msgstr ""
+msgstr "Todos los modelos de negocio → Empresa"
 
 #: ../../developer/architecture/database-schema.rst:40
 msgid "Contract Hierarchy"
-msgstr ""
+msgstr "Jerarquía de contratos"
 
 #: ../../developer/architecture/database-schema.rst:54
 msgid "**Tree operations:**"
-msgstr ""
+msgstr "**Operaciones de árbol:**"
 
 #: ../../developer/architecture/database-schema.rst:56
 msgid "``get_children()``"
-msgstr ""
+msgstr "``get_children()``"
 
 #: ../../developer/architecture/database-schema.rst:57
 msgid "``get_ancestors()``"
-msgstr ""
+msgstr "``get_ancestros()``"
 
 #: ../../developer/architecture/database-schema.rst:58
 msgid "``get_descendants()``"
-msgstr ""
+msgstr "``get_descendientes()``"
 
 #: ../../developer/architecture/database-schema.rst:59
 msgid "``move(target, pos)``"
-msgstr ""
+msgstr "``mover(objetivo, pos)``"
 
 #: ../../developer/architecture/database-schema.rst:62
 msgid "Contract Relationships"
-msgstr ""
+msgstr "Relaciones contractuales"
 
 #: ../../developer/architecture/database-schema.rst:74
 msgid "Key Models Reference"
-msgstr ""
+msgstr "Referencia de modelos clave"
 
 #: ../../developer/architecture/database-schema.rst:77
 msgid "Users & Companies"
-msgstr ""
+msgstr "Usuarios y Empresas"
 
 #: ../../developer/architecture/database-schema.rst:79
 msgid "**Customer:**"
-msgstr ""
+msgstr "**Cliente:**"
 
 #: ../../developer/architecture/database-schema.rst:88
 msgid "**Company:**"
-msgstr ""
+msgstr "**Compañía:**"
 
 #: ../../developer/architecture/database-schema.rst:98
 msgid "**User:**"
-msgstr ""
+msgstr "**Usuario:**"
 
 #: ../../developer/architecture/database-schema.rst:109
 msgid "Contracts & Counterparties"
-msgstr ""
+msgstr "Contratos y Contrapartes"
 
 #: ../../developer/architecture/database-schema.rst:111
 msgid "**Contrato:**"
-msgstr ""
+msgstr "**Contrato:**"
 
 #: ../../developer/architecture/database-schema.rst:123
 msgid "**Contraparte:**"
-msgstr ""
+msgstr "**Contraparte:**"
 
 #: ../../developer/architecture/database-schema.rst:133
 msgid "**Sitio:**"
-msgstr ""
+msgstr "**Sitio:**"
 
 #: ../../developer/architecture/database-schema.rst:144
 msgid "Estimates & Concepts"
-msgstr ""
+msgstr "Estimaciones y conceptos"
 
 #: ../../developer/architecture/database-schema.rst:146
 msgid "**Estimate:**"
-msgstr ""
+msgstr "**Estimar:**"
 
 #: ../../developer/architecture/database-schema.rst:157
 msgid "**Concept:**"
-msgstr ""
+msgstr "**Concepto:**"
 
 #: ../../developer/architecture/database-schema.rst:171
 msgid "Indexes & Constraints"
-msgstr ""
+msgstr "Índices y restricciones"
 
 #: ../../developer/architecture/database-schema.rst:174
 msgid "Indexes"
-msgstr ""
+msgstr "Índices"
 
 #: ../../developer/architecture/database-schema.rst:176
 msgid "**Common patterns:**"
-msgstr ""
+msgstr "**Patrones comunes:**"
 
 #: ../../developer/architecture/database-schema.rst:189
 msgid "Unique Constraints"
-msgstr ""
+msgstr "Restricciones únicas"
 
 #: ../../developer/architecture/database-schema.rst:191
 msgid "**Company-scoped uniqueness:**"
-msgstr ""
+msgstr "**Singularidad en el ámbito de la empresa:**"
 
 #: ../../developer/architecture/database-schema.rst:201
 msgid "Database Queries"
-msgstr ""
+msgstr "Consultas de bases de datos"
 
 #: ../../developer/architecture/database-schema.rst:204
 msgid "Select Related"
-msgstr ""
+msgstr "Seleccione Relacionados"
 
 #: ../../developer/architecture/database-schema.rst:206
 msgid "**Optimize foreign keys:**"
-msgstr ""
+msgstr "**Optimizar claves externas:**"
 
 #: ../../developer/architecture/database-schema.rst:218
 msgid "Prefetch Related"
-msgstr ""
+msgstr "Relacionados con la captación previa"
 
 #: ../../developer/architecture/database-schema.rst:220
 msgid "**Optimize reverse FK and M2M:**"
-msgstr ""
+msgstr "**Optimizar FK inverso y M2M:**"
 
 #: ../../developer/architecture/database-schema.rst:230
 msgid "Tree Queries"
-msgstr ""
+msgstr "Consultas de árbol"
 
 #: ../../developer/architecture/database-schema.rst:232
 msgid "**Hierarchical data:**"
-msgstr ""
+msgstr "**Datos jerárquicos:**"
 
 #: ../../developer/architecture/database-schema.rst:246
 msgid "Migrations"
-msgstr ""
+msgstr "Migraciones"
 
 #: ../../developer/architecture/database-schema.rst:248
 msgid "**Key migrations:**"
-msgstr ""
+msgstr "**Migraciones clave:**"
 
 #: ../../developer/architecture/database-schema.rst:250
 msgid "Initial: Create all models"
-msgstr ""
+msgstr "Inicial: crear todos los modelos"
 
 #: ../../developer/architecture/database-schema.rst:251
 msgid "django-treebeard: Add path/depth/numchild fields"
-msgstr ""
+msgstr "django-treebeard: Agregar campos de ruta/profundidad/numchild"
 
 #: ../../developer/architecture/database-schema.rst:252
 msgid "Company scoping: Add company FK to all models"
-msgstr ""
+msgstr "Alcance de la empresa: agregar la empresa FK a todos los modelos"
 
 #: ../../developer/architecture/database-schema.rst:253
 msgid "Unique constraints: Add unique_together"
-msgstr ""
+msgstr "Restricciones únicas: agregue Unique_together"
 
 #: ../../developer/architecture/database-schema.rst:255
 msgid "**Run migrations:**"
-msgstr ""
+msgstr "**Ejecutar migraciones:**"
 
 #: ../../developer/architecture/database-schema.rst:263
 msgid "Database Optimization"
-msgstr ""
+msgstr "Optimización de la base de datos"
 
 #: ../../developer/architecture/database-schema.rst:266
 msgid "Connection Pooling"
-msgstr ""
+msgstr "Agrupación de conexiones"
 
 #: ../../developer/architecture/database-schema.rst:274
 msgid "Atomic Transactions"
-msgstr ""
+msgstr "Transacciones atómicas"
 
 #: ../../developer/architecture/database-schema.rst:282
 msgid "Query Analysis"
-msgstr ""
+msgstr "Análisis de consultas"
 
 #: ../../developer/architecture/database-schema.rst:290
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/architecture/database-schema.rst:292
 msgid ":doc:`multi-tenancy` - Multi-tenant architecture"
@@ -262,4 +262,3 @@ msgstr ""
 #: ../../developer/architecture/database-schema.rst:294
 msgid ":doc:`overview` - System architecture"
 msgstr ""
-

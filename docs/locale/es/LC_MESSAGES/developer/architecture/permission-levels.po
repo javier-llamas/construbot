@@ -11,101 +11,104 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/architecture/permission-levels.rst:3
 msgid "Permission Levels"
-msgstr ""
+msgstr "Niveles de permiso"
 
 #: ../../developer/architecture/permission-levels.rst:5
 msgid "Six-tier permission system (NIVELES_ACCESO) for access control."
 msgstr ""
+"Sistema de permisos de seis niveles (NIVELES_ACCESO) para control de acceso."
 
 #: ../../developer/architecture/permission-levels.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../developer/architecture/permission-levels.rst:10
 msgid "**Six permission levels:**"
-msgstr ""
+msgstr "**Seis niveles de permiso:**"
 
 #: ../../developer/architecture/permission-levels.rst:12
 msgid "**Auxiliar** (1) - View only"
-msgstr ""
+msgstr "**Auxiliar** (1) - Ver solo"
 
 #: ../../developer/architecture/permission-levels.rst:13
 msgid "**Coordinador** (2) - Create and edit"
-msgstr ""
+msgstr "**Coordinador** (2) - Crear y editar"
 
 #: ../../developer/architecture/permission-levels.rst:14
 msgid "**Director** (3) - Full CRUD operations"
-msgstr ""
+msgstr "**Director** (3) - Operaciones CRUD completas"
 
 #: ../../developer/architecture/permission-levels.rst:15
 msgid "**Corporativo** (4) - Cross-company access"
-msgstr ""
+msgstr "**Corporativo** (4) - Acceso entre empresas"
 
 #: ../../developer/architecture/permission-levels.rst:16
 msgid "**Soporte** (5) - Support/maintenance"
-msgstr ""
+msgstr "**Soporte** (5) - Soporte/mantenimiento"
 
 #: ../../developer/architecture/permission-levels.rst:17
 msgid "**Superusuario** (6) - Full system access"
-msgstr ""
+msgstr "**Superusuario** (6) - Acceso completo al sistema"
 
 #: ../../developer/architecture/permission-levels.rst:19
 msgid "**Implementation:** Foreign key on User model pointing to NivelAcceso."
 msgstr ""
+"**Implementación:** Clave externa en modelo de Usuario apuntando a "
+"NivelAcceso."
 
 #: ../../developer/architecture/permission-levels.rst:22
 msgid "NivelAcceso Model"
-msgstr ""
+msgstr "Modelo NivelAcceso"
 
 #: ../../developer/architecture/permission-levels.rst:24
 msgid "**File:** ``construbot/users/models.py``"
-msgstr ""
+msgstr "**Archivo:** ``construbot/users/models.py``"
 
 #: ../../developer/architecture/permission-levels.rst:42
 msgid "**Default levels:**"
-msgstr ""
+msgstr "**Niveles predeterminados:**"
 
 #: ../../developer/architecture/permission-levels.rst:55
 msgid "User Assignment"
-msgstr ""
+msgstr "Asignación de usuarios"
 
 #: ../../developer/architecture/permission-levels.rst:66
 msgid "**Setting level:**"
-msgstr ""
+msgstr "**Nivel de configuración:**"
 
 #: ../../developer/architecture/permission-levels.rst:75
 msgid "Permission Checks"
-msgstr ""
+msgstr "Verificaciones de permisos"
 
 #: ../../developer/architecture/permission-levels.rst:78
 msgid "View Decorators"
-msgstr ""
+msgstr "Ver decoradores"
 
 #: ../../developer/architecture/permission-levels.rst:101
 msgid "Class-Based Views"
-msgstr ""
+msgstr "Vistas basadas en clases"
 
 #: ../../developer/architecture/permission-levels.rst:119
 msgid "Template Checks"
-msgstr ""
+msgstr "Verificaciones de plantilla"
 
 #: ../../developer/architecture/permission-levels.rst:132
 msgid "Level-Specific Capabilities"
-msgstr ""
+msgstr "Capacidades específicas de nivel"
 
 #: ../../developer/architecture/permission-levels.rst:135
 msgid "1. Auxiliar (View Only)"
-msgstr ""
+msgstr "1. Auxiliar (solo ver)"
 
 #: ../../developer/architecture/permission-levels.rst:137
 #: ../../developer/architecture/permission-levels.rst:153
@@ -114,211 +117,212 @@ msgstr ""
 #: ../../developer/architecture/permission-levels.rst:208
 #: ../../developer/architecture/permission-levels.rst:226
 msgid "**Permissions:**"
-msgstr ""
+msgstr "**Permisos:**"
 
 #: ../../developer/architecture/permission-levels.rst:139
 msgid "View contracts, estimates, reports"
-msgstr ""
+msgstr "Ver contratos, estimaciones, informes."
 
 #: ../../developer/architecture/permission-levels.rst:140
 msgid "No create/edit/delete"
-msgstr ""
+msgstr "No crear/editar/eliminar"
 
 #: ../../developer/architecture/permission-levels.rst:142
 msgid "**Use case:** Field workers, read-only access"
-msgstr ""
+msgstr "**Caso de uso:** Trabajadores de campo, acceso de solo lectura"
 
 #: ../../developer/architecture/permission-levels.rst:151
 msgid "2. Coordinador (Create/Edit)"
-msgstr ""
+msgstr "2. Coordinador (Crear/Editar)"
 
 #: ../../developer/architecture/permission-levels.rst:155
 msgid "All Auxiliar permissions"
-msgstr ""
+msgstr "Todos los permisos auxiliares"
 
 #: ../../developer/architecture/permission-levels.rst:156
 msgid "Create new records"
-msgstr ""
+msgstr "Crear nuevos registros"
 
 #: ../../developer/architecture/permission-levels.rst:157
 msgid "Edit existing records"
-msgstr ""
+msgstr "Editar registros existentes"
 
 #: ../../developer/architecture/permission-levels.rst:158
 msgid "Cannot delete"
-msgstr ""
+msgstr "No se puede eliminar"
 
 #: ../../developer/architecture/permission-levels.rst:160
 msgid "**Use case:** Project coordinators"
-msgstr ""
+msgstr "**Caso de uso:** Coordinadores de proyecto"
 
 #: ../../developer/architecture/permission-levels.rst:169
 msgid "3. Director (Full CRUD)"
-msgstr ""
+msgstr "3. Director (CRUD completo)"
 
 #: ../../developer/architecture/permission-levels.rst:173
 msgid "All Coordinador permissions"
-msgstr ""
+msgstr "Todos los permisos del Coordinador"
 
 #: ../../developer/architecture/permission-levels.rst:174
 msgid "Delete records"
-msgstr ""
+msgstr "Eliminar registros"
 
 #: ../../developer/architecture/permission-levels.rst:175
 msgid "Approve estimates"
-msgstr ""
+msgstr "Aprobar estimaciones"
 
 #: ../../developer/architecture/permission-levels.rst:176
 msgid "Generate reports"
-msgstr ""
+msgstr "Generar informes"
 
 #: ../../developer/architecture/permission-levels.rst:178
 msgid "**Use case:** Project managers, directors"
-msgstr ""
+msgstr "**Caso de uso:** Gerentes de proyecto, directores"
 
 #: ../../developer/architecture/permission-levels.rst:187
 msgid "4. Corporativo (Multi-Company)"
-msgstr ""
+msgstr "4. Corporativo (Multiempresa)"
 
 #: ../../developer/architecture/permission-levels.rst:191
 msgid "All Director permissions"
-msgstr ""
+msgstr "Todos los permisos del director"
 
 #: ../../developer/architecture/permission-levels.rst:192
 msgid "Access multiple companies"
-msgstr ""
+msgstr "Accede a múltiples empresas"
 
 #: ../../developer/architecture/permission-levels.rst:193
 msgid "Cross-company reports"
-msgstr ""
+msgstr "Informes entre empresas"
 
 #: ../../developer/architecture/permission-levels.rst:194
 msgid "Company-level configuration"
-msgstr ""
+msgstr "Configuración a nivel de empresa"
 
 #: ../../developer/architecture/permission-levels.rst:196
 msgid "**Use case:** Corporate-level management"
-msgstr ""
+msgstr "**Caso de uso:** Gestión a nivel corporativo"
 
 #: ../../developer/architecture/permission-levels.rst:206
 msgid "5. Soporte (Support Access)"
-msgstr ""
+msgstr "5. Soporte (Acceso de soporte)"
 
 #: ../../developer/architecture/permission-levels.rst:210
 msgid "Technical support access"
-msgstr ""
+msgstr "Acceso al soporte técnico"
 
 #: ../../developer/architecture/permission-levels.rst:211
 msgid "System diagnostics"
-msgstr ""
+msgstr "Diagnóstico del sistema"
 
 #: ../../developer/architecture/permission-levels.rst:212
 msgid "User assistance"
-msgstr ""
+msgstr "Asistencia al usuario"
 
 #: ../../developer/architecture/permission-levels.rst:213
 msgid "Limited configuration"
-msgstr ""
+msgstr "Configuración limitada"
 
 #: ../../developer/architecture/permission-levels.rst:215
 msgid "**Use case:** Technical support staff"
-msgstr ""
+msgstr "**Caso de uso:** Personal de soporte técnico"
 
 #: ../../developer/architecture/permission-levels.rst:224
 msgid "6. Superusuario (Full Access)"
-msgstr ""
+msgstr "6. Superusuario (Acceso Completo)"
 
 #: ../../developer/architecture/permission-levels.rst:228
 msgid "All system access"
-msgstr ""
+msgstr "Todo el acceso al sistema."
 
 #: ../../developer/architecture/permission-levels.rst:229
 msgid "Django admin"
-msgstr ""
+msgstr "Administrador de Django"
 
 #: ../../developer/architecture/permission-levels.rst:230
 msgid "User management"
-msgstr ""
+msgstr "Gestión de usuarios"
 
 #: ../../developer/architecture/permission-levels.rst:231
 msgid "System configuration"
-msgstr ""
+msgstr "Configuración del sistema"
 
 #: ../../developer/architecture/permission-levels.rst:233
 msgid "**Use case:** System administrators"
-msgstr ""
+msgstr "**Caso de uso:** Administradores del sistema"
 
 #: ../../developer/architecture/permission-levels.rst:242
 msgid "Combining with Company Scope"
-msgstr ""
+msgstr "Combinando con el alcance de la empresa"
 
 #: ../../developer/architecture/permission-levels.rst:244
 msgid "**Always combine level check with company scope:**"
 msgstr ""
+"**Combine siempre la verificación de nivel con el alcance de la empresa:**"
 
 #: ../../developer/architecture/permission-levels.rst:260
 msgid "API Permissions"
-msgstr ""
+msgstr "Permisos API"
 
 #: ../../developer/architecture/permission-levels.rst:279
 msgid "Best Practices"
-msgstr ""
+msgstr "Mejores prácticas"
 
 #: ../../developer/architecture/permission-levels.rst:281
 msgid "**1. Use minimum required level:**"
-msgstr ""
+msgstr "**1. Utilice el nivel mínimo requerido:**"
 
 #: ../../developer/architecture/permission-levels.rst:293
 msgid "**2. Check in views, not templates:**"
-msgstr ""
+msgstr "**2. Verifique vistas, no plantillas:**"
 
 #: ../../developer/architecture/permission-levels.rst:305
 msgid "**3. Combine checks:**"
-msgstr ""
+msgstr "**3. Combinar cheques:**"
 
 #: ../../developer/architecture/permission-levels.rst:320
 msgid "**4. Document required levels:**"
-msgstr ""
+msgstr "**4. Niveles de documentación requeridos:**"
 
 #: ../../developer/architecture/permission-levels.rst:333
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../developer/architecture/permission-levels.rst:335
 msgid "**PermissionDenied errors:**"
-msgstr ""
+msgstr "**Errores de permiso denegado:**"
 
 #: ../../developer/architecture/permission-levels.rst:337
 msgid "Check user's nivel_acceso level"
-msgstr ""
+msgstr "Consultar nivel_acceso del usuario"
 
 #: ../../developer/architecture/permission-levels.rst:338
 msgid "Verify required level is correct"
-msgstr ""
+msgstr "Verifique que el nivel requerido sea correcto"
 
 #: ../../developer/architecture/permission-levels.rst:339
 msgid "Confirm user is authenticated"
-msgstr ""
+msgstr "Confirmar que el usuario está autenticado"
 
 #: ../../developer/architecture/permission-levels.rst:341
 msgid "**User can't access feature:**"
-msgstr ""
+msgstr "**El usuario no puede acceder a la función:**"
 
 #: ../../developer/architecture/permission-levels.rst:343
 msgid "Check nivel_acceso assignment"
-msgstr ""
+msgstr "Consultar asignación nivel_acceso"
 
 #: ../../developer/architecture/permission-levels.rst:344
 msgid "Verify permission decorator is applied"
-msgstr ""
+msgstr "Verificar que se haya aplicado el decorador de permisos"
 
 #: ../../developer/architecture/permission-levels.rst:345
 msgid "Confirm level threshold is appropriate"
-msgstr ""
+msgstr "Confirmar que el umbral de nivel es apropiado"
 
 #: ../../developer/architecture/permission-levels.rst:348
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/architecture/permission-levels.rst:350
 msgid ":doc:`authentication` - Authentication system"
@@ -331,4 +335,3 @@ msgstr ""
 #: ../../developer/architecture/permission-levels.rst:352
 msgid ":doc:`../models/users` - User model reference"
 msgstr ""
-

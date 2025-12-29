@@ -11,368 +11,380 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/architecture/authentication.rst:3
 msgid "Authentication"
-msgstr ""
+msgstr "Autenticación"
 
 #: ../../developer/architecture/authentication.rst:5
 msgid "Email-based authentication system with multi-company support."
 msgstr ""
+"Sistema de autenticación basado en correo electrónico con soporte "
+"multiempresa."
 
 #: ../../developer/architecture/authentication.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../developer/architecture/authentication.rst:10
 msgid "**Key features:**"
-msgstr ""
+msgstr "**Características clave:**"
 
 #: ../../developer/architecture/authentication.rst:12
 msgid "Email as username (no separate username field)"
 msgstr ""
+"Correo electrónico como nombre de usuario (sin campo de nombre de usuario "
+"separado)"
 
 #: ../../developer/architecture/authentication.rst:13
 msgid "Custom authentication backend"
-msgstr ""
+msgstr "Backend de autenticación personalizada"
 
 #: ../../developer/architecture/authentication.rst:14
 msgid "Multi-company access without re-login"
-msgstr ""
+msgstr "Acceso multiempresa sin necesidad de volver a iniciar sesión"
 
 #: ../../developer/architecture/authentication.rst:15
 msgid "django-allauth integration"
-msgstr ""
+msgstr "integración django-allauth"
 
 #: ../../developer/architecture/authentication.rst:16
 msgid "JWT tokens for API"
-msgstr ""
+msgstr "Tokens JWT para API"
 
 #: ../../developer/architecture/authentication.rst:18
 msgid "**Models:**"
-msgstr ""
+msgstr "**Modelos:**"
 
 #: ../../developer/architecture/authentication.rst:20
 msgid "Custom User model (``users.User``)"
-msgstr ""
+msgstr "Modelo de usuario personalizado (``usuarios.Usuario``)"
 
 #: ../../developer/architecture/authentication.rst:21
 msgid "Session-based for web"
-msgstr ""
+msgstr "Basado en sesiones para web"
 
 #: ../../developer/architecture/authentication.rst:22
 msgid "JWT for API"
-msgstr ""
+msgstr "JWT para API"
 
 #: ../../developer/architecture/authentication.rst:25
 msgid "Custom User Model"
-msgstr ""
+msgstr "Modelo de usuario personalizado"
 
 #: ../../developer/architecture/authentication.rst:27
 msgid "**AUTH_USER_MODEL:** ``users.User``"
-msgstr ""
+msgstr "**AUTH_USER_MODEL:** ``usuarios.Usuario``"
 
 #: ../../developer/architecture/authentication.rst:42
 #: ../../developer/architecture/authentication.rst:125
 #: ../../developer/architecture/authentication.rst:197
 msgid "**Settings:**"
-msgstr ""
+msgstr "**Ajustes:**"
 
 #: ../../developer/architecture/authentication.rst:55
 msgid "Authentication Backend"
-msgstr ""
+msgstr "Servidor de autenticación"
 
 #: ../../developer/architecture/authentication.rst:57
 msgid "**File:** ``construbot/core/backends.py``"
-msgstr ""
+msgstr "**Archivo:** ``construbot/core/backends.py``"
 
 #: ../../developer/architecture/authentication.rst:86
 msgid "Web Authentication"
-msgstr ""
+msgstr "Autenticación web"
 
 #: ../../developer/architecture/authentication.rst:89
 msgid "Login View"
-msgstr ""
+msgstr "Iniciar sesión Ver"
 
 #: ../../developer/architecture/authentication.rst:117
 msgid "Session Management"
-msgstr ""
+msgstr "Gestión de sesiones"
 
 #: ../../developer/architecture/authentication.rst:119
 msgid "**Sessions stored in:**"
-msgstr ""
+msgstr "**Sesiones almacenadas en:**"
 
 #: ../../developer/architecture/authentication.rst:121
 msgid "Database (default): ``django.contrib.sessions.backends.db``"
 msgstr ""
+"Base de datos (predeterminada): ``django.contrib.sessions.backends.db``"
 
 #: ../../developer/architecture/authentication.rst:122
 msgid "Cache (faster): ``django.contrib.sessions.backends.cache``"
-msgstr ""
+msgstr "Caché (más rápido): ``django.contrib.sessions.backends.cache``"
 
 #: ../../developer/architecture/authentication.rst:123
-msgid "Cached DB (recommended): ``django.contrib.sessions.backends.cached_db``"
+msgid ""
+"Cached DB (recommended): ``django.contrib.sessions.backends.cached_db``"
 msgstr ""
+"Base de datos en caché (recomendado): "
+"``django.contrib.sessions.backends.cached_db``"
 
 #: ../../developer/architecture/authentication.rst:136
 msgid "Company Context in Session"
-msgstr ""
+msgstr "Contexto de la empresa en la sesión"
 
 #: ../../developer/architecture/authentication.rst:152
 msgid "django-allauth Integration"
-msgstr ""
+msgstr "Integración Django Allauth"
 
 #: ../../developer/architecture/authentication.rst:154
 msgid "**Configuration:**"
-msgstr ""
+msgstr "**Configuración:**"
 
 #: ../../developer/architecture/authentication.rst:170
 #: ../../developer/architecture/authentication.rst:218
 msgid "**URLs:**"
-msgstr ""
+msgstr "**URL:**"
 
 #: ../../developer/architecture/authentication.rst:178
 msgid "**Templates:**"
-msgstr ""
+msgstr "**Plantillas:**"
 
 #: ../../developer/architecture/authentication.rst:180
 msgid "Override allauth templates in ``templates/account/``:"
 msgstr ""
+"Anule todas las plantillas de autenticación en ``templates/account/``:"
 
 #: ../../developer/architecture/authentication.rst:182
 msgid "``login.html``"
-msgstr ""
+msgstr "``iniciar sesión.html``"
 
 #: ../../developer/architecture/authentication.rst:183
 msgid "``signup.html``"
-msgstr ""
+msgstr "``registro.html``"
 
 #: ../../developer/architecture/authentication.rst:184
 msgid "``password_reset.html``"
-msgstr ""
+msgstr "``contraseña_reset.html``"
 
 #: ../../developer/architecture/authentication.rst:187
 msgid "API Authentication"
-msgstr ""
+msgstr "Autenticación API"
 
 #: ../../developer/architecture/authentication.rst:190
 msgid "JWT Configuration"
-msgstr ""
+msgstr "Configuración JWT"
 
 #: ../../developer/architecture/authentication.rst:192
 msgid "**Packages:**"
-msgstr ""
+msgstr "**Paquetes:**"
 
 #: ../../developer/architecture/authentication.rst:194
 msgid "``djangorestframework``"
-msgstr ""
+msgstr "``marcodjangorest``"
 
 #: ../../developer/architecture/authentication.rst:195
 msgid "``djangorestframework-simplejwt``"
-msgstr ""
+msgstr "``djangorestframework-simplejwt``"
 
 #: ../../developer/architecture/authentication.rst:233
 msgid "Obtaining Tokens"
-msgstr ""
+msgstr "Obtener fichas"
 
 #: ../../developer/architecture/authentication.rst:235
 msgid "**Request:**"
-msgstr ""
+msgstr "**Pedido:**"
 
 #: ../../developer/architecture/authentication.rst:243
 msgid "**Response:**"
-msgstr ""
+msgstr "**Respuesta:**"
 
 #: ../../developer/architecture/authentication.rst:253
 msgid "Using Tokens"
-msgstr ""
+msgstr "Usando fichas"
 
 #: ../../developer/architecture/authentication.rst:261
 msgid "Refreshing Tokens"
-msgstr ""
+msgstr "Fichas refrescantes"
 
 #: ../../developer/architecture/authentication.rst:270
 msgid "Password Management"
-msgstr ""
+msgstr "Gestión de contraseñas"
 
 #: ../../developer/architecture/authentication.rst:273
 msgid "Password Hashing"
-msgstr ""
+msgstr "Hash de contraseña"
 
 #: ../../developer/architecture/authentication.rst:275
 msgid "**Argon2 (recommended):**"
-msgstr ""
+msgstr "**Argón2 (recomendado):**"
 
 #: ../../developer/architecture/authentication.rst:284
 msgid "**Requires:**"
-msgstr ""
+msgstr "**Requiere:**"
 
 #: ../../developer/architecture/authentication.rst:291
 msgid "Password Reset"
-msgstr ""
+msgstr "Restablecer contraseña"
 
 #: ../../developer/architecture/authentication.rst:293
 msgid "**URL:**"
-msgstr ""
+msgstr "**URL:**"
 
 #: ../../developer/architecture/authentication.rst:299
 msgid "**Email template:**"
-msgstr ""
+msgstr "**Plantilla de correo electrónico:**"
 
 #: ../../developer/architecture/authentication.rst:301
 msgid "Create ``templates/account/email/password_reset_key_message.txt``"
 msgstr ""
+"Cree ``plantillas/cuenta/correo "
+"electrónico/contraseña_reset_key_message.txt``"
 
 #: ../../developer/architecture/authentication.rst:303
 msgid "**Flow:**"
-msgstr ""
+msgstr "**Fluir:**"
 
 #: ../../developer/architecture/authentication.rst:305
 msgid "User requests reset → email sent"
 msgstr ""
+"Restablecimiento de solicitudes de usuario → correo electrónico enviado"
 
 #: ../../developer/architecture/authentication.rst:306
 msgid "Click link → enter new password"
-msgstr ""
+msgstr "Haga clic en el enlace → ingrese una nueva contraseña"
 
 #: ../../developer/architecture/authentication.rst:307
 msgid "Password updated → can log in"
-msgstr ""
+msgstr "Contraseña actualizada → puede iniciar sesión"
 
 #: ../../developer/architecture/authentication.rst:310
 msgid "Change Password"
-msgstr ""
+msgstr "Cambiar la contraseña"
 
 #: ../../developer/architecture/authentication.rst:319
 msgid "Permissions & Authorization"
-msgstr ""
+msgstr "Permisos y autorización"
 
 #: ../../developer/architecture/authentication.rst:322
 msgid "Login Required"
-msgstr ""
+msgstr "Iniciar sesión requerido"
 
 #: ../../developer/architecture/authentication.rst:332
 msgid "**Class-based views:**"
-msgstr ""
+msgstr "**Vistas basadas en clases:**"
 
 #: ../../developer/architecture/authentication.rst:342
 msgid "Permission Level Check"
-msgstr ""
+msgstr "Verificación del nivel de permiso"
 
 #: ../../developer/architecture/authentication.rst:358
 msgid "See :doc:`permission-levels` for details."
-msgstr ""
+msgstr "Consulte :doc:`permission-levels` para obtener más detalles."
 
 #: ../../developer/architecture/authentication.rst:361
 msgid "Security Best Practices"
-msgstr ""
+msgstr "Mejores prácticas de seguridad"
 
 #: ../../developer/architecture/authentication.rst:363
 msgid "**1. Use HTTPS in production:**"
-msgstr ""
+msgstr "**1. Utilice HTTPS en producción:**"
 
 #: ../../developer/architecture/authentication.rst:371
 msgid "**2. Strong password requirements:**"
-msgstr ""
+msgstr "**2. Requisitos de contraseña fuertes:**"
 
 #: ../../developer/architecture/authentication.rst:382
 msgid "**3. Rate limiting:**"
-msgstr ""
+msgstr "**3. Limitación de tarifa:**"
 
 #: ../../developer/architecture/authentication.rst:384
 msgid "Use django-ratelimit or similar."
-msgstr ""
+msgstr "Utilice django-ratelimit o similar."
 
 #: ../../developer/architecture/authentication.rst:386
 msgid "**4. Two-factor authentication (optional):**"
-msgstr ""
+msgstr "**4. Autenticación de dos factores (opcional):**"
 
 #: ../../developer/architecture/authentication.rst:388
 msgid "Use django-otp or django-allauth 2FA."
-msgstr ""
+msgstr "Utilice django-otp o django-allauth 2FA."
 
 #: ../../developer/architecture/authentication.rst:390
 msgid "**5. Session security:**"
-msgstr ""
+msgstr "**5. Seguridad de la sesión:**"
 
 #: ../../developer/architecture/authentication.rst:398
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../developer/architecture/authentication.rst:400
 msgid "**\"User matching query does not exist\":**"
-msgstr ""
+msgstr "**\"La consulta de coincidencia del usuario no existe\":**"
 
 #: ../../developer/architecture/authentication.rst:402
 msgid "Check email is correct"
-msgstr ""
+msgstr "Compruebe que el correo electrónico sea correcto"
 
 #: ../../developer/architecture/authentication.rst:403
 msgid "Verify user exists in database"
-msgstr ""
+msgstr "Verificar que el usuario exista en la base de datos"
 
 #: ../../developer/architecture/authentication.rst:404
 msgid "Confirm AUTH_USER_MODEL setting"
-msgstr ""
+msgstr "Confirmar la configuración AUTH_USER_MODEL"
 
 #: ../../developer/architecture/authentication.rst:406
 msgid "**\"Invalid credentials\":**"
-msgstr ""
+msgstr "**\"Credenciales no válidas\":**"
 
 #: ../../developer/architecture/authentication.rst:408
 msgid "Verify password is correct"
-msgstr ""
+msgstr "Verificar que la contraseña sea correcta"
 
 #: ../../developer/architecture/authentication.rst:409
 msgid "Check authentication backend is configured"
-msgstr ""
+msgstr "Verifique que el backend de autenticación esté configurado"
 
 #: ../../developer/architecture/authentication.rst:410
 msgid "Ensure user is active (``is_active=True``)"
-msgstr ""
+msgstr "Asegúrese de que el usuario esté activo (``is_active=True``)"
 
 #: ../../developer/architecture/authentication.rst:412
 msgid "**API 401 Unauthorized:**"
-msgstr ""
+msgstr "**API 401 no autorizado:**"
 
 #: ../../developer/architecture/authentication.rst:414
 msgid "Check token is included in header"
-msgstr ""
+msgstr "El token de cheque está incluido en el encabezado"
 
 #: ../../developer/architecture/authentication.rst:415
 msgid "Verify token hasn't expired"
-msgstr ""
+msgstr "Verificar que el token no haya caducado"
 
 #: ../../developer/architecture/authentication.rst:416
 msgid "Confirm token format: ``Bearer <token>``"
-msgstr ""
+msgstr "Confirmar formato del token: ``Portador <token>``"
 
 #: ../../developer/architecture/authentication.rst:418
 msgid "**Session not persisting:**"
-msgstr ""
+msgstr "**La sesión no persiste:**"
 
 #: ../../developer/architecture/authentication.rst:420
 msgid "Check SESSION_COOKIE_SECURE with HTTP (should be False for local)"
-msgstr ""
+msgstr "Verifique SESSION_COOKIE_SECURE con HTTP (debe ser Falso para local)"
 
 #: ../../developer/architecture/authentication.rst:421
 msgid "Verify browser accepts cookies"
-msgstr ""
+msgstr "Verifique que el navegador acepte cookies"
 
 #: ../../developer/architecture/authentication.rst:422
 msgid "Check session backend is configured"
-msgstr ""
+msgstr "Verifique que el backend de la sesión esté configurado"
 
 #: ../../developer/architecture/authentication.rst:425
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/architecture/authentication.rst:427
 msgid ":doc:`multi-tenancy` - Multi-company architecture"
@@ -389,4 +401,3 @@ msgstr ""
 #: ../../developer/architecture/authentication.rst:430
 msgid ":doc:`../models/users` - User model reference"
 msgstr ""
-

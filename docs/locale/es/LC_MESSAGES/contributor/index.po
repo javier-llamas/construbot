@@ -11,406 +11,417 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../contributor/index.rst:3
 msgid "Contributor Guide"
-msgstr ""
+msgstr "Guía para contribuyentes"
 
 #: ../../contributor/index.rst:5
 msgid "Welcome to the Construbot contributor documentation!"
-msgstr ""
+msgstr "¡Bienvenido a la documentación para contribuyentes de Construbot!"
 
 #: ../../contributor/index.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../contributor/index.rst:10
 msgid ""
-"Thank you for your interest in contributing to Construbot! This guide "
-"covers everything you need to know about contributing code, "
-"documentation, translations, and more."
+"Thank you for your interest in contributing to Construbot! This guide covers"
+" everything you need to know about contributing code, documentation, "
+"translations, and more."
 msgstr ""
+"¡Gracias por tu interés en contribuir a Construbot! Esta guía cubre todo lo "
+"que necesita saber sobre cómo contribuir con código, documentación, "
+"traducciones y más."
 
 #: ../../contributor/index.rst:13
 msgid "**First time contributor?** Start with :doc:`getting-started`"
-msgstr ""
+msgstr "**¿Colabora por primera vez?** Comience con :doc:`Getting-Started`"
 
 #: ../../contributor/index.rst:16
 msgid "Ways to Contribute"
-msgstr ""
+msgstr "Formas de contribuir"
 
 #: ../../contributor/index.rst:18
 msgid "💻 **Code Contributions**"
-msgstr ""
+msgstr "💻 **Contribuciones de código**"
 
 #: ../../contributor/index.rst:20
 msgid "Bug fixes"
-msgstr ""
+msgstr "Corrección de errores"
 
 #: ../../contributor/index.rst:21
 msgid "New features"
-msgstr ""
+msgstr "Nuevas características"
 
 #: ../../contributor/index.rst:22
 msgid "Performance improvements"
-msgstr ""
+msgstr "Mejoras de rendimiento"
 
 #: ../../contributor/index.rst:23
 msgid "Code refactoring"
-msgstr ""
+msgstr "Refactorización de código"
 
 #: ../../contributor/index.rst:25
 msgid "📚 **Documentation**"
-msgstr ""
+msgstr "📚 **Documentación**"
 
 #: ../../contributor/index.rst:27
 msgid "Fix typos and errors"
-msgstr ""
+msgstr "Corregir errores tipográficos y"
 
 #: ../../contributor/index.rst:28
 msgid "Improve existing docs"
-msgstr ""
+msgstr "Mejorar los documentos existentes"
 
 #: ../../contributor/index.rst:29
 msgid "Add new guides"
-msgstr ""
+msgstr "Agregar nuevas guías"
 
 #: ../../contributor/index.rst:30
 msgid "Translate to Spanish"
-msgstr ""
+msgstr "Traducir al español"
 
 #: ../../contributor/index.rst:32
 msgid "🌍 **Translations**"
-msgstr ""
+msgstr "🌍 **Traducciones**"
 
 #: ../../contributor/index.rst:34
 msgid "Translate UI strings"
-msgstr ""
+msgstr "Traducir cadenas de UI"
 
 #: ../../contributor/index.rst:35
 msgid "Update Spanish→English glossary"
-msgstr ""
+msgstr "Actualizar glosario español→inglés"
 
 #: ../../contributor/index.rst:36
 msgid "Review translations"
-msgstr ""
+msgstr "Revisar traducciones"
 
 #: ../../contributor/index.rst:38
 msgid "🐛 **Bug Reports**"
-msgstr ""
+msgstr "🐛 **Informes de errores**"
 
 #: ../../contributor/index.rst:40
 msgid "Report issues"
-msgstr ""
+msgstr "Informar problemas"
 
 #: ../../contributor/index.rst:41
 msgid "Provide reproduction steps"
-msgstr ""
+msgstr "Proporcionar pasos de reproducción."
 
 #: ../../contributor/index.rst:42
 msgid "Suggest fixes"
-msgstr ""
+msgstr "Sugerir correcciones"
 
 #: ../../contributor/index.rst:44
 msgid "✨ **Feature Requests**"
-msgstr ""
+msgstr "✨ **Solicitudes de funciones**"
 
 #: ../../contributor/index.rst:46
 msgid "Propose new features"
-msgstr ""
+msgstr "Proponer nuevas funciones."
 
 #: ../../contributor/index.rst:47
 msgid "Discuss improvements"
-msgstr ""
+msgstr "Discutir mejoras"
 
 #: ../../contributor/index.rst:48
 msgid "Vote on proposals"
-msgstr ""
+msgstr "Votar propuestas"
 
 #: ../../contributor/index.rst:51
 msgid "Quick Start"
-msgstr ""
+msgstr "Inicio rápido"
 
 #: ../../contributor/index.rst:53
 msgid "**1. Fork and Clone:**"
-msgstr ""
+msgstr "**1. Bifurcación y clonación:**"
 
 #: ../../contributor/index.rst:61
 msgid "**2. Set up development environment:**"
-msgstr ""
+msgstr "**2. Configurar el entorno de desarrollo:**"
 
 #: ../../contributor/index.rst:73
 msgid "**3. Create feature branch:**"
-msgstr ""
+msgstr "**3. Crear rama de funciones:**"
 
 #: ../../contributor/index.rst:79
 msgid "**4. Make changes and test:**"
-msgstr ""
+msgstr "**4. Realice cambios y pruebe:**"
 
 #: ../../contributor/index.rst:85
 msgid "**5. Submit pull request**"
-msgstr ""
+msgstr "**5. Enviar solicitud de extracción**"
 
 #: ../../contributor/index.rst:87
 msgid "See :doc:`getting-started` for detailed steps."
-msgstr ""
+msgstr "Consulte :doc:`Getting-Start` para conocer los pasos detallados."
 
 #: ../../contributor/index.rst:90
 msgid "Development Workflow"
-msgstr ""
+msgstr "Flujo de trabajo de desarrollo"
 
 #: ../../contributor/index.rst:92
 msgid "**1. Find an issue or create one**"
-msgstr ""
+msgstr "**1. Encuentre un problema o cree uno**"
 
 #: ../../contributor/index.rst:94
 msgid "Browse https://github.com/javier-llamas/construbot/issues"
-msgstr ""
+msgstr "Navegar por https://github.com/javier-llamas/construbot/issues"
 
 #: ../../contributor/index.rst:96
 msgid "**2. Discuss approach**"
-msgstr ""
+msgstr "**2. Discutir el enfoque**"
 
 #: ../../contributor/index.rst:98
 msgid "Comment on issue before starting major work"
-msgstr ""
+msgstr "Comente sobre el problema antes de comenzar un trabajo importante."
 
 #: ../../contributor/index.rst:100
 msgid "**3. Write code**"
-msgstr ""
+msgstr "**3. Escribir código**"
 
 #: ../../contributor/index.rst:102
 msgid "Follow :doc:`code-style` guidelines"
-msgstr ""
+msgstr "Siga las pautas :doc:`code-style`"
 
 #: ../../contributor/index.rst:104
 msgid "**4. Write tests**"
-msgstr ""
+msgstr "**4. Escribir pruebas**"
 
 #: ../../contributor/index.rst:106
 msgid "See :doc:`testing/index`"
-msgstr ""
+msgstr "Ver :doc:`testing/index`"
 
 #: ../../contributor/index.rst:108
 msgid "**5. Update documentation**"
-msgstr ""
+msgstr "**5. Actualizar documentación**"
 
 #: ../../contributor/index.rst:110
 msgid "Document new features"
-msgstr ""
+msgstr "Documentar nuevas características"
 
 #: ../../contributor/index.rst:112
 msgid "**6. Submit PR**"
-msgstr ""
+msgstr "**6. Enviar PR**"
 
 #: ../../contributor/index.rst:114
 msgid "Include clear description and tests"
-msgstr ""
+msgstr "Incluir descripción y pruebas claras."
 
 #: ../../contributor/index.rst:117
 msgid "Code Style"
-msgstr ""
+msgstr "Estilo de código"
 
 #: ../../contributor/index.rst:119
 msgid "**Python:**"
-msgstr ""
+msgstr "**Pitón:**"
 
 #: ../../contributor/index.rst:121
 msgid "Follow PEP 8"
-msgstr ""
+msgstr "Siga PEP 8"
 
 #: ../../contributor/index.rst:122
 msgid "Use Black for formatting"
-msgstr ""
+msgstr "Utilice negro para formatear"
 
 #: ../../contributor/index.rst:123
 msgid "Type hints encouraged"
-msgstr ""
+msgstr "Se recomienda escribir sugerencias"
 
 #: ../../contributor/index.rst:124
 msgid "Docstrings for public APIs"
-msgstr ""
+msgstr "Cadenas de documentación para API públicas"
 
 #: ../../contributor/index.rst:126
 msgid "**Django:**"
-msgstr ""
+msgstr "**Django:**"
 
 #: ../../contributor/index.rst:128
 msgid "Follow Django best practices"
-msgstr ""
+msgstr "Siga las mejores prácticas de Django"
 
 #: ../../contributor/index.rst:129
 msgid "Use Django's built-in features"
-msgstr ""
+msgstr "Utilice las funciones integradas de Django"
 
 #: ../../contributor/index.rst:130
 msgid "Company-scope all queries"
-msgstr ""
+msgstr "Todas las consultas del ámbito de la empresa"
 
 #: ../../contributor/index.rst:132
 msgid "See :doc:`code-style` for complete guidelines."
-msgstr ""
+msgstr "Consulte :doc:`code-style` para obtener pautas completas."
 
 #: ../../contributor/index.rst:135
 msgid "Testing"
-msgstr ""
+msgstr "Pruebas"
 
 #: ../../contributor/index.rst:137
 msgid "**Run tests:**"
-msgstr ""
+msgstr "**Ejecutar pruebas:**"
 
 #: ../../contributor/index.rst:151
 msgid "See :doc:`testing/index` for testing guide."
-msgstr ""
+msgstr "Consulte :doc:`testing/index` para obtener una guía de prueba."
 
 #: ../../contributor/index.rst:154
 msgid "Documentation"
-msgstr ""
+msgstr "Documentación"
 
 #: ../../contributor/index.rst:156
 msgid "**Build docs:**"
-msgstr ""
+msgstr "**Documentos de compilación:**"
 
 #: ../../contributor/index.rst:164
 msgid "**Auto-rebuild:**"
-msgstr ""
+msgstr "**Reconstrucción automática:**"
 
 #: ../../contributor/index.rst:170
 msgid "See :doc:`documentation/index` for documentation guidelines."
 msgstr ""
+"Consulte :doc:`documentation/index` para conocer las pautas de "
+"documentación."
 
 #: ../../contributor/index.rst:173
 msgid "Translation"
-msgstr ""
+msgstr "Traducción"
 
 #: ../../contributor/index.rst:175
 msgid "**Spanish→English glossary:**"
-msgstr ""
+msgstr "**Glosario español→inglés:**"
 
 #: ../../contributor/index.rst:177
 msgid "See :doc:`translation/glossary` for complete term mappings."
 msgstr ""
+"Consulte :doc:`translation/glossary` para ver las asignaciones de términos "
+"completas."
 
 #: ../../contributor/index.rst:179
 msgid "**Add translations:**"
-msgstr ""
+msgstr "**Agregar traducciones:**"
 
 #: ../../contributor/index.rst:187
 msgid "See :doc:`translation/index` for translation guide."
 msgstr ""
+"Consulte :doc:`translation/index` para obtener una guía de traducción."
 
 #: ../../contributor/index.rst:190
 msgid "Pull Request Guidelines"
-msgstr ""
+msgstr "Directrices para solicitudes de extracción"
 
 #: ../../contributor/index.rst:192
 msgid "**Before submitting:**"
-msgstr ""
+msgstr "**Antes de enviar:**"
 
 #: ../../contributor/index.rst:194
 msgid "✅ Tests pass (``make test``)"
-msgstr ""
+msgstr "✅ Pasan las pruebas (``hacer prueba``)"
 
 #: ../../contributor/index.rst:196
 msgid "✅ Code follows style guide"
-msgstr ""
+msgstr "✅ El código sigue la guía de estilo"
 
 #: ../../contributor/index.rst:198
 msgid "✅ Documentation updated"
-msgstr ""
+msgstr "✅ Documentación actualizada"
 
 #: ../../contributor/index.rst:200
 msgid "✅ Commits are clear and atomic"
-msgstr ""
+msgstr "✅ Los compromisos son claros y atómicos"
 
 #: ../../contributor/index.rst:202
 msgid "✅ PR description explains changes"
-msgstr ""
+msgstr "✅ La descripción de PR explica los cambios"
 
 #: ../../contributor/index.rst:204
 msgid "**PR template:**"
-msgstr ""
+msgstr "**Plantilla de relaciones públicas:**"
 
 #: ../../contributor/index.rst:228
 msgid "Community"
-msgstr ""
+msgstr "Comunidad"
 
 #: ../../contributor/index.rst:230
 msgid "**Be respectful and inclusive**"
-msgstr ""
+msgstr "**Sea respetuoso e inclusivo**"
 
 #: ../../contributor/index.rst:232
 msgid "We follow the Contributor Covenant Code of Conduct."
-msgstr ""
+msgstr "Seguimos el Código de conducta del Pacto del colaborador."
 
 #: ../../contributor/index.rst:234
 msgid "**Ask for help**"
-msgstr ""
+msgstr "**Pide ayuda**"
 
 #: ../../contributor/index.rst:236
 msgid "GitHub Issues"
-msgstr ""
+msgstr "Problemas de GitHub"
 
 #: ../../contributor/index.rst:237
 msgid "GitHub Discussions (if available)"
-msgstr ""
+msgstr "Discusiones de GitHub (si están disponibles)"
 
 #: ../../contributor/index.rst:239
 msgid "**Give feedback**"
-msgstr ""
+msgstr "**Dar comentarios**"
 
 #: ../../contributor/index.rst:241
 msgid "Your input helps improve Construbot!"
-msgstr ""
+msgstr "¡Tus comentarios ayudan a mejorar Construbot!"
 
 #: ../../contributor/index.rst:244
 msgid "Documentation Sections"
-msgstr ""
+msgstr "Secciones de documentación"
 
 #: ../../contributor/index.rst:256
 msgid "Resources"
-msgstr ""
+msgstr "Recursos"
 
 #: ../../contributor/index.rst:258
 msgid "**GitHub:** https://github.com/javier-llamas/construbot"
-msgstr ""
+msgstr "**GitHub:** https://github.com/javier-llamas/construbot"
 
 #: ../../contributor/index.rst:259
 msgid "**Issues:** https://github.com/javier-llamas/construbot/issues"
-msgstr ""
+msgstr "**Problemas:** https://github.com/javier-llamas/construbot/issues"
 
 #: ../../contributor/index.rst:260
 msgid "**Developer Docs:** :doc:`/developer/index`"
-msgstr ""
+msgstr "**Documentos del desarrollador:** :doc:`/developer/index`"
 
 #: ../../contributor/index.rst:261
 msgid "**Architecture:** :doc:`/developer/architecture/index`"
-msgstr ""
+msgstr "**Arquitectura:** :doc:`/developer/architecture/index`"
 
 #: ../../contributor/index.rst:264
 msgid "License"
-msgstr ""
+msgstr "Licencia"
 
 #: ../../contributor/index.rst:266
 msgid ""
-"By contributing, you agree that your contributions will be licensed under"
-" the AGPLv3 license."
+"By contributing, you agree that your contributions will be licensed under "
+"the AGPLv3 license."
 msgstr ""
+"Al contribuir, usted acepta que sus contribuciones tendrán la licencia "
+"AGPLv3."
 
 #: ../../contributor/index.rst:269
 msgid "Thank You"
-msgstr ""
+msgstr "Gracias"
 
 #: ../../contributor/index.rst:271
 msgid ""
-"Thank you for contributing to Construbot! Your contributions help make "
-"this project better for everyone."
+"Thank you for contributing to Construbot! Your contributions help make this "
+"project better for everyone."
 msgstr ""
-
+"¡Gracias por contribuir a Construbot! Sus contribuciones ayudan a que este "
+"proyecto sea mejor para todos."

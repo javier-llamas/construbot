@@ -11,1194 +11,1270 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../user-guide/concepts/projects-contracts.rst:3
 msgid "Projects & Contracts"
-msgstr ""
+msgstr "Proyectos y Contratos"
 
 #: ../../user-guide/concepts/projects-contracts.rst:6
 msgid "**Spanish Term:** Contrato"
-msgstr ""
+msgstr "**Término en español:** Contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:8
 msgid ""
 "In Construbot, \"Contrato\" refers to both construction projects and "
 "contracts. The system supports hierarchical contracts (sub-contracts)."
 msgstr ""
+"En Construbot, \"Contrato\" se refiere tanto a proyectos de construcción "
+"como a contratos. El sistema soporta contratos jerárquicos (subcontratos)."
 
 #: ../../user-guide/concepts/projects-contracts.rst:12
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../user-guide/concepts/projects-contracts.rst:14
 msgid ""
-"A **Contract** (Contrato) is the central entity in Construbot, "
-"representing a construction project or agreement. Every aspect of work "
-"tracking, billing, and financial management revolves around contracts."
+"A **Contract** (Contrato) is the central entity in Construbot, representing "
+"a construction project or agreement. Every aspect of work tracking, billing,"
+" and financial management revolves around contracts."
 msgstr ""
+"Un **Contrato** (Contrato) es la entidad central en Construbot, que "
+"representa un proyecto o acuerdo de construcción. Todos los aspectos del "
+"seguimiento del trabajo, la facturación y la gestión financiera giran en "
+"torno a los contratos."
 
 #: ../../user-guide/concepts/projects-contracts.rst:17
 msgid "**Key Characteristics:**"
-msgstr ""
+msgstr "**Características clave:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:19
 msgid "Hierarchical structure (parent/child relationships)"
-msgstr ""
+msgstr "Estructura jerárquica (relaciones padre/hijo)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:20
 msgid "Associated with a Counterparty (business partner)"
-msgstr ""
+msgstr "Asociado con una Contraparte (socio comercial)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:21
 msgid "Linked to a construction Site (location)"
-msgstr ""
+msgstr "Vinculado a un sitio de construcción (ubicación)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:22
 msgid "Contains a catalog of work items (Concepts)"
-msgstr ""
+msgstr "Contiene un catálogo de elementos de trabajo (Conceptos)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:23
 msgid "Tracks progress through Estimates"
-msgstr ""
+msgstr "Realiza un seguimiento del progreso a través de estimaciones"
 
 #: ../../user-guide/concepts/projects-contracts.rst:24
 msgid "Manages financial aspects (amount, advance, retentions)"
-msgstr ""
+msgstr "Gestiona aspectos financieros (monto, anticipo, retenciones)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:27
 msgid "What is a Contract?"
-msgstr ""
+msgstr "¿Qué es un contrato?"
 
 #: ../../user-guide/concepts/projects-contracts.rst:29
 msgid "A contract in Construbot represents:"
-msgstr ""
+msgstr "Un contrato en Construbot representa:"
 
 #: ../../user-guide/concepts/projects-contracts.rst:32
 msgid "**Legal Agreement**"
-msgstr ""
+msgstr "**Acuerdo Legal**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:32
 msgid ""
-"The formal contract or agreement with a client, subcontractor, or "
-"piecework contractor."
+"The formal contract or agreement with a client, subcontractor, or piecework "
+"contractor."
 msgstr ""
+"El contrato o acuerdo formal con un cliente, subcontratista o contratista a "
+"destajo."
 
 #: ../../user-guide/concepts/projects-contracts.rst:35
 msgid "**Project Container**"
-msgstr ""
+msgstr "**Contenedor de proyecto**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:35
 msgid "A project that groups related work, estimates, and financial tracking."
 msgstr ""
+"Un proyecto que agrupa trabajos relacionados, estimaciones y seguimiento "
+"financiero."
 
 #: ../../user-guide/concepts/projects-contracts.rst:38
 msgid "**Financial Framework**"
-msgstr ""
+msgstr "**Marco financiero**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:38
 msgid "Defines the total amount, advance payment, and retention rules."
 msgstr ""
+"Define el monto total, el pago por adelantado y las reglas de retención."
 
 #: ../../user-guide/concepts/projects-contracts.rst:41
 msgid "**Work Catalog**"
-msgstr ""
+msgstr "**Catálogo de Trabajo**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:41
 msgid "Contains all work items (concepts) to be executed."
 msgstr ""
+"Contiene todos los elementos de trabajo (conceptos) que se ejecutarán."
 
 #: ../../user-guide/concepts/projects-contracts.rst:44
 msgid "Contract Components"
-msgstr ""
+msgstr "Componentes del contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:47
 msgid "Basic Information"
-msgstr ""
+msgstr "Información básica"
 
 #: ../../user-guide/concepts/projects-contracts.rst:50
 msgid "**Reference Number** (Folio)"
-msgstr ""
+msgstr "**Número de Referencia** (Folio)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:50
 msgid "Sequential ID for contracts within your company (e.g., 1, 2, 3...)."
 msgstr ""
+"ID secuencial para contratos dentro de su empresa (por ejemplo, 1, 2, 3...)."
 
 #: ../../user-guide/concepts/projects-contracts.rst:53
 msgid "**Contract Code** (Código)"
-msgstr ""
+msgstr "**Código de contrato** (Código)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:53
 msgid "Your internal code matching the signed contract (e.g., \"CONT-2024-001\")."
 msgstr ""
+"Su código interno que coincide con el contrato firmado (por ejemplo, "
+"\"CONT-2024-001\")."
 
 #: ../../user-guide/concepts/projects-contracts.rst:58
 msgid "**Contract Name** (Nombre del contrato)"
-msgstr ""
+msgstr "**Nombre del contrato** (Nombre del contrato)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:56
 msgid "Full descriptive name used in estimates and reports."
-msgstr ""
+msgstr "Nombre descriptivo completo utilizado en estimaciones e informes."
 
 #: ../../user-guide/concepts/projects-contracts.rst:58
 msgid "*Example: \"Downtown Office Tower - Complete Construction Phase 1\"*"
 msgstr ""
+"*Ejemplo: \"Torre de oficinas en el centro: finalización de la fase de "
+"construcción 1\"*"
 
 #: ../../user-guide/concepts/projects-contracts.rst:63
 msgid "**Short Name** (Nombre corto)"
-msgstr ""
+msgstr "**Nombre corto** (Nombre corto)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:61
 msgid "Abbreviated name for lists and navigation."
-msgstr ""
+msgstr "Nombre abreviado para listas y navegación."
 
 #: ../../user-guide/concepts/projects-contracts.rst:63
 msgid "*Example: \"Office Tower P1\"*"
-msgstr ""
+msgstr "*Ejemplo: \"Torre de Oficinas P1\"*"
 
 #: ../../user-guide/concepts/projects-contracts.rst:66
 msgid "**Date** (Fecha)"
-msgstr ""
+msgstr "**Fecha** (Fecha)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:66
 msgid "Contract signing or start date."
-msgstr ""
+msgstr "Firma del contrato o fecha de inicio."
 
 #: ../../user-guide/concepts/projects-contracts.rst:69
 msgid "Relationships"
-msgstr ""
+msgstr "Relaciones"
 
 #: ../../user-guide/concepts/projects-contracts.rst:76
 msgid "**Counterparty** (Contraparte)"
-msgstr ""
+msgstr "**Contraparte** (Contraparte)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:72
 msgid "The business partner for this contract. Must be one of:"
-msgstr ""
+msgstr "El socio comercial de este contrato. Debe ser uno de:"
 
 #: ../../user-guide/concepts/projects-contracts.rst:74
 msgid "**Client** (Cliente) - If you're performing work for them"
-msgstr ""
+msgstr "**Cliente** (Cliente) - Si estás realizando un trabajo para ellos"
 
 #: ../../user-guide/concepts/projects-contracts.rst:75
 msgid ""
-"**Subcontractor** (Subcontratista) - If they're performing specialized "
-"work for you"
+"**Subcontractor** (Subcontratista) - If they're performing specialized work "
+"for you"
 msgstr ""
+"**Subcontratista** (Subcontratista): si realiza un trabajo especializado "
+"para usted"
 
 #: ../../user-guide/concepts/projects-contracts.rst:76
-msgid "**Piecework Contractor** (Destajista) - If they're doing task-based work"
+msgid ""
+"**Piecework Contractor** (Destajista) - If they're doing task-based work"
 msgstr ""
+"**Contratista a destajo** (Destajista): si realiza trabajo basado en tareas"
 
 #: ../../user-guide/concepts/projects-contracts.rst:80
 msgid "**Site** (Sitio)"
-msgstr ""
+msgstr "**Sitio** (Sitio)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:79
 msgid ""
-"The construction location where work will be performed. Must be "
-"associated with a Client counterparty."
+"The construction location where work will be performed. Must be associated "
+"with a Client counterparty."
 msgstr ""
+"El lugar de construcción donde se realizará el trabajo. Debe estar asociado "
+"con una contraparte del Cliente."
 
 #: ../../user-guide/concepts/projects-contracts.rst:83
 msgid "**Users** (Usuarios)"
-msgstr ""
+msgstr "**Usuarios** (Usuarios)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:83
 msgid ""
-"Team members assigned to this contract. Only assigned users can view/edit"
-" the contract."
+"Team members assigned to this contract. Only assigned users can view/edit "
+"the contract."
 msgstr ""
+"Miembros del equipo asignados a este contrato. Sólo los usuarios asignados "
+"pueden ver/editar el contrato."
 
 #: ../../user-guide/concepts/projects-contracts.rst:86
 msgid "Financial Fields"
-msgstr ""
+msgstr "Campos financieros"
 
 #: ../../user-guide/concepts/projects-contracts.rst:91
 msgid "**Amount** (Monto)"
-msgstr ""
+msgstr "**Cantidad** (Monto)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:89
 msgid "Total contract value, typically specified **without VAT/IVA**."
-msgstr ""
+msgstr "Valor total del contrato, normalmente especificado **sin IVA/IVA**."
 
 #: ../../user-guide/concepts/projects-contracts.rst:91
 msgid "*Example: $1,000,000.00*"
-msgstr ""
+msgstr "*Ejemplo: $1,000,000.00*"
 
 #: ../../user-guide/concepts/projects-contracts.rst:97
 msgid "**Advance Payment** (Anticipo)"
-msgstr ""
+msgstr "**Pago Anticipado** (Anticipo)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:94
 msgid ""
-"Percentage (0-100%) paid upfront by the client for mobilization. This "
-"amount will be amortized (recovered) across subsequent estimates."
+"Percentage (0-100%) paid upfront by the client for mobilization. This amount"
+" will be amortized (recovered) across subsequent estimates."
 msgstr ""
+"Porcentaje (0-100%) pagado por adelantado por el cliente para la "
+"movilización. Este monto será amortizado (recuperado) a través de "
+"estimaciones posteriores."
 
 #: ../../user-guide/concepts/projects-contracts.rst:97
 msgid "*Example: 10% = $100,000.00 advance on a $1,000,000 contract*"
-msgstr ""
+msgstr "*Ejemplo: 10% = $100,000.00 de anticipo en un contrato de $1,000,000*"
 
 #: ../../user-guide/concepts/projects-contracts.rst:100
 msgid "**Status** (Status)"
-msgstr ""
+msgstr "**Estado** (Estado)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:100
 msgid ""
-"Boolean indicating if the project is **ongoing** (active) or "
-"**completed** (inactive)."
+"Boolean indicating if the project is **ongoing** (active) or **completed** "
+"(inactive)."
 msgstr ""
+"Booleano que indica si el proyecto está **en curso** (activo) o "
+"**completado** (inactivo)."
 
 #: ../../user-guide/concepts/projects-contracts.rst:103
 msgid "Documents"
-msgstr ""
+msgstr "Documentos"
 
 #: ../../user-guide/concepts/projects-contracts.rst:106
 msgid "**Contract PDF** (PDF del Contrato)"
-msgstr ""
+msgstr "**PDF del Contrato** (PDF del Contrato)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:106
 msgid "Upload the signed contract document for reference."
-msgstr ""
+msgstr "Cargue el documento del contrato firmado como referencia."
 
 #: ../../user-guide/concepts/projects-contracts.rst:109
 msgid "Hierarchical Structure"
-msgstr ""
+msgstr "Estructura jerárquica"
 
 #: ../../user-guide/concepts/projects-contracts.rst:111
 msgid ""
-"One of Construbot's powerful features is **hierarchical contracts** using"
-" parent-child relationships."
+"One of Construbot's powerful features is **hierarchical contracts** using "
+"parent-child relationships."
 msgstr ""
+"Una de las poderosas características de Construbot son los **contratos "
+"jerárquicos** que utilizan relaciones entre padres e hijos."
 
 #: ../../user-guide/concepts/projects-contracts.rst:114
 msgid "Why Use Hierarchy?"
-msgstr ""
+msgstr "¿Por qué utilizar la jerarquía?"
 
 #: ../../user-guide/concepts/projects-contracts.rst:125
 msgid "**Separate Sub-Contractor Management**"
-msgstr ""
+msgstr "**Gestión independiente de subcontratistas**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:117
 msgid "Track work by different subcontractors under a main contract:"
 msgstr ""
+"Seguimiento del trabajo de diferentes subcontratistas bajo un contrato "
+"principal:"
 
 #: ../../user-guide/concepts/projects-contracts.rst:128
 msgid "**Consolidated Reporting**"
-msgstr ""
+msgstr "**Informes consolidados**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:128
-msgid "Generate reports that roll up totals from all sub-contracts to the parent."
+msgid ""
+"Generate reports that roll up totals from all sub-contracts to the parent."
 msgstr ""
+"Genere informes que resumen los totales de todos los subcontratos al padre."
 
 #: ../../user-guide/concepts/projects-contracts.rst:131
 msgid "**Different Teams**"
-msgstr ""
+msgstr "**Diferentes equipos**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:131
 msgid ""
-"Assign different users to different sub-contracts while maintaining "
-"overall project visibility."
+"Assign different users to different sub-contracts while maintaining overall "
+"project visibility."
 msgstr ""
+"Asigne diferentes usuarios a diferentes subcontratos mientras mantiene la "
+"visibilidad general del proyecto."
 
 #: ../../user-guide/concepts/projects-contracts.rst:134
 msgid "**Clear Financial Separation**"
-msgstr ""
+msgstr "**Separación financiera clara**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:134
 msgid "Track costs and progress separately for each specialized area."
 msgstr ""
+"Realice un seguimiento de los costos y el progreso por separado para cada "
+"área especializada."
 
 #: ../../user-guide/concepts/projects-contracts.rst:137
 msgid "Creating Hierarchy"
-msgstr ""
+msgstr "Creando jerarquía"
 
 #: ../../user-guide/concepts/projects-contracts.rst:140
 msgid "**Parent Contract:**"
-msgstr ""
+msgstr "**Contrato de padres:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:140
 msgid "Create a main contract using the standard \"Create Contract\" form."
 msgstr ""
+"Cree un contrato principal utilizando el formulario estándar \"Crear "
+"contrato\"."
 
 #: ../../user-guide/concepts/projects-contracts.rst:143
 msgid "**Child Contracts:**"
-msgstr ""
+msgstr "**Contratos infantiles:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:143
 msgid "Use the \"Create Sub-Contract\" option and select the parent contract."
 msgstr ""
+"Utilice la opción \"Crear subcontrato\" y seleccione el contrato principal."
 
 #: ../../user-guide/concepts/projects-contracts.rst:145
 msgid "**Tree Operations:**"
-msgstr ""
+msgstr "**Operaciones de árbol:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:147
 msgid "Add multiple children to any parent"
-msgstr ""
+msgstr "Agregar varios hijos a cualquier padre"
 
 #: ../../user-guide/concepts/projects-contracts.rst:148
 msgid "Add children to children (multi-level hierarchy)"
-msgstr ""
+msgstr "Agregar hijos a hijos (jerarquía multinivel)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:149
 msgid "Move contracts within the tree (with caution)"
-msgstr ""
+msgstr "Mover contratos dentro del árbol (con precaución)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:152
 msgid ""
-"**Deletion Rules**: You cannot delete a parent contract that has "
-"children. Delete all child contracts first."
+"**Deletion Rules**: You cannot delete a parent contract that has children. "
+"Delete all child contracts first."
 msgstr ""
+"**Reglas de eliminación**: No puede eliminar un contrato principal que tenga"
+" hijos. Primero elimine todos los contratos secundarios."
 
 #: ../../user-guide/concepts/projects-contracts.rst:156
 msgid "Contract Lifecycle"
-msgstr ""
+msgstr "Ciclo de vida del contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:159
 msgid "1. Creation"
-msgstr ""
+msgstr "1. Creación"
 
 #: ../../user-guide/concepts/projects-contracts.rst:161
 msgid "**Initial Setup:**"
-msgstr ""
+msgstr "**Configuración inicial:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:163
 msgid "Create or select Counterparty"
-msgstr ""
+msgstr "Crear o seleccionar Contraparte"
 
 #: ../../user-guide/concepts/projects-contracts.rst:164
 msgid "Create or select Site"
-msgstr ""
+msgstr "Crear o seleccionar sitio"
 
 #: ../../user-guide/concepts/projects-contracts.rst:165
 msgid "Define contract details (folio, name, amount, date)"
-msgstr ""
+msgstr "Definir detalles del contrato (folio, nombre, monto, fecha)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:166
 msgid "Set advance payment percentage"
-msgstr ""
+msgstr "Establecer porcentaje de pago por adelantado"
 
 #: ../../user-guide/concepts/projects-contracts.rst:167
 msgid "Assign users"
-msgstr ""
+msgstr "Asignar usuarios"
 
 #: ../../user-guide/concepts/projects-contracts.rst:168
 msgid "Upload signed contract PDF (optional)"
-msgstr ""
+msgstr "Cargar el contrato firmado en PDF (opcional)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:170
 msgid "**Result:** Empty contract ready for work catalog."
-msgstr ""
+msgstr "**Resultado:** Contrato vacío listo para catálogo de trabajo."
 
 #: ../../user-guide/concepts/projects-contracts.rst:173
 msgid "2. Catalog Definition"
-msgstr ""
+msgstr "2. Definición del catálogo"
 
 #: ../../user-guide/concepts/projects-contracts.rst:175
 msgid "**Add Work Items (Concepts):**"
-msgstr ""
+msgstr "**Agregar elementos de trabajo (conceptos):**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:177
 msgid "Manually enter each work item, OR"
-msgstr ""
+msgstr "Ingresar manualmente cada elemento de trabajo, O"
 
 #: ../../user-guide/concepts/projects-contracts.rst:178
 msgid "Import from Excel spreadsheet"
-msgstr ""
+msgstr "Importar desde hoja de cálculo de Excel"
 
 #: ../../user-guide/concepts/projects-contracts.rst:180
 msgid "**Define Retentions:**"
-msgstr ""
+msgstr "**Definir Retenciones:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:182
 msgid "Add percentage-based retentions (e.g., 5%)"
-msgstr ""
+msgstr "Agregar retenciones basadas en porcentajes (por ejemplo, 5%)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:183
 msgid "Add fixed-amount retentions (e.g., $10,000)"
-msgstr ""
+msgstr "Agregue retenciones de monto fijo (por ejemplo, $10,000)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:185
 msgid "**Result:** Contract with complete work catalog and retention rules."
 msgstr ""
+"**Resultado:** Contrato con catálogo de obra completo y reglas de retención."
 
 #: ../../user-guide/concepts/projects-contracts.rst:188
 msgid "3. Execution"
-msgstr ""
+msgstr "3. Ejecución"
 
 #: ../../user-guide/concepts/projects-contracts.rst:190
 msgid "**Track Progress:**"
-msgstr ""
+msgstr "**Seguimiento del progreso:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:192
 msgid "Create periodic estimates (Estimaciones)"
-msgstr ""
+msgstr "Crear estimaciones periódicas (Estimaciones)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:193
 msgid "Document completed quantities for each concept"
-msgstr ""
+msgstr "Documentar cantidades completadas por cada concepto."
 
 #: ../../user-guide/concepts/projects-contracts.rst:194
 msgid "Generate PDF estimates"
-msgstr ""
+msgstr "Generar estimaciones en PDF"
 
 #: ../../user-guide/concepts/projects-contracts.rst:195
 msgid "Submit to client for approval"
-msgstr ""
+msgstr "Enviar al cliente para su aprobación"
 
 #: ../../user-guide/concepts/projects-contracts.rst:197
 msgid "**Result:** Work progress documented, payments tracked."
 msgstr ""
+"**Resultado:** Progreso del trabajo documentado, seguimiento de los pagos."
 
 #: ../../user-guide/concepts/projects-contracts.rst:200
 msgid "4. Financial Management"
-msgstr ""
+msgstr "4. Gestión financiera"
 
 #: ../../user-guide/concepts/projects-contracts.rst:202
 msgid "**Payment Tracking:**"
-msgstr ""
+msgstr "**Seguimiento de pagos:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:204
 msgid "Mark estimates as invoiced (facturada)"
-msgstr ""
+msgstr "Marcar estimaciones como facturadas (facturadas)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:205
 msgid "Record when payments are received (pagada)"
-msgstr ""
+msgstr "Registrar cuando se reciben los pagos (pagada)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:206
 msgid "Monitor outstanding amounts on dashboard"
-msgstr ""
+msgstr "Supervise los importes pendientes en el panel de control"
 
 #: ../../user-guide/concepts/projects-contracts.rst:208
 msgid "**Automatic Calculations:**"
-msgstr ""
+msgstr "**Cálculos automáticos:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:210
 msgid "Advance amortization across estimates"
-msgstr ""
+msgstr "Amortización anticipada entre estimaciones"
 
 #: ../../user-guide/concepts/projects-contracts.rst:211
 msgid "Retention deductions"
-msgstr ""
+msgstr "Deducciones de retención"
 
 #: ../../user-guide/concepts/projects-contracts.rst:212
 msgid "Accumulated totals"
-msgstr ""
+msgstr "Totales acumulados"
 
 #: ../../user-guide/concepts/projects-contracts.rst:214
 msgid "**Result:** Clear financial visibility."
-msgstr ""
+msgstr "**Resultado:** Clara visibilidad financiera."
 
 #: ../../user-guide/concepts/projects-contracts.rst:217
 msgid "5. Completion"
-msgstr ""
+msgstr "5. Finalización"
 
 #: ../../user-guide/concepts/projects-contracts.rst:219
 msgid "**Project Close:**"
-msgstr ""
+msgstr "**Cierre del proyecto:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:221
 msgid "Final estimate created"
-msgstr ""
+msgstr "Estimación final creada"
 
 #: ../../user-guide/concepts/projects-contracts.rst:222
 msgid "All work completed"
-msgstr ""
+msgstr "Todo el trabajo completado"
 
 #: ../../user-guide/concepts/projects-contracts.rst:223
 msgid "Final payment received (including retained amounts)"
-msgstr ""
+msgstr "Pago final recibido (incluidos los importes retenidos)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:224
 msgid "Contract status set to inactive"
-msgstr ""
+msgstr "Estado del contrato establecido en inactivo"
 
 #: ../../user-guide/concepts/projects-contracts.rst:226
 msgid "**Result:** Closed project with complete financial history."
-msgstr ""
+msgstr "**Resultado:** Proyecto cerrado con historial financiero completo."
 
 #: ../../user-guide/concepts/projects-contracts.rst:229
 msgid "Contract Types by Counterparty"
-msgstr ""
+msgstr "Tipos de contrato por contraparte"
 
 #: ../../user-guide/concepts/projects-contracts.rst:232
 msgid "Client Contracts"
-msgstr ""
+msgstr "Contratos de clientes"
 
 #: ../../user-guide/concepts/projects-contracts.rst:234
 msgid "**When:** Your company is the contractor performing work."
-msgstr ""
+msgstr "**Cuándo:** Su empresa es el contratista que realiza el trabajo."
 
 #: ../../user-guide/concepts/projects-contracts.rst:236
 msgid "**Counterparty Type:** Cliente (Client)"
-msgstr ""
+msgstr "**Tipo de Contraparte:** Cliente"
 
 #: ../../user-guide/concepts/projects-contracts.rst:238
 msgid "**Financial Flow:** Client pays you for completed work."
-msgstr ""
+msgstr "**Flujo financiero:** El cliente le paga por el trabajo completado."
 
 #: ../../user-guide/concepts/projects-contracts.rst:245
 #: ../../user-guide/concepts/projects-contracts.rst:262
 #: ../../user-guide/concepts/projects-contracts.rst:279
 #: ../../user-guide/concepts/projects-contracts.rst:297
 msgid "**Example:**"
-msgstr ""
+msgstr "**Ejemplo:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:241
 msgid "*\"Office Building Construction for ABC Corp\"*"
-msgstr ""
+msgstr "*\"Construcción de edificio de oficinas para ABC Corp\"*"
 
 #: ../../user-guide/concepts/projects-contracts.rst:243
 msgid "Counterparty: ABC Corp (Cliente)"
-msgstr ""
+msgstr "Contraparte: ABC Corp (Cliente)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:244
 #: ../../user-guide/concepts/projects-contracts.rst:277
 msgid "Your role: General Contractor"
-msgstr ""
+msgstr "Su función: Contratista general"
 
 #: ../../user-guide/concepts/projects-contracts.rst:245
 msgid "Payment: You receive money"
-msgstr ""
+msgstr "Pago: Recibes dinero"
 
 #: ../../user-guide/concepts/projects-contracts.rst:248
 msgid "Subcontractor Contracts"
-msgstr ""
+msgstr "Contratos de subcontratación"
 
 #: ../../user-guide/concepts/projects-contracts.rst:250
 msgid "**When:** You hire a specialized contractor for part of a project."
 msgstr ""
+"**Cuándo:** Contratas a un contratista especializado para parte de un "
+"proyecto."
 
 #: ../../user-guide/concepts/projects-contracts.rst:252
 msgid "**Counterparty Type:** Subcontratista (Subcontractor)"
-msgstr ""
+msgstr "**Tipo de Contraparte:** Subcontratista"
 
 #: ../../user-guide/concepts/projects-contracts.rst:254
 msgid "**Financial Flow:** You pay the subcontractor for their work."
-msgstr ""
+msgstr "**Flujo financiero:** Pagas al subcontratista por su trabajo."
 
 #: ../../user-guide/concepts/projects-contracts.rst:257
 msgid "*\"Electrical Installation - Subcontracted to XYZ Electric\"*"
-msgstr ""
+msgstr "*\"Instalación Eléctrica - Subcontratada a XYZ Electric\"*"
 
 #: ../../user-guide/concepts/projects-contracts.rst:259
 msgid "Counterparty: XYZ Electric (Subcontratista)"
-msgstr ""
+msgstr "Contraparte: XYZ Electric (Subcontratista)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:260
 msgid "Your role: General Contractor hiring specialist"
-msgstr ""
+msgstr "Su función: especialista en contratación de contratistas generales"
 
 #: ../../user-guide/concepts/projects-contracts.rst:261
 msgid "Payment: You pay money"
-msgstr ""
+msgstr "Pago: pagas dinero"
 
 #: ../../user-guide/concepts/projects-contracts.rst:262
 msgid "Typically a **child contract** under a main client contract"
 msgstr ""
+"Normalmente un **contrato secundario** bajo un contrato de cliente principal"
 
 #: ../../user-guide/concepts/projects-contracts.rst:265
 msgid "Piecework Contracts"
-msgstr ""
+msgstr "Contratos a destajo"
 
 #: ../../user-guide/concepts/projects-contracts.rst:267
 msgid "**When:** You hire workers paid by completed units (piece rate)."
 msgstr ""
+"**Cuándo:** Usted contrata trabajadores pagados por unidades completadas (a "
+"destajo)."
 
 #: ../../user-guide/concepts/projects-contracts.rst:269
 msgid "**Counterparty Type:** Destajista (Piecework Contractor)"
-msgstr ""
+msgstr "**Tipo de Contraparte:** Destajista (Contratista a destajo)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:271
 msgid "**Financial Flow:** You pay per completed task/quantity."
-msgstr ""
+msgstr "**Flujo financiero:** Pagas por tarea/cantidad completada."
 
 #: ../../user-guide/concepts/projects-contracts.rst:274
 msgid "*\"Masonry Work - Paid per Square Meter\"*"
-msgstr ""
+msgstr "*\"Trabajos de Albañilería - Pagado por Metro Cuadrado\"*"
 
 #: ../../user-guide/concepts/projects-contracts.rst:276
 msgid "Counterparty: José García (Destajista)"
-msgstr ""
+msgstr "Contrapartida: José García (Destajista)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:278
 msgid "Payment: You pay based on quantity (e.g., $50/m²)"
-msgstr ""
+msgstr "Pago: Usted paga según la cantidad (por ejemplo, $50/m²)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:279
 msgid "Common in Mexican construction industry"
-msgstr ""
+msgstr "Común en la industria de la construcción mexicana"
 
 #: ../../user-guide/concepts/projects-contracts.rst:282
 msgid "Financial Calculations"
-msgstr ""
+msgstr "Cálculos financieros"
 
 #: ../../user-guide/concepts/projects-contracts.rst:285
 msgid "Understanding Contract Amounts"
-msgstr ""
+msgstr "Comprensión de los montos del contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:288
 msgid "**Total Contracted** (Importe Total Contratado)"
-msgstr ""
+msgstr "**Total Contratado** (Importar Total Contratado)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:288
 msgid "The ``monto`` field - total contract value."
-msgstr ""
+msgstr "El campo ``monto`` - valor total del contrato."
 
 #: ../../user-guide/concepts/projects-contracts.rst:292
 msgid "**Accumulated Executed** (Ejercido Acumulado)"
-msgstr ""
+msgstr "**Acumulado Ejecutado**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:291
 msgid ""
 "Sum of all work billed across all estimates to date. Calculated by: "
 "``ejercido_acumulado()`` method."
 msgstr ""
+"Suma de todo el trabajo facturado en todas las estimaciones hasta la fecha. "
+"Calculado mediante: método ``ejercido_acumulado()``."
 
 #: ../../user-guide/concepts/projects-contracts.rst:295
 msgid "**Remaining** (Por Ejercer)"
-msgstr ""
+msgstr "**Restante** (Por Ejercer)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:295
 msgid "Total Contracted minus Accumulated Executed."
-msgstr ""
+msgstr "Total Contratado menos Acumulado Ejecutado."
 
 #: ../../user-guide/concepts/projects-contracts.rst:311
 msgid "Advance Payment Mechanics"
-msgstr ""
+msgstr "Mecánica de pago anticipado"
 
 #: ../../user-guide/concepts/projects-contracts.rst:315
 msgid "**Initial Advance:**"
-msgstr ""
+msgstr "**Adelanto inicial:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:314
 msgid ""
 "If ``anticipo = 10%`` on a $1,000,000 contract: Client pays $100,000 "
 "upfront."
 msgstr ""
+"Si ``anticipo = 10%`` en un contrato de $1,000,000: El cliente paga $100,000"
+" por adelantado."
 
 #: ../../user-guide/concepts/projects-contracts.rst:318
 msgid "**Amortization:**"
-msgstr ""
+msgstr "**Amortización:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:318
 msgid "The $100,000 is recovered across estimates until fully amortized."
 msgstr ""
+"Los $100,000 se recuperan según las estimaciones hasta que se amorticen por "
+"completo."
 
 #: ../../user-guide/concepts/projects-contracts.rst:320
 msgid "**Example Amortization:**"
-msgstr ""
+msgstr "**Ejemplo de Amortización:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:326
 msgid "Estimate"
-msgstr ""
+msgstr "Estimar"
 
 #: ../../user-guide/concepts/projects-contracts.rst:327
 msgid "Work Value"
-msgstr ""
+msgstr "Valor del trabajo"
 
 #: ../../user-guide/concepts/projects-contracts.rst:328
 msgid "Amortization"
-msgstr ""
+msgstr "Amortización"
 
 #: ../../user-guide/concepts/projects-contracts.rst:329
 msgid "Net Payment"
-msgstr ""
+msgstr "Pago Neto"
 
 #: ../../user-guide/concepts/projects-contracts.rst:330
 msgid "Remaining Advance"
-msgstr ""
+msgstr "Avance restante"
 
 #: ../../user-guide/concepts/projects-contracts.rst:331
 msgid "#1"
-msgstr ""
+msgstr "#1"
 
 #: ../../user-guide/concepts/projects-contracts.rst:332
 msgid "$200,000"
-msgstr ""
+msgstr "$200,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:333
 msgid "$20,000 (10%)"
-msgstr ""
+msgstr "$20,000 (10%)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:334
 #: ../../user-guide/concepts/projects-contracts.rst:342
 msgid "$180,000"
-msgstr ""
+msgstr "$180,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:335
 msgid "$80,000"
-msgstr ""
+msgstr "$80,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:336
 msgid "#2"
-msgstr ""
+msgstr "#2"
 
 #: ../../user-guide/concepts/projects-contracts.rst:337
 msgid "$150,000"
-msgstr ""
+msgstr "$150,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:338
 msgid "$15,000 (10%)"
-msgstr ""
+msgstr "$15,000 (10%)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:339
 msgid "$135,000"
-msgstr ""
+msgstr "$135,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:340
 msgid "$65,000"
-msgstr ""
+msgstr "$65,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:341
 msgid "#3"
-msgstr ""
+msgstr "#3"
 
 #: ../../user-guide/concepts/projects-contracts.rst:343
 msgid "$18,000 (10%)"
-msgstr ""
+msgstr "$18,000 (10%)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:344
 msgid "$162,000"
-msgstr ""
+msgstr "$162,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:345
 msgid "$47,000"
-msgstr ""
+msgstr "$47,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:346
 msgid "#4"
-msgstr ""
+msgstr "#4"
 
 #: ../../user-guide/concepts/projects-contracts.rst:347
 msgid "$100,000"
-msgstr ""
+msgstr "$100,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:348
 msgid "$10,000 (10%)"
-msgstr ""
+msgstr "$10,000 (10%)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:349
 msgid "$90,000"
-msgstr ""
+msgstr "$90,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:350
 msgid "$37,000"
-msgstr ""
+msgstr "$37,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:351
 msgid "#5"
-msgstr ""
+msgstr "#5"
 
 #: ../../user-guide/concepts/projects-contracts.rst:352
 msgid "$120,000"
-msgstr ""
+msgstr "$120,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:353
 msgid "$12,000 (10%)"
-msgstr ""
+msgstr "$12,000 (10%)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:354
 msgid "$108,000"
-msgstr ""
+msgstr "$108,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:355
 msgid "$25,000"
-msgstr ""
+msgstr "$25,000"
 
 #: ../../user-guide/concepts/projects-contracts.rst:357
 msgid ""
-"The advance is recovered proportionally until the original $100,000 is "
-"fully amortized."
+"The advance is recovered proportionally until the original $100,000 is fully"
+" amortized."
 msgstr ""
+"El anticipo se recupera proporcionalmente hasta amortizar por completo los "
+"$100.000 originales."
 
 #: ../../user-guide/concepts/projects-contracts.rst:359
 msgid "**Learn more:** :doc:`estimates`"
-msgstr ""
+msgstr "**Más información:** :doc:`estimaciones`"
 
 #: ../../user-guide/concepts/projects-contracts.rst:362
 msgid "Best Practices"
-msgstr ""
+msgstr "Mejores prácticas"
 
 #: ../../user-guide/concepts/projects-contracts.rst:365
 msgid "Naming Conventions"
-msgstr ""
+msgstr "Convenciones de nomenclatura"
 
 #: ../../user-guide/concepts/projects-contracts.rst:370
 msgid "✅ **Good Contract Names:**"
-msgstr ""
+msgstr "✅ **Buenos nombres de contratos:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:368
 msgid "\"Downtown Office Tower - Complete Construction Phase 1\""
 msgstr ""
+"\"Torre de oficinas en el centro: finalización de la fase de construcción "
+"1\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:369
 msgid "\"Highway 101 Bridge - Structural Steel Installation\""
-msgstr ""
+msgstr "\"Puente de la Carretera 101 - Instalación de Acero Estructural\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:370
 msgid "\"Residential Complex Unit A - Electrical Systems\""
-msgstr ""
+msgstr "“Conjunto Residencial Unidad A – Sistemas Eléctricos”"
 
 #: ../../user-guide/concepts/projects-contracts.rst:375
 msgid "❌ **Avoid:**"
-msgstr ""
+msgstr "❌ **Evitar:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:373
 msgid "\"Project 1\" (too generic)"
-msgstr ""
+msgstr "\"Proyecto 1\" (demasiado genérico)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:374
 msgid "\"ABC\" (unclear)"
-msgstr ""
+msgstr "\"ABC\" (poco claro)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:375
 msgid "Just the contract code without description"
-msgstr ""
+msgstr "Solo el código del contrato sin descripción."
 
 #: ../../user-guide/concepts/projects-contracts.rst:378
 msgid "Organize with Hierarchy"
-msgstr ""
+msgstr "Organizar con jerarquía"
 
 #: ../../user-guide/concepts/projects-contracts.rst:383
 msgid "✅ **Use sub-contracts for:**"
-msgstr ""
+msgstr "✅ **Usar subcontratos para:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:381
 msgid "Different subcontractors"
-msgstr ""
+msgstr "Diferentes subcontratistas"
 
 #: ../../user-guide/concepts/projects-contracts.rst:382
 msgid "Different phases of work"
-msgstr ""
+msgstr "Diferentes fases del trabajo."
 
 #: ../../user-guide/concepts/projects-contracts.rst:383
 msgid "Different buildings/units in a complex"
-msgstr ""
+msgstr "Diferentes edificios/unidades en un complejo"
 
 #: ../../user-guide/concepts/projects-contracts.rst:388
 msgid "✅ **Keep main contract for:**"
-msgstr ""
+msgstr "✅ **Mantener contrato principal por:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:386
 msgid "Overall client relationship"
-msgstr ""
+msgstr "Relación general con el cliente"
 
 #: ../../user-guide/concepts/projects-contracts.rst:387
 msgid "Consolidated reporting"
-msgstr ""
+msgstr "Informes consolidados"
 
 #: ../../user-guide/concepts/projects-contracts.rst:388
 msgid "Total project tracking"
-msgstr ""
+msgstr "Seguimiento total del proyecto"
 
 #: ../../user-guide/concepts/projects-contracts.rst:391
 msgid "User Assignment"
-msgstr ""
+msgstr "Asignación de usuarios"
 
 #: ../../user-guide/concepts/projects-contracts.rst:397
 msgid "✅ **Assign users who need access:**"
-msgstr ""
+msgstr "✅ **Asignar usuarios que necesitan acceso:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:394
 msgid "Project Manager (always)"
-msgstr ""
+msgstr "Gerente de Proyecto (siempre)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:395
 msgid "Site Supervisor"
-msgstr ""
+msgstr "supervisor del sitio"
 
 #: ../../user-guide/concepts/projects-contracts.rst:396
 msgid "Coordinators creating estimates"
-msgstr ""
+msgstr "Coordinadores creando presupuestos."
 
 #: ../../user-guide/concepts/projects-contracts.rst:397
 msgid "Accounting staff tracking payments"
-msgstr ""
+msgstr "Personal de contabilidad que sigue los pagos"
 
 #: ../../user-guide/concepts/projects-contracts.rst:402
 msgid "✅ **Permission levels:**"
-msgstr ""
+msgstr "✅ **Niveles de permiso:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:400
 msgid "Director (Level 3+): Can create/edit contracts"
-msgstr ""
+msgstr "Director (Nivel 3+): puede crear/editar contratos"
 
 #: ../../user-guide/concepts/projects-contracts.rst:401
 msgid "Coordinador (Level 2): Can create estimates"
-msgstr ""
+msgstr "Coordinador (Nivel 2): ​​Puede crear estimaciones"
 
 #: ../../user-guide/concepts/projects-contracts.rst:402
 msgid "Auxiliar (Level 1): View-only access"
-msgstr ""
+msgstr "Auxiliar (Nivel 1): Acceso de solo visualización"
 
 #: ../../user-guide/concepts/projects-contracts.rst:405
 msgid "Keep Status Updated"
-msgstr ""
+msgstr "Mantener el estado actualizado"
 
 #: ../../user-guide/concepts/projects-contracts.rst:409
 msgid "✅ **Active contracts:**"
-msgstr ""
+msgstr "✅ **Contratos activos:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:408
 msgid "Set ``status = True`` (ongoing) for projects in progress"
-msgstr ""
+msgstr "Establezca ``status = True`` (en curso) para proyectos en progreso"
 
 #: ../../user-guide/concepts/projects-contracts.rst:409
 msgid "Appear in \"Active Contracts\" dashboard section"
-msgstr ""
+msgstr "Aparecer en la sección del panel \"Contratos activos\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:413
 msgid "✅ **Completed contracts:**"
-msgstr ""
+msgstr "✅ **Contratos completados:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:412
 msgid "Set ``status = False`` when project is finished"
-msgstr ""
+msgstr "Establezca ``status = False`` cuando finalice el proyecto"
 
 #: ../../user-guide/concepts/projects-contracts.rst:413
 msgid "Removes from active list but retains all history"
-msgstr ""
+msgstr "Se elimina de la lista activa pero conserva todo el historial."
 
 #: ../../user-guide/concepts/projects-contracts.rst:416
 msgid "Common Scenarios"
-msgstr ""
+msgstr "Escenarios comunes"
 
 #: ../../user-guide/concepts/projects-contracts.rst:419
 msgid "Scenario 1: Main Contract with Subcontractors"
-msgstr ""
+msgstr "Escenario 1: Contrato principal con subcontratistas"
 
 #: ../../user-guide/concepts/projects-contracts.rst:421
 #: ../../user-guide/concepts/projects-contracts.rst:438
 #: ../../user-guide/concepts/projects-contracts.rst:455
 msgid "**Setup:**"
-msgstr ""
+msgstr "**Configuración:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:423
 msgid "Create main client contract: \"Office Building for ABC Corp\" ($1,000,000)"
 msgstr ""
+"Crear contrato de cliente principal: \"Edificio de Oficinas para ABC Corp\" "
+"($1,000,000)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:424
 msgid "Create sub-contracts as children:"
-msgstr ""
+msgstr "Crear subcontratos como hijos:"
 
 #: ../../user-guide/concepts/projects-contracts.rst:426
 msgid "\"Electrical - XYZ Electric\" ($150,000) - Subcontratista"
-msgstr ""
+msgstr "\"Eléctrico - XYZ Eléctrico\" ($150.000) - Subcontratista"
 
 #: ../../user-guide/concepts/projects-contracts.rst:427
 msgid "\"Plumbing - AAA Plumbing\" ($100,000) - Subcontratista"
-msgstr ""
+msgstr "\"Plomería - Plomería AAA\" ($100.000) - Subcontratista"
 
 #: ../../user-guide/concepts/projects-contracts.rst:428
 msgid "\"HVAC - Cool Systems\" ($120,000) - Subcontratista"
-msgstr ""
+msgstr "\"HVAC - Sistemas de refrigeración\" ($120.000) - Subcontratista"
 
 #: ../../user-guide/concepts/projects-contracts.rst:430
 msgid "Track work separately for each sub-contract"
-msgstr ""
+msgstr "Realice un seguimiento del trabajo por separado para cada subcontrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:431
 msgid "Generate consolidated report for ABC Corp showing all work"
 msgstr ""
+"Genere un informe consolidado para ABC Corp que muestre todo el trabajo."
 
 #: ../../user-guide/concepts/projects-contracts.rst:433
 msgid ""
 "**Benefit:** Clear separation of subcontractor costs while maintaining "
 "overall project view."
 msgstr ""
+"**Beneficio:** Separación clara de los costos de subcontratistas manteniendo"
+" al mismo tiempo la visión general del proyecto."
 
 #: ../../user-guide/concepts/projects-contracts.rst:436
 msgid "Scenario 2: Multi-Phase Project"
-msgstr ""
+msgstr "Escenario 2: Proyecto de múltiples fases"
 
 #: ../../user-guide/concepts/projects-contracts.rst:440
 msgid "Create parent: \"Residential Complex - Master Contract\""
-msgstr ""
+msgstr "Crear padre: \"Complejo Residencial - Contrato Marco\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:441
 msgid "Create children for each phase:"
-msgstr ""
+msgstr "Crea hijos para cada fase:"
 
 #: ../../user-guide/concepts/projects-contracts.rst:443
 msgid "\"Phase 1 - Foundation & Structure\""
-msgstr ""
+msgstr "\"Fase 1 - Cimentación y Estructura\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:444
 msgid "\"Phase 2 - MEP & Finishes\""
-msgstr ""
+msgstr "\"Fase 2 - MEP y Acabados\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:445
 msgid "\"Phase 3 - Landscaping & Exterior\""
-msgstr ""
+msgstr "\"Fase 3 - Paisajismo y exterior\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:447
 msgid "Execute phases sequentially or in parallel"
-msgstr ""
+msgstr "Ejecutar fases de forma secuencial o en paralelo"
 
 #: ../../user-guide/concepts/projects-contracts.rst:448
 msgid "Track financial progress per phase"
-msgstr ""
+msgstr "Seguimiento del progreso financiero por fase"
 
 #: ../../user-guide/concepts/projects-contracts.rst:450
 msgid "**Benefit:** Clear phase separation with consolidated totals."
-msgstr ""
+msgstr "**Beneficio:** Separación clara de fases con totales consolidados."
 
 #: ../../user-guide/concepts/projects-contracts.rst:453
 msgid "Scenario 3: Multiple Buildings"
-msgstr ""
+msgstr "Escenario 3: varios edificios"
 
 #: ../../user-guide/concepts/projects-contracts.rst:457
 msgid "Create parent: \"Shopping Center Development\""
-msgstr ""
+msgstr "Crear padre: \"Desarrollo de centro comercial\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:458
 msgid "Create children for each building:"
-msgstr ""
+msgstr "Crea hijos para cada edificio:"
 
 #: ../../user-guide/concepts/projects-contracts.rst:460
 msgid "\"Building A - Retail Spaces\""
-msgstr ""
+msgstr "\"Edificio A - Espacios Comerciales\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:461
 msgid "\"Building B - Food Court\""
-msgstr ""
+msgstr "\"Edificio B - Patio de Comidas\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:462
 msgid "\"Building C - Parking Structure\""
-msgstr ""
+msgstr "\"Edificio C - Estructura de Estacionamiento\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:464
 msgid "Assign different teams to different buildings"
-msgstr ""
+msgstr "Asigna diferentes equipos a diferentes edificios."
 
 #: ../../user-guide/concepts/projects-contracts.rst:465
 msgid "Track progress independently"
-msgstr ""
+msgstr "Seguimiento del progreso de forma independiente"
 
 #: ../../user-guide/concepts/projects-contracts.rst:467
 msgid "**Benefit:** Independent management with overall project visibility."
 msgstr ""
+"**Beneficio:** Gestión independiente con visibilidad general del proyecto."
 
 #: ../../user-guide/concepts/projects-contracts.rst:470
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../user-guide/concepts/projects-contracts.rst:473
 msgid "Can't Delete a Contract"
-msgstr ""
+msgstr "No puedo eliminar un contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:475
 msgid ""
-"**Problem:** \"Cannot be deleted, has concepts that must be deleted "
-"first\" or has child contracts."
+"**Problem:** \"Cannot be deleted, has concepts that must be deleted first\" "
+"or has child contracts."
 msgstr ""
+"**Problema:** \"No se puede eliminar, tiene conceptos que se deben eliminar "
+"primero\" o tiene contratos secundarios."
 
 #: ../../user-guide/concepts/projects-contracts.rst:477
 #: ../../user-guide/concepts/projects-contracts.rst:510
 msgid "**Solution:**"
-msgstr ""
+msgstr "**Solución:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:479
 msgid "For concepts: Delete all work items (concepts) from the contract first"
 msgstr ""
+"Para conceptos: elimine primero todos los elementos de trabajo (conceptos) "
+"del contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:480
 msgid "For children: Delete all sub-contracts first, then delete parent"
 msgstr ""
+"Para niños: primero elimine todos los subcontratos y luego elimine el "
+"principal"
 
 #: ../../user-guide/concepts/projects-contracts.rst:481
 msgid "Alternatively: Set contract to inactive instead of deleting"
 msgstr ""
+"Alternativamente: establecer el contrato como inactivo en lugar de "
+"eliminarlo"
 
 #: ../../user-guide/concepts/projects-contracts.rst:484
 msgid "Can't See a Contract"
-msgstr ""
+msgstr "No puedo ver un contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:486
 msgid "**Problem:** Contract doesn't appear in your list."
-msgstr ""
+msgstr "**Problema:** El contrato no aparece en tu lista."
 
 #: ../../user-guide/concepts/projects-contracts.rst:488
 msgid "**Causes:**"
-msgstr ""
+msgstr "**Causas:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:490
 msgid "You're in the wrong **company** (use Switch Company)"
-msgstr ""
+msgstr "Estás en la **empresa** equivocada (usa Cambiar de empresa)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:491
 msgid "You're not **assigned** to the contract (contact admin)"
-msgstr ""
+msgstr "No estás **asignado** al contrato (contacta al administrador)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:492
 msgid "Your **permission level** is too low"
-msgstr ""
+msgstr "Tu **nivel de permiso** es demasiado bajo"
 
 #: ../../user-guide/concepts/projects-contracts.rst:495
 msgid "Can't Edit Contract"
-msgstr ""
+msgstr "No puedo editar el contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:497
 msgid "**Problem:** Edit option is disabled."
-msgstr ""
+msgstr "**Problema:** La opción Editar está deshabilitada."
 
 #: ../../user-guide/concepts/projects-contracts.rst:499
 msgid "**Requirements:**"
-msgstr ""
+msgstr "**Requisitos:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:501
 msgid "Minimum **Director** (Level 3) permission"
-msgstr ""
+msgstr "Permiso mínimo de **Director** (Nivel 3)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:502
 msgid "Must be **assigned** to the contract"
-msgstr ""
+msgstr "Debe estar **asignado** al contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:503
 msgid "Must be in the correct **company**"
-msgstr ""
+msgstr "Debe estar en la **empresa** correcta"
 
 #: ../../user-guide/concepts/projects-contracts.rst:506
 msgid "Retentions Not Showing"
-msgstr ""
+msgstr "Retenciones que no se muestran"
 
 #: ../../user-guide/concepts/projects-contracts.rst:508
 msgid "**Problem:** Retentions not appearing in estimates."
-msgstr ""
+msgstr "**Problema:** Las retenciones no aparecen en las estimaciones."
 
 #: ../../user-guide/concepts/projects-contracts.rst:512
 msgid "Navigate to Contract Detail"
-msgstr ""
+msgstr "Vaya a Detalles del contrato"
 
 #: ../../user-guide/concepts/projects-contracts.rst:513
 msgid "Click \"Retentions\" tab"
-msgstr ""
+msgstr "Haga clic en la pestaña \"Retenciones\""
 
 #: ../../user-guide/concepts/projects-contracts.rst:514
 msgid "Add retention rules (percentage or fixed amount)"
-msgstr ""
+msgstr "Agregar reglas de retención (porcentaje o cantidad fija)"
 
 #: ../../user-guide/concepts/projects-contracts.rst:515
 msgid "Retentions will automatically apply to future estimates"
-msgstr ""
+msgstr "Las retenciones se aplicarán automáticamente a estimaciones futuras."
 
 #: ../../user-guide/concepts/projects-contracts.rst:518
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../user-guide/concepts/projects-contracts.rst:520
 msgid "**Related Concepts:**"
-msgstr ""
+msgstr "**Conceptos relacionados:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:522
 msgid ":doc:`counterparties` - Understanding business partners"
@@ -1222,7 +1298,7 @@ msgstr ""
 
 #: ../../user-guide/concepts/projects-contracts.rst:528
 msgid "**Workflows:**"
-msgstr ""
+msgstr "**Flujos de trabajo:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:530
 msgid ":doc:`/user-guide/workflows/creating-project` - Complete project setup"
@@ -1238,7 +1314,7 @@ msgstr ""
 
 #: ../../user-guide/concepts/projects-contracts.rst:534
 msgid "**Features:**"
-msgstr ""
+msgstr "**Características:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:536
 msgid ""
@@ -1252,7 +1328,7 @@ msgstr ""
 
 #: ../../user-guide/concepts/projects-contracts.rst:539
 msgid "**Developer Reference:**"
-msgstr ""
+msgstr "**Referencia del desarrollador:**"
 
 #: ../../user-guide/concepts/projects-contracts.rst:541
 msgid ":doc:`/developer/models/proyectos` - Contrato model documentation"
@@ -1261,4 +1337,3 @@ msgstr ""
 #: ../../user-guide/concepts/projects-contracts.rst:542
 msgid ":doc:`/developer/architecture/multi-tenancy` - System architecture"
 msgstr ""
-

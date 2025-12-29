@@ -11,12 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../user-guide/introduction.rst:3
@@ -35,9 +35,9 @@ msgid ""
 "through final payment."
 msgstr ""
 "Construbot es una plataforma integral de gestión operativa diseñada "
-"específicamente para empresas constructoras. Proporciona herramientas para gestionar el "
-"ciclo de vida completo de proyectos de construcción, desde la configuración inicial del contrato "
-"hasta el pago final."
+"específicamente para empresas constructoras. Proporciona herramientas para "
+"gestionar el ciclo de vida completo de proyectos de construcción, desde la "
+"configuración inicial del contrato hasta el pago final."
 
 #: ../../user-guide/introduction.rst:12
 msgid "**Key Capabilities:**"
@@ -73,7 +73,9 @@ msgstr "Filosofía Central"
 
 #: ../../user-guide/introduction.rst:24
 msgid "Construbot is built around construction industry best practices:"
-msgstr "Construbot está construido en torno a las mejores prácticas de la industria de la construcción:"
+msgstr ""
+"Construbot está construido en torno a las mejores prácticas de la industria "
+"de la construcción:"
 
 #: ../../user-guide/introduction.rst:27
 msgid "**Project-Centric**"
@@ -83,9 +85,7 @@ msgstr "**Centrado en Proyectos**"
 msgid ""
 "Everything revolves around Contracts (Contratos) - your construction "
 "projects."
-msgstr ""
-"Todo gira en torno a Contratos - sus "
-"proyectos de construcción."
+msgstr "Todo gira en torno a Contratos - sus proyectos de construcción."
 
 #: ../../user-guide/introduction.rst:30
 msgid "**Financial Transparency**"
@@ -125,7 +125,9 @@ msgstr "Empresas Constructoras"
 
 #: ../../user-guide/introduction.rst:44
 msgid "General contractors, builders, and construction firms who need to:"
-msgstr "Contratistas generales, constructores y empresas constructoras que necesitan:"
+msgstr ""
+"Contratistas generales, constructores y empresas constructoras que "
+"necesitan:"
 
 #: ../../user-guide/introduction.rst:46
 msgid "Manage multiple simultaneous projects"
@@ -149,7 +151,8 @@ msgstr "Equipos de Proyecto"
 
 #: ../../user-guide/introduction.rst:54
 msgid "**Directors**: Oversee multiple projects and financial summaries"
-msgstr "**Directores**: Supervisan múltiples proyectos y resúmenes financieros"
+msgstr ""
+"**Directores**: Supervisan múltiples proyectos y resúmenes financieros"
 
 #: ../../user-guide/introduction.rst:55
 msgid "**Project Managers**: Manage day-to-day contract execution"
@@ -157,11 +160,14 @@ msgstr "**Gerentes de Proyecto**: Gestionan la ejecución diaria de contratos"
 
 #: ../../user-guide/introduction.rst:56
 msgid "**Site Supervisors**: Track work progress and create estimates"
-msgstr "**Supervisores de Obra**: Dan seguimiento al avance de trabajo y crean estimaciones"
+msgstr ""
+"**Supervisores de Obra**: Dan seguimiento al avance de trabajo y crean "
+"estimaciones"
 
 #: ../../user-guide/introduction.rst:57
 msgid "**Coordinators**: Handle document preparation and administration"
-msgstr "**Coordinadores**: Manejan la preparación y administración de documentos"
+msgstr ""
+"**Coordinadores**: Manejan la preparación y administración de documentos"
 
 #: ../../user-guide/introduction.rst:58
 msgid "**Accounting Staff**: Process payments and invoicing"
@@ -169,268 +175,281 @@ msgstr "**Personal de Contabilidad**: Procesan pagos y facturación"
 
 #: ../../user-guide/introduction.rst:61
 msgid "Key Features Overview"
-msgstr ""
+msgstr "Descripción general de las características clave"
 
 #: ../../user-guide/introduction.rst:64
 msgid "Contract Management"
-msgstr ""
+msgstr "Gestión de contratos"
 
 #: ../../user-guide/introduction.rst:66
 msgid "Create and manage construction contracts (Contratos) with:"
-msgstr ""
+msgstr "Crear y gestionar contratos de construcción (Contratos) con:"
 
 #: ../../user-guide/introduction.rst:68
 msgid "Hierarchical structure (parent/child contracts)"
-msgstr ""
+msgstr "Estructura jerárquica (contratos padre/hijo)"
 
 #: ../../user-guide/introduction.rst:69
 msgid "Associated business partners (Contrapartes)"
-msgstr ""
+msgstr "Socios comerciales asociados (Contrapartes)"
 
 #: ../../user-guide/introduction.rst:70
 msgid "Construction sites (Sitios) and contacts (Destinatarios)"
-msgstr ""
+msgstr "Sitios de construcción (Sitios) y contactos (Destinatarios)"
 
 #: ../../user-guide/introduction.rst:71
 msgid "Work item catalogs (Conceptos)"
-msgstr ""
+msgstr "Catálogos de elementos de trabajo (Conceptos)"
 
 #: ../../user-guide/introduction.rst:73
 msgid "**Learn more:** :doc:`concepts/projects-contracts`"
-msgstr ""
+msgstr "**Más información:** :doc:`conceptos/proyectos-contratos`"
 
 #: ../../user-guide/introduction.rst:76
 msgid "Progress Estimates"
-msgstr ""
+msgstr "Estimaciones de progreso"
 
 #: ../../user-guide/introduction.rst:78
 msgid "Track work completion with periodic estimates (Estimaciones):"
 msgstr ""
+"Seguimiento de finalización de obra con estimaciones periódicas "
+"(Estimaciones):"
 
 #: ../../user-guide/introduction.rst:80
 msgid "Document work quantities for each concept"
-msgstr ""
+msgstr "Documentar las cantidades de trabajo para cada concepto."
 
 #: ../../user-guide/introduction.rst:81
 msgid "Calculate accumulated totals"
-msgstr ""
+msgstr "Calcular totales acumulados"
 
 #: ../../user-guide/introduction.rst:82
 msgid "Apply retentions and advance amortization"
-msgstr ""
+msgstr "Aplicar retenciones y amortizaciones anticipadas"
 
 #: ../../user-guide/introduction.rst:83
 msgid "Mark estimates as invoiced and paid"
-msgstr ""
+msgstr "Marcar estimaciones como facturadas y pagadas"
 
 #: ../../user-guide/introduction.rst:85
 msgid "**Learn more:** :doc:`concepts/estimates`"
-msgstr ""
+msgstr "**Más información:** :doc:`conceptos/estimaciones`"
 
 #: ../../user-guide/introduction.rst:88
 msgid "Financial Tracking"
-msgstr ""
+msgstr "Seguimiento financiero"
 
 #: ../../user-guide/introduction.rst:90
 msgid "Automated calculations for:"
-msgstr ""
+msgstr "Cálculos automatizados para:"
 
 #: ../../user-guide/introduction.rst:92
 msgid "**Advance Payments** (Anticipos) - Initial down payments"
-msgstr ""
+msgstr "**Pagos Anticipados** (Anticipos) - Pagos iniciales iniciales"
 
 #: ../../user-guide/introduction.rst:93
-msgid "**Retentions** (Retenciones) - Withholdings (percentage or fixed amount)"
+msgid ""
+"**Retentions** (Retenciones) - Withholdings (percentage or fixed amount)"
 msgstr ""
+"**Retenciones** (Retenciones) - Retenciones (porcentaje o importe fijo)"
 
 #: ../../user-guide/introduction.rst:94
 msgid "**Amortization** - Recovery of advance payments over time"
-msgstr ""
+msgstr "**Amortización** - Recuperación de anticipos en el tiempo"
 
 #: ../../user-guide/introduction.rst:95
 msgid "**Accumulated Totals** - Running totals across all estimates"
-msgstr ""
+msgstr "**Totales acumulados**: totales acumulados en todas las estimaciones"
 
 #: ../../user-guide/introduction.rst:97
 msgid "**Learn more:** :doc:`workflows/managing-estimates`"
-msgstr ""
+msgstr "**Más información:** :doc:`workflows/managing-estimates`"
 
 #: ../../user-guide/introduction.rst:100
 msgid "Multi-Company Support"
-msgstr ""
+msgstr "Soporte multiempresa"
 
 #: ../../user-guide/introduction.rst:102
 msgid "Work across multiple business entities:"
-msgstr ""
+msgstr "Trabaje en múltiples entidades comerciales:"
 
 #: ../../user-guide/introduction.rst:104
 msgid "Single login for multiple companies"
-msgstr ""
+msgstr "Inicio de sesión único para múltiples empresas"
 
 #: ../../user-guide/introduction.rst:105
 msgid "Easy company switching"
-msgstr ""
+msgstr "Fácil cambio de empresa"
 
 #: ../../user-guide/introduction.rst:106
 msgid "Data isolation between companies"
-msgstr ""
+msgstr "Aislamiento de datos entre empresas"
 
 #: ../../user-guide/introduction.rst:107
 msgid "Role-based access control"
-msgstr ""
+msgstr "Control de acceso basado en roles"
 
 #: ../../user-guide/introduction.rst:109
 msgid "**Learn more:** :doc:`features/multi-company`"
-msgstr ""
+msgstr "**Más información:** :doc:`características/multiempresa`"
 
 #: ../../user-guide/introduction.rst:112
 msgid "Document Generation"
-msgstr ""
+msgstr "Generación de documentos"
 
 #: ../../user-guide/introduction.rst:114
 msgid "Generate professional PDFs:"
-msgstr ""
+msgstr "Genere archivos PDF profesionales:"
 
 #: ../../user-guide/introduction.rst:116
 msgid "Contract estimates for client approval"
-msgstr ""
+msgstr "Estimaciones de contrato para aprobación del cliente."
 
 #: ../../user-guide/introduction.rst:117
 msgid "Progress payment documentation"
-msgstr ""
+msgstr "Documentación de pago progresivo"
 
 #: ../../user-guide/introduction.rst:118
 msgid "Hierarchical reports for sub-contracts"
-msgstr ""
+msgstr "Informes jerárquicos para subcontratos"
 
 #: ../../user-guide/introduction.rst:119
 msgid "Custom branding and formatting"
-msgstr ""
+msgstr "Marca y formato personalizados"
 
 #: ../../user-guide/introduction.rst:121
 msgid "**Learn more:** :doc:`workflows/document-generation`"
 msgstr ""
+"**Más información:** :doc:`flujos de trabajo/generación de documentos`"
 
 #: ../../user-guide/introduction.rst:124
 msgid "System Architecture"
-msgstr ""
+msgstr "Arquitectura del sistema"
 
 #: ../../user-guide/introduction.rst:127
 msgid "Understanding the Hierarchy"
-msgstr ""
+msgstr "Comprender la jerarquía"
 
 #: ../../user-guide/introduction.rst:129
 msgid "Construbot uses a three-level organizational structure:"
-msgstr ""
+msgstr "Construbot utiliza una estructura organizativa de tres niveles:"
 
 #: ../../user-guide/introduction.rst:138
 msgid "**Customer** (Cliente Sistema)"
-msgstr ""
+msgstr "**Cliente** (Cliente Sistema)"
 
 #: ../../user-guide/introduction.rst:138
 msgid "Your top-level account. One customer can have multiple companies."
-msgstr ""
+msgstr "Tu cuenta de nivel superior. Un cliente puede tener varias empresas."
 
 #: ../../user-guide/introduction.rst:141
 msgid "**Company** (Empresa)"
-msgstr ""
+msgstr "**Empresa** (Empresa)"
 
 #: ../../user-guide/introduction.rst:141
 msgid "A business entity. Users can belong to multiple companies."
 msgstr ""
+"Una entidad comercial. Los usuarios pueden pertenecer a varias empresas."
 
 #: ../../user-guide/introduction.rst:144
 msgid "**User** (Usuario)"
-msgstr ""
+msgstr "**Usuario** (Usuario)"
 
 #: ../../user-guide/introduction.rst:144
 msgid "Individual with email login and permission levels (1-6)."
 msgstr ""
+"Individuo con inicio de sesión de correo electrónico y niveles de permiso "
+"(1-6)."
 
 #: ../../user-guide/introduction.rst:147
 msgid "Permission Levels"
-msgstr ""
+msgstr "Niveles de permiso"
 
 #: ../../user-guide/introduction.rst:149
 msgid "Users are assigned permission levels (Niveles de Acceso):"
 msgstr ""
+"A los usuarios se les asignan niveles de permisos (Niveles de Acceso):"
 
 #: ../../user-guide/introduction.rst:151
 msgid "**Auxiliar** (Assistant) - View-only or limited access"
-msgstr ""
+msgstr "**Auxiliar** (Asistente): acceso limitado o de solo lectura"
 
 #: ../../user-guide/introduction.rst:152
 msgid "**Coordinador** (Coordinator) - Create and edit documents"
-msgstr ""
+msgstr "**Coordinador** (Coordinador) - Crear y editar documentos"
 
 #: ../../user-guide/introduction.rst:153
 msgid "**Director** (Director) - Full project management"
-msgstr ""
+msgstr "**Director** (Director) - Gestión completa del proyecto"
 
 #: ../../user-guide/introduction.rst:154
 msgid "**Corporativo** (Corporate) - Cross-project oversight"
-msgstr ""
+msgstr "**Corporativo** (Corporate) - Supervisión transversal de proyectos"
 
 #: ../../user-guide/introduction.rst:155
 msgid "**Soporte** (Support) - Technical support access"
-msgstr ""
+msgstr "**Soporte** (Soporte) - Acceso a soporte técnico"
 
 #: ../../user-guide/introduction.rst:156
 msgid "**Superusuario** (Superuser) - Full system access"
-msgstr ""
+msgstr "**Superusuario** (Superusuario) - Acceso completo al sistema"
 
 #: ../../user-guide/introduction.rst:158
 msgid "**Learn more:** :doc:`/developer/architecture/permission-levels`"
-msgstr ""
+msgstr "**Más información:** :doc:`/developer/architecture/permission-levels`"
 
 #: ../../user-guide/introduction.rst:161
 msgid "Spanish Terminology"
-msgstr ""
+msgstr "Terminología española"
 
 #: ../../user-guide/introduction.rst:163
 msgid ""
-"Construbot was developed in Mexico and uses Spanish terminology "
-"throughout the interface. This documentation provides English "
-"translations for all terms."
+"Construbot was developed in Mexico and uses Spanish terminology throughout "
+"the interface. This documentation provides English translations for all "
+"terms."
 msgstr ""
+"Construbot fue desarrollado en México y utiliza terminología española en "
+"toda la interfaz. Esta documentación proporciona traducciones al inglés de "
+"todos los términos."
 
 #: ../../user-guide/introduction.rst:166
 msgid "**Common Terms:**"
-msgstr ""
+msgstr "**Términos comunes:**"
 
 #: ../../user-guide/introduction.rst:168
 msgid "**Contrato** = Contract / Project"
-msgstr ""
+msgstr "**Contrato** = Contrato / Proyecto"
 
 #: ../../user-guide/introduction.rst:169
 msgid "**Contraparte** = Counterparty / Business Partner"
-msgstr ""
+msgstr "**Contraparte** = Contraparte / Socio Comercial"
 
 #: ../../user-guide/introduction.rst:170
 msgid "**Estimación** = Estimate / Progress Payment"
-msgstr ""
+msgstr "**Estimación** = Estimación / Pago Progreso"
 
 #: ../../user-guide/introduction.rst:171
 msgid "**Concepto** = Concept / Line Item / Work Item"
-msgstr ""
+msgstr "**Concepto** = Concepto / Línea de pedido / Elemento de trabajo"
 
 #: ../../user-guide/introduction.rst:172
 msgid "**Sitio** = Site / Construction Location"
-msgstr ""
+msgstr "**Sitio** = Sitio / Ubicación de Construcción"
 
 #: ../../user-guide/introduction.rst:174
 msgid ""
-"**Full Glossary:** See :doc:`/reference/glossary` for complete "
-"translations."
+"**Full Glossary:** See :doc:`/reference/glossary` for complete translations."
 msgstr ""
+"**Glosario completo:** Consulte :doc:`/reference/glossary` para obtener las "
+"traducciones completas."
 
 #: ../../user-guide/introduction.rst:177
 msgid "Next Steps"
-msgstr ""
+msgstr "Próximos pasos"
 
 #: ../../user-guide/introduction.rst:179
 msgid "Ready to start? Continue to:"
-msgstr ""
+msgstr "¿Listo para empezar? Continuar a:"
 
 #: ../../user-guide/introduction.rst:181
 msgid ":doc:`getting-started` - First steps with Construbot"
@@ -446,7 +465,8 @@ msgstr ""
 
 #: ../../user-guide/introduction.rst:186
 msgid ""
-"**For Developers**: If you're installing or deploying Construbot, see the"
-" :doc:`/developer/index` instead."
+"**For Developers**: If you're installing or deploying Construbot, see the "
+":doc:`/developer/index` instead."
 msgstr ""
-
+"**Para desarrolladores**: si está instalando o implementando Construbot, "
+"consulte :doc:`/developer/index` en su lugar."

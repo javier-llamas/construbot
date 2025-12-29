@@ -11,336 +11,343 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/architecture/settings-structure.rst:3
 msgid "Settings Structure"
-msgstr ""
+msgstr "Estructura de configuración"
 
 #: ../../developer/architecture/settings-structure.rst:5
 msgid "Organization of Django settings for different environments."
-msgstr ""
+msgstr "Organización de configuraciones de Django para diferentes entornos."
 
 #: ../../developer/architecture/settings-structure.rst:9
 msgid "Table of Contents"
-msgstr ""
+msgstr "Tabla de contenido"
 
 #: ../../developer/architecture/settings-structure.rst:12
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../developer/architecture/settings-structure.rst:14
 msgid ""
 "Construbot uses environment-based settings with inheritance to avoid "
 "duplication and support multiple environments."
 msgstr ""
+"Construbot utiliza configuraciones basadas en el entorno con herencia para "
+"evitar la duplicación y admitir múltiples entornos."
 
 #: ../../developer/architecture/settings-structure.rst:16
 msgid "**Location:** ``construbot/config/settings/``"
-msgstr ""
+msgstr "**Ubicación:** ``construbot/config/settings/``"
 
 #: ../../developer/architecture/settings-structure.rst:18
 msgid "**Files:**"
-msgstr ""
+msgstr "**Archivos:**"
 
 #: ../../developer/architecture/settings-structure.rst:20
 msgid "``base.py`` - Shared settings for all environments"
-msgstr ""
+msgstr "``base.py`` - Configuración compartida para todos los entornos"
 
 #: ../../developer/architecture/settings-structure.rst:21
 msgid "``local.py`` - Development settings"
-msgstr ""
+msgstr "``local.py`` - Configuración de desarrollo"
 
 #: ../../developer/architecture/settings-structure.rst:22
 msgid "``test.py`` - Testing settings"
-msgstr ""
+msgstr "``test.py`` - Configuración de prueba"
 
 #: ../../developer/architecture/settings-structure.rst:23
 msgid "``production.py`` - Production settings"
-msgstr ""
+msgstr "``producción.py`` - Configuración de producción"
 
 #: ../../developer/architecture/settings-structure.rst:26
 msgid "Settings Hierarchy"
-msgstr ""
+msgstr "Jerarquía de configuración"
 
 #: ../../developer/architecture/settings-structure.rst:35
 msgid "All environment files import from ``base.py``:"
-msgstr ""
+msgstr "Todos los archivos de entorno se importan desde ``base.py``:"
 
 #: ../../developer/architecture/settings-structure.rst:48
 msgid "Base Settings (base.py)"
-msgstr ""
+msgstr "Configuración básica (base.py)"
 
 #: ../../developer/architecture/settings-structure.rst:50
 msgid "Common settings shared across all environments:"
-msgstr ""
+msgstr "Configuraciones comunes compartidas en todos los entornos:"
 
 #: ../../developer/architecture/settings-structure.rst:52
 msgid "**Core Django:**"
-msgstr ""
+msgstr "**Núcleo de Django:**"
 
 #: ../../developer/architecture/settings-structure.rst:66
 msgid "**Installed Apps:**"
-msgstr ""
+msgstr "**Aplicaciones instaladas:**"
 
 #: ../../developer/architecture/settings-structure.rst:92
 msgid ""
-"``dal`` and ``dal_select2`` MUST be listed before "
-"``django.contrib.admin`` or autocomplete widgets won't work."
+"``dal`` and ``dal_select2`` MUST be listed before ``django.contrib.admin`` "
+"or autocomplete widgets won't work."
 msgstr ""
+"``dal`` y ``dal_select2`` DEBEN aparecer antes de ``django.contrib.admin`` o"
+" los widgets de autocompletar no funcionarán."
 
 #: ../../developer/architecture/settings-structure.rst:94
 msgid "**Middleware:**"
-msgstr ""
+msgstr "**Middleware:**"
 
 #: ../../developer/architecture/settings-structure.rst:109
 msgid "**Authentication:**"
-msgstr ""
+msgstr "**Autenticación:**"
 
 #: ../../developer/architecture/settings-structure.rst:119
 msgid "**Database (uses DATABASE_URL):**"
-msgstr ""
+msgstr "**Base de datos (usa DATABASE_URL):**"
 
 #: ../../developer/architecture/settings-structure.rst:128
 msgid "**Static/Media Files:**"
-msgstr ""
+msgstr "**Archivos estáticos/multimedia:**"
 
 #: ../../developer/architecture/settings-structure.rst:139
 msgid "**Password Hashers:**"
-msgstr ""
+msgstr "**Hashhers de contraseña:**"
 
 #: ../../developer/architecture/settings-structure.rst:150
 msgid "**Celery:**"
-msgstr ""
+msgstr "**Apio:**"
 
 #: ../../developer/architecture/settings-structure.rst:165
 msgid "Local Settings (local.py)"
-msgstr ""
+msgstr "Configuración local (local.py)"
 
 #: ../../developer/architecture/settings-structure.rst:167
 msgid "Development environment settings:"
-msgstr ""
+msgstr "Configuración del entorno de desarrollo:"
 
 #: ../../developer/architecture/settings-structure.rst:169
 msgid "**Debug Mode:**"
-msgstr ""
+msgstr "**Modo de depuración:**"
 
 #: ../../developer/architecture/settings-structure.rst:175
 #: ../../developer/architecture/settings-structure.rst:287
 msgid "**Allowed Hosts:**"
-msgstr ""
+msgstr "**Anfitriones permitidos:**"
 
 #: ../../developer/architecture/settings-structure.rst:181
 #: ../../developer/architecture/settings-structure.rst:305
 msgid "**Database:**"
-msgstr ""
+msgstr "**Base de datos:**"
 
 #: ../../developer/architecture/settings-structure.rst:183
 msgid "Can use environment variable or defaults to local PostgreSQL:"
 msgstr ""
+"Puede usar variables de entorno o valores predeterminados en PostgreSQL "
+"local:"
 
 #: ../../developer/architecture/settings-structure.rst:191
 msgid "**Caching (development - dummy cache):**"
-msgstr ""
+msgstr "**Almacenamiento en caché (desarrollo - caché ficticio):**"
 
 #: ../../developer/architecture/settings-structure.rst:202
 msgid "**Email (console backend):**"
-msgstr ""
+msgstr "**Correo electrónico (backend de la consola):**"
 
 #: ../../developer/architecture/settings-structure.rst:210
 msgid "**Debugging Tools:**"
-msgstr ""
+msgstr "**Herramientas de depuración:**"
 
 #: ../../developer/architecture/settings-structure.rst:218
 msgid "**django-extensions:**"
-msgstr ""
+msgstr "**extensiones-django:**"
 
 #: ../../developer/architecture/settings-structure.rst:225
 msgid "Test Settings (test.py)"
-msgstr ""
+msgstr "Configuración de prueba (test.py)"
 
 #: ../../developer/architecture/settings-structure.rst:227
 msgid "Testing environment settings:"
-msgstr ""
+msgstr "Configuración del entorno de prueba:"
 
 #: ../../developer/architecture/settings-structure.rst:229
 #: ../../developer/architecture/settings-structure.rst:281
 msgid "**Debug OFF:**"
-msgstr ""
+msgstr "**Depuración desactivada:**"
 
 #: ../../developer/architecture/settings-structure.rst:235
 msgid "**Database (in-memory SQLite):**"
-msgstr ""
+msgstr "**Base de datos (SQLite en memoria):**"
 
 #: ../../developer/architecture/settings-structure.rst:246
 msgid "**Fast Password Hashing:**"
-msgstr ""
+msgstr "**Hash rápido de contraseñas:**"
 
 #: ../../developer/architecture/settings-structure.rst:254
 msgid "**Templates (no caching):**"
-msgstr ""
+msgstr "**Plantillas (sin almacenamiento en caché):**"
 
 #: ../../developer/architecture/settings-structure.rst:263
 msgid "**Email (memory backend):**"
-msgstr ""
+msgstr "**Correo electrónico (backend de memoria):**"
 
 #: ../../developer/architecture/settings-structure.rst:269
 msgid "**Celery (synchronous execution):**"
-msgstr ""
+msgstr "**Apio (ejecución sincrónica):**"
 
 #: ../../developer/architecture/settings-structure.rst:277
 msgid "Production Settings (production.py)"
-msgstr ""
+msgstr "Configuración de producción (producción.py)"
 
 #: ../../developer/architecture/settings-structure.rst:279
 msgid "Production environment settings:"
-msgstr ""
+msgstr "Configuración del entorno de producción:"
 
 #: ../../developer/architecture/settings-structure.rst:293
 msgid "**Security:**"
-msgstr ""
+msgstr "**Seguridad:**"
 
 #: ../../developer/architecture/settings-structure.rst:313
 msgid "**Caching (Redis):**"
-msgstr ""
+msgstr "**Almacenamiento en caché (Redis):**"
 
 #: ../../developer/architecture/settings-structure.rst:328
 msgid "**Static Files (WhiteNoise):**"
-msgstr ""
+msgstr "**Archivos estáticos (WhiteNoise):**"
 
 #: ../../developer/architecture/settings-structure.rst:334
 msgid "**Media Files (S3):**"
-msgstr ""
+msgstr "**Archivos multimedia (S3):**"
 
 #: ../../developer/architecture/settings-structure.rst:345
 msgid "**Email (Production service):**"
-msgstr ""
+msgstr "**Correo electrónico (servicio de producción):**"
 
 #: ../../developer/architecture/settings-structure.rst:351
 msgid "**Logging:**"
-msgstr ""
+msgstr "**Explotación florestal:**"
 
 #: ../../developer/architecture/settings-structure.rst:376
 msgid "**Sentry:**"
-msgstr ""
+msgstr "**Centinela:**"
 
 #: ../../developer/architecture/settings-structure.rst:391
 msgid "Environment Selection"
-msgstr ""
+msgstr "Selección del entorno"
 
 #: ../../developer/architecture/settings-structure.rst:393
 msgid "**Via Environment Variable:**"
-msgstr ""
+msgstr "**A través de variable de entorno:**"
 
 #: ../../developer/architecture/settings-structure.rst:400
 msgid "**Via Makefile:**"
-msgstr ""
+msgstr "**A través de Makefile:**"
 
 #: ../../developer/architecture/settings-structure.rst:408
 msgid "**In manage.py:**"
-msgstr ""
+msgstr "**En administrar.py:**"
 
 #: ../../developer/architecture/settings-structure.rst:415
 msgid "django-environ"
-msgstr ""
+msgstr "entorno-django"
 
 #: ../../developer/architecture/settings-structure.rst:417
 msgid "**Loading .env file:**"
-msgstr ""
+msgstr "**Cargando archivo .env:**"
 
 #: ../../developer/architecture/settings-structure.rst:434
 msgid "**Accessing variables:**"
-msgstr ""
+msgstr "**Acceso a variables:**"
 
 #: ../../developer/architecture/settings-structure.rst:444
 msgid "Library Mode"
-msgstr ""
+msgstr "Modo biblioteca"
 
 #: ../../developer/architecture/settings-structure.rst:446
 msgid "**CONSTRUBOT_AS_LIBRARY setting:**"
-msgstr ""
+msgstr "**Configuración CONSTRUBOT_AS_LIBRARY:**"
 
 #: ../../developer/architecture/settings-structure.rst:448
 msgid "When ``True``, disables standalone features:"
-msgstr ""
+msgstr "Cuando es ``True``, desactiva las funciones independientes:"
 
 #: ../../developer/architecture/settings-structure.rst:460
 msgid "**Affects:**"
-msgstr ""
+msgstr "**Afecta:**"
 
 #: ../../developer/architecture/settings-structure.rst:462
 msgid "Admin interface availability"
-msgstr ""
+msgstr "Disponibilidad de la interfaz de administración"
 
 #: ../../developer/architecture/settings-structure.rst:463
 msgid "Account management URLs"
-msgstr ""
+msgstr "URL de administración de cuentas"
 
 #: ../../developer/architecture/settings-structure.rst:464
 msgid "Authentication system"
-msgstr ""
+msgstr "Sistema de autenticación"
 
 #: ../../developer/architecture/settings-structure.rst:466
 msgid "See :doc:`../library-mode` for details."
-msgstr ""
+msgstr "Consulte :doc:`../library-mode` para obtener más detalles."
 
 #: ../../developer/architecture/settings-structure.rst:469
 msgid "Best Practices"
-msgstr ""
+msgstr "Mejores prácticas"
 
 #: ../../developer/architecture/settings-structure.rst:471
 msgid "**1. Never commit secrets:**"
-msgstr ""
+msgstr "**1. Nunca cometas secretos:**"
 
 #: ../../developer/architecture/settings-structure.rst:481
 msgid "**2. Use sensible defaults:**"
-msgstr ""
+msgstr "**2. Utilice valores predeterminados sensatos:**"
 
 #: ../../developer/architecture/settings-structure.rst:487
 msgid "**3. Document required variables:**"
-msgstr ""
+msgstr "**3. Variables requeridas del documento:**"
 
 #: ../../developer/architecture/settings-structure.rst:489
 msgid "Create ``.env.example`` with all required variables."
-msgstr ""
+msgstr "Cree ``.env.example`` con todas las variables requeridas."
 
 #: ../../developer/architecture/settings-structure.rst:491
 msgid "**4. Validate production settings:**"
-msgstr ""
+msgstr "**4. Validar configuración de producción:**"
 
 #: ../../developer/architecture/settings-structure.rst:497
 msgid "**5. Keep base.py DRY:**"
-msgstr ""
+msgstr "**5. Mantenga base.py SECO:**"
 
 #: ../../developer/architecture/settings-structure.rst:499
 msgid "Put common settings in ``base.py``, override only what differs."
 msgstr ""
+"Coloque configuraciones comunes en ``base.py``, anule solo lo que difiera."
 
 #: ../../developer/architecture/settings-structure.rst:502
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../developer/architecture/settings-structure.rst:504
 msgid "**Wrong settings module loaded:**"
-msgstr ""
+msgstr "**Módulo de configuración incorrecto cargado:**"
 
 #: ../../developer/architecture/settings-structure.rst:514
 msgid "**Settings not loading from .env:**"
-msgstr ""
+msgstr "**La configuración no se carga desde .env:**"
 
 #: ../../developer/architecture/settings-structure.rst:524
 msgid "**Import errors:**"
-msgstr ""
+msgstr "**Errores de importación:**"
 
 #: ../../developer/architecture/settings-structure.rst:533
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/architecture/settings-structure.rst:535
 msgid ":doc:`overview` - Architecture overview"
@@ -359,4 +366,5 @@ msgid ""
 "`Django Settings Documentation "
 "<https://docs.djangoproject.com/en/3.2/topics/settings/>`_"
 msgstr ""
-
+"`Documentación de configuración de Django "
+"<https://docs.djangoproject.com/en/3.2/topics/settings/>`_"

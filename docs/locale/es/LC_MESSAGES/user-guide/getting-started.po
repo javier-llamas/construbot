@@ -11,196 +11,209 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../user-guide/getting-started.rst:3
 msgid "Getting Started"
-msgstr ""
+msgstr "Empezando"
 
 #: ../../user-guide/getting-started.rst:5
 msgid ""
-"This guide will help you get started with Construbot, from your first "
-"login to creating your first project."
+"This guide will help you get started with Construbot, from your first login "
+"to creating your first project."
 msgstr ""
+"Esta guía lo ayudará a comenzar con Construbot, desde su primer inicio de "
+"sesión hasta la creación de su primer proyecto."
 
 #: ../../user-guide/getting-started.rst:8
 msgid "First Login"
-msgstr ""
+msgstr "Primer inicio de sesión"
 
 #: ../../user-guide/getting-started.rst:10
 msgid "**Navigate** to your Construbot instance URL"
-msgstr ""
+msgstr "**Navegue** a la URL de su instancia de Construbot"
 
 #: ../../user-guide/getting-started.rst:11
 msgid "**Click** \"Login\" or navigate to ``/accounts/login``"
-msgstr ""
+msgstr "**Haga clic** en \"Iniciar sesión\" o navegue hasta ``/accounts/login``"
 
 #: ../../user-guide/getting-started.rst:12
 msgid "**Enter** your email and password"
-msgstr ""
+msgstr "**Ingresa** tu correo electrónico y contraseña"
 
 #: ../../user-guide/getting-started.rst:13
 msgid "**Click** \"Sign In\""
-msgstr ""
+msgstr "**Haga clic** en \"Iniciar sesión\""
 
 #: ../../user-guide/getting-started.rst:16
 msgid ""
-"Construbot uses **email-based authentication**. Your username is your "
-"email address."
+"Construbot uses **email-based authentication**. Your username is your email "
+"address."
 msgstr ""
+"Construbot utiliza **autenticación basada en correo electrónico**. Su nombre"
+" de usuario es su dirección de correo electrónico."
 
 #: ../../user-guide/getting-started.rst:19
 msgid "The Dashboard"
-msgstr ""
+msgstr "El tablero"
 
 #: ../../user-guide/getting-started.rst:21
 msgid "After login, you'll see the **Project Dashboard** (``/proyectos/``):"
 msgstr ""
+"Después de iniciar sesión, verá el **Panel de proyectos** (``/proyectos/``):"
 
 #: ../../user-guide/getting-started.rst:-1
 msgid "Construbot Dashboard"
-msgstr ""
+msgstr "Panel de control de Construbot"
 
 #: ../../user-guide/getting-started.rst:27
 msgid "*(Image placeholder - screenshot of main dashboard)*"
 msgstr ""
+"*(Marcador de posición de imagen: captura de pantalla del panel principal)*"
 
 #: ../../user-guide/getting-started.rst:30
 msgid "Dashboard Sections"
-msgstr ""
+msgstr "Secciones del tablero"
 
 #: ../../user-guide/getting-started.rst:33
 msgid "**Active Contracts**"
-msgstr ""
+msgstr "**Contratos activos**"
 
 #: ../../user-guide/getting-started.rst:33
 msgid ""
 "Lists all ongoing projects (Contratos) with progress percentages and "
 "financial summaries."
 msgstr ""
+"Enumera todos los proyectos en curso (Contratos) con porcentajes de avance y"
+" resúmenes financieros."
 
 #: ../../user-guide/getting-started.rst:36
 msgid "**Pending Invoicing**"
-msgstr ""
+msgstr "**Pendiente de facturación**"
 
 #: ../../user-guide/getting-started.rst:36
-msgid "Estimates (Estimaciones) that have been completed but not yet invoiced."
-msgstr ""
+msgid ""
+"Estimates (Estimaciones) that have been completed but not yet invoiced."
+msgstr "Estimaciones que han sido completadas pero aún no facturadas."
 
 #: ../../user-guide/getting-started.rst:39
 msgid "**Pending Payment**"
-msgstr ""
+msgstr "**Pendiente de pago**"
 
 #: ../../user-guide/getting-started.rst:39
 msgid "Estimates that have been invoiced but payment hasn't been received."
-msgstr ""
+msgstr "Presupuestos que han sido facturados pero no se ha recibido el pago."
 
 #: ../../user-guide/getting-started.rst:42
 msgid "**Quick Stats**"
-msgstr ""
+msgstr "**Estadísticas rápidas**"
 
 #: ../../user-guide/getting-started.rst:42
 msgid "Total amounts for unbilled and unpaid estimates."
-msgstr ""
+msgstr "Montos totales de estimaciones no facturadas y no pagadas."
 
 #: ../../user-guide/getting-started.rst:45
 msgid "Navigation Menu"
-msgstr ""
+msgstr "Menú de navegación"
 
 #: ../../user-guide/getting-started.rst:47
 msgid "The main navigation provides access to:"
-msgstr ""
+msgstr "La navegación principal proporciona acceso a:"
 
 #: ../../user-guide/getting-started.rst:50
 msgid "Contracts (Contratos)"
-msgstr ""
+msgstr "Contratos"
 
 #: ../../user-guide/getting-started.rst:52
 msgid "**List Contracts** - View all projects"
-msgstr ""
+msgstr "**Listar contratos** - Ver todos los proyectos"
 
 #: ../../user-guide/getting-started.rst:53
 msgid "**Create Contract** - Start a new project"
-msgstr ""
+msgstr "**Crear contrato** - Iniciar un nuevo proyecto"
 
 #: ../../user-guide/getting-started.rst:54
 msgid "**Create Sub-Contract** - Add child contract under existing project"
 msgstr ""
+"**Crear subcontrato**: agregar contrato secundario al proyecto existente"
 
 #: ../../user-guide/getting-started.rst:57
 msgid "Business Partners (Contrapartes)"
-msgstr ""
+msgstr "Socios comerciales (contrapartes)"
 
 #: ../../user-guide/getting-started.rst:59
 msgid "**Clients** (Clientes) - Customers paying for work"
-msgstr ""
+msgstr "**Clientes** (Clientes) - Clientes que pagan por trabajo"
 
 #: ../../user-guide/getting-started.rst:60
 msgid "**Subcontractors** (Subcontratistas) - Specialized contractors"
-msgstr ""
+msgstr "**Subcontratistas** (Subcontratistas) - Contratistas especializados"
 
 #: ../../user-guide/getting-started.rst:61
 msgid "**Piecework Contractors** (Destajistas) - Task-based workers"
-msgstr ""
+msgstr "**Contratistas a destajo** (Destajistas) - Trabajadores por tareas"
 
 #: ../../user-guide/getting-started.rst:64
 msgid "Locations & Contacts"
-msgstr ""
+msgstr "Ubicaciones y contactos"
 
 #: ../../user-guide/getting-started.rst:66
 msgid "**Sites** (Sitios) - Construction locations"
-msgstr ""
+msgstr "**Sitios** (Sitios) - Lugares de construcción"
 
 #: ../../user-guide/getting-started.rst:67
 msgid "**Contacts** (Destinatarios) - People at partner organizations"
 msgstr ""
+"**Contactos** (Destinatarios) - Personas de organizaciones colaboradoras"
 
 #: ../../user-guide/getting-started.rst:68
 msgid "**Units** (Unidades) - Measurement units (m², kg, pza, etc.)"
-msgstr ""
+msgstr "**Unidades** (Unidades) - Unidades de medida (m², kg, pza, etc.)"
 
 #: ../../user-guide/getting-started.rst:71
 msgid "Your First Project"
-msgstr ""
+msgstr "Tu primer proyecto"
 
 #: ../../user-guide/getting-started.rst:73
 msgid "Let's create your first contract step-by-step."
-msgstr ""
+msgstr "Creemos tu primer contrato paso a paso."
 
 #: ../../user-guide/getting-started.rst:76
 msgid "Step 1: Create a Client"
-msgstr ""
+msgstr "Paso 1: crear un cliente"
 
 #: ../../user-guide/getting-started.rst:78
 msgid "Before creating a contract, you need a client (Cliente):"
-msgstr ""
+msgstr "Antes de crear un contrato, necesita un cliente (Cliente):"
 
 #: ../../user-guide/getting-started.rst:80
 msgid "Navigate to **Clients** menu"
-msgstr ""
+msgstr "Navegue al menú **Clientes**"
 
 #: ../../user-guide/getting-started.rst:81
 msgid "Click **\"Create New Client\"** (Nuevo Cliente)"
-msgstr ""
+msgstr "Haga clic en **\"Crear nuevo cliente\"** (Nuevo Cliente)"
 
 #: ../../user-guide/getting-started.rst:82
 #: ../../user-guide/getting-started.rst:120
 msgid "Fill in the form:"
-msgstr ""
+msgstr "Rellena el formulario:"
 
 #: ../../user-guide/getting-started.rst:84
 msgid "**Client Name** (Nombre del cliente): Company or individual name"
 msgstr ""
+"**Nombre del cliente** (Nombre del cliente): Nombre de la empresa o "
+"individuo"
 
 #: ../../user-guide/getting-started.rst:85
 msgid "**Type** (Tipo): Select \"CLIENTE\""
-msgstr ""
+msgstr "**Tipo** (Tipo): Seleccione \"CLIENTE\""
 
 #: ../../user-guide/getting-started.rst:87
 #: ../../user-guide/getting-started.rst:106
@@ -210,656 +223,666 @@ msgstr ""
 #: ../../user-guide/getting-started.rst:285
 #: ../../user-guide/getting-started.rst:295
 msgid "Click **\"Save\"**"
-msgstr ""
+msgstr "Haga clic en **\"Guardar\"**"
 
 #: ../../user-guide/getting-started.rst:91
 #: ../../user-guide/getting-started.rst:111
 #: ../../user-guide/getting-started.rst:158
 #: ../../user-guide/getting-started.rst:244
 msgid "**Example:**"
-msgstr ""
+msgstr "**Ejemplo:**"
 
 #: ../../user-guide/getting-started.rst:90
 msgid "Name: \"ABC Development Corporation\""
-msgstr ""
+msgstr "Nombre: \"Corporación de Desarrollo ABC\""
 
 #: ../../user-guide/getting-started.rst:91
 msgid "Type: CLIENTE"
-msgstr ""
+msgstr "Tipo: CLIENTE"
 
 #: ../../user-guide/getting-started.rst:94
 msgid "Step 2: Create a Site"
-msgstr ""
+msgstr "Paso 2: crear un sitio"
 
 #: ../../user-guide/getting-started.rst:96
 msgid "Add the construction location:"
-msgstr ""
+msgstr "Agregue la ubicación de construcción:"
 
 #: ../../user-guide/getting-started.rst:98
 msgid "Navigate to **Sites** menu (Sitios/Ubicaciones)"
-msgstr ""
+msgstr "Navegue al menú **Sitios** (Sitios/Ubicaciones)"
 
 #: ../../user-guide/getting-started.rst:99
 msgid "Click **\"Create New Site\"** (Nuevo Sitio)"
-msgstr ""
+msgstr "Haga clic en **\"Crear nuevo sitio\"** (Nuevo sitio)"
 
 #: ../../user-guide/getting-started.rst:100
 #: ../../user-guide/getting-started.rst:170
 msgid "Fill in:"
-msgstr ""
+msgstr "Llenar:"
 
 #: ../../user-guide/getting-started.rst:102
 msgid "**Site Name** (Nombre del sitio): Project location name"
-msgstr ""
+msgstr "**Site Name** (Nombre del sitio): Nombre de la ubicación del proyecto"
 
 #: ../../user-guide/getting-started.rst:103
 msgid "**Location** (Ubicación): Physical address or description"
-msgstr ""
+msgstr "**Ubicación** (Ubicación): Dirección física o descripción"
 
 #: ../../user-guide/getting-started.rst:104
 msgid "**Client** (Cliente): Select the client you just created"
-msgstr ""
+msgstr "**Cliente** (Cliente): Selecciona el cliente que acabas de crear"
 
 #: ../../user-guide/getting-started.rst:109
 msgid "Name: \"Downtown Office Tower\""
-msgstr ""
+msgstr "Nombre: \"Torre de Oficinas del Centro\""
 
 #: ../../user-guide/getting-started.rst:110
 msgid "Location: \"123 Main Street, Mexico City\""
-msgstr ""
+msgstr "Ubicación: \"Calle Principal 123, Ciudad de México\""
 
 #: ../../user-guide/getting-started.rst:111
 msgid "Client: ABC Development Corporation"
-msgstr ""
+msgstr "Cliente: Corporación de Desarrollo ABC"
 
 #: ../../user-guide/getting-started.rst:114
 msgid "Step 3: Create the Contract"
-msgstr ""
+msgstr "Paso 3: crear el contrato"
 
 #: ../../user-guide/getting-started.rst:116
 msgid "Now create the main contract:"
-msgstr ""
+msgstr "Ahora crea el contrato principal:"
 
 #: ../../user-guide/getting-started.rst:118
 msgid "Navigate to **Contracts** menu"
-msgstr ""
+msgstr "Vaya al menú **Contratos**"
 
 #: ../../user-guide/getting-started.rst:119
 msgid "Click **\"Create New Contract\"** (Nuevo Contrato)"
-msgstr ""
+msgstr "Haga clic en **\"Crear nuevo contrato\"** (Nuevo Contrato)"
 
 #: ../../user-guide/getting-started.rst:122
 msgid "**Basic Information:**"
-msgstr ""
+msgstr "**Información básica:**"
 
 #: ../../user-guide/getting-started.rst:124
 msgid "**Reference Number** (Folio): Sequential ID (e.g., 1)"
-msgstr ""
+msgstr "**Número de referencia** (Folio): ID secuencial (p. ej., 1)"
 
 #: ../../user-guide/getting-started.rst:125
 msgid "**Contract Code** (Código): Your internal code (e.g., \"CONT-2024-001\")"
 msgstr ""
+"**Código de contrato** (Código): Su código interno (p. ej., "
+"\"CONT-2024-001\")"
 
 #: ../../user-guide/getting-started.rst:126
 msgid "**Contract Date** (Fecha): Signing date"
-msgstr ""
+msgstr "**Fecha de Contrato** (Fecha): Fecha de firma"
 
 #: ../../user-guide/getting-started.rst:127
 msgid "**Contract Name** (Nombre del contrato): Full project name"
 msgstr ""
+"**Nombre del contrato** (Nombre del contrato): Nombre completo del proyecto"
 
 #: ../../user-guide/getting-started.rst:128
 msgid "**Short Name** (Nombre corto): Abbreviated name for listings"
-msgstr ""
+msgstr "**Short Name** (Nombre corto): Nombre abreviado para listados"
 
 #: ../../user-guide/getting-started.rst:130
 msgid "**Relationships:**"
-msgstr ""
+msgstr "**Relaciones:**"
 
 #: ../../user-guide/getting-started.rst:132
 msgid "**Counterparty** (Contraparte): Select your client"
-msgstr ""
+msgstr "**Counterparty** (Contraparte): Selecciona tu cliente"
 
 #: ../../user-guide/getting-started.rst:133
 msgid "**Site** (Sitio): Select the construction site"
-msgstr ""
+msgstr "**Sitio** (Sitio): Seleccione el sitio de construcción"
 
 #: ../../user-guide/getting-started.rst:135
 msgid "**Financial:**"
-msgstr ""
+msgstr "**Financiero:**"
 
 #: ../../user-guide/getting-started.rst:137
 msgid "**Amount** (Monto): Total contract value (without VAT)"
-msgstr ""
+msgstr "**Importe** (Monto): Valor total del contrato (sin IVA)"
 
 #: ../../user-guide/getting-started.rst:138
 msgid "**Advance %** (Anticipo): Down payment percentage (0-100)"
-msgstr ""
+msgstr "**Advance %** (Anticipo): Porcentaje de pago inicial (0-100)"
 
 #: ../../user-guide/getting-started.rst:140
 msgid "**Users:**"
-msgstr ""
+msgstr "**Usuarios:**"
 
 #: ../../user-guide/getting-started.rst:142
 msgid "**Assigned Users** (Usuarios): Select team members"
-msgstr ""
+msgstr "**Usuarios asignados** (Usuarios): Seleccionar miembros del equipo"
 
 #: ../../user-guide/getting-started.rst:144
 msgid "**Status:**"
-msgstr ""
+msgstr "**Estado:**"
 
 #: ../../user-guide/getting-started.rst:146
 msgid "**Ongoing** (Status): Check if project is active"
-msgstr ""
+msgstr "**En curso** (Estado): compruebe si el proyecto está activo"
 
 #: ../../user-guide/getting-started.rst:151
 msgid "Folio: 1"
-msgstr ""
+msgstr "Folio: 1"
 
 #: ../../user-guide/getting-started.rst:152
 msgid "Code: CONT-2024-001"
-msgstr ""
+msgstr "Código: CONT-2024-001"
 
 #: ../../user-guide/getting-started.rst:153
 msgid "Name: \"Downtown Office Tower - Phase 1\""
-msgstr ""
+msgstr "Nombre: “Torre de Oficinas del Centro – Fase 1”"
 
 #: ../../user-guide/getting-started.rst:154
 msgid "Short Name: \"Office Tower P1\""
-msgstr ""
+msgstr "Nombre corto: \"Torre de oficinas P1\""
 
 #: ../../user-guide/getting-started.rst:155
 msgid "Counterparty: ABC Development Corporation"
-msgstr ""
+msgstr "Contraparte: Corporación de Desarrollo ABC"
 
 #: ../../user-guide/getting-started.rst:156
 msgid "Site: Downtown Office Tower"
-msgstr ""
+msgstr "Sitio: Torre de oficinas del centro"
 
 #: ../../user-guide/getting-started.rst:157
 msgid "Amount: 1,000,000.00"
-msgstr ""
+msgstr "Monto: 1.000.000,00"
 
 #: ../../user-guide/getting-started.rst:158
 msgid "Advance: 10% (10.00)"
-msgstr ""
+msgstr "Anticipo: 10% (10.00)"
 
 #: ../../user-guide/getting-started.rst:161
 msgid "Step 4: Add Work Items (Concepts)"
-msgstr ""
+msgstr "Paso 4: Agregar elementos de trabajo (conceptos)"
 
 #: ../../user-guide/getting-started.rst:163
 msgid "Add the catalog of work items to your contract:"
-msgstr ""
+msgstr "Añade el catálogo de elementos de trabajo a tu contrato:"
 
 #: ../../user-guide/getting-started.rst:165
 msgid "Navigate to your **Contract Detail** page"
-msgstr ""
+msgstr "Navegue a su página **Detalles del contrato**"
 
 #: ../../user-guide/getting-started.rst:166
 msgid "Click **\"Concept Catalog\"** tab"
-msgstr ""
+msgstr "Haga clic en la pestaña **\"Catálogo de conceptos\"**"
 
 #: ../../user-guide/getting-started.rst:167
 msgid "**Option A - Manual Entry:**"
-msgstr ""
+msgstr "**Opción A - Entrada manual:**"
 
 #: ../../user-guide/getting-started.rst:169
 msgid "Click **\"Add Concept\"**"
-msgstr ""
+msgstr "Haga clic en **\"Agregar concepto\"**"
 
 #: ../../user-guide/getting-started.rst:172
 msgid "**Code**: Item code (e.g., \"CONC-001\")"
-msgstr ""
+msgstr "**Código**: código de artículo (p. ej., \"CONC-001\")"
 
 #: ../../user-guide/getting-started.rst:173
 msgid "**Description** (Concepto): Work description"
-msgstr ""
+msgstr "**Descripción** (Concepto): Descripción del trabajo"
 
 #: ../../user-guide/getting-started.rst:174
 msgid "**Unit** (Unidad): Select measurement unit (m², kg, pza)"
-msgstr ""
+msgstr "**Unidad** (Unidad): Seleccione unidad de medida (m², kg, pza)"
 
 #: ../../user-guide/getting-started.rst:175
 msgid "**Quantity** (Cantidad): Total contracted quantity"
-msgstr ""
+msgstr "**Cantidad** (Cantidad): Cantidad total contratada"
 
 #: ../../user-guide/getting-started.rst:176
 msgid "**Unit Price** (Precio Unitario): Price per unit"
-msgstr ""
+msgstr "**Precio Unitario** (Precio Unitario): Precio por unidad"
 
 #: ../../user-guide/getting-started.rst:180
 msgid "**Option B - Excel Import:**"
-msgstr ""
+msgstr "**Opción B - Importación de Excel:**"
 
 #: ../../user-guide/getting-started.rst:182
 msgid ""
 "Prepare Excel file with columns: Code, Description, Unit, Quantity, Unit "
 "Price"
 msgstr ""
+"Prepare un archivo Excel con columnas: Código, Descripción, Unidad, "
+"Cantidad, Precio unitario"
 
 #: ../../user-guide/getting-started.rst:183
 msgid "Click **\"Import from Excel\"**"
-msgstr ""
+msgstr "Haga clic en **\"Importar desde Excel\"**"
 
 #: ../../user-guide/getting-started.rst:184
 msgid "Upload file"
-msgstr ""
+msgstr "Subir archivo"
 
 #: ../../user-guide/getting-started.rst:185
 msgid "Review and confirm import"
-msgstr ""
+msgstr "Revisar y confirmar la importación"
 
 #: ../../user-guide/getting-started.rst:187
 msgid "**Example Concepts:**"
-msgstr ""
+msgstr "**Conceptos de ejemplo:**"
 
 #: ../../user-guide/getting-started.rst:193
 msgid "Code"
-msgstr ""
+msgstr "Código"
 
 #: ../../user-guide/getting-started.rst:194
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: ../../user-guide/getting-started.rst:195
 msgid "Unit"
-msgstr ""
+msgstr "Unidad"
 
 #: ../../user-guide/getting-started.rst:196
 msgid "Quantity"
-msgstr ""
+msgstr "Cantidad"
 
 #: ../../user-guide/getting-started.rst:197
 msgid "Unit Price"
-msgstr ""
+msgstr "Precio unitario"
 
 #: ../../user-guide/getting-started.rst:198
 msgid "CONC-001"
-msgstr ""
+msgstr "CONC-001"
 
 #: ../../user-guide/getting-started.rst:199
 msgid "Concrete Foundation"
-msgstr ""
+msgstr "Cimentación de hormigón"
 
 #: ../../user-guide/getting-started.rst:200
 msgid "m³"
-msgstr ""
+msgstr "m³"
 
 #: ../../user-guide/getting-started.rst:201
 msgid "500"
-msgstr ""
+msgstr "500"
 
 #: ../../user-guide/getting-started.rst:202
 msgid "$150.00"
-msgstr ""
+msgstr "$150.00"
 
 #: ../../user-guide/getting-started.rst:203
 msgid "CONC-002"
-msgstr ""
+msgstr "CONC-002"
 
 #: ../../user-guide/getting-started.rst:204
 msgid "Steel Framing"
-msgstr ""
+msgstr "Estructura de acero"
 
 #: ../../user-guide/getting-started.rst:205
 msgid "ton"
-msgstr ""
+msgstr "tonelada"
 
 #: ../../user-guide/getting-started.rst:206
 msgid "25"
-msgstr ""
+msgstr "25"
 
 #: ../../user-guide/getting-started.rst:207
 msgid "$2,500.00"
-msgstr ""
+msgstr "$2,500.00"
 
 #: ../../user-guide/getting-started.rst:208
 msgid "CONC-003"
-msgstr ""
+msgstr "CONC-003"
 
 #: ../../user-guide/getting-started.rst:209
 msgid "Electrical Installation"
-msgstr ""
+msgstr "Instalación Eléctrica"
 
 #: ../../user-guide/getting-started.rst:210
 msgid "m"
-msgstr ""
+msgstr "metro"
 
 #: ../../user-guide/getting-started.rst:211
 msgid "1000"
-msgstr ""
+msgstr "1000"
 
 #: ../../user-guide/getting-started.rst:212
 msgid "$25.00"
-msgstr ""
+msgstr "$25.00"
 
 #: ../../user-guide/getting-started.rst:215
 msgid "Step 5: Create Your First Estimate"
-msgstr ""
+msgstr "Paso 5: cree su primer presupuesto"
 
 #: ../../user-guide/getting-started.rst:217
 msgid "Track work progress with an estimate:"
-msgstr ""
+msgstr "Realice un seguimiento del progreso del trabajo con una estimación:"
 
 #: ../../user-guide/getting-started.rst:219
 msgid "From **Contract Detail**, click **\"Create Estimate\"**"
-msgstr ""
+msgstr "Desde **Detalle del contrato**, haga clic en **\"Crear presupuesto\"**"
 
 #: ../../user-guide/getting-started.rst:220
 msgid "Fill in the estimate form:"
-msgstr ""
+msgstr "Rellene el formulario de presupuesto:"
 
 #: ../../user-guide/getting-started.rst:222
 msgid "**Estimate Number** (Consecutivo): Sequential number (e.g., 1)"
-msgstr ""
+msgstr "**Número de estimación** (Consecutivo): Número secuencial (p. ej., 1)"
 
 #: ../../user-guide/getting-started.rst:223
 msgid "**Start Date** (Fecha de inicio): Period start"
-msgstr ""
+msgstr "**Fecha de Inicio** (Fecha de inicio): Inicio del periodo"
 
 #: ../../user-guide/getting-started.rst:224
 msgid "**End Date** (Fecha de finalización): Period end"
-msgstr ""
+msgstr "**Fecha de finalización** (Fecha de finalización): Fin del período"
 
 #: ../../user-guide/getting-started.rst:225
 msgid "**Supervised By** (Supervisado por): Site supervisor"
-msgstr ""
+msgstr "**Supervisado por** (Supervisado por): Supervisor de sitio"
 
 #: ../../user-guide/getting-started.rst:226
 msgid "**Authorized By** (Autorizado por): Client representative(s)"
-msgstr ""
+msgstr "**Autorizado por** (Autorizado por): Representante(s) del cliente"
 
 #: ../../user-guide/getting-started.rst:228
 msgid "**Add Quantities:**"
-msgstr ""
+msgstr "**Agregar cantidades:**"
 
 #: ../../user-guide/getting-started.rst:230
 msgid "For each concept, enter:"
-msgstr ""
+msgstr "Para cada concepto, ingrese:"
 
 #: ../../user-guide/getting-started.rst:232
 msgid "**Quantity Estimated** (Cantidad estimada): Work completed this period"
 msgstr ""
+"**Cantidad Estimada** (Cantidad estimada): Obra finalizada este periodo"
 
 #: ../../user-guide/getting-started.rst:233
 msgid "**Observations** (Observaciones): Optional notes"
-msgstr ""
+msgstr "**Observaciones** (Observaciones): Notas opcionales"
 
 #: ../../user-guide/getting-started.rst:238
 msgid "Estimate #: 1"
-msgstr ""
+msgstr "Estimación #: 1"
 
 #: ../../user-guide/getting-started.rst:239
 msgid "Period: March 1-31, 2024"
-msgstr ""
+msgstr "Período: 1 al 31 de marzo de 2024"
 
 #: ../../user-guide/getting-started.rst:240
 msgid "Supervised By: John Doe"
-msgstr ""
+msgstr "Supervisado por: John Doe"
 
 #: ../../user-guide/getting-started.rst:241
 msgid "Quantities:"
-msgstr ""
+msgstr "Cantidades:"
 
 #: ../../user-guide/getting-started.rst:243
 msgid "CONC-001: 100 m³ completed"
-msgstr ""
+msgstr "CONC-001: 100 m³ completados"
 
 #: ../../user-guide/getting-started.rst:244
 msgid "CONC-002: 5 ton installed"
-msgstr ""
+msgstr "CONC-002: 5 toneladas instaladas"
 
 #: ../../user-guide/getting-started.rst:247
 msgid "The system automatically calculates:"
-msgstr ""
+msgstr "El sistema calcula automáticamente:"
 
 #: ../../user-guide/getting-started.rst:249
 msgid "Subtotals per concept"
-msgstr ""
+msgstr "Subtotales por concepto"
 
 #: ../../user-guide/getting-started.rst:250
 msgid "Accumulated totals across estimates"
-msgstr ""
+msgstr "Totales acumulados entre estimaciones"
 
 #: ../../user-guide/getting-started.rst:251
 msgid "Advance amortization"
-msgstr ""
+msgstr "Amortización anticipada"
 
 #: ../../user-guide/getting-started.rst:252
 msgid "Retention deductions"
-msgstr ""
+msgstr "Deducciones de retención"
 
 #: ../../user-guide/getting-started.rst:253
 msgid "Final payment amount"
-msgstr ""
+msgstr "Monto del pago final"
 
 #: ../../user-guide/getting-started.rst:256
 msgid "Step 6: Generate PDF"
-msgstr ""
+msgstr "Paso 6: Generar PDF"
 
 #: ../../user-guide/getting-started.rst:258
 msgid "Create a professional estimate document:"
-msgstr ""
+msgstr "Cree un documento de estimación profesional:"
 
 #: ../../user-guide/getting-started.rst:260
 msgid "From **Estimate Detail**, click **\"Generate PDF\"**"
-msgstr ""
+msgstr "Desde **Detalle del presupuesto**, haga clic en **\"Generar PDF\"**"
 
 #: ../../user-guide/getting-started.rst:261
 msgid "Review the document"
-msgstr ""
+msgstr "Revisar el documento"
 
 #: ../../user-guide/getting-started.rst:262
 msgid "**Download** or **Print** as needed"
-msgstr ""
+msgstr "**Descargar** o **Imprimir** según sea necesario"
 
 #: ../../user-guide/getting-started.rst:263
 msgid "Send to client for approval"
-msgstr ""
+msgstr "Enviar al cliente para su aprobación"
 
 #: ../../user-guide/getting-started.rst:266
 msgid "Common Tasks"
-msgstr ""
+msgstr "Tareas comunes"
 
 #: ../../user-guide/getting-started.rst:269
 msgid "Switching Companies"
-msgstr ""
+msgstr "Cambio de empresas"
 
 #: ../../user-guide/getting-started.rst:271
 msgid "If you work for multiple companies:"
-msgstr ""
+msgstr "Si trabaja para varias empresas:"
 
 #: ../../user-guide/getting-started.rst:273
 msgid "Click your **username** in top navigation"
-msgstr ""
+msgstr "Haga clic en su **nombre de usuario** en la navegación superior"
 
 #: ../../user-guide/getting-started.rst:274
 msgid "Select **\"Switch Company\"**"
-msgstr ""
+msgstr "Seleccione **\"Cambiar de empresa\"**"
 
 #: ../../user-guide/getting-started.rst:275
 msgid "Choose the company you want to work in"
-msgstr ""
+msgstr "Elige la empresa en la que quieres trabajar"
 
 #: ../../user-guide/getting-started.rst:276
 msgid "All data will now be filtered to that company"
-msgstr ""
+msgstr "Todos los datos ahora se filtrarán a esa empresa."
 
 #: ../../user-guide/getting-started.rst:279
 msgid "Marking Estimates as Invoiced"
-msgstr ""
+msgstr "Marcar estimaciones como facturadas"
 
 #: ../../user-guide/getting-started.rst:281
 msgid "After sending invoice to client:"
-msgstr ""
+msgstr "Después de enviar la factura al cliente:"
 
 #: ../../user-guide/getting-started.rst:283
 #: ../../user-guide/getting-started.rst:292
 msgid "Open the **Estimate Detail**"
-msgstr ""
+msgstr "Abra el **Detalle del presupuesto**"
 
 #: ../../user-guide/getting-started.rst:284
 msgid "Check **\"Invoiced\"** (Facturada) checkbox"
-msgstr ""
+msgstr "Marque la casilla **\"Facturada\"** (Facturada)"
 
 #: ../../user-guide/getting-started.rst:288
 msgid "Marking Estimates as Paid"
-msgstr ""
+msgstr "Marcar estimaciones como pagadas"
 
 #: ../../user-guide/getting-started.rst:290
 msgid "After receiving payment:"
-msgstr ""
+msgstr "Después de recibir el pago:"
 
 #: ../../user-guide/getting-started.rst:293
 msgid "Check **\"Paid\"** (Pagada) checkbox"
-msgstr ""
+msgstr "Marque la casilla **\"Pagado\"** (Pagada)"
 
 #: ../../user-guide/getting-started.rst:294
 msgid "Enter **\"Payment Date\"** (Fecha de pago)"
-msgstr ""
+msgstr "Ingrese **\"Fecha de Pago\"** (Fecha de pago)"
 
 #: ../../user-guide/getting-started.rst:297
 msgid "The estimate will be removed from \"Pending Payment\" on your dashboard."
-msgstr ""
+msgstr "El presupuesto se eliminará de \"Pago pendiente\" en su panel de control."
 
 #: ../../user-guide/getting-started.rst:300
 msgid "Viewing Reports"
-msgstr ""
+msgstr "Ver informes"
 
 #: ../../user-guide/getting-started.rst:302
 msgid "**Sub-Contract Reports:**"
-msgstr ""
+msgstr "**Informes de subcontratos:**"
 
 #: ../../user-guide/getting-started.rst:304
 msgid "For hierarchical contracts with sub-contracts:"
-msgstr ""
+msgstr "Para contratos jerárquicos con subcontratos:"
 
 #: ../../user-guide/getting-started.rst:306
 msgid "Navigate to **Contract Detail** (parent contract)"
-msgstr ""
+msgstr "Vaya a **Detalle del contrato** (contrato principal)"
 
 #: ../../user-guide/getting-started.rst:307
 msgid "Click **\"Sub-Contract Report\"**"
-msgstr ""
+msgstr "Haga clic en **\"Informe de subcontrato\"**"
 
 #: ../../user-guide/getting-started.rst:308
 msgid "View accumulated totals across all child contracts"
-msgstr ""
+msgstr "Ver los totales acumulados en todos los contratos secundarios"
 
 #: ../../user-guide/getting-started.rst:310
 msgid "**Dashboard Summaries:**"
-msgstr ""
+msgstr "**Resúmenes del panel:**"
 
 #: ../../user-guide/getting-started.rst:312
 msgid "The dashboard automatically shows:"
-msgstr ""
+msgstr "El panel muestra automáticamente:"
 
 #: ../../user-guide/getting-started.rst:314
 msgid "Active contracts with progress %"
-msgstr ""
+msgstr "Contratos activos con avance %"
 
 #: ../../user-guide/getting-started.rst:315
 msgid "Financial totals (billed, unbilled, paid, unpaid)"
-msgstr ""
+msgstr "Totales financieros (facturados, no facturados, pagados, no pagados)"
 
 #: ../../user-guide/getting-started.rst:316
 msgid "Contracts needing attention"
-msgstr ""
+msgstr "Contratos que necesitan atención"
 
 #: ../../user-guide/getting-started.rst:319
 msgid "Next Steps"
-msgstr ""
+msgstr "Próximos pasos"
 
 #: ../../user-guide/getting-started.rst:321
 msgid "Now that you understand the basics:"
-msgstr ""
+msgstr "Ahora que comprende los conceptos básicos:"
 
 #: ../../user-guide/getting-started.rst:323
 msgid "**Learn Core Concepts**: :doc:`concepts/index`"
-msgstr ""
+msgstr "**Aprenda conceptos básicos**: :doc:`concepts/index`"
 
 #: ../../user-guide/getting-started.rst:324
 msgid "**Master Workflows**: :doc:`workflows/index`"
-msgstr ""
+msgstr "**Flujos de trabajo maestros**: :doc:`workflows/index`"
 
 #: ../../user-guide/getting-started.rst:325
 msgid "**Explore Features**: :doc:`features/index`"
-msgstr ""
+msgstr "**Explorar características**: :doc:`features/index`"
 
 #: ../../user-guide/getting-started.rst:328
 msgid ""
 "**Need the Spanish term for something?** Check the "
 ":doc:`/reference/glossary` for complete Spanish-English translations."
 msgstr ""
+"**¿Necesitas el término en español para algo?** Consulta "
+":doc:`/reference/glossary` para obtener traducciones completas español-"
+"inglés."
 
 #: ../../user-guide/getting-started.rst:332
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../user-guide/getting-started.rst:335
 msgid "Can't See a Contract?"
-msgstr ""
+msgstr "¿No puedes ver un contrato?"
 
 #: ../../user-guide/getting-started.rst:337
 msgid "Make sure:"
-msgstr ""
+msgstr "Cerciorarse:"
 
 #: ../../user-guide/getting-started.rst:339
 msgid "You're in the correct **company** (use Switch Company)"
-msgstr ""
+msgstr "Estás en la **empresa** correcta (usa Cambiar de empresa)"
 
 #: ../../user-guide/getting-started.rst:340
 msgid "You're **assigned** to the contract (check with Director/Superuser)"
 msgstr ""
+"Estás **asignado** al contrato (consulta con el Director/Superusuario)"
 
 #: ../../user-guide/getting-started.rst:341
 msgid "Your **permission level** allows access"
-msgstr ""
+msgstr "Su **nivel de permiso** permite el acceso"
 
 #: ../../user-guide/getting-started.rst:344
 msgid "Can't Create Estimates?"
-msgstr ""
+msgstr "¿No puedes crear estimaciones?"
 
 #: ../../user-guide/getting-started.rst:346
 msgid "Verify:"
-msgstr ""
+msgstr "Verificar:"
 
 #: ../../user-guide/getting-started.rst:348
 msgid "Contract has **concepts** (work items) defined"
-msgstr ""
+msgstr "El contrato tiene **conceptos** (elementos de trabajo) definidos"
 
 #: ../../user-guide/getting-started.rst:349
 msgid "You have at least **Coordinador** (Level 2) permissions"
-msgstr ""
+msgstr "Tienes al menos permisos de **Coordinador** (Nivel 2)"
 
 #: ../../user-guide/getting-started.rst:350
 msgid "Contract **status** is active (ongoing)"
-msgstr ""
+msgstr "El contrato **estado** está activo (en curso)"
 
 #: ../../user-guide/getting-started.rst:353
 msgid "Where Are My Retentions?"
-msgstr ""
+msgstr "¿Dónde están mis retenciones?"
 
 #: ../../user-guide/getting-started.rst:355
 msgid "Retentions (Retenciones) are configured at the **contract level**:"
-msgstr ""
+msgstr "Las retenciones se configuran a nivel de contrato**:"
 
 #: ../../user-guide/getting-started.rst:357
 msgid "Open **Contract Detail**"
-msgstr ""
+msgstr "Abrir **Detalle del contrato**"
 
 #: ../../user-guide/getting-started.rst:358
 msgid "Click **\"Retentions\"** tab"
-msgstr ""
+msgstr "Haga clic en la pestaña **\"Retenciones\"**"
 
 #: ../../user-guide/getting-started.rst:359
 msgid "Add retention rules (percentage or fixed amount)"
-msgstr ""
+msgstr "Agregar reglas de retención (porcentaje o cantidad fija)"
 
 #: ../../user-guide/getting-started.rst:360
 msgid "Retentions will be automatically applied to estimates"
-msgstr ""
+msgstr "Las retenciones se aplicarán automáticamente a las estimaciones."
 
 #: ../../user-guide/getting-started.rst:364
 msgid ":doc:`concepts/retentions` - Understanding retention calculations"
@@ -872,4 +895,3 @@ msgstr ""
 #: ../../user-guide/getting-started.rst:366
 msgid ":doc:`faq` - Frequently Asked Questions"
 msgstr ""
-

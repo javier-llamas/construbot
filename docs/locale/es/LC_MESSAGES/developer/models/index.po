@@ -11,141 +11,147 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/models/index.rst:3
 msgid "Models"
-msgstr ""
+msgstr "Modelos"
 
 #: ../../developer/models/index.rst:5
 msgid "Data model documentation for Construbot."
-msgstr ""
+msgstr "Documentación del modelo de datos para Construbot."
 
 #: ../../developer/models/index.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../developer/models/index.rst:10
 msgid "Construbot's data models are organized into several apps:"
 msgstr ""
+"Los modelos de datos de Construbot están organizados en varias aplicaciones:"
 
 #: ../../developer/models/index.rst:12
 msgid "**users:** User, Company, Customer, NivelAcceso"
-msgstr ""
+msgstr "**usuarios:** Usuario, Empresa, Cliente, NivelAcceso"
 
 #: ../../developer/models/index.rst:13
 msgid ""
-"**proyectos:** Contrato, Contraparte, Sitio, Estimate, Concept, "
-"Retenciones"
+"**proyectos:** Contrato, Contraparte, Sitio, Estimate, Concept, Retenciones"
 msgstr ""
+"**proyectos:** Contrato, Contraparte, Sitio, Estimación, Concepto, "
+"Retenciones"
 
 #: ../../developer/models/index.rst:14
 msgid "**core:** Base models and utilities"
-msgstr ""
+msgstr "**núcleo:** Modelos básicos y utilidades"
 
 #: ../../developer/models/index.rst:17
 msgid "Multi-Tenant Architecture"
-msgstr ""
+msgstr "Arquitectura multiinquilino"
 
 #: ../../developer/models/index.rst:19
 msgid "**All business models include:**"
-msgstr ""
+msgstr "**Todos los modelos de negocio incluyen:**"
 
 #: ../../developer/models/index.rst:27
 msgid "See :doc:`../architecture/multi-tenancy` for details."
 msgstr ""
+"Consulte :doc:`../architecture/multi-tenancy` para obtener más detalles."
 
 #: ../../developer/models/index.rst:30
 msgid "Key Models"
-msgstr ""
+msgstr "Modelos clave"
 
 #: ../../developer/models/index.rst:33
 msgid "User Models (users app)"
-msgstr ""
+msgstr "Modelos de usuario (aplicación de usuarios)"
 
 #: ../../developer/models/index.rst:35
 msgid "**Customer** - Top-level account"
-msgstr ""
+msgstr "**Cliente** - Cuenta de nivel superior"
 
 #: ../../developer/models/index.rst:37
 msgid "**Company** - Business entity (tenant)"
-msgstr ""
+msgstr "**Empresa** - Entidad comercial (inquilino)"
 
 #: ../../developer/models/index.rst:39
 msgid "**User** - Custom user model with email authentication"
 msgstr ""
+"**Usuario**: modelo de usuario personalizado con autenticación de correo "
+"electrónico"
 
 #: ../../developer/models/index.rst:41
 msgid "**NivelAcceso** - Permission levels (1-6)"
-msgstr ""
+msgstr "**NivelAcceso** - Niveles de permiso (1-6)"
 
 #: ../../developer/models/index.rst:43
 msgid "See :doc:`users` for complete reference."
-msgstr ""
+msgstr "Consulte :doc:`users` para obtener una referencia completa."
 
 #: ../../developer/models/index.rst:46
 msgid "Business Models (proyectos app)"
-msgstr ""
+msgstr "Modelos de Negocio (aplicación de proyectos)"
 
 #: ../../developer/models/index.rst:48
 msgid "**Contrato** - Contract/Project (hierarchical using django-treebeard)"
-msgstr ""
+msgstr "**Contrato** - Contrato/Proyecto (jerárquico usando django-treebeard)"
 
 #: ../../developer/models/index.rst:50
 msgid ""
-"**Contraparte** - Counterparty (Client, Subcontractor, Piecework "
-"Contractor)"
+"**Contraparte** - Counterparty (Client, Subcontractor, Piecework Contractor)"
 msgstr ""
+"**Contraparte** - Contraparte (Cliente, Subcontratista, Contratista a "
+"destajo)"
 
 #: ../../developer/models/index.rst:52
 msgid "**Sitio** - Construction site"
-msgstr ""
+msgstr "**Sitio** - Sitio de construcción"
 
 #: ../../developer/models/index.rst:54
 msgid "**Estimate** - Progress payment/estimate"
-msgstr ""
+msgstr "**Estimado** - Pago de progreso/estimado"
 
 #: ../../developer/models/index.rst:56
 msgid "**Concept** - Line item in contract catalog"
-msgstr ""
+msgstr "**Concepto**: artículo de línea en el catálogo de contratos"
 
 #: ../../developer/models/index.rst:58
 msgid "**Retenciones** - Financial retentions/withholdings"
-msgstr ""
+msgstr "**Retenciones** - Retenciones/retenciones financieras"
 
 #: ../../developer/models/index.rst:60
 msgid "See :doc:`proyectos` for complete reference."
-msgstr ""
+msgstr "Ver :doc:`proyectos` para una referencia completa."
 
 #: ../../developer/models/index.rst:63
 msgid "Model Relationships"
-msgstr ""
+msgstr "Relaciones modelo"
 
 #: ../../developer/models/index.rst:79
 msgid "Common Patterns"
-msgstr ""
+msgstr "Patrones comunes"
 
 #: ../../developer/models/index.rst:81
 msgid "**Company-scoped queries:**"
-msgstr ""
+msgstr "**Consultas específicas de la empresa:**"
 
 #: ../../developer/models/index.rst:88
 msgid "**Tree operations:**"
-msgstr ""
+msgstr "**Operaciones de árbol:**"
 
 #: ../../developer/models/index.rst:97
 msgid "**Unique per company:**"
-msgstr ""
+msgstr "**Único por empresa:**"
 
 #: ../../developer/models/index.rst:105
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/models/index.rst:107
 msgid ":doc:`../architecture/database-schema` - Database design"
@@ -158,4 +164,3 @@ msgstr ""
 #: ../../developer/models/index.rst:109
 msgid ":doc:`../api/index` - API reference"
 msgstr ""
-

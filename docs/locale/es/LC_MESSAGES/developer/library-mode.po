@@ -11,247 +11,257 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/library-mode.rst:3
 msgid "Library Mode"
-msgstr ""
+msgstr "Modo biblioteca"
 
 #: ../../developer/library-mode.rst:5
 msgid "Using Construbot as a Django app within your own project."
 msgstr ""
+"Usando Construbot como una aplicación Django dentro de tu propio proyecto."
 
 #: ../../developer/library-mode.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../developer/library-mode.rst:10
 msgid "Construbot can run in two modes:"
-msgstr ""
+msgstr "Construbot puede ejecutarse en dos modos:"
 
 #: ../../developer/library-mode.rst:12
 msgid ""
 "**Standalone Mode** (default) - Full application with admin, accounts, "
 "authentication"
 msgstr ""
+"**Modo independiente** (predeterminado): aplicación completa con "
+"administrador, cuentas y autenticación"
 
 #: ../../developer/library-mode.rst:13
 msgid "**Library Mode** - Django app embedded in your project"
-msgstr ""
+msgstr "**Modo Biblioteca** - Aplicación Django integrada en tu proyecto"
 
 #: ../../developer/library-mode.rst:15
 msgid "**Enable library mode:**"
-msgstr ""
+msgstr "**Habilitar modo biblioteca:**"
 
 #: ../../developer/library-mode.rst:22
 msgid "What Changes"
-msgstr ""
+msgstr "¿Qué cambia?"
 
 #: ../../developer/library-mode.rst:24
 msgid "**When CONSTRUBOT_AS_LIBRARY=True:**"
-msgstr ""
+msgstr "**Cuando CONSTRUBOT_AS_LIBRARY=Verdadero:**"
 
 #: ../../developer/library-mode.rst:26
 msgid "❌ **Disabled:**"
-msgstr ""
+msgstr "❌ **Desactivado:**"
 
 #: ../../developer/library-mode.rst:28
 msgid "Django admin interface"
-msgstr ""
+msgstr "Interfaz de administración de Django"
 
 #: ../../developer/library-mode.rst:29
 msgid "allauth URLs (account management)"
-msgstr ""
+msgstr "URL de allauth (administración de cuentas)"
 
 #: ../../developer/library-mode.rst:30
 msgid "Standalone authentication views"
-msgstr ""
+msgstr "Vistas de autenticación independientes"
 
 #: ../../developer/library-mode.rst:31
 msgid "Account configuration app"
-msgstr ""
+msgstr "Aplicación de configuración de cuenta"
 
 #: ../../developer/library-mode.rst:33
 msgid "✅ **Still Available:**"
-msgstr ""
+msgstr "✅ **Aún disponible:**"
 
 #: ../../developer/library-mode.rst:35
 msgid "Core business models (Contrato, Estimate, etc.)"
-msgstr ""
+msgstr "Modelos de negocio principales (Contrato, Estimate, etc.)"
 
 #: ../../developer/library-mode.rst:36
 msgid "API endpoints"
-msgstr ""
+msgstr "Puntos finales API"
 
 #: ../../developer/library-mode.rst:37
 msgid "Business logic and views (if you include URLs)"
-msgstr ""
+msgstr "Lógica empresarial y vistas (si incluye URL)"
 
 #: ../../developer/library-mode.rst:38
 msgid "Template tags and utilities"
-msgstr ""
+msgstr "Etiquetas de plantilla y utilidades"
 
 #: ../../developer/library-mode.rst:41
 msgid "Use Cases"
-msgstr ""
+msgstr "Casos de uso"
 
 #: ../../developer/library-mode.rst:43
 msgid "**When to use library mode:**"
-msgstr ""
+msgstr "**Cuándo usar el modo biblioteca:**"
 
 #: ../../developer/library-mode.rst:45
 msgid "Integrating Construbot into existing Django project"
-msgstr ""
+msgstr "Integrando Construbot en el proyecto Django existente"
 
 #: ../../developer/library-mode.rst:46
 msgid "Using your own authentication system"
-msgstr ""
+msgstr "Usando su propio sistema de autenticación"
 
 #: ../../developer/library-mode.rst:47
 msgid "Customizing admin interface"
-msgstr ""
+msgstr "Personalización de la interfaz de administración"
 
 #: ../../developer/library-mode.rst:48
 msgid "Building custom frontend"
-msgstr ""
+msgstr "Construyendo una interfaz personalizada"
 
 #: ../../developer/library-mode.rst:50
 msgid "**When NOT to use:**"
-msgstr ""
+msgstr "**Cuándo NO usarlo:**"
 
 #: ../../developer/library-mode.rst:52
 msgid "Need complete standalone solution"
-msgstr ""
+msgstr "Necesita una solución independiente completa"
 
 #: ../../developer/library-mode.rst:53
 msgid "Want built-in authentication"
-msgstr ""
+msgstr "Quiere autenticación integrada"
 
 #: ../../developer/library-mode.rst:54
 msgid "Using out-of-the-box"
-msgstr ""
+msgstr "Uso listo para usar"
 
 #: ../../developer/library-mode.rst:57
 msgid "Setup"
-msgstr ""
+msgstr "Configuración"
 
 #: ../../developer/library-mode.rst:59
 msgid "**1. Install package:**"
-msgstr ""
+msgstr "**1. Instalar paquete:**"
 
 #: ../../developer/library-mode.rst:68
 msgid "**2. Add to INSTALLED_APPS:**"
-msgstr ""
+msgstr "**2. Añadir a INSTALLED_APPS:**"
 
 #: ../../developer/library-mode.rst:87
 msgid "**3. Set library mode:**"
-msgstr ""
+msgstr "**3. Establecer modo de biblioteca:**"
 
 #: ../../developer/library-mode.rst:94
 msgid "**4. Include URLs (optional):**"
-msgstr ""
+msgstr "**4. Incluir URL (opcional):**"
 
 #: ../../developer/library-mode.rst:104
 msgid "**5. Run migrations:**"
-msgstr ""
+msgstr "**5. Ejecutar migraciones:**"
 
 #: ../../developer/library-mode.rst:111
 msgid "Configuration"
-msgstr ""
+msgstr "Configuración"
 
 #: ../../developer/library-mode.rst:113
 msgid "**Settings:**"
-msgstr ""
+msgstr "**Ajustes:**"
 
 #: ../../developer/library-mode.rst:137
 msgid "Integration Patterns"
-msgstr ""
+msgstr "Patrones de integración"
 
 #: ../../developer/library-mode.rst:140
 msgid "Using Construbot Models"
-msgstr ""
+msgstr "Usando modelos Construbot"
 
 #: ../../developer/library-mode.rst:161
 msgid "Custom Authentication"
-msgstr ""
+msgstr "Autenticación personalizada"
 
 #: ../../developer/library-mode.rst:177
 msgid "API Only"
-msgstr ""
+msgstr "Solo API"
 
 #: ../../developer/library-mode.rst:196
 msgid "Limitations"
-msgstr ""
+msgstr "Limitaciones"
 
 #: ../../developer/library-mode.rst:198
 msgid "**In library mode:**"
-msgstr ""
+msgstr "**En modo biblioteca:**"
 
 #: ../../developer/library-mode.rst:200
 msgid "No built-in admin interface (use Django admin or build your own)"
 msgstr ""
+"Sin interfaz de administración incorporada (use el administrador de Django o"
+" cree el suyo propio)"
 
 #: ../../developer/library-mode.rst:201
 msgid "No user registration/login views (implement your own)"
 msgstr ""
+"Sin vistas de registro/inicio de sesión de usuario (implemente las suyas "
+"propias)"
 
 #: ../../developer/library-mode.rst:202
 msgid "Manual setup required for permissions"
-msgstr ""
+msgstr "Se requiere configuración manual para los permisos"
 
 #: ../../developer/library-mode.rst:203
 msgid "Need to handle company switching yourself"
-msgstr ""
+msgstr "Necesita gestionar el cambio de empresa usted mismo"
 
 #: ../../developer/library-mode.rst:206
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../developer/library-mode.rst:208
 msgid "**\"No module named construbot\":**"
-msgstr ""
+msgstr "**\"Ningún módulo llamado constructbot\":**"
 
 #: ../../developer/library-mode.rst:210
 msgid "Ensure Construbot is installed:"
-msgstr ""
+msgstr "Asegúrese de que Construbot esté instalado:"
 
 #: ../../developer/library-mode.rst:216
 msgid "**\"Table doesn't exist\":**"
-msgstr ""
+msgstr "**\"La tabla no existe\":**"
 
 #: ../../developer/library-mode.rst:218
 msgid "Run migrations:"
-msgstr ""
+msgstr "Ejecutar migraciones:"
 
 #: ../../developer/library-mode.rst:224
 msgid "**\"AUTH_USER_MODEL conflicts\":**"
-msgstr ""
+msgstr "**\"Conflictos AUTH_USER_MODEL\":**"
 
 #: ../../developer/library-mode.rst:226
 msgid "Choose one:"
-msgstr ""
+msgstr "Elige uno:"
 
 #: ../../developer/library-mode.rst:228
 msgid "Use Construbot's User model: ``AUTH_USER_MODEL = 'users.User'``"
 msgstr ""
+"Utilice el modelo de usuario de Construbot: ``AUTH_USER_MODEL = "
+"'users.User'``"
 
 #: ../../developer/library-mode.rst:229
 msgid "Create custom integration between your User and Construbot models"
 msgstr ""
+"Cree una integración personalizada entre sus modelos User y Construbot"
 
 #: ../../developer/library-mode.rst:232
 msgid "Example Project"
-msgstr ""
+msgstr "Proyecto de ejemplo"
 
 #: ../../developer/library-mode.rst:270
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/library-mode.rst:272
 msgid ":doc:`installation/index` - Development setup"
@@ -264,4 +274,3 @@ msgstr ""
 #: ../../developer/library-mode.rst:274
 msgid ":doc:`api/index` - API documentation"
 msgstr ""
-

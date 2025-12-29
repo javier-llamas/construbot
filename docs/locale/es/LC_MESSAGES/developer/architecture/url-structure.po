@@ -11,157 +11,158 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/architecture/url-structure.rst:3
 msgid "URL Structure"
-msgstr ""
+msgstr "Estructura de URL"
 
 #: ../../developer/architecture/url-structure.rst:5
 msgid "URL routing and organization in Construbot."
-msgstr ""
+msgstr "Enrutamiento y organización de URL en Construbot."
 
 #: ../../developer/architecture/url-structure.rst:8
 msgid "Root URLs"
-msgstr ""
+msgstr "URL raíz"
 
 #: ../../developer/architecture/url-structure.rst:10
 msgid "**File:** ``construbot/config/urls.py``"
-msgstr ""
+msgstr "**Archivo:** ``construbot/config/urls.py``"
 
 #: ../../developer/architecture/url-structure.rst:24
 msgid "**Library mode:**"
-msgstr ""
+msgstr "**Modo biblioteca:**"
 
 #: ../../developer/architecture/url-structure.rst:35
 msgid "URL Patterns by App"
-msgstr ""
+msgstr "Patrones de URL por aplicación"
 
 #: ../../developer/architecture/url-structure.rst:38
 msgid "Users App"
-msgstr ""
+msgstr "Aplicación de usuarios"
 
 #: ../../developer/architecture/url-structure.rst:40
 msgid "**``/users/``** - User management"
-msgstr ""
+msgstr "**``/users/``** - Gestión de usuarios"
 
 #: ../../developer/architecture/url-structure.rst:42
 msgid "``/users/~redirect/`` - Redirect to user detail"
-msgstr ""
+msgstr "``/users/~redirect/`` - Redirigir a los detalles del usuario"
 
 #: ../../developer/architecture/url-structure.rst:43
 msgid "``/users/~update/`` - Update user profile"
-msgstr ""
+msgstr "``/users/~update/`` - Actualizar perfil de usuario"
 
 #: ../../developer/architecture/url-structure.rst:44
 msgid "``/users/<username>/`` - User detail"
-msgstr ""
+msgstr "``/users/<nombre de usuario>/`` - Detalle del usuario"
 
 #: ../../developer/architecture/url-structure.rst:47
 msgid "Proyectos App"
-msgstr ""
+msgstr "Aplicación Proyectos"
 
 #: ../../developer/architecture/url-structure.rst:49
 msgid "**``/proyectos/``** - Main business logic"
-msgstr ""
+msgstr "**``/proyectos/``** - Lógica de negocio principal"
 
 #: ../../developer/architecture/url-structure.rst:51
 msgid "``/proyectos/contratos/`` - Contract list"
-msgstr ""
+msgstr "``/proyectos/contratos/`` - Listado de contratos"
 
 #: ../../developer/architecture/url-structure.rst:52
 msgid "``/proyectos/contratos/create/`` - Create contract"
-msgstr ""
+msgstr "``/proyectos/contratos/create/`` - Crear contrato"
 
 #: ../../developer/architecture/url-structure.rst:53
 msgid "``/proyectos/contratos/<id>/`` - Contract detail"
-msgstr ""
+msgstr "``/proyectos/contratos/<id>/`` - Detalle del contrato"
 
 #: ../../developer/architecture/url-structure.rst:54
 msgid "``/proyectos/contratos/<id>/edit/`` - Edit contract"
-msgstr ""
+msgstr "``/proyectos/contratos/<id>/edit/`` - Editar contrato"
 
 #: ../../developer/architecture/url-structure.rst:55
 msgid "``/proyectos/contratos/<id>/delete/`` - Delete contract"
-msgstr ""
+msgstr "``/proyectos/contratos/<id>/delete/`` - Eliminar contrato"
 
 #: ../../developer/architecture/url-structure.rst:56
 msgid "``/proyectos/estimaciones/`` - Estimate list"
-msgstr ""
+msgstr "``/proyectos/estimaciones/`` - Listado de estimaciones"
 
 #: ../../developer/architecture/url-structure.rst:57
 msgid "``/proyectos/contrapartes/`` - Counterparty list"
-msgstr ""
+msgstr "``/proyectos/contrapartes/`` - Lista de contrapartes"
 
 #: ../../developer/architecture/url-structure.rst:60
 msgid "API URLs"
-msgstr ""
+msgstr "URL de API"
 
 #: ../../developer/architecture/url-structure.rst:62
 msgid "**``/api/v1/``** - REST API"
-msgstr ""
+msgstr "**``/api/v1/``** - API REST"
 
 #: ../../developer/architecture/url-structure.rst:64
 msgid "``/api/v1/api-token-auth/`` - Obtain JWT token"
-msgstr ""
+msgstr "``/api/v1/api-token-auth/`` - Obtener el token JWT"
 
 #: ../../developer/architecture/url-structure.rst:65
 msgid "``/api/v1/api-token-refresh/`` - Refresh JWT token"
-msgstr ""
+msgstr "``/api/v1/api-token-refresh/`` - Actualizar token JWT"
 
 #: ../../developer/architecture/url-structure.rst:66
 msgid "``/api/v1/contracts/`` - Contract endpoints"
-msgstr ""
+msgstr "``/api/v1/contracts/`` - Puntos finales del contrato"
 
 #: ../../developer/architecture/url-structure.rst:67
 msgid "``/api/v1/estimates/`` - Estimate endpoints"
-msgstr ""
+msgstr "``/api/v1/estimates/`` - Estimación de puntos finales"
 
 #: ../../developer/architecture/url-structure.rst:70
 msgid "URL Namespaces"
-msgstr ""
+msgstr "Espacios de nombres de URL"
 
 #: ../../developer/architecture/url-structure.rst:72
 msgid "**Using namespaces:**"
-msgstr ""
+msgstr "**Usando espacios de nombres:**"
 
 #: ../../developer/architecture/url-structure.rst:84
 msgid "Admin URLs"
-msgstr ""
+msgstr "URL de administrador"
 
 #: ../../developer/architecture/url-structure.rst:86
 msgid "**``/admin/``** - Django admin (if not library mode)"
 msgstr ""
+"**``/admin/``** - Administrador de Django (si no está en modo biblioteca)"
 
 #: ../../developer/architecture/url-structure.rst:89
 msgid "Autocomplete URLs"
-msgstr ""
+msgstr "URL de autocompletar"
 
 #: ../../developer/architecture/url-structure.rst:91
 msgid "**django-autocomplete-light:**"
-msgstr ""
+msgstr "**django-autocompletar-luz:**"
 
 #: ../../developer/architecture/url-structure.rst:100
 msgid "Static/Media URLs"
-msgstr ""
+msgstr "URL estáticas/medios"
 
 #: ../../developer/architecture/url-structure.rst:102
 msgid "**Development only:**"
-msgstr ""
+msgstr "**Solo desarrollo:**"
 
 #: ../../developer/architecture/url-structure.rst:109
 msgid "**Production:** Served by WhiteNoise (static) and Nginx/S3 (media)"
-msgstr ""
+msgstr "**Producción:** Servido por WhiteNoise (estático) y Nginx/S3 (medios)"
 
 #: ../../developer/architecture/url-structure.rst:112
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../developer/architecture/url-structure.rst:114
 msgid ":doc:`overview` - Architecture overview"
@@ -170,4 +171,3 @@ msgstr ""
 #: ../../developer/architecture/url-structure.rst:115
 msgid ":doc:`../api/index` - API documentation"
 msgstr ""
-

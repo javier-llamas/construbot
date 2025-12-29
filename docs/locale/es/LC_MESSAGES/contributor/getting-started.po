@@ -11,137 +11,137 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../contributor/getting-started.rst:3
 msgid "Getting Started"
-msgstr ""
+msgstr "Empezando"
 
 #: ../../contributor/getting-started.rst:5
 msgid "First steps for contributing to Construbot."
-msgstr ""
+msgstr "Primeros pasos para contribuir a Construbot."
 
 #: ../../contributor/getting-started.rst:8
 msgid "Prerequisites"
-msgstr ""
+msgstr "Requisitos previos"
 
 #: ../../contributor/getting-started.rst:10
 msgid "**Required:**"
-msgstr ""
+msgstr "**Requerido:**"
 
 #: ../../contributor/getting-started.rst:12
 msgid "Git"
-msgstr ""
+msgstr "git"
 
 #: ../../contributor/getting-started.rst:13
 msgid "Python 3.9.17+"
-msgstr ""
+msgstr "Pitón 3.9.17+"
 
 #: ../../contributor/getting-started.rst:14
 msgid "Docker and Docker Compose (recommended)"
-msgstr ""
+msgstr "Docker y Docker Compose (recomendado)"
 
 #: ../../contributor/getting-started.rst:16
 msgid "**Or for local development:**"
-msgstr ""
+msgstr "**O para desarrollo local:**"
 
 #: ../../contributor/getting-started.rst:18
 msgid "PostgreSQL 12+"
-msgstr ""
+msgstr "PostgreSQL 12+"
 
 #: ../../contributor/getting-started.rst:19
 msgid "Redis 6+"
-msgstr ""
+msgstr "Redis 6+"
 
 #: ../../contributor/getting-started.rst:20
 msgid "Virtual environment"
-msgstr ""
+msgstr "Entorno virtual"
 
 #: ../../contributor/getting-started.rst:23
 msgid "Fork and Clone"
-msgstr ""
+msgstr "Bifurcación y clonación"
 
 #: ../../contributor/getting-started.rst:25
 msgid "**1. Fork repository:**"
-msgstr ""
+msgstr "**1. Repositorio de bifurcación:**"
 
 #: ../../contributor/getting-started.rst:27
 msgid "Visit https://github.com/javier-llamas/construbot and click \"Fork\""
-msgstr ""
+msgstr "Visita https://github.com/javier-llamas/construbot y haz clic en \"Fork\""
 
 #: ../../contributor/getting-started.rst:29
 msgid "**2. Clone your fork:**"
-msgstr ""
+msgstr "**2. Clona tu tenedor:**"
 
 #: ../../contributor/getting-started.rst:36
 msgid "**3. Add upstream remote:**"
-msgstr ""
+msgstr "**3. Agregar control remoto ascendente:**"
 
 #: ../../contributor/getting-started.rst:43
 msgid "Development Setup"
-msgstr ""
+msgstr "Configuración de desarrollo"
 
 #: ../../contributor/getting-started.rst:45
 msgid "**Using Docker (Recommended):**"
-msgstr ""
+msgstr "**Usando Docker (recomendado):**"
 
 #: ../../contributor/getting-started.rst:58
 msgid "**Using Local Environment:**"
-msgstr ""
+msgstr "**Usando el entorno local:**"
 
 #: ../../contributor/getting-started.rst:76
 msgid "Making Changes"
-msgstr ""
+msgstr "Hacer cambios"
 
 #: ../../contributor/getting-started.rst:78
 msgid "**1. Create feature branch:**"
-msgstr ""
+msgstr "**1. Crear rama de funciones:**"
 
 #: ../../contributor/getting-started.rst:84
 msgid "**2. Make changes**"
-msgstr ""
+msgstr "**2. Hacer cambios**"
 
 #: ../../contributor/getting-started.rst:86
 msgid "**3. Run tests:**"
-msgstr ""
+msgstr "**3. Ejecutar pruebas:**"
 
 #: ../../contributor/getting-started.rst:92
 msgid "**4. Commit:**"
-msgstr ""
+msgstr "**4. Comprometerse:**"
 
 #: ../../contributor/getting-started.rst:99
 msgid "**5. Push:**"
-msgstr ""
+msgstr "**5. Empujar:**"
 
 #: ../../contributor/getting-started.rst:105
 msgid "**6. Create Pull Request on GitHub**"
-msgstr ""
+msgstr "**6. Crear solicitud de extracción en GitHub**"
 
 #: ../../contributor/getting-started.rst:108
 msgid "Code Style"
-msgstr ""
+msgstr "Estilo de código"
 
 #: ../../contributor/getting-started.rst:110
 msgid "**Format code:**"
-msgstr ""
+msgstr "**Código de formato:**"
 
 #: ../../contributor/getting-started.rst:120
 msgid "**Lint:**"
-msgstr ""
+msgstr "**Hilas:**"
 
 #: ../../contributor/getting-started.rst:126
 msgid "See :doc:`code-style` for complete guidelines."
-msgstr ""
+msgstr "Consulte :doc:`code-style` para obtener pautas completas."
 
 #: ../../contributor/getting-started.rst:129
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../contributor/getting-started.rst:131
 msgid ":doc:`index` - Contributor guide home"
@@ -154,4 +154,3 @@ msgstr ""
 #: ../../contributor/getting-started.rst:133
 msgid ":doc:`/developer/installation/index` - Development setup"
 msgstr ""
-

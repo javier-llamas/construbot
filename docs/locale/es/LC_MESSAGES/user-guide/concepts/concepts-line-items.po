@@ -11,1051 +11,1072 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:3
 msgid "Concepts & Line Items"
-msgstr ""
+msgstr "Conceptos y líneas de pedido"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:6
 msgid "**Spanish Term:** Concepto"
-msgstr ""
+msgstr "**Término en español:** Concepto"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:8
 msgid ""
 "Understanding concepts (individual work items) in Construbot contract "
 "catalogs."
 msgstr ""
+"Comprensión de conceptos (elementos de trabajo individuales) en los "
+"catálogos de contratos de Construbot."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:12
 msgid "Table of Contents"
-msgstr ""
+msgstr "Tabla de contenido"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:15
 msgid "What is a Concept?"
-msgstr ""
+msgstr "¿Qué es un concepto?"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:17
 msgid ""
 "A **Concept** (Spanish: **Concepto**) is an individual work item in a "
 "construction contract catalog. Concepts represent:"
 msgstr ""
+"Un **Concepto** (español: **Concepto**) es un elemento de trabajo individual"
+" en un catálogo de contratos de construcción. Los conceptos representan:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:19
 msgid "Specific types of work to be performed"
-msgstr ""
+msgstr "Tipos específicos de trabajo a realizar."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:20
 msgid "Measurable units of construction activities"
-msgstr ""
+msgstr "Unidades mensurables de actividades de construcción."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:21
 msgid "Line items for billing and tracking"
-msgstr ""
+msgstr "Líneas de pedido para facturación y seguimiento"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:22
 msgid "Building blocks of estimates"
-msgstr ""
+msgstr "Elementos básicos de las estimaciones"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:24
 msgid "**Model:** ``construbot.proyectos.models.Concept``"
-msgstr ""
+msgstr "**Modelo:** ``construbot.proyectos.modelos.Concept``"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:26
 msgid ""
 "**Key Relationship:** Concepts belong to a contract and define what work "
 "will be done, at what quantity, and at what price."
 msgstr ""
+"**Relación clave:** Los conceptos pertenecen a un contrato y definen qué "
+"trabajo se realizará, en qué cantidad y a qué precio."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:32
 msgid "Concept Structure"
-msgstr ""
+msgstr "Estructura del concepto"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:35
 msgid "Basic Information"
-msgstr ""
+msgstr "Información básica"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:37
 msgid "**Required fields:**"
-msgstr ""
+msgstr "**Campos obligatorios:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:39
 msgid "**Code** (clave) - Unique identifier within contract catalog"
 msgstr ""
+"**Código** (clave) - Identificador único dentro del catálogo de contratos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:40
 msgid "**Description** (concepto) - Description of the work"
-msgstr ""
+msgstr "**Descripción** (concepto) - Descripción de la obra"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:41
 msgid "**Unit** (unidad) - Unit of measurement"
-msgstr ""
+msgstr "**Unidad** (unidad) - Unidad de medida"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:42
 msgid "**Quantity** (cantidad) - Total contract quantity"
-msgstr ""
+msgstr "**Cantidad** (cantidad) - Cantidad total del contrato"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:43
 msgid "**Unit Price** (precio_unitario) - Price per unit"
-msgstr ""
+msgstr "**Precio Unitario** (precio_unitario) - Precio por unidad"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:44
 msgid "**Contract** (contrato) - Parent contract"
-msgstr ""
+msgstr "**Contrato** (contrato) - Contrato matriz"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:46
 msgid "**Optional fields:**"
-msgstr ""
+msgstr "**Campos opcionales:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:48
 msgid "**Notes** (notas) - Additional specifications"
-msgstr ""
+msgstr "**Notas** (notas) - Especificaciones adicionales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:49
 msgid "**Category** (categoría) - Grouping for organization"
-msgstr ""
+msgstr "**Categoría** (categoría) - Agrupación por organización"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:50
 msgid "**Order** (orden) - Display sequence"
-msgstr ""
+msgstr "**Order** (orden) - Secuencia de visualización"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:51
 msgid "**Active** (activo) - Whether concept is currently used"
-msgstr ""
+msgstr "**Activo** (activo) - Si el concepto se utiliza actualmente"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:53
 msgid "**Calculated fields:**"
-msgstr ""
+msgstr "**Campos calculados:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:55
 msgid "**Total** (importe) - Quantity × Unit Price"
-msgstr ""
+msgstr "**Total** (importación) - Cantidad × Precio unitario"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:61
 msgid "Example Concept"
-msgstr ""
+msgstr "Concepto de ejemplo"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:76
 msgid "Units of Measurement"
-msgstr ""
+msgstr "Unidades de medida"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:79
 msgid "Common Units"
-msgstr ""
+msgstr "Unidades comunes"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:81
 msgid "Construbot supports various measurement units:"
-msgstr ""
+msgstr "Construbot soporta varias unidades de medida:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:83
 msgid "**Linear measures:**"
-msgstr ""
+msgstr "**Medidas lineales:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:85
 msgid "**m** - Meter"
-msgstr ""
+msgstr "**m** - Metro"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:86
 msgid "**km** - Kilometer"
-msgstr ""
+msgstr "**km** - Kilómetro"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:87
 msgid "**ft** - Foot"
-msgstr ""
+msgstr "**pies** - Pie"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:89
 msgid "**Area measures:**"
-msgstr ""
+msgstr "**Medidas de área:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:91
 msgid "**m²** - Square meter"
-msgstr ""
+msgstr "**m²** - Metro cuadrado"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:92
 msgid "**ft²** - Square foot"
-msgstr ""
+msgstr "**ft²** - Pie cuadrado"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:94
 msgid "**Volume measures:**"
-msgstr ""
+msgstr "**Medidas de volumen:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:96
 msgid "**m³** - Cubic meter"
-msgstr ""
+msgstr "**m³** - Metro cúbico"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:97
 msgid "**L** - Liter"
-msgstr ""
+msgstr "**L** - Litro"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:99
 msgid "**Weight measures:**"
-msgstr ""
+msgstr "**Medidas de peso:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:101
 msgid "**kg** - Kilogram"
-msgstr ""
+msgstr "**kg** - Kilogramo"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:102
 msgid "**ton** - Metric ton"
-msgstr ""
+msgstr "**tonelada** - Tonelada métrica"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:104
 msgid "**Count measures:**"
-msgstr ""
+msgstr "**Medidas de conteo:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:106
 msgid "**pza** - Piece (Spanish: pieza)"
-msgstr ""
+msgstr "**pza** - Pieza (Español: pieza)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:107
 msgid "**u** - Unit"
-msgstr ""
+msgstr "**u** - Unidad"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:108
 msgid "**lot** - Lot (complete set)"
-msgstr ""
+msgstr "**lote** - Lote (juego completo)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:110
 msgid "**Service measures:**"
-msgstr ""
+msgstr "**Medidas de servicio:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:112
 msgid "**hr** - Hour"
-msgstr ""
+msgstr "**hora** - Hora"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:113
 msgid "**day** - Day"
-msgstr ""
+msgstr "**día** - Día"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:114
 msgid "**month** - Month"
-msgstr ""
+msgstr "**mes** - Mes"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:116
 msgid "**Model:** ``construbot.proyectos.models.Units``"
-msgstr ""
+msgstr "**Modelo:** ``construbot.proyectos.modelos.Unidades``"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:119
 msgid "Custom Units"
-msgstr ""
+msgstr "Unidades personalizadas"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:121
 msgid "Add custom units as needed:"
-msgstr ""
+msgstr "Agregue unidades personalizadas según sea necesario:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:123
 msgid "Navigate to **Units** management"
-msgstr ""
+msgstr "Vaya a administración de **Unidades**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:124
 msgid "Create new unit with abbreviation and description"
-msgstr ""
+msgstr "Crear nueva unidad con abreviatura y descripción."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:125
 msgid "Use in concept catalog"
-msgstr ""
+msgstr "Uso en catálogo de conceptos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:131
 msgid "Creating Concepts"
-msgstr ""
+msgstr "Creando conceptos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:134
 msgid "Method 1: Manual Entry"
-msgstr ""
+msgstr "Método 1: entrada manual"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:137
 msgid "Step 1: Access Contract Catalog"
-msgstr ""
+msgstr "Paso 1: Acceda al catálogo de contratos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:139
 msgid "Navigate to the contract"
-msgstr ""
+msgstr "Navegar al contrato"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:140
 msgid "Find **\"Concepts\"** or **\"Catálogo de Conceptos\"** section"
-msgstr ""
+msgstr "Busque la sección **\"Conceptos\"** o **\"Catálogo de Conceptos\"**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:141
 msgid "Click **\"Add Concept\"** or **\"Agregar Concepto\"**"
-msgstr ""
+msgstr "Haga clic en **\"Agregar Concepto\"** o **\"Agregar Concepto\"**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:144
 msgid "Step 2: Enter Concept Details"
-msgstr ""
+msgstr "Paso 2: Ingrese los detalles del concepto"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:158
 msgid "Step 3: Save"
-msgstr ""
+msgstr "Paso 3: guardar"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:160
 msgid "Click **\"Save\"** to add this concept to the catalog."
-msgstr ""
+msgstr "Haga clic en **\"Guardar\"** para agregar este concepto al catálogo."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:162
 msgid "**Repeat** for all concepts in the contract."
-msgstr ""
+msgstr "**Repetir** para todos los conceptos del contrato."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:165
 msgid "Method 2: Excel Import"
-msgstr ""
+msgstr "Método 2: Importación de Excel"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:167
 msgid "For large contracts with many concepts:"
-msgstr ""
+msgstr "Para contratos grandes con muchos conceptos:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:170
 msgid "Step 1: Prepare Excel File"
-msgstr ""
+msgstr "Paso 1: preparar el archivo Excel"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:172
 msgid "Create spreadsheet with columns:"
-msgstr ""
+msgstr "Crear hoja de cálculo con columnas:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:181
 msgid "Step 2: Import to Construbot"
-msgstr ""
+msgstr "Paso 2: Importar a Construbot"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:183
 msgid "Navigate to contract concepts section"
-msgstr ""
+msgstr "Navegar a la sección de conceptos de contrato"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:184
 msgid "Click **\"Import from Excel\"** or **\"Importar desde Excel\"**"
-msgstr ""
+msgstr "Haga clic en **\"Importar desde Excel\"** o **\"Importar desde Excel\"**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:185
 msgid "Select your prepared file"
-msgstr ""
+msgstr "Seleccione su archivo preparado"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:186
 msgid "Map columns (if not auto-detected)"
-msgstr ""
+msgstr "Columnas del mapa (si no se detectan automáticamente)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:187
 msgid "Review and confirm import"
-msgstr ""
+msgstr "Revisar y confirmar la importación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:189
-msgid "**Benefit:** Quickly populate catalog with dozens or hundreds of concepts."
+msgid ""
+"**Benefit:** Quickly populate catalog with dozens or hundreds of concepts."
 msgstr ""
+"**Beneficio:** Complete rápidamente el catálogo con docenas o cientos de "
+"conceptos."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:195
 msgid "Method 3: Copy from Template"
-msgstr ""
+msgstr "Método 3: copiar desde plantilla"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:197
 msgid "If you have standard catalogs:"
-msgstr ""
+msgstr "Si tiene catálogos estándar:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:199
 msgid "Create \"template\" contract with common concepts"
-msgstr ""
+msgstr "Crear contrato \"modelo\" con conceptos comunes"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:200
 msgid "When creating new contract, select **\"Copy catalog from...\"**"
-msgstr ""
+msgstr "Al crear un nuevo contrato, seleccione **\"Copiar catálogo de...\"**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:201
 msgid "Choose template contract"
-msgstr ""
+msgstr "Elija modelo de contrato"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:202
 msgid "All concepts copied to new contract"
-msgstr ""
+msgstr "Todos los conceptos copiados al nuevo contrato."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:203
 msgid "Edit quantities and prices as needed"
-msgstr ""
+msgstr "Edite cantidades y precios según sea necesario"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:205
 msgid "**Use case:** Repetitive project types with similar work items."
 msgstr ""
+"**Caso de uso:** Tipos de proyectos repetitivos con elementos de trabajo "
+"similares."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:208
 msgid "Catalog Organization"
-msgstr ""
+msgstr "Organización del catálogo"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:211
 msgid "Concept Codes"
-msgstr ""
+msgstr "Códigos conceptuales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:213
 msgid "Use structured coding system for organization:"
-msgstr ""
+msgstr "Utilice un sistema de codificación estructurado para la organización:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:215
 msgid "**Format:** ``[Category]-[Subcategory]-[Sequence]``"
-msgstr ""
+msgstr "**Formato:** ``[Categoría]-[Subcategoría]-[Secuencia]``"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:217
 msgid "**Examples:**"
-msgstr ""
+msgstr "**Ejemplos:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:228
 msgid "**Benefits:**"
-msgstr ""
+msgstr "**Beneficios:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:230
 msgid "Easy sorting and grouping"
-msgstr ""
+msgstr "Fácil clasificación y agrupación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:231
 msgid "Quick reference"
-msgstr ""
+msgstr "Referencia rápida"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:232
 msgid "Professional appearance on documents"
-msgstr ""
+msgstr "Aspecto profesional en los documentos."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:235
 msgid "Categories"
-msgstr ""
+msgstr "Categorías"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:237
 msgid "Group concepts into categories:"
-msgstr ""
+msgstr "Agrupar conceptos en categorías:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:239
 msgid "**Preliminary Work:** Site prep, mobilization"
-msgstr ""
+msgstr "**Trabajo preliminar:** Preparación del sitio, movilización"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:240
 msgid "**Earthwork:** Excavation, compaction"
-msgstr ""
+msgstr "**Movimiento de tierras:** Excavación, compactación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:241
 msgid "**Concrete Work:** Foundations, slabs, columns"
-msgstr ""
+msgstr "**Trabajos de Concreto:** Cimentaciones, losas, columnas"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:242
 msgid "**Masonry:** Block walls, brick veneer"
-msgstr ""
+msgstr "**Albañilería:** Muros de block, enchapado de ladrillo"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:243
 msgid "**Finishes:** Flooring, painting, trim"
-msgstr ""
+msgstr "**Acabados:** Pisos, pintura, molduras."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:244
 msgid "**MEP:** Mechanical, electrical, plumbing"
-msgstr ""
+msgstr "**MEP:** Mecánica, electricidad, fontanería."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:246
 msgid "**Purpose:** Organize large catalogs, generate category subtotals."
 msgstr ""
+"**Propósito:** Organizar catálogos grandes, generar subtotales de "
+"categorías."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:249
 msgid "Display Order"
-msgstr ""
+msgstr "Orden de visualización"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:251
 msgid "Use the **Order** field to control sequence:"
-msgstr ""
+msgstr "Utilice el campo **Pedido** para controlar la secuencia:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:253
 msgid "Lower numbers appear first"
-msgstr ""
+msgstr "Los números más bajos aparecen primero"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:254
 msgid "Group related concepts together"
-msgstr ""
+msgstr "Agrupar conceptos relacionados"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:255
 msgid "Match typical construction sequence"
-msgstr ""
+msgstr "Coincidir con la secuencia de construcción típica"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:258
 msgid "Using Concepts in Estimates"
-msgstr ""
+msgstr "Uso de conceptos en estimaciones"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:261
 msgid "Concept Selection"
-msgstr ""
+msgstr "Selección de conceptos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:263
 msgid "When creating an estimate:"
-msgstr ""
+msgstr "Al crear un presupuesto:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:265
 msgid "Choose concepts from contract catalog"
-msgstr ""
+msgstr "Elija conceptos del catálogo de contratos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:266
 msgid "Enter quantity completed this period"
-msgstr ""
+msgstr "Ingrese la cantidad completada este período"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:267
 msgid "System uses unit price from catalog"
-msgstr ""
+msgstr "El sistema utiliza el precio unitario del catálogo."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:268
 msgid "Calculate line item subtotal automatically"
-msgstr ""
+msgstr "Calcular el subtotal de la línea de pedido automáticamente"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:270
 msgid "**Example:**"
-msgstr ""
+msgstr "**Ejemplo:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:288
 msgid "Quantity Tracking"
-msgstr ""
+msgstr "Seguimiento de cantidad"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:290
 msgid "Construbot tracks for each concept:"
-msgstr ""
+msgstr "Pistas de Construbot para cada concepto:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:292
 msgid "**Contract Quantity:** Original scope"
-msgstr ""
+msgstr "**Cantidad de contrato:** Alcance original"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:293
 msgid "**Billed to Date:** Cumulative from all estimates"
-msgstr ""
+msgstr "**Facturado hasta la fecha:** Acumulado de todas las estimaciones"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:294
 msgid "**Remaining:** Contract - Billed"
-msgstr ""
+msgstr "**Restante:** Contrato - Facturado"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:295
 msgid "**Over/Under:** If billed exceeds contract"
-msgstr ""
+msgstr "**Más/Menos:** Si la facturación excede el contrato"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:297
 msgid "**Status Indicators:**"
-msgstr ""
+msgstr "**Indicadores de estado:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:299
 msgid "✓ Complete (100% billed)"
-msgstr ""
+msgstr "✓ Completo (100% facturado)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:300
 msgid "⚠ Over-billed (>100%)"
-msgstr ""
+msgstr "⚠ Sobrefacturado (>100%)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:301
 msgid "◷ In Progress (<100%)"
-msgstr ""
+msgstr "◷ En curso (<100%)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:302
 msgid "○ Not Started (0%)"
-msgstr ""
+msgstr "○ No iniciado (0%)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:308
 msgid "Price Changes"
-msgstr ""
+msgstr "Cambios de precio"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:311
 msgid "Unit Price Adjustments"
-msgstr ""
+msgstr "Ajustes de precio unitario"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:313
 msgid "If unit price needs to change:"
-msgstr ""
+msgstr "Si el precio unitario necesita cambiar:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:315
 msgid "**Option 1: Change Order**"
-msgstr ""
+msgstr "**Opción 1: Cambiar orden**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:317
 msgid "Create formal change order"
-msgstr ""
+msgstr "Crear orden de cambio formal"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:318
 msgid "Update concept unit price"
-msgstr ""
+msgstr "Actualizar concepto de precio unitario"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:319
 msgid "Document reason in notes"
-msgstr ""
+msgstr "Razón del documento en notas."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:320
 msgid "Get client approval"
-msgstr ""
+msgstr "Obtenga la aprobación del cliente"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:322
 msgid "**Option 2: New Concept**"
-msgstr ""
+msgstr "**Opción 2: Nuevo Concepto**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:324
 msgid "Keep original concept as-is"
-msgstr ""
+msgstr "Mantenga el concepto original tal cual"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:325
 msgid "Create new concept with adjusted price"
-msgstr ""
+msgstr "Crear nuevo concepto con precio ajustado"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:326
 msgid "Use for future estimates"
-msgstr ""
+msgstr "Usar para estimaciones futuras"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:328
 msgid ""
-"**Best Practice:** Document all price changes with change order "
-"references."
+"**Best Practice:** Document all price changes with change order references."
 msgstr ""
+"**Mejores prácticas:** Documente todos los cambios de precios con "
+"referencias de órdenes de cambio."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:331
 msgid "Quantity Adjustments"
-msgstr ""
+msgstr "Ajustes de cantidad"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:333
 msgid "If contract quantity changes:"
-msgstr ""
+msgstr "Si la cantidad del contrato cambia:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:335
 msgid "**Increase Quantity:**"
-msgstr ""
+msgstr "**Aumentar cantidad:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:337
 #: ../../user-guide/concepts/concepts-line-items.rst:343
 msgid "Update concept quantity"
-msgstr ""
+msgstr "Actualizar cantidad de concepto"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:338
 msgid "Document change order"
-msgstr ""
+msgstr "Orden de cambio de documento"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:339
 msgid "Difference becomes additional scope"
-msgstr ""
+msgstr "La diferencia se convierte en un alcance adicional"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:341
 msgid "**Decrease Quantity:**"
-msgstr ""
+msgstr "**Disminuir cantidad:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:344
 msgid "Adjust estimates if needed"
-msgstr ""
+msgstr "Ajustar las estimaciones si es necesario"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:345
 msgid "Credit or reduce billing"
-msgstr ""
+msgstr "Acreditar o reducir facturación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:348
 msgid "Hierarchical Contracts"
-msgstr ""
+msgstr "Contratos jerárquicos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:351
 msgid "Concept Inheritance"
-msgstr ""
+msgstr "Herencia del concepto"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:353
 msgid "For parent-child contract structures:"
-msgstr ""
+msgstr "Para estructuras de contrato entre padres e hijos:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:355
 msgid "**Parent Contract:**"
-msgstr ""
+msgstr "**Contrato de padres:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:357
 msgid "Contains high-level concepts"
-msgstr ""
+msgstr "Contiene conceptos de alto nivel."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:358
 msgid "Rolled-up quantities and prices"
-msgstr ""
+msgstr "Cantidades y precios acumulados"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:359
 msgid "Summary-level tracking"
-msgstr ""
+msgstr "Seguimiento a nivel de resumen"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:361
 msgid "**Subcontract:**"
-msgstr ""
+msgstr "**Subcontratar:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:363
 msgid "Detailed breakdown of parent concepts"
-msgstr ""
+msgstr "Desglose detallado de los conceptos principales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:364
 msgid "Independent catalog"
-msgstr ""
+msgstr "Catálogo independiente"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:365
 msgid "Separate tracking"
-msgstr ""
+msgstr "Seguimiento separado"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:367
 msgid ""
 "**Relationship:** Subcontract concepts can reference parent concepts for "
 "rollup reporting."
 msgstr ""
+"**Relación:** Los conceptos de subcontrato pueden hacer referencia a "
+"conceptos principales para los informes acumulativos."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:370
 msgid "Best Practices"
-msgstr ""
+msgstr "Mejores prácticas"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:372
 msgid "**1. Use clear, descriptive descriptions:**"
-msgstr ""
+msgstr "**1. Utilice descripciones claras y descriptivas:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:379
 msgid "**2. Include specifications in description:**"
-msgstr ""
+msgstr "**2. Incluir especificaciones en la descripción:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:381
 msgid "Key details like:"
-msgstr ""
+msgstr "Detalles clave como:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:383
 msgid "Material grades"
-msgstr ""
+msgstr "Grados de materiales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:384
 msgid "Installation methods"
-msgstr ""
+msgstr "Métodos de instalación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:385
 msgid "Included components"
-msgstr ""
+msgstr "Componentes incluidos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:387
 msgid "**3. Consistent unit usage:**"
-msgstr ""
+msgstr "**3. Uso constante de la unidad:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:394
 msgid "**4. Logical code structure:**"
-msgstr ""
+msgstr "**4. Estructura de código lógico:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:396
 msgid "Use systematic coding for easy reference."
-msgstr ""
+msgstr "Utilice codificación sistemática para facilitar la referencia."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:398
 msgid "**5. One concept = one measurable item:**"
-msgstr ""
+msgstr "**5. Un concepto = un elemento medible:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:410
 msgid "**6. Price verification:**"
-msgstr ""
+msgstr "**6. Verificación de precio:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:412
 msgid "Before importing or saving:"
-msgstr ""
+msgstr "Antes de importar o guardar:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:414
 msgid "Verify unit prices match contract"
-msgstr ""
+msgstr "Verificar que los precios unitarios coincidan con el contrato"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:415
 msgid "Check decimal places"
-msgstr ""
+msgstr "comprobar los decimales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:416
 msgid "Confirm total calculations"
-msgstr ""
+msgstr "Confirmar cálculos totales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:418
 msgid "**7. Regular catalog review:**"
-msgstr ""
+msgstr "**7. Revisión periódica del catálogo:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:420
 msgid "Remove unused concepts (mark inactive)"
-msgstr ""
+msgstr "Eliminar conceptos no utilizados (marcar como inactivos)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:421
 msgid "Update prices for escalation"
-msgstr ""
+msgstr "Actualizar precios para escalamiento"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:422
 msgid "Correct errors promptly"
-msgstr ""
+msgstr "Corregir errores rápidamente"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:425
 msgid "Common Scenarios"
-msgstr ""
+msgstr "Escenarios comunes"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:428
 msgid "Scenario 1: Standard Building Contract"
-msgstr ""
+msgstr "Escenario 1: Contrato de construcción estándar"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:430
 #: ../../user-guide/concepts/concepts-line-items.rst:457
 #: ../../user-guide/concepts/concepts-line-items.rst:473
 msgid "**Setup:**"
-msgstr ""
+msgstr "**Configuración:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:432
 msgid "50 concepts across 8 categories"
-msgstr ""
+msgstr "50 conceptos en 8 categorías"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:433
 msgid "Mix of quantities (m³, m², kg, pza)"
-msgstr ""
+msgstr "Mezcla de cantidades (m³, m², kg, pza)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:434
 msgid "Total contract value $2,000,000"
-msgstr ""
+msgstr "Valor total del contrato $2.000.000"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:436
 msgid "**Catalog Structure:**"
-msgstr ""
+msgstr "**Estructura del catálogo:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:455
 msgid "Scenario 2: Unit Price Contract"
-msgstr ""
+msgstr "Escenario 2: Contrato de precio unitario"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:459
 msgid "Payment based on actual quantities"
-msgstr ""
+msgstr "Pago basado en cantidades reales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:460
 msgid "Original quantities are estimates"
-msgstr ""
+msgstr "Las cantidades originales son estimaciones."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:461
 msgid "Final billing based on as-built"
-msgstr ""
+msgstr "Facturación final basada en obra"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:463
 msgid "**Process:**"
-msgstr ""
+msgstr "**Proceso:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:465
 msgid "Set up catalog with estimated quantities"
-msgstr ""
+msgstr "Configurar catálogo con cantidades estimadas"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:466
 msgid "Bill actual quantities in estimates"
-msgstr ""
+msgstr "Facturar cantidades reales en estimaciones"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:467
 msgid "Final total may exceed or underbid original estimate"
-msgstr ""
+msgstr "El total final puede exceder o ser inferior a la estimación original"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:468
 msgid "Document variations with notes"
-msgstr ""
+msgstr "Variaciones de documentos con notas."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:471
 msgid "Scenario 3: Lump Sum Items"
-msgstr ""
+msgstr "Escenario 3: Artículos de suma global"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:475
 msgid "Some work paid as lump sum, not unit price"
-msgstr ""
+msgstr "Algunos trabajos se pagan como suma global, no como precio unitario"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:477
 msgid "**Configuration:**"
-msgstr ""
+msgstr "**Configuración:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:488
 #, python-format
 msgid "**Billing:** Bill 100% in first estimate or progressive percentage."
 msgstr ""
+"**Facturación:** Factura el 100% en primera estimación o porcentaje "
+"progresivo."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:491
 msgid "Reporting"
-msgstr ""
+msgstr "Informes"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:494
 msgid "Catalog Reports"
-msgstr ""
+msgstr "Informes de catálogo"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:496
 msgid "Available reports:"
-msgstr ""
+msgstr "Informes disponibles:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:498
 msgid "**Complete Catalog:** All concepts with quantities and prices"
-msgstr ""
+msgstr "**Catálogo Completo:** Todos los conceptos con cantidades y precios."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:499
 msgid "**Category Summary:** Totals by category"
-msgstr ""
+msgstr "**Resumen de categorías:** Totales por categoría"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:500
 msgid "**Price List:** Unit prices for reference"
-msgstr ""
+msgstr "**Lista de precios:** Precios unitarios como referencia"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:501
 msgid "**Quantity Tracking:** Contract vs. billed quantities"
-msgstr ""
+msgstr "**Seguimiento de cantidades:** Contrato versus cantidades facturadas"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:507
 msgid "Progress Reports"
-msgstr ""
+msgstr "Informes de progreso"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:509
 msgid "Track project completion:"
-msgstr ""
+msgstr "Seguimiento de la finalización del proyecto:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:511
 msgid "**Percentage Complete:** By quantity for each concept"
-msgstr ""
+msgstr "**Porcentaje completado:** Por cantidad para cada concepto"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:512
 msgid "**Value Complete:** Dollar value billed to date"
-msgstr ""
+msgstr "**Valor completo:** Valor en dólares facturado hasta la fecha"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:513
 msgid "**Remaining Work:** Unbilled quantities and values"
-msgstr ""
+msgstr "**Trabajo restante:** Cantidades y valores no facturados"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:516
 msgid "Export Options"
-msgstr ""
+msgstr "Opciones de exportación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:518
 msgid "**PDF:** Formatted catalog for printing/sharing"
-msgstr ""
+msgstr "**PDF:** Catálogo formateado para imprimir/compartir"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:519
 msgid "**Excel:** Editable spreadsheet for analysis"
-msgstr ""
+msgstr "**Excel:** Hoja de cálculo editable para análisis"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:520
 msgid "**CSV:** For import to estimating software"
-msgstr ""
+msgstr "**CSV:** Para importar al software de estimación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:523
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Solución de problemas"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:525
 msgid "**Concept not appearing in estimate:**"
-msgstr ""
+msgstr "**Concepto que no aparece en el presupuesto:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:527
 msgid "Verify concept is marked \"Active\""
-msgstr ""
+msgstr "Verifique que el concepto esté marcado como \"Activo\""
 
 #: ../../user-guide/concepts/concepts-line-items.rst:528
 msgid "Check concept belongs to correct contract"
-msgstr ""
+msgstr "El concepto de cheque pertenece al contrato correcto."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:529
 msgid "Confirm concept has quantity > 0"
-msgstr ""
+msgstr "Confirmar que el concepto tiene cantidad > 0"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:530
 msgid "Ensure user has permission to view"
-msgstr ""
+msgstr "Asegúrese de que el usuario tenga permiso para ver"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:532
 msgid "**Unit price won't update:**"
-msgstr ""
+msgstr "**El precio unitario no se actualizará:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:534
 msgid "Check if concept is linked to approved estimates"
-msgstr ""
+msgstr "Comprobar si el concepto está vinculado a presupuestos aprobados"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:535
 msgid "Review permission level (may require higher access)"
-msgstr ""
+msgstr "Revisar el nivel de permiso (puede requerir un acceso superior)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:536
 msgid "Confirm change order approval if required"
-msgstr ""
+msgstr "Confirmar la aprobación de la orden de cambio si es necesario"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:538
 msgid "**Total calculation incorrect:**"
-msgstr ""
+msgstr "**Cálculo total incorrecto:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:540
 msgid "Verify quantity and unit price values"
-msgstr ""
+msgstr "Verificar los valores de cantidad y precio unitario."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:541
 msgid "Check for decimal place errors"
-msgstr ""
+msgstr "Compruebe si hay errores de decimales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:542
 msgid "Confirm proper unit of measurement"
-msgstr ""
+msgstr "Confirmar la unidad de medida adecuada"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:543
 msgid "Review for manual overrides"
-msgstr ""
+msgstr "Revisión de anulaciones manuales"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:545
 msgid "**Import failed:**"
-msgstr ""
+msgstr "**Error de importación:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:547
 msgid "Check Excel file format (must be .xlsx or .xls)"
-msgstr ""
+msgstr "Verifique el formato del archivo Excel (debe ser .xlsx o .xls)"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:548
 msgid "Verify column headers match expected names"
 msgstr ""
+"Verifique que los encabezados de las columnas coincidan con los nombres "
+"esperados"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:549
 msgid "Ensure no empty required fields"
-msgstr ""
+msgstr "Asegúrese de que no haya campos obligatorios vacíos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:550
 msgid "Review for special characters in text"
-msgstr ""
+msgstr "Revisión de caracteres especiales en el texto."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:552
 msgid "**Over-billing warnings:**"
-msgstr ""
+msgstr "**Advertencias de sobrefacturación:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:554
 msgid "Review estimate quantities vs. contract quantities"
-msgstr ""
+msgstr "Revisar las cantidades estimadas frente a las cantidades del contrato"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:555
 msgid "Check if change orders increased contract scope"
-msgstr ""
+msgstr "Comprobar si las órdenes de cambio aumentaron el alcance del contrato"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:556
 msgid "Verify cumulative calculations are correct"
-msgstr ""
+msgstr "Verificar que los cálculos acumulativos sean correctos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:557
 msgid "Document justification if intentional"
-msgstr ""
+msgstr "Justificación del documento si es intencional."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:560
 msgid "Integration with Estimating"
-msgstr ""
+msgstr "Integración con la estimación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:562
 msgid "If you use external estimating software:"
-msgstr ""
+msgstr "Si utiliza software de estimación externo:"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:564
 msgid "**Export from Estimating Tool:**"
-msgstr ""
+msgstr "**Exportar desde la herramienta de estimación:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:566
 msgid "Generate final estimate with quantities and prices"
-msgstr ""
+msgstr "Generar presupuesto final con cantidades y precios."
 
 #: ../../user-guide/concepts/concepts-line-items.rst:567
 msgid "Export to Excel format"
-msgstr ""
+msgstr "Exportar a formato Excel"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:568
 msgid "Import to Construbot as contract catalog"
-msgstr ""
+msgstr "Importar a Construbot como catálogo de contratos"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:570
 msgid "**Sync Pricing:**"
-msgstr ""
+msgstr "**Precios de sincronización:**"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:572
 msgid "Keep Construbot catalog as master"
-msgstr ""
+msgstr "Mantener el catálogo de Construbot como maestro"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:573
 msgid "Export for estimating template"
-msgstr ""
+msgstr "Exportar para plantilla de estimación"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:574
 msgid "Import updated pricing after bid"
-msgstr ""
+msgstr "Importar precios actualizados después de la oferta"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:577
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../user-guide/concepts/concepts-line-items.rst:579
 msgid ":doc:`projects-contracts` - Contract setup and structure"
@@ -1066,10 +1087,10 @@ msgid ":doc:`estimates` - Using concepts in estimates"
 msgstr ""
 
 #: ../../user-guide/concepts/concepts-line-items.rst:581
-msgid ":doc:`/user-guide/workflows/importing-catalogs` - Excel import workflows"
+msgid ""
+":doc:`/user-guide/workflows/importing-catalogs` - Excel import workflows"
 msgstr ""
 
 #: ../../user-guide/concepts/concepts-line-items.rst:582
 msgid ":doc:`/_glossary/domain-terms` - Complete terminology"
 msgstr ""
-

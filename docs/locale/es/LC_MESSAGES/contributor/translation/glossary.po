@@ -11,325 +11,332 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../contributor/translation/glossary.rst:3
 msgid "Translation Glossary"
-msgstr ""
+msgstr "Glosario de traducción"
 
 #: ../../contributor/translation/glossary.rst:5
 msgid "Spanish→English translation reference for contributors."
-msgstr ""
+msgstr "Referencia de traducción español→inglés para colaboradores."
 
 #: ../../contributor/translation/glossary.rst:8
 msgid "Overview"
-msgstr ""
+msgstr "Descripción general"
 
 #: ../../contributor/translation/glossary.rst:10
 msgid ""
-"The Construbot codebase uses Spanish terminology for business entities. "
-"This glossary provides canonical English translations for consistency."
+"The Construbot codebase uses Spanish terminology for business entities. This"
+" glossary provides canonical English translations for consistency."
 msgstr ""
+"El código base de Construbot utiliza terminología española para entidades "
+"comerciales. Este glosario proporciona traducciones canónicas al inglés para"
+" mantener la coherencia."
 
 #: ../../contributor/translation/glossary.rst:13
 msgid "Master Glossary"
-msgstr ""
+msgstr "Glosario maestro"
 
 #: ../../contributor/translation/glossary.rst:16
 msgid ""
 "**Complete Glossary:** See :doc:`/_glossary/domain-terms` for the "
-"comprehensive 100+ term glossary with descriptions, model references, and"
-" examples."
+"comprehensive 100+ term glossary with descriptions, model references, and "
+"examples."
 msgstr ""
+"**Glosario completo:** Consulte :doc:`/_glossary/domain-terms` para obtener "
+"un glosario completo de más de 100 términos con descripciones, referencias "
+"de modelos y ejemplos."
 
 #: ../../contributor/translation/glossary.rst:19
 msgid "Quick Reference"
-msgstr ""
+msgstr "Referencia rápida"
 
 #: ../../contributor/translation/glossary.rst:22
 msgid "Core Business Terms"
-msgstr ""
+msgstr "Términos comerciales principales"
 
 #: ../../contributor/translation/glossary.rst:28
 #: ../../contributor/translation/glossary.rst:59
 #: ../../contributor/translation/glossary.rst:74
 msgid "Spanish"
-msgstr ""
+msgstr "Español"
 
 #: ../../contributor/translation/glossary.rst:29
 #: ../../contributor/translation/glossary.rst:60
 #: ../../contributor/translation/glossary.rst:75
 msgid "English"
-msgstr ""
+msgstr "Inglés"
 
 #: ../../contributor/translation/glossary.rst:30
 msgid "Model"
-msgstr ""
+msgstr "Modelo"
 
 #: ../../contributor/translation/glossary.rst:31
 msgid "Contrato"
-msgstr ""
+msgstr "contrato"
 
 #: ../../contributor/translation/glossary.rst:32
 msgid "Contract / Project"
-msgstr ""
+msgstr "Contrato / Proyecto"
 
 #: ../../contributor/translation/glossary.rst:33
 msgid "proyectos.models.Contrato"
-msgstr ""
+msgstr "proyectos.modelos.Contrato"
 
 #: ../../contributor/translation/glossary.rst:34
 msgid "Contraparte"
-msgstr ""
+msgstr "Contraparte"
 
 #: ../../contributor/translation/glossary.rst:35
 msgid "Counterparty"
-msgstr ""
+msgstr "Contraparte"
 
 #: ../../contributor/translation/glossary.rst:36
 msgid "proyectos.models.Contraparte"
-msgstr ""
+msgstr "proyectos.models.Contraparte"
 
 #: ../../contributor/translation/glossary.rst:37
 msgid "Estimación"
-msgstr ""
+msgstr "estimación"
 
 #: ../../contributor/translation/glossary.rst:38
 msgid "Estimate / Progress Payment"
-msgstr ""
+msgstr "Estimación / Pago Progreso"
 
 #: ../../contributor/translation/glossary.rst:39
 msgid "proyectos.models.Estimate"
-msgstr ""
+msgstr "proyectos.modelos.Estimación"
 
 #: ../../contributor/translation/glossary.rst:40
 msgid "Concepto"
-msgstr ""
+msgstr "concepto"
 
 #: ../../contributor/translation/glossary.rst:41
 msgid "Concept / Line Item"
-msgstr ""
+msgstr "Concepto/línea de pedido"
 
 #: ../../contributor/translation/glossary.rst:42
 msgid "proyectos.models.Concept"
-msgstr ""
+msgstr "proyectos.modelos.Concepto"
 
 #: ../../contributor/translation/glossary.rst:43
 msgid "Retención"
-msgstr ""
+msgstr "Retención"
 
 #: ../../contributor/translation/glossary.rst:44
 msgid "Retention / Withholding"
-msgstr ""
+msgstr "Retención / Retención"
 
 #: ../../contributor/translation/glossary.rst:45
 msgid "proyectos.models.Retenciones"
-msgstr ""
+msgstr "proyectos.modelos.Retenciones"
 
 #: ../../contributor/translation/glossary.rst:46
 msgid "Sitio"
-msgstr ""
+msgstr "Sitio"
 
 #: ../../contributor/translation/glossary.rst:47
 msgid "Site"
-msgstr ""
+msgstr "Sitio"
 
 #: ../../contributor/translation/glossary.rst:48
 msgid "proyectos.models.Sitio"
-msgstr ""
+msgstr "proyectos.modelos.Sitio"
 
 #: ../../contributor/translation/glossary.rst:49
 msgid "Destinatario"
-msgstr ""
+msgstr "Destinotario"
 
 #: ../../contributor/translation/glossary.rst:50
 msgid "Recipient / Contact"
-msgstr ""
+msgstr "Destinatario / Contacto"
 
 #: ../../contributor/translation/glossary.rst:51
 msgid "proyectos.models.Destinatario"
-msgstr ""
+msgstr "proyectos.modelos.Destinatario"
 
 #: ../../contributor/translation/glossary.rst:54
 msgid "Counterparty Types"
-msgstr ""
+msgstr "Tipos de contraparte"
 
 #: ../../contributor/translation/glossary.rst:61
 msgid "Cliente"
-msgstr ""
+msgstr "cliente"
 
 #: ../../contributor/translation/glossary.rst:62
 msgid "Client"
-msgstr ""
+msgstr "Cliente"
 
 #: ../../contributor/translation/glossary.rst:63
 msgid "Destajista"
-msgstr ""
+msgstr "destajista"
 
 #: ../../contributor/translation/glossary.rst:64
 msgid "Piecework Contractor"
-msgstr ""
+msgstr "Contratista a destajo"
 
 #: ../../contributor/translation/glossary.rst:65
 msgid "Subcontratista"
-msgstr ""
+msgstr "Subcontratista"
 
 #: ../../contributor/translation/glossary.rst:66
 msgid "Subcontractor"
-msgstr ""
+msgstr "Subcontratista"
 
 #: ../../contributor/translation/glossary.rst:69
 msgid "Field Names"
-msgstr ""
+msgstr "Nombres de campo"
 
 #: ../../contributor/translation/glossary.rst:76
 msgid "folio"
-msgstr ""
+msgstr "fol"
 
 #: ../../contributor/translation/glossary.rst:77
 msgid "reference_number"
-msgstr ""
+msgstr "número_referencia"
 
 #: ../../contributor/translation/glossary.rst:78
 msgid "monto"
-msgstr ""
+msgstr "monto"
 
 #: ../../contributor/translation/glossary.rst:79
 msgid "amount"
-msgstr ""
+msgstr "cantidad"
 
 #: ../../contributor/translation/glossary.rst:80
 msgid "anticipo"
-msgstr ""
+msgstr "anticipo"
 
 #: ../../contributor/translation/glossary.rst:81
 msgid "advance_payment"
-msgstr ""
+msgstr "pago_anticipo"
 
 #: ../../contributor/translation/glossary.rst:82
 msgid "fecha_inicio"
-msgstr ""
+msgstr "fecha_inicio"
 
 #: ../../contributor/translation/glossary.rst:83
 msgid "start_date"
-msgstr ""
+msgstr "fecha_inicio"
 
 #: ../../contributor/translation/glossary.rst:84
 msgid "fecha_fin"
-msgstr ""
+msgstr "fecha_fin"
 
 #: ../../contributor/translation/glossary.rst:85
 msgid "end_date"
-msgstr ""
+msgstr "fecha_final"
 
 #: ../../contributor/translation/glossary.rst:88
 msgid "Translation Guidelines"
-msgstr ""
+msgstr "Directrices de traducción"
 
 #: ../../contributor/translation/glossary.rst:90
 msgid "**1. Use canonical translations:**"
-msgstr ""
+msgstr "**1. Utilice traducciones canónicas:**"
 
 #: ../../contributor/translation/glossary.rst:92
 msgid "Follow the master glossary for consistency."
-msgstr ""
+msgstr "Siga el glosario maestro para mantener la coherencia."
 
 #: ../../contributor/translation/glossary.rst:94
 msgid "**2. Context matters:**"
-msgstr ""
+msgstr "**2. El contexto importa:**"
 
 #: ../../contributor/translation/glossary.rst:96
 msgid "**Contrato** = \"Contract\" (legal), \"Project\" (colloquial)"
-msgstr ""
+msgstr "**Contrato** = \"Contrato\" (legal), \"Proyecto\" (coloquial)"
 
 #: ../../contributor/translation/glossary.rst:97
-msgid ""
-"**Estimación** = \"Estimate\" (technical), \"Progress Payment\" "
-"(financial)"
-msgstr ""
+msgid "**Estimación** = \"Estimate\" (technical), \"Progress Payment\" (financial)"
+msgstr "**Estimación** = \"Estimación\" (técnica), \"Progreso de pago\" (financiero)"
 
 #: ../../contributor/translation/glossary.rst:99
 msgid "**3. Preserve Spanish in code:**"
-msgstr ""
+msgstr "**3. Preservar el español en código:**"
 
 #: ../../contributor/translation/glossary.rst:101
 msgid ""
-"Don't rename model fields - keep Spanish names, translate in "
-"documentation."
+"Don't rename model fields - keep Spanish names, translate in documentation."
 msgstr ""
+"No cambie el nombre de los campos del modelo: mantenga los nombres en "
+"español, tradúzcalos en la documentación."
 
 #: ../../contributor/translation/glossary.rst:103
 msgid "**4. First use pattern:**"
-msgstr ""
+msgstr "**4. Patrón de primer uso:**"
 
 #: ../../contributor/translation/glossary.rst:109
 msgid "**5. Model references:**"
-msgstr ""
+msgstr "**5. Referencias de modelo:**"
 
 #: ../../contributor/translation/glossary.rst:111
 msgid "Always reference the model when introducing terms:"
-msgstr ""
+msgstr "Siempre haga referencia al modelo al introducir términos:"
 
 #: ../../contributor/translation/glossary.rst:118
 msgid "Contributing Translations"
-msgstr ""
+msgstr "Contribuyendo con traducciones"
 
 #: ../../contributor/translation/glossary.rst:120
 msgid "**Add new terms:**"
-msgstr ""
+msgstr "**Agregar nuevos términos:**"
 
 #: ../../contributor/translation/glossary.rst:122
 msgid "Add to :doc:`/_glossary/domain-terms`"
-msgstr ""
+msgstr "Agregar a :doc:`/_glossary/domain-terms`"
 
 #: ../../contributor/translation/glossary.rst:123
 msgid ""
-"Include: Spanish term, English translation, description, model reference,"
-" examples"
+"Include: Spanish term, English translation, description, model reference, "
+"examples"
 msgstr ""
+"Incluye: término en español, traducción al inglés, descripción, referencia "
+"del modelo, ejemplos."
 
 #: ../../contributor/translation/glossary.rst:124
 msgid "Alphabetize within category"
-msgstr ""
+msgstr "Alfabetizar dentro de la categoría"
 
 #: ../../contributor/translation/glossary.rst:125
 #: ../../contributor/translation/glossary.rst:132
 msgid "Submit pull request"
-msgstr ""
+msgstr "Enviar solicitud de extracción"
 
 #: ../../contributor/translation/glossary.rst:127
 msgid "**Update existing terms:**"
-msgstr ""
+msgstr "**Actualizar términos existentes:**"
 
 #: ../../contributor/translation/glossary.rst:129
 msgid "Discuss in GitHub issue first"
-msgstr ""
+msgstr "Discutir primero el problema en GitHub"
 
 #: ../../contributor/translation/glossary.rst:130
 msgid "Update master glossary"
-msgstr ""
+msgstr "Actualizar glosario maestro"
 
 #: ../../contributor/translation/glossary.rst:131
 msgid "Update all affected documentation"
-msgstr ""
+msgstr "Actualizar toda la documentación afectada"
 
 #: ../../contributor/translation/glossary.rst:135
 msgid "Django Translation"
-msgstr ""
+msgstr "Traductor de Django"
 
 #: ../../contributor/translation/glossary.rst:137
 msgid "**For UI strings:**"
-msgstr ""
+msgstr "**Para cadenas de interfaz de usuario:**"
 
 #: ../../contributor/translation/glossary.rst:151
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../contributor/translation/glossary.rst:153
 msgid ":doc:`/_glossary/domain-terms` - Complete 100+ term glossary"
@@ -342,4 +349,3 @@ msgstr ""
 #: ../../contributor/translation/glossary.rst:155
 msgid ":doc:`/developer/architecture/multi-tenancy` - Architecture context"
 msgstr ""
-

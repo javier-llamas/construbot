@@ -11,90 +11,90 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../contributor/testing/index.rst:3
 msgid "Testing"
-msgstr ""
+msgstr "Pruebas"
 
 #: ../../contributor/testing/index.rst:5
 msgid "Testing guide for Construbot contributors."
-msgstr ""
+msgstr "Guía de pruebas para colaboradores de Construbot."
 
 #: ../../contributor/testing/index.rst:8
 msgid "Running Tests"
-msgstr ""
+msgstr "Ejecución de pruebas"
 
 #: ../../contributor/testing/index.rst:10
 msgid "**Full test suite:**"
-msgstr ""
+msgstr "**Suite de pruebas completa:**"
 
 #: ../../contributor/testing/index.rst:16
 msgid "**Specific tests:**"
-msgstr ""
+msgstr "**Pruebas específicas:**"
 
 #: ../../contributor/testing/index.rst:29
 msgid "**With coverage:**"
-msgstr ""
+msgstr "**Con cobertura:**"
 
 #: ../../contributor/testing/index.rst:37
 msgid "Writing Tests"
-msgstr ""
+msgstr "Pruebas de escritura"
 
 #: ../../contributor/testing/index.rst:39
 msgid "**Test structure:**"
-msgstr ""
+msgstr "**Estructura de prueba:**"
 
 #: ../../contributor/testing/index.rst:57
 msgid "**Use factories:**"
-msgstr ""
+msgstr "**Usar fábricas:**"
 
 #: ../../contributor/testing/index.rst:66
 msgid "Best Practices"
-msgstr ""
+msgstr "Mejores prácticas"
 
 #: ../../contributor/testing/index.rst:68
 msgid "✅ Test one thing per test"
-msgstr ""
+msgstr "✅ Pruebe una cosa por prueba"
 
 #: ../../contributor/testing/index.rst:70
 msgid "✅ Use descriptive test names"
-msgstr ""
+msgstr "✅ Utilice nombres de prueba descriptivos"
 
 #: ../../contributor/testing/index.rst:72
 msgid "✅ Isolate tests (don't depend on other tests)"
-msgstr ""
+msgstr "✅ Pruebas de aislamiento (no depender de otras pruebas)"
 
 #: ../../contributor/testing/index.rst:74
 msgid "✅ Use fixtures for common setup"
-msgstr ""
+msgstr "✅ Utilice accesorios para una configuración común"
 
 #: ../../contributor/testing/index.rst:76
 msgid "✅ Tag work-in-progress tests with ``@tag('current')``"
-msgstr ""
+msgstr "✅ Etiquete las pruebas de trabajo en progreso con ``@tag('current')``"
 
 #: ../../contributor/testing/index.rst:79
 msgid "Test Coverage"
-msgstr ""
+msgstr "Cobertura de prueba"
 
 #: ../../contributor/testing/index.rst:81
 #, python-format
 msgid "**Target:** >80% coverage"
-msgstr ""
+msgstr "**Objetivo:** >80% de cobertura"
 
 #: ../../contributor/testing/index.rst:83
 msgid "**Check coverage:**"
-msgstr ""
+msgstr "**Consulta cobertura:**"
 
 #: ../../contributor/testing/index.rst:91
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../contributor/testing/index.rst:93
 msgid ":doc:`../getting-started` - Development setup"
@@ -103,4 +103,3 @@ msgstr ""
 #: ../../contributor/testing/index.rst:94
 msgid ":doc:`/developer/installation/index` - Installation guide"
 msgstr ""
-

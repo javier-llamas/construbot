@@ -11,165 +11,193 @@ msgstr ""
 "POT-Creation-Date: 2025-12-29 15:30-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: es\n"
 "Language-Team: es <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../reference/glossary.rst:3
 msgid "Glossary"
-msgstr ""
+msgstr "Glosario"
 
 #: ../../reference/glossary.rst:5
 msgid "Quick reference for Spanish→English terminology."
-msgstr ""
+msgstr "Referencia rápida para terminología español→inglés."
 
 #: ../../reference/glossary.rst:8
 msgid ""
 "**Complete Glossary:** See :doc:`/_glossary/domain-terms` for the "
 "comprehensive glossary with 100+ terms, descriptions, and examples."
 msgstr ""
+"**Glosario completo:** Consulte :doc:`/_glossary/domain-terms` para obtener "
+"un glosario completo con más de 100 términos, descripciones y ejemplos."
 
 #: ../../reference/glossary.rst:11
 msgid "Common Terms"
-msgstr ""
+msgstr "Términos comunes"
 
 #: ../../reference/glossary.rst:14
 msgid "Contrato"
-msgstr ""
+msgstr "contrato"
 
 #: ../../reference/glossary.rst:16
 msgid ""
 "Contract or Project - Main business entity representing a construction "
 "contract. See ``construbot.proyectos.models.Contrato``"
 msgstr ""
+"Contrato o Proyecto: entidad comercial principal que representa un contrato "
+"de construcción. Ver ``construbot.proyectos.models.Contrato``"
 
 #: ../../reference/glossary.rst:18
 msgid "Contraparte"
-msgstr ""
+msgstr "Contraparte"
 
 #: ../../reference/glossary.rst:20
 msgid ""
 "Counterparty or Business Partner - Client, subcontractor, or piecework "
 "contractor. See ``construbot.proyectos.models.Contraparte``"
 msgstr ""
+"Contraparte o Socio Comercial - Cliente, subcontratista o contratista a "
+"destajo. Ver ``construbot.proyectos.models.Contraparte``"
 
 #: ../../reference/glossary.rst:22
 msgid "Estimación"
-msgstr ""
+msgstr "estimación"
 
 #: ../../reference/glossary.rst:24
 msgid ""
 "Estimate or Progress Payment - Payment request for completed work. See "
 "``construbot.proyectos.models.Estimate``"
 msgstr ""
+"Pago Estimado o Progreso - Solicitud de pago por trabajo completado. Ver "
+"``construbot.proyectos.modelos.Estimación``"
 
 #: ../../reference/glossary.rst:26
 msgid "Concepto"
-msgstr ""
+msgstr "concepto"
 
 #: ../../reference/glossary.rst:28
 msgid ""
 "Concept or Line Item - Individual work item in contract catalog. See "
 "``construbot.proyectos.models.Concept``"
 msgstr ""
+"Concepto o elemento de línea: elemento de trabajo individual en el catálogo "
+"de contratos. Ver ``construbot.proyectos.modelos.Concept``"
 
 #: ../../reference/glossary.rst:30
 msgid "Retención"
-msgstr ""
+msgstr "Retención"
 
 #: ../../reference/glossary.rst:32
 msgid ""
 "Retention or Withholding - Financial withholding from payments. See "
 "``construbot.proyectos.models.Retenciones``"
 msgstr ""
+"Retención o Retención - Retención financiera sobre pagos. Ver "
+"``construbot.proyectos.models.Retenciones``"
 
 #: ../../reference/glossary.rst:34
 msgid "Sitio"
-msgstr ""
+msgstr "Sitio"
 
 #: ../../reference/glossary.rst:36
 msgid ""
-"Site or Construction Site - Physical location where work is performed. "
-"See ``proyectos.models.Sitio``"
+"Site or Construction Site - Physical location where work is performed. See "
+"``proyectos.models.Sitio``"
 msgstr ""
+"Sitio o Sitio de Construcción: Lugar físico donde se realiza el trabajo. Ver"
+" ``proyectos.models.Sitio``"
 
 #: ../../reference/glossary.rst:38
 msgid "Destinatario"
-msgstr ""
+msgstr "Destinotario"
 
 #: ../../reference/glossary.rst:40
 msgid ""
 "Recipient or Contact - Person receiving documents or communications. See "
 "``construbot.proyectos.models.Destinatario``"
 msgstr ""
+"Destinatario o Contacto - Persona que recibe documentos o comunicaciones. "
+"Ver ``construbot.proyectos.models.Destinatario``"
 
 #: ../../reference/glossary.rst:42
 msgid "Cliente"
-msgstr ""
+msgstr "cliente"
 
 #: ../../reference/glossary.rst:44
 msgid ""
 "Client - Type of Contraparte who hires the company. Choice value in "
 "``Contraparte.tipo``"
 msgstr ""
+"Cliente - Tipo de Contraparte que contrata la empresa. Valor de elección en "
+"``Contraparte.tipo``"
 
 #: ../../reference/glossary.rst:46
 msgid "Destajista"
-msgstr ""
+msgstr "destajista"
 
 #: ../../reference/glossary.rst:48
 msgid ""
-"Piecework Contractor - Type of Contraparte paid by completed work. Choice"
-" value in ``Contraparte.tipo``"
+"Piecework Contractor - Type of Contraparte paid by completed work. Choice "
+"value in ``Contraparte.tipo``"
 msgstr ""
+"Contratista a destajo - Tipo de Contraparte pagada por obra terminada. Valor"
+" de elección en ``Contraparte.tipo``"
 
 #: ../../reference/glossary.rst:50
 msgid "Subcontratista"
-msgstr ""
+msgstr "Subcontratista"
 
 #: ../../reference/glossary.rst:52
 msgid ""
 "Subcontractor - Type of Contraparte performing specialized work. Choice "
 "value in ``Contraparte.tipo``"
 msgstr ""
+"Subcontratista - Tipo de Contraparte que realiza trabajos especializados. "
+"Valor de elección en ``Contraparte.tipo``"
 
 #: ../../reference/glossary.rst:54
 msgid "folio"
-msgstr ""
+msgstr "fol"
 
 #: ../../reference/glossary.rst:56
 msgid ""
-"Reference Number - Unique identifier for contracts within a company. "
-"Field in ``Contrato`` model"
+"Reference Number - Unique identifier for contracts within a company. Field "
+"in ``Contrato`` model"
 msgstr ""
+"Número de referencia: identificador único para contratos dentro de una "
+"empresa. Campo en modelo ``Contrato``"
 
 #: ../../reference/glossary.rst:58
 msgid "monto"
-msgstr ""
+msgstr "monto"
 
 #: ../../reference/glossary.rst:60
 msgid ""
-"Amount - Financial amount for contracts or estimates. Field in "
-"``Contrato`` and ``Estimate`` models"
+"Amount - Financial amount for contracts or estimates. Field in ``Contrato`` "
+"and ``Estimate`` models"
 msgstr ""
+"Importe: importe financiero para contratos o presupuestos. Campo en modelos "
+"``Contrato`` y ``Estimate``"
 
 #: ../../reference/glossary.rst:62
 msgid "anticipo"
-msgstr ""
+msgstr "anticipo"
 
 #: ../../reference/glossary.rst:64
 msgid ""
-"Advance Payment or Down Payment - Upfront payment before work begins. "
-"Field in ``Contrato`` model"
+"Advance Payment or Down Payment - Upfront payment before work begins. Field "
+"in ``Contrato`` model"
 msgstr ""
+"Pago por adelantado o pago inicial: pago por adelantado antes de que "
+"comience el trabajo. Campo en modelo ``Contrato``"
 
 #: ../../reference/glossary.rst:68
 msgid "See Also"
-msgstr ""
+msgstr "Ver también"
 
 #: ../../reference/glossary.rst:70
 msgid ":doc:`/_glossary/domain-terms` - Complete glossary"
@@ -182,4 +210,3 @@ msgstr ""
 #: ../../reference/glossary.rst:72
 msgid ":doc:`/contributor/translation/glossary` - Translation guide"
 msgstr ""
-
