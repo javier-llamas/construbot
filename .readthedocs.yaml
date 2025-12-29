@@ -11,7 +11,7 @@ build:
   jobs:
     post_build:
       # Generate translation files for Spanish
-      - cd docs && make gettext && sphinx-intl update -p _build/gettext -l es
+      - cd docs && mkdir -p _build/gettext && make gettext && sphinx-intl update -p _build/gettext -l es
 
 # Sphinx configuration
 sphinx:
