@@ -4,10 +4,6 @@ Configuration
 
 Complete guide to configuring Construbot using environment variables and settings files.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

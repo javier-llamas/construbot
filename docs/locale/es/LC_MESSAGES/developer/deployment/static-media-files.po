@@ -1,0 +1,515 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/deployment/static-media-files.rst:3
+msgid "Static & Media Files"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:5
+msgid ""
+"Configuration for serving static files and user-uploaded media in "
+"production."
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:14
+msgid "Construbot handles two types of files:"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:16
+msgid "**Static files** - CSS, JavaScript, images (part of application code)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:17
+msgid "**Media files** - User uploads (PDFs, images, documents)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:19
+msgid ""
+"In production, these should be served differently than in development for"
+" performance and scalability."
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:22
+msgid "Static Files Strategy"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:25
+msgid "WhiteNoise (Recommended for Small Deployments)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:27
+msgid "**What is WhiteNoise:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:29
+msgid "Serves static files directly from Django"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:30
+msgid "No separate web server configuration needed"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:31
+msgid "Gzip compression built-in"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:32
+msgid "CDN-friendly with far-future cache headers"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:34
+#: ../../developer/deployment/static-media-files.rst:199
+msgid "**Already configured** in ``construbot.config.settings.production``:"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:46
+msgid "**Collect static files:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:52
+msgid "**Verify:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:59
+#: ../../developer/deployment/static-media-files.rst:93
+#: ../../developer/deployment/static-media-files.rst:341
+msgid "**Benefits:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:61
+msgid "Simple setup"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:62
+msgid "No CDN required"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:63
+msgid "Efficient for <10,000 users"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:64
+msgid "Compression and caching built-in"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:67
+msgid "CDN (CloudFront/CloudFlare)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:69
+msgid "For higher traffic, serve static files through a CDN:"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:71
+msgid "**AWS CloudFront setup:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:86
+msgid "**Update settings:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:95
+msgid "Global distribution"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:96
+msgid "Lower latency"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:97
+msgid "Offload traffic from application servers"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:98
+msgid "Reduced bandwidth costs"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:101
+msgid "Media Files Strategy"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:104
+msgid "Amazon S3 (Recommended)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:106
+msgid "**Why S3:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:108
+msgid "Unlimited scalable storage"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:109
+msgid "High availability (99.99%)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:110
+msgid "Integrated with Django via django-storages"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:111
+msgid "Can use CloudFront CDN"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:112
+msgid "Automatic backups with versioning"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:114
+msgid "**Setup S3 bucket:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:137
+msgid "**cors.json:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:152
+msgid "**Create IAM user:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:185
+msgid "**Configure Django:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:216
+#: ../../developer/deployment/static-media-files.rst:675
+msgid "**Test upload:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:236
+msgid "DigitalOcean Spaces"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:238
+msgid "**Alternative to S3:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:250
+msgid "**Cheaper than S3** for high bandwidth usage."
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:253
+msgid "Local Storage (Small Deployments)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:255
+msgid "For small deployments without cloud storage:"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:262
+msgid "**Configure Nginx** to serve media files:"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:272
+msgid "**Mount media volume** in docker-compose.yml:"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:284
+msgid "**Backup strategy required** - rsync to remote server or S3."
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:287
+msgid "Static Files Configuration"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:290
+#: ../../developer/deployment/static-media-files.rst:376
+msgid "Settings Reference"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:292
+#: ../../developer/deployment/static-media-files.rst:378
+msgid "**base.py:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:303
+msgid "**production.py:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:314
+msgid "Collecting Static Files"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:316
+msgid "**During deployment:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:322
+msgid "**What happens:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:324
+msgid "Gathers all static files from apps and STATICFILES_DIRS"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:325
+msgid "Processes them (minification, hashing)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:326
+msgid "Copies to STATIC_ROOT (``staticfiles/``)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:327
+msgid "Creates ``staticfiles.json`` manifest"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:329
+msgid "**Manifest system:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:343
+msgid "Cache busting (unique filenames)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:344
+msgid "Far-future cache headers"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:345
+msgid "Automatic compression (gzip/brotli)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:348
+msgid "Custom Static Files"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:350
+msgid "**Add custom CSS/JS:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:358
+msgid "**In templates:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:366
+msgid "**Recollect after changes:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:373
+msgid "Media Files Configuration"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:386
+msgid "**production.py with S3:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:396
+msgid "File Upload Handling"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:398
+msgid "**In models (example):**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:408
+msgid "**Upload to S3:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:416
+msgid "**File URL:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:425
+msgid "Signed URLs (Private Files)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:427
+msgid "**For secure file access:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:436
+msgid "**Configure S3 settings:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:446
+msgid "Optimization"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:449
+msgid "Image Optimization"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:451
+msgid "**Install Pillow (already included):**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:478
+msgid "Compression"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:480
+msgid "**Static files** (WhiteNoise handles automatically):"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:482
+msgid "Gzip compression"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:483
+msgid "Brotli compression (if installed)"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:485
+msgid "**Manual compression:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:496
+msgid "Caching"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:498
+msgid "**Static files caching:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:508
+msgid "**Media files caching:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:519
+msgid "CDN Setup"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:522
+msgid "CloudFront for S3"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:524
+msgid "**Create distribution:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:545
+msgid "**Update Django settings:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:553
+msgid "CloudFlare"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:555
+msgid "**Setup:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:557
+msgid "Add domain to CloudFlare"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:558
+msgid "Update nameservers"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:559
+msgid "Enable caching for static/media paths"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:560
+msgid "Configure page rules"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:562
+msgid "**Page rule for static files:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:571
+msgid "Backup and Recovery"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:574
+msgid "S3 Versioning"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:593
+msgid "S3 Lifecycle Policies"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:595
+msgid "**Delete old files automatically:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:628
+msgid "Local Backup"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:630
+msgid "**Sync S3 to local:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:641
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:644
+msgid "Static Files Not Loading"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:660
+msgid "File Upload Failing"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:662
+msgid "**Check S3 permissions:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:685
+msgid "CORS Errors"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:687
+msgid "**Update S3 CORS:**"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:695
+msgid "**Allow your domain** in cors.json AllowedOrigins."
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:698
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:700
+msgid ":doc:`production-checklist` - Deployment checklist"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:701
+msgid ":doc:`aws-ec2` - AWS deployment guide"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:702
+msgid ":doc:`environment-variables` - Environment configuration"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:703
+msgid "`django-storages documentation <https://django-storages.readthedocs.io/>`_"
+msgstr ""
+
+#: ../../developer/deployment/static-media-files.rst:704
+msgid "`WhiteNoise documentation <http://whitenoise.evans.io/>`_"
+msgstr ""
+

@@ -4,10 +4,6 @@ Static & Media Files
 
 Configuration for serving static files and user-uploaded media in production.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

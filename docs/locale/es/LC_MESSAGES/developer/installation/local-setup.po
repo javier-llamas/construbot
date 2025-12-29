@@ -1,0 +1,627 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/installation/local-setup.rst:3
+msgid "Local Setup"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:5
+msgid ""
+"Guide for setting up Construbot in a local development environment "
+"without Docker."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:12
+msgid ""
+"**Consider Docker:** Docker setup is recommended for most developers. Use"
+" local setup if you prefer traditional Python development or need to "
+"integrate with other local services."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:15
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:17
+msgid "Local development requires installing and configuring:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:19
+msgid "Python 3.9.17+"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:20
+msgid "PostgreSQL 12+"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:21
+msgid "Redis 6+"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:22
+msgid "Python dependencies"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:24
+msgid ""
+"You'll create a virtual environment and run services directly on your "
+"machine."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:27
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:30
+msgid "System Requirements"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:32
+msgid "**Python 3.9.17 or higher:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:40
+#: ../../developer/installation/local-setup.rst:61
+#: ../../developer/installation/local-setup.rst:82
+msgid "**Installation:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:54
+msgid "**PostgreSQL 12+:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:75
+msgid "**Redis 6+:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:98
+msgid "Development Tools"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:100
+msgid "**Git:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:106
+msgid "**pip and virtualenv:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:115
+msgid "Installation Steps"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:118
+msgid "Step 1: Clone Repository"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:126
+msgid "Step 2: Create Virtual Environment"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:140
+msgid "Your prompt should change to show ``(venv)``:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:147
+msgid ""
+"**Remember to activate:** You must activate the virtual environment every"
+" time you work on the project. Add ``source venv/bin/activate`` to your "
+"shell profile for automatic activation."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:150
+msgid "Step 3: Install Python Dependencies"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:160
+msgid "This installs:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:162
+msgid "Django 3.2.19 and all extensions"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:163
+msgid "Development tools (pytest, coverage, django-debug-toolbar)"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:164
+msgid "Database drivers (psycopg2)"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:165
+msgid "All project dependencies"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:167
+#: ../../developer/installation/local-setup.rst:281
+#: ../../developer/installation/local-setup.rst:340
+msgid "**Expected output:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:176
+msgid "**Verify installation:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:184
+msgid "Step 4: Configure Database"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:186
+msgid "**Create PostgreSQL database:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:197
+msgid "**In PostgreSQL console:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:213
+msgid "**Verify connection:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:220
+msgid "If successful, you'll see the PostgreSQL prompt. Type ``\\\\q`` to exit."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:223
+msgid "Step 5: Configure Environment Variables"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:225
+msgid "**Create .env file:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:235
+msgid "**Required settings for local development:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:258
+msgid "**Generate SECRET_KEY:** Use Django's secret key generator:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:264
+msgid "**Alternative: Use environment exports (temporary):**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:272
+msgid "These are lost when you close the terminal."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:275
+msgid "Step 6: Run Database Migrations"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:293
+msgid "**Verify tables were created:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:299
+msgid "You should see a list of Django tables."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:302
+msgid "Step 7: Create Superuser"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:308
+msgid "**Prompts:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:318
+msgid ""
+"**Email as username:** Construbot uses email for authentication, not "
+"traditional usernames."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:321
+msgid "Step 8: Collect Static Files"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:327
+msgid ""
+"This copies static files (CSS, JavaScript, images) to the "
+"``staticfiles/`` directory."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:330
+msgid "Step 9: Run Development Server"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:353
+msgid "**Access the application:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:355
+msgid ""
+"Open http://localhost:8000 in your browser and log in with your superuser"
+" credentials."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:358
+msgid "Development Workflow"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:361
+msgid "Daily Startup"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:382
+msgid "Database Migrations"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:384
+msgid "**After modifying models:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:394
+msgid "**Check migration status:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:401
+msgid "Django Shell"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:414
+msgid "Management Commands"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:416
+msgid "**Populate test data:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:422
+msgid "**Create another superuser:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:428
+msgid "**Run custom commands:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:435
+msgid "Static Files"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:437
+msgid "**During development:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:439
+msgid ""
+"Django serves static files automatically with ``DEBUG=True``. No action "
+"needed."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:441
+msgid "**After adding/modifying static files:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:448
+msgid "Testing"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:451
+msgid "Running Tests"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:467
+msgid "**View coverage report:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:474
+msgid "Test Configuration"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:476
+msgid "Local tests use ``construbot.config.settings.test`` which:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:478
+msgid "Uses in-memory SQLite database"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:479
+msgid "Disables migrations for speed"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:480
+msgid "Sets test-specific configurations"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:482
+msgid "See :doc:`/contributor/testing/running-tests` for details."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:485
+msgid "Running Celery"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:487
+msgid "For background task processing:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:489
+msgid "**Start Celery worker:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:496
+msgid "**Monitor tasks:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:504
+msgid "Access Flower at http://localhost:5555"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:507
+msgid "Database Management"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:510
+msgid "Backup Database"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:518
+msgid "Restore Database"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:532
+msgid "Reset Database"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:548
+msgid "Access Database Console"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:559
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:562
+msgid "Virtual Environment Issues"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:564
+msgid "**Error:** \"No module named 'django'\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:566
+msgid "**Cause:** Virtual environment not activated"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:568
+msgid "**Solution:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:575
+msgid "**Error:** \"Command 'python' not found\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:577
+msgid "**Solution:** Use ``python3`` instead of ``python``"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:580
+msgid "Database Connection Errors"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:582
+msgid "**Error:** \"could not connect to server\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:584
+msgid "**Solution 1:** Check PostgreSQL is running"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:594
+msgid "**Solution 2:** Verify DATABASE_URL in .env"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:601
+msgid "**Solution 3:** Check PostgreSQL is accepting connections"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:607
+msgid "If this fails, check ``pg_hba.conf`` configuration."
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:610
+msgid "Redis Connection Errors"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:612
+msgid "**Error:** \"Error 111 connecting to localhost:6379\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:614
+msgid "**Solution:** Start Redis"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:629
+msgid "Permission Errors"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:631
+msgid "**Error:** \"permission denied to create database\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:633
+msgid "**Solution:** Grant privileges to PostgreSQL user"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:642
+msgid "Migration Errors"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:644
+msgid "**Error:** \"No migrations to apply\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:646
+msgid "**Cause:** Migrations already applied"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:648
+msgid "**Verify:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:654
+msgid "**Error:** \"Migration is applied before its dependency\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:656
+msgid "**Solution:** Reset migrations (WARNING: destroys data)"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:664
+msgid "Port Already in Use"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:666
+msgid "**Error:** \"That port is already in use\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:668
+msgid "**Solution:** Find and kill process"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:679
+msgid "Development Tips"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:682
+msgid "Auto-reload Not Working"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:684
+msgid "Django's auto-reload should restart on code changes. If not:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:695
+msgid "IDE Integration"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:697
+msgid "**PyCharm:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:699
+msgid "File → Settings → Project → Python Interpreter"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:700
+msgid "Add Interpreter → Existing environment"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:701
+msgid "Select ``venv/bin/python``"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:703
+msgid "**VS Code:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:705
+msgid "Cmd+Shift+P → \"Python: Select Interpreter\""
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:706
+msgid "Choose ``./venv/bin/python``"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:708
+msgid "**.vscode/settings.json:**"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:720
+msgid "Shell Aliases"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:722
+msgid "Add to ``~/.bashrc`` or ``~/.zshrc``:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:732
+msgid "Then use:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:741
+msgid "Upgrading Dependencies"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:744
+msgid "Update Requirements Files"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:758
+msgid "Manual Upgrade"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:773
+msgid "After Upgrade"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:787
+msgid "Next Steps"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:789
+msgid "After successful installation:"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:791
+msgid "**Populate test data:** ``python manage.py poblar``"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:792
+msgid "**Explore the codebase:** :doc:`../architecture/overview`"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:793
+msgid "**Read API docs:** :doc:`../api/index`"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:794
+msgid "**Check development workflow:** :doc:`/contributor/development-setup`"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:797
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:799
+msgid ":doc:`docker-setup` - Docker development setup (alternative)"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:800
+msgid ":doc:`requirements` - Understanding dependencies"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:801
+msgid ":doc:`configuration` - Environment variable reference"
+msgstr ""
+
+#: ../../developer/installation/local-setup.rst:802
+msgid ":doc:`/contributor/testing/running-tests` - Testing guide"
+msgstr ""
+

@@ -4,10 +4,6 @@ Requirements
 
 Understanding Construbot's Python dependencies and how to manage them.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

@@ -1,0 +1,452 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../user-guide/introduction.rst:3
+msgid "Introduction"
+msgstr "Introducción"
+
+#: ../../user-guide/introduction.rst:6
+msgid "What is Construbot?"
+msgstr "¿Qué es Construbot?"
+
+#: ../../user-guide/introduction.rst:8
+msgid ""
+"Construbot is a comprehensive operational management platform designed "
+"specifically for construction companies. It provides tools to manage the "
+"complete lifecycle of construction projects, from initial contract setup "
+"through final payment."
+msgstr ""
+"Construbot es una plataforma integral de gestión operativa diseñada "
+"específicamente para empresas constructoras. Proporciona herramientas para gestionar el "
+"ciclo de vida completo de proyectos de construcción, desde la configuración inicial del contrato "
+"hasta el pago final."
+
+#: ../../user-guide/introduction.rst:12
+msgid "**Key Capabilities:**"
+msgstr "**Capacidades Clave:**"
+
+#: ../../user-guide/introduction.rst:14
+msgid "Contract and project management with hierarchical structure"
+msgstr "Gestión de contratos y proyectos con estructura jerárquica"
+
+#: ../../user-guide/introduction.rst:15
+msgid "Progress billing and estimate tracking"
+msgstr "Facturación de avance y seguimiento de estimaciones"
+
+#: ../../user-guide/introduction.rst:16
+msgid "Financial calculations (retentions, advances, amortization)"
+msgstr "Cálculos financieros (retenciones, anticipos, amortización)"
+
+#: ../../user-guide/introduction.rst:17
+msgid "Multi-company and multi-user support"
+msgstr "Soporte multi-empresa y multi-usuario"
+
+#: ../../user-guide/introduction.rst:18
+msgid "Document generation and PDF exports"
+msgstr "Generación de documentos y exportación a PDF"
+
+#: ../../user-guide/introduction.rst:19
+msgid "Excel import for catalogs"
+msgstr "Importación de catálogos desde Excel"
+
+#: ../../user-guide/introduction.rst:22
+msgid "Core Philosophy"
+msgstr "Filosofía Central"
+
+#: ../../user-guide/introduction.rst:24
+msgid "Construbot is built around construction industry best practices:"
+msgstr "Construbot está construido en torno a las mejores prácticas de la industria de la construcción:"
+
+#: ../../user-guide/introduction.rst:27
+msgid "**Project-Centric**"
+msgstr "**Centrado en Proyectos**"
+
+#: ../../user-guide/introduction.rst:27
+msgid ""
+"Everything revolves around Contracts (Contratos) - your construction "
+"projects."
+msgstr ""
+"Todo gira en torno a Contratos - sus "
+"proyectos de construcción."
+
+#: ../../user-guide/introduction.rst:30
+msgid "**Financial Transparency**"
+msgstr "**Transparencia Financiera**"
+
+#: ../../user-guide/introduction.rst:30
+msgid "Clear tracking of amounts, payments, retentions, and advances."
+msgstr "Seguimiento claro de montos, pagos, retenciones y anticipos."
+
+#: ../../user-guide/introduction.rst:33
+msgid "**Hierarchical Organization**"
+msgstr "**Organización Jerárquica**"
+
+#: ../../user-guide/introduction.rst:33
+msgid ""
+"Support for main contracts with sub-contracts (destajistas, "
+"subcontratistas)."
+msgstr ""
+"Soporte para contratos principales con subcontratos (destajistas, "
+"subcontratistas)."
+
+#: ../../user-guide/introduction.rst:36
+msgid "**Multi-Tenant**"
+msgstr "**Multi-Tenencia**"
+
+#: ../../user-guide/introduction.rst:36
+msgid "Work across multiple companies under a single customer account."
+msgstr "Trabaje con múltiples empresas bajo una sola cuenta de cliente."
+
+#: ../../user-guide/introduction.rst:39
+msgid "Who Uses Construbot?"
+msgstr "¿Quién Usa Construbot?"
+
+#: ../../user-guide/introduction.rst:42
+msgid "Construction Companies"
+msgstr "Empresas Constructoras"
+
+#: ../../user-guide/introduction.rst:44
+msgid "General contractors, builders, and construction firms who need to:"
+msgstr "Contratistas generales, constructores y empresas constructoras que necesitan:"
+
+#: ../../user-guide/introduction.rst:46
+msgid "Manage multiple simultaneous projects"
+msgstr "Gestionar múltiples proyectos simultáneos"
+
+#: ../../user-guide/introduction.rst:47
+msgid "Track progress payments and estimates"
+msgstr "Dar seguimiento a pagos de avance y estimaciones"
+
+#: ../../user-guide/introduction.rst:48
+msgid "Handle subcontractor relationships"
+msgstr "Manejar relaciones con subcontratistas"
+
+#: ../../user-guide/introduction.rst:49
+msgid "Generate professional documentation"
+msgstr "Generar documentación profesional"
+
+#: ../../user-guide/introduction.rst:52
+msgid "Project Teams"
+msgstr "Equipos de Proyecto"
+
+#: ../../user-guide/introduction.rst:54
+msgid "**Directors**: Oversee multiple projects and financial summaries"
+msgstr "**Directores**: Supervisan múltiples proyectos y resúmenes financieros"
+
+#: ../../user-guide/introduction.rst:55
+msgid "**Project Managers**: Manage day-to-day contract execution"
+msgstr "**Gerentes de Proyecto**: Gestionan la ejecución diaria de contratos"
+
+#: ../../user-guide/introduction.rst:56
+msgid "**Site Supervisors**: Track work progress and create estimates"
+msgstr "**Supervisores de Obra**: Dan seguimiento al avance de trabajo y crean estimaciones"
+
+#: ../../user-guide/introduction.rst:57
+msgid "**Coordinators**: Handle document preparation and administration"
+msgstr "**Coordinadores**: Manejan la preparación y administración de documentos"
+
+#: ../../user-guide/introduction.rst:58
+msgid "**Accounting Staff**: Process payments and invoicing"
+msgstr "**Personal de Contabilidad**: Procesan pagos y facturación"
+
+#: ../../user-guide/introduction.rst:61
+msgid "Key Features Overview"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:64
+msgid "Contract Management"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:66
+msgid "Create and manage construction contracts (Contratos) with:"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:68
+msgid "Hierarchical structure (parent/child contracts)"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:69
+msgid "Associated business partners (Contrapartes)"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:70
+msgid "Construction sites (Sitios) and contacts (Destinatarios)"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:71
+msgid "Work item catalogs (Conceptos)"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:73
+msgid "**Learn more:** :doc:`concepts/projects-contracts`"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:76
+msgid "Progress Estimates"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:78
+msgid "Track work completion with periodic estimates (Estimaciones):"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:80
+msgid "Document work quantities for each concept"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:81
+msgid "Calculate accumulated totals"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:82
+msgid "Apply retentions and advance amortization"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:83
+msgid "Mark estimates as invoiced and paid"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:85
+msgid "**Learn more:** :doc:`concepts/estimates`"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:88
+msgid "Financial Tracking"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:90
+msgid "Automated calculations for:"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:92
+msgid "**Advance Payments** (Anticipos) - Initial down payments"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:93
+msgid "**Retentions** (Retenciones) - Withholdings (percentage or fixed amount)"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:94
+msgid "**Amortization** - Recovery of advance payments over time"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:95
+msgid "**Accumulated Totals** - Running totals across all estimates"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:97
+msgid "**Learn more:** :doc:`workflows/managing-estimates`"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:100
+msgid "Multi-Company Support"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:102
+msgid "Work across multiple business entities:"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:104
+msgid "Single login for multiple companies"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:105
+msgid "Easy company switching"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:106
+msgid "Data isolation between companies"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:107
+msgid "Role-based access control"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:109
+msgid "**Learn more:** :doc:`features/multi-company`"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:112
+msgid "Document Generation"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:114
+msgid "Generate professional PDFs:"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:116
+msgid "Contract estimates for client approval"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:117
+msgid "Progress payment documentation"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:118
+msgid "Hierarchical reports for sub-contracts"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:119
+msgid "Custom branding and formatting"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:121
+msgid "**Learn more:** :doc:`workflows/document-generation`"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:124
+msgid "System Architecture"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:127
+msgid "Understanding the Hierarchy"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:129
+msgid "Construbot uses a three-level organizational structure:"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:138
+msgid "**Customer** (Cliente Sistema)"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:138
+msgid "Your top-level account. One customer can have multiple companies."
+msgstr ""
+
+#: ../../user-guide/introduction.rst:141
+msgid "**Company** (Empresa)"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:141
+msgid "A business entity. Users can belong to multiple companies."
+msgstr ""
+
+#: ../../user-guide/introduction.rst:144
+msgid "**User** (Usuario)"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:144
+msgid "Individual with email login and permission levels (1-6)."
+msgstr ""
+
+#: ../../user-guide/introduction.rst:147
+msgid "Permission Levels"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:149
+msgid "Users are assigned permission levels (Niveles de Acceso):"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:151
+msgid "**Auxiliar** (Assistant) - View-only or limited access"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:152
+msgid "**Coordinador** (Coordinator) - Create and edit documents"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:153
+msgid "**Director** (Director) - Full project management"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:154
+msgid "**Corporativo** (Corporate) - Cross-project oversight"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:155
+msgid "**Soporte** (Support) - Technical support access"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:156
+msgid "**Superusuario** (Superuser) - Full system access"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:158
+msgid "**Learn more:** :doc:`/developer/architecture/permission-levels`"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:161
+msgid "Spanish Terminology"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:163
+msgid ""
+"Construbot was developed in Mexico and uses Spanish terminology "
+"throughout the interface. This documentation provides English "
+"translations for all terms."
+msgstr ""
+
+#: ../../user-guide/introduction.rst:166
+msgid "**Common Terms:**"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:168
+msgid "**Contrato** = Contract / Project"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:169
+msgid "**Contraparte** = Counterparty / Business Partner"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:170
+msgid "**Estimación** = Estimate / Progress Payment"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:171
+msgid "**Concepto** = Concept / Line Item / Work Item"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:172
+msgid "**Sitio** = Site / Construction Location"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:174
+msgid ""
+"**Full Glossary:** See :doc:`/reference/glossary` for complete "
+"translations."
+msgstr ""
+
+#: ../../user-guide/introduction.rst:177
+msgid "Next Steps"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:179
+msgid "Ready to start? Continue to:"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:181
+msgid ":doc:`getting-started` - First steps with Construbot"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:182
+msgid ":doc:`concepts/index` - Understand core concepts"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:183
+msgid ":doc:`workflows/index` - Learn common workflows"
+msgstr ""
+
+#: ../../user-guide/introduction.rst:186
+msgid ""
+"**For Developers**: If you're installing or deploying Construbot, see the"
+" :doc:`/developer/index` instead."
+msgstr ""
+

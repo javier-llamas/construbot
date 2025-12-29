@@ -4,10 +4,6 @@ AWS EC2 Deployment
 
 Complete guide to deploying Construbot on Amazon Web Services EC2 instances.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

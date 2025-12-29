@@ -1,0 +1,106 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contributor/testing/index.rst:3
+msgid "Testing"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:5
+msgid "Testing guide for Construbot contributors."
+msgstr ""
+
+#: ../../contributor/testing/index.rst:8
+msgid "Running Tests"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:10
+msgid "**Full test suite:**"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:16
+msgid "**Specific tests:**"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:29
+msgid "**With coverage:**"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:37
+msgid "Writing Tests"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:39
+msgid "**Test structure:**"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:57
+msgid "**Use factories:**"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:66
+msgid "Best Practices"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:68
+msgid "✅ Test one thing per test"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:70
+msgid "✅ Use descriptive test names"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:72
+msgid "✅ Isolate tests (don't depend on other tests)"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:74
+msgid "✅ Use fixtures for common setup"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:76
+msgid "✅ Tag work-in-progress tests with ``@tag('current')``"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:79
+msgid "Test Coverage"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:81
+#, python-format
+msgid "**Target:** >80% coverage"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:83
+msgid "**Check coverage:**"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:91
+msgid "See Also"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:93
+msgid ":doc:`../getting-started` - Development setup"
+msgstr ""
+
+#: ../../contributor/testing/index.rst:94
+msgid ":doc:`/developer/installation/index` - Installation guide"
+msgstr ""
+

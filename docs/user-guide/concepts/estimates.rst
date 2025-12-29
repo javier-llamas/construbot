@@ -7,10 +7,6 @@ Estimates
 
 Understanding estimates (progress payments) in Construbot.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 What is an Estimate?
 ====================
 

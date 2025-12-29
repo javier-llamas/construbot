@@ -4,10 +4,6 @@ Multi-Tenancy
 
 Construbot's multi-tenant architecture with three-level hierarchy.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

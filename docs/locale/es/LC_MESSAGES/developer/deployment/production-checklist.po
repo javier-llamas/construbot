@@ -1,0 +1,888 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/deployment/production-checklist.rst:3
+msgid "Production Checklist"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:5
+msgid ""
+"Complete pre-deployment checklist to ensure your Construbot installation "
+"is production-ready."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:12
+msgid ""
+"**DO NOT deploy to production without completing this checklist!** "
+"Skipping items can lead to security vulnerabilities, data loss, or "
+"application downtime."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:15
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:17
+msgid ""
+"This checklist covers all critical configuration items for production "
+"deployment. Work through each section systematically and verify each item"
+" before going live."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:19
+msgid "**Estimated time:** 2-4 hours for first deployment"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:22
+msgid "Critical Settings"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:25
+msgid "DEBUG Mode"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:31
+#: ../../developer/deployment/production-checklist.rst:75
+#: ../../developer/deployment/production-checklist.rst:115
+#: ../../developer/deployment/production-checklist.rst:293
+#: ../../developer/deployment/production-checklist.rst:446
+#: ../../developer/deployment/production-checklist.rst:588
+msgid "**Verify:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:39
+msgid "**Never run production with DEBUG=True!** This exposes:"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:41
+msgid "Full tracebacks with code"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:42
+msgid "SQL queries and database schema"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:43
+msgid "Environment variables and secrets"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:44
+msgid "Internal file paths"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:46
+#: ../../developer/deployment/production-checklist.rst:98
+#: ../../developer/deployment/production-checklist.rst:379
+#: ../../developer/deployment/production-checklist.rst:474
+msgid "**Test:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:55
+msgid "SECRET_KEY"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:63
+msgid "**Generate:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:69
+msgid "**Set in .env:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:83
+msgid "ALLOWED_HOSTS"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:91
+#: ../../developer/deployment/production-checklist.rst:162
+#: ../../developer/deployment/production-checklist.rst:180
+msgid "**Set:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:109
+msgid "Settings Module"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:123
+msgid "Security Configuration"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:126
+msgid "HTTPS/SSL"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:135
+msgid "**Environment variables:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:142
+msgid "**HSTS (HTTP Strict Transport Security):**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:151
+msgid ""
+"**Test HSTS carefully!** Once enabled with preload, browsers will refuse "
+"non-HTTPS connections even if you disable it."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:154
+msgid "Cookie Security"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:172
+msgid "Content Security"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:188
+msgid "**Run Django security check:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:194
+msgid "Expected output should have **no warnings**."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:197
+msgid "Database Configuration"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:200
+msgid "PostgreSQL Setup"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:210
+msgid "**DATABASE_URL:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:220
+msgid "**Verify connection:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:228
+msgid "Database Migrations"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:236
+msgid "**Apply migrations:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:242
+msgid "**Check status:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:248
+msgid "All migrations should show ``[X]`` (applied)."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:251
+msgid "Backup Strategy"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:260
+msgid "**AWS RDS:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:262
+msgid "Enable automated backups"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:263
+msgid "Set backup window (low-traffic time)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:264
+msgid "Configure backup retention (7-35 days)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:265
+msgid "Enable Multi-AZ for high availability"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:267
+#: ../../developer/deployment/production-checklist.rst:416
+msgid "**Self-hosted:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:275
+msgid "Static and Media Files"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:278
+msgid "Static Files"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:287
+msgid "**Collect static files:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:300
+msgid ""
+"**WhiteNoise** is configured by default in "
+"``construbot.config.settings.production``."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:303
+msgid "Media Files"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:312
+msgid "**Using AWS S3:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:322
+msgid "**S3 Bucket Configuration:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:324
+msgid "Create S3 bucket"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:325
+msgid "Block public access (use signed URLs)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:326
+msgid "Configure CORS if needed"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:327
+msgid "Set up lifecycle policies for old files"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:329
+msgid "**Test upload:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:337
+msgid "Email Configuration"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:340
+msgid "Email Service"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:349
+msgid "**Using Mailgun (recommended):**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:359
+msgid "**Using Amazon SES:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:370
+msgid "Email Testing"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:395
+msgid "Check your inbox and spam folder."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:398
+msgid "Caching and Performance"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:401
+msgid "Redis Configuration"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:410
+msgid "**Using AWS ElastiCache:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:422
+msgid "**Test connection:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:430
+msgid "Celery Configuration"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:439
+msgid "**Start Celery worker:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:454
+msgid "Monitoring and Logging"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:457
+msgid "Error Tracking"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:466
+msgid "**Set up Sentry:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:482
+msgid "Check Sentry dashboard for the message."
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:485
+msgid "Application Logging"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:493
+msgid "**Set log level:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:499
+msgid "**Log aggregation options:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:501
+msgid "CloudWatch Logs (AWS)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:502
+msgid "Papertrail"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:503
+msgid "Loggly"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:504
+msgid "ELK Stack"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:507
+msgid "Server Monitoring"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:516
+msgid "**Uptime monitoring:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:518
+msgid "UptimeRobot (free)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:519
+msgid "Pingdom"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:520
+msgid "StatusCake"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:522
+msgid "**Performance monitoring:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:524
+msgid "New Relic"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:525
+msgid "DataDog"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:526
+msgid "Application Insights"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:528
+msgid "**Server monitoring:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:530
+msgid "CloudWatch (AWS)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:531
+msgid "DigitalOcean Monitoring"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:532
+msgid "Prometheus + Grafana"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:535
+msgid "Infrastructure"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:538
+msgid "Server Configuration"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:548
+msgid "**Firewall (UFW):**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:557
+msgid "**SSH hardening:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:570
+msgid "DNS Configuration"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:579
+msgid "**Example DNS records:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:596
+msgid "Load Balancer (Optional)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:606
+msgid "Application Testing"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:609
+msgid "Functionality Tests"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:621
+msgid "**Checklist:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:623
+msgid "[ ] Homepage loads"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:624
+msgid "[ ] User login works"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:625
+msgid "[ ] Dashboard displays correctly"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:626
+msgid "[ ] Create new client (Contraparte)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:627
+msgid "[ ] Create new contract (Contrato)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:628
+msgid "[ ] Add concepts (Conceptos) to contract"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:629
+msgid "[ ] Create estimate (Estimación)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:630
+msgid "[ ] Generate PDF document"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:631
+msgid "[ ] Upload image to media library"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:632
+msgid "[ ] Receive email notification"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:635
+msgid "Performance Testing"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:644
+msgid "**Tools:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:656
+msgid "Security Testing"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:666
+msgid "**Django security check:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:672
+msgid "**OWASP ZAP scan:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:681
+msgid "Final Verification"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:684
+msgid "Pre-Launch Checklist"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:686
+msgid "**Critical (must be complete):**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:688
+msgid "[ ] DEBUG=False"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:689
+msgid "[ ] Unique, strong SECRET_KEY"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:690
+msgid "[ ] ALLOWED_HOSTS configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:691
+msgid "[ ] Production database configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:692
+msgid "[ ] SSL certificate installed"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:693
+msgid "[ ] Static files collected"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:694
+msgid "[ ] Media storage configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:695
+msgid "[ ] Email service working"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:696
+msgid "[ ] Backups configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:697
+msgid "[ ] Error tracking (Sentry) configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:699
+msgid "**Important (strongly recommended):**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:701
+msgid "[ ] HSTS enabled"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:702
+msgid "[ ] Cookie security enabled"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:703
+msgid "[ ] Redis configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:704
+msgid "[ ] Celery worker running"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:705
+msgid "[ ] Monitoring set up"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:706
+msgid "[ ] Logs configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:707
+msgid "[ ] DNS configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:708
+msgid "[ ] Firewall configured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:710
+msgid "**Optional (nice to have):**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:712
+msgid "[ ] CDN for static files"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:713
+msgid "[ ] CDN for media files"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:714
+msgid "[ ] Load balancer"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:715
+msgid "[ ] Multiple servers"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:716
+msgid "[ ] Read replicas"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:719
+msgid "Launch Day"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:729
+msgid "**Deployment steps:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:731
+msgid "Backup current database"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:732
+msgid "Put application in maintenance mode"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:733
+msgid "Pull latest code"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:734
+msgid "Run migrations"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:735
+msgid "Collect static files"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:736
+msgid "Restart services"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:737
+msgid "Verify functionality"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:738
+msgid "Remove maintenance mode"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:739
+msgid "Monitor logs and Sentry"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:742
+msgid "Post-Launch Monitoring"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:744
+msgid "**First 24 hours:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:746
+msgid "Monitor Sentry for errors every hour"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:747
+msgid "Check server resources (CPU, memory, disk)"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:748
+msgid "Verify email delivery"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:749
+msgid "Check application performance"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:750
+msgid "Review user feedback"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:752
+msgid "**First week:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:754
+msgid "Daily error reviews"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:755
+msgid "Performance optimization based on real usage"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:756
+msgid "Database query optimization"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:757
+msgid "Adjust caching as needed"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:759
+msgid "**Ongoing:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:761
+msgid "Weekly security updates"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:762
+msgid "Monthly dependency updates"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:763
+msgid "Quarterly disaster recovery drills"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:764
+msgid "Continuous monitoring and optimization"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:767
+msgid "Troubleshooting Common Issues"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:770
+msgid "Application Won't Start"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:772
+msgid "**Check:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:774
+msgid "Environment variables set correctly"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:775
+msgid "Database accessible"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:776
+msgid "Redis accessible"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:777
+msgid "Migrations applied"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:778
+msgid "No syntax errors in settings"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:780
+#: ../../developer/deployment/production-checklist.rst:809
+msgid "**Debug:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:788
+msgid "502 Bad Gateway"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:790
+msgid "**Causes:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:792
+msgid "Gunicorn not running"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:793
+msgid "Upstream server timeout"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:794
+msgid "Nginx misconfigured"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:796
+#: ../../developer/deployment/production-checklist.rst:827
+msgid "**Fix:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:807
+msgid "500 Internal Server Error"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:811
+msgid "Check Sentry for error details"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:812
+msgid "Review Django logs"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:813
+msgid "Test database connection"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:814
+msgid "Verify all settings correct"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:825
+msgid "Static Files Not Loading"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:840
+msgid "Documentation"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:843
+msgid "Required Documentation"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:853
+msgid "**Runbook should include:**"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:855
+msgid "How to deploy updates"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:856
+msgid "How to restart services"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:857
+msgid "How to restore from backup"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:858
+msgid "Common troubleshooting steps"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:859
+msgid "Emergency contacts"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:862
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:864
+msgid ":doc:`docker-compose` - Docker Compose production setup"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:865
+msgid ":doc:`aws-ec2` - AWS EC2 deployment guide"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:866
+msgid ":doc:`environment-variables` - Environment configuration reference"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:867
+msgid ":doc:`static-media-files` - Static and media file configuration"
+msgstr ""
+
+#: ../../developer/deployment/production-checklist.rst:868
+msgid ""
+"`Django Deployment Checklist "
+"<https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/>`_"
+msgstr ""
+

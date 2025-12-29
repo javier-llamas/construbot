@@ -1,0 +1,1251 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../_glossary/domain-terms.rst:3
+msgid "Domain Terms Glossary"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:5
+msgid ""
+"This glossary maps Spanish construction industry terms used in Construbot"
+" to their English equivalents. Use this for consistency in all "
+"documentation, translations, and communication."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:9
+msgid ""
+"**Important**: The codebase uses Spanish model and field names. This "
+"glossary provides English equivalents for documentation purposes only. Do"
+" not change the actual Python code to use these English names."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:14
+msgid "Core Entities"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:42
+msgid "Cliente"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:44
+msgid "**English:** Client / Customer"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:46
+msgid ""
+"**Description:** A customer who contracts construction work from your "
+"company. This is a Contraparte with tipo='CLIENTE'."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:48
+msgid "**Model:** ``construbot.proyectos.models.Contraparte`` (tipo='CLIENTE')"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:50
+msgid "**Usage:** The party paying for the construction work"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:52
+msgid "**Examples:** \"Government Agency\", \"Private Developer\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:30
+msgid "Contraparte"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:32
+msgid "**English:** Counterparty / Business Partner"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:34
+msgid ""
+"**Description:** An external business entity with which your company has "
+"a relationship. Can be one of three types: Cliente (Client), Destajista "
+"(Piecework Contractor), or Subcontratista (Subcontractor)."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:37
+msgid "**Model:** ``construbot.proyectos.models.Contraparte``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:39
+msgid "**Types:** CLIENTE, DESTAJISTA, SUBCONTRATISTA"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:41
+msgid ""
+"**Examples:** \"ABC Construction Inc. (Client)\", \"XYZ Electrical "
+"(Subcontractor)\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:18
+msgid "Contrato"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:20
+msgid "**English:** Contract / Project"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:22
+msgid ""
+"**Description:** A construction project or contract. Represents the main "
+"entity in Construbot for managing construction work. Can be hierarchical "
+"(parent contracts with sub-contracts) using django-treebeard."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:25
+msgid "**Model:** ``construbot.proyectos.models.Contrato``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:27
+msgid ""
+"**Key Fields:** folio (reference number), contrato_name (contract name), "
+"monto (amount), anticipo (advance payment)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:29
+msgid "**Examples:** \"Main Building Contract\", \"Electrical Subcontract\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:53
+msgid "Destajista"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:55
+msgid "**English:** Piecework Contractor / Task Contractor"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:57
+msgid ""
+"**Description:** A contractor paid by completed work units (piece rate) "
+"rather than by time. This is a Contraparte with tipo='DESTAJISTA'. Common"
+" in Mexican construction industry."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:60
+msgid "**Model:** ``construbot.proyectos.models.Contraparte`` (tipo='DESTAJISTA')"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:62
+msgid "**Usage:** Workers paid per completed task or quantity"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:64
+msgid ""
+"**Examples:** \"Masonry crew paid per square meter\", \"Painting "
+"contractor paid per room\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:87
+msgid "Destinatario"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:89
+msgid "**English:** Recipient / Contact / Contact Person"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:91
+msgid ""
+"**Description:** A contact person at a Counterparty organization. Used "
+"for document distribution and communication."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:93
+msgid "**Model:** ``construbot.proyectos.models.Destinatario``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:95
+msgid ""
+"**Key Fields:** destinatario_text (contact name), puesto (position), "
+"contraparte (associated counterparty)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:97
+msgid ""
+"**Examples:** \"John Doe, Project Manager\", \"Jane Smith, Procurement "
+"Officer\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:76
+msgid "Sitio"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:78
+msgid "**English:** Site / Construction Site / Location"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:80
+msgid ""
+"**Description:** Physical location where construction work occurs. Must "
+"be associated with a Cliente (Client) contraparte."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:82
+msgid "**Model:** ``construbot.proyectos.models.Sitio``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:84
+msgid ""
+"**Key Fields:** sitio_name (site name), sitio_location (address), cliente"
+" (associated client)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:86
+msgid "**Examples:** \"Downtown Office Building\", \"Highway 101 Bridge Project\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:65
+msgid "Subcontratista"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:67
+msgid "**English:** Subcontractor"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:69
+msgid ""
+"**Description:** A contractor for specialized work under a main contract."
+" This is a Contraparte with tipo='SUBCONTRATISTA'."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:71
+msgid ""
+"**Model:** ``construbot.proyectos.models.Contraparte`` "
+"(tipo='SUBCONTRATISTA')"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:73
+msgid "**Usage:** Specialized contractors (electrical, plumbing, HVAC, etc.)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:75
+msgid "**Examples:** \"HVAC Subcontractor\", \"Structural Steel Subcontractor\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:100
+msgid "Financial Terms"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:159
+msgid "Amortización"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:161
+msgid "**English:** Amortization / Advance Amortization"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:163
+msgid ""
+"**Description:** The process of deducting advance payment amounts from "
+"subsequent progress payments."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:165
+msgid "**Method:** ``Contrato.amortizacion_anticipo()``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:167
+msgid ""
+"**Usage:** Calculated automatically in estimates to recover advance "
+"payments"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:139
+msgid "Anticipo"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:141
+msgid "**English:** Advance Payment / Down Payment / Mobilization Payment"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:143
+msgid ""
+"**Description:** Initial payment percentage for a contract, typically "
+"used for mobilization and initial expenses."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:145
+msgid ""
+"**Model Field:** ``construbot.proyectos.models.Contrato.anticipo`` "
+"(DecimalField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:147
+msgid "**Range:** 0% to 100%"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:149
+msgid "**Examples:** \"10% advance payment\", \"15% mobilization payment\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:115
+msgid "Concepto"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:117
+msgid "**English:** Concept / Line Item / Work Item / Work Package"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:119
+msgid ""
+"**Description:** Individual work item in a contract catalog. Defines a "
+"specific type of work with quantity, unit of measurement, and unit price."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:122
+msgid "**Model:** ``construbot.proyectos.models.Concept``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:124
+msgid ""
+"**Key Fields:** code (item code), concept_text (description), unit "
+"(measurement unit), unit_price, total_cuantity"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:126
+msgid ""
+"**Examples:** \"Concrete Pouring - Foundation\", \"Electrical Wiring "
+"Installation\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:168
+msgid "Ejercido"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:170
+msgid "**English:** Executed / Spent / Expended"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:172
+msgid "**Description:** Amount of work completed or money spent to date."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:174
+msgid "**Method:** ``Contrato.ejercido_acumulado()``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:176
+msgid "**Examples:** \"Accumulated executed amount\", \"Total spent to date\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:104
+msgid "Estimación"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:106
+msgid "**English:** Estimate / Progress Payment / Progress Billing"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:108
+msgid ""
+"**Description:** Periodic billing for completed work on a contract. "
+"Documents work progress and calculates payment due."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:110
+msgid "**Model:** ``construbot.proyectos.models.Estimate``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:112
+msgid ""
+"**Key Fields:** consecutive (estimate number), start_date, finish_date, "
+"project (associated contract)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:114
+msgid "**Examples:** \"Estimate #5 for March 2024\", \"Monthly Progress Payment\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:177
+msgid "Facturado"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:179
+msgid "**English:** Invoiced / Billed"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:181
+msgid ""
+"**Description:** Indicates whether an estimate has been invoiced to the "
+"client."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:183
+msgid "**Model Field:** ``Estimate.invoiced`` (BooleanField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:150
+msgid "Monto"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:152
+msgid "**English:** Amount / Total Amount / Contract Amount"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:154
+msgid ""
+"**Description:** Total monetary value of a contract or payment. Usually "
+"specified without VAT/IVA."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:156
+msgid "**Model Fields:** ``Contrato.monto``, ``Retenciones.valor``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:158
+msgid "**Examples:** \"$1,000,000 contract amount\", \"$50,000 retention amount\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:184
+msgid "Pagado"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:186
+msgid "**English:** Paid / Payment Completed"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:188
+msgid "**Description:** Indicates whether an estimate payment has been received."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:190
+msgid ""
+"**Model Fields:** ``Estimate.paid`` (BooleanField), "
+"``Estimate.payment_date`` (DateField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:127
+msgid "Retención"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:129
+msgid "**English:** Retention / Withholding / Holdback"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:131
+msgid ""
+"**Description:** Amount or percentage withheld from payments, typically "
+"released upon project completion. Can be a fixed amount (AMOUNT) or "
+"percentage (PERCENTAGE)."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:134
+msgid "**Model:** ``construbot.proyectos.models.Retenciones``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:136
+msgid "**Types:** AMOUNT (Monto), PERCENTAGE (Porcentaje)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:138
+msgid "**Examples:** \"5% Quality Retention\", \"$10,000 Performance Holdback\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:193
+msgid "Field Names"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:227
+msgid "code"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:229
+msgid "**English:** Code / Item Code / Contract Code"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:231
+msgid "**Description:** Alphanumeric code for identification."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:233
+msgid "**Model Fields:** ``Contrato.code``, ``Concept.code``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:235
+msgid "**Examples:** \"CONT-2024-001\", \"ELEC-100\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:204
+msgid "fecha"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:206
+msgid "**English:** Date / Contract Date"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:208
+msgid "**Description:** Date of contract signing or creation."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:210
+msgid "**Model Field:** ``Contrato.fecha`` (DateField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:197
+msgid "folio"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:199
+msgid "**English:** Reference Number / Folio / Sequential ID"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:201
+msgid ""
+"**Description:** Sequential identification number for contracts within a "
+"company."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:203
+msgid "**Model Field:** ``Contrato.folio`` (IntegerField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:211
+msgid "nombre"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:213
+msgid "**English:** Name"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:215
+msgid "**Description:** Generic name field used across multiple models."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:217
+msgid "**Model Fields:** ``Vertices.nombre``, ``Retenciones.nombre``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:218
+msgid "puesto"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:220
+msgid "**English:** Position / Job Title / Role"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:222
+msgid "**Description:** Job title or position of a person."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:224
+msgid "**Model Fields:** ``Destinatario.puesto``, ``User.puesto``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:226
+msgid ""
+"**Examples:** \"Project Manager\", \"Site Supervisor\", \"Procurement "
+"Officer\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:243
+msgid "tipo"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:245
+msgid "**English:** Type / Category"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:247
+msgid "**Description:** Classification or type field with choices."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:249
+msgid "**Model Fields:** ``Contraparte.tipo``, ``Retenciones.tipo``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:236
+msgid "valor"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:238
+msgid "**English:** Value / Amount"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:240
+msgid "**Description:** Monetary or numeric value."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:242
+msgid "**Model Field:** ``Retenciones.valor`` (DecimalField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:252
+msgid "Measurement & Quantity Terms"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:295
+msgid "alto"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:297
+msgid "**English:** Height / Tall / High"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:299
+msgid "**Description:** Height dimension in meters."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:301
+msgid "**Model Field:** ``Vertices.alto`` (DecimalField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:288
+msgid "ancho"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:290
+msgid "**English:** Width / Wide"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:292
+msgid "**Description:** Width dimension in meters."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:294
+msgid "**Model Field:** ``Vertices.ancho`` (DecimalField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:265
+msgid "Cantidad"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:267
+msgid "**English:** Quantity / Amount"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:269
+msgid "**Description:** Numeric quantity of work or materials."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:271
+msgid ""
+"**Model Fields:** ``Concept.total_cuantity``, "
+"``EstimateConcept.cuantity_estimated``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:281
+msgid "largo"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:283
+msgid "**English:** Length / Long"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:285
+msgid "**Description:** Length dimension in meters."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:287
+msgid "**Model Field:** ``Vertices.largo`` (DecimalField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:302
+msgid "piezas"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:304
+msgid "**English:** Pieces / Number of Pieces / Count"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:306
+msgid "**Description:** Count or number of identical items."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:308
+msgid "**Model Field:** ``Vertices.piezas`` (IntegerField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:256
+msgid "Unidad"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:258
+msgid "**English:** Unit / Unit of Measurement / Measurement Unit"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:260
+msgid ""
+"**Description:** Unit for measuring work quantities (square meters, "
+"kilograms, pieces, etc.)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:262
+msgid "**Model:** ``construbot.proyectos.models.Units``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:264
+msgid ""
+"**Examples:** \"m²\" (square meters), \"kg\" (kilograms), \"pza\" "
+"(pieces), \"m³\" (cubic meters)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:272
+msgid "Vértice"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:274
+msgid "**English:** Vertex / Measurement Point / Survey Point"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:276
+msgid ""
+"**Description:** A point used for calculating quantities with dimensions "
+"(length, width, height)."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:278
+msgid "**Model:** ``construbot.proyectos.models.Vertices``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:280
+msgid ""
+"**Key Fields:** nombre (name), largo (length), ancho (width), alto "
+"(height), piezas (pieces)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:311
+msgid "Organizational Terms"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:324
+msgid "Cliente (Sistema)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:326
+msgid "**English:** Customer / Account / Tenant"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:328
+msgid ""
+"**Description:** Top-level organization account in the multi-tenant "
+"system. Not to be confused with Cliente (Client) in Contraparte."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:331
+msgid "**Model:** ``construbot.users.models.Customer``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:323 ../../_glossary/domain-terms.rst:333
+msgid "**Hierarchy:** Customer → Company → User"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:315
+msgid "Empresa"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:317
+msgid "**English:** Company / Business Entity"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:319
+msgid ""
+"**Description:** Business entity within a Customer account in the multi-"
+"tenant system."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:321
+msgid "**Model:** ``construbot.users.models.Company``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:343
+msgid "Nivel de Acceso"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:345
+msgid "**English:** Access Level / Permission Level"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:347
+msgid "**Description:** User permission level (1-6)."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:349
+msgid "**Model:** ``construbot.users.models.NivelAcceso``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:351
+msgid "**Levels:**"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:353
+msgid "1: Auxiliar (Assistant)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:354
+msgid "2: Coordinador (Coordinator)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:355
+msgid "3: Director (Director)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:356
+msgid "4: Corporativo (Corporate)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:357
+msgid "5: Soporte (Support)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:358
+msgid "6: Superusuario (Superuser)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:334
+msgid "Usuario"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:336
+msgid "**English:** User"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:338
+msgid "**Description:** System user with permissions and company assignments."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:340
+msgid "**Model:** ``construbot.users.models.User``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:342
+msgid ""
+"**Key Fields:** email (authentication), company (assigned companies), "
+"permiso (permission level)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:361
+msgid "Action Terms"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:386
+msgid "Asignar"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:388
+msgid "**English:** Assign / Allocate"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:390
+msgid "**Description:** Action of assigning users or resources to a contract."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:392
+msgid "**Model Field:** ``Contrato.users`` (ManyToManyField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:372
+msgid "Autorizado por"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:374
+msgid "**English:** Authorized By / Approved By"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:376
+msgid "**Description:** Person who authorized or approved a document."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:378
+msgid "**Model Fields:** ``Estimate.auth_by``, ``Estimate.auth_by_gen``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:379
+msgid "Elaborado por"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:381
+msgid "**English:** Drafted By / Prepared By / Created By"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:383
+msgid "**Description:** User who created or drafted a document."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:385
+msgid "**Model Field:** ``Estimate.draft_by`` (ForeignKey to User)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:365
+msgid "Supervisado por"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:367
+msgid "**English:** Supervised By / Overseen By"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:369
+msgid "**Description:** User who supervised or managed the work."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:371
+msgid "**Model Field:** ``Estimate.supervised_by`` (ForeignKey to User)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:395
+msgid "Documentation & UI Terms"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:399
+msgid "Catálogo"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:401
+msgid "**English:** Catalog / Price Book / Work Item List"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:403
+msgid "**Description:** List or catalog of work items (concepts) for a contract."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:405
+msgid "**Usage:** \"Concept Catalog\", \"Price Catalog\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:420
+msgid "Consecutivo"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:422
+msgid "**English:** Consecutive / Sequential Number / Estimate Number"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:424
+msgid "**Description:** Sequential numbering for estimates within a project."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:426
+msgid "**Model Field:** ``Estimate.consecutive`` (IntegerField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:406
+msgid "Generador"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:408
+msgid "**English:** Generator / Estimate Generator"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:410
+msgid "**Description:** The estimate generation document or system."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:412
+msgid "**Usage:** Authorization field for estimates (auth_by_gen)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:413
+msgid "Observaciones"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:415
+msgid "**English:** Observations / Notes / Comments"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:417
+msgid "**Description:** Free-text notes or comments on items."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:419
+msgid "**Model Field:** ``EstimateConcept.observations`` (TextField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:427
+msgid "Ubicación"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:429
+msgid "**English:** Location / Address / Site Location"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:431
+msgid "**Description:** Physical address or location description."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:433
+msgid "**Model Field:** ``Sitio.sitio_location`` (CharField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:436
+msgid "Status & State Terms"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:456
+msgid "Completado"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:458
+msgid "**English:** Completed / Finished / Done"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:460
+msgid "**Description:** Work or action that has been completed."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:449
+msgid "Pendiente"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:451
+msgid "**English:** Pending / Outstanding / Awaiting"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:453
+msgid "**Description:** Items awaiting action (payment, invoicing, etc.)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:455
+msgid ""
+"**Functions:** ``estimacionespendientes_facturacion()``, "
+"``estimacionespendientes_pago()``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:440
+msgid "Vigente"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:442
+msgid "**English:** Active / Current / Ongoing"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:444
+msgid "**Description:** Indicates an active or ongoing contract."
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:446
+msgid "**Model Field:** ``Contrato.status`` (BooleanField)"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:448
+msgid "**Function:** ``contratosvigentes()`` - Returns active contracts"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:463
+msgid "Translation Guidelines"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:466
+msgid "Model Names in Code"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:468
+msgid "**Keep Spanish names in Python code**, use English in documentation:"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:470
+msgid "Python: ``class Contrato(MP_Node):``"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:471
+msgid "Documentation: \"The Contract model represents...\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:473
+msgid "**First Use Pattern**: On first use in any document, include Spanish term:"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:475
+msgid "\"The Contract (Contrato) model represents construction projects...\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:478
+msgid "Field Names in Documentation"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:480
+msgid "**Reference both names** when documenting fields:"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:482
+msgid ""
+"\"The ``folio`` (reference number) field stores the sequential contract "
+"ID...\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:485
+msgid "API Response Documentation"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:487
+msgid "**Document JSON keys** with both languages:"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:498
+msgid "Choice Field Values"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:500
+msgid "**Document all options** in tables:"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:506
+msgid "Spanish Code"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:507
+msgid "English Translation"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:508
+msgid "Description"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:509
+msgid "CLIENTE"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:510
+msgid "Client"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:511
+msgid "Customer paying for work"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:512
+msgid "DESTAJISTA"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:513
+msgid "Piecework Contractor"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:514
+msgid "Worker paid by task"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:515
+msgid "SUBCONTRATISTA"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:516
+msgid "Subcontractor"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:517
+msgid "Specialized contractor"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:520
+msgid "Consistency Rules"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:522
+msgid ""
+"**Always use the same English term** for a Spanish term across all "
+"documentation"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:523
+msgid "**Provide context** when terms could be ambiguous"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:524
+msgid "**Link to models** for technical reference"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:525
+msgid ""
+"**Use industry-standard English** construction terminology where "
+"applicable"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:526
+msgid "**Update this glossary** when adding new Spanish terms to the codebase"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:529
+msgid "Usage in Different Contexts"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:532
+msgid "End User Documentation"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:534
+msgid "Use **plain English with Spanish reference on first use**:"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:536
+msgid "\"To create a new Project (Contrato), navigate to the Projects menu...\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:539
+msgid "Developer Documentation"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:541
+msgid "Use **both names with model references**:"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:543
+msgid ""
+"\"The ``Contrato`` (Contract) model inherits from ``MP_Node`` for "
+"hierarchical structure. The ``monto`` (amount) field stores the contract "
+"value...\""
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:547
+msgid "API Documentation"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:549
+msgid "Use **English descriptions with Spanish field names**:"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:551
+msgid "**folio** (integer): Reference number / Sequential ID for the contract"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:554
+msgid "See Also"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:556
+msgid ":doc:`/reference/glossary` - User-facing glossary"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:557
+msgid ":doc:`/contributor/translation/glossary` - Full contributor glossary"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:558
+msgid ":doc:`/developer/models/proyectos` - Model documentation"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:559
+msgid ":doc:`/user-guide/concepts/index` - Concept explanations for end users"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:561
+msgid "---"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:563
+msgid "**Last Updated:** December 2025"
+msgstr ""
+
+#: ../../_glossary/domain-terms.rst:565
+msgid ""
+"**Note:** This glossary is a living document. When adding new Spanish "
+"terms to the codebase, update this glossary with the appropriate English "
+"translation and context."
+msgstr ""
+

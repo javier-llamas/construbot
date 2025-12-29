@@ -40,8 +40,10 @@ extensions = [
     'sphinx.ext.autosummary',       # Generate summary tables
 
     # External extensions
-    'sphinxcontrib.httpdomain',     # Document HTTP APIs
-    'sphinx_tabs.tabs',             # Tabbed content (Docker/Local)
+    # Note: Some extensions temporarily disabled for gettext generation
+    # Uncomment when actually used in documentation
+    # 'sphinxcontrib.httpdomain',     # Document HTTP APIs (not used yet)
+    # 'sphinx_tabs.tabs',             # Tabbed content (not used yet)
     'sphinx_copybutton',            # Copy button for code blocks
 ]
 

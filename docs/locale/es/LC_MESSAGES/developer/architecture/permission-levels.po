@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/architecture/permission-levels.rst:3
+msgid "Permission Levels"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:5
+msgid "Six-tier permission system (NIVELES_ACCESO) for access control."
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:8
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:10
+msgid "**Six permission levels:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:12
+msgid "**Auxiliar** (1) - View only"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:13
+msgid "**Coordinador** (2) - Create and edit"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:14
+msgid "**Director** (3) - Full CRUD operations"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:15
+msgid "**Corporativo** (4) - Cross-company access"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:16
+msgid "**Soporte** (5) - Support/maintenance"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:17
+msgid "**Superusuario** (6) - Full system access"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:19
+msgid "**Implementation:** Foreign key on User model pointing to NivelAcceso."
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:22
+msgid "NivelAcceso Model"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:24
+msgid "**File:** ``construbot/users/models.py``"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:42
+msgid "**Default levels:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:55
+msgid "User Assignment"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:66
+msgid "**Setting level:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:75
+msgid "Permission Checks"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:78
+msgid "View Decorators"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:101
+msgid "Class-Based Views"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:119
+msgid "Template Checks"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:132
+msgid "Level-Specific Capabilities"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:135
+msgid "1. Auxiliar (View Only)"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:137
+#: ../../developer/architecture/permission-levels.rst:153
+#: ../../developer/architecture/permission-levels.rst:171
+#: ../../developer/architecture/permission-levels.rst:189
+#: ../../developer/architecture/permission-levels.rst:208
+#: ../../developer/architecture/permission-levels.rst:226
+msgid "**Permissions:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:139
+msgid "View contracts, estimates, reports"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:140
+msgid "No create/edit/delete"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:142
+msgid "**Use case:** Field workers, read-only access"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:151
+msgid "2. Coordinador (Create/Edit)"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:155
+msgid "All Auxiliar permissions"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:156
+msgid "Create new records"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:157
+msgid "Edit existing records"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:158
+msgid "Cannot delete"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:160
+msgid "**Use case:** Project coordinators"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:169
+msgid "3. Director (Full CRUD)"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:173
+msgid "All Coordinador permissions"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:174
+msgid "Delete records"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:175
+msgid "Approve estimates"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:176
+msgid "Generate reports"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:178
+msgid "**Use case:** Project managers, directors"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:187
+msgid "4. Corporativo (Multi-Company)"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:191
+msgid "All Director permissions"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:192
+msgid "Access multiple companies"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:193
+msgid "Cross-company reports"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:194
+msgid "Company-level configuration"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:196
+msgid "**Use case:** Corporate-level management"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:206
+msgid "5. Soporte (Support Access)"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:210
+msgid "Technical support access"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:211
+msgid "System diagnostics"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:212
+msgid "User assistance"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:213
+msgid "Limited configuration"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:215
+msgid "**Use case:** Technical support staff"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:224
+msgid "6. Superusuario (Full Access)"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:228
+msgid "All system access"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:229
+msgid "Django admin"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:230
+msgid "User management"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:231
+msgid "System configuration"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:233
+msgid "**Use case:** System administrators"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:242
+msgid "Combining with Company Scope"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:244
+msgid "**Always combine level check with company scope:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:260
+msgid "API Permissions"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:279
+msgid "Best Practices"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:281
+msgid "**1. Use minimum required level:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:293
+msgid "**2. Check in views, not templates:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:305
+msgid "**3. Combine checks:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:320
+msgid "**4. Document required levels:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:333
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:335
+msgid "**PermissionDenied errors:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:337
+msgid "Check user's nivel_acceso level"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:338
+msgid "Verify required level is correct"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:339
+msgid "Confirm user is authenticated"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:341
+msgid "**User can't access feature:**"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:343
+msgid "Check nivel_acceso assignment"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:344
+msgid "Verify permission decorator is applied"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:345
+msgid "Confirm level threshold is appropriate"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:348
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:350
+msgid ":doc:`authentication` - Authentication system"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:351
+msgid ":doc:`multi-tenancy` - Multi-company architecture"
+msgstr ""
+
+#: ../../developer/architecture/permission-levels.rst:352
+msgid ":doc:`../models/users` - User model reference"
+msgstr ""
+

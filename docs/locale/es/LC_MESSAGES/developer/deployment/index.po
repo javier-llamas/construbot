@@ -1,0 +1,1004 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/deployment/index.rst:3
+msgid "Deployment"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:5
+msgid ""
+"Production deployment guides for Construbot on various platforms and "
+"infrastructures."
+msgstr ""
+
+#: ../../developer/deployment/index.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:14
+msgid ""
+"This section covers deploying Construbot to production environments. "
+"Whether you're deploying to cloud infrastructure, on-premises servers, or"
+" Platform-as-a-Service (PaaS) providers, these guides will help you get "
+"Construbot running securely and efficiently."
+msgstr ""
+
+#: ../../developer/deployment/index.rst:17
+msgid ""
+"**Production deployment requires careful configuration.** Never use "
+"development settings in production. Always follow the security checklist "
+"before going live."
+msgstr ""
+
+#: ../../developer/deployment/index.rst:20
+msgid "Deployment Options"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:22
+msgid "Construbot can be deployed using several approaches:"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:24
+msgid "**Docker-based Deployment (Recommended)**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:26
+msgid "Use Docker Compose for production orchestration"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:27
+msgid "Deploy to AWS EC2, DigitalOcean, or any VPS"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:28
+msgid "Consistent environment across dev and production"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:29
+msgid "Easy scaling and updates"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:31
+msgid "**Platform-as-a-Service (PaaS)**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:33
+msgid "Heroku, Railway, Render"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:34
+msgid "Managed database and infrastructure"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:35
+msgid "Simpler setup, less configuration"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:36
+msgid "Higher cost for equivalent resources"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:38
+msgid "**Traditional Server Deployment**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:40
+msgid "Install directly on Linux server"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:41
+msgid "More control over environment"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:42
+msgid "Requires system administration experience"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:43
+msgid "Manual dependency management"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:46
+msgid "Quick Start (Docker + AWS EC2)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:48
+msgid "For the impatient, here's the minimal steps to deploy:"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:71
+msgid "**For detailed instructions, see:** :doc:`aws-ec2`"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:74
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:77
+msgid "Before Deployment"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:79
+msgid "**Required:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:81
+msgid "Domain name (for HTTPS and production use)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:82
+msgid "SSL certificate (Let's Encrypt recommended)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:83
+msgid "Production database (PostgreSQL 12+)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:84
+msgid "Email service (Mailgun, SendGrid, or SES)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:85
+msgid "Basic Linux server administration knowledge"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:87
+msgid "**Recommended:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:89
+msgid "Redis instance for caching"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:90
+msgid "S3 bucket for media files"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:91
+msgid "Monitoring service (Sentry)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:92
+#: ../../developer/deployment/index.rst:503
+msgid "CDN for static files"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:93
+msgid "Backup strategy"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:95
+msgid "**Security:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:97
+msgid "Firewall configuration"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:98
+msgid "SSH key-based authentication"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:99
+msgid "Non-root deployment user"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:100
+msgid "Regular security updates"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:103
+msgid "Infrastructure Options"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:105
+msgid "**Compute:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:107
+msgid "AWS EC2 (t2.small minimum, t2.medium recommended)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:108
+msgid "DigitalOcean Droplets ($12-24/month)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:109
+msgid "Linode, Vultr, Hetzner"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:110
+msgid "Google Cloud Compute Engine"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:111
+msgid "Microsoft Azure VMs"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:113
+#: ../../developer/deployment/index.rst:508
+msgid "**Database:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:115
+msgid "AWS RDS for PostgreSQL (recommended for production)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:116
+msgid "Managed PostgreSQL (DigitalOcean, Heroku Postgres)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:117
+msgid "Self-hosted PostgreSQL on VPS"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:118
+msgid "Minimum: db.t3.micro (AWS RDS)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:120
+msgid "**Storage:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:122
+msgid "AWS S3 for media files (recommended)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:123
+msgid "DigitalOcean Spaces"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:124
+msgid "Google Cloud Storage"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:125
+msgid "Azure Blob Storage"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:126
+msgid "Local storage (only for small deployments)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:129
+msgid "Deployment Guides"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:141
+msgid "Step-by-Step Process"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:144
+msgid "1. Pre-Deployment"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:146
+msgid "**Review checklist:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:153
+msgid "**Key items:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:155
+msgid "[ ] Set ``DEBUG=False``"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:156
+msgid "[ ] Configure ``SECRET_KEY`` (unique, strong)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:157
+msgid "[ ] Set ``ALLOWED_HOSTS``"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:158
+msgid "[ ] Configure production database"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:159
+msgid "[ ] Set up email service"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:160
+msgid "[ ] Configure static/media file storage"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:161
+msgid "[ ] Enable HTTPS/SSL"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:162
+msgid "[ ] Set up monitoring (Sentry)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:165
+msgid "2. Infrastructure Setup"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:167
+msgid "**Create server instance:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:169
+msgid "Choose cloud provider (AWS, DigitalOcean, etc.)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:170
+msgid "Select Ubuntu 22.04 LTS"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:171
+msgid "Minimum: 2 CPU, 4 GB RAM"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:172
+msgid "Attach storage volume for database (if self-hosting)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:174
+msgid "**Configure domain:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:176
+msgid "Point A record to server IP"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:177
+msgid "Configure DNS (www and root domain)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:178
+msgid "Set up SSL certificate (Let's Encrypt)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:181
+msgid "3. Server Preparation"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:183
+msgid "**Install dependencies:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:203
+msgid "**Create deployment user:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:216
+msgid "4. Application Deployment"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:218
+msgid "**Clone and configure:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:232
+msgid "**Build and run:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:248
+msgid "**Start services:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:262
+msgid "5. Post-Deployment"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:264
+msgid "**Verify functionality:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:266
+msgid "[ ] Access application via domain"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:267
+msgid "[ ] Test user login"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:268
+msgid "[ ] Create test project/contract"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:269
+msgid "[ ] Generate PDF report"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:270
+msgid "[ ] Send test email"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:271
+msgid "[ ] Check static files loading"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:272
+msgid "[ ] Upload test image (media files)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:274
+msgid "**Set up monitoring:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:286
+msgid "**Configure backups:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:294
+msgid "Production Architecture"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:297
+msgid "Recommended Setup"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:338
+msgid "**Components:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:340
+msgid "**CDN:** Serve static files globally with low latency"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:341
+msgid "**Load Balancer:** Distribute traffic, HTTPS termination, health checks"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:342
+msgid "**Web Servers:** Django application + Gunicorn + Nginx"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:343
+msgid "**Database:** Managed PostgreSQL (RDS) with automated backups"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:344
+msgid "**Cache:** Redis for caching and Celery broker"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:345
+msgid "**Storage:** S3 for user-uploaded media files"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:348
+msgid "Single Server Setup"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:350
+msgid "For smaller deployments:"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:379
+msgid "**Suitable for:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:381
+msgid "<1000 daily active users"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:382
+msgid "Development/staging environments"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:383
+msgid "Small construction companies"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:384
+msgid "Budget-constrained deployments"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:387
+msgid "Backup and Restore"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:390
+msgid "Database Backups"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:392
+msgid "**Automated backups (AWS RDS):**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:394
+msgid "RDS automatically creates daily snapshots. Configure:"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:396
+msgid "Retention period (7-35 days)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:397
+msgid "Backup window (low-traffic hours)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:398
+msgid "Multi-AZ for high availability"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:400
+msgid "**Manual backups (self-hosted):**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:420
+msgid "**Automate with cron:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:428
+msgid "Media File Backups"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:430
+msgid "**If using S3:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:432
+msgid "Enable S3 versioning"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:433
+msgid "Configure lifecycle policies"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:434
+msgid "Cross-region replication (optional)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:436
+msgid "**If using local storage:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:444
+msgid "Restore Process"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:446
+msgid "**Database restore:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:460
+msgid "**Media restore:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:468
+msgid "Scaling Considerations"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:471
+msgid "Vertical Scaling"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:473
+msgid "**When to scale up:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:475
+#, python-format
+msgid "High CPU usage (>70% sustained)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:476
+msgid "Memory pressure"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:477
+msgid "Slow database queries"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:478
+msgid "Single server bottleneck"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:480
+#: ../../developer/deployment/index.rst:497
+msgid "**How to scale:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:482
+msgid "Increase instance size (t2.small → t2.medium → t2.large)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:483
+msgid "Add more CPU/RAM"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:484
+msgid "Upgrade database instance"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:485
+msgid "Use faster storage (SSD)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:488
+msgid "Horizontal Scaling"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:490
+msgid "**When to scale out:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:492
+msgid ">1000 concurrent users"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:493
+msgid "Geographic distribution needed"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:494
+msgid "High availability requirements"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:495
+msgid "Load balancing benefits"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:499
+msgid "Add more application servers"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:500
+msgid "Set up load balancer"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:501
+msgid "Use managed database (RDS)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:502
+msgid "External Redis (ElastiCache)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:506
+msgid "Performance Optimization"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:510
+msgid "Connection pooling"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:511
+msgid "Query optimization"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:512
+msgid "Read replicas"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:513
+msgid "Database indexes"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:515
+msgid "**Caching:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:517
+msgid "Redis for session storage"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:518
+msgid "Template fragment caching"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:519
+msgid "Database query caching"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:520
+msgid "Full-page caching (Varnish)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:522
+msgid "**Static Files:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:524
+msgid "CDN distribution"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:525
+msgid "Gzip compression"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:526
+msgid "Browser caching headers"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:527
+msgid "Image optimization"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:530
+msgid "Security Hardening"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:533
+msgid "Essential Security Measures"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:535
+msgid "**Application security:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:542
+msgid "**Server security:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:559
+msgid "**SSL/TLS:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:561
+msgid "Use Let's Encrypt for free certificates"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:562
+msgid "Enable HSTS"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:563
+msgid "Configure secure ciphers"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:564
+msgid "Set up certificate auto-renewal"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:566
+msgid "**Environment secrets:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:568
+msgid "Never commit secrets to git"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:569
+msgid "Use environment variables"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:570
+msgid "Rotate credentials regularly"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:571
+msgid "Use secrets management (AWS Secrets Manager)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:574
+msgid "Monitoring and Logging"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:577
+msgid "Application Monitoring"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:579
+msgid "**Sentry (Error Tracking):**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:587
+msgid "**Application Performance Monitoring:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:589
+msgid "New Relic"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:590
+msgid "DataDog"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:591
+msgid "Application Insights"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:594
+msgid "Server Monitoring"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:596
+msgid "**Metrics to monitor:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:598
+msgid "CPU usage"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:599
+msgid "Memory usage"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:600
+msgid "Disk space"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:601
+msgid "Network traffic"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:602
+msgid "Database connections"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:603
+msgid "Response times"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:605
+msgid "**Tools:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:607
+msgid "CloudWatch (AWS)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:608
+msgid "Prometheus + Grafana"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:609
+msgid "DigitalOcean Monitoring"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:610
+msgid "Netdata"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:613
+msgid "Log Aggregation"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:615
+msgid "**Centralized logging:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:617
+msgid "CloudWatch Logs (AWS)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:618
+msgid "Papertrail"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:619
+msgid "Loggly"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:620
+msgid "ELK Stack (Elasticsearch, Logstash, Kibana)"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:622
+msgid "**Log rotation:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:630
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:633
+msgid "Common Issues"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:635
+msgid "**Application won't start:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:647
+msgid "**502 Bad Gateway:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:649
+msgid "Django not running"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:650
+msgid "Gunicorn crashed"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:651
+msgid "Nginx misconfigured"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:653
+msgid "**500 Internal Server Error:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:655
+msgid "Check Sentry"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:656
+msgid "Review Django logs"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:657
+msgid "Verify database connection"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:659
+msgid "**Static files not loading:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:661
+msgid "Run collectstatic"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:662
+msgid "Check STATIC_ROOT/STATIC_URL"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:663
+msgid "Verify WhiteNoise configuration"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:664
+msgid "Check CDN configuration"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:666
+msgid "**Database connection errors:**"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:668
+msgid "Verify DATABASE_URL"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:669
+msgid "Check security group rules"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:670
+msgid "Confirm database is running"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:671
+msgid "Test connection manually"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:674
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:676
+msgid ":doc:`../installation/index` - Development installation"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:677
+msgid ":doc:`../architecture/overview` - Understanding the architecture"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:678
+msgid ":doc:`/reference/settings-reference` - Settings documentation"
+msgstr ""
+
+#: ../../developer/deployment/index.rst:679
+msgid ""
+"`Django Deployment Checklist "
+"<https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/>`_"
+msgstr ""
+

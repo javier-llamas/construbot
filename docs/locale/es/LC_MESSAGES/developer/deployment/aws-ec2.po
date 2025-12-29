@@ -1,0 +1,513 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/deployment/aws-ec2.rst:3
+msgid "AWS EC2 Deployment"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:5
+msgid ""
+"Complete guide to deploying Construbot on Amazon Web Services EC2 "
+"instances."
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:14
+msgid ""
+"This guide covers deploying Construbot to AWS EC2 using Docker Compose. "
+"This setup is suitable for small to medium deployments (up to several "
+"thousand users)."
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:16
+msgid "**What you'll build:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:18
+msgid "EC2 instance running Ubuntu 22.04"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:19
+msgid "Docker Compose orchestrating all services"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:20
+msgid "RDS PostgreSQL database (recommended) or self-hosted"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:21
+msgid "ElastiCache Redis (optional) or self-hosted"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:22
+msgid "S3 for media file storage"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:23
+msgid "Route 53 for DNS (optional)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:24
+msgid "SSL certificate from Let's Encrypt"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:26
+msgid "**Estimated cost:** $20-80/month depending on instance sizes"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:29
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:32
+msgid "AWS Account Setup"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:41
+msgid "**Install AWS CLI:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:57
+msgid "Local Requirements"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:66
+msgid "Step 1: Launch EC2 Instance"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:69
+msgid "Instance Selection"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:71
+msgid "**Recommended specs:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:73
+msgid ""
+"**Instance Type:** t3.small (2 vCPU, 2 GB RAM) minimum, t3.medium (2 "
+"vCPU, 4 GB RAM) recommended"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:74
+msgid "**OS:** Ubuntu Server 22.04 LTS"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:75
+msgid "**Storage:** 30 GB gp3 SSD minimum"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:76
+msgid "**Region:** Choose closest to your users"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:78
+#: ../../developer/deployment/aws-ec2.rst:114
+msgid "**Via AWS Console:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:80
+msgid "Navigate to EC2 Dashboard"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:81
+msgid "Click \"Launch Instance\""
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:82
+msgid "Choose \"Ubuntu Server 22.04 LTS (HVM), SSD Volume Type\""
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:83
+msgid "Select instance type (t3.small or larger)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:84
+msgid "Configure storage (30 GB minimum)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:85
+msgid "Add tags: Name=construbot-production"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:86
+msgid "Configure Security Group (see below)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:87
+msgid "Review and Launch"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:89
+#: ../../developer/deployment/aws-ec2.rst:120
+msgid "**Via AWS CLI:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:103
+msgid "Security Group Configuration"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:105
+msgid "**Required rules:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:116
+msgid "EC2 Dashboard → Security Groups → Create Security Group"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:117
+msgid "Add inbound rules as above"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:118
+msgid "Name: construbot-sg"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:143
+msgid "Elastic IP"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:145
+msgid "**Assign static IP:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:158
+msgid ""
+"**Elastic IP charges:** You are charged when the IP is allocated but the "
+"instance is stopped. Release unused Elastic IPs to avoid charges."
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:161
+msgid "Step 2: Connect to Instance"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:164
+msgid "SSH Connection"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:176
+msgid "**First time connection:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:178
+msgid "You'll see a message about host authenticity. Type ``yes`` to continue."
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:181
+msgid "Step 3: Server Setup"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:184
+msgid "System Updates"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:198
+msgid "Install Docker"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:220
+msgid "Configure Firewall"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:234
+msgid "Step 4: Deploy Application"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:237
+msgid "Clone Repository"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:250
+msgid "Configure Environment"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:260
+msgid "**Minimal production .env:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:297
+msgid "Build and Start"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:311
+msgid "Initialize Database"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:325
+msgid "Step 5: Configure Domain and SSL"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:328
+msgid "DNS Configuration"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:330
+msgid "**Using Route 53:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:355
+msgid "**Using other DNS providers:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:357
+msgid "Add A record pointing to your Elastic IP:"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:367
+msgid "SSL Certificate (Let's Encrypt)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:388
+msgid "**Update docker-compose.yml to mount certificates:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:396
+msgid "**Restart nginx:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:403
+msgid "Step 6: Configure AWS Services"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:406
+msgid "RDS PostgreSQL (Recommended)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:408
+msgid "**Benefits:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:410
+msgid "Automated backups"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:411
+msgid "High availability (Multi-AZ)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:412
+msgid "Automatic failover"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:413
+msgid "Managed updates"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:415
+msgid "**Create RDS instance:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:431
+#: ../../developer/deployment/aws-ec2.rst:451
+#: ../../developer/deployment/aws-ec2.rst:490
+msgid "**Update .env:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:437
+msgid "**Remove postgres from docker-compose.yml.**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:440
+msgid "ElastiCache Redis (Optional)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:458
+msgid "S3 for Media Files"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:500
+msgid "Step 7: Automate Startup"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:503
+msgid "Systemd Service"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:505
+msgid "Create ``/etc/systemd/system/construbot.service``:"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:524
+msgid "**Enable service:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:531
+msgid "**Application now starts automatically on boot.**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:534
+msgid "Step 8: Monitoring and Maintenance"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:537
+msgid "CloudWatch Monitoring"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:539
+msgid "**Enable detailed monitoring:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:545
+msgid "**Create CloudWatch alarms:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:563
+msgid "Automated Backups"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:565
+msgid "**Create backup script** ``/opt/construbot/scripts/backup.sh``:"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:583
+msgid "**Schedule with cron:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:591
+msgid "Log Management"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:593
+msgid "**Ship logs to CloudWatch:**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:605
+msgid "Step 9: Scaling"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:608
+msgid "Vertical Scaling"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:627
+msgid "Horizontal Scaling"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:629
+msgid "For multi-instance deployment:"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:631
+msgid "Use Application Load Balancer (ALB)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:632
+msgid "Create Auto Scaling Group"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:633
+msgid "Use RDS for database (required)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:634
+msgid "Use ElastiCache for Redis (required)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:635
+msgid "Use S3 for media files (required)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:637
+msgid ""
+"**This is beyond single-server scope** - consider using ECS or EKS for "
+"container orchestration."
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:640
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:643
+msgid "Instance Not Accessible"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:657
+msgid "Application Not Starting"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:672
+msgid "Out of Disk Space"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:686
+msgid "Cost Optimization"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:689
+msgid "Reduce Costs"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:691
+#, python-format
+msgid "**Use Reserved Instances** - Save up to 75% for 1-3 year commitment"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:692
+msgid "**Right-size instances** - Monitor and adjust based on actual usage"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:693
+msgid "**Use Spot Instances** - Save up to 90% (for non-critical workloads)"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:694
+msgid "**Enable S3 Intelligent Tiering** - Automatic cost optimization"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:695
+msgid "**Set up Budget Alerts** - Monitor spending"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:697
+msgid "**Estimated monthly costs (us-east-1):**"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:710
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:712
+msgid ":doc:`production-checklist` - Pre-deployment checklist"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:713
+msgid ":doc:`docker-compose` - Docker Compose configuration"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:714
+msgid ":doc:`environment-variables` - Environment setup"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:715
+msgid ":doc:`static-media-files` - S3 configuration"
+msgstr ""
+
+#: ../../developer/deployment/aws-ec2.rst:716
+msgid "`AWS EC2 Documentation <https://docs.aws.amazon.com/ec2/>`_"
+msgstr ""
+

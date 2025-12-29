@@ -4,10 +4,6 @@ Docker Compose for Production
 
 Production Docker Compose configuration for deploying Construbot.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

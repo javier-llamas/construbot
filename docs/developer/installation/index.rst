@@ -4,10 +4,6 @@ Installation
 
 This section covers how to install and set up Construbot for development. You can choose between Docker-based development (recommended) or local development.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

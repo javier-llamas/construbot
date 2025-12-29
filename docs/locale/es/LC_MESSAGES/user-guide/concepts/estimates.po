@@ -1,0 +1,764 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../user-guide/concepts/estimates.rst:3
+msgid "Estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:6
+msgid "**Spanish Term:** Estimación"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:8
+msgid "Understanding estimates (progress payments) in Construbot."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:12
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:15
+msgid "What is an Estimate?"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:17
+msgid ""
+"An **Estimate** (Spanish: **Estimación**) is a progress payment request "
+"for completed work on a construction project. Estimates document:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:19
+msgid "Work completed during a specific period"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:20
+msgid "Quantities of each concept (line item) executed"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:21
+msgid "Payment amount owed for the period"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:22
+msgid "Cumulative progress tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:24
+msgid "**Model:** ``construbot.proyectos.models.Estimate``"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:26
+msgid ""
+"**Key Concept:** Estimates are tied to contracts and track incremental "
+"billing as work progresses. Each estimate builds upon previous estimates "
+"to show cumulative project completion."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:32
+msgid "Estimate Components"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:35
+msgid "Basic Information"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:37
+msgid "**Required fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:39
+msgid "**Contract** (contrato) - The parent contract being billed"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:40
+msgid "**Estimate Number** (consecutive number) - Sequential identifier"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:41
+msgid "**Period Start Date** (fecha_inicio_estimado)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:42
+msgid "**Period End Date** (fecha_final_estimado)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:43
+msgid "**Total Amount** (monto) - Calculated from line items"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:45
+msgid "**Optional fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:47
+msgid "**Notes** (notas) - Internal notes about the estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:48
+msgid "**Status** - Draft, submitted, approved, paid"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:49
+msgid "**Approval Date**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:50
+msgid "**Payment Date**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:56
+msgid "Line Items (EstimateLineItems)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:58
+msgid ""
+"Each estimate contains multiple line items tracking individual concept "
+"progress:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:60
+msgid "**Concept** (concepto) - Reference to catalog concept"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:61
+msgid "**Quantity This Period** (cantidad_estimada) - Work completed this period"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:62
+msgid "**Cumulative Quantity** (cantidad_acumulada) - Total work to date"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:63
+msgid "**Unit Price** (precio_unitario) - From contract concept"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:64
+msgid "**Subtotal** (subtotal) - Quantity × Unit Price"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:66
+msgid "**Related Model:** ``construbot.proyectos.models.EstimateLineItem``"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:72
+msgid "Financial Calculations"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:75
+msgid "Estimate Amount Calculation"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:77
+msgid "The estimate total is calculated as:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:89
+msgid "**Example:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:103
+msgid "Cumulative Tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:105
+msgid "Construbot automatically tracks cumulative quantities:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:107
+msgid "**Previous Estimates:** Sum of all prior estimate quantities"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:108
+msgid "**This Estimate:** New work completed"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:109
+msgid "**Cumulative Total:** Running total of all work to date"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:110
+msgid "**Remaining:** Contract quantity - Cumulative total"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:112
+msgid "This ensures you never over-bill a contract concept."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:118
+msgid "Retentions (Withholdings)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:120
+msgid "Retentions can be applied to estimates:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:122
+#, python-format
+msgid "**Flat percentage:** 10% retention on all work"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:123
+msgid ""
+"**Multiple retentions:** Different percentages for different purposes "
+"(warranty, performance)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:124
+msgid "**Retention release:** Held until contract completion or milestones"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:126
+msgid "See :doc:`retentions` for detailed information."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:129
+msgid "Creating an Estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:132
+msgid "Step 1: Access Contract"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:134
+msgid "Navigate to **Proyectos → Contratos**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:135
+msgid "Select the contract you want to bill"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:136
+msgid "Click **\"Create Estimate\"** or **\"Nueva Estimación\"**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:142
+msgid "Step 2: Set Estimate Period"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:151
+msgid "Step 3: Add Line Items"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:153
+msgid "For each concept with work completed:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:155
+msgid "Select the concept from contract catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:156
+msgid "Enter **Quantity This Period** (work completed)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:157
+msgid ""
+"System calculates: - Cumulative quantity - Subtotal (quantity × unit "
+"price) - Warnings if exceeding contract quantity"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:162
+msgid "**Example Entry:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:176
+msgid "Step 4: Review Totals"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:178
+msgid "Before saving, review:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:180
+msgid "**Subtotal:** Sum of all line items"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:181
+msgid "**Retentions:** Applied percentages"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:182
+msgid "**Estimate Total:** Amount to be paid"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:183
+msgid "**Cumulative Progress:** Overall project completion"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:189
+msgid "Step 5: Save and Generate Documents"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:191
+msgid "Click **\"Save\"** or **\"Guardar\"**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:192
+msgid "Generate PDF estimate document"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:193
+msgid "Submit for approval (if workflow configured)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:194
+msgid "Track payment status"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:197
+msgid "Estimate Workflow"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:200
+msgid "Typical Process"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:202
+msgid "**Draft:** Initial creation, can be edited"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:203
+msgid "**Submitted:** Sent to client for review"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:204
+msgid "**Under Review:** Client reviewing estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:205
+msgid "**Approved:** Client approved, ready for payment"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:206
+msgid "**Paid:** Payment received and recorded"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:208
+msgid "**Workflow Configuration:** May vary by company and contract type."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:214
+msgid "Revisions and Corrections"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:216
+msgid "If an estimate needs correction:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:218
+msgid "**Option 1: Edit Draft**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:220
+msgid "If status is still \"Draft\", edit directly"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:221
+msgid "Update line item quantities as needed"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:223
+msgid "**Option 2: Create Adjustment**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:225
+msgid "If estimate is approved, create a new estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:226
+msgid "Use negative quantities to reverse errors"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:227
+msgid "Add corrected quantities in same or next estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:229
+msgid "**Best Practice:** Add notes explaining any adjustments for audit trail."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:232
+msgid "Hierarchical Contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:234
+msgid "For subcontracts using hierarchical structure:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:236
+msgid "**Parent Contract Estimate:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:238
+msgid "Parent estimate includes own work + subcontract estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:239
+msgid "Subcontract estimates roll up automatically"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:240
+msgid "System prevents double-counting"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:242
+msgid "**Subcontract Estimate:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:244
+msgid "Created independently for subcontractor work"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:245
+msgid "Linked to parent contract estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:246
+msgid "Separate billing and payment tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:248
+msgid "See :doc:`projects-contracts` for hierarchy details."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:251
+msgid "Best Practices"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:253
+msgid "**1. Regular billing cycles:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:260
+msgid "**2. Document justification:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:262
+msgid ""
+"Add notes explaining: - Unusual quantities - Zero-quantity periods "
+"(weather delays, etc.) - Adjustments or corrections"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:267
+msgid "**3. Review cumulative totals:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:269
+msgid ""
+"Before submitting, verify: - No concepts exceed contract quantity - "
+"Cumulative percentages make sense - Previous estimates are correctly "
+"summed"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:274
+msgid "**4. Coordinate with site progress:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:276
+msgid "Estimates should reflect actual completed work"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:277
+msgid "Use site photos or daily reports as backup"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:278
+msgid "Don't estimate work not yet performed"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:280
+msgid "**5. Track payment timing:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:282
+msgid "Record when estimate submitted"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:283
+msgid "Follow up on approvals"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:284
+msgid "Document payment receipt"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:287
+msgid "Reporting and Analysis"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:290
+msgid "Estimate Reports"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:292
+msgid "Available reports:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:294
+msgid "**Estimate Summary:** Single estimate with all line items"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:295
+msgid ""
+"**Contract Progress:** All estimates for a contract showing cumulative "
+"progress"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:296
+msgid "**Payment Schedule:** Estimate amounts vs. payment dates"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:297
+msgid "**Retention Tracking:** Retained amounts and releases"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:299
+msgid "**Export Options:** PDF, Excel"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:305
+msgid "Financial Metrics"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:307
+msgid "Track project health:"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:309
+msgid "**Billing Rate:** Actual billed vs. planned"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:310
+msgid "**Payment Lag:** Time from estimate submission to payment"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:311
+msgid "**Retention Balance:** Total retained amounts"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:312
+msgid "**Completion Percentage:** Cumulative quantities vs. contract quantities"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:315
+msgid "Common Scenarios"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:318
+msgid "Scenario 1: First Estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:320
+msgid "**Setup:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:322
+msgid "New contract with 10 concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:323
+msgid "Work started, first month completed"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:324
+msgid "3 concepts have progress"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:326
+msgid "**Process:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:328
+msgid "Create Estimate #1 for Month 1"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:329
+msgid "Add 3 line items with quantities"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:330
+msgid "Review subtotal and retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:331
+msgid "Generate PDF and submit"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:333
+msgid "**Result:** Establishes baseline for cumulative tracking."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:336
+msgid "Scenario 2: Zero-Work Period"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:338
+msgid "**Situation:** Weather delay, no work completed in period"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:340
+msgid "**Options:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:342
+msgid ""
+"**Skip estimate:** Don't create estimate for period (creates gap in "
+"numbering)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:343
+msgid "**Zero estimate:** Create estimate with explanation in notes"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:345
+msgid ""
+"**Recommendation:** Create zero estimate with notes explaining delay for "
+"complete audit trail."
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:348
+msgid "Scenario 3: Over-Billing Prevention"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:350
+msgid "**Situation:** Trying to bill 200 m³ but only 150 m³ remain on contract"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:352
+msgid "**System Behavior:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:354
+msgid "Warning displayed when quantity exceeds remaining"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:355
+msgid "Can still save if justified (change orders, variations)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:356
+msgid "Flags for review"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:358
+msgid "**Resolution:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:360
+msgid "Adjust quantity to 150 m³, or"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:361
+msgid "Create change order to increase contract quantity first"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:364
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:366
+msgid "**Can't create estimate:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:368
+msgid "Verify contract has concepts in catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:369
+msgid "Check contract status is active"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:370
+msgid "Confirm user has permission level (Coordinador or higher)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:372
+msgid "**Quantities not calculating:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:374
+msgid "Ensure unit prices are set on contract concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:375
+msgid "Verify previous estimates are saved and approved"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:376
+msgid "Check for database sync issues (rare)"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:378
+msgid "**Retentions incorrect:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:380
+msgid "Review retention configuration on contract"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:381
+msgid "Verify retention percentages are current"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:382
+msgid "Check if retentions should apply to this estimate type"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:384
+msgid "**PDF generation fails:**"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:386
+msgid "Verify template files exist"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:387
+msgid "Check media storage permissions"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:388
+msgid "Review error logs for specific issue"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:391
+msgid "See Also"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:393
+msgid ":doc:`projects-contracts` - Parent contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:394
+msgid ":doc:`concepts-line-items` - Understanding concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:395
+msgid ":doc:`retentions` - Withholdings and releases"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:396
+msgid ":doc:`/user-guide/workflows/managing-estimates` - Estimate workflow guide"
+msgstr ""
+
+#: ../../user-guide/concepts/estimates.rst:397
+msgid ":doc:`/_glossary/domain-terms` - Complete terminology"
+msgstr ""
+

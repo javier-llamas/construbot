@@ -4,10 +4,6 @@ Environment Variables
 
 Complete reference for all environment variables used in production deployments.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

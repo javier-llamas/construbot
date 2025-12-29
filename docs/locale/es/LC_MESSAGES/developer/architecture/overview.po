@@ -1,0 +1,552 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/architecture/overview.rst:3
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:5
+msgid "High-level system architecture of Construbot."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:8
+msgid ""
+"**This page provides a quick overview.** For comprehensive architecture "
+"documentation with diagrams and code examples, see the :doc:`index`."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:11
+msgid "System Architecture"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:13
+msgid ""
+"Construbot follows a standard Django MTV (Model-Template-View) "
+"architecture with additional layers for API, background tasks, and "
+"caching."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:16
+msgid "Core Components"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:18
+msgid "**Web Layer:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:20
+msgid "Nginx: Reverse proxy, SSL termination, static file serving"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:21
+msgid "Gunicorn: WSGI server running Django"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:23
+msgid "**Application Layer:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:25
+msgid "Django 3.2.19: Web framework"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:26
+msgid "Django REST Framework: API layer"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:27
+msgid "Custom business logic in apps"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:29
+msgid "**Data Layer:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:31
+msgid "PostgreSQL: Primary database"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:32
+msgid "Redis: Caching and message broker"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:33
+msgid "S3: Media file storage (production)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:35
+msgid "**Background Processing:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:37
+msgid "Celery: Asynchronous task queue"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:38
+msgid "Redis: Message broker"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:41
+msgid "Key Design Patterns"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:43
+msgid "**Multi-Tenancy:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:45
+msgid ""
+"Three-level hierarchy (Customer → Company → User) with company-scoped "
+"data isolation."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:47
+msgid "**Hierarchical Data:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:49
+msgid ""
+"Tree structures using django-treebeard for contracts with parent/child "
+"relationships."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:51
+msgid "**Email Authentication:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:53
+msgid "Custom auth backend using email instead of username."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:55
+msgid "**Permission Levels:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:57
+msgid ""
+"Six-tier permission system (Auxiliar to Superusuario) for fine-grained "
+"access control."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:60
+msgid "Technology Stack"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:62
+msgid "**Backend:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:72
+msgid "**Key Libraries:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:74
+msgid "django-treebeard: Hierarchical models"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:75
+msgid "django-allauth: Authentication"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:76
+msgid "reportlab: PDF generation"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:77
+msgid "openpyxl: Excel import/export"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:78
+msgid "SimpleJWT: API authentication"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:81
+msgid "Application Structure"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:83
+msgid "**Main Apps:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:85
+msgid "``users``: User management, companies, authentication"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:86
+msgid "``proyectos``: Core business logic (contracts, estimates, counterparties)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:87
+msgid "``api``: REST API endpoints"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:88
+msgid "``core``: Shared utilities"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:89
+msgid "``account_config``: Company configuration"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:91
+msgid "**Configuration:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:93
+msgid ""
+"Settings split by environment (base, local, test, production) in "
+"``construbot/config/settings/``."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:95
+msgid "See :doc:`settings-structure` for details."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:98
+msgid "Data Flow"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:100
+msgid "**Web Request:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:108
+msgid "**API Request:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:114
+msgid "**Background Task:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:121
+msgid "Multi-Tenancy Model"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:123
+msgid "**Hierarchy:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:141
+msgid "**All business data** (contracts, estimates, etc.) is scoped to Company:"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:149
+msgid "See :doc:`multi-tenancy` for complete details."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:152
+msgid "Security Architecture"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:154
+msgid "**Authentication:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:156
+msgid "Email-based login (no usernames)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:157
+msgid "Session-based for web"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:158
+msgid "JWT tokens for API"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:160
+msgid "**Authorization:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:162
+msgid "Login required for all views"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:163
+msgid "Permission level checks"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:164
+msgid "Company-scoped data access"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:166
+msgid "**Data Protection:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:168
+msgid "HTTPS/SSL in production"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:169
+msgid "CSRF protection"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:170
+msgid "Secure cookies (HttpOnly, Secure flags)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:171
+msgid "Input validation and sanitization"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:173
+msgid "See :doc:`authentication` for details."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:176
+msgid "Performance Strategy"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:178
+msgid "**Database:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:180
+msgid "Connection pooling"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:181
+msgid "Query optimization (select_related, prefetch_related)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:182
+msgid "Atomic transactions"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:184
+msgid "**Caching:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:186
+msgid "Redis cache backend"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:187
+msgid "Per-view caching"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:188
+msgid "Template fragment caching"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:189
+msgid "Query result caching"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:191
+msgid "**Static Files:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:193
+msgid "WhiteNoise for serving"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:194
+msgid "Gzip/Brotli compression"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:195
+msgid "CDN for high traffic"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:197
+msgid "**Background Tasks:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:199
+msgid "Celery for async operations"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:200
+msgid "Email sending"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:201
+msgid "PDF generation"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:202
+msgid "Scheduled tasks"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:205
+msgid "Scalability"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:207
+msgid "**Vertical Scaling:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:209
+msgid "Increase server resources (CPU, RAM, storage)."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:211
+msgid "**Horizontal Scaling:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:213
+msgid "Load balancer (ALB/Nginx)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:214
+msgid "Multiple application servers"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:215
+msgid "Managed database with read replicas (RDS)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:216
+msgid "External cache (ElastiCache)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:217
+msgid "S3 for media files"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:219
+msgid "**Stateless design** enables easy horizontal scaling."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:222
+msgid "Development vs Production"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:224
+msgid "**Development:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:226
+msgid "SQLite or local PostgreSQL"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:227
+msgid "Local Redis"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:228
+msgid "DEBUG=True"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:229
+msgid "Django serves static files"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:230
+msgid "Console email backend"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:232
+msgid "**Production:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:234
+msgid "PostgreSQL (RDS recommended)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:235
+msgid "Redis (ElastiCache recommended)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:236
+msgid "DEBUG=False"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:237
+msgid "WhiteNoise/CDN for static files"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:238
+msgid "Production email service (Mailgun/SES)"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:239
+msgid "Sentry for error tracking"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:241
+msgid "See :doc:`../installation/index` and :doc:`../deployment/index`."
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:244
+msgid "Further Reading"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:246
+msgid "**Architecture Details:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:248
+msgid ":doc:`settings-structure` - Settings organization"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:249
+msgid ":doc:`multi-tenancy` - Multi-tenant design"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:250
+msgid ":doc:`authentication` - Auth system"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:251
+msgid ":doc:`permission-levels` - Permission system"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:252
+msgid ":doc:`database-schema` - Database design"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:253
+msgid ":doc:`url-structure` - URL routing"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:255
+msgid "**Related Documentation:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:257
+msgid ":doc:`../installation/index` - Development setup"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:258
+msgid ":doc:`../deployment/index` - Production deployment"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:259
+msgid ":doc:`../api/index` - API documentation"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:260
+msgid ":doc:`../models/index` - Data models"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:262
+msgid "**Comprehensive Overview:**"
+msgstr ""
+
+#: ../../developer/architecture/overview.rst:264
+msgid ""
+"For detailed architecture information with code examples and diagrams, "
+"see :doc:`index`."
+msgstr ""
+

@@ -1,0 +1,1075 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../user-guide/concepts/concepts-line-items.rst:3
+msgid "Concepts & Line Items"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:6
+msgid "**Spanish Term:** Concepto"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:8
+msgid ""
+"Understanding concepts (individual work items) in Construbot contract "
+"catalogs."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:12
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:15
+msgid "What is a Concept?"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:17
+msgid ""
+"A **Concept** (Spanish: **Concepto**) is an individual work item in a "
+"construction contract catalog. Concepts represent:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:19
+msgid "Specific types of work to be performed"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:20
+msgid "Measurable units of construction activities"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:21
+msgid "Line items for billing and tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:22
+msgid "Building blocks of estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:24
+msgid "**Model:** ``construbot.proyectos.models.Concept``"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:26
+msgid ""
+"**Key Relationship:** Concepts belong to a contract and define what work "
+"will be done, at what quantity, and at what price."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:32
+msgid "Concept Structure"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:35
+msgid "Basic Information"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:37
+msgid "**Required fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:39
+msgid "**Code** (clave) - Unique identifier within contract catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:40
+msgid "**Description** (concepto) - Description of the work"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:41
+msgid "**Unit** (unidad) - Unit of measurement"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:42
+msgid "**Quantity** (cantidad) - Total contract quantity"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:43
+msgid "**Unit Price** (precio_unitario) - Price per unit"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:44
+msgid "**Contract** (contrato) - Parent contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:46
+msgid "**Optional fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:48
+msgid "**Notes** (notas) - Additional specifications"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:49
+msgid "**Category** (categoría) - Grouping for organization"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:50
+msgid "**Order** (orden) - Display sequence"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:51
+msgid "**Active** (activo) - Whether concept is currently used"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:53
+msgid "**Calculated fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:55
+msgid "**Total** (importe) - Quantity × Unit Price"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:61
+msgid "Example Concept"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:76
+msgid "Units of Measurement"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:79
+msgid "Common Units"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:81
+msgid "Construbot supports various measurement units:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:83
+msgid "**Linear measures:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:85
+msgid "**m** - Meter"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:86
+msgid "**km** - Kilometer"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:87
+msgid "**ft** - Foot"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:89
+msgid "**Area measures:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:91
+msgid "**m²** - Square meter"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:92
+msgid "**ft²** - Square foot"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:94
+msgid "**Volume measures:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:96
+msgid "**m³** - Cubic meter"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:97
+msgid "**L** - Liter"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:99
+msgid "**Weight measures:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:101
+msgid "**kg** - Kilogram"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:102
+msgid "**ton** - Metric ton"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:104
+msgid "**Count measures:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:106
+msgid "**pza** - Piece (Spanish: pieza)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:107
+msgid "**u** - Unit"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:108
+msgid "**lot** - Lot (complete set)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:110
+msgid "**Service measures:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:112
+msgid "**hr** - Hour"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:113
+msgid "**day** - Day"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:114
+msgid "**month** - Month"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:116
+msgid "**Model:** ``construbot.proyectos.models.Units``"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:119
+msgid "Custom Units"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:121
+msgid "Add custom units as needed:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:123
+msgid "Navigate to **Units** management"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:124
+msgid "Create new unit with abbreviation and description"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:125
+msgid "Use in concept catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:131
+msgid "Creating Concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:134
+msgid "Method 1: Manual Entry"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:137
+msgid "Step 1: Access Contract Catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:139
+msgid "Navigate to the contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:140
+msgid "Find **\"Concepts\"** or **\"Catálogo de Conceptos\"** section"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:141
+msgid "Click **\"Add Concept\"** or **\"Agregar Concepto\"**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:144
+msgid "Step 2: Enter Concept Details"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:158
+msgid "Step 3: Save"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:160
+msgid "Click **\"Save\"** to add this concept to the catalog."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:162
+msgid "**Repeat** for all concepts in the contract."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:165
+msgid "Method 2: Excel Import"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:167
+msgid "For large contracts with many concepts:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:170
+msgid "Step 1: Prepare Excel File"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:172
+msgid "Create spreadsheet with columns:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:181
+msgid "Step 2: Import to Construbot"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:183
+msgid "Navigate to contract concepts section"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:184
+msgid "Click **\"Import from Excel\"** or **\"Importar desde Excel\"**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:185
+msgid "Select your prepared file"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:186
+msgid "Map columns (if not auto-detected)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:187
+msgid "Review and confirm import"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:189
+msgid "**Benefit:** Quickly populate catalog with dozens or hundreds of concepts."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:195
+msgid "Method 3: Copy from Template"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:197
+msgid "If you have standard catalogs:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:199
+msgid "Create \"template\" contract with common concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:200
+msgid "When creating new contract, select **\"Copy catalog from...\"**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:201
+msgid "Choose template contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:202
+msgid "All concepts copied to new contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:203
+msgid "Edit quantities and prices as needed"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:205
+msgid "**Use case:** Repetitive project types with similar work items."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:208
+msgid "Catalog Organization"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:211
+msgid "Concept Codes"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:213
+msgid "Use structured coding system for organization:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:215
+msgid "**Format:** ``[Category]-[Subcategory]-[Sequence]``"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:217
+msgid "**Examples:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:228
+msgid "**Benefits:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:230
+msgid "Easy sorting and grouping"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:231
+msgid "Quick reference"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:232
+msgid "Professional appearance on documents"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:235
+msgid "Categories"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:237
+msgid "Group concepts into categories:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:239
+msgid "**Preliminary Work:** Site prep, mobilization"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:240
+msgid "**Earthwork:** Excavation, compaction"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:241
+msgid "**Concrete Work:** Foundations, slabs, columns"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:242
+msgid "**Masonry:** Block walls, brick veneer"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:243
+msgid "**Finishes:** Flooring, painting, trim"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:244
+msgid "**MEP:** Mechanical, electrical, plumbing"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:246
+msgid "**Purpose:** Organize large catalogs, generate category subtotals."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:249
+msgid "Display Order"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:251
+msgid "Use the **Order** field to control sequence:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:253
+msgid "Lower numbers appear first"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:254
+msgid "Group related concepts together"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:255
+msgid "Match typical construction sequence"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:258
+msgid "Using Concepts in Estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:261
+msgid "Concept Selection"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:263
+msgid "When creating an estimate:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:265
+msgid "Choose concepts from contract catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:266
+msgid "Enter quantity completed this period"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:267
+msgid "System uses unit price from catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:268
+msgid "Calculate line item subtotal automatically"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:270
+msgid "**Example:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:288
+msgid "Quantity Tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:290
+msgid "Construbot tracks for each concept:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:292
+msgid "**Contract Quantity:** Original scope"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:293
+msgid "**Billed to Date:** Cumulative from all estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:294
+msgid "**Remaining:** Contract - Billed"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:295
+msgid "**Over/Under:** If billed exceeds contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:297
+msgid "**Status Indicators:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:299
+msgid "✓ Complete (100% billed)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:300
+msgid "⚠ Over-billed (>100%)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:301
+msgid "◷ In Progress (<100%)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:302
+msgid "○ Not Started (0%)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:308
+msgid "Price Changes"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:311
+msgid "Unit Price Adjustments"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:313
+msgid "If unit price needs to change:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:315
+msgid "**Option 1: Change Order**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:317
+msgid "Create formal change order"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:318
+msgid "Update concept unit price"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:319
+msgid "Document reason in notes"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:320
+msgid "Get client approval"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:322
+msgid "**Option 2: New Concept**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:324
+msgid "Keep original concept as-is"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:325
+msgid "Create new concept with adjusted price"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:326
+msgid "Use for future estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:328
+msgid ""
+"**Best Practice:** Document all price changes with change order "
+"references."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:331
+msgid "Quantity Adjustments"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:333
+msgid "If contract quantity changes:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:335
+msgid "**Increase Quantity:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:337
+#: ../../user-guide/concepts/concepts-line-items.rst:343
+msgid "Update concept quantity"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:338
+msgid "Document change order"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:339
+msgid "Difference becomes additional scope"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:341
+msgid "**Decrease Quantity:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:344
+msgid "Adjust estimates if needed"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:345
+msgid "Credit or reduce billing"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:348
+msgid "Hierarchical Contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:351
+msgid "Concept Inheritance"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:353
+msgid "For parent-child contract structures:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:355
+msgid "**Parent Contract:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:357
+msgid "Contains high-level concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:358
+msgid "Rolled-up quantities and prices"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:359
+msgid "Summary-level tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:361
+msgid "**Subcontract:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:363
+msgid "Detailed breakdown of parent concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:364
+msgid "Independent catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:365
+msgid "Separate tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:367
+msgid ""
+"**Relationship:** Subcontract concepts can reference parent concepts for "
+"rollup reporting."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:370
+msgid "Best Practices"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:372
+msgid "**1. Use clear, descriptive descriptions:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:379
+msgid "**2. Include specifications in description:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:381
+msgid "Key details like:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:383
+msgid "Material grades"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:384
+msgid "Installation methods"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:385
+msgid "Included components"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:387
+msgid "**3. Consistent unit usage:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:394
+msgid "**4. Logical code structure:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:396
+msgid "Use systematic coding for easy reference."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:398
+msgid "**5. One concept = one measurable item:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:410
+msgid "**6. Price verification:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:412
+msgid "Before importing or saving:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:414
+msgid "Verify unit prices match contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:415
+msgid "Check decimal places"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:416
+msgid "Confirm total calculations"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:418
+msgid "**7. Regular catalog review:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:420
+msgid "Remove unused concepts (mark inactive)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:421
+msgid "Update prices for escalation"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:422
+msgid "Correct errors promptly"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:425
+msgid "Common Scenarios"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:428
+msgid "Scenario 1: Standard Building Contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:430
+#: ../../user-guide/concepts/concepts-line-items.rst:457
+#: ../../user-guide/concepts/concepts-line-items.rst:473
+msgid "**Setup:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:432
+msgid "50 concepts across 8 categories"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:433
+msgid "Mix of quantities (m³, m², kg, pza)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:434
+msgid "Total contract value $2,000,000"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:436
+msgid "**Catalog Structure:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:455
+msgid "Scenario 2: Unit Price Contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:459
+msgid "Payment based on actual quantities"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:460
+msgid "Original quantities are estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:461
+msgid "Final billing based on as-built"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:463
+msgid "**Process:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:465
+msgid "Set up catalog with estimated quantities"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:466
+msgid "Bill actual quantities in estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:467
+msgid "Final total may exceed or underbid original estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:468
+msgid "Document variations with notes"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:471
+msgid "Scenario 3: Lump Sum Items"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:475
+msgid "Some work paid as lump sum, not unit price"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:477
+msgid "**Configuration:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:488
+#, python-format
+msgid "**Billing:** Bill 100% in first estimate or progressive percentage."
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:491
+msgid "Reporting"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:494
+msgid "Catalog Reports"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:496
+msgid "Available reports:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:498
+msgid "**Complete Catalog:** All concepts with quantities and prices"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:499
+msgid "**Category Summary:** Totals by category"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:500
+msgid "**Price List:** Unit prices for reference"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:501
+msgid "**Quantity Tracking:** Contract vs. billed quantities"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:507
+msgid "Progress Reports"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:509
+msgid "Track project completion:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:511
+msgid "**Percentage Complete:** By quantity for each concept"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:512
+msgid "**Value Complete:** Dollar value billed to date"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:513
+msgid "**Remaining Work:** Unbilled quantities and values"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:516
+msgid "Export Options"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:518
+msgid "**PDF:** Formatted catalog for printing/sharing"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:519
+msgid "**Excel:** Editable spreadsheet for analysis"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:520
+msgid "**CSV:** For import to estimating software"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:523
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:525
+msgid "**Concept not appearing in estimate:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:527
+msgid "Verify concept is marked \"Active\""
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:528
+msgid "Check concept belongs to correct contract"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:529
+msgid "Confirm concept has quantity > 0"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:530
+msgid "Ensure user has permission to view"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:532
+msgid "**Unit price won't update:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:534
+msgid "Check if concept is linked to approved estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:535
+msgid "Review permission level (may require higher access)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:536
+msgid "Confirm change order approval if required"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:538
+msgid "**Total calculation incorrect:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:540
+msgid "Verify quantity and unit price values"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:541
+msgid "Check for decimal place errors"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:542
+msgid "Confirm proper unit of measurement"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:543
+msgid "Review for manual overrides"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:545
+msgid "**Import failed:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:547
+msgid "Check Excel file format (must be .xlsx or .xls)"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:548
+msgid "Verify column headers match expected names"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:549
+msgid "Ensure no empty required fields"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:550
+msgid "Review for special characters in text"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:552
+msgid "**Over-billing warnings:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:554
+msgid "Review estimate quantities vs. contract quantities"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:555
+msgid "Check if change orders increased contract scope"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:556
+msgid "Verify cumulative calculations are correct"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:557
+msgid "Document justification if intentional"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:560
+msgid "Integration with Estimating"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:562
+msgid "If you use external estimating software:"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:564
+msgid "**Export from Estimating Tool:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:566
+msgid "Generate final estimate with quantities and prices"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:567
+msgid "Export to Excel format"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:568
+msgid "Import to Construbot as contract catalog"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:570
+msgid "**Sync Pricing:**"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:572
+msgid "Keep Construbot catalog as master"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:573
+msgid "Export for estimating template"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:574
+msgid "Import updated pricing after bid"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:577
+msgid "See Also"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:579
+msgid ":doc:`projects-contracts` - Contract setup and structure"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:580
+msgid ":doc:`estimates` - Using concepts in estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:581
+msgid ":doc:`/user-guide/workflows/importing-catalogs` - Excel import workflows"
+msgstr ""
+
+#: ../../user-guide/concepts/concepts-line-items.rst:582
+msgid ":doc:`/_glossary/domain-terms` - Complete terminology"
+msgstr ""
+

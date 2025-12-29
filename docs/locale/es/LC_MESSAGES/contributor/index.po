@@ -1,0 +1,416 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contributor/index.rst:3
+msgid "Contributor Guide"
+msgstr ""
+
+#: ../../contributor/index.rst:5
+msgid "Welcome to the Construbot contributor documentation!"
+msgstr ""
+
+#: ../../contributor/index.rst:8
+msgid "Overview"
+msgstr ""
+
+#: ../../contributor/index.rst:10
+msgid ""
+"Thank you for your interest in contributing to Construbot! This guide "
+"covers everything you need to know about contributing code, "
+"documentation, translations, and more."
+msgstr ""
+
+#: ../../contributor/index.rst:13
+msgid "**First time contributor?** Start with :doc:`getting-started`"
+msgstr ""
+
+#: ../../contributor/index.rst:16
+msgid "Ways to Contribute"
+msgstr ""
+
+#: ../../contributor/index.rst:18
+msgid "💻 **Code Contributions**"
+msgstr ""
+
+#: ../../contributor/index.rst:20
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../contributor/index.rst:21
+msgid "New features"
+msgstr ""
+
+#: ../../contributor/index.rst:22
+msgid "Performance improvements"
+msgstr ""
+
+#: ../../contributor/index.rst:23
+msgid "Code refactoring"
+msgstr ""
+
+#: ../../contributor/index.rst:25
+msgid "📚 **Documentation**"
+msgstr ""
+
+#: ../../contributor/index.rst:27
+msgid "Fix typos and errors"
+msgstr ""
+
+#: ../../contributor/index.rst:28
+msgid "Improve existing docs"
+msgstr ""
+
+#: ../../contributor/index.rst:29
+msgid "Add new guides"
+msgstr ""
+
+#: ../../contributor/index.rst:30
+msgid "Translate to Spanish"
+msgstr ""
+
+#: ../../contributor/index.rst:32
+msgid "🌍 **Translations**"
+msgstr ""
+
+#: ../../contributor/index.rst:34
+msgid "Translate UI strings"
+msgstr ""
+
+#: ../../contributor/index.rst:35
+msgid "Update Spanish→English glossary"
+msgstr ""
+
+#: ../../contributor/index.rst:36
+msgid "Review translations"
+msgstr ""
+
+#: ../../contributor/index.rst:38
+msgid "🐛 **Bug Reports**"
+msgstr ""
+
+#: ../../contributor/index.rst:40
+msgid "Report issues"
+msgstr ""
+
+#: ../../contributor/index.rst:41
+msgid "Provide reproduction steps"
+msgstr ""
+
+#: ../../contributor/index.rst:42
+msgid "Suggest fixes"
+msgstr ""
+
+#: ../../contributor/index.rst:44
+msgid "✨ **Feature Requests**"
+msgstr ""
+
+#: ../../contributor/index.rst:46
+msgid "Propose new features"
+msgstr ""
+
+#: ../../contributor/index.rst:47
+msgid "Discuss improvements"
+msgstr ""
+
+#: ../../contributor/index.rst:48
+msgid "Vote on proposals"
+msgstr ""
+
+#: ../../contributor/index.rst:51
+msgid "Quick Start"
+msgstr ""
+
+#: ../../contributor/index.rst:53
+msgid "**1. Fork and Clone:**"
+msgstr ""
+
+#: ../../contributor/index.rst:61
+msgid "**2. Set up development environment:**"
+msgstr ""
+
+#: ../../contributor/index.rst:73
+msgid "**3. Create feature branch:**"
+msgstr ""
+
+#: ../../contributor/index.rst:79
+msgid "**4. Make changes and test:**"
+msgstr ""
+
+#: ../../contributor/index.rst:85
+msgid "**5. Submit pull request**"
+msgstr ""
+
+#: ../../contributor/index.rst:87
+msgid "See :doc:`getting-started` for detailed steps."
+msgstr ""
+
+#: ../../contributor/index.rst:90
+msgid "Development Workflow"
+msgstr ""
+
+#: ../../contributor/index.rst:92
+msgid "**1. Find an issue or create one**"
+msgstr ""
+
+#: ../../contributor/index.rst:94
+msgid "Browse https://github.com/javier-llamas/construbot/issues"
+msgstr ""
+
+#: ../../contributor/index.rst:96
+msgid "**2. Discuss approach**"
+msgstr ""
+
+#: ../../contributor/index.rst:98
+msgid "Comment on issue before starting major work"
+msgstr ""
+
+#: ../../contributor/index.rst:100
+msgid "**3. Write code**"
+msgstr ""
+
+#: ../../contributor/index.rst:102
+msgid "Follow :doc:`code-style` guidelines"
+msgstr ""
+
+#: ../../contributor/index.rst:104
+msgid "**4. Write tests**"
+msgstr ""
+
+#: ../../contributor/index.rst:106
+msgid "See :doc:`testing/index`"
+msgstr ""
+
+#: ../../contributor/index.rst:108
+msgid "**5. Update documentation**"
+msgstr ""
+
+#: ../../contributor/index.rst:110
+msgid "Document new features"
+msgstr ""
+
+#: ../../contributor/index.rst:112
+msgid "**6. Submit PR**"
+msgstr ""
+
+#: ../../contributor/index.rst:114
+msgid "Include clear description and tests"
+msgstr ""
+
+#: ../../contributor/index.rst:117
+msgid "Code Style"
+msgstr ""
+
+#: ../../contributor/index.rst:119
+msgid "**Python:**"
+msgstr ""
+
+#: ../../contributor/index.rst:121
+msgid "Follow PEP 8"
+msgstr ""
+
+#: ../../contributor/index.rst:122
+msgid "Use Black for formatting"
+msgstr ""
+
+#: ../../contributor/index.rst:123
+msgid "Type hints encouraged"
+msgstr ""
+
+#: ../../contributor/index.rst:124
+msgid "Docstrings for public APIs"
+msgstr ""
+
+#: ../../contributor/index.rst:126
+msgid "**Django:**"
+msgstr ""
+
+#: ../../contributor/index.rst:128
+msgid "Follow Django best practices"
+msgstr ""
+
+#: ../../contributor/index.rst:129
+msgid "Use Django's built-in features"
+msgstr ""
+
+#: ../../contributor/index.rst:130
+msgid "Company-scope all queries"
+msgstr ""
+
+#: ../../contributor/index.rst:132
+msgid "See :doc:`code-style` for complete guidelines."
+msgstr ""
+
+#: ../../contributor/index.rst:135
+msgid "Testing"
+msgstr ""
+
+#: ../../contributor/index.rst:137
+msgid "**Run tests:**"
+msgstr ""
+
+#: ../../contributor/index.rst:151
+msgid "See :doc:`testing/index` for testing guide."
+msgstr ""
+
+#: ../../contributor/index.rst:154
+msgid "Documentation"
+msgstr ""
+
+#: ../../contributor/index.rst:156
+msgid "**Build docs:**"
+msgstr ""
+
+#: ../../contributor/index.rst:164
+msgid "**Auto-rebuild:**"
+msgstr ""
+
+#: ../../contributor/index.rst:170
+msgid "See :doc:`documentation/index` for documentation guidelines."
+msgstr ""
+
+#: ../../contributor/index.rst:173
+msgid "Translation"
+msgstr ""
+
+#: ../../contributor/index.rst:175
+msgid "**Spanish→English glossary:**"
+msgstr ""
+
+#: ../../contributor/index.rst:177
+msgid "See :doc:`translation/glossary` for complete term mappings."
+msgstr ""
+
+#: ../../contributor/index.rst:179
+msgid "**Add translations:**"
+msgstr ""
+
+#: ../../contributor/index.rst:187
+msgid "See :doc:`translation/index` for translation guide."
+msgstr ""
+
+#: ../../contributor/index.rst:190
+msgid "Pull Request Guidelines"
+msgstr ""
+
+#: ../../contributor/index.rst:192
+msgid "**Before submitting:**"
+msgstr ""
+
+#: ../../contributor/index.rst:194
+msgid "✅ Tests pass (``make test``)"
+msgstr ""
+
+#: ../../contributor/index.rst:196
+msgid "✅ Code follows style guide"
+msgstr ""
+
+#: ../../contributor/index.rst:198
+msgid "✅ Documentation updated"
+msgstr ""
+
+#: ../../contributor/index.rst:200
+msgid "✅ Commits are clear and atomic"
+msgstr ""
+
+#: ../../contributor/index.rst:202
+msgid "✅ PR description explains changes"
+msgstr ""
+
+#: ../../contributor/index.rst:204
+msgid "**PR template:**"
+msgstr ""
+
+#: ../../contributor/index.rst:228
+msgid "Community"
+msgstr ""
+
+#: ../../contributor/index.rst:230
+msgid "**Be respectful and inclusive**"
+msgstr ""
+
+#: ../../contributor/index.rst:232
+msgid "We follow the Contributor Covenant Code of Conduct."
+msgstr ""
+
+#: ../../contributor/index.rst:234
+msgid "**Ask for help**"
+msgstr ""
+
+#: ../../contributor/index.rst:236
+msgid "GitHub Issues"
+msgstr ""
+
+#: ../../contributor/index.rst:237
+msgid "GitHub Discussions (if available)"
+msgstr ""
+
+#: ../../contributor/index.rst:239
+msgid "**Give feedback**"
+msgstr ""
+
+#: ../../contributor/index.rst:241
+msgid "Your input helps improve Construbot!"
+msgstr ""
+
+#: ../../contributor/index.rst:244
+msgid "Documentation Sections"
+msgstr ""
+
+#: ../../contributor/index.rst:256
+msgid "Resources"
+msgstr ""
+
+#: ../../contributor/index.rst:258
+msgid "**GitHub:** https://github.com/javier-llamas/construbot"
+msgstr ""
+
+#: ../../contributor/index.rst:259
+msgid "**Issues:** https://github.com/javier-llamas/construbot/issues"
+msgstr ""
+
+#: ../../contributor/index.rst:260
+msgid "**Developer Docs:** :doc:`/developer/index`"
+msgstr ""
+
+#: ../../contributor/index.rst:261
+msgid "**Architecture:** :doc:`/developer/architecture/index`"
+msgstr ""
+
+#: ../../contributor/index.rst:264
+msgid "License"
+msgstr ""
+
+#: ../../contributor/index.rst:266
+msgid ""
+"By contributing, you agree that your contributions will be licensed under"
+" the AGPLv3 license."
+msgstr ""
+
+#: ../../contributor/index.rst:269
+msgid "Thank You"
+msgstr ""
+
+#: ../../contributor/index.rst:271
+msgid ""
+"Thank you for contributing to Construbot! Your contributions help make "
+"this project better for everyone."
+msgstr ""
+

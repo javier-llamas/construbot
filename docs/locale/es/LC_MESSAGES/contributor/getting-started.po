@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contributor/getting-started.rst:3
+msgid "Getting Started"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:5
+msgid "First steps for contributing to Construbot."
+msgstr ""
+
+#: ../../contributor/getting-started.rst:8
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:10
+msgid "**Required:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:12
+msgid "Git"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:13
+msgid "Python 3.9.17+"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:14
+msgid "Docker and Docker Compose (recommended)"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:16
+msgid "**Or for local development:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:18
+msgid "PostgreSQL 12+"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:19
+msgid "Redis 6+"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:20
+msgid "Virtual environment"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:23
+msgid "Fork and Clone"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:25
+msgid "**1. Fork repository:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:27
+msgid "Visit https://github.com/javier-llamas/construbot and click \"Fork\""
+msgstr ""
+
+#: ../../contributor/getting-started.rst:29
+msgid "**2. Clone your fork:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:36
+msgid "**3. Add upstream remote:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:43
+msgid "Development Setup"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:45
+msgid "**Using Docker (Recommended):**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:58
+msgid "**Using Local Environment:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:76
+msgid "Making Changes"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:78
+msgid "**1. Create feature branch:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:84
+msgid "**2. Make changes**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:86
+msgid "**3. Run tests:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:92
+msgid "**4. Commit:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:99
+msgid "**5. Push:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:105
+msgid "**6. Create Pull Request on GitHub**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:108
+msgid "Code Style"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:110
+msgid "**Format code:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:120
+msgid "**Lint:**"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:126
+msgid "See :doc:`code-style` for complete guidelines."
+msgstr ""
+
+#: ../../contributor/getting-started.rst:129
+msgid "See Also"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:131
+msgid ":doc:`index` - Contributor guide home"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:132
+msgid ":doc:`testing/index` - Testing guide"
+msgstr ""
+
+#: ../../contributor/getting-started.rst:133
+msgid ":doc:`/developer/installation/index` - Development setup"
+msgstr ""
+

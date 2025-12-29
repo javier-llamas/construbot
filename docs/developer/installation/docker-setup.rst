@@ -4,10 +4,6 @@ Docker Setup
 
 Complete guide to setting up Construbot with Docker for local development.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 .. note::
    **Recommended Method:** Docker provides the easiest and most consistent development environment across all platforms.
 

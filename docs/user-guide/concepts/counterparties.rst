@@ -7,10 +7,6 @@ Counterparties
 
 Understanding counterparties (business partners) in Construbot.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 What is a Counterparty?
 =======================
 

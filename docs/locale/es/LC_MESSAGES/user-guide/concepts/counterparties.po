@@ -1,0 +1,491 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../user-guide/concepts/counterparties.rst:3
+msgid "Counterparties"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:6
+msgid "**Spanish Term:** Contraparte"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:8
+msgid "Understanding counterparties (business partners) in Construbot."
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:12
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:15
+msgid "What is a Counterparty?"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:17
+msgid ""
+"A **Counterparty** (Spanish: **Contraparte**) is any business entity you "
+"work with on construction projects. This includes:"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:19
+msgid "**Clients** who hire your company"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:20
+msgid "**Subcontractors** who perform specialized work"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:21
+msgid "**Piecework Contractors** who are paid by completed work"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:23
+msgid "**Model:** ``construbot.proyectos.models.Contraparte``"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:29
+msgid "Types of Counterparties"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:31
+msgid "Construbot supports three types of counterparties:"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:34
+msgid "1. Cliente (Client)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:36
+#: ../../user-guide/concepts/counterparties.rst:56
+#: ../../user-guide/concepts/counterparties.rst:77
+msgid "**Who they are:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:38
+msgid "Organizations or individuals who hire your company"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:39
+msgid "The entity paying for the project"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:40
+msgid "The contract owner"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:42
+#: ../../user-guide/concepts/counterparties.rst:62
+#: ../../user-guide/concepts/counterparties.rst:83
+msgid "**Use for:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:44
+msgid "Main construction contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:45
+msgid "Service agreements"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:46
+msgid "Project owners"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:48
+msgid ""
+"**Example:** \"Acme Corporation hires your company to build a new office "
+"building\""
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:54
+msgid "2. Subcontratista (Subcontractor)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:58
+msgid "Specialized contractors performing specific work"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:59
+msgid "Hired by your company for projects"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:60
+msgid "Provide specialized services (electrical, plumbing, etc.)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:64
+msgid "Electrical work contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:65
+msgid "Plumbing subcontracts"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:66
+msgid "HVAC installations"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:67
+msgid "Any specialized trade work"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:69
+msgid ""
+"**Example:** \"Your company hires an electrical contractor for building "
+"wiring\""
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:75
+msgid "3. Destajista (Piecework Contractor)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:79
+msgid "Contractors paid by completed work units"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:80
+msgid "Not hourly or salaried"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:81
+msgid "Compensation based on quantity completed"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:85
+msgid "Construction work paid by square meter"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:86
+msgid "Installations paid per unit"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:87
+msgid "Any work compensated by output"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:89
+msgid "**Example:** \"Mason paid $50 per square meter of wall built\""
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:95
+msgid "Counterparty Information"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:97
+msgid "Each counterparty record includes:"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:100
+msgid "Basic Information"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:102
+msgid "**Required fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:104
+msgid "**Name** (nombre) - Company or individual name"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:105
+msgid "**Type** (tipo) - Cliente, Subcontratista, or Destajista"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:106
+msgid "**Company** - Your company (for multi-tenant isolation)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:108
+msgid "**Optional fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:110
+msgid "**RFC** - Tax ID number (Mexico)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:111
+msgid "**Address** (dirección)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:112
+msgid "**Phone** (teléfono)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:113
+msgid "**Email**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:114
+msgid "**Contact person** (persona de contacto)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:115
+msgid "**Notes** (notas)"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:121
+msgid "Creating a Counterparty"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:124
+msgid "Step 1: Access Counterparty List"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:126
+msgid "Log in to Construbot"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:127
+msgid "Navigate to **Proyectos → Contrapartes**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:128
+msgid "Click **\"New Counterparty\"** or **\"Agregar Contraparte\"**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:134
+msgid "Step 2: Fill Basic Information"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:144
+msgid "Step 3: Add Contact Details"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:153
+msgid "Step 4: Save"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:155
+msgid "Click **\"Save\"** or **\"Guardar\"** to create the counterparty."
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:158
+msgid "Using Counterparties"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:161
+msgid "In Contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:163
+msgid "When creating a contract (Contrato):"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:165
+msgid "Select counterparty from dropdown"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:166
+msgid ""
+"Dropdown filtered by: - Your active company - Active counterparties only "
+"- Appropriate type for contract"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:171
+#: ../../user-guide/concepts/counterparties.rst:230
+msgid "**Example:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:173
+msgid "**Client contracts:** Only \"Cliente\" type available"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:174
+msgid "**Subcontracts:** Only \"Subcontratista\" and \"Destajista\""
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:180
+msgid "In Sites"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:182
+msgid "Sites (Sitios) are linked to **Client** counterparties:"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:184
+msgid "Each site belongs to a specific client"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:185
+msgid "Multiple sites per client allowed"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:186
+msgid "Sites used for contract location"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:188
+msgid "See :doc:`sites-contacts` for details."
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:191
+msgid "Best Practices"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:193
+msgid "**1. Use descriptive names:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:200
+msgid "**2. Keep contact information current:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:202
+msgid "Update phone and email when changes occur."
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:204
+msgid "**3. One counterparty per legal entity:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:206
+msgid "Don't create duplicates for different contacts at same company."
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:208
+msgid "**4. Use appropriate type:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:210
+msgid "Cliente: When they're paying you"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:211
+msgid "Subcontratista: When you're paying them for specialized work"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:212
+msgid "Destajista: When payment is unit-based"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:214
+msgid "**5. Deactivate instead of delete:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:216
+msgid "Preserves historical data and relationships."
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:219
+msgid "Common Scenarios"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:222
+msgid "Scenario 1: Client with Multiple Sites"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:224
+#: ../../user-guide/concepts/counterparties.rst:239
+msgid "**Setup:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:226
+msgid "Create one \"Cliente\" counterparty for the client"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:227
+msgid "Create multiple sites under that client"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:228
+msgid "Create contracts associated with different sites"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:232
+msgid "Client: \"National Retail Corp\""
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:233
+msgid "Sites: \"Store #101 - Dallas\", \"Store #102 - Houston\""
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:234
+msgid "Contracts: One contract per store"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:237
+msgid "Scenario 2: Regular Subcontractor"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:241
+msgid "Create \"Subcontratista\" counterparty"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:242
+msgid "Mark as active"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:243
+msgid "Reuse for multiple projects"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:246
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:248
+msgid "**Can't find counterparty in dropdown:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:250
+msgid "Check counterparty is marked \"Active\""
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:251
+msgid "Verify counterparty type matches contract type"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:252
+msgid "Confirm counterparty belongs to your active company"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:254
+msgid "**Can't delete counterparty:**"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:256
+msgid "Counterparties with contracts cannot be deleted. Instead:"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:258
+msgid "Mark as inactive"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:259
+msgid "Add note explaining why retired"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:262
+msgid "See Also"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:264
+msgid ":doc:`projects-contracts` - Creating contracts with counterparties"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:265
+msgid ":doc:`sites-contacts` - Sites linked to client counterparties"
+msgstr ""
+
+#: ../../user-guide/concepts/counterparties.rst:266
+msgid ":doc:`/_glossary/domain-terms` - Complete terminology"
+msgstr ""
+

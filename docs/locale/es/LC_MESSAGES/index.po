@@ -1,0 +1,517 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../index.rst:156 ../../index.rst:271
+msgid "User Guide"
+msgstr "Guía del Usuario"
+
+#: ../../index.rst:168 ../../index.rst:284
+msgid "Developer Documentation"
+msgstr "Documentación para Desarrolladores"
+
+#: ../../index.rst:179 ../../index.rst:294
+msgid "Contributor Guide"
+msgstr "Guía del Colaborador"
+
+#: ../../index.rst:189 ../../index.rst:301
+msgid "Reference"
+msgstr "Referencia"
+
+#: ../../index.rst:3
+msgid "Construbot Documentation"
+msgstr "Documentación de Construbot"
+
+#: ../../index.rst:-1
+msgid "Python Version"
+msgstr "Versión de Python"
+
+#: ../../index.rst:-1
+msgid "Django Version"
+msgstr "Versión de Django"
+
+#: ../../index.rst:-1
+msgid "License"
+msgstr "Licencia"
+
+#: ../../index.rst:17
+msgid ""
+"**Una Solución Operativa para Constructoras** | An Operational Solution "
+"for Construction Companies"
+msgstr ""
+"**Una Solución Operativa para Constructoras** | Una Solución Operativa "
+"para Empresas Constructoras"
+
+#: ../../index.rst:19
+msgid ""
+"Construbot is a comprehensive Django-based construction management system"
+" for tracking contracts, estimates, counterparties, and financial "
+"operations. Built with multi-tenancy, hierarchical data structures, and a"
+" powerful REST API."
+msgstr ""
+"Construbot es un sistema integral de gestión de construcción basado en Django"
+" para el seguimiento de contratos, estimaciones, contrapartes y "
+"operaciones financieras. Construido con multi-tenencia, estructuras de datos jerárquicas y una"
+" potente API REST."
+
+#: ../../index.rst:22
+msgid ""
+"**Language Note:** While the codebase uses Spanish terminology (Contrato,"
+" Estimación, etc.), this documentation is primarily in English with "
+"Spanish translations available. See :doc:`_glossary/domain-terms` for "
+"complete term translations."
+msgstr ""
+"**Nota sobre el idioma:** Aunque el código base usa terminología en español (Contrato,"
+" Estimación, etc.), esta documentación está principalmente en inglés con "
+"traducciones al español disponibles. Consulte :doc:`_glossary/domain-terms` para "
+"traducciones completas de términos."
+
+#: ../../index.rst:25
+msgid "Quick Links"
+msgstr "Enlaces Rápidos"
+
+#: ../../index.rst:67
+msgid "What is Construbot?"
+msgstr "¿Qué es Construbot?"
+
+#: ../../index.rst:69
+msgid "Construbot helps construction companies manage:"
+msgstr "Construbot ayuda a las empresas constructoras a gestionar:"
+
+#: ../../index.rst:71
+msgid ""
+"✅ **Hierarchical Contracts** - Parent contracts with subcontracts using "
+"tree structures"
+msgstr ""
+"✅ **Contratos Jerárquicos** - Contratos padre con subcontratos usando "
+"estructuras de árbol"
+
+#: ../../index.rst:73
+msgid ""
+"✅ **Progress Estimates** - Track work completion and payments "
+"(Estimaciones)"
+msgstr ""
+"✅ **Estimaciones de Avance** - Seguimiento de la finalización de trabajos y pagos "
+"(Estimaciones)"
+
+#: ../../index.rst:75
+msgid ""
+"✅ **Counterparty Management** - Clients, subcontractors, and piecework "
+"contractors"
+msgstr ""
+"✅ **Gestión de Contrapartes** - Clientes, subcontratistas y "
+"destajistas"
+
+#: ../../index.rst:77
+msgid "✅ **Financial Tracking** - Advances, retentions, and payment calculations"
+msgstr "✅ **Seguimiento Financiero** - Anticipos, retenciones y cálculos de pagos"
+
+#: ../../index.rst:79
+msgid "✅ **Multi-Company Support** - One system for multiple business entities"
+msgstr "✅ **Soporte Multi-Empresa** - Un sistema para múltiples entidades de negocio"
+
+#: ../../index.rst:81
+msgid "✅ **PDF Generation** - Automated document creation"
+msgstr "✅ **Generación de PDF** - Creación automatizada de documentos"
+
+#: ../../index.rst:83
+msgid "✅ **Excel Import/Export** - Bulk data operations"
+msgstr "✅ **Importación/Exportación Excel** - Operaciones masivas de datos"
+
+#: ../../index.rst:85
+msgid "✅ **REST API** - Mobile and external integrations"
+msgstr "✅ **API REST** - Integraciones móviles y externas"
+
+#: ../../index.rst:88
+msgid "Key Features"
+msgstr "Características Principales"
+
+#: ../../index.rst:90
+msgid "**Multi-Tenant Architecture**"
+msgstr "**Arquitectura Multi-Tenencia**"
+
+#: ../../index.rst:92
+msgid ""
+"Three-level hierarchy (Customer → Company → User) with complete data "
+"isolation between companies."
+msgstr ""
+"Jerarquía de tres niveles (Cliente → Empresa → Usuario) con completo aislamiento de datos "
+"entre empresas."
+
+#: ../../index.rst:94
+msgid "**Hierarchical Contracts**"
+msgstr "**Contratos Jerárquicos**"
+
+#: ../../index.rst:96
+msgid ""
+"Use django-treebeard for parent/child contract relationships with "
+"automatic financial aggregation."
+msgstr ""
+"Usa django-treebeard para relaciones padre/hijo de contratos con "
+"agregación financiera automática."
+
+#: ../../index.rst:98
+msgid "**Email-Based Authentication**"
+msgstr "**Autenticación Basada en Email**"
+
+#: ../../index.rst:100
+msgid ""
+"Modern authentication using email (not usernames) with six permission "
+"levels from Auxiliar to Superusuario."
+msgstr ""
+"Autenticación moderna usando email (no nombres de usuario) con seis niveles de permisos "
+"desde Auxiliar hasta Superusuario."
+
+#: ../../index.rst:102
+msgid "**Production-Ready**"
+msgstr "**Listo para Producción**"
+
+#: ../../index.rst:104
+msgid ""
+"Docker deployment, PostgreSQL database, Redis caching, Celery tasks, S3 "
+"storage, and comprehensive security."
+msgstr ""
+"Despliegue Docker, base de datos PostgreSQL, caché Redis, tareas Celery, almacenamiento S3 "
+"y seguridad integral."
+
+#: ../../index.rst:107
+msgid "Technology Stack"
+msgstr "Stack Tecnológico"
+
+#: ../../index.rst:120
+msgid "Quick Start"
+msgstr "Inicio Rápido"
+
+#: ../../index.rst:122
+msgid "**For Users:**"
+msgstr "**Para Usuarios:**"
+
+#: ../../index.rst:132
+msgid "**For Developers (Docker):**"
+msgstr "**Para Desarrolladores (Docker):**"
+
+#: ../../index.rst:148
+msgid "See :doc:`developer/installation/index` for complete setup."
+msgstr "Consulte :doc:`developer/installation/index` para la configuración completa."
+
+#: ../../index.rst:151
+msgid "Documentation Structure"
+msgstr "Estructura de la Documentación"
+
+#: ../../index.rst:153
+msgid "This documentation is organized for three audiences:"
+msgstr "Esta documentación está organizada para tres audiencias:"
+
+#: ../../index.rst:158
+msgid "**For end users** managing construction projects:"
+msgstr "**Para usuarios finales** que gestionan proyectos de construcción:"
+
+#: ../../index.rst:160
+msgid ":doc:`user-guide/introduction` - What is Construbot"
+msgstr ":doc:`user-guide/introduction` - Qué es Construbot"
+
+#: ../../index.rst:161
+msgid ":doc:`user-guide/getting-started` - First steps tutorial"
+msgstr ":doc:`user-guide/getting-started` - Tutorial de primeros pasos"
+
+#: ../../index.rst:162
+msgid ""
+":doc:`user-guide/concepts/index` - Core concepts (contracts, estimates, "
+"etc.)"
+msgstr ""
+":doc:`user-guide/concepts/index` - Conceptos fundamentales (contratos, estimaciones, "
+"etc.)"
+
+#: ../../index.rst:163
+msgid ":doc:`user-guide/workflows/index` - Step-by-step workflows"
+msgstr ":doc:`user-guide/workflows/index` - Flujos de trabajo paso a paso"
+
+#: ../../index.rst:164
+msgid ":doc:`user-guide/features/index` - Advanced features"
+msgstr ":doc:`user-guide/features/index` - Características avanzadas"
+
+#: ../../index.rst:165
+msgid ":doc:`user-guide/faq` - Common questions"
+msgstr ":doc:`user-guide/faq` - Preguntas frecuentes"
+
+#: ../../index.rst:170
+msgid "**For developers** installing or extending Construbot:"
+msgstr "**Para desarrolladores** que instalan o extienden Construbot:"
+
+#: ../../index.rst:172
+msgid ":doc:`developer/installation/index` - Development setup"
+msgstr ":doc:`developer/installation/index` - Configuración de desarrollo"
+
+#: ../../index.rst:173
+msgid ":doc:`developer/deployment/index` - Production deployment"
+msgstr ":doc:`developer/deployment/index` - Despliegue en producción"
+
+#: ../../index.rst:174
+msgid ":doc:`developer/architecture/index` - System architecture"
+msgstr ":doc:`developer/architecture/index` - Arquitectura del sistema"
+
+#: ../../index.rst:175
+msgid ":doc:`developer/api/index` - REST API reference"
+msgstr ":doc:`developer/api/index` - Referencia de API REST"
+
+#: ../../index.rst:176
+msgid ":doc:`developer/models/index` - Data models"
+msgstr ":doc:`developer/models/index` - Modelos de datos"
+
+#: ../../index.rst:181
+msgid "**For contributors** improving Construbot:"
+msgstr "**Para colaboradores** que mejoran Construbot:"
+
+#: ../../index.rst:183
+msgid ":doc:`contributor/index` - Getting started"
+msgstr ":doc:`contributor/index` - Primeros pasos"
+
+#: ../../index.rst:184
+msgid ":doc:`contributor/testing/index` - Testing guide"
+msgstr ":doc:`contributor/testing/index` - Guía de pruebas"
+
+#: ../../index.rst:185
+msgid ":doc:`contributor/translation/glossary` - Translation glossary"
+msgstr ":doc:`contributor/translation/glossary` - Glosario de traducción"
+
+#: ../../index.rst:186
+msgid ":doc:`contributor/documentation/index` - Documentation guidelines"
+msgstr ":doc:`contributor/documentation/index` - Guías de documentación"
+
+#: ../../index.rst:191
+msgid "**Quick reference** for all users:"
+msgstr "**Referencia rápida** para todos los usuarios:"
+
+#: ../../index.rst:193
+msgid ":doc:`reference/glossary` - Spanish→English terms"
+msgstr ":doc:`reference/glossary` - Términos Español→Inglés"
+
+#: ../../index.rst:194
+msgid ":doc:`reference/makefile-commands` - Development commands"
+msgstr ":doc:`reference/makefile-commands` - Comandos de desarrollo"
+
+#: ../../index.rst:195
+msgid ":doc:`_glossary/domain-terms` - Complete glossary"
+msgstr ":doc:`_glossary/domain-terms` - Glosario completo"
+
+#: ../../index.rst:198
+msgid "Popular Pages"
+msgstr "Páginas Populares"
+
+#: ../../index.rst:200
+msgid "**Getting Started:**"
+msgstr "**Primeros Pasos:**"
+
+#: ../../index.rst:202
+msgid ":doc:`user-guide/getting-started` - User tutorial"
+msgstr ":doc:`user-guide/getting-started` - Tutorial de usuario"
+
+#: ../../index.rst:203
+msgid ":doc:`developer/installation/docker-setup` - Docker development"
+msgstr ":doc:`developer/installation/docker-setup` - Desarrollo con Docker"
+
+#: ../../index.rst:204
+msgid ":doc:`developer/deployment/aws-ec2` - AWS deployment"
+msgstr ":doc:`developer/deployment/aws-ec2` - Despliegue en AWS"
+
+#: ../../index.rst:206
+msgid "**Core Concepts:**"
+msgstr "**Conceptos Fundamentales:**"
+
+#: ../../index.rst:208
+msgid ":doc:`user-guide/concepts/projects-contracts` - Understanding contracts"
+msgstr ":doc:`user-guide/concepts/projects-contracts` - Entendiendo los contratos"
+
+#: ../../index.rst:209
+msgid ":doc:`developer/architecture/multi-tenancy` - Multi-tenant architecture"
+msgstr ":doc:`developer/architecture/multi-tenancy` - Arquitectura multi-tenencia"
+
+#: ../../index.rst:210
+msgid ":doc:`_glossary/domain-terms` - Complete Spanish→English glossary"
+msgstr ":doc:`_glossary/domain-terms` - Glosario completo Español→Inglés"
+
+#: ../../index.rst:212
+msgid "**Configuration:**"
+msgstr "**Configuración:**"
+
+#: ../../index.rst:214
+msgid ":doc:`developer/installation/configuration` - Environment variables"
+msgstr ":doc:`developer/installation/configuration` - Variables de entorno"
+
+#: ../../index.rst:215
+msgid ":doc:`developer/deployment/environment-variables` - Production config"
+msgstr ":doc:`developer/deployment/environment-variables` - Configuración de producción"
+
+#: ../../index.rst:216
+msgid ":doc:`developer/architecture/settings-structure` - Django settings"
+msgstr ":doc:`developer/architecture/settings-structure` - Configuración de Django"
+
+#: ../../index.rst:219
+msgid "Spanish Terminology"
+msgstr "Terminología en Español"
+
+#: ../../index.rst:221
+msgid "The codebase uses Spanish business terminology. Key translations:"
+msgstr "El código usa terminología de negocios en español. Traducciones clave:"
+
+#: ../../index.rst:227
+msgid "Spanish"
+msgstr "Español"
+
+#: ../../index.rst:228
+msgid "English"
+msgstr "Inglés"
+
+#: ../../index.rst:229
+msgid "Description"
+msgstr "Descripción"
+
+#: ../../index.rst:230
+msgid "Contrato"
+msgstr "Contrato"
+
+#: ../../index.rst:231
+msgid "Contract / Project"
+msgstr "Contrato / Proyecto"
+
+#: ../../index.rst:232
+msgid "Main business entity"
+msgstr "Entidad de negocio principal"
+
+#: ../../index.rst:233
+msgid "Contraparte"
+msgstr "Contraparte"
+
+#: ../../index.rst:234
+msgid "Counterparty"
+msgstr "Contraparte"
+
+#: ../../index.rst:235
+msgid "Client, subcontractor, or contractor"
+msgstr "Cliente, subcontratista o destajista"
+
+#: ../../index.rst:236
+msgid "Estimación"
+msgstr "Estimación"
+
+#: ../../index.rst:237
+msgid "Estimate / Progress Payment"
+msgstr "Estimación / Pago de Avance"
+
+#: ../../index.rst:238
+msgid "Payment request for completed work"
+msgstr "Solicitud de pago por trabajo completado"
+
+#: ../../index.rst:239
+msgid "Concepto"
+msgstr "Concepto"
+
+#: ../../index.rst:240
+msgid "Concept / Line Item"
+msgstr "Concepto / Partida"
+
+#: ../../index.rst:241
+msgid "Individual work item in catalog"
+msgstr "Partida individual de trabajo en catálogo"
+
+#: ../../index.rst:242
+msgid "Retención"
+msgstr "Retención"
+
+#: ../../index.rst:243
+msgid "Retention / Withholding"
+msgstr "Retención / Retención Fiscal"
+
+#: ../../index.rst:244
+msgid "Financial withholding"
+msgstr "Retención financiera"
+
+#: ../../index.rst:245
+msgid "Sitio"
+msgstr "Sitio"
+
+#: ../../index.rst:246
+msgid "Site"
+msgstr "Sitio"
+
+#: ../../index.rst:247
+msgid "Construction site location"
+msgstr "Ubicación de obra de construcción"
+
+#: ../../index.rst:249
+msgid "See :doc:`_glossary/domain-terms` for **100+ complete translations**."
+msgstr "Consulte :doc:`_glossary/domain-terms` para **más de 100 traducciones completas**."
+
+#: ../../index.rst:252
+msgid "Repository & License"
+msgstr "Repositorio y Licencia"
+
+#: ../../index.rst:254
+msgid "**GitHub:** https://github.com/javier-llamas/construbot"
+msgstr "**GitHub:** https://github.com/javier-llamas/construbot"
+
+#: ../../index.rst:256
+msgid "**License:** GNU Affero General Public License v3 (AGPLv3)"
+msgstr "**Licencia:** GNU Affero General Public License v3 (AGPLv3)"
+
+#: ../../index.rst:258
+msgid "**Current Version:** 1.1.04"
+msgstr "**Versión Actual:** 1.1.04"
+
+#: ../../index.rst:261
+msgid "Get Help"
+msgstr "Obtener Ayuda"
+
+#: ../../index.rst:263
+msgid "**Installation Issues:** :doc:`developer/installation/index`"
+msgstr "**Problemas de Instalación:** :doc:`developer/installation/index`"
+
+#: ../../index.rst:264
+msgid "**Deployment Problems:** :doc:`developer/deployment/index`"
+msgstr "**Problemas de Despliegue:** :doc:`developer/deployment/index`"
+
+#: ../../index.rst:265
+msgid "**API Questions:** :doc:`developer/api/index`"
+msgstr "**Preguntas de API:** :doc:`developer/api/index`"
+
+#: ../../index.rst:266
+msgid "**Bug Reports:** https://github.com/javier-llamas/construbot/issues"
+msgstr "**Reportar Errores:** https://github.com/javier-llamas/construbot/issues"
+
+#: ../../index.rst:269
+msgid "Documentation Sections"
+msgstr "Secciones de Documentación"
+
+#: ../../index.rst:311
+msgid "Indices and Tables"
+msgstr "Índices y Tablas"
+
+#: ../../index.rst:313
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:314
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../index.rst:315
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
+

@@ -1,0 +1,597 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/installation/configuration.rst:3
+msgid "Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:5
+msgid ""
+"Complete guide to configuring Construbot using environment variables and "
+"settings files."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:14
+msgid "Construbot uses a layered configuration approach:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:16
+msgid "**Settings files** - Python modules in ``construbot/config/settings/``"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:17
+msgid ""
+"**Environment variables** - Loaded from ``.env`` file or system "
+"environment"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:18
+msgid "**Runtime configuration** - Django settings controlled by environment"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:20
+msgid ""
+"This follows the `Twelve-Factor App <https://12factor.net/config>`_ "
+"methodology for configuration management."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:23
+msgid "Settings Structure"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:26
+msgid "Settings Files"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:28
+msgid "Located in ``construbot/config/settings/``:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:39
+msgid "**Selection:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:41
+msgid "The active settings module is controlled by ``DJANGO_SETTINGS_MODULE``:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:51
+msgid "**Inheritance:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:53
+msgid "All environment-specific files inherit from ``base.py``:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:65
+msgid "Environment Variables"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:68
+msgid "Loading Variables"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:70
+msgid "**From .env file (recommended for development):**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:77
+msgid "Create ``.env`` in project root:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:86
+msgid "**From system environment:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:95
+msgid "**In Docker Compose:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:108
+msgid "Required Variables"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:111
+msgid "Core Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:113
+msgid "**DJANGO_SETTINGS_MODULE**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:119
+msgid "**Values:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:121
+msgid "``construbot.config.settings.local`` - Development"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:122
+msgid "``construbot.config.settings.test`` - Testing"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:123
+msgid "``construbot.config.settings.production`` - Production"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:125
+msgid "**DJANGO_SECRET_KEY**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:131
+msgid "**Generate:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:138
+msgid ""
+"**Never commit SECRET_KEY to version control!** Use different keys for "
+"development and production."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:140
+msgid "**DJANGO_DEBUG**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:148
+msgid ""
+"**Always set DEBUG=False in production!** Debug mode exposes sensitive "
+"information."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:151
+msgid "Database Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:153
+msgid "**DATABASE_URL**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:170
+msgid "**Format:** ``postgresql://[user]:[password]@[host]:[port]/[database]``"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:173
+msgid ""
+"Construbot uses ``django-environ`` to parse ``DATABASE_URL`` into "
+"Django's ``DATABASES`` setting."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:176
+msgid "Cache and Queue"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:178
+msgid "**REDIS_URL**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:191
+msgid "**Used for:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:193
+msgid "Django cache backend"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:194
+msgid "Celery message broker"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:195
+msgid "Celery result backend"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:196
+msgid "Session storage (optional)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:199
+msgid "Optional Variables"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:202
+msgid "Email Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:204
+msgid "**Development (Console Backend):**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:210
+msgid "Emails are printed to console instead of sent."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:212
+msgid "**Production (SMTP):**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:223
+msgid "**Using django-anymail (Recommended):**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:242
+msgid "**Default from email:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:250
+msgid "Static and Media Files"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:252
+msgid "**Development (default):**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:259
+msgid "**Production (S3):**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:273
+msgid "**Static files (WhiteNoise):**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:275
+msgid ""
+"No configuration needed. WhiteNoise is enabled by default in production "
+"settings."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:278
+msgid "Allowed Hosts"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:280
+msgid "**DJANGO_ALLOWED_HOSTS**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:291
+msgid ""
+"**Required in production!** Django will refuse connections from hosts not"
+" in this list."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:294
+msgid "CORS Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:296
+msgid "**CORS_ALLOWED_ORIGINS**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:303
+msgid "**CORS_ALLOW_ALL_ORIGINS**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:311
+msgid ""
+"**Never use CORS_ALLOW_ALL_ORIGINS in production!** Only allow trusted "
+"origins."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:314
+msgid "Docker Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:316
+msgid "**USE_DOCKER**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:323
+msgid "This affects:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:325
+msgid "Database host (``postgres`` vs ``localhost``)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:326
+msgid "Redis host (``redis`` vs ``localhost``)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:327
+msgid "Email host (``mailhog`` vs localhost SMTP)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:330
+msgid "Library Mode"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:332
+msgid "**CONSTRUBOT_AS_LIBRARY**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:339
+msgid "When ``True``:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:341
+msgid "Disables admin interface"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:342
+msgid "Disables account management URLs"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:343
+msgid "Disables standalone authentication"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:344
+msgid "Use Construbot as Django app in your project"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:346
+msgid "See :doc:`../library-mode` for details."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:349
+msgid "Sentry Integration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:351
+msgid "**SENTRY_DSN**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:357
+msgid "**SENTRY_ENVIRONMENT**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:363
+msgid "**SENTRY_SAMPLE_RATE**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:371
+msgid "Logging"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:373
+msgid "**LOG_LEVEL**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:380
+msgid "**Values:** DEBUG, INFO, WARNING, ERROR, CRITICAL"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:383
+msgid "Celery Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:385
+msgid "**CELERY_BROKER_URL**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:391
+msgid "Usually same as ``REDIS_URL``."
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:393
+msgid "**CELERY_RESULT_BACKEND**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:399
+msgid "**CELERY_TASK_ALWAYS_EAGER**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:407
+msgid "Configuration by Environment"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:410
+msgid "Development (.env)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:412
+msgid "Complete ``.env`` file for local development:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:448
+msgid "Testing"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:450
+msgid "Environment for running tests:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:466
+msgid "Production"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:468
+msgid "Production environment variables:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:516
+msgid "Security Settings"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:519
+msgid "Production Security Checklist"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:543
+msgid "**Run security check:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:550
+msgid "Managing Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:553
+msgid "Environment File Template"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:555
+msgid "Create ``.env.example`` as a template:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:571
+msgid "**Benefits:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:573
+msgid "Documents required variables"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:574
+msgid "Provides examples for developers"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:575
+msgid "Safe to commit (no secrets)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:578
+msgid "Secrets Management"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:580
+msgid "**Development:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:582
+msgid "Use ``.env`` file (git-ignored)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:583
+msgid "Share ``.env.example`` template"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:585
+msgid "**Production:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:587
+msgid "Use environment variables (not .env file)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:588
+msgid "Store secrets in secure vault (AWS Secrets Manager, HashiCorp Vault)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:589
+msgid "Inject secrets at runtime"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:591
+msgid "**Example with AWS Secrets Manager:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:609
+msgid "Validating Configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:611
+msgid "**Check required variables:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:624
+msgid "**Test email configuration:**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:636
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:639
+msgid "Common Issues"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:641
+msgid "**\"ImproperlyConfigured: Set the DATABASE_URL environment variable\"**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:651
+msgid "**\"SECRET_KEY is required\"**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:661
+msgid "**\"CommandError: You must set settings.ALLOWED_HOSTS\"**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:668
+msgid "**\"DisallowedHost at /\"**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:675
+msgid "**Variables not loading from .env**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:686
+msgid "Variable Precedence"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:688
+msgid "If a variable is set in multiple places, this is the priority order:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:690
+msgid "**System environment variables** (highest priority)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:691
+msgid "**.env file**"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:692
+msgid "**Settings file defaults** (lowest priority)"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:694
+msgid "Example:"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:707
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:709
+msgid ":doc:`docker-setup` - Docker environment configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:710
+msgid ":doc:`local-setup` - Local environment configuration"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:711
+msgid ":doc:`../deployment/environment-variables` - Production environment setup"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:712
+msgid ":doc:`../architecture/settings-structure` - Settings file organization"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:713
+msgid ""
+"`Django Settings Best Practices "
+"<https://docs.djangoproject.com/en/3.2/topics/settings/>`_"
+msgstr ""
+
+#: ../../developer/installation/configuration.rst:714
+msgid "`Twelve-Factor App Config <https://12factor.net/config>`_"
+msgstr ""
+

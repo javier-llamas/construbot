@@ -1,0 +1,544 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../user-guide/concepts/index.rst:3
+msgid "Core Concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:5
+msgid ""
+"Understanding Construbot's core concepts is essential for effectively "
+"managing your construction projects. This section explains the key "
+"entities and how they relate to each other."
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:9
+msgid ""
+"**Spanish Terms**: Construbot uses Spanish terminology. Each concept "
+"includes the Spanish term for reference. See :doc:`/reference/glossary` "
+"for complete translations."
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:13
+msgid "Overview"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:15
+msgid "Construbot organizes construction management around these core entities:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:-1
+#: ../../user-guide/concepts/index.rst:66
+msgid "Entity Relationships"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:21
+msgid "*(Diagram placeholder showing relationships between entities)*"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:24
+msgid "Key Entities"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:68
+msgid "Understanding how entities connect:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:71
+msgid "Contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:73
+msgid "A **Contract** (Contrato) is linked to:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:75
+msgid "**Counterparty** (Contraparte) - Who you have the contract with"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:76
+msgid "**Site** (Sitio) - Where the work happens"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:77
+msgid "**Concepts** (Conceptos) - What work will be done"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:78
+msgid "**Estimates** (Estimaciones) - Progress billing"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:79
+msgid "**Users** - Who manages the contract"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:82
+msgid "Counterparties"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:84
+msgid "A **Counterparty** (Contraparte) can have:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:86
+msgid "**Sites** (Sitios) - Multiple locations (for Clients only)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:87
+msgid "**Contacts** (Destinatarios) - People at the organization"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:88
+msgid "**Contracts** (Contratos) - Multiple projects"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:91
+msgid "Estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:93
+msgid "An **Estimate** (Estimación) links:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:95
+msgid "**Contract** (Contrato) - Which project it belongs to"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:96
+msgid "**Estimate Concepts** - Quantities completed for each work item"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:97
+msgid "**Users** - Who drafted, supervised, and authorized it"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:100
+msgid "Data Hierarchy"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:103
+msgid "Organizational Structure"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:120
+msgid "Everything is scoped to a **Company** for multi-tenancy support."
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:123
+msgid "Contract Hierarchy"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:125
+msgid "Contracts can be hierarchical:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:134
+msgid ""
+"This allows tracking of subcontractor work separately while rolling up "
+"totals to the parent."
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:136
+msgid "**Learn more:** :doc:`projects-contracts`"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:139
+msgid "Financial Flow"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:141
+msgid "Understanding the financial lifecycle:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:143
+msgid "**Contract Created**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:145
+msgid "Total amount (monto) defined"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:146
+msgid "Advance payment % (anticipo) specified"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:147
+msgid "Retentions (retenciones) configured"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:149
+msgid "**Advance Payment**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:151
+msgid "Client pays initial percentage (e.g., 10%)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:152
+msgid "Funds mobilization and initial costs"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:154
+msgid "**Work Completed**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:156
+msgid "Progress is tracked"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:157
+msgid "Estimates document completed work"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:159
+msgid "**Estimate Created**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:161
+msgid "Quantities for each concept recorded"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:162
+msgid "System calculates:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:164
+msgid "Subtotal for completed work"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:165
+msgid "Minus: Advance amortization (recovery of advance)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:166
+msgid "Minus: Retentions (withholdings)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:167
+msgid "Equals: Net payment due"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:169
+msgid "**Invoicing & Payment**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:171
+msgid "Estimate marked as invoiced (facturada)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:172
+msgid "Payment received"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:173
+msgid "Estimate marked as paid (pagada)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:175
+msgid "**Final Payment**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:177
+msgid "All work completed"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:178
+msgid "Retained amounts released"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:179
+msgid "Contract closed"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:181
+msgid "**Learn more:** :doc:`estimates`, :doc:`retentions`"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:184
+msgid "Common Workflows"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:186
+msgid "The typical workflow combines these concepts:"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:188
+msgid "**Project Setup**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:190
+msgid "Create Client (Contraparte - Cliente)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:191
+msgid "Create Site (Sitio)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:192
+msgid "Create Contacts (Destinatarios)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:193
+msgid "Create Contract (Contrato)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:194
+msgid "Add Work Items (Conceptos)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:195
+msgid "Configure Retentions (Retenciones)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:197
+msgid "**Execution**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:199
+msgid "Complete work on site"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:200
+msgid "Create Estimate (Estimación)"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:201
+msgid "Document quantities for each Concept"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:202
+msgid "Generate PDF"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:203
+msgid "Submit to client"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:205
+msgid "**Financial Tracking**"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:207
+msgid "Mark estimate as Invoiced"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:208
+msgid "Receive payment"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:209
+msgid "Mark estimate as Paid"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:210
+msgid "Monitor dashboard for outstanding amounts"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:213
+msgid "Terminology Quick Reference"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:219
+msgid "Spanish Term"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:220
+msgid "English Translation"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:221
+msgid "Description"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:222
+msgid "Contrato"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:223
+msgid "Contract / Project"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:224
+msgid "Main construction project"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:225
+msgid "Contraparte"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:226
+msgid "Counterparty"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:227
+msgid "Business partner"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:228
+msgid "Cliente"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:229
+msgid "Client"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:230
+msgid "Customer paying for work"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:231
+msgid "Destajista"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:232
+msgid "Piecework Contractor"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:233
+msgid "Worker paid by task"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:234
+msgid "Subcontratista"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:235
+msgid "Subcontractor"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:236
+msgid "Specialized contractor"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:237
+msgid "Sitio"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:238
+msgid "Site"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:239
+msgid "Construction location"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:240
+msgid "Destinatario"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:241
+msgid "Contact / Recipient"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:242
+msgid "Person at organization"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:243
+msgid "Estimación"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:244
+msgid "Estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:245
+msgid "Progress payment"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:246
+msgid "Concepto"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:247
+msgid "Concept / Line Item"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:248
+msgid "Work item"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:249
+msgid "Retención"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:250
+msgid "Retention"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:251
+msgid "Withholding"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:252
+msgid "Anticipo"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:253
+msgid "Advance"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:254
+msgid "Down payment"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:255
+msgid "Monto"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:256
+msgid "Amount"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:257
+msgid "Total value"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:259
+msgid "**Full glossary:** :doc:`/reference/glossary`"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:262
+msgid "Detailed Concepts"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:275
+msgid "Next Steps"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:277
+msgid "**Understand each concept** by reading the detailed pages"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:278
+msgid "**Learn workflows** in :doc:`/user-guide/workflows/index`"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:279
+msgid "**Explore features** in :doc:`/user-guide/features/index`"
+msgstr ""
+
+#: ../../user-guide/concepts/index.rst:282
+msgid ""
+"Start with :doc:`projects-contracts` as it's the central entity in "
+"Construbot."
+msgstr ""
+

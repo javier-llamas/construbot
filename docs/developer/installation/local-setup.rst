@@ -4,10 +4,6 @@ Local Setup
 
 Guide for setting up Construbot in a local development environment without Docker.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 .. note::
    **Consider Docker:** Docker setup is recommended for most developers. Use local setup if you prefer traditional Python development or need to integrate with other local services.
 

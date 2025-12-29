@@ -7,10 +7,6 @@ Retentions
 
 Understanding retentions (financial withholdings) in Construbot.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 What is a Retention?
 ====================
 

@@ -4,10 +4,6 @@ Deployment
 
 Production deployment guides for Construbot on various platforms and infrastructures.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

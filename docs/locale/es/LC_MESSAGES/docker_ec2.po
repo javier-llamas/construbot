@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../docker_ec2.rst:2
+msgid "Developing with Docker"
+msgstr ""
+
+#: ../../docker_ec2.rst:4
+msgid ""
+"You can develop your application in a `Docker`_ container for simpler "
+"deployment onto bare Linux machines later. This instruction assumes an "
+"`Amazon Web Services`_ EC2 instance, but it should work on any machine "
+"with Docker > 1.3 and `Docker compose`_ installed."
+msgstr ""
+
+#: ../../docker_ec2.rst:11
+msgid "Setting up"
+msgstr ""
+
+#: ../../docker_ec2.rst:13
+msgid ""
+"Docker encourages running one container for each process. This might mean"
+" one container for your web server, one for Django application and a "
+"third for your database. Once you're happy composing containers in this "
+"way you can easily add more, such as a `Redis`_ cache."
+msgstr ""
+
+#: ../../docker_ec2.rst:17
+msgid ""
+"The Docker compose tool (previously known as `fig`_) makes linking these "
+"containers easy. An example set up for your Cookiecutter Django project "
+"might look like this:"
+msgstr ""
+
+#: ../../docker_ec2.rst:34
+msgid ""
+"Each component of your application would get its own `Dockerfile`_. The "
+"rest of this example assumes you are using the `base postgres image`_ for"
+" your database. Your database settings in `config/base.py` might then "
+"look something like:"
+msgstr ""
+
+#: ../../docker_ec2.rst:51
+msgid ""
+"The `Docker compose documentation`_ explains in detail what you can "
+"accomplish in the `production.yml` file, but an example configuration "
+"might look like this:"
+msgstr ""
+
+#: ../../docker_ec2.rst:75
+msgid ""
+"We'll ignore the webserver for now (you'll want to comment that part out "
+"while we do). A working Dockerfile to run your cookiecutter application "
+"might look like this:"
+msgstr ""
+
+#: ../../docker_ec2.rst:110
+msgid ""
+"Running `sudo docker-compose -f production.yml build` will follow the "
+"instructions in your `production.yml` file and build the database "
+"container, then your webapp, before mounting your cookiecutter project "
+"files as a volume in the webapp container and linking to the database. "
+"Our example yaml file runs in development mode but changing it to "
+"production mode is as simple as commenting out the line using `runserver`"
+" and uncommenting the line using `gunicorn`."
+msgstr ""
+
+#: ../../docker_ec2.rst:112
+msgid ""
+"Both are set to run on port `0.0.0.0:8000`, which is where the Docker "
+"daemon will discover it. You can now run `sudo docker-compose -f "
+"production.yml up` and browse to `localhost:8000` to see your application"
+" running."
+msgstr ""
+
+#: ../../docker_ec2.rst:115
+msgid "Deployment"
+msgstr ""
+
+#: ../../docker_ec2.rst:117
+msgid ""
+"You'll need a webserver container for deployment. An example setup for "
+"`Nginx`_ might look like this:"
+msgstr ""
+
+#: ../../docker_ec2.rst:144
+msgid ""
+"That Dockerfile assumes you have an Nginx conf file named `site.conf` in "
+"the same directory as the webserver Dockerfile. A very basic example, "
+"which forwards traffic onto the development server or gunicorn for "
+"processing, would look like this:"
+msgstr ""
+
+#: ../../docker_ec2.rst:158
+msgid ""
+"Running `sudo docker-compose -f production.yml build webserver` will "
+"build your server container. Running `sudo docker-compose -f "
+"production.yml up` will now expose your application directly on "
+"`localhost` (no need to specify the port number)."
+msgstr ""
+
+#: ../../docker_ec2.rst:161
+msgid "Building and running your app on EC2"
+msgstr ""
+
+#: ../../docker_ec2.rst:163
+msgid "All you now need to do to run your app in production is:"
+msgstr ""
+
+#: ../../docker_ec2.rst:165
+msgid "Create an empty EC2 Linux instance (any Linux machine should do)."
+msgstr ""
+
+#: ../../docker_ec2.rst:167
+msgid ""
+"Install your preferred source control solution, Docker and Docker compose"
+" on the news instance."
+msgstr ""
+
+#: ../../docker_ec2.rst:169
+msgid ""
+"Pull in your code from source control. The root directory should be the "
+"one with your `production.yml` file in it."
+msgstr ""
+
+#: ../../docker_ec2.rst:171
+msgid ""
+"Run `sudo docker-compose -f production.yml build` and `sudo docker-"
+"compose -f production.yml up`."
+msgstr ""
+
+#: ../../docker_ec2.rst:173
+msgid "Assign an `Elastic IP address`_ to your new machine."
+msgstr ""
+
+#: ../../docker_ec2.rst:177
+msgid "Point your domain name to the elastic IP."
+msgstr ""
+
+#: ../../docker_ec2.rst:179
+msgid ""
+"**Be careful with Elastic IPs** because, on the AWS free tier, if you "
+"assign one and then stop the machine you will incur charges while the "
+"machine is down (presumably because you're preventing them allocating the"
+" IP to someone else)."
+msgstr ""
+
+#: ../../docker_ec2.rst:182
+msgid "Security advisory"
+msgstr ""
+
+#: ../../docker_ec2.rst:184
+msgid ""
+"The setup described in this instruction will get you up-and-running but "
+"it hasn't been audited for security. If you are running your own setup "
+"like this it is always advisable to, at a minimum, examine your "
+"application with a tool like `OWASP ZAP`_ to see what security holes you "
+"might be leaving open."
+msgstr ""
+

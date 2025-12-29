@@ -1,0 +1,994 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../user-guide/concepts/retentions.rst:3
+msgid "Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:6
+msgid "**Spanish Term:** Retención"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:8
+msgid "Understanding retentions (financial withholdings) in Construbot."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:12
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:15
+msgid "What is a Retention?"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:17
+msgid ""
+"A **Retention** (Spanish: **Retención**) is a percentage of payment "
+"withheld from estimates or invoices. Retentions serve as:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:19
+msgid "Financial guarantee for contract completion"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:20
+msgid "Quality assurance holdback"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:21
+msgid "Warranty or defect correction fund"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:22
+msgid "Performance bond substitute"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:23
+msgid "Tax withholdings (in some jurisdictions)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:25
+msgid "**Model:** ``construbot.proyectos.models.Retenciones``"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:27
+msgid ""
+"**Key Concept:** Retentions are deducted from estimate payments and held "
+"until specific conditions are met (contract completion, warranty period "
+"expiration, etc.)."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:33
+msgid "How Retentions Work"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:36
+msgid "Basic Mechanism"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:38
+msgid "When an estimate is created:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:40
+msgid "**Subtotal calculated** from line items"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:41
+msgid "**Retention percentage applied** to subtotal"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:42
+msgid "**Retention amount withheld** from payment"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:43
+msgid "**Net payment** = Subtotal - Retention"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:45
+#: ../../user-guide/concepts/retentions.rst:109
+#: ../../user-guide/concepts/retentions.rst:131
+msgid "**Example:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:56
+msgid "Multiple Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:58
+msgid "Contracts can have multiple retention types applied simultaneously:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:71
+msgid "Each retention may have different release conditions and timing."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:74
+msgid "Retention Information"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:76
+msgid "**Required fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:78
+msgid "**Name** (nombre) - Descriptive name"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:79
+msgid "**Percentage** (porcentaje) - Percentage to withhold (e.g., 10.00)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:80
+msgid "**Contract** (contrato) - Which contract this applies to"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:81
+msgid "**Company** - Your company (for multi-tenant isolation)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:83
+msgid "**Optional fields:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:85
+msgid "**Description** (descripción) - Purpose and release conditions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:86
+msgid "**Release Date** (fecha_liberacion) - When retention will be released"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:87
+msgid "**Released** (liberado) - Boolean flag if already released"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:88
+msgid "**Notes** (notas) - Additional information"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:94
+msgid "Types of Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:97
+msgid "1. Performance Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:99
+msgid "**Purpose:** Ensure contract completion according to specifications"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:101
+#: ../../user-guide/concepts/retentions.rst:167
+msgid "**Typical Percentage:** 5-10%"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:103
+#: ../../user-guide/concepts/retentions.rst:125
+#: ../../user-guide/concepts/retentions.rst:147
+#: ../../user-guide/concepts/retentions.rst:169
+msgid "**Release Condition:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:105
+msgid "Contract completion"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:106
+msgid "Final inspection approval"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:107
+msgid "Punch list items completed"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:119
+msgid "2. Warranty Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:121
+msgid "**Purpose:** Cover defect repairs during warranty period"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:123
+msgid "**Typical Percentage:** 5%"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:127
+msgid "Warranty period expiration (often 1 year)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:128
+msgid "No outstanding defects"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:129
+msgid "Final sign-off from client"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:141
+msgid "3. Tax Withholdings"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:143
+msgid "**Purpose:** Government-mandated tax collection"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:145
+msgid "**Typical Percentage:** Varies by jurisdiction (1-10%)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:149
+msgid "Remitted to tax authority"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:150
+msgid "Not returned to contractor"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:151
+msgid "May be creditable against tax liability"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:153
+msgid "**Example (Mexico):**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:163
+msgid "4. Material/Labor Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:165
+msgid "**Purpose:** Ensure subcontractor or supplier payment"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:171
+msgid "Proof of payment to subs/suppliers"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:172
+msgid "Lien waivers received"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:173
+msgid "No outstanding claims"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:176
+msgid "Creating Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:179
+msgid "Method 1: Manual Creation"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:182
+msgid "Step 1: Access Contract Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:184
+msgid "Navigate to the contract"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:185
+msgid "Find **\"Retentions\"** or **\"Retenciones\"** section"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:186
+msgid "Click **\"Add Retention\"** or **\"Agregar Retención\"**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:189
+msgid "Step 2: Configure Retention"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:199
+msgid "Step 3: Save"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:201
+msgid "Click **\"Save\"** to add this retention to the contract."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:203
+msgid ""
+"**Result:** This retention will automatically apply to all future "
+"estimates for this contract."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:206
+msgid "Method 2: Excel Import"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:208
+msgid "For contracts with standard retention structures:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:210
+msgid "Prepare Excel file with retention data:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:218
+msgid "Navigate to contract retentions section"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:219
+msgid "Click **\"Import from Excel\"**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:220
+msgid "Select file and upload"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:222
+msgid "**Benefit:** Quickly set up multiple retentions at once."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:228
+msgid "Retention Tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:231
+msgid "Cumulative Retention Balance"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:233
+msgid "Construbot automatically tracks:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:235
+msgid "**Total Retained This Estimate:** Sum of all retention amounts"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:236
+msgid "**Cumulative Retained:** Running total of all retained amounts"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:237
+msgid "**Released Amounts:** Retentions that have been paid out"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:238
+msgid "**Current Balance:** Total retained - Total released"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:240
+msgid "**Example Tracking:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:256
+msgid "Estimate-Level Retention Display"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:258
+msgid "Each estimate shows:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:260
+msgid "Subtotal before retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:261
+msgid "Each retention type and amount"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:262
+msgid "Total retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:263
+msgid "Net amount to pay"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:265
+msgid "**Estimate Example:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:281
+msgid "Releasing Retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:284
+msgid "When to Release"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:286
+msgid "Release retentions when conditions are met:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:288
+msgid ""
+"**Contract Completion:** - All work completed - Final inspection passed -"
+" Punch list items resolved"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:293
+msgid ""
+"**Warranty Expiration:** - Warranty period ended - No outstanding defects"
+" - Client sign-off received"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:298
+msgid ""
+"**Partial Releases:** - Milestone achievements - Progressive completion -"
+" Phase-based releases"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:304
+msgid "Release Process"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:307
+msgid "Step 1: Verify Release Conditions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:309
+msgid "Confirm all requirements met:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:311
+msgid "Completion certificates obtained"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:312
+msgid "Client approval documented"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:313
+msgid "No outstanding claims or defects"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:314
+msgid "All required documentation submitted"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:317
+msgid "Step 2: Mark Retention as Released"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:319
+msgid "Navigate to contract retention"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:320
+msgid "Edit the retention record"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:321
+msgid "Check **\"Released\"** flag"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:322
+msgid "Enter **Release Date**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:323
+msgid "Add notes documenting release justification"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:326
+msgid "Step 3: Generate Release Payment"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:328
+msgid "**Option A: Create Final Estimate**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:330
+msgid "Create a special estimate with:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:332
+msgid "No new line items"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:333
+msgid "Negative retention amounts (to reverse withheld funds)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:334
+msgid "Notes: \"Retention Release - Contract Completion\""
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:336
+msgid "**Option B: Separate Payment Record**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:338
+msgid "Record retention release as separate transaction outside estimate system."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:344
+msgid "Partial Retention Releases"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:346
+msgid "For progressive releases:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:348
+#, python-format
+msgid ""
+"**Scenario:** 50% of retention released at substantial completion, 50% "
+"after warranty"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:350
+msgid "**Create two separate retentions:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:357
+msgid "**Release independently:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:359
+msgid "Release Retention 1 at substantial completion"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:360
+msgid "Release Retention 2 after warranty period"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:362
+msgid "**Alternative:** Use percentage reduction instead of separate retentions."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:365
+msgid "Best Practices"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:367
+msgid "**1. Document release conditions clearly:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:380
+msgid "**2. Use standard percentages:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:382
+msgid "Align with industry standards and contract terms:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:384
+msgid "Performance: 10%"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:385
+msgid "Warranty: 5%"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:386
+msgid "Tax withholding: Per jurisdiction"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:388
+msgid "**3. Set up retentions before first estimate:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:390
+msgid "Ensures consistent application across all payments."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:392
+msgid "**4. Track release dates:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:394
+msgid "Add calendar reminders for:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:396
+msgid "Substantial completion date + warranty period"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:397
+msgid "Milestone achievement dates"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:398
+msgid "Tax filing deadlines"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:400
+msgid "**5. Reconcile regularly:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:402
+msgid "Monthly reconciliation:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:404
+msgid "Verify cumulative retained amounts"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:405
+msgid "Check against contract terms"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:406
+msgid "Confirm release dates are current"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:408
+msgid "**6. Separate tax withholdings:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:410
+msgid ""
+"Keep tax retentions separate from performance/warranty retentions for "
+"accounting clarity."
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:413
+msgid "Common Scenarios"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:416
+msgid "Scenario 1: Standard Construction Contract"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:418
+#: ../../user-guide/concepts/retentions.rst:462
+#: ../../user-guide/concepts/retentions.rst:486
+msgid "**Setup:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:420
+msgid "$1,000,000 contract"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:421
+msgid "10% performance retention"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:422
+msgid "5% warranty retention (released after 1 year)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:424
+#: ../../user-guide/concepts/retentions.rst:467
+#: ../../user-guide/concepts/retentions.rst:491
+msgid "**Configuration:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:438
+msgid "**Estimate Flow:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:460
+msgid "Scenario 2: Subcontractor Agreement"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:464
+msgid "Simple percentage retention"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:465
+msgid "Released upon proof of payment to suppliers"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:476
+msgid "**Release Process:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:478
+msgid "Subcontractor submits final lien waivers"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:479
+msgid "Provides supplier payment receipts"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:480
+msgid "Retention marked as released"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:481
+msgid "Final payment issued"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:484
+msgid "Scenario 3: Tax Withholding (Mexico Example)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:488
+msgid "IVA (VAT) retention required by law"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:489
+msgid "2/3 of IVA withheld and remitted to SAT"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:500
+msgid "**Handling:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:502
+msgid "Withheld from each estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:503
+msgid "Remitted to tax authority by client"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:504
+msgid "Contractor credits against tax liability"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:505
+msgid "Not \"released\" back to contractor"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:508
+msgid "Reporting"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:511
+msgid "Available Reports"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:513
+msgid "**Retention Balance Report:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:515
+msgid "Shows current retention balances by:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:517
+msgid "Contract"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:518
+msgid "Retention type"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:519
+msgid "Client"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:520
+msgid "Status (active vs. released)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:522
+msgid "**Retention Activity Report:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:524
+msgid "Tracks retention movements:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:526
+msgid "Amounts withheld by period"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:527
+msgid "Release transactions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:528
+msgid "Cumulative balances over time"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:530
+msgid "**Client Retention Statement:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:532
+msgid "For client communication:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:534
+msgid "Total retained to date"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:535
+msgid "Breakdown by retention type"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:536
+msgid "Scheduled release dates"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:537
+msgid "Release conditions status"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:543
+msgid "Export Options"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:545
+msgid "**PDF:** Formatted retention statements"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:546
+msgid "**Excel:** Detailed retention transaction history"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:547
+msgid "**CSV:** For import into accounting systems"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:550
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:552
+msgid "**Retention not applying to estimates:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:554
+msgid "Verify retention is attached to correct contract"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:555
+msgid "Check retention percentage is set (not 0%)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:556
+msgid "Ensure retention is not already marked as \"Released\""
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:557
+msgid "Confirm estimate is for the correct contract"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:559
+msgid "**Retention amount incorrect:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:561
+msgid "Review retention percentage calculation"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:562
+msgid "Check if multiple retentions are configured (additive)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:563
+msgid "Verify estimate subtotal is correct"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:564
+msgid "Confirm no manual adjustments were made"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:566
+msgid "**Can't release retention:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:568
+msgid "Verify you have appropriate permission level"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:569
+msgid "Check release conditions are met and documented"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:570
+msgid "Ensure retention is associated with correct contract"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:571
+msgid "Confirm retention hasn't already been released"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:573
+msgid "**Multiple retention types confusing:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:575
+msgid "Use clear, descriptive names for each type"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:576
+msgid "Add detailed descriptions explaining release conditions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:577
+msgid "Consider color-coding or tagging retention types"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:578
+msgid "Document in contract notes which retentions apply"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:581
+msgid "Integration with Accounting"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:583
+msgid "Retention accounting considerations:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:585
+msgid "**Accounts Receivable:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:587
+#: ../../user-guide/concepts/retentions.rst:596
+msgid "Retained amounts are:"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:589
+msgid "Still owed to contractor (asset)"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:590
+msgid "Recorded as \"Retention Receivable\""
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:591
+msgid "Recognized as revenue when earned"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:592
+msgid "Collected when released"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:594
+msgid "**Client Perspective:**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:598
+msgid "Liability to contractor"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:599
+msgid "Recorded as \"Retention Payable\""
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:600
+msgid "Held until release conditions met"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:601
+msgid "Paid upon release"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:603
+msgid "**Journal Entry (Contractor):**"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:616
+msgid "See Also"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:618
+msgid ":doc:`estimates` - How retentions apply to estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:619
+msgid ":doc:`projects-contracts` - Contract setup with retentions"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:620
+msgid ":doc:`/user-guide/workflows/managing-estimates` - Estimate workflows"
+msgstr ""
+
+#: ../../user-guide/concepts/retentions.rst:621
+msgid ":doc:`/_glossary/domain-terms` - Complete terminology"
+msgstr ""
+

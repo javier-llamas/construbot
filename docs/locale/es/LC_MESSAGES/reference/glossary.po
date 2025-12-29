@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../reference/glossary.rst:3
+msgid "Glossary"
+msgstr ""
+
+#: ../../reference/glossary.rst:5
+msgid "Quick reference for Spanish→English terminology."
+msgstr ""
+
+#: ../../reference/glossary.rst:8
+msgid ""
+"**Complete Glossary:** See :doc:`/_glossary/domain-terms` for the "
+"comprehensive glossary with 100+ terms, descriptions, and examples."
+msgstr ""
+
+#: ../../reference/glossary.rst:11
+msgid "Common Terms"
+msgstr ""
+
+#: ../../reference/glossary.rst:14
+msgid "Contrato"
+msgstr ""
+
+#: ../../reference/glossary.rst:16
+msgid ""
+"Contract or Project - Main business entity representing a construction "
+"contract. See ``construbot.proyectos.models.Contrato``"
+msgstr ""
+
+#: ../../reference/glossary.rst:18
+msgid "Contraparte"
+msgstr ""
+
+#: ../../reference/glossary.rst:20
+msgid ""
+"Counterparty or Business Partner - Client, subcontractor, or piecework "
+"contractor. See ``construbot.proyectos.models.Contraparte``"
+msgstr ""
+
+#: ../../reference/glossary.rst:22
+msgid "Estimación"
+msgstr ""
+
+#: ../../reference/glossary.rst:24
+msgid ""
+"Estimate or Progress Payment - Payment request for completed work. See "
+"``construbot.proyectos.models.Estimate``"
+msgstr ""
+
+#: ../../reference/glossary.rst:26
+msgid "Concepto"
+msgstr ""
+
+#: ../../reference/glossary.rst:28
+msgid ""
+"Concept or Line Item - Individual work item in contract catalog. See "
+"``construbot.proyectos.models.Concept``"
+msgstr ""
+
+#: ../../reference/glossary.rst:30
+msgid "Retención"
+msgstr ""
+
+#: ../../reference/glossary.rst:32
+msgid ""
+"Retention or Withholding - Financial withholding from payments. See "
+"``construbot.proyectos.models.Retenciones``"
+msgstr ""
+
+#: ../../reference/glossary.rst:34
+msgid "Sitio"
+msgstr ""
+
+#: ../../reference/glossary.rst:36
+msgid ""
+"Site or Construction Site - Physical location where work is performed. "
+"See ``proyectos.models.Sitio``"
+msgstr ""
+
+#: ../../reference/glossary.rst:38
+msgid "Destinatario"
+msgstr ""
+
+#: ../../reference/glossary.rst:40
+msgid ""
+"Recipient or Contact - Person receiving documents or communications. See "
+"``construbot.proyectos.models.Destinatario``"
+msgstr ""
+
+#: ../../reference/glossary.rst:42
+msgid "Cliente"
+msgstr ""
+
+#: ../../reference/glossary.rst:44
+msgid ""
+"Client - Type of Contraparte who hires the company. Choice value in "
+"``Contraparte.tipo``"
+msgstr ""
+
+#: ../../reference/glossary.rst:46
+msgid "Destajista"
+msgstr ""
+
+#: ../../reference/glossary.rst:48
+msgid ""
+"Piecework Contractor - Type of Contraparte paid by completed work. Choice"
+" value in ``Contraparte.tipo``"
+msgstr ""
+
+#: ../../reference/glossary.rst:50
+msgid "Subcontratista"
+msgstr ""
+
+#: ../../reference/glossary.rst:52
+msgid ""
+"Subcontractor - Type of Contraparte performing specialized work. Choice "
+"value in ``Contraparte.tipo``"
+msgstr ""
+
+#: ../../reference/glossary.rst:54
+msgid "folio"
+msgstr ""
+
+#: ../../reference/glossary.rst:56
+msgid ""
+"Reference Number - Unique identifier for contracts within a company. "
+"Field in ``Contrato`` model"
+msgstr ""
+
+#: ../../reference/glossary.rst:58
+msgid "monto"
+msgstr ""
+
+#: ../../reference/glossary.rst:60
+msgid ""
+"Amount - Financial amount for contracts or estimates. Field in "
+"``Contrato`` and ``Estimate`` models"
+msgstr ""
+
+#: ../../reference/glossary.rst:62
+msgid "anticipo"
+msgstr ""
+
+#: ../../reference/glossary.rst:64
+msgid ""
+"Advance Payment or Down Payment - Upfront payment before work begins. "
+"Field in ``Contrato`` model"
+msgstr ""
+
+#: ../../reference/glossary.rst:68
+msgid "See Also"
+msgstr ""
+
+#: ../../reference/glossary.rst:70
+msgid ":doc:`/_glossary/domain-terms` - Complete glossary"
+msgstr ""
+
+#: ../../reference/glossary.rst:71
+msgid ":doc:`/developer/architecture/multi-tenancy` - Architecture"
+msgstr ""
+
+#: ../../reference/glossary.rst:72
+msgid ":doc:`/contributor/translation/glossary` - Translation guide"
+msgstr ""
+

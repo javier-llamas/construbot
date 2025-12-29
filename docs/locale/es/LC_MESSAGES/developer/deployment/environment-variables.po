@@ -1,0 +1,944 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/deployment/environment-variables.rst:3
+msgid "Environment Variables"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:5
+msgid ""
+"Complete reference for all environment variables used in production "
+"deployments."
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:14
+msgid ""
+"Construbot uses environment variables for configuration following the "
+"`Twelve-Factor App <https://12factor.net/config>`_ methodology. Variables"
+" are loaded from:"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:16
+msgid "``.env`` file (development/Docker)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:17
+msgid "System environment (production servers)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:18
+msgid "Container environment (Docker/Kubernetes)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:21
+msgid ""
+"This document focuses on **production-specific** variables. For "
+"development configuration, see :doc:`../installation/configuration`."
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:24
+msgid "Required Variables"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:27
+msgid "Django Core"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:30
+msgid "DJANGO_SETTINGS_MODULE"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:32
+#: ../../developer/deployment/environment-variables.rst:409
+#: ../../developer/deployment/environment-variables.rst:458
+#: ../../developer/deployment/environment-variables.rst:475
+#: ../../developer/deployment/environment-variables.rst:538
+#: ../../developer/deployment/environment-variables.rst:553
+#: ../../developer/deployment/environment-variables.rst:568
+#: ../../developer/deployment/environment-variables.rst:583
+#: ../../developer/deployment/environment-variables.rst:598
+#: ../../developer/deployment/environment-variables.rst:633
+#: ../../developer/deployment/environment-variables.rst:664
+#: ../../developer/deployment/environment-variables.rst:821
+msgid "**Type:** String"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:34
+#: ../../developer/deployment/environment-variables.rst:55
+#: ../../developer/deployment/environment-variables.rst:79
+#: ../../developer/deployment/environment-variables.rst:139
+#: ../../developer/deployment/environment-variables.rst:177
+#: ../../developer/deployment/environment-variables.rst:435
+#: ../../developer/deployment/environment-variables.rst:492
+msgid "**Required:** Yes"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:36
+msgid "**Description:** Python path to settings module"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:38
+#: ../../developer/deployment/environment-variables.rst:86
+#: ../../developer/deployment/environment-variables.rst:221
+#: ../../developer/deployment/environment-variables.rst:241
+#: ../../developer/deployment/environment-variables.rst:265
+#: ../../developer/deployment/environment-variables.rst:283
+#: ../../developer/deployment/environment-variables.rst:300
+#: ../../developer/deployment/environment-variables.rst:322
+#: ../../developer/deployment/environment-variables.rst:337
+#: ../../developer/deployment/environment-variables.rst:352
+#: ../../developer/deployment/environment-variables.rst:367
+#: ../../developer/deployment/environment-variables.rst:385
+#: ../../developer/deployment/environment-variables.rst:400
+#: ../../developer/deployment/environment-variables.rst:421
+#: ../../developer/deployment/environment-variables.rst:529
+#: ../../developer/deployment/environment-variables.rst:678
+#: ../../developer/deployment/environment-variables.rst:803
+msgid "**Production value:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:44
+#: ../../developer/deployment/environment-variables.rst:415
+#: ../../developer/deployment/environment-variables.rst:670
+msgid "**Values:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:46
+msgid "``construbot.config.settings.local`` - Development"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:47
+msgid "``construbot.config.settings.test`` - Testing"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:48
+msgid "``construbot.config.settings.production`` - Production"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:51
+msgid "DJANGO_SECRET_KEY"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:53
+msgid "**Type:** String (50+ characters)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:57
+msgid ""
+"**Description:** Cryptographic signing key for sessions, cookies, CSRF "
+"tokens"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:60
+msgid ""
+"**Never commit SECRET_KEY to version control!** Use different keys for "
+"dev/prod."
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:62
+msgid "**Generate:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:68
+#: ../../developer/deployment/environment-variables.rst:109
+#: ../../developer/deployment/environment-variables.rst:464
+#: ../../developer/deployment/environment-variables.rst:481
+#: ../../developer/deployment/environment-variables.rst:496
+#: ../../developer/deployment/environment-variables.rst:511
+#: ../../developer/deployment/environment-variables.rst:544
+#: ../../developer/deployment/environment-variables.rst:559
+#: ../../developer/deployment/environment-variables.rst:574
+#: ../../developer/deployment/environment-variables.rst:589
+#: ../../developer/deployment/environment-variables.rst:604
+#: ../../developer/deployment/environment-variables.rst:622
+#: ../../developer/deployment/environment-variables.rst:655
+#: ../../developer/deployment/environment-variables.rst:696
+#: ../../developer/deployment/environment-variables.rst:738
+#: ../../developer/deployment/environment-variables.rst:755
+#: ../../developer/deployment/environment-variables.rst:776
+msgid "**Example:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:75
+msgid "DJANGO_DEBUG"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:77
+#: ../../developer/deployment/environment-variables.rst:215
+#: ../../developer/deployment/environment-variables.rst:277
+#: ../../developer/deployment/environment-variables.rst:294
+#: ../../developer/deployment/environment-variables.rst:316
+#: ../../developer/deployment/environment-variables.rst:331
+#: ../../developer/deployment/environment-variables.rst:346
+#: ../../developer/deployment/environment-variables.rst:361
+#: ../../developer/deployment/environment-variables.rst:379
+#: ../../developer/deployment/environment-variables.rst:394
+#: ../../developer/deployment/environment-variables.rst:523
+#: ../../developer/deployment/environment-variables.rst:711
+#: ../../developer/deployment/environment-variables.rst:770
+msgid "**Type:** Boolean"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:81
+msgid "**Description:** Enable/disable debug mode"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:84
+msgid "**MUST be False in production!** Debug mode exposes sensitive information."
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:92
+msgid "**Effects when True:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:94
+msgid "Detailed error pages with tracebacks"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:95
+msgid "Exposes settings and environment variables"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:96
+msgid "Shows SQL queries"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:97
+msgid "Serves static files via Django (slow)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:98
+msgid "Disables template caching"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:101
+msgid "DJANGO_ALLOWED_HOSTS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:103
+#: ../../developer/deployment/environment-variables.rst:690
+msgid "**Type:** Comma-separated string"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:105
+msgid "**Required:** Yes (when DEBUG=False)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:107
+msgid "**Description:** Hosts/domains that Django serves"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:115
+msgid "**Include:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:117
+msgid "Root domain"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:118
+msgid "www subdomain"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:119
+msgid "API subdomain (if separate)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:120
+msgid "Load balancer hostname"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:122
+msgid "**Validation:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:132
+msgid "Database"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:135
+msgid "DATABASE_URL"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:137
+msgid "**Type:** PostgreSQL connection string"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:141
+msgid "**Description:** Complete database connection URL"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:143
+#: ../../developer/deployment/environment-variables.rst:181
+msgid "**Format:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:149
+#: ../../developer/deployment/environment-variables.rst:187
+#: ../../developer/deployment/environment-variables.rst:639
+msgid "**Examples:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:162
+msgid "**SSL modes:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:164
+msgid "``disable`` - No SSL (not recommended for production)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:165
+msgid "``require`` - SSL required (recommended)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:166
+msgid "``verify-ca`` - Verify certificate authority"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:167
+msgid "``verify-full`` - Full certificate verification"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:170
+msgid "Cache and Queue"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:173
+msgid "REDIS_URL"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:175
+#: ../../developer/deployment/environment-variables.rst:732
+#: ../../developer/deployment/environment-variables.rst:749
+msgid "**Type:** Redis connection string"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:179
+msgid "**Description:** Redis for caching and Celery broker"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:200
+msgid "**Database numbers:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:202
+msgid "``/0`` - Cache and sessions"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:203
+msgid "``/1`` - Celery broker (optional separation)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:204
+msgid "``/2`` - Celery results (optional separation)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:207
+msgid "Security Settings"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:210
+msgid "SSL/HTTPS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:213
+msgid "DJANGO_SECURE_SSL_REDIRECT"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:217
+#: ../../developer/deployment/environment-variables.rst:279
+#: ../../developer/deployment/environment-variables.rst:296
+#: ../../developer/deployment/environment-variables.rst:318
+#: ../../developer/deployment/environment-variables.rst:348
+#: ../../developer/deployment/environment-variables.rst:363
+#: ../../developer/deployment/environment-variables.rst:381
+#: ../../developer/deployment/environment-variables.rst:396
+#: ../../developer/deployment/environment-variables.rst:525
+#: ../../developer/deployment/environment-variables.rst:713
+#: ../../developer/deployment/environment-variables.rst:772
+msgid "**Default:** False"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:219
+msgid "**Description:** Redirect all HTTP requests to HTTPS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:227
+msgid "**Requires:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:229
+msgid "Valid SSL certificate"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:230
+msgid "HTTPS configured on web server/load balancer"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:233
+msgid "DJANGO_SECURE_PROXY_SSL_HEADER"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:235
+msgid "**Type:** Tuple (header name, header value)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:237
+msgid "**Default:** None"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:239
+msgid "**Description:** Trust X-Forwarded-Proto header from proxy/load balancer"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:247
+msgid "**When to use:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:249
+msgid "Behind nginx reverse proxy"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:250
+msgid "Behind AWS ALB/ELB"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:251
+msgid "Behind CloudFlare"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:254
+msgid "HSTS (HTTP Strict Transport Security)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:257
+msgid "DJANGO_SECURE_HSTS_SECONDS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:259
+#: ../../developer/deployment/environment-variables.rst:797
+msgid "**Type:** Integer (seconds)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:261
+msgid "**Default:** 0 (disabled)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:263
+msgid ""
+"**Description:** Browser should only access via HTTPS for this many "
+"seconds"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:272
+msgid ""
+"**Test carefully before enabling!** Once set, browsers refuse HTTP "
+"connections."
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:275
+msgid "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:281
+msgid "**Description:** Apply HSTS to all subdomains"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:289
+msgid "**Requires:** All subdomains support HTTPS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:292
+msgid "DJANGO_SECURE_HSTS_PRELOAD"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:298
+msgid "**Description:** Allow adding to browser HSTS preload lists"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:306
+msgid "**After enabling:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:308
+msgid "Submit domain to https://hstspreload.org/"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:311
+msgid "Cookie Security"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:314
+msgid "DJANGO_SESSION_COOKIE_SECURE"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:320
+msgid "**Description:** Only send session cookie over HTTPS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:329
+msgid "DJANGO_SESSION_COOKIE_HTTPONLY"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:333
+msgid "**Default:** True"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:335
+msgid "**Description:** Prevent JavaScript access to session cookie"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:344
+msgid "DJANGO_CSRF_COOKIE_SECURE"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:350
+msgid "**Description:** Only send CSRF cookie over HTTPS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:359
+msgid "DJANGO_CSRF_COOKIE_HTTPONLY"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:365
+msgid "**Description:** Prevent JavaScript access to CSRF cookie"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:374
+msgid "Content Security"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:377
+msgid "DJANGO_SECURE_CONTENT_TYPE_NOSNIFF"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:383
+msgid "**Description:** Prevent MIME type sniffing"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:392
+msgid "DJANGO_SECURE_BROWSER_XSS_FILTER"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:398
+msgid "**Description:** Enable browser XSS filter"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:407
+msgid "X_FRAME_OPTIONS"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:411
+msgid "**Default:** DENY"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:413
+msgid "**Description:** Control iframe embedding"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:417
+msgid "``DENY`` - Cannot be embedded (recommended)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:418
+msgid "``SAMEORIGIN`` - Can embed on same domain"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:419
+msgid "``ALLOW-FROM https://example.com`` - Allow specific domain"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:428
+msgid "Email Configuration"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:433
+msgid "**Type:** String (Python import path)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:437
+msgid "**Description:** Email backend to use"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:439
+msgid "**Production values:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:460
+#: ../../developer/deployment/environment-variables.rst:477
+msgid "**Required:** If using Mailgun"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:462
+msgid "**Description:** Mailgun API key"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:470
+msgid "**Get from:** https://app.mailgun.com/app/account/security/api_keys"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:479
+msgid "**Description:** Verified domain for sending"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:490
+#: ../../developer/deployment/environment-variables.rst:505
+msgid "**Type:** Email address"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:494
+msgid "**Description:** Default sender for emails"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:507
+msgid "**Default:** root@localhost"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:509
+msgid "**Description:** Sender for error emails"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:518
+msgid "Static and Media Files"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:527
+msgid "**Description:** Use AWS S3 for media file storage"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:540
+#: ../../developer/deployment/environment-variables.rst:555
+#: ../../developer/deployment/environment-variables.rst:570
+msgid "**Required:** If USE_S3=True"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:542
+msgid "**Description:** AWS access key with S3 permissions"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:557
+msgid "**Description:** AWS secret key"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:572
+msgid "**Description:** S3 bucket name for media files"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:585
+msgid "**Default:** us-east-1"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:587
+msgid "**Description:** AWS region for S3 bucket"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:600
+#: ../../developer/deployment/environment-variables.rst:618
+msgid "**Default:** None (optional)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:602
+msgid "**Description:** CloudFront or custom domain for media files"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:611
+msgid "Monitoring and Logging"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:616
+msgid "**Type:** String (URL)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:620
+msgid "**Description:** Sentry error tracking DSN"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:628
+msgid "**Get from:** Sentry project settings"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:635
+msgid "**Default:** production"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:637
+msgid "**Description:** Environment name in Sentry"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:649
+msgid "**Type:** Float (0.0 to 1.0)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:651
+msgid "**Default:** 1.0"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:653
+msgid "**Description:** Percentage of errors to send to Sentry"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:666
+msgid "**Default:** INFO"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:668
+msgid "**Description:** Minimum log level to record"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:672
+msgid "``DEBUG`` - Detailed information (development only)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:673
+msgid "``INFO`` - General informational messages (production recommended)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:674
+msgid "``WARNING`` - Warning messages"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:675
+msgid "``ERROR`` - Error messages only"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:676
+msgid "``CRITICAL`` - Critical errors only"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:685
+msgid "CORS Configuration"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:692
+msgid "**Default:** Empty"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:694
+msgid "**Description:** Allowed origins for CORS requests"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:702
+msgid "**When needed:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:704
+msgid "API consumed by separate frontend"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:705
+msgid "Mobile app accessing API"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:706
+msgid "Different subdomain for frontend"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:715
+msgid "**Description:** Allow CORS from any origin"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:718
+msgid "**Never use in production!** Security risk."
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:720
+msgid "**Development only:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:727
+msgid "Celery Configuration"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:734
+#: ../../developer/deployment/environment-variables.rst:751
+msgid "**Default:** Uses REDIS_URL"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:736
+msgid "**Description:** Celery message broker"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:744
+msgid "**Usually same as REDIS_URL** but can use different database number."
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:753
+msgid "**Description:** Celery result storage"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:762
+msgid "Optional Variables"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:765
+msgid "Library Mode"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:768
+msgid "CONSTRUBOT_AS_LIBRARY"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:774
+msgid "**Description:** Run Construbot as Django app (not standalone)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:782
+msgid "**Effects:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:784
+msgid "Disables admin interface"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:785
+msgid "Disables account management URLs"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:786
+msgid "Disables standalone authentication"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:787
+msgid "Allows embedding in existing Django project"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:789
+msgid "See :doc:`../library-mode` for details."
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:792
+msgid "Database Connection Pooling"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:795
+msgid "DATABASE_CONN_MAX_AGE"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:799
+msgid "**Default:** 0 (new connection per request)"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:801
+msgid "**Description:** How long to reuse database connections"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:809
+msgid "**Benefits:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:811
+msgid "Reduced database connection overhead"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:812
+msgid "Better performance under load"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:813
+msgid "Lower database resource usage"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:816
+msgid "Session Storage"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:819
+msgid "SESSION_ENGINE"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:823
+msgid "**Default:** django.contrib.sessions.backends.db"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:825
+msgid "**Description:** Where to store sessions"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:827
+msgid "**Options:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:840
+msgid "**Production recommendation:**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:847
+msgid "Complete Production Example"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:850
+msgid "Minimal Production .env"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:889
+msgid "Comprehensive Production .env"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:957
+msgid "Validation"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:960
+msgid "Check Required Variables"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:967
+msgid "**No warnings should appear.**"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:970
+msgid "Test Configuration"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:993
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:995
+msgid ":doc:`production-checklist` - Complete deployment checklist"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:996
+msgid ":doc:`../installation/configuration` - Development configuration"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:997
+msgid ":doc:`aws-ec2` - AWS deployment guide"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:998
+msgid ":doc:`static-media-files` - File storage configuration"
+msgstr ""
+
+#: ../../developer/deployment/environment-variables.rst:999
+msgid ""
+"`Django Settings Reference "
+"<https://docs.djangoproject.com/en/3.2/ref/settings/>`_"
+msgstr ""
+

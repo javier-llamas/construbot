@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contributor/code-style.rst:3
+msgid "Code Style"
+msgstr ""
+
+#: ../../contributor/code-style.rst:5
+msgid "Code style guidelines for Construbot contributions."
+msgstr ""
+
+#: ../../contributor/code-style.rst:8
+msgid "Python Style"
+msgstr ""
+
+#: ../../contributor/code-style.rst:11
+msgid "Follow PEP 8"
+msgstr ""
+
+#: ../../contributor/code-style.rst:13
+msgid "**Code formatting:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:15
+msgid "4 spaces for indentation (no tabs)"
+msgstr ""
+
+#: ../../contributor/code-style.rst:16
+msgid "Max line length: 100 characters (not strict 79)"
+msgstr ""
+
+#: ../../contributor/code-style.rst:17
+msgid "2 blank lines between top-level functions/classes"
+msgstr ""
+
+#: ../../contributor/code-style.rst:18
+msgid "1 blank line between methods"
+msgstr ""
+
+#: ../../contributor/code-style.rst:20
+msgid "**Use Black:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:26
+msgid "**Use isort:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:33
+msgid "Naming Conventions"
+msgstr ""
+
+#: ../../contributor/code-style.rst:54
+msgid "Type Hints"
+msgstr ""
+
+#: ../../contributor/code-style.rst:56
+msgid "**Encouraged but not required:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:64
+msgid "Docstrings"
+msgstr ""
+
+#: ../../contributor/code-style.rst:66
+msgid "**Use Google style:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:87
+msgid "Django Style"
+msgstr ""
+
+#: ../../contributor/code-style.rst:90
+msgid "Model Best Practices"
+msgstr ""
+
+#: ../../contributor/code-style.rst:92
+msgid "**Always include company:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:99
+msgid "**Use verbose_name:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:110
+msgid "**Meta options:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:120
+msgid "View Best Practices"
+msgstr ""
+
+#: ../../contributor/code-style.rst:122
+msgid "**Use class-based views:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:137
+msgid "**Always scope to company:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:148
+msgid "Query Optimization"
+msgstr ""
+
+#: ../../contributor/code-style.rst:150
+msgid "**Use select_related:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:160
+msgid "**Use prefetch_related:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:167
+msgid "Security"
+msgstr ""
+
+#: ../../contributor/code-style.rst:169
+msgid "**Never trust user input:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:178
+msgid "**Use get_object_or_404:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:184
+msgid "**Check permissions:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:192
+msgid "Testing Style"
+msgstr ""
+
+#: ../../contributor/code-style.rst:194
+msgid "**Clear test names:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:204
+msgid "**Use setUp for common data:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:215
+msgid "**One assertion per test (ideally):**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:224
+msgid "Git Commit Messages"
+msgstr ""
+
+#: ../../contributor/code-style.rst:226
+msgid "**Format:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:237
+msgid "**Good examples:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:250
+msgid "**Bad examples:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:260
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../contributor/code-style.rst:262
+msgid "**Factory pattern for tests:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:277
+msgid "**Context manager for transactions:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:287
+msgid "**Queryset methods:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:299
+msgid "Tools"
+msgstr ""
+
+#: ../../contributor/code-style.rst:301
+msgid "**Linting:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:311
+msgid "**Formatting:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:321
+msgid "**Type checking (optional):**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:328
+msgid "Pre-commit Hooks"
+msgstr ""
+
+#: ../../contributor/code-style.rst:330
+msgid "**Recommended .pre-commit-config.yaml:**"
+msgstr ""
+
+#: ../../contributor/code-style.rst:351
+msgid "See Also"
+msgstr ""
+
+#: ../../contributor/code-style.rst:353
+msgid ":doc:`getting-started` - Development setup"
+msgstr ""
+
+#: ../../contributor/code-style.rst:354
+msgid ":doc:`testing/index` - Testing guide"
+msgstr ""
+
+#: ../../contributor/code-style.rst:355
+msgid "`PEP 8 <https://pep8.org/>`_"
+msgstr ""
+
+#: ../../contributor/code-style.rst:356
+msgid ""
+"`Django Coding Style "
+"<https://docs.djangoproject.com/en/dev/internals/contributing/writing-"
+"code/coding-style/>`_"
+msgstr ""
+

@@ -7,10 +7,6 @@ Concepts & Line Items
 
 Understanding concepts (individual work items) in Construbot contract catalogs.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 What is a Concept?
 ==================
 

@@ -7,10 +7,6 @@ Sites & Contacts
 
 Understanding sites (construction locations) and contacts (recipients) in Construbot.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

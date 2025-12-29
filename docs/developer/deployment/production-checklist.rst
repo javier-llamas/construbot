@@ -4,10 +4,6 @@ Production Checklist
 
 Complete pre-deployment checklist to ensure your Construbot installation is production-ready.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 .. danger::
    **DO NOT deploy to production without completing this checklist!** Skipping items can lead to security vulnerabilities, data loss, or application downtime.
 

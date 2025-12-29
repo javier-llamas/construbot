@@ -4,10 +4,6 @@ Architecture
 
 Technical architecture and design patterns used in Construbot.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

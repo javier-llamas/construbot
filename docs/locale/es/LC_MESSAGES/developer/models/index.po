@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/models/index.rst:3
+msgid "Models"
+msgstr ""
+
+#: ../../developer/models/index.rst:5
+msgid "Data model documentation for Construbot."
+msgstr ""
+
+#: ../../developer/models/index.rst:8
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/models/index.rst:10
+msgid "Construbot's data models are organized into several apps:"
+msgstr ""
+
+#: ../../developer/models/index.rst:12
+msgid "**users:** User, Company, Customer, NivelAcceso"
+msgstr ""
+
+#: ../../developer/models/index.rst:13
+msgid ""
+"**proyectos:** Contrato, Contraparte, Sitio, Estimate, Concept, "
+"Retenciones"
+msgstr ""
+
+#: ../../developer/models/index.rst:14
+msgid "**core:** Base models and utilities"
+msgstr ""
+
+#: ../../developer/models/index.rst:17
+msgid "Multi-Tenant Architecture"
+msgstr ""
+
+#: ../../developer/models/index.rst:19
+msgid "**All business models include:**"
+msgstr ""
+
+#: ../../developer/models/index.rst:27
+msgid "See :doc:`../architecture/multi-tenancy` for details."
+msgstr ""
+
+#: ../../developer/models/index.rst:30
+msgid "Key Models"
+msgstr ""
+
+#: ../../developer/models/index.rst:33
+msgid "User Models (users app)"
+msgstr ""
+
+#: ../../developer/models/index.rst:35
+msgid "**Customer** - Top-level account"
+msgstr ""
+
+#: ../../developer/models/index.rst:37
+msgid "**Company** - Business entity (tenant)"
+msgstr ""
+
+#: ../../developer/models/index.rst:39
+msgid "**User** - Custom user model with email authentication"
+msgstr ""
+
+#: ../../developer/models/index.rst:41
+msgid "**NivelAcceso** - Permission levels (1-6)"
+msgstr ""
+
+#: ../../developer/models/index.rst:43
+msgid "See :doc:`users` for complete reference."
+msgstr ""
+
+#: ../../developer/models/index.rst:46
+msgid "Business Models (proyectos app)"
+msgstr ""
+
+#: ../../developer/models/index.rst:48
+msgid "**Contrato** - Contract/Project (hierarchical using django-treebeard)"
+msgstr ""
+
+#: ../../developer/models/index.rst:50
+msgid ""
+"**Contraparte** - Counterparty (Client, Subcontractor, Piecework "
+"Contractor)"
+msgstr ""
+
+#: ../../developer/models/index.rst:52
+msgid "**Sitio** - Construction site"
+msgstr ""
+
+#: ../../developer/models/index.rst:54
+msgid "**Estimate** - Progress payment/estimate"
+msgstr ""
+
+#: ../../developer/models/index.rst:56
+msgid "**Concept** - Line item in contract catalog"
+msgstr ""
+
+#: ../../developer/models/index.rst:58
+msgid "**Retenciones** - Financial retentions/withholdings"
+msgstr ""
+
+#: ../../developer/models/index.rst:60
+msgid "See :doc:`proyectos` for complete reference."
+msgstr ""
+
+#: ../../developer/models/index.rst:63
+msgid "Model Relationships"
+msgstr ""
+
+#: ../../developer/models/index.rst:79
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../developer/models/index.rst:81
+msgid "**Company-scoped queries:**"
+msgstr ""
+
+#: ../../developer/models/index.rst:88
+msgid "**Tree operations:**"
+msgstr ""
+
+#: ../../developer/models/index.rst:97
+msgid "**Unique per company:**"
+msgstr ""
+
+#: ../../developer/models/index.rst:105
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/models/index.rst:107
+msgid ":doc:`../architecture/database-schema` - Database design"
+msgstr ""
+
+#: ../../developer/models/index.rst:108
+msgid ":doc:`../architecture/multi-tenancy` - Multi-tenant architecture"
+msgstr ""
+
+#: ../../developer/models/index.rst:109
+msgid ":doc:`../api/index` - API reference"
+msgstr ""
+

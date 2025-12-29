@@ -1,0 +1,345 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../contributor/translation/glossary.rst:3
+msgid "Translation Glossary"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:5
+msgid "Spanish→English translation reference for contributors."
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:8
+msgid "Overview"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:10
+msgid ""
+"The Construbot codebase uses Spanish terminology for business entities. "
+"This glossary provides canonical English translations for consistency."
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:13
+msgid "Master Glossary"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:16
+msgid ""
+"**Complete Glossary:** See :doc:`/_glossary/domain-terms` for the "
+"comprehensive 100+ term glossary with descriptions, model references, and"
+" examples."
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:19
+msgid "Quick Reference"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:22
+msgid "Core Business Terms"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:28
+#: ../../contributor/translation/glossary.rst:59
+#: ../../contributor/translation/glossary.rst:74
+msgid "Spanish"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:29
+#: ../../contributor/translation/glossary.rst:60
+#: ../../contributor/translation/glossary.rst:75
+msgid "English"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:30
+msgid "Model"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:31
+msgid "Contrato"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:32
+msgid "Contract / Project"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:33
+msgid "proyectos.models.Contrato"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:34
+msgid "Contraparte"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:35
+msgid "Counterparty"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:36
+msgid "proyectos.models.Contraparte"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:37
+msgid "Estimación"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:38
+msgid "Estimate / Progress Payment"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:39
+msgid "proyectos.models.Estimate"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:40
+msgid "Concepto"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:41
+msgid "Concept / Line Item"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:42
+msgid "proyectos.models.Concept"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:43
+msgid "Retención"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:44
+msgid "Retention / Withholding"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:45
+msgid "proyectos.models.Retenciones"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:46
+msgid "Sitio"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:47
+msgid "Site"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:48
+msgid "proyectos.models.Sitio"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:49
+msgid "Destinatario"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:50
+msgid "Recipient / Contact"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:51
+msgid "proyectos.models.Destinatario"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:54
+msgid "Counterparty Types"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:61
+msgid "Cliente"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:62
+msgid "Client"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:63
+msgid "Destajista"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:64
+msgid "Piecework Contractor"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:65
+msgid "Subcontratista"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:66
+msgid "Subcontractor"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:69
+msgid "Field Names"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:76
+msgid "folio"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:77
+msgid "reference_number"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:78
+msgid "monto"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:79
+msgid "amount"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:80
+msgid "anticipo"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:81
+msgid "advance_payment"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:82
+msgid "fecha_inicio"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:83
+msgid "start_date"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:84
+msgid "fecha_fin"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:85
+msgid "end_date"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:88
+msgid "Translation Guidelines"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:90
+msgid "**1. Use canonical translations:**"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:92
+msgid "Follow the master glossary for consistency."
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:94
+msgid "**2. Context matters:**"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:96
+msgid "**Contrato** = \"Contract\" (legal), \"Project\" (colloquial)"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:97
+msgid ""
+"**Estimación** = \"Estimate\" (technical), \"Progress Payment\" "
+"(financial)"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:99
+msgid "**3. Preserve Spanish in code:**"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:101
+msgid ""
+"Don't rename model fields - keep Spanish names, translate in "
+"documentation."
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:103
+msgid "**4. First use pattern:**"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:109
+msgid "**5. Model references:**"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:111
+msgid "Always reference the model when introducing terms:"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:118
+msgid "Contributing Translations"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:120
+msgid "**Add new terms:**"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:122
+msgid "Add to :doc:`/_glossary/domain-terms`"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:123
+msgid ""
+"Include: Spanish term, English translation, description, model reference,"
+" examples"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:124
+msgid "Alphabetize within category"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:125
+#: ../../contributor/translation/glossary.rst:132
+msgid "Submit pull request"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:127
+msgid "**Update existing terms:**"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:129
+msgid "Discuss in GitHub issue first"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:130
+msgid "Update master glossary"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:131
+msgid "Update all affected documentation"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:135
+msgid "Django Translation"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:137
+msgid "**For UI strings:**"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:151
+msgid "See Also"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:153
+msgid ":doc:`/_glossary/domain-terms` - Complete 100+ term glossary"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:154
+msgid ":doc:`../getting-started` - Contributor setup"
+msgstr ""
+
+#: ../../contributor/translation/glossary.rst:155
+msgid ":doc:`/developer/architecture/multi-tenancy` - Architecture context"
+msgstr ""
+

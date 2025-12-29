@@ -1,0 +1,325 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../reference/makefile-commands.rst:3
+msgid "Makefile Commands"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:5
+msgid "Complete reference for development Makefile commands."
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:8
+msgid "Overview"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:10
+msgid "Construbot includes a Makefile with convenient development commands."
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:12
+msgid "**Location:** ``/Makefile`` (project root)"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:15
+msgid "Docker Commands"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:18
+msgid "Development"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:20
+msgid "**make dev**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:22
+msgid "Start development environment"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:30
+msgid "**make buildev**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:32
+msgid "Build and start development environment"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:39
+msgid "**make buildprod**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:41
+msgid "Build production environment"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:49
+msgid "Container Management"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:51
+msgid "**make down**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:53
+msgid "Stop all containers"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:59
+msgid "**make clean**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:61
+msgid "Remove all containers"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:67
+msgid "**make cleandb**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:69
+msgid "Remove database containers and volumes"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:76
+msgid "**make cleanhard**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:78
+msgid "Remove everything (containers, volumes, images)"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:86
+msgid "Database Commands"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:88
+msgid "**make migrations**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:90
+msgid "Create and apply migrations"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:97
+msgid "**make superuser**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:99
+msgid "Create Django superuser"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:106
+msgid "**make poblar**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:108
+msgid "Populate database with test data"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:116
+msgid "Development Tools"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:118
+msgid "**make shell**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:120
+msgid "Open Django shell"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:127
+msgid "**make runserver**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:129
+msgid "Run server without Docker"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:138
+msgid "Testing Commands"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:140
+msgid "**make test**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:142
+msgid "Run full test suite with coverage"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:149
+msgid "**make localtest**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:151
+msgid "Run tests locally (no Docker)"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:157
+msgid "**make warningtest**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:159
+msgid "Run tests with warnings enabled"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:165
+msgid "**make current**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:167
+msgid "Run tests tagged as 'current'"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:175
+msgid "Requirements Management"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:177
+msgid "**make mkenv**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:179
+msgid "Sync local requirements"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:186
+msgid "**make pipcompile**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:188
+msgid "Compile requirements files"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:196
+msgid "Documentation Commands"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:198
+msgid "These commands are in ``docs/Makefile``:"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:200
+msgid "**make html**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:202
+msgid "Build English documentation"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:210
+msgid "**make html-es**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:212
+msgid "Build Spanish documentation"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:220
+msgid "**make html-all**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:222
+msgid "Build both English and Spanish"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:229
+msgid "**make update-translations**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:231
+msgid "Update translation files"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:239
+msgid "**make livehtml**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:241
+msgid "Auto-rebuild documentation"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:250
+msgid "Common Workflows"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:253
+msgid "Fresh Start"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:262
+msgid "Daily Development"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:272
+msgid "Reset Database"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:282
+msgid "Update Dependencies"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:291
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:293
+msgid "**Command not found:**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:295
+msgid "Ensure you're in project root directory."
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:297
+msgid "**Permission denied:**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:299
+msgid "Run with sudo or fix Docker permissions:"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:306
+msgid "**Port already in use:**"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:308
+msgid "Stop conflicting services:"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:315
+msgid "See Also"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:317
+msgid ":doc:`/developer/installation/docker-setup` - Docker setup guide"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:318
+msgid ":doc:`/developer/installation/local-setup` - Local setup guide"
+msgstr ""
+
+#: ../../reference/makefile-commands.rst:319
+msgid ":doc:`/contributor/testing/index` - Testing guide"
+msgstr ""
+

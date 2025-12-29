@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/architecture/settings-structure.rst:3
+msgid "Settings Structure"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:5
+msgid "Organization of Django settings for different environments."
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:14
+msgid ""
+"Construbot uses environment-based settings with inheritance to avoid "
+"duplication and support multiple environments."
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:16
+msgid "**Location:** ``construbot/config/settings/``"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:18
+msgid "**Files:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:20
+msgid "``base.py`` - Shared settings for all environments"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:21
+msgid "``local.py`` - Development settings"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:22
+msgid "``test.py`` - Testing settings"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:23
+msgid "``production.py`` - Production settings"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:26
+msgid "Settings Hierarchy"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:35
+msgid "All environment files import from ``base.py``:"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:48
+msgid "Base Settings (base.py)"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:50
+msgid "Common settings shared across all environments:"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:52
+msgid "**Core Django:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:66
+msgid "**Installed Apps:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:92
+msgid ""
+"``dal`` and ``dal_select2`` MUST be listed before "
+"``django.contrib.admin`` or autocomplete widgets won't work."
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:94
+msgid "**Middleware:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:109
+msgid "**Authentication:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:119
+msgid "**Database (uses DATABASE_URL):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:128
+msgid "**Static/Media Files:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:139
+msgid "**Password Hashers:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:150
+msgid "**Celery:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:165
+msgid "Local Settings (local.py)"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:167
+msgid "Development environment settings:"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:169
+msgid "**Debug Mode:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:175
+#: ../../developer/architecture/settings-structure.rst:287
+msgid "**Allowed Hosts:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:181
+#: ../../developer/architecture/settings-structure.rst:305
+msgid "**Database:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:183
+msgid "Can use environment variable or defaults to local PostgreSQL:"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:191
+msgid "**Caching (development - dummy cache):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:202
+msgid "**Email (console backend):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:210
+msgid "**Debugging Tools:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:218
+msgid "**django-extensions:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:225
+msgid "Test Settings (test.py)"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:227
+msgid "Testing environment settings:"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:229
+#: ../../developer/architecture/settings-structure.rst:281
+msgid "**Debug OFF:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:235
+msgid "**Database (in-memory SQLite):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:246
+msgid "**Fast Password Hashing:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:254
+msgid "**Templates (no caching):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:263
+msgid "**Email (memory backend):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:269
+msgid "**Celery (synchronous execution):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:277
+msgid "Production Settings (production.py)"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:279
+msgid "Production environment settings:"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:293
+msgid "**Security:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:313
+msgid "**Caching (Redis):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:328
+msgid "**Static Files (WhiteNoise):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:334
+msgid "**Media Files (S3):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:345
+msgid "**Email (Production service):**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:351
+msgid "**Logging:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:376
+msgid "**Sentry:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:391
+msgid "Environment Selection"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:393
+msgid "**Via Environment Variable:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:400
+msgid "**Via Makefile:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:408
+msgid "**In manage.py:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:415
+msgid "django-environ"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:417
+msgid "**Loading .env file:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:434
+msgid "**Accessing variables:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:444
+msgid "Library Mode"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:446
+msgid "**CONSTRUBOT_AS_LIBRARY setting:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:448
+msgid "When ``True``, disables standalone features:"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:460
+msgid "**Affects:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:462
+msgid "Admin interface availability"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:463
+msgid "Account management URLs"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:464
+msgid "Authentication system"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:466
+msgid "See :doc:`../library-mode` for details."
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:469
+msgid "Best Practices"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:471
+msgid "**1. Never commit secrets:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:481
+msgid "**2. Use sensible defaults:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:487
+msgid "**3. Document required variables:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:489
+msgid "Create ``.env.example`` with all required variables."
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:491
+msgid "**4. Validate production settings:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:497
+msgid "**5. Keep base.py DRY:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:499
+msgid "Put common settings in ``base.py``, override only what differs."
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:502
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:504
+msgid "**Wrong settings module loaded:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:514
+msgid "**Settings not loading from .env:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:524
+msgid "**Import errors:**"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:533
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:535
+msgid ":doc:`overview` - Architecture overview"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:536
+msgid ":doc:`../installation/configuration` - Environment configuration"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:537
+msgid ":doc:`../deployment/environment-variables` - Production variables"
+msgstr ""
+
+#: ../../developer/architecture/settings-structure.rst:538
+msgid ""
+"`Django Settings Documentation "
+"<https://docs.djangoproject.com/en/3.2/topics/settings/>`_"
+msgstr ""
+

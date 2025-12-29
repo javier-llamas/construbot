@@ -1,0 +1,350 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../developer/architecture/multi-tenancy.rst:3
+msgid "Multi-Tenancy"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:5
+msgid "Construbot's multi-tenant architecture with three-level hierarchy."
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:9
+msgid "Table of Contents"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:14
+msgid "Construbot uses a **three-level multi-tenant architecture**:"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:16
+msgid "**Customer** - Top-level account (organization)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:17
+msgid "**Company** - Business entity within customer"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:18
+msgid "**User** - Individual with access to one or more companies"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:20
+msgid "**Data isolation:** All business data is scoped to Company level."
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:23
+msgid "Hierarchy Structure"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:37
+msgid "**Key points:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:39
+msgid "Users can belong to multiple companies"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:40
+msgid "Data is never shared between companies"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:41
+msgid "Users switch between companies without re-login"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:44
+msgid "Models"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:47
+msgid "Customer Model"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:49
+msgid "**File:** ``construbot/users/models.py``"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:64
+#: ../../developer/architecture/multi-tenancy.rst:90
+msgid "**Purpose:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:66
+msgid "Group related companies"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:67
+msgid "Billing aggregation (if needed)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:68
+msgid "Corporate-level reporting"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:71
+msgid "Company Model"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:92
+msgid "Primary tenant boundary"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:93
+msgid "All business data scoped here"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:94
+msgid "Separate operational entities"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:97
+msgid "User Model"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:132
+msgid "UserCompany (Through Model)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:148
+msgid "Data Isolation"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:151
+msgid "Company-Scoped Models"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:153
+msgid "**All business models include company foreign key:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:167
+msgid "**Other scoped models:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:169
+msgid "``Contraparte`` (Counterparty)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:170
+msgid "``Sitio`` (Site)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:171
+msgid "``Estimate`` (Estimate)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:172
+msgid "``Concept`` (Line Item)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:173
+msgid "``Retenciones`` (Retention)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:176
+msgid "Querying with Company Filter"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:178
+msgid "**Always filter by company:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:188
+msgid "**Model manager (optional pattern):**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:203
+msgid "Active Company Management"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:206
+msgid "Setting Active Company"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:208
+msgid "**During login:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:224
+msgid "**Company switching:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:242
+msgid "Middleware (Optional)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:262
+msgid "Template Context"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:264
+msgid "**Access in templates:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:282
+msgid "Multi-Company Forms"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:285
+msgid "Limit Choices to Current Company"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:304
+msgid "**In views:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:322
+msgid "Admin Interface"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:325
+msgid "Company-Scoped Admin"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:350
+msgid "API Considerations"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:353
+msgid "Company from Token"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:369
+msgid "Company Header (Alternative)"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:389
+msgid "Best Practices"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:391
+msgid "**1. Always scope queries:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:401
+msgid "**2. Validate company access:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:409
+msgid "**3. Set company on create:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:417
+msgid "**4. Use unique_together:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:424
+msgid "**5. Test data isolation:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:439
+msgid "Common Patterns"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:442
+msgid "Company Context Manager"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:458
+msgid "**Usage:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:466
+msgid "User Permission by Company"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:483
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:485
+msgid "**User can't see data:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:487
+msgid "Check ``active_company`` is set"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:488
+msgid "Verify user is in company's users"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:489
+msgid "Confirm queries filter by ``company``"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:491
+msgid "**Data leaking between companies:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:493
+msgid "Review querysets - must filter by ``company``"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:494
+msgid "Check forms limit choices to current company"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:495
+msgid "Verify ``unique_together`` includes ``company``"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:497
+msgid "**Company switch not working:**"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:499
+msgid "Ensure ``active_company`` is saved"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:500
+msgid "Check session is persisting"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:501
+msgid "Verify user has access to target company"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:504
+msgid "See Also"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:506
+msgid ":doc:`overview` - Architecture overview"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:507
+msgid ":doc:`authentication` - Authentication system"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:508
+msgid ":doc:`permission-levels` - Permission system"
+msgstr ""
+
+#: ../../developer/architecture/multi-tenancy.rst:509
+msgid ":doc:`../models/users` - User model details"
+msgstr ""
+

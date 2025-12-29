@@ -4,10 +4,6 @@ Settings Structure
 
 Organization of Django settings for different environments.
 
-.. contents:: Table of Contents
-   :local:
-   :depth: 2
-
 Overview
 ========
 

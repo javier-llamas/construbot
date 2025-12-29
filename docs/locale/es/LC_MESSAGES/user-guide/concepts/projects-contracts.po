@@ -1,0 +1,1264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018-2025, Javier Llamas Ramirez
+# This file is distributed under the same license as the Construbot package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Construbot 1.1.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../user-guide/concepts/projects-contracts.rst:3
+msgid "Projects & Contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:6
+msgid "**Spanish Term:** Contrato"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:8
+msgid ""
+"In Construbot, \"Contrato\" refers to both construction projects and "
+"contracts. The system supports hierarchical contracts (sub-contracts)."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:12
+msgid "Overview"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:14
+msgid ""
+"A **Contract** (Contrato) is the central entity in Construbot, "
+"representing a construction project or agreement. Every aspect of work "
+"tracking, billing, and financial management revolves around contracts."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:17
+msgid "**Key Characteristics:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:19
+msgid "Hierarchical structure (parent/child relationships)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:20
+msgid "Associated with a Counterparty (business partner)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:21
+msgid "Linked to a construction Site (location)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:22
+msgid "Contains a catalog of work items (Concepts)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:23
+msgid "Tracks progress through Estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:24
+msgid "Manages financial aspects (amount, advance, retentions)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:27
+msgid "What is a Contract?"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:29
+msgid "A contract in Construbot represents:"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:32
+msgid "**Legal Agreement**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:32
+msgid ""
+"The formal contract or agreement with a client, subcontractor, or "
+"piecework contractor."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:35
+msgid "**Project Container**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:35
+msgid "A project that groups related work, estimates, and financial tracking."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:38
+msgid "**Financial Framework**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:38
+msgid "Defines the total amount, advance payment, and retention rules."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:41
+msgid "**Work Catalog**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:41
+msgid "Contains all work items (concepts) to be executed."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:44
+msgid "Contract Components"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:47
+msgid "Basic Information"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:50
+msgid "**Reference Number** (Folio)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:50
+msgid "Sequential ID for contracts within your company (e.g., 1, 2, 3...)."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:53
+msgid "**Contract Code** (Código)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:53
+msgid "Your internal code matching the signed contract (e.g., \"CONT-2024-001\")."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:58
+msgid "**Contract Name** (Nombre del contrato)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:56
+msgid "Full descriptive name used in estimates and reports."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:58
+msgid "*Example: \"Downtown Office Tower - Complete Construction Phase 1\"*"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:63
+msgid "**Short Name** (Nombre corto)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:61
+msgid "Abbreviated name for lists and navigation."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:63
+msgid "*Example: \"Office Tower P1\"*"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:66
+msgid "**Date** (Fecha)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:66
+msgid "Contract signing or start date."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:69
+msgid "Relationships"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:76
+msgid "**Counterparty** (Contraparte)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:72
+msgid "The business partner for this contract. Must be one of:"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:74
+msgid "**Client** (Cliente) - If you're performing work for them"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:75
+msgid ""
+"**Subcontractor** (Subcontratista) - If they're performing specialized "
+"work for you"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:76
+msgid "**Piecework Contractor** (Destajista) - If they're doing task-based work"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:80
+msgid "**Site** (Sitio)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:79
+msgid ""
+"The construction location where work will be performed. Must be "
+"associated with a Client counterparty."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:83
+msgid "**Users** (Usuarios)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:83
+msgid ""
+"Team members assigned to this contract. Only assigned users can view/edit"
+" the contract."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:86
+msgid "Financial Fields"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:91
+msgid "**Amount** (Monto)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:89
+msgid "Total contract value, typically specified **without VAT/IVA**."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:91
+msgid "*Example: $1,000,000.00*"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:97
+msgid "**Advance Payment** (Anticipo)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:94
+msgid ""
+"Percentage (0-100%) paid upfront by the client for mobilization. This "
+"amount will be amortized (recovered) across subsequent estimates."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:97
+msgid "*Example: 10% = $100,000.00 advance on a $1,000,000 contract*"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:100
+msgid "**Status** (Status)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:100
+msgid ""
+"Boolean indicating if the project is **ongoing** (active) or "
+"**completed** (inactive)."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:103
+msgid "Documents"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:106
+msgid "**Contract PDF** (PDF del Contrato)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:106
+msgid "Upload the signed contract document for reference."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:109
+msgid "Hierarchical Structure"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:111
+msgid ""
+"One of Construbot's powerful features is **hierarchical contracts** using"
+" parent-child relationships."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:114
+msgid "Why Use Hierarchy?"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:125
+msgid "**Separate Sub-Contractor Management**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:117
+msgid "Track work by different subcontractors under a main contract:"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:128
+msgid "**Consolidated Reporting**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:128
+msgid "Generate reports that roll up totals from all sub-contracts to the parent."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:131
+msgid "**Different Teams**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:131
+msgid ""
+"Assign different users to different sub-contracts while maintaining "
+"overall project visibility."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:134
+msgid "**Clear Financial Separation**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:134
+msgid "Track costs and progress separately for each specialized area."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:137
+msgid "Creating Hierarchy"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:140
+msgid "**Parent Contract:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:140
+msgid "Create a main contract using the standard \"Create Contract\" form."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:143
+msgid "**Child Contracts:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:143
+msgid "Use the \"Create Sub-Contract\" option and select the parent contract."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:145
+msgid "**Tree Operations:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:147
+msgid "Add multiple children to any parent"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:148
+msgid "Add children to children (multi-level hierarchy)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:149
+msgid "Move contracts within the tree (with caution)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:152
+msgid ""
+"**Deletion Rules**: You cannot delete a parent contract that has "
+"children. Delete all child contracts first."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:156
+msgid "Contract Lifecycle"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:159
+msgid "1. Creation"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:161
+msgid "**Initial Setup:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:163
+msgid "Create or select Counterparty"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:164
+msgid "Create or select Site"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:165
+msgid "Define contract details (folio, name, amount, date)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:166
+msgid "Set advance payment percentage"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:167
+msgid "Assign users"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:168
+msgid "Upload signed contract PDF (optional)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:170
+msgid "**Result:** Empty contract ready for work catalog."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:173
+msgid "2. Catalog Definition"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:175
+msgid "**Add Work Items (Concepts):**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:177
+msgid "Manually enter each work item, OR"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:178
+msgid "Import from Excel spreadsheet"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:180
+msgid "**Define Retentions:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:182
+msgid "Add percentage-based retentions (e.g., 5%)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:183
+msgid "Add fixed-amount retentions (e.g., $10,000)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:185
+msgid "**Result:** Contract with complete work catalog and retention rules."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:188
+msgid "3. Execution"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:190
+msgid "**Track Progress:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:192
+msgid "Create periodic estimates (Estimaciones)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:193
+msgid "Document completed quantities for each concept"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:194
+msgid "Generate PDF estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:195
+msgid "Submit to client for approval"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:197
+msgid "**Result:** Work progress documented, payments tracked."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:200
+msgid "4. Financial Management"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:202
+msgid "**Payment Tracking:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:204
+msgid "Mark estimates as invoiced (facturada)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:205
+msgid "Record when payments are received (pagada)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:206
+msgid "Monitor outstanding amounts on dashboard"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:208
+msgid "**Automatic Calculations:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:210
+msgid "Advance amortization across estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:211
+msgid "Retention deductions"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:212
+msgid "Accumulated totals"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:214
+msgid "**Result:** Clear financial visibility."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:217
+msgid "5. Completion"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:219
+msgid "**Project Close:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:221
+msgid "Final estimate created"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:222
+msgid "All work completed"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:223
+msgid "Final payment received (including retained amounts)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:224
+msgid "Contract status set to inactive"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:226
+msgid "**Result:** Closed project with complete financial history."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:229
+msgid "Contract Types by Counterparty"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:232
+msgid "Client Contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:234
+msgid "**When:** Your company is the contractor performing work."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:236
+msgid "**Counterparty Type:** Cliente (Client)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:238
+msgid "**Financial Flow:** Client pays you for completed work."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:245
+#: ../../user-guide/concepts/projects-contracts.rst:262
+#: ../../user-guide/concepts/projects-contracts.rst:279
+#: ../../user-guide/concepts/projects-contracts.rst:297
+msgid "**Example:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:241
+msgid "*\"Office Building Construction for ABC Corp\"*"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:243
+msgid "Counterparty: ABC Corp (Cliente)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:244
+#: ../../user-guide/concepts/projects-contracts.rst:277
+msgid "Your role: General Contractor"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:245
+msgid "Payment: You receive money"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:248
+msgid "Subcontractor Contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:250
+msgid "**When:** You hire a specialized contractor for part of a project."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:252
+msgid "**Counterparty Type:** Subcontratista (Subcontractor)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:254
+msgid "**Financial Flow:** You pay the subcontractor for their work."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:257
+msgid "*\"Electrical Installation - Subcontracted to XYZ Electric\"*"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:259
+msgid "Counterparty: XYZ Electric (Subcontratista)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:260
+msgid "Your role: General Contractor hiring specialist"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:261
+msgid "Payment: You pay money"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:262
+msgid "Typically a **child contract** under a main client contract"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:265
+msgid "Piecework Contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:267
+msgid "**When:** You hire workers paid by completed units (piece rate)."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:269
+msgid "**Counterparty Type:** Destajista (Piecework Contractor)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:271
+msgid "**Financial Flow:** You pay per completed task/quantity."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:274
+msgid "*\"Masonry Work - Paid per Square Meter\"*"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:276
+msgid "Counterparty: José García (Destajista)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:278
+msgid "Payment: You pay based on quantity (e.g., $50/m²)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:279
+msgid "Common in Mexican construction industry"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:282
+msgid "Financial Calculations"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:285
+msgid "Understanding Contract Amounts"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:288
+msgid "**Total Contracted** (Importe Total Contratado)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:288
+msgid "The ``monto`` field - total contract value."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:292
+msgid "**Accumulated Executed** (Ejercido Acumulado)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:291
+msgid ""
+"Sum of all work billed across all estimates to date. Calculated by: "
+"``ejercido_acumulado()`` method."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:295
+msgid "**Remaining** (Por Ejercer)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:295
+msgid "Total Contracted minus Accumulated Executed."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:311
+msgid "Advance Payment Mechanics"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:315
+msgid "**Initial Advance:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:314
+msgid ""
+"If ``anticipo = 10%`` on a $1,000,000 contract: Client pays $100,000 "
+"upfront."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:318
+msgid "**Amortization:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:318
+msgid "The $100,000 is recovered across estimates until fully amortized."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:320
+msgid "**Example Amortization:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:326
+msgid "Estimate"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:327
+msgid "Work Value"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:328
+msgid "Amortization"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:329
+msgid "Net Payment"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:330
+msgid "Remaining Advance"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:331
+msgid "#1"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:332
+msgid "$200,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:333
+msgid "$20,000 (10%)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:334
+#: ../../user-guide/concepts/projects-contracts.rst:342
+msgid "$180,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:335
+msgid "$80,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:336
+msgid "#2"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:337
+msgid "$150,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:338
+msgid "$15,000 (10%)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:339
+msgid "$135,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:340
+msgid "$65,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:341
+msgid "#3"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:343
+msgid "$18,000 (10%)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:344
+msgid "$162,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:345
+msgid "$47,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:346
+msgid "#4"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:347
+msgid "$100,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:348
+msgid "$10,000 (10%)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:349
+msgid "$90,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:350
+msgid "$37,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:351
+msgid "#5"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:352
+msgid "$120,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:353
+msgid "$12,000 (10%)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:354
+msgid "$108,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:355
+msgid "$25,000"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:357
+msgid ""
+"The advance is recovered proportionally until the original $100,000 is "
+"fully amortized."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:359
+msgid "**Learn more:** :doc:`estimates`"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:362
+msgid "Best Practices"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:365
+msgid "Naming Conventions"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:370
+msgid "✅ **Good Contract Names:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:368
+msgid "\"Downtown Office Tower - Complete Construction Phase 1\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:369
+msgid "\"Highway 101 Bridge - Structural Steel Installation\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:370
+msgid "\"Residential Complex Unit A - Electrical Systems\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:375
+msgid "❌ **Avoid:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:373
+msgid "\"Project 1\" (too generic)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:374
+msgid "\"ABC\" (unclear)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:375
+msgid "Just the contract code without description"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:378
+msgid "Organize with Hierarchy"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:383
+msgid "✅ **Use sub-contracts for:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:381
+msgid "Different subcontractors"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:382
+msgid "Different phases of work"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:383
+msgid "Different buildings/units in a complex"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:388
+msgid "✅ **Keep main contract for:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:386
+msgid "Overall client relationship"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:387
+msgid "Consolidated reporting"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:388
+msgid "Total project tracking"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:391
+msgid "User Assignment"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:397
+msgid "✅ **Assign users who need access:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:394
+msgid "Project Manager (always)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:395
+msgid "Site Supervisor"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:396
+msgid "Coordinators creating estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:397
+msgid "Accounting staff tracking payments"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:402
+msgid "✅ **Permission levels:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:400
+msgid "Director (Level 3+): Can create/edit contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:401
+msgid "Coordinador (Level 2): Can create estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:402
+msgid "Auxiliar (Level 1): View-only access"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:405
+msgid "Keep Status Updated"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:409
+msgid "✅ **Active contracts:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:408
+msgid "Set ``status = True`` (ongoing) for projects in progress"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:409
+msgid "Appear in \"Active Contracts\" dashboard section"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:413
+msgid "✅ **Completed contracts:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:412
+msgid "Set ``status = False`` when project is finished"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:413
+msgid "Removes from active list but retains all history"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:416
+msgid "Common Scenarios"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:419
+msgid "Scenario 1: Main Contract with Subcontractors"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:421
+#: ../../user-guide/concepts/projects-contracts.rst:438
+#: ../../user-guide/concepts/projects-contracts.rst:455
+msgid "**Setup:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:423
+msgid "Create main client contract: \"Office Building for ABC Corp\" ($1,000,000)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:424
+msgid "Create sub-contracts as children:"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:426
+msgid "\"Electrical - XYZ Electric\" ($150,000) - Subcontratista"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:427
+msgid "\"Plumbing - AAA Plumbing\" ($100,000) - Subcontratista"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:428
+msgid "\"HVAC - Cool Systems\" ($120,000) - Subcontratista"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:430
+msgid "Track work separately for each sub-contract"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:431
+msgid "Generate consolidated report for ABC Corp showing all work"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:433
+msgid ""
+"**Benefit:** Clear separation of subcontractor costs while maintaining "
+"overall project view."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:436
+msgid "Scenario 2: Multi-Phase Project"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:440
+msgid "Create parent: \"Residential Complex - Master Contract\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:441
+msgid "Create children for each phase:"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:443
+msgid "\"Phase 1 - Foundation & Structure\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:444
+msgid "\"Phase 2 - MEP & Finishes\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:445
+msgid "\"Phase 3 - Landscaping & Exterior\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:447
+msgid "Execute phases sequentially or in parallel"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:448
+msgid "Track financial progress per phase"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:450
+msgid "**Benefit:** Clear phase separation with consolidated totals."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:453
+msgid "Scenario 3: Multiple Buildings"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:457
+msgid "Create parent: \"Shopping Center Development\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:458
+msgid "Create children for each building:"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:460
+msgid "\"Building A - Retail Spaces\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:461
+msgid "\"Building B - Food Court\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:462
+msgid "\"Building C - Parking Structure\""
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:464
+msgid "Assign different teams to different buildings"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:465
+msgid "Track progress independently"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:467
+msgid "**Benefit:** Independent management with overall project visibility."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:470
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:473
+msgid "Can't Delete a Contract"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:475
+msgid ""
+"**Problem:** \"Cannot be deleted, has concepts that must be deleted "
+"first\" or has child contracts."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:477
+#: ../../user-guide/concepts/projects-contracts.rst:510
+msgid "**Solution:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:479
+msgid "For concepts: Delete all work items (concepts) from the contract first"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:480
+msgid "For children: Delete all sub-contracts first, then delete parent"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:481
+msgid "Alternatively: Set contract to inactive instead of deleting"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:484
+msgid "Can't See a Contract"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:486
+msgid "**Problem:** Contract doesn't appear in your list."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:488
+msgid "**Causes:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:490
+msgid "You're in the wrong **company** (use Switch Company)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:491
+msgid "You're not **assigned** to the contract (contact admin)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:492
+msgid "Your **permission level** is too low"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:495
+msgid "Can't Edit Contract"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:497
+msgid "**Problem:** Edit option is disabled."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:499
+msgid "**Requirements:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:501
+msgid "Minimum **Director** (Level 3) permission"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:502
+msgid "Must be **assigned** to the contract"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:503
+msgid "Must be in the correct **company**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:506
+msgid "Retentions Not Showing"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:508
+msgid "**Problem:** Retentions not appearing in estimates."
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:512
+msgid "Navigate to Contract Detail"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:513
+msgid "Click \"Retentions\" tab"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:514
+msgid "Add retention rules (percentage or fixed amount)"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:515
+msgid "Retentions will automatically apply to future estimates"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:518
+msgid "See Also"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:520
+msgid "**Related Concepts:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:522
+msgid ":doc:`counterparties` - Understanding business partners"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:523
+msgid ":doc:`estimates` - Tracking progress and payments"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:524
+msgid ":doc:`concepts-line-items` - Work items in contracts"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:525
+msgid ":doc:`retentions` - Financial withholdings"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:526
+msgid ":doc:`sites-contacts` - Locations and contacts"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:528
+msgid "**Workflows:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:530
+msgid ":doc:`/user-guide/workflows/creating-project` - Complete project setup"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:531
+msgid ":doc:`/user-guide/workflows/subcontracts` - Working with hierarchies"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:532
+msgid ":doc:`/user-guide/workflows/managing-estimates` - Estimate creation"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:534
+msgid "**Features:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:536
+msgid ""
+":doc:`/user-guide/features/hierarchical-contracts` - Deep dive into "
+"hierarchy"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:537
+msgid ":doc:`/user-guide/features/multi-company` - Multi-tenant usage"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:539
+msgid "**Developer Reference:**"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:541
+msgid ":doc:`/developer/models/proyectos` - Contrato model documentation"
+msgstr ""
+
+#: ../../user-guide/concepts/projects-contracts.rst:542
+msgid ":doc:`/developer/architecture/multi-tenancy` - System architecture"
+msgstr ""
+
