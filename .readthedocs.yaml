@@ -37,8 +37,8 @@ formats:
 search:
   ranking:
     'user-guide/*': 2      # Higher priority for user docs
-    'developer/*': 1        # Medium priority for developer docs
-    'contributor/*': 0.5    # Lower priority for contributor docs
+    'developer/*': 1       # Medium priority for developer docs
+    'contributor/*': 0     # Lower priority for contributor docs
   ignore:
     - _build/*
     - locale/*

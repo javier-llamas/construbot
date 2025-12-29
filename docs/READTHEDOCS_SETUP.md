@@ -141,7 +141,7 @@ search:
   ranking:
     'user-guide/*': 2
     'developer/*': 1
-    'contributor/*': 0.5
+    'contributor/*': 0
 ```
 
 ### docs/requirements.txt
@@ -281,14 +281,14 @@ formats:
 
 ### Search Ranking
 
-Boost important sections in search:
+Boost important sections in search (values must be integers from -10 to 10):
 
 ```yaml
 search:
   ranking:
     'user-guide/*': 2      # User docs ranked highest
     'developer/*': 1       # Developer docs normal ranking
-    'contributor/*': 0.5   # Contributor docs lower ranking
+    'contributor/*': 0     # Contributor docs lower ranking
 ```
 
 ## Maintenance
