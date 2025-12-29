@@ -151,3 +151,36 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+
+# Bilingual documentation targets
+.PHONY: html-en html-es html-all update-translations livehtml
+
+html-en:
+	@echo "Building English documentation..."
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	@echo
+	@echo "English build finished. HTML pages are in $(BUILDDIR)/html."
+
+html-es:
+	@echo "Building Spanish documentation..."
+	$(SPHINXBUILD) -b html -D language='es' $(ALLSPHINXOPTS) $(BUILDDIR)/html/es
+	@echo
+	@echo "Spanish build finished. HTML pages are in $(BUILDDIR)/html/es."
+
+html-all: html-en html-es
+	@echo
+	@echo "Both English and Spanish builds complete."
+
+update-translations:
+	@echo "Extracting translatable strings..."
+	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/gettext
+	@echo "Updating Spanish .po files..."
+	sphinx-intl update -p $(BUILDDIR)/gettext -l es
+	@echo
+	@echo "Translation files updated. Edit files in locale/es/LC_MESSAGES/"
+
+livehtml:
+	@echo "Starting auto-rebuild server..."
+	@echo "Open http://127.0.0.1:8000 in your browser"
+	@which sphinx-autobuild > /dev/null || (echo "sphinx-autobuild not installed. Run: pip install sphinx-autobuild" && exit 1)
+	sphinx-autobuild -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html --port 8000

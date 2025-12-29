@@ -1,0 +1,137 @@
+/* Custom CSS for Construbot Documentation */
+
+/* Improve table styling */
+table.docutils {
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table.docutils th {
+    background-color: #2980b9;
+    color: white;
+    font-weight: bold;
+    padding: 12px 8px;
+}
+
+table.docutils td {
+    padding: 8px;
+    border-bottom: 1px solid #e1e4e5;
+}
+
+table.docutils tr:hover {
+    background-color: #f5f7f9;
+}
+
+/* Code block improvements */
+.highlight {
+    border-radius: 4px;
+    margin: 1em 0;
+}
+
+div.highlight pre {
+    padding: 12px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Admonition styling improvements */
+.admonition {
+    border-radius: 4px;
+    padding: 12px;
+    margin: 1em 0;
+}
+
+.admonition.note {
+    background-color: #e7f2fa;
+    border-left: 4px solid #2980b9;
+}
+
+.admonition.warning {
+    background-color: #ffedcc;
+    border-left: 4px solid #f0ad4e;
+}
+
+.admonition.tip {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+/* Improve link styling */
+a.reference.external:after {
+    content: " ↗";
+    font-size: 0.8em;
+    vertical-align: super;
+}
+
+/* Better spacing for sections */
+.section {
+    margin-bottom: 2em;
+}
+
+/* Glossary term styling */
+dl.glossary dt {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2980b9;
+    margin-top: 1em;
+}
+
+dl.glossary dd {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+/* Version badge styling */
+.version {
+    background-color: #2980b9;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 768px) {
+    table.docutils {
+        font-size: 0.9em;
+    }
+
+    table.docutils th,
+    table.docutils td {
+        padding: 6px 4px;
+    }
+}
+
+/* Copy button styling improvements */
+button.copybtn {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button.copybtn:hover {
+    background-color: #1f6fa0;
+}
+
+/* Sidebar improvements */
+.wy-side-nav-search {
+    background-color: #2c3e50;
+}
+
+.wy-side-nav-search input[type="text"] {
+    border-radius: 4px;
+}
+
+/* TOC highlighting */
+.wy-menu-vertical li.current {
+    background-color: #f0f0f0;
+}
+
+.wy-menu-vertical li.current a {
+    border-right: 3px solid #2980b9;
+}
