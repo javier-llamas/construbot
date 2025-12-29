@@ -10,8 +10,9 @@ build:
     python: "3.9"
   jobs:
     post_build:
-      # Generate translation files for Spanish
-      - cd docs && mkdir -p _build/gettext && make gettext && sphinx-intl update -p _build/gettext -l es
+      # Build Spanish documentation
+      - cd docs && sphinx-intl build
+      - cd docs && sphinx-build -b html -D language=es . _build/html/es
 
 # Sphinx configuration
 sphinx:
