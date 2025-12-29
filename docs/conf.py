@@ -4,48 +4,11 @@
 
 import os
 import sys
-import django
-from unittest.mock import MagicMock
 
 # -- Path setup --------------------------------------------------------------
 
 # Add the project root directory to sys.path for autodoc
 sys.path.insert(0, os.path.abspath('..'))
-
-# -- Mock development dependencies -------------------------------------------
-
-# Mock development-only packages that aren't available in ReadTheDocs environment
-# This must happen BEFORE django.setup() to prevent import errors
-class MockModule(MagicMock):
-    """Mock object for unavailable development dependencies."""
-
-    def __getattr__(self, name):
-        return MagicMock()
-
-MOCK_MODULES = [
-    'debug_toolbar',
-    'debug_toolbar.middleware',
-    'django_extensions',
-    'werkzeug',
-    'watchman',
-]
-
-for mod_name in MOCK_MODULES:
-    sys.modules[mod_name] = MockModule()
-
-# -- Django setup for autodoc ------------------------------------------------
-
-# Configure Django settings for autodoc to import models
-os.environ['DJANGO_SETTINGS_MODULE'] = 'construbot.config.settings.local'
-os.environ['DJANGO_READ_DOT_ENV_FILE'] = 'False'
-os.environ.setdefault('DATABASE_URL', 'sqlite:///:memory:')
-os.environ.setdefault('CELERY_BROKER_URL', 'redis://localhost:6379/0')
-os.environ.setdefault('DJANGO_SECRET_KEY', 'docs-secret-key-not-for-production')
-os.environ.setdefault('DJANGO_ADMIN_URL', r'^admin/')
-os.environ.setdefault('DJANGO_DEBUG', 'False')
-
-# Initialize Django
-django.setup()
 
 # -- Project information -----------------------------------------------------
 
@@ -194,12 +157,26 @@ autodoc_default_options = {
 }
 
 # Generate stub documentation for undocumented items
-# Mock development-only dependencies not available in ReadTheDocs environment
+# Mock imports for packages not needed during documentation build
+# This is the standard Sphinx approach - no need for django.setup()
 autodoc_mock_imports = [
+    # Development-only dependencies
     'debug_toolbar',
     'django_extensions',
     'werkzeug',
     'watchman',
+
+    # Database drivers (not needed for doc generation)
+    'psycopg2',
+
+    # Celery and Redis (not needed for doc generation)
+    'celery',
+    'redis',
+
+    # Storage and media (not needed for doc generation)
+    'storages',
+    'boto3',
+    'botocore',
 ]
 autoclass_content = 'both'  # Include __init__ docstring and class docstring
 autodoc_typehints = 'description'  # Show type hints in description
