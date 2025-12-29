@@ -11,4 +11,8 @@ sphinx-autobuild==2021.3.14
 # Internationalization
 sphinx-intl==2.1.0
 
+# automatic translations
+# deep-translator
+# polib
+
 

@@ -44,7 +44,7 @@ class POTranslator:
     def translate_text(self, text):
         """Translate text with error handling and rate limiting."""
         if not text or not text.strip():
-            return text
+            return ""  # Return empty string instead of None
 
         try:
             # Rate limiting to avoid API throttling
@@ -58,10 +58,19 @@ class POTranslator:
                 for sentence in sentences:
                     if sentence:
                         translated = self.translator.translate(sentence)
+                        # Ensure translation is not None
+                        if translated is None:
+                            translated = sentence
                         translated_parts.append(translated)
                 return '. '.join(translated_parts)
             else:
-                return self.translator.translate(text)
+                translated = self.translator.translate(text)
+                # Ensure translation is not None
+                if translated is None:
+                    if self.verbose:
+                        print(f"    Warning: Translation returned None, using original")
+                    return text
+                return translated
 
         except Exception as e:
             if self.verbose:
@@ -90,7 +99,7 @@ class POTranslator:
         return True
 
     def translate_po_file(self, po_file_path):
-        """Translate a single .po file."""
+        """Translate a single .po file with error recovery."""
         po_file_path = Path(po_file_path)
 
         if not po_file_path.exists():
@@ -102,31 +111,54 @@ class POTranslator:
         try:
             po = polib.pofile(str(po_file_path))
         except Exception as e:
-            print(f"Error: Failed to parse PO file: {e}")
+            print(f"  ✗ Error: Failed to parse PO file: {e}")
+            self.stats['errors'] += 1
             return False
 
         translated_count = 0
         skipped_count = 0
+        error_count = 0
 
         for entry in po:
             if self.should_translate_entry(entry):
-                if self.verbose:
-                    print(f"  Translating: {entry.msgid[:60]}...")
+                try:
+                    if self.verbose:
+                        print(f"  Translating: {entry.msgid[:60]}...")
 
-                translated = self.translate_text(entry.msgid)
+                    translated = self.translate_text(entry.msgid)
 
-                if self.dry_run:
-                    print(f"    [DRY RUN] Would translate to: {translated[:60]}...")
-                else:
-                    entry.msgstr = translated
+                    # Ensure we never set msgstr to None
+                    if translated is None:
+                        translated = ""
 
-                translated_count += 1
+                    if self.dry_run:
+                        print(f"    [DRY RUN] Would translate to: {translated[:60]}...")
+                    else:
+                        entry.msgstr = translated
+
+                    translated_count += 1
+
+                except Exception as e:
+                    if self.verbose:
+                        print(f"  ✗ Error translating entry: {e}")
+                    error_count += 1
+                    self.stats['errors'] += 1
+                    # Continue with next entry instead of failing
+                    continue
             else:
                 skipped_count += 1
 
+        # Save the file even if some entries failed
         if not self.dry_run and translated_count > 0:
-            po.save()
-            print(f"  ✓ Translated {translated_count} entries, skipped {skipped_count}")
+            try:
+                po.save()
+                print(f"  ✓ Translated {translated_count} entries, skipped {skipped_count}")
+                if error_count > 0:
+                    print(f"    (⚠ {error_count} entries had errors)")
+            except Exception as e:
+                print(f"  ✗ Error saving file: {e}")
+                self.stats['errors'] += 1
+                return False
         elif self.dry_run:
             print(f"  [DRY RUN] Would translate {translated_count} entries, skip {skipped_count}")
         else:
@@ -139,7 +171,7 @@ class POTranslator:
         return True
 
     def translate_directory(self, directory):
-        """Recursively translate all .po files in a directory."""
+        """Recursively translate all .po files in a directory with checkpoint support."""
         directory = Path(directory)
 
         if not directory.exists():
@@ -152,10 +184,24 @@ class POTranslator:
             print(f"No .po files found in {directory}")
             return False
 
-        print(f"Found {len(po_files)} .po files")
+        print(f"Found {len(po_files)} .po files\n")
 
-        for po_file in po_files:
-            self.translate_po_file(po_file)
+        # Process each file with error recovery
+        for i, po_file in enumerate(po_files, 1):
+            try:
+                print(f"[{i}/{len(po_files)}] ", end="")
+                self.translate_po_file(po_file)
+            except KeyboardInterrupt:
+                print("\n\n⚠ Translation interrupted by user!")
+                print(f"Progress saved up to: {po_file}")
+                print(f"Already processed: {i-1}/{len(po_files)} files")
+                print("\nTo resume, run the script again - already translated entries will be skipped.")
+                raise
+            except Exception as e:
+                print(f"  ✗ Unexpected error processing file: {e}")
+                self.stats['errors'] += 1
+                # Continue with next file instead of stopping
+                continue
 
         return True
 
@@ -200,13 +246,25 @@ def main():
 
     translator = POTranslator(dry_run=args.dry_run, verbose=args.verbose)
 
-    if args.files:
-        # Translate specific files
-        for file_path in args.files:
-            translator.translate_po_file(file_path)
-    else:
-        # Translate all files in directory
-        translator.translate_directory(args.dir)
+    try:
+        if args.files:
+            # Translate specific files
+            for file_path in args.files:
+                translator.translate_po_file(file_path)
+        else:
+            # Translate all files in directory
+            translator.translate_directory(args.dir)
+
+    except KeyboardInterrupt:
+        print("\n\nTranslation interrupted!")
+        translator.print_summary()
+        print("\n✓ All progress has been saved to .po files")
+        print("✓ Run the script again to continue - already translated entries will be skipped")
+        sys.exit(0)
+    except Exception as e:
+        print(f"\n\n✗ Fatal error: {e}")
+        translator.print_summary()
+        sys.exit(1)
 
     translator.print_summary()
 
