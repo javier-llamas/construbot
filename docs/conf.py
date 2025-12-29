@@ -5,11 +5,33 @@
 import os
 import sys
 import django
+from unittest.mock import MagicMock
 
 # -- Path setup --------------------------------------------------------------
 
 # Add the project root directory to sys.path for autodoc
 sys.path.insert(0, os.path.abspath('..'))
+
+# -- Mock development dependencies -------------------------------------------
+
+# Mock development-only packages that aren't available in ReadTheDocs environment
+# This must happen BEFORE django.setup() to prevent import errors
+class MockModule(MagicMock):
+    """Mock object for unavailable development dependencies."""
+
+    def __getattr__(self, name):
+        return MagicMock()
+
+MOCK_MODULES = [
+    'debug_toolbar',
+    'debug_toolbar.middleware',
+    'django_extensions',
+    'werkzeug',
+    'watchman',
+]
+
+for mod_name in MOCK_MODULES:
+    sys.modules[mod_name] = MockModule()
 
 # -- Django setup for autodoc ------------------------------------------------
 
@@ -172,7 +194,13 @@ autodoc_default_options = {
 }
 
 # Generate stub documentation for undocumented items
-autodoc_mock_imports = []
+# Mock development-only dependencies not available in ReadTheDocs environment
+autodoc_mock_imports = [
+    'debug_toolbar',
+    'django_extensions',
+    'werkzeug',
+    'watchman',
+]
 autoclass_content = 'both'  # Include __init__ docstring and class docstring
 autodoc_typehints = 'description'  # Show type hints in description
 
