@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -24,9 +24,212 @@ msgid "Workflows"
 msgstr "Flujos de trabajo"
 
 #: ../../user-guide/workflows/index.rst:5
-msgid "Step-by-step guides for common tasks."
+#, fuzzy
+msgid "Step-by-step guides for common tasks in Construbot."
 msgstr "Guías paso a paso para tareas comunes."
 
-#: ../../user-guide/workflows/index.rst:17
-msgid "[Detailed workflow files to be created]"
-msgstr "[Se crearán archivos de flujo de trabajo detallados]"
+#: ../../user-guide/workflows/index.rst:8
+msgid "Overview"
+msgstr "Descripción general"
+
+#: ../../user-guide/workflows/index.rst:10
+msgid ""
+"This section provides detailed workflows for performing common operations. "
+"Each workflow includes prerequisites, step-by-step instructions, and "
+"troubleshooting tips."
+msgstr ""
+"Esta sección proporciona flujos de trabajo detallados para realizar "
+"operaciones comunes. Cada flujo de trabajo incluye requisitos previos, "
+"instrucciones paso a paso y sugerencias para la resolución de problemas."
+
+#: ../../user-guide/workflows/index.rst:13
+#, fuzzy
+msgid "Common Workflows"
+msgstr "Flujos de trabajo"
+
+#: ../../user-guide/workflows/index.rst:16
+msgid "Creating a New Project"
+msgstr "Creando un nuevo proyecto"
+
+#: ../../user-guide/workflows/index.rst:18
+msgid "**Complete workflow from client setup to first estimate:**"
+msgstr ""
+"**Flujo de trabajo completo desde la configuración del cliente hasta la "
+"primera estimación:**"
+
+#: ../../user-guide/workflows/index.rst:20
+msgid "**Create client counterparty** (Proyectos → Contrapartes)"
+msgstr "**Crear contraparte cliente** (Proyectos → Contrapartes)"
+
+#: ../../user-guide/workflows/index.rst:21
+msgid "**Add project site** (Proyectos → Sitios)"
+msgstr "**Agregar sitio del proyecto** (Proyectos → Sitios)"
+
+#: ../../user-guide/workflows/index.rst:22
+msgid "**Create contract** with details and retentions"
+msgstr "**Crear contrato** con detalles y retenciones"
+
+#: ../../user-guide/workflows/index.rst:23
+msgid "**Build concept catalog** (manual or Excel import)"
+msgstr "**Construir catálogo de conceptos** (importación manual o Excel)"
+
+#: ../../user-guide/workflows/index.rst:24
+msgid "**Add document recipients** (contacts)"
+msgstr "**Agregar destinatarios del documento** (contactos)"
+
+#: ../../user-guide/workflows/index.rst:25
+msgid "**Create first estimate** for progress billing"
+msgstr "**Crear primera estimación** para facturación progresiva"
+
+#: ../../user-guide/workflows/index.rst:27
+msgid ""
+"See :doc:`/user-guide/concepts/projects-contracts` for detailed information."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/projects-contracts` para obtener "
+"información detallada."
+
+#: ../../user-guide/workflows/index.rst:30
+msgid "Managing Estimates"
+msgstr "Gestión de estimaciones"
+
+#: ../../user-guide/workflows/index.rst:32
+msgid "**Monthly progress billing workflow:**"
+msgstr "**Flujo de trabajo de facturación de progreso mensual:**"
+
+#: ../../user-guide/workflows/index.rst:34
+msgid "Navigate to contract"
+msgstr "Navegar al contrato"
+
+#: ../../user-guide/workflows/index.rst:35
+msgid "Click \"Nueva Estimación\""
+msgstr "Haga clic en \"Nueva Estimación\""
+
+#: ../../user-guide/workflows/index.rst:36
+msgid "Set period dates"
+msgstr "Establecer fechas del período"
+
+#: ../../user-guide/workflows/index.rst:37
+msgid "Add line items with quantities completed"
+msgstr "Agregar artículos de línea con cantidades completadas"
+
+#: ../../user-guide/workflows/index.rst:38
+msgid "Review calculations and retentions"
+msgstr "Revisar cálculos y retenciones"
+
+#: ../../user-guide/workflows/index.rst:39
+msgid "Generate PDF document"
+msgstr "Generar documento PDF"
+
+#: ../../user-guide/workflows/index.rst:40
+msgid "Submit for approval"
+msgstr "Enviar para aprobación"
+
+#: ../../user-guide/workflows/index.rst:42
+msgid "See :doc:`/user-guide/concepts/estimates` for details."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/estimates` para obtener más detalles."
+
+#: ../../user-guide/workflows/index.rst:45
+msgid "Setting Up Subcontracts"
+msgstr "Configuración de subcontratos"
+
+#: ../../user-guide/workflows/index.rst:47
+msgid "**Hierarchical contract structure:**"
+msgstr "**Estructura jerárquica del contrato:**"
+
+#: ../../user-guide/workflows/index.rst:49
+msgid "Create parent contract (main client contract)"
+msgstr "Crear contrato principal (contrato de cliente principal)"
+
+#: ../../user-guide/workflows/index.rst:50
+msgid "Create subcontractor counterparty"
+msgstr "Crear contraparte subcontratista"
+
+#: ../../user-guide/workflows/index.rst:51
+msgid "Create subcontract linked to parent"
+msgstr "Crear subcontrato vinculado al padre"
+
+#: ../../user-guide/workflows/index.rst:52
+msgid "Manage separate estimates for each level"
+msgstr "Gestionar estimaciones separadas para cada nivel"
+
+#: ../../user-guide/workflows/index.rst:54
+msgid ""
+"See :doc:`/user-guide/concepts/projects-contracts` (Hierarchical Contracts "
+"section)."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/projects-contracts` (sección Contratos "
+"jerárquicos)."
+
+#: ../../user-guide/workflows/index.rst:57
+msgid "Importing Catalogs"
+msgstr "Importar catálogos"
+
+#: ../../user-guide/workflows/index.rst:59
+msgid "**Bulk import via Excel:**"
+msgstr "**Importación masiva a través de Excel:**"
+
+#: ../../user-guide/workflows/index.rst:61
+msgid ""
+"Prepare Excel with columns: Code, Description, Unit, Quantity, Unit Price"
+msgstr ""
+"Prepare Excel con columnas: Código, Descripción, Unidad, Cantidad, Precio "
+"unitario"
+
+#: ../../user-guide/workflows/index.rst:62
+msgid "In contract, click \"Import from Excel\""
+msgstr "En contrato, haga clic en \"Importar desde Excel\""
+
+#: ../../user-guide/workflows/index.rst:63
+msgid "Map columns and verify preview"
+msgstr "Asignar columnas y verificar la vista previa"
+
+#: ../../user-guide/workflows/index.rst:64
+msgid "Confirm import"
+msgstr "Confirmar importación"
+
+#: ../../user-guide/workflows/index.rst:66
+msgid ""
+"See :doc:`/user-guide/concepts/concepts-line-items` for catalog management."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/concepts-line-items` para la gestión del"
+" catálogo."
+
+#: ../../user-guide/workflows/index.rst:69
+msgid "Tips for Efficiency"
+msgstr "Consejos para la eficiencia"
+
+#: ../../user-guide/workflows/index.rst:71
+msgid "Use template contracts for similar projects"
+msgstr "Utilice contratos modelo para proyectos similares"
+
+#: ../../user-guide/workflows/index.rst:72
+msgid "Import catalogs via Excel for large projects"
+msgstr "Importar catálogos a través de Excel para proyectos grandes"
+
+#: ../../user-guide/workflows/index.rst:73
+msgid "Keep counterparty information current"
+msgstr "Mantenga actualizada la información de la contraparte"
+
+#: ../../user-guide/workflows/index.rst:74
+msgid "Review estimates before generating PDFs"
+msgstr "Revise las estimaciones antes de generar archivos PDF"
+
+#: ../../user-guide/workflows/index.rst:77
+msgid "Need More Help?"
+msgstr "¿Necesita más ayuda?"
+
+#: ../../user-guide/workflows/index.rst:79
+msgid ":doc:`/user-guide/concepts/index` - Understand core concepts"
+msgstr ""
+
+#: ../../user-guide/workflows/index.rst:80
+msgid ":doc:`/user-guide/features/index` - Discover advanced features"
+msgstr ""
+
+#: ../../user-guide/workflows/index.rst:81
+msgid ":doc:`/user-guide/faq` - Common questions"
+msgstr ""
+
+#~ msgid "[Detailed workflow files to be created]"
+#~ msgstr "[Se crearán archivos de flujo de trabajo detallados]"

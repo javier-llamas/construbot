@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -24,9 +24,450 @@ msgid "Features"
 msgstr "Características"
 
 #: ../../user-guide/features/index.rst:5
-msgid "Advanced features and capabilities."
-msgstr "Funciones y capacidades avanzadas."
+msgid ""
+"Discover Construbot's powerful capabilities for construction management."
+msgstr ""
+"Descubra las poderosas capacidades de Construbot para la gestión de la "
+"construcción."
+
+#: ../../user-guide/features/index.rst:8
+#, fuzzy
+msgid "Key Features"
+msgstr "Características"
+
+#: ../../user-guide/features/index.rst:11
+msgid "Hierarchical Contracts"
+msgstr "Contratos jerárquicos"
+
+#: ../../user-guide/features/index.rst:13
+msgid ""
+"**Parent-child contract relationships** for complex project structures:"
+msgstr ""
+"**Relaciones contractuales entre padres e hijos** para estructuras de "
+"proyectos complejos:"
+
+#: ../../user-guide/features/index.rst:15
+msgid "Link subcontracts to main contracts"
+msgstr "Vincular subcontratos a contratos principales"
 
 #: ../../user-guide/features/index.rst:16
-msgid "[Detailed feature files to be created]"
-msgstr "[Se crearán archivos de características detalladas]"
+msgid "Track costs across multiple levels"
+msgstr "Realice un seguimiento de los costos en múltiples niveles"
+
+#: ../../user-guide/features/index.rst:17
+msgid "Rollup reporting for project totals"
+msgstr "Informes acumulativos para los totales del proyecto"
+
+#: ../../user-guide/features/index.rst:18
+msgid "Independent estimates for each level"
+msgstr "Estimaciones independientes para cada nivel."
+
+#: ../../user-guide/features/index.rst:20
+msgid ""
+"**Use cases:** - General contractor with multiple subcontractors - Phased "
+"projects with separate billing - Multi-building developments"
+msgstr ""
+"**Casos de uso:** - Contratista general con múltiples subcontratistas - "
+"Proyectos por fases con facturación separada - Desarrollos de varios "
+"edificios"
+
+#: ../../user-guide/features/index.rst:25
+msgid "See :doc:`/user-guide/concepts/projects-contracts` for details."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/projects-contracts` para obtener más "
+"detalles."
+
+#: ../../user-guide/features/index.rst:28
+msgid "Progress Billing & Estimates"
+msgstr "Facturación y estimaciones de progreso"
+
+#: ../../user-guide/features/index.rst:30
+msgid "**Automated estimate generation** with cumulative tracking:"
+msgstr ""
+"**Generación de estimaciones automatizada** con seguimiento acumulativo:"
+
+#: ../../user-guide/features/index.rst:32
+msgid "Create progress estimates (estimaciones) easily"
+msgstr "Cree estimaciones de progreso fácilmente"
+
+#: ../../user-guide/features/index.rst:33
+msgid "Automatic cumulative quantity calculation"
+msgstr "Cálculo automático de cantidad acumulada"
+
+#: ../../user-guide/features/index.rst:34
+msgid "Retention tracking and management"
+msgstr "Seguimiento y gestión de la retención"
+
+#: ../../user-guide/features/index.rst:35
+msgid "Over-billing prevention warnings"
+msgstr "Advertencias de prevención de sobrefacturación"
+
+#: ../../user-guide/features/index.rst:36
+msgid "Professional PDF generation"
+msgstr "Generación de PDF profesional"
+
+#: ../../user-guide/features/index.rst:38
+msgid ""
+"**Financial accuracy:** - Real-time subtotal calculation - Multiple "
+"retention types supported - Advance payment amortization - Payment history "
+"tracking"
+msgstr ""
+"**Precisión financiera:** - Cálculo del subtotal en tiempo real - Se admiten"
+" múltiples tipos de retención - Amortización de pagos anticipados - "
+"Seguimiento del historial de pagos"
+
+#: ../../user-guide/features/index.rst:44
+msgid "See :doc:`/user-guide/concepts/estimates` for details."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/estimates` para obtener más detalles."
+
+#: ../../user-guide/features/index.rst:47
+msgid "Excel Integration"
+msgstr "Integración con Excel"
+
+#: ../../user-guide/features/index.rst:49
+msgid "**Bulk import capabilities** for efficient data entry:"
+msgstr ""
+"**Capacidades de importación masiva** para una entrada de datos eficiente:"
+
+#: ../../user-guide/features/index.rst:51
+msgid "**Concept Catalogs**: Import hundreds of line items at once"
+msgstr ""
+"**Catálogos de conceptos**: importe cientos de artículos de línea a la vez"
+
+#: ../../user-guide/features/index.rst:52
+msgid "**Retentions**: Upload retention structures from templates"
+msgstr "**Retenciones**: cargar estructuras de retención desde plantillas"
+
+#: ../../user-guide/features/index.rst:53
+msgid "**Data Export**: Generate Excel reports for analysis"
+msgstr "**Exportación de datos**: genere informes de Excel para análisis"
+
+#: ../../user-guide/features/index.rst:55
+msgid ""
+"**Benefits:** - Save hours on manual data entry - Reduce errors with "
+"validated imports - Use existing estimating tools - Standardize across "
+"projects"
+msgstr ""
+"**Beneficios:** - Ahorre horas en la entrada manual de datos - Reduzca los "
+"errores con importaciones validadas - Utilice las herramientas de estimación"
+" existentes - Estandarice todos los proyectos"
+
+#: ../../user-guide/features/index.rst:61
+msgid ""
+"See :doc:`/user-guide/concepts/concepts-line-items` for catalog management."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/concepts-line-items` para la gestión del"
+" catálogo."
+
+#: ../../user-guide/features/index.rst:64
+msgid "Multi-Company Support"
+msgstr "Soporte multiempresa"
+
+#: ../../user-guide/features/index.rst:66
+msgid "**Single installation, multiple companies:**"
+msgstr "**Instalación única, múltiples empresas:**"
+
+#: ../../user-guide/features/index.rst:68
+msgid "Complete data isolation between companies"
+msgstr "Aislamiento completo de datos entre empresas"
+
+#: ../../user-guide/features/index.rst:69
+msgid "User access to multiple companies"
+msgstr "Acceso de usuario a múltiples empresas."
+
+#: ../../user-guide/features/index.rst:70
+msgid "Switch active company seamlessly"
+msgstr "Cambie de empresa activa sin problemas"
+
+#: ../../user-guide/features/index.rst:71
+msgid "Company-specific configurations"
+msgstr "Configuraciones específicas de la empresa"
+
+#: ../../user-guide/features/index.rst:73
+msgid ""
+"**Perfect for:** - Holding companies with subsidiaries - Partnerships "
+"managing separate entities - Contractors with multiple business licenses"
+msgstr ""
+"**Perfecto para:** - Sociedades holding con subsidiarias - Asociaciones que "
+"administran entidades separadas - Contratistas con múltiples licencias "
+"comerciales"
+
+#: ../../user-guide/features/index.rst:79
+msgid "Document Generation"
+msgstr "Generación de documentos"
+
+#: ../../user-guide/features/index.rst:81
+msgid "**Professional PDF documents** for all project needs:"
+msgstr ""
+"**Documentos PDF profesionales** para todas las necesidades del proyecto:"
+
+#: ../../user-guide/features/index.rst:83
+msgid "**Estimates**: Detailed progress billing documents"
+msgstr "**Estimaciones**: Documentos de facturación de progreso detallados"
+
+#: ../../user-guide/features/index.rst:84
+msgid "**Contracts**: Complete contract documentation"
+msgstr "**Contratos**: Documentación completa del contrato"
+
+#: ../../user-guide/features/index.rst:85
+msgid "**Reports**: Financial and progress reports"
+msgstr "**Informes**: Informes financieros y de progreso"
+
+#: ../../user-guide/features/index.rst:86
+msgid "**Custom Templates**: Branded documents with logo"
+msgstr "**Plantillas personalizadas**: Documentos personalizados con logotipo"
+
+#: ../../user-guide/features/index.rst:88
+msgid ""
+"**Features:** - Automatic formatting - Multiple recipients support - Email "
+"delivery integration - Archive and tracking"
+msgstr ""
+"**Características:** - Formato automático - Compatibilidad con múltiples "
+"destinatarios - Integración de entrega de correo electrónico - Archivo y "
+"seguimiento"
+
+#: ../../user-guide/features/index.rst:95
+msgid "Retention Management"
+msgstr "Gestión de retención"
+
+#: ../../user-guide/features/index.rst:97
+msgid "**Comprehensive retention tracking:**"
+msgstr "**Seguimiento integral de retención:**"
+
+#: ../../user-guide/features/index.rst:99
+msgid "**Multiple retention types**: Performance, warranty, tax withholdings"
+msgstr ""
+"**Múltiples tipos de retención**: Rendimiento, garantía, retenciones de "
+"impuestos"
+
+#: ../../user-guide/features/index.rst:100
+msgid "**Automatic calculation**: Applied to each estimate"
+msgstr "**Cálculo automático**: Aplicado a cada estimación"
+
+#: ../../user-guide/features/index.rst:101
+msgid "**Release tracking**: Monitor retention balances"
+msgstr "**Seguimiento de versiones**: Supervise los saldos de retención"
+
+#: ../../user-guide/features/index.rst:102
+msgid "**Partial releases**: Progressive release support"
+msgstr "**Versiones parciales**: compatibilidad con versiones progresivas"
+
+#: ../../user-guide/features/index.rst:104
+msgid ""
+"**Financial control:** - Cumulative retention balance tracking - Release "
+"date reminders - Accounting integration ready"
+msgstr ""
+"**Control financiero:** - Seguimiento del saldo de retención acumulada - "
+"Recordatorios de fecha de lanzamiento - Integración contable lista"
+
+#: ../../user-guide/features/index.rst:109
+msgid "See :doc:`/user-guide/concepts/retentions` for details."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/retentions` para obtener más detalles."
+
+#: ../../user-guide/features/index.rst:112
+msgid "Site & Contact Management"
+msgstr "Gestión de sitios y contactos"
+
+#: ../../user-guide/features/index.rst:114
+msgid "**Organize project locations and communications:**"
+msgstr "**Organizar ubicaciones y comunicaciones del proyecto:**"
+
+#: ../../user-guide/features/index.rst:116
+msgid "**Multiple sites per client**: Separate locations easily"
+msgstr "**Múltiples sitios por cliente**: Separe las ubicaciones fácilmente"
+
+#: ../../user-guide/features/index.rst:117
+msgid "**Contact management**: Track recipients for documents"
+msgstr ""
+"**Gestión de contactos**: seguimiento de los destinatarios de los documentos"
+
+#: ../../user-guide/features/index.rst:118
+msgid "**GPS coordinates**: Remote site support"
+msgstr "**Coordenadas GPS**: soporte de sitio remoto"
+
+#: ../../user-guide/features/index.rst:119
+msgid "**Communication history**: Track approvals and submissions"
+msgstr "**Historial de comunicaciones**: seguimiento de aprobaciones y envíos"
+
+#: ../../user-guide/features/index.rst:121
+msgid "See :doc:`/user-guide/concepts/sites-contacts` for details."
+msgstr ""
+"Consulte :doc:`/user-guide/concepts/sites-contacts` para obtener más "
+"detalles."
+
+#: ../../user-guide/features/index.rst:124
+msgid "Security & Permissions"
+msgstr "Seguridad y permisos"
+
+#: ../../user-guide/features/index.rst:126
+msgid "**Role-based access control:**"
+msgstr "**Control de acceso basado en roles:**"
+
+#: ../../user-guide/features/index.rst:128
+msgid "**Six permission levels**: From Auxiliar to Superusuario"
+msgstr "**Seis niveles de permiso**: De Auxiliar a Superusuario"
+
+#: ../../user-guide/features/index.rst:129
+msgid "**Granular permissions**: Control who can create, edit, approve"
+msgstr "**Permisos granulares**: controla quién puede crear, editar y aprobar"
+
+#: ../../user-guide/features/index.rst:130
+msgid "**Audit trails**: Track all changes and actions"
+msgstr ""
+"**Pistas de auditoría**: realice un seguimiento de todos los cambios y "
+"acciones"
+
+#: ../../user-guide/features/index.rst:131
+msgid "**Data isolation**: Company-level security"
+msgstr "**Aislamiento de datos**: seguridad a nivel de empresa"
+
+#: ../../user-guide/features/index.rst:133
+msgid ""
+"**Permission levels:** - Auxiliar (Assistant) - Coordinador (Coordinator) - "
+"Director - Corporativo (Corporate) - Soporte (Support) - Superusuario (Super"
+" User)"
+msgstr ""
+"**Niveles de permiso:** - Auxiliar (Asistente) - Coordinador (Coordinador) -"
+" Director - Corporativo (Corporativo) - Soporte (Soporte) - Superusuario "
+"(Super Usuario)"
+
+#: ../../user-guide/features/index.rst:142
+#, fuzzy
+msgid "Advanced Features"
+msgstr "Funciones y capacidades avanzadas."
+
+#: ../../user-guide/features/index.rst:145
+msgid "Tree-Based Contract Hierarchy"
+msgstr "Jerarquía de contratos basada en árboles"
+
+#: ../../user-guide/features/index.rst:147
+msgid "Powered by **django-treebeard** for efficient hierarchical data:"
+msgstr ""
+"Desarrollado por **django-treebeard** para datos jerárquicos eficientes:"
+
+#: ../../user-guide/features/index.rst:149
+msgid "Materialized Path implementation"
+msgstr "Implementación del Camino Materializado"
+
+#: ../../user-guide/features/index.rst:150
+msgid "Fast tree queries and navigation"
+msgstr "Consultas y navegación rápidas en árbol"
+
+#: ../../user-guide/features/index.rst:151
+msgid "Unlimited nesting levels"
+msgstr "Niveles de anidación ilimitados"
+
+#: ../../user-guide/features/index.rst:152
+msgid "Ancestor/descendant calculations"
+msgstr "Cálculos de antepasados/descendientes"
+
+#: ../../user-guide/features/index.rst:155
+msgid "API Access"
+msgstr "Acceso API"
+
+#: ../../user-guide/features/index.rst:157
+msgid "**REST API** with JWT authentication:"
+msgstr "**API REST** con autenticación JWT:"
+
+#: ../../user-guide/features/index.rst:159
+msgid "Full CRUD operations on all entities"
+msgstr "Operaciones CRUD completas en todas las entidades."
+
+#: ../../user-guide/features/index.rst:160
+msgid "Secure token-based authentication"
+msgstr "Autenticación segura basada en tokens"
+
+#: ../../user-guide/features/index.rst:161
+msgid "JSON data interchange"
+msgstr "intercambio de datos JSON"
+
+#: ../../user-guide/features/index.rst:162
+msgid "Integration with external systems"
+msgstr "Integración con sistemas externos."
+
+#: ../../user-guide/features/index.rst:164
+msgid "See :doc:`/developer/api/index` for API documentation."
+msgstr ""
+"Consulte :doc:`/developer/api/index` para obtener documentación de API."
+
+#: ../../user-guide/features/index.rst:167
+msgid "Customization"
+msgstr "Personalización"
+
+#: ../../user-guide/features/index.rst:169
+msgid "**Flexible configuration options:**"
+msgstr "**Opciones de configuración flexibles:**"
+
+#: ../../user-guide/features/index.rst:171
+msgid "Custom retention types and percentages"
+msgstr "Tipos y porcentajes de retención personalizados"
+
+#: ../../user-guide/features/index.rst:172
+msgid "Configurable document templates"
+msgstr "Plantillas de documentos configurables"
+
+#: ../../user-guide/features/index.rst:173
+msgid "Company-specific settings"
+msgstr "Configuraciones específicas de la empresa"
+
+#: ../../user-guide/features/index.rst:174
+msgid "Field validation rules"
+msgstr "Reglas de validación de campos"
+
+#: ../../user-guide/features/index.rst:177
+#, fuzzy
+msgid "Future Features"
+msgstr "Características"
+
+#: ../../user-guide/features/index.rst:179
+msgid "Planned enhancements:"
+msgstr "Mejoras planificadas:"
+
+#: ../../user-guide/features/index.rst:181
+msgid "Mobile application (iOS/Android)"
+msgstr "Aplicación móvil (iOS/Android)"
+
+#: ../../user-guide/features/index.rst:182
+msgid "Advanced analytics dashboard"
+msgstr "Panel de análisis avanzado"
+
+#: ../../user-guide/features/index.rst:183
+msgid "Accounting software integrations"
+msgstr "Integraciones de software de contabilidad"
+
+#: ../../user-guide/features/index.rst:184
+msgid "Multi-currency support"
+msgstr "Soporte multidivisa"
+
+#: ../../user-guide/features/index.rst:185
+msgid "Equipment tracking"
+msgstr "Seguimiento de equipos"
+
+#: ../../user-guide/features/index.rst:186
+msgid "Time & labor management"
+msgstr "Gestión del tiempo y la mano de obra"
+
+#: ../../user-guide/features/index.rst:189
+msgid "Need More Information?"
+msgstr "¿Necesita más información?"
+
+#: ../../user-guide/features/index.rst:191
+msgid ":doc:`/user-guide/concepts/index` - Understand core concepts"
+msgstr ""
+
+#: ../../user-guide/features/index.rst:192
+msgid ":doc:`/user-guide/workflows/index` - Step-by-step guides"
+msgstr ""
+
+#: ../../user-guide/features/index.rst:193
+msgid ":doc:`/developer/index` - Technical documentation"
+msgstr ""
+
+#: ../../user-guide/features/index.rst:194
+msgid ":doc:`/user-guide/faq` - Common questions"
+msgstr ""
+
+#~ msgid "[Detailed feature files to be created]"
+#~ msgstr "[Se crearán archivos de características detalladas]"

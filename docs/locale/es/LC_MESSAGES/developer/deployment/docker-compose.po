@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: es <LL@li.org>\n"
 "Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/deployment/docker-compose.rst:3
@@ -25,293 +25,292 @@ msgstr "Docker Compose para producción"
 
 #: ../../developer/deployment/docker-compose.rst:5
 msgid "Production Docker Compose configuration for deploying Construbot."
-msgstr ""
-"Configuración de Production Docker Compose para implementar Construbot."
+msgstr "Configuración de Production Docker Compose para implementar Construbot."
 
-#: ../../developer/deployment/docker-compose.rst:9
-msgid "Table of Contents"
-msgstr "Tabla de contenido"
-
-#: ../../developer/deployment/docker-compose.rst:12
+#: ../../developer/deployment/docker-compose.rst:8
 msgid "Overview"
 msgstr "Descripción general"
 
-#: ../../developer/deployment/docker-compose.rst:14
+#: ../../developer/deployment/docker-compose.rst:10
 msgid ""
-"Construbot includes Docker Compose configurations for both development and "
-"production:"
+"Construbot includes Docker Compose configurations for both development "
+"and production:"
 msgstr ""
-"Construbot incluye configuraciones de Docker Compose tanto para desarrollo "
-"como para producción:"
+"Construbot incluye configuraciones de Docker Compose tanto para "
+"desarrollo como para producción:"
 
-#: ../../developer/deployment/docker-compose.rst:16
+#: ../../developer/deployment/docker-compose.rst:12
 msgid ""
-"``docker-compose.yml`` - Default configuration (can be used for production)"
+"``docker-compose.yml`` - Default configuration (can be used for "
+"production)"
 msgstr ""
 "``docker-compose.yml`` - Configuración predeterminada (se puede utilizar "
 "para producción)"
 
-#: ../../developer/deployment/docker-compose.rst:17
+#: ../../developer/deployment/docker-compose.rst:13
 msgid "``compose/production/`` - Production-specific Dockerfiles"
 msgstr "``compose/production/`` - Dockerfiles específicos de producción"
 
-#: ../../developer/deployment/docker-compose.rst:19
+#: ../../developer/deployment/docker-compose.rst:15
 msgid ""
 "This guide covers deploying Construbot using Docker Compose on a single "
 "server or multiple servers."
 msgstr ""
-"Esta guía cubre la implementación de Construbot usando Docker Compose en uno"
-" o varios servidores."
+"Esta guía cubre la implementación de Construbot usando Docker Compose en "
+"uno o varios servidores."
 
-#: ../../developer/deployment/docker-compose.rst:22
+#: ../../developer/deployment/docker-compose.rst:18
 msgid "Production Architecture"
 msgstr "Arquitectura de producción"
 
-#: ../../developer/deployment/docker-compose.rst:25
+#: ../../developer/deployment/docker-compose.rst:21
 msgid "Single Server Setup"
 msgstr "Configuración de servidor único"
 
-#: ../../developer/deployment/docker-compose.rst:36
+#: ../../developer/deployment/docker-compose.rst:32
 msgid "**Suitable for:** <1000 users, small deployments"
 msgstr "**Adecuado para:** <1000 usuarios, implementaciones pequeñas"
 
-#: ../../developer/deployment/docker-compose.rst:39
+#: ../../developer/deployment/docker-compose.rst:35
 msgid "Multi-Server Setup"
 msgstr "Configuración de múltiples servidores"
 
-#: ../../developer/deployment/docker-compose.rst:54
+#: ../../developer/deployment/docker-compose.rst:50
 msgid "**Suitable for:** >1000 users, high availability needs"
 msgstr "**Adecuado para:** >1000 usuarios, necesidades de alta disponibilidad"
 
-#: ../../developer/deployment/docker-compose.rst:57
+#: ../../developer/deployment/docker-compose.rst:53
 msgid "Docker Compose Configuration"
 msgstr "Configuración de composición de Docker"
 
-#: ../../developer/deployment/docker-compose.rst:60
+#: ../../developer/deployment/docker-compose.rst:56
 msgid "Production docker-compose.yml"
 msgstr "Producción docker-compose.yml"
 
-#: ../../developer/deployment/docker-compose.rst:62
+#: ../../developer/deployment/docker-compose.rst:58
 msgid ""
-"The included ``docker-compose.yml`` can be used for production with proper "
-"environment configuration:"
+"The included ``docker-compose.yml`` can be used for production with "
+"proper environment configuration:"
 msgstr ""
-"El ``docker-compose.yml`` incluido se puede utilizar para producción con la "
-"configuración de entorno adecuada:"
+"El ``docker-compose.yml`` incluido se puede utilizar para producción con "
+"la configuración de entorno adecuada:"
 
-#: ../../developer/deployment/docker-compose.rst:64
+#: ../../developer/deployment/docker-compose.rst:60
 msgid "**Key services:**"
 msgstr "**Servicios clave:**"
 
-#: ../../developer/deployment/docker-compose.rst:127
+#: ../../developer/deployment/docker-compose.rst:123
 msgid "Environment Configuration"
 msgstr "Configuración del entorno"
 
-#: ../../developer/deployment/docker-compose.rst:130
+#: ../../developer/deployment/docker-compose.rst:126
 msgid "Production .env File"
 msgstr "Archivo .env de producción"
 
-#: ../../developer/deployment/docker-compose.rst:132
+#: ../../developer/deployment/docker-compose.rst:128
 msgid "Create ``.env`` with production settings:"
 msgstr "Cree ``.env`` con la configuración de producción:"
 
-#: ../../developer/deployment/docker-compose.rst:173
+#: ../../developer/deployment/docker-compose.rst:169
 msgid "Building for Production"
 msgstr "Edificio para la producción"
 
-#: ../../developer/deployment/docker-compose.rst:176
+#: ../../developer/deployment/docker-compose.rst:172
 msgid "Initial Build"
 msgstr "Construcción inicial"
 
-#: ../../developer/deployment/docker-compose.rst:191
+#: ../../developer/deployment/docker-compose.rst:187
 msgid "**What happens:**"
 msgstr "**Lo que sucede:**"
 
-#: ../../developer/deployment/docker-compose.rst:193
+#: ../../developer/deployment/docker-compose.rst:189
 msgid "Builds production Docker images"
 msgstr "Crea imágenes Docker de producción."
 
-#: ../../developer/deployment/docker-compose.rst:194
+#: ../../developer/deployment/docker-compose.rst:190
 msgid "Starts all services in detached mode"
 msgstr "Inicia todos los servicios en modo independiente"
 
-#: ../../developer/deployment/docker-compose.rst:195
+#: ../../developer/deployment/docker-compose.rst:191
 msgid "Creates volumes for persistent data"
 msgstr "Crea volúmenes para datos persistentes."
 
-#: ../../developer/deployment/docker-compose.rst:198
+#: ../../developer/deployment/docker-compose.rst:194
 msgid "Database Setup"
 msgstr "Configuración de la base de datos"
 
-#: ../../developer/deployment/docker-compose.rst:212
+#: ../../developer/deployment/docker-compose.rst:208
 msgid "Nginx Configuration"
 msgstr "Configuración de Nginx"
 
-#: ../../developer/deployment/docker-compose.rst:215
+#: ../../developer/deployment/docker-compose.rst:211
 msgid "Production Nginx Setup"
 msgstr "Configuración de producción de Nginx"
 
-#: ../../developer/deployment/docker-compose.rst:217
+#: ../../developer/deployment/docker-compose.rst:213
 msgid "Create ``compose/production/nginx/nginx.conf``:"
 msgstr "Cree ``componer/producción/nginx/nginx.conf``:"
 
-#: ../../developer/deployment/docker-compose.rst:284
+#: ../../developer/deployment/docker-compose.rst:280
 msgid "SSL Certificate"
 msgstr "Certificado SSL"
 
-#: ../../developer/deployment/docker-compose.rst:286
+#: ../../developer/deployment/docker-compose.rst:282
 msgid "**Using Let's Encrypt:**"
 msgstr "**Usando Let's Encrypt:**"
 
-#: ../../developer/deployment/docker-compose.rst:299
+#: ../../developer/deployment/docker-compose.rst:295
 msgid "**Mount certificates in docker-compose.yml:**"
 msgstr "**Montar certificados en docker-compose.yml:**"
 
-#: ../../developer/deployment/docker-compose.rst:308
+#: ../../developer/deployment/docker-compose.rst:304
 msgid "Gunicorn Configuration"
 msgstr "Configuración de Gunicorn"
 
-#: ../../developer/deployment/docker-compose.rst:311
+#: ../../developer/deployment/docker-compose.rst:307
 msgid "Production Gunicorn Settings"
 msgstr "Configuración de producción de Gunicorn"
 
-#: ../../developer/deployment/docker-compose.rst:313
+#: ../../developer/deployment/docker-compose.rst:309
 msgid "Create ``compose/production/django/gunicorn_config.py``:"
 msgstr "Cree ``compose/production/django/gunicorn_config.py``:"
 
-#: ../../developer/deployment/docker-compose.rst:340
+#: ../../developer/deployment/docker-compose.rst:336
 msgid "**Start command** in ``compose/production/django/start``:"
 msgstr "**Iniciar comando** en ``compose/production/django/start``:"
 
-#: ../../developer/deployment/docker-compose.rst:353
+#: ../../developer/deployment/docker-compose.rst:349
 msgid "Managing Services"
 msgstr "Servicios de gestión"
 
-#: ../../developer/deployment/docker-compose.rst:356
+#: ../../developer/deployment/docker-compose.rst:352
 msgid "Starting and Stopping"
 msgstr "Iniciar y detener"
 
-#: ../../developer/deployment/docker-compose.rst:373
+#: ../../developer/deployment/docker-compose.rst:369
 msgid "Viewing Logs"
 msgstr "Ver registros"
 
-#: ../../developer/deployment/docker-compose.rst:390
+#: ../../developer/deployment/docker-compose.rst:386
 msgid "Restarting Services"
 msgstr "Reiniciar servicios"
 
-#: ../../developer/deployment/docker-compose.rst:404
+#: ../../developer/deployment/docker-compose.rst:400
 msgid "Scaling Services"
 msgstr "Servicios de escalamiento"
 
-#: ../../developer/deployment/docker-compose.rst:415
+#: ../../developer/deployment/docker-compose.rst:411
 msgid "Updating Application"
 msgstr "Actualización de aplicación"
 
-#: ../../developer/deployment/docker-compose.rst:418
+#: ../../developer/deployment/docker-compose.rst:414
 msgid "Deployment Process"
 msgstr "Proceso de implementación"
 
-#: ../../developer/deployment/docker-compose.rst:442
+#: ../../developer/deployment/docker-compose.rst:438
 msgid "Zero-Downtime Deployment"
 msgstr "Implementación sin tiempo de inactividad"
 
-#: ../../developer/deployment/docker-compose.rst:465
+#: ../../developer/deployment/docker-compose.rst:461
 msgid "Data Management"
 msgstr "Gestión de datos"
 
-#: ../../developer/deployment/docker-compose.rst:468
+#: ../../developer/deployment/docker-compose.rst:464
 msgid "Database Backups"
 msgstr "Copias de seguridad de bases de datos"
 
-#: ../../developer/deployment/docker-compose.rst:470
+#: ../../developer/deployment/docker-compose.rst:466
 msgid "**Automated backup script:**"
 msgstr "**Script de copia de seguridad automatizado:**"
 
-#: ../../developer/deployment/docker-compose.rst:490
+#: ../../developer/deployment/docker-compose.rst:486
 msgid "**Schedule with cron:**"
 msgstr "**Programar con cron:**"
 
-#: ../../developer/deployment/docker-compose.rst:498
+#: ../../developer/deployment/docker-compose.rst:494
 msgid "Restore Database"
 msgstr "Restaurar base de datos"
 
-#: ../../developer/deployment/docker-compose.rst:513
+#: ../../developer/deployment/docker-compose.rst:509
 msgid "Volume Management"
 msgstr "Gestión de volumen"
 
-#: ../../developer/deployment/docker-compose.rst:515
+#: ../../developer/deployment/docker-compose.rst:511
 msgid "**List volumes:**"
 msgstr "**Listar volúmenes:**"
 
-#: ../../developer/deployment/docker-compose.rst:521
+#: ../../developer/deployment/docker-compose.rst:517
 msgid "**Backup volume:**"
 msgstr "**Volumen de copia de seguridad:**"
 
-#: ../../developer/deployment/docker-compose.rst:530
+#: ../../developer/deployment/docker-compose.rst:526
 msgid "**Restore volume:**"
 msgstr "**Restaurar volumen:**"
 
-#: ../../developer/deployment/docker-compose.rst:539
+#: ../../developer/deployment/docker-compose.rst:535
 msgid "Monitoring"
 msgstr "Escucha"
 
-#: ../../developer/deployment/docker-compose.rst:542
+#: ../../developer/deployment/docker-compose.rst:538
 msgid "Health Checks"
 msgstr "Controles de salud"
 
-#: ../../developer/deployment/docker-compose.rst:544
+#: ../../developer/deployment/docker-compose.rst:540
 msgid "Add health checks to ``docker-compose.yml``:"
 msgstr "Agregue comprobaciones de estado a ``docker-compose.yml``:"
 
-#: ../../developer/deployment/docker-compose.rst:557
+#: ../../developer/deployment/docker-compose.rst:553
 msgid "Resource Usage"
 msgstr "Uso de recursos"
 
-#: ../../developer/deployment/docker-compose.rst:571
+#: ../../developer/deployment/docker-compose.rst:567
 msgid "Logs"
 msgstr "Registros"
 
-#: ../../developer/deployment/docker-compose.rst:573
+#: ../../developer/deployment/docker-compose.rst:569
 msgid "**Configure log rotation** in ``/etc/docker/daemon.json``:"
-msgstr ""
-"**Configure la rotación de registros** en ``/etc/docker/daemon.json``:"
+msgstr "**Configure la rotación de registros** en ``/etc/docker/daemon.json``:"
 
-#: ../../developer/deployment/docker-compose.rst:586
+#: ../../developer/deployment/docker-compose.rst:582
 msgid "Troubleshooting"
 msgstr "Solución de problemas"
 
-#: ../../developer/deployment/docker-compose.rst:589
+#: ../../developer/deployment/docker-compose.rst:585
 msgid "Container Won't Start"
 msgstr "El contenedor no arranca"
 
-#: ../../developer/deployment/docker-compose.rst:603
+#: ../../developer/deployment/docker-compose.rst:599
 msgid "Database Connection Issues"
 msgstr "Problemas de conexión a la base de datos"
 
-#: ../../developer/deployment/docker-compose.rst:617
+#: ../../developer/deployment/docker-compose.rst:613
 msgid "Out of Disk Space"
 msgstr "Sin espacio en disco"
 
-#: ../../developer/deployment/docker-compose.rst:632
+#: ../../developer/deployment/docker-compose.rst:628
 msgid "Performance Issues"
 msgstr "Problemas de rendimiento"
 
-#: ../../developer/deployment/docker-compose.rst:645
+#: ../../developer/deployment/docker-compose.rst:641
 msgid "See Also"
 msgstr "Ver también"
 
-#: ../../developer/deployment/docker-compose.rst:647
+#: ../../developer/deployment/docker-compose.rst:643
 msgid ":doc:`production-checklist` - Pre-deployment checklist"
 msgstr ""
 
-#: ../../developer/deployment/docker-compose.rst:648
+#: ../../developer/deployment/docker-compose.rst:644
 msgid ":doc:`aws-ec2` - AWS EC2 deployment guide"
 msgstr ""
 
-#: ../../developer/deployment/docker-compose.rst:649
+#: ../../developer/deployment/docker-compose.rst:645
 msgid ":doc:`environment-variables` - Environment configuration"
 msgstr ""
 
-#: ../../developer/deployment/docker-compose.rst:650
+#: ../../developer/deployment/docker-compose.rst:646
 msgid ":doc:`../architecture/overview` - Application architecture"
 msgstr ""
+
+#~ msgid "Table of Contents"
+#~ msgstr "Tabla de contenido"
+

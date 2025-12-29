@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: es <LL@li.org>\n"
 "Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/deployment/index.rst:3
@@ -31,993 +31,991 @@ msgstr ""
 "Guías de implementación de producción para Construbot en diversas "
 "plataformas e infraestructuras."
 
-#: ../../developer/deployment/index.rst:9
-msgid "Table of Contents"
-msgstr "Tabla de contenido"
-
-#: ../../developer/deployment/index.rst:12
+#: ../../developer/deployment/index.rst:8
 msgid "Overview"
 msgstr "Descripción general"
 
-#: ../../developer/deployment/index.rst:14
+#: ../../developer/deployment/index.rst:10
 msgid ""
-"This section covers deploying Construbot to production environments. Whether"
-" you're deploying to cloud infrastructure, on-premises servers, or Platform-"
-"as-a-Service (PaaS) providers, these guides will help you get Construbot "
-"running securely and efficiently."
+"This section covers deploying Construbot to production environments. "
+"Whether you're deploying to cloud infrastructure, on-premises servers, or"
+" Platform-as-a-Service (PaaS) providers, these guides will help you get "
+"Construbot running securely and efficiently."
 msgstr ""
 "Esta sección cubre la implementación de Construbot en entornos de "
-"producción. Ya sea que esté implementando en una infraestructura de nube, "
-"servidores locales o proveedores de plataforma como servicio (PaaS), estas "
-"guías lo ayudarán a lograr que Construbot funcione de manera segura y "
-"eficiente."
+"producción. Ya sea que esté implementando en una infraestructura de nube,"
+" servidores locales o proveedores de plataforma como servicio (PaaS), "
+"estas guías lo ayudarán a lograr que Construbot funcione de manera segura"
+" y eficiente."
 
-#: ../../developer/deployment/index.rst:17
+#: ../../developer/deployment/index.rst:13
 msgid ""
 "**Production deployment requires careful configuration.** Never use "
 "development settings in production. Always follow the security checklist "
 "before going live."
 msgstr ""
-"**La implementación en producción requiere una configuración cuidadosa.** "
-"Nunca utilice la configuración de desarrollo en producción. Siga siempre la "
-"lista de verificación de seguridad antes de comenzar a funcionar."
+"**La implementación en producción requiere una configuración cuidadosa.**"
+" Nunca utilice la configuración de desarrollo en producción. Siga siempre"
+" la lista de verificación de seguridad antes de comenzar a funcionar."
 
-#: ../../developer/deployment/index.rst:20
+#: ../../developer/deployment/index.rst:16
 msgid "Deployment Options"
 msgstr "Opciones de implementación"
 
-#: ../../developer/deployment/index.rst:22
+#: ../../developer/deployment/index.rst:18
 msgid "Construbot can be deployed using several approaches:"
 msgstr "Construbot se puede implementar utilizando varios enfoques:"
 
-#: ../../developer/deployment/index.rst:24
+#: ../../developer/deployment/index.rst:20
 msgid "**Docker-based Deployment (Recommended)**"
 msgstr "**Implementación basada en Docker (recomendada)**"
 
-#: ../../developer/deployment/index.rst:26
+#: ../../developer/deployment/index.rst:22
 msgid "Use Docker Compose for production orchestration"
 msgstr "Utilice Docker Compose para la orquestación de producción"
 
-#: ../../developer/deployment/index.rst:27
+#: ../../developer/deployment/index.rst:23
 msgid "Deploy to AWS EC2, DigitalOcean, or any VPS"
 msgstr "Implemente en AWS EC2, DigitalOcean o cualquier VPS"
 
-#: ../../developer/deployment/index.rst:28
+#: ../../developer/deployment/index.rst:24
 msgid "Consistent environment across dev and production"
 msgstr "Entorno consistente en desarrollo y producción"
 
-#: ../../developer/deployment/index.rst:29
+#: ../../developer/deployment/index.rst:25
 msgid "Easy scaling and updates"
 msgstr "Fácil escalamiento y actualizaciones"
 
-#: ../../developer/deployment/index.rst:31
+#: ../../developer/deployment/index.rst:27
 msgid "**Platform-as-a-Service (PaaS)**"
 msgstr "**Plataforma como servicio (PaaS)**"
 
-#: ../../developer/deployment/index.rst:33
+#: ../../developer/deployment/index.rst:29
 msgid "Heroku, Railway, Render"
 msgstr "Heroku, Ferrocarril, Hacer"
 
-#: ../../developer/deployment/index.rst:34
+#: ../../developer/deployment/index.rst:30
 msgid "Managed database and infrastructure"
 msgstr "Base de datos e infraestructura administradas."
 
-#: ../../developer/deployment/index.rst:35
+#: ../../developer/deployment/index.rst:31
 msgid "Simpler setup, less configuration"
 msgstr "Configuración más sencilla, menos configuración"
 
-#: ../../developer/deployment/index.rst:36
+#: ../../developer/deployment/index.rst:32
 msgid "Higher cost for equivalent resources"
 msgstr "Mayor costo para recursos equivalentes"
 
-#: ../../developer/deployment/index.rst:38
+#: ../../developer/deployment/index.rst:34
 msgid "**Traditional Server Deployment**"
 msgstr "**Implementación de servidor tradicional**"
 
-#: ../../developer/deployment/index.rst:40
+#: ../../developer/deployment/index.rst:36
 msgid "Install directly on Linux server"
 msgstr "Instalar directamente en el servidor Linux"
 
-#: ../../developer/deployment/index.rst:41
+#: ../../developer/deployment/index.rst:37
 msgid "More control over environment"
 msgstr "Más control sobre el medio ambiente"
 
-#: ../../developer/deployment/index.rst:42
+#: ../../developer/deployment/index.rst:38
 msgid "Requires system administration experience"
 msgstr "Requiere experiencia en administración de sistemas."
 
-#: ../../developer/deployment/index.rst:43
+#: ../../developer/deployment/index.rst:39
 msgid "Manual dependency management"
 msgstr "Gestión manual de dependencias."
 
-#: ../../developer/deployment/index.rst:46
+#: ../../developer/deployment/index.rst:42
 msgid "Quick Start (Docker + AWS EC2)"
 msgstr "Inicio rápido (Docker + AWS EC2)"
 
-#: ../../developer/deployment/index.rst:48
+#: ../../developer/deployment/index.rst:44
 msgid "For the impatient, here's the minimal steps to deploy:"
 msgstr "Para los impacientes, estos son los pasos mínimos a seguir:"
 
-#: ../../developer/deployment/index.rst:71
+#: ../../developer/deployment/index.rst:67
 msgid "**For detailed instructions, see:** :doc:`aws-ec2`"
 msgstr "**Para obtener instrucciones detalladas, consulte:** :doc:`aws-ec2`"
 
-#: ../../developer/deployment/index.rst:74
+#: ../../developer/deployment/index.rst:70
 msgid "Prerequisites"
 msgstr "Requisitos previos"
 
-#: ../../developer/deployment/index.rst:77
+#: ../../developer/deployment/index.rst:73
 msgid "Before Deployment"
 msgstr "Antes de la implementación"
 
-#: ../../developer/deployment/index.rst:79
+#: ../../developer/deployment/index.rst:75
 msgid "**Required:**"
 msgstr "**Requerido:**"
 
-#: ../../developer/deployment/index.rst:81
+#: ../../developer/deployment/index.rst:77
 msgid "Domain name (for HTTPS and production use)"
 msgstr "Nombre de dominio (para HTTPS y uso de producción)"
 
-#: ../../developer/deployment/index.rst:82
+#: ../../developer/deployment/index.rst:78
 msgid "SSL certificate (Let's Encrypt recommended)"
 msgstr "Certificado SSL (se recomienda Let's Encrypt)"
 
-#: ../../developer/deployment/index.rst:83
+#: ../../developer/deployment/index.rst:79
 msgid "Production database (PostgreSQL 12+)"
 msgstr "Base de datos de producción (PostgreSQL 12+)"
 
-#: ../../developer/deployment/index.rst:84
+#: ../../developer/deployment/index.rst:80
 msgid "Email service (Mailgun, SendGrid, or SES)"
 msgstr "Servicio de correo electrónico (Mailgun, SendGrid o SES)"
 
-#: ../../developer/deployment/index.rst:85
+#: ../../developer/deployment/index.rst:81
 msgid "Basic Linux server administration knowledge"
 msgstr "Conocimientos básicos de administración de servidores Linux."
 
-#: ../../developer/deployment/index.rst:87
+#: ../../developer/deployment/index.rst:83
 msgid "**Recommended:**"
 msgstr "**Recomendado:**"
 
-#: ../../developer/deployment/index.rst:89
+#: ../../developer/deployment/index.rst:85
 msgid "Redis instance for caching"
 msgstr "Instancia de Redis para almacenamiento en caché"
 
-#: ../../developer/deployment/index.rst:90
+#: ../../developer/deployment/index.rst:86
 msgid "S3 bucket for media files"
 msgstr "Depósito S3 para archivos multimedia"
 
-#: ../../developer/deployment/index.rst:91
+#: ../../developer/deployment/index.rst:87
 msgid "Monitoring service (Sentry)"
 msgstr "Servicio de vigilancia (Sentry)"
 
-#: ../../developer/deployment/index.rst:92
-#: ../../developer/deployment/index.rst:503
+#: ../../developer/deployment/index.rst:88
+#: ../../developer/deployment/index.rst:499
 msgid "CDN for static files"
 msgstr "CDN para archivos estáticos"
 
-#: ../../developer/deployment/index.rst:93
+#: ../../developer/deployment/index.rst:89
 msgid "Backup strategy"
 msgstr "Estrategia de respaldo"
 
-#: ../../developer/deployment/index.rst:95
+#: ../../developer/deployment/index.rst:91
 msgid "**Security:**"
 msgstr "**Seguridad:**"
 
-#: ../../developer/deployment/index.rst:97
+#: ../../developer/deployment/index.rst:93
 msgid "Firewall configuration"
 msgstr "Configuración del cortafuegos"
 
-#: ../../developer/deployment/index.rst:98
+#: ../../developer/deployment/index.rst:94
 msgid "SSH key-based authentication"
 msgstr "Autenticación basada en claves SSH"
 
-#: ../../developer/deployment/index.rst:99
+#: ../../developer/deployment/index.rst:95
 msgid "Non-root deployment user"
 msgstr "Usuario de implementación no root"
 
-#: ../../developer/deployment/index.rst:100
+#: ../../developer/deployment/index.rst:96
 msgid "Regular security updates"
 msgstr "Actualizaciones de seguridad periódicas"
 
-#: ../../developer/deployment/index.rst:103
+#: ../../developer/deployment/index.rst:99
 msgid "Infrastructure Options"
 msgstr "Opciones de infraestructura"
 
-#: ../../developer/deployment/index.rst:105
+#: ../../developer/deployment/index.rst:101
 msgid "**Compute:**"
 msgstr "**Calcular:**"
 
-#: ../../developer/deployment/index.rst:107
+#: ../../developer/deployment/index.rst:103
 msgid "AWS EC2 (t2.small minimum, t2.medium recommended)"
 msgstr "AWS EC2 (t2.small mínimo, t2.medium recomendado)"
 
-#: ../../developer/deployment/index.rst:108
+#: ../../developer/deployment/index.rst:104
 msgid "DigitalOcean Droplets ($12-24/month)"
 msgstr "Gotitas de DigitalOcean ($12-24/mes)"
 
-#: ../../developer/deployment/index.rst:109
+#: ../../developer/deployment/index.rst:105
 msgid "Linode, Vultr, Hetzner"
 msgstr "Linode, Vultr, Hetzner"
 
-#: ../../developer/deployment/index.rst:110
+#: ../../developer/deployment/index.rst:106
 msgid "Google Cloud Compute Engine"
 msgstr "Motor de computación en la nube de Google"
 
-#: ../../developer/deployment/index.rst:111
+#: ../../developer/deployment/index.rst:107
 msgid "Microsoft Azure VMs"
 msgstr "Máquinas virtuales de Microsoft Azure"
 
-#: ../../developer/deployment/index.rst:113
-#: ../../developer/deployment/index.rst:508
+#: ../../developer/deployment/index.rst:109
+#: ../../developer/deployment/index.rst:504
 msgid "**Database:**"
 msgstr "**Base de datos:**"
 
-#: ../../developer/deployment/index.rst:115
+#: ../../developer/deployment/index.rst:111
 msgid "AWS RDS for PostgreSQL (recommended for production)"
 msgstr "AWS RDS para PostgreSQL (recomendado para producción)"
 
-#: ../../developer/deployment/index.rst:116
+#: ../../developer/deployment/index.rst:112
 msgid "Managed PostgreSQL (DigitalOcean, Heroku Postgres)"
 msgstr "PostgreSQL administrado (DigitalOcean, Heroku Postgres)"
 
-#: ../../developer/deployment/index.rst:117
+#: ../../developer/deployment/index.rst:113
 msgid "Self-hosted PostgreSQL on VPS"
 msgstr "PostgreSQL autohospedado en VPS"
 
-#: ../../developer/deployment/index.rst:118
+#: ../../developer/deployment/index.rst:114
 msgid "Minimum: db.t3.micro (AWS RDS)"
 msgstr "Mínimo: db.t3.micro (AWS RDS)"
 
-#: ../../developer/deployment/index.rst:120
+#: ../../developer/deployment/index.rst:116
 msgid "**Storage:**"
 msgstr "**Almacenamiento:**"
 
-#: ../../developer/deployment/index.rst:122
+#: ../../developer/deployment/index.rst:118
 msgid "AWS S3 for media files (recommended)"
 msgstr "AWS S3 para archivos multimedia (recomendado)"
 
-#: ../../developer/deployment/index.rst:123
+#: ../../developer/deployment/index.rst:119
 msgid "DigitalOcean Spaces"
 msgstr "Espacios DigitalOceánicos"
 
-#: ../../developer/deployment/index.rst:124
+#: ../../developer/deployment/index.rst:120
 msgid "Google Cloud Storage"
 msgstr "Almacenamiento en la nube de Google"
 
-#: ../../developer/deployment/index.rst:125
+#: ../../developer/deployment/index.rst:121
 msgid "Azure Blob Storage"
 msgstr "Almacenamiento de blobs de Azure"
 
-#: ../../developer/deployment/index.rst:126
+#: ../../developer/deployment/index.rst:122
 msgid "Local storage (only for small deployments)"
 msgstr "Almacenamiento local (solo para implementaciones pequeñas)"
 
-#: ../../developer/deployment/index.rst:129
+#: ../../developer/deployment/index.rst:125
 msgid "Deployment Guides"
 msgstr "Guías de implementación"
 
-#: ../../developer/deployment/index.rst:141
+#: ../../developer/deployment/index.rst:137
 msgid "Step-by-Step Process"
 msgstr "Proceso paso a paso"
 
-#: ../../developer/deployment/index.rst:144
+#: ../../developer/deployment/index.rst:140
 msgid "1. Pre-Deployment"
 msgstr "1. Pre-implementación"
 
-#: ../../developer/deployment/index.rst:146
+#: ../../developer/deployment/index.rst:142
 msgid "**Review checklist:**"
 msgstr "**Revisar lista de verificación:**"
 
-#: ../../developer/deployment/index.rst:153
+#: ../../developer/deployment/index.rst:149
 msgid "**Key items:**"
 msgstr "**Elementos clave:**"
 
-#: ../../developer/deployment/index.rst:155
+#: ../../developer/deployment/index.rst:151
 msgid "[ ] Set ``DEBUG=False``"
 msgstr "[] Establecer ``DEBUG=Falso``"
 
-#: ../../developer/deployment/index.rst:156
+#: ../../developer/deployment/index.rst:152
 msgid "[ ] Configure ``SECRET_KEY`` (unique, strong)"
 msgstr "[] Configurar ``SECRET_KEY`` (único, fuerte)"
 
-#: ../../developer/deployment/index.rst:157
+#: ../../developer/deployment/index.rst:153
 msgid "[ ] Set ``ALLOWED_HOSTS``"
 msgstr "[] Establecer ``ALLOWED_HOSTS``"
 
-#: ../../developer/deployment/index.rst:158
+#: ../../developer/deployment/index.rst:154
 msgid "[ ] Configure production database"
 msgstr "[] Configurar la base de datos de producción"
 
-#: ../../developer/deployment/index.rst:159
+#: ../../developer/deployment/index.rst:155
 msgid "[ ] Set up email service"
 msgstr "[] Configurar el servicio de correo electrónico"
 
-#: ../../developer/deployment/index.rst:160
+#: ../../developer/deployment/index.rst:156
 msgid "[ ] Configure static/media file storage"
 msgstr "[] Configurar el almacenamiento de archivos estáticos/media"
 
-#: ../../developer/deployment/index.rst:161
+#: ../../developer/deployment/index.rst:157
 msgid "[ ] Enable HTTPS/SSL"
 msgstr "[] Habilitar HTTPS/SSL"
 
-#: ../../developer/deployment/index.rst:162
+#: ../../developer/deployment/index.rst:158
 msgid "[ ] Set up monitoring (Sentry)"
 msgstr "[] Configurar monitoreo (Sentry)"
 
-#: ../../developer/deployment/index.rst:165
+#: ../../developer/deployment/index.rst:161
 msgid "2. Infrastructure Setup"
 msgstr "2. Configuración de la infraestructura"
 
-#: ../../developer/deployment/index.rst:167
+#: ../../developer/deployment/index.rst:163
 msgid "**Create server instance:**"
 msgstr "**Crear instancia de servidor:**"
 
-#: ../../developer/deployment/index.rst:169
+#: ../../developer/deployment/index.rst:165
 msgid "Choose cloud provider (AWS, DigitalOcean, etc.)"
 msgstr "Elija el proveedor de la nube (AWS, DigitalOcean, etc.)"
 
-#: ../../developer/deployment/index.rst:170
+#: ../../developer/deployment/index.rst:166
 msgid "Select Ubuntu 22.04 LTS"
 msgstr "Seleccione Ubuntu 22.04 LTS"
 
-#: ../../developer/deployment/index.rst:171
+#: ../../developer/deployment/index.rst:167
 msgid "Minimum: 2 CPU, 4 GB RAM"
 msgstr "Mínimo: 2 CPU, 4 GB de RAM"
 
-#: ../../developer/deployment/index.rst:172
+#: ../../developer/deployment/index.rst:168
 msgid "Attach storage volume for database (if self-hosting)"
 msgstr ""
 "Adjunte un volumen de almacenamiento para la base de datos (si es "
 "autohospedado)"
 
-#: ../../developer/deployment/index.rst:174
+#: ../../developer/deployment/index.rst:170
 msgid "**Configure domain:**"
 msgstr "**Configurar dominio:**"
 
-#: ../../developer/deployment/index.rst:176
+#: ../../developer/deployment/index.rst:172
 msgid "Point A record to server IP"
 msgstr "Apunte un registro a la IP del servidor"
 
-#: ../../developer/deployment/index.rst:177
+#: ../../developer/deployment/index.rst:173
 msgid "Configure DNS (www and root domain)"
 msgstr "Configurar DNS (www y dominio raíz)"
 
-#: ../../developer/deployment/index.rst:178
+#: ../../developer/deployment/index.rst:174
 msgid "Set up SSL certificate (Let's Encrypt)"
 msgstr "Configurar el certificado SSL (Let's Encrypt)"
 
-#: ../../developer/deployment/index.rst:181
+#: ../../developer/deployment/index.rst:177
 msgid "3. Server Preparation"
 msgstr "3. Preparación del servidor"
 
-#: ../../developer/deployment/index.rst:183
+#: ../../developer/deployment/index.rst:179
 msgid "**Install dependencies:**"
 msgstr "**Instalar dependencias:**"
 
-#: ../../developer/deployment/index.rst:203
+#: ../../developer/deployment/index.rst:199
 msgid "**Create deployment user:**"
 msgstr "**Crear usuario de implementación:**"
 
-#: ../../developer/deployment/index.rst:216
+#: ../../developer/deployment/index.rst:212
 msgid "4. Application Deployment"
 msgstr "4. Implementación de aplicaciones"
 
-#: ../../developer/deployment/index.rst:218
+#: ../../developer/deployment/index.rst:214
 msgid "**Clone and configure:**"
 msgstr "**Clonar y configurar:**"
 
-#: ../../developer/deployment/index.rst:232
+#: ../../developer/deployment/index.rst:228
 msgid "**Build and run:**"
 msgstr "**Construir y ejecutar:**"
 
-#: ../../developer/deployment/index.rst:248
+#: ../../developer/deployment/index.rst:244
 msgid "**Start services:**"
 msgstr "**Iniciar servicios:**"
 
-#: ../../developer/deployment/index.rst:262
+#: ../../developer/deployment/index.rst:258
 msgid "5. Post-Deployment"
 msgstr "5. Post-implementación"
 
-#: ../../developer/deployment/index.rst:264
+#: ../../developer/deployment/index.rst:260
 msgid "**Verify functionality:**"
 msgstr "**Verificar funcionalidad:**"
 
-#: ../../developer/deployment/index.rst:266
+#: ../../developer/deployment/index.rst:262
 msgid "[ ] Access application via domain"
 msgstr "[] Acceder a la aplicación a través del dominio"
 
-#: ../../developer/deployment/index.rst:267
+#: ../../developer/deployment/index.rst:263
 msgid "[ ] Test user login"
 msgstr "[] Probar el inicio de sesión del usuario"
 
-#: ../../developer/deployment/index.rst:268
+#: ../../developer/deployment/index.rst:264
 msgid "[ ] Create test project/contract"
 msgstr "[ ] Crear proyecto/contrato de prueba"
 
-#: ../../developer/deployment/index.rst:269
+#: ../../developer/deployment/index.rst:265
 msgid "[ ] Generate PDF report"
 msgstr "[] Generar informe en PDF"
 
-#: ../../developer/deployment/index.rst:270
+#: ../../developer/deployment/index.rst:266
 msgid "[ ] Send test email"
 msgstr "[] Enviar correo electrónico de prueba"
 
-#: ../../developer/deployment/index.rst:271
+#: ../../developer/deployment/index.rst:267
 msgid "[ ] Check static files loading"
 msgstr "[] Verificar la carga de archivos estáticos"
 
-#: ../../developer/deployment/index.rst:272
+#: ../../developer/deployment/index.rst:268
 msgid "[ ] Upload test image (media files)"
 msgstr "[] Cargar imagen de prueba (archivos multimedia)"
 
-#: ../../developer/deployment/index.rst:274
+#: ../../developer/deployment/index.rst:270
 msgid "**Set up monitoring:**"
 msgstr "**Configurar monitoreo:**"
 
-#: ../../developer/deployment/index.rst:286
+#: ../../developer/deployment/index.rst:282
 msgid "**Configure backups:**"
 msgstr "**Configurar copias de seguridad:**"
 
-#: ../../developer/deployment/index.rst:294
+#: ../../developer/deployment/index.rst:290
 msgid "Production Architecture"
 msgstr "Arquitectura de producción"
 
-#: ../../developer/deployment/index.rst:297
+#: ../../developer/deployment/index.rst:293
 msgid "Recommended Setup"
 msgstr "Configuración recomendada"
 
-#: ../../developer/deployment/index.rst:338
+#: ../../developer/deployment/index.rst:334
 msgid "**Components:**"
 msgstr "**Componentes:**"
 
-#: ../../developer/deployment/index.rst:340
+#: ../../developer/deployment/index.rst:336
 msgid "**CDN:** Serve static files globally with low latency"
 msgstr "**CDN:** Sirve archivos estáticos globalmente con baja latencia"
 
-#: ../../developer/deployment/index.rst:341
-msgid ""
-"**Load Balancer:** Distribute traffic, HTTPS termination, health checks"
+#: ../../developer/deployment/index.rst:337
+msgid "**Load Balancer:** Distribute traffic, HTTPS termination, health checks"
 msgstr ""
-"**Load Balancer:** Distribuir tráfico, terminación HTTPS, comprobaciones de "
-"estado"
+"**Load Balancer:** Distribuir tráfico, terminación HTTPS, comprobaciones "
+"de estado"
 
-#: ../../developer/deployment/index.rst:342
+#: ../../developer/deployment/index.rst:338
 msgid "**Web Servers:** Django application + Gunicorn + Nginx"
 msgstr "**Servidores Web:** Aplicación Django + Gunicorn + Nginx"
 
-#: ../../developer/deployment/index.rst:343
+#: ../../developer/deployment/index.rst:339
 msgid "**Database:** Managed PostgreSQL (RDS) with automated backups"
 msgstr ""
 "**Base de datos:** PostgreSQL (RDS) administrado con copias de seguridad "
 "automatizadas"
 
-#: ../../developer/deployment/index.rst:344
+#: ../../developer/deployment/index.rst:340
 msgid "**Cache:** Redis for caching and Celery broker"
 msgstr "**Caché:** Redis para almacenamiento en caché y agente de apio"
 
-#: ../../developer/deployment/index.rst:345
+#: ../../developer/deployment/index.rst:341
 msgid "**Storage:** S3 for user-uploaded media files"
-msgstr ""
-"**Almacenamiento:** S3 para archivos multimedia subidos por el usuario"
+msgstr "**Almacenamiento:** S3 para archivos multimedia subidos por el usuario"
 
-#: ../../developer/deployment/index.rst:348
+#: ../../developer/deployment/index.rst:344
 msgid "Single Server Setup"
 msgstr "Configuración de servidor único"
 
-#: ../../developer/deployment/index.rst:350
+#: ../../developer/deployment/index.rst:346
 msgid "For smaller deployments:"
 msgstr "Para implementaciones más pequeñas:"
 
-#: ../../developer/deployment/index.rst:379
+#: ../../developer/deployment/index.rst:375
 msgid "**Suitable for:**"
 msgstr "**Adecuado para:**"
 
-#: ../../developer/deployment/index.rst:381
+#: ../../developer/deployment/index.rst:377
 msgid "<1000 daily active users"
 msgstr "<1000 usuarios activos diarios"
 
-#: ../../developer/deployment/index.rst:382
+#: ../../developer/deployment/index.rst:378
 msgid "Development/staging environments"
 msgstr "Entornos de desarrollo/puesta en escena"
 
-#: ../../developer/deployment/index.rst:383
+#: ../../developer/deployment/index.rst:379
 msgid "Small construction companies"
 msgstr "Pequeñas empresas constructoras"
 
-#: ../../developer/deployment/index.rst:384
+#: ../../developer/deployment/index.rst:380
 msgid "Budget-constrained deployments"
 msgstr "Implementaciones con presupuesto limitado"
 
-#: ../../developer/deployment/index.rst:387
+#: ../../developer/deployment/index.rst:383
 msgid "Backup and Restore"
 msgstr "Copia de seguridad y restauración"
 
-#: ../../developer/deployment/index.rst:390
+#: ../../developer/deployment/index.rst:386
 msgid "Database Backups"
 msgstr "Copias de seguridad de bases de datos"
 
-#: ../../developer/deployment/index.rst:392
+#: ../../developer/deployment/index.rst:388
 msgid "**Automated backups (AWS RDS):**"
 msgstr "**Copias de seguridad automatizadas (AWS RDS):**"
 
-#: ../../developer/deployment/index.rst:394
+#: ../../developer/deployment/index.rst:390
 msgid "RDS automatically creates daily snapshots. Configure:"
 msgstr "RDS crea automáticamente instantáneas diarias. Configurar:"
 
-#: ../../developer/deployment/index.rst:396
+#: ../../developer/deployment/index.rst:392
 msgid "Retention period (7-35 days)"
 msgstr "Período de retención (7-35 días)"
 
-#: ../../developer/deployment/index.rst:397
+#: ../../developer/deployment/index.rst:393
 msgid "Backup window (low-traffic hours)"
 msgstr "Ventana de respaldo (horas de poco tráfico)"
 
-#: ../../developer/deployment/index.rst:398
+#: ../../developer/deployment/index.rst:394
 msgid "Multi-AZ for high availability"
 msgstr "Multi-AZ para alta disponibilidad"
 
-#: ../../developer/deployment/index.rst:400
+#: ../../developer/deployment/index.rst:396
 msgid "**Manual backups (self-hosted):**"
 msgstr "**Copias de seguridad manuales (autohospedadas):**"
 
-#: ../../developer/deployment/index.rst:420
+#: ../../developer/deployment/index.rst:416
 msgid "**Automate with cron:**"
 msgstr "**Automatizar con cron:**"
 
-#: ../../developer/deployment/index.rst:428
+#: ../../developer/deployment/index.rst:424
 msgid "Media File Backups"
 msgstr "Copias de seguridad de archivos multimedia"
 
-#: ../../developer/deployment/index.rst:430
+#: ../../developer/deployment/index.rst:426
 msgid "**If using S3:**"
 msgstr "**Si usa S3:**"
 
-#: ../../developer/deployment/index.rst:432
+#: ../../developer/deployment/index.rst:428
 msgid "Enable S3 versioning"
 msgstr "Habilitar el control de versiones de S3"
 
-#: ../../developer/deployment/index.rst:433
+#: ../../developer/deployment/index.rst:429
 msgid "Configure lifecycle policies"
 msgstr "Configurar políticas de ciclo de vida"
 
-#: ../../developer/deployment/index.rst:434
+#: ../../developer/deployment/index.rst:430
 msgid "Cross-region replication (optional)"
 msgstr "Replicación entre regiones (opcional)"
 
-#: ../../developer/deployment/index.rst:436
+#: ../../developer/deployment/index.rst:432
 msgid "**If using local storage:**"
 msgstr "**Si usa almacenamiento local:**"
 
-#: ../../developer/deployment/index.rst:444
+#: ../../developer/deployment/index.rst:440
 msgid "Restore Process"
 msgstr "Proceso de restauración"
 
-#: ../../developer/deployment/index.rst:446
+#: ../../developer/deployment/index.rst:442
 msgid "**Database restore:**"
 msgstr "**Restauración de base de datos:**"
 
-#: ../../developer/deployment/index.rst:460
+#: ../../developer/deployment/index.rst:456
 msgid "**Media restore:**"
 msgstr "**Restauración de medios:**"
 
-#: ../../developer/deployment/index.rst:468
+#: ../../developer/deployment/index.rst:464
 msgid "Scaling Considerations"
 msgstr "Consideraciones de escala"
 
-#: ../../developer/deployment/index.rst:471
+#: ../../developer/deployment/index.rst:467
 msgid "Vertical Scaling"
 msgstr "Escalado vertical"
 
-#: ../../developer/deployment/index.rst:473
+#: ../../developer/deployment/index.rst:469
 msgid "**When to scale up:**"
 msgstr "**Cuándo ampliar:**"
 
-#: ../../developer/deployment/index.rst:475
+#: ../../developer/deployment/index.rst:471
 #, python-format
 msgid "High CPU usage (>70% sustained)"
 msgstr "Alto uso de CPU (>70% sostenido)"
 
-#: ../../developer/deployment/index.rst:476
+#: ../../developer/deployment/index.rst:472
 msgid "Memory pressure"
 msgstr "Presión de la memoria"
 
-#: ../../developer/deployment/index.rst:477
+#: ../../developer/deployment/index.rst:473
 msgid "Slow database queries"
 msgstr "Consultas lentas a la base de datos."
 
-#: ../../developer/deployment/index.rst:478
+#: ../../developer/deployment/index.rst:474
 msgid "Single server bottleneck"
 msgstr "Cuello de botella de un solo servidor"
 
-#: ../../developer/deployment/index.rst:480
-#: ../../developer/deployment/index.rst:497
+#: ../../developer/deployment/index.rst:476
+#: ../../developer/deployment/index.rst:493
 msgid "**How to scale:**"
 msgstr "**Cómo escalar:**"
 
-#: ../../developer/deployment/index.rst:482
+#: ../../developer/deployment/index.rst:478
 msgid "Increase instance size (t2.small → t2.medium → t2.large)"
 msgstr "Aumentar el tamaño de la instancia (t2.small → t2.medium → t2.large)"
 
-#: ../../developer/deployment/index.rst:483
+#: ../../developer/deployment/index.rst:479
 msgid "Add more CPU/RAM"
 msgstr "Añadir más CPU/RAM"
 
-#: ../../developer/deployment/index.rst:484
+#: ../../developer/deployment/index.rst:480
 msgid "Upgrade database instance"
 msgstr "Actualizar instancia de base de datos"
 
-#: ../../developer/deployment/index.rst:485
+#: ../../developer/deployment/index.rst:481
 msgid "Use faster storage (SSD)"
 msgstr "Utilice un almacenamiento más rápido (SSD)"
 
-#: ../../developer/deployment/index.rst:488
+#: ../../developer/deployment/index.rst:484
 msgid "Horizontal Scaling"
 msgstr "Escala horizontal"
 
-#: ../../developer/deployment/index.rst:490
+#: ../../developer/deployment/index.rst:486
 msgid "**When to scale out:**"
 msgstr "**Cuándo escalar horizontalmente:**"
 
-#: ../../developer/deployment/index.rst:492
+#: ../../developer/deployment/index.rst:488
 msgid ">1000 concurrent users"
 msgstr ">1000 usuarios simultáneos"
 
-#: ../../developer/deployment/index.rst:493
+#: ../../developer/deployment/index.rst:489
 msgid "Geographic distribution needed"
 msgstr "Distribución geográfica necesaria"
 
-#: ../../developer/deployment/index.rst:494
+#: ../../developer/deployment/index.rst:490
 msgid "High availability requirements"
 msgstr "Requisitos de alta disponibilidad"
 
-#: ../../developer/deployment/index.rst:495
+#: ../../developer/deployment/index.rst:491
 msgid "Load balancing benefits"
 msgstr "Beneficios del equilibrio de carga"
 
-#: ../../developer/deployment/index.rst:499
+#: ../../developer/deployment/index.rst:495
 msgid "Add more application servers"
 msgstr "Agregar más servidores de aplicaciones"
 
-#: ../../developer/deployment/index.rst:500
+#: ../../developer/deployment/index.rst:496
 msgid "Set up load balancer"
 msgstr "Configurar el equilibrador de carga"
 
-#: ../../developer/deployment/index.rst:501
+#: ../../developer/deployment/index.rst:497
 msgid "Use managed database (RDS)"
 msgstr "Usar base de datos administrada (RDS)"
 
-#: ../../developer/deployment/index.rst:502
+#: ../../developer/deployment/index.rst:498
 msgid "External Redis (ElastiCache)"
 msgstr "Redis externo (ElastiCache)"
 
-#: ../../developer/deployment/index.rst:506
+#: ../../developer/deployment/index.rst:502
 msgid "Performance Optimization"
 msgstr "Optimización del rendimiento"
 
-#: ../../developer/deployment/index.rst:510
+#: ../../developer/deployment/index.rst:506
 msgid "Connection pooling"
 msgstr "Agrupación de conexiones"
 
-#: ../../developer/deployment/index.rst:511
+#: ../../developer/deployment/index.rst:507
 msgid "Query optimization"
 msgstr "Optimización de consultas"
 
-#: ../../developer/deployment/index.rst:512
+#: ../../developer/deployment/index.rst:508
 msgid "Read replicas"
 msgstr "Leer réplicas"
 
-#: ../../developer/deployment/index.rst:513
+#: ../../developer/deployment/index.rst:509
 msgid "Database indexes"
 msgstr "Índices de bases de datos"
 
-#: ../../developer/deployment/index.rst:515
+#: ../../developer/deployment/index.rst:511
 msgid "**Caching:**"
 msgstr "**Almacenamiento en caché:**"
 
-#: ../../developer/deployment/index.rst:517
+#: ../../developer/deployment/index.rst:513
 msgid "Redis for session storage"
 msgstr "Redis para almacenamiento de sesiones"
 
-#: ../../developer/deployment/index.rst:518
+#: ../../developer/deployment/index.rst:514
 msgid "Template fragment caching"
 msgstr "Almacenamiento en caché de fragmentos de plantilla"
 
-#: ../../developer/deployment/index.rst:519
+#: ../../developer/deployment/index.rst:515
 msgid "Database query caching"
 msgstr "Almacenamiento en caché de consultas de bases de datos"
 
-#: ../../developer/deployment/index.rst:520
+#: ../../developer/deployment/index.rst:516
 msgid "Full-page caching (Varnish)"
 msgstr "Almacenamiento en caché de página completa (barniz)"
 
-#: ../../developer/deployment/index.rst:522
+#: ../../developer/deployment/index.rst:518
 msgid "**Static Files:**"
 msgstr "**Archivos estáticos:**"
 
-#: ../../developer/deployment/index.rst:524
+#: ../../developer/deployment/index.rst:520
 msgid "CDN distribution"
 msgstr "Distribución CDN"
 
-#: ../../developer/deployment/index.rst:525
+#: ../../developer/deployment/index.rst:521
 msgid "Gzip compression"
 msgstr "compresión gzip"
 
-#: ../../developer/deployment/index.rst:526
+#: ../../developer/deployment/index.rst:522
 msgid "Browser caching headers"
 msgstr "Encabezados de almacenamiento en caché del navegador"
 
-#: ../../developer/deployment/index.rst:527
+#: ../../developer/deployment/index.rst:523
 msgid "Image optimization"
 msgstr "Optimización de imagen"
 
-#: ../../developer/deployment/index.rst:530
+#: ../../developer/deployment/index.rst:526
 msgid "Security Hardening"
 msgstr "Refuerzo de seguridad"
 
-#: ../../developer/deployment/index.rst:533
+#: ../../developer/deployment/index.rst:529
 msgid "Essential Security Measures"
 msgstr "Medidas de seguridad esenciales"
 
-#: ../../developer/deployment/index.rst:535
+#: ../../developer/deployment/index.rst:531
 msgid "**Application security:**"
 msgstr "**Seguridad de la aplicación:**"
 
-#: ../../developer/deployment/index.rst:542
+#: ../../developer/deployment/index.rst:538
 msgid "**Server security:**"
 msgstr "**Seguridad del servidor:**"
 
-#: ../../developer/deployment/index.rst:559
+#: ../../developer/deployment/index.rst:555
 msgid "**SSL/TLS:**"
 msgstr "**SSL/TLS:**"
 
-#: ../../developer/deployment/index.rst:561
+#: ../../developer/deployment/index.rst:557
 msgid "Use Let's Encrypt for free certificates"
 msgstr "Utilice Let's Encrypt para obtener certificados gratuitos"
 
-#: ../../developer/deployment/index.rst:562
+#: ../../developer/deployment/index.rst:558
 msgid "Enable HSTS"
 msgstr "Habilitar HSTS"
 
-#: ../../developer/deployment/index.rst:563
+#: ../../developer/deployment/index.rst:559
 msgid "Configure secure ciphers"
 msgstr "Configurar cifrados seguros"
 
-#: ../../developer/deployment/index.rst:564
+#: ../../developer/deployment/index.rst:560
 msgid "Set up certificate auto-renewal"
 msgstr "Configurar la renovación automática del certificado"
 
-#: ../../developer/deployment/index.rst:566
+#: ../../developer/deployment/index.rst:562
 msgid "**Environment secrets:**"
 msgstr "**Secretos del medio ambiente:**"
 
-#: ../../developer/deployment/index.rst:568
+#: ../../developer/deployment/index.rst:564
 msgid "Never commit secrets to git"
 msgstr "Nunca compartas secretos con git"
 
-#: ../../developer/deployment/index.rst:569
+#: ../../developer/deployment/index.rst:565
 msgid "Use environment variables"
 msgstr "Usar variables de entorno"
 
-#: ../../developer/deployment/index.rst:570
+#: ../../developer/deployment/index.rst:566
 msgid "Rotate credentials regularly"
 msgstr "Rotar las credenciales periódicamente"
 
-#: ../../developer/deployment/index.rst:571
+#: ../../developer/deployment/index.rst:567
 msgid "Use secrets management (AWS Secrets Manager)"
 msgstr "Utilice la gestión de secretos (AWS Secrets Manager)"
 
-#: ../../developer/deployment/index.rst:574
+#: ../../developer/deployment/index.rst:570
 msgid "Monitoring and Logging"
 msgstr "Monitoreo y registro"
 
-#: ../../developer/deployment/index.rst:577
+#: ../../developer/deployment/index.rst:573
 msgid "Application Monitoring"
 msgstr "Monitoreo de aplicaciones"
 
-#: ../../developer/deployment/index.rst:579
+#: ../../developer/deployment/index.rst:575
 msgid "**Sentry (Error Tracking):**"
 msgstr "**Sentry (seguimiento de errores):**"
 
-#: ../../developer/deployment/index.rst:587
+#: ../../developer/deployment/index.rst:583
 msgid "**Application Performance Monitoring:**"
 msgstr "**Supervisión del rendimiento de la aplicación:**"
 
-#: ../../developer/deployment/index.rst:589
+#: ../../developer/deployment/index.rst:585
 msgid "New Relic"
 msgstr "Nueva reliquia"
 
-#: ../../developer/deployment/index.rst:590
+#: ../../developer/deployment/index.rst:586
 msgid "DataDog"
 msgstr "Perro de datos"
 
-#: ../../developer/deployment/index.rst:591
+#: ../../developer/deployment/index.rst:587
 msgid "Application Insights"
 msgstr "Información sobre la aplicación"
 
-#: ../../developer/deployment/index.rst:594
+#: ../../developer/deployment/index.rst:590
 msgid "Server Monitoring"
 msgstr "Monitoreo del servidor"
 
-#: ../../developer/deployment/index.rst:596
+#: ../../developer/deployment/index.rst:592
 msgid "**Metrics to monitor:**"
 msgstr "**Métricas a monitorear:**"
 
-#: ../../developer/deployment/index.rst:598
+#: ../../developer/deployment/index.rst:594
 msgid "CPU usage"
 msgstr "uso de CPU"
 
-#: ../../developer/deployment/index.rst:599
+#: ../../developer/deployment/index.rst:595
 msgid "Memory usage"
 msgstr "Uso de memoria"
 
-#: ../../developer/deployment/index.rst:600
+#: ../../developer/deployment/index.rst:596
 msgid "Disk space"
 msgstr "Espacio en disco"
 
-#: ../../developer/deployment/index.rst:601
+#: ../../developer/deployment/index.rst:597
 msgid "Network traffic"
 msgstr "Tráfico de red"
 
-#: ../../developer/deployment/index.rst:602
+#: ../../developer/deployment/index.rst:598
 msgid "Database connections"
 msgstr "Conexiones de bases de datos"
 
-#: ../../developer/deployment/index.rst:603
+#: ../../developer/deployment/index.rst:599
 msgid "Response times"
 msgstr "Tiempos de respuesta"
 
-#: ../../developer/deployment/index.rst:605
+#: ../../developer/deployment/index.rst:601
 msgid "**Tools:**"
 msgstr "**Herramientas:**"
 
-#: ../../developer/deployment/index.rst:607
+#: ../../developer/deployment/index.rst:603
 msgid "CloudWatch (AWS)"
 msgstr "Vigilancia de la nube (AWS)"
 
-#: ../../developer/deployment/index.rst:608
+#: ../../developer/deployment/index.rst:604
 msgid "Prometheus + Grafana"
 msgstr "Prometeo + Grafana"
 
-#: ../../developer/deployment/index.rst:609
+#: ../../developer/deployment/index.rst:605
 msgid "DigitalOcean Monitoring"
 msgstr "Monitoreo Digital del Océano"
 
-#: ../../developer/deployment/index.rst:610
+#: ../../developer/deployment/index.rst:606
 msgid "Netdata"
 msgstr "datos de red"
 
-#: ../../developer/deployment/index.rst:613
+#: ../../developer/deployment/index.rst:609
 msgid "Log Aggregation"
 msgstr "Agregación de registros"
 
-#: ../../developer/deployment/index.rst:615
+#: ../../developer/deployment/index.rst:611
 msgid "**Centralized logging:**"
 msgstr "**Registro centralizado:**"
 
-#: ../../developer/deployment/index.rst:617
+#: ../../developer/deployment/index.rst:613
 msgid "CloudWatch Logs (AWS)"
 msgstr "Registros de CloudWatch (AWS)"
 
-#: ../../developer/deployment/index.rst:618
+#: ../../developer/deployment/index.rst:614
 msgid "Papertrail"
 msgstr "rastro de papel"
 
-#: ../../developer/deployment/index.rst:619
+#: ../../developer/deployment/index.rst:615
 msgid "Loggly"
 msgstr "Lograr"
 
-#: ../../developer/deployment/index.rst:620
+#: ../../developer/deployment/index.rst:616
 msgid "ELK Stack (Elasticsearch, Logstash, Kibana)"
 msgstr "Pila ELK (Elasticsearch, Logstash, Kibana)"
 
-#: ../../developer/deployment/index.rst:622
+#: ../../developer/deployment/index.rst:618
 msgid "**Log rotation:**"
 msgstr "**Rotación de registros:**"
 
-#: ../../developer/deployment/index.rst:630
+#: ../../developer/deployment/index.rst:626
 msgid "Troubleshooting"
 msgstr "Solución de problemas"
 
-#: ../../developer/deployment/index.rst:633
+#: ../../developer/deployment/index.rst:629
 msgid "Common Issues"
 msgstr "Problemas comunes"
 
-#: ../../developer/deployment/index.rst:635
+#: ../../developer/deployment/index.rst:631
 msgid "**Application won't start:**"
 msgstr "**La aplicación no se inicia:**"
 
-#: ../../developer/deployment/index.rst:647
+#: ../../developer/deployment/index.rst:643
 msgid "**502 Bad Gateway:**"
 msgstr "**502 Puerta de enlace no válida:**"
 
-#: ../../developer/deployment/index.rst:649
+#: ../../developer/deployment/index.rst:645
 msgid "Django not running"
 msgstr "Django no se ejecuta"
 
-#: ../../developer/deployment/index.rst:650
+#: ../../developer/deployment/index.rst:646
 msgid "Gunicorn crashed"
 msgstr "Gunicorn se estrelló"
 
-#: ../../developer/deployment/index.rst:651
+#: ../../developer/deployment/index.rst:647
 msgid "Nginx misconfigured"
 msgstr "Nginx mal configurado"
 
-#: ../../developer/deployment/index.rst:653
+#: ../../developer/deployment/index.rst:649
 msgid "**500 Internal Server Error:**"
 msgstr "**Error interno del servidor 500:**"
 
-#: ../../developer/deployment/index.rst:655
+#: ../../developer/deployment/index.rst:651
 msgid "Check Sentry"
 msgstr "Verificar centinela"
 
-#: ../../developer/deployment/index.rst:656
+#: ../../developer/deployment/index.rst:652
 msgid "Review Django logs"
 msgstr "Revisar los registros de Django"
 
-#: ../../developer/deployment/index.rst:657
+#: ../../developer/deployment/index.rst:653
 msgid "Verify database connection"
 msgstr "Verificar la conexión de la base de datos"
 
-#: ../../developer/deployment/index.rst:659
+#: ../../developer/deployment/index.rst:655
 msgid "**Static files not loading:**"
 msgstr "**Los archivos estáticos no se cargan:**"
 
-#: ../../developer/deployment/index.rst:661
+#: ../../developer/deployment/index.rst:657
 msgid "Run collectstatic"
 msgstr "Ejecute Collectstatic"
 
-#: ../../developer/deployment/index.rst:662
+#: ../../developer/deployment/index.rst:658
 msgid "Check STATIC_ROOT/STATIC_URL"
 msgstr "Verifique STATIC_ROOT/STATIC_URL"
 
-#: ../../developer/deployment/index.rst:663
+#: ../../developer/deployment/index.rst:659
 msgid "Verify WhiteNoise configuration"
 msgstr "Verificar la configuración de WhiteNoise"
 
-#: ../../developer/deployment/index.rst:664
+#: ../../developer/deployment/index.rst:660
 msgid "Check CDN configuration"
 msgstr "Verifique la configuración de CDN"
 
-#: ../../developer/deployment/index.rst:666
+#: ../../developer/deployment/index.rst:662
 msgid "**Database connection errors:**"
 msgstr "**Errores de conexión a la base de datos:**"
 
-#: ../../developer/deployment/index.rst:668
+#: ../../developer/deployment/index.rst:664
 msgid "Verify DATABASE_URL"
 msgstr "Verificar DATABASE_URL"
 
-#: ../../developer/deployment/index.rst:669
+#: ../../developer/deployment/index.rst:665
 msgid "Check security group rules"
 msgstr "Verifique las reglas del grupo de seguridad"
 
-#: ../../developer/deployment/index.rst:670
+#: ../../developer/deployment/index.rst:666
 msgid "Confirm database is running"
 msgstr "Confirmar que la base de datos se está ejecutando"
 
-#: ../../developer/deployment/index.rst:671
+#: ../../developer/deployment/index.rst:667
 msgid "Test connection manually"
 msgstr "Probar la conexión manualmente"
 
-#: ../../developer/deployment/index.rst:674
+#: ../../developer/deployment/index.rst:670
 msgid "See Also"
 msgstr "Ver también"
 
-#: ../../developer/deployment/index.rst:676
+#: ../../developer/deployment/index.rst:672
 msgid ":doc:`../installation/index` - Development installation"
 msgstr ""
 
-#: ../../developer/deployment/index.rst:677
+#: ../../developer/deployment/index.rst:673
 msgid ":doc:`../architecture/overview` - Understanding the architecture"
 msgstr ""
 
-#: ../../developer/deployment/index.rst:678
+#: ../../developer/deployment/index.rst:674
 msgid ":doc:`/reference/settings-reference` - Settings documentation"
 msgstr ""
 
-#: ../../developer/deployment/index.rst:679
+#: ../../developer/deployment/index.rst:675
 msgid ""
 "`Django Deployment Checklist "
 "<https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/>`_"
 msgstr ""
 "`Lista de verificación de implementación de Django "
 "<https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/>`_"
+
+#~ msgid "Table of Contents"
+#~ msgstr "Tabla de contenido"
+

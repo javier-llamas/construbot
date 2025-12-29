@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -20,13 +20,894 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../user-guide/faq.rst:3
-msgid "Frequently Asked Questions"
+msgid "FAQ"
 msgstr "Preguntas frecuentes"
 
 #: ../../user-guide/faq.rst:5
-msgid "Common questions and troubleshooting."
-msgstr "Preguntas comunes y solución de problemas."
+#, fuzzy
+msgid "Frequently asked questions about using Construbot."
+msgstr "Preguntas frecuentes"
 
-#: ../../user-guide/faq.rst:7
-msgid "[FAQ content to be added]"
-msgstr "[Se agregará contenido de preguntas frecuentes]"
+#: ../../user-guide/faq.rst:8
+#, fuzzy
+msgid "General Questions"
+msgstr "Preguntas frecuentes"
+
+#: ../../user-guide/faq.rst:11
+msgid "What is Construbot?"
+msgstr "¿Qué es Construbot?"
+
+#: ../../user-guide/faq.rst:13
+msgid ""
+"Construbot is an operational management solution for construction companies."
+" It helps manage contracts, track progress payments (estimates), handle "
+"financial calculations, and generate professional documents."
+msgstr ""
+"Construbot es una solución de gestión operativa para empresas constructoras."
+" Ayuda a gestionar contratos, realizar un seguimiento de los pagos "
+"progresivos (estimaciones), manejar cálculos financieros y generar "
+"documentos profesionales."
+
+#: ../../user-guide/faq.rst:15
+msgid "See :doc:`introduction` for a complete overview."
+msgstr "Consulte :doc:`introducción` para obtener una descripción completa."
+
+#: ../../user-guide/faq.rst:18
+msgid "Who should use Construbot?"
+msgstr "¿Quién debería utilizar Construbot?"
+
+#: ../../user-guide/faq.rst:20
+msgid "Construbot is designed for:"
+msgstr "Construbot está diseñado para:"
+
+#: ../../user-guide/faq.rst:22
+msgid "**Project Managers** - Track project progress and billing"
+msgstr ""
+"**Gerentes de proyectos**: realice un seguimiento del progreso y la "
+"facturación del proyecto"
+
+#: ../../user-guide/faq.rst:23
+msgid "**Contract Administrators** - Manage contracts and documents"
+msgstr "**Administradores de contratos** - Gestionar contratos y documentos"
+
+#: ../../user-guide/faq.rst:24
+msgid "**Accounting Staff** - Handle financial tracking and payments"
+msgstr ""
+"**Personal de contabilidad** - Manejar el seguimiento financiero y los pagos"
+
+#: ../../user-guide/faq.rst:25
+msgid "**Site Supervisors** - Report completed work"
+msgstr "**Supervisores del sitio** - Informar del trabajo completado"
+
+#: ../../user-guide/faq.rst:26
+msgid "**Directors** - Overview of all projects and finances"
+msgstr ""
+"**Directores** - Descripción general de todos los proyectos y finanzas"
+
+#: ../../user-guide/faq.rst:29
+msgid "What does \"Construbot\" mean?"
+msgstr "¿Qué significa \"Construbot\"?"
+
+#: ../../user-guide/faq.rst:31
+msgid ""
+"\"Construbot\" is a combination of \"Construction\" + \"Robot\" - an "
+"automated solution for construction operations."
+msgstr ""
+"\"Construbot\" es una combinación de \"Construcción\" + \"Robot\": una "
+"solución automatizada para operaciones de construcción."
+
+#: ../../user-guide/faq.rst:34
+msgid "Getting Started"
+msgstr "Empezando"
+
+#: ../../user-guide/faq.rst:37
+msgid "How do I log in for the first time?"
+msgstr "¿Cómo inicio sesión por primera vez?"
+
+#: ../../user-guide/faq.rst:39
+msgid "Navigate to your Construbot URL"
+msgstr "Navegue a su URL de Construbot"
+
+#: ../../user-guide/faq.rst:40
+msgid "Enter your email and password (provided by administrator)"
+msgstr ""
+"Ingrese su correo electrónico y contraseña (proporcionada por el "
+"administrador)"
+
+#: ../../user-guide/faq.rst:41
+msgid "Click \"Login\""
+msgstr "Haga clic en \"Iniciar sesión\""
+
+#: ../../user-guide/faq.rst:42
+msgid "You'll be directed to the dashboard"
+msgstr "Serás dirigido al panel de control."
+
+#: ../../user-guide/faq.rst:44
+msgid "If you don't have credentials, contact your system administrator."
+msgstr ""
+"Si no tiene credenciales, comuníquese con el administrador del sistema."
+
+#: ../../user-guide/faq.rst:47
+msgid "How do I change my password?"
+msgstr "¿Cómo cambio mi contraseña?"
+
+#: ../../user-guide/faq.rst:49
+msgid "Click your username in the top-right"
+msgstr "Haga clic en su nombre de usuario en la esquina superior derecha"
+
+#: ../../user-guide/faq.rst:50
+msgid "Select \"Profile\" or \"Change Password\""
+msgstr "Seleccione \"Perfil\" o \"Cambiar contraseña\""
+
+#: ../../user-guide/faq.rst:51
+msgid "Enter current password"
+msgstr "Ingrese la contraseña actual"
+
+#: ../../user-guide/faq.rst:52
+msgid "Enter new password twice"
+msgstr "Ingrese la nueva contraseña dos veces"
+
+#: ../../user-guide/faq.rst:53
+msgid "Click \"Save\""
+msgstr "Haga clic en \"Guardar\""
+
+#: ../../user-guide/faq.rst:56
+msgid "Which company am I working in?"
+msgstr "¿En qué empresa estoy trabajando?"
+
+#: ../../user-guide/faq.rst:58
+msgid ""
+"Your **active company** is shown in the top navigation bar. If you have "
+"access to multiple companies:"
+msgstr ""
+"Su **empresa activa** se muestra en la barra de navegación superior. Si "
+"tiene acceso a varias empresas:"
+
+#: ../../user-guide/faq.rst:60
+msgid "Click the company name dropdown"
+msgstr "Haga clic en el menú desplegable del nombre de la empresa"
+
+#: ../../user-guide/faq.rst:61
+msgid "Select the company you want to work in"
+msgstr "Selecciona la empresa en la que quieres trabajar"
+
+#: ../../user-guide/faq.rst:62
+msgid "All data will switch to that company"
+msgstr "Todos los datos cambiarán a esa empresa."
+
+#: ../../user-guide/faq.rst:65
+msgid "Contracts & Projects"
+msgstr "Contratos y Proyectos"
+
+#: ../../user-guide/faq.rst:68
+msgid "What's the difference between a contract and a project?"
+msgstr "¿Cuál es la diferencia entre un contrato y un proyecto?"
+
+#: ../../user-guide/faq.rst:70
+msgid ""
+"In Construbot, **\"Contract\" (Contrato)** and **\"Project\"** are the same "
+"thing. The term \"Contract\" is used because it represents the legal "
+"agreement, but it functions as a project management entity."
+msgstr ""
+"En Construbot, **\"Contrato\"** y **\"Proyecto\"** son lo mismo. El término "
+"\"Contrato\" se utiliza porque representa el acuerdo legal, pero funciona "
+"como una entidad de gestión de proyectos."
+
+#: ../../user-guide/faq.rst:73
+msgid "How do I create a new contract?"
+msgstr "¿Cómo creo un nuevo contrato?"
+
+#: ../../user-guide/faq.rst:75
+msgid ""
+"See the complete workflow in :doc:`workflows/index` (Creating a New Project "
+"section)."
+msgstr ""
+"Vea el flujo de trabajo completo en :doc:`workflows/index` (sección Creación"
+" de un nuevo proyecto)."
+
+#: ../../user-guide/faq.rst:77
+msgid ""
+"**Quick steps:** 1. Create client counterparty 2. Create site 3. Create "
+"contract 4. Add concept catalog 5. Add contacts"
+msgstr ""
+"**Pasos rápidos:** 1. Crear contraparte del cliente 2. Crear sitio 3. Crear "
+"contrato 4. Agregar catálogo de conceptos 5. Agregar contactos"
+
+#: ../../user-guide/faq.rst:85
+msgid "Can I have subcontracts under a main contract?"
+msgstr "¿Puedo tener subcontratos bajo un contrato principal?"
+
+#: ../../user-guide/faq.rst:87
+msgid ""
+"Yes! Construbot supports **hierarchical contracts**. When creating a "
+"subcontract, select the parent contract in the contract form."
+msgstr ""
+"¡Sí! Construbot admite **contratos jerárquicos**. Al crear un subcontrato, "
+"seleccione el contrato principal en el formulario de contrato."
+
+#: ../../user-guide/faq.rst:89
+msgid ""
+"See :doc:`concepts/projects-contracts` (Hierarchical Contracts section)."
+msgstr ""
+"Ver :doc:`concepts/projects-contracts` (sección Contratos Jerárquicos)."
+
+#: ../../user-guide/faq.rst:92
+msgid "Why can't I delete a contract?"
+msgstr "¿Por qué no puedo eliminar un contrato?"
+
+#: ../../user-guide/faq.rst:94
+msgid ""
+"Contracts with associated estimates cannot be deleted to preserve financial "
+"records. Instead:"
+msgstr ""
+"Los contratos con estimaciones asociadas no se pueden eliminar para "
+"preservar los registros financieros. En cambio:"
+
+#: ../../user-guide/faq.rst:96
+msgid "Mark the contract as inactive"
+msgstr "Marcar el contrato como inactivo"
+
+#: ../../user-guide/faq.rst:97
+msgid "Add a note explaining why it was closed"
+msgstr "Añade una nota explicando por qué se cerró."
+
+#: ../../user-guide/faq.rst:98
+msgid "It will be hidden from active contract lists"
+msgstr "Estará oculto de las listas de contratos activos."
+
+#: ../../user-guide/faq.rst:101
+msgid "Estimates & Billing"
+msgstr "Estimaciones y facturación"
+
+#: ../../user-guide/faq.rst:104
+msgid "What is an \"Estimate\" (Estimación)?"
+msgstr "¿Qué es una \"Estimación\"?"
+
+#: ../../user-guide/faq.rst:106
+msgid ""
+"An **estimate** is a progress payment request for work completed during a "
+"specific period. It's similar to an invoice but specifically for "
+"construction progress billing."
+msgstr ""
+"Una **estimación** es una solicitud de pago por progreso del trabajo "
+"completado durante un período específico. Es similar a una factura pero "
+"específicamente para la facturación del progreso de la construcción."
+
+#: ../../user-guide/faq.rst:108
+msgid "See :doc:`concepts/estimates` for detailed information."
+msgstr ""
+"Consulte :doc:`conceptos/estimaciones` para obtener información detallada."
+
+#: ../../user-guide/faq.rst:111
+msgid "How do cumulative quantities work?"
+msgstr "¿Cómo funcionan las cantidades acumulativas?"
+
+#: ../../user-guide/faq.rst:113
+msgid "Construbot automatically tracks:"
+msgstr "Construbot rastrea automáticamente:"
+
+#: ../../user-guide/faq.rst:115
+msgid "**Previous estimates**: Total from all prior estimates"
+msgstr ""
+"**Estimaciones anteriores**: Total de todas las estimaciones anteriores"
+
+#: ../../user-guide/faq.rst:116
+msgid "**This estimate**: New work completed"
+msgstr "**Esta estimación**: Nuevo trabajo completado"
+
+#: ../../user-guide/faq.rst:117
+msgid "**Cumulative total**: Running total to date"
+msgstr "**Total acumulado**: Total acumulado hasta la fecha"
+
+#: ../../user-guide/faq.rst:118
+msgid "**Remaining**: Contract quantity - Cumulative"
+msgstr "**Restante**: Cantidad de contrato - Acumulado"
+
+#: ../../user-guide/faq.rst:120
+msgid "This ensures you never over-bill a contract concept."
+msgstr "Esto garantiza que nunca sobrefacturarás un concepto de contrato."
+
+#: ../../user-guide/faq.rst:123
+msgid "What are retentions?"
+msgstr "¿Qué son las retenciones?"
+
+#: ../../user-guide/faq.rst:125
+msgid "**Retentions** are percentages withheld from payments:"
+msgstr "**Retenciones** son porcentajes retenidos de los pagos:"
+
+#: ../../user-guide/faq.rst:127
+msgid "**Performance retention** (5-10%): Held until completion"
+msgstr ""
+"**Retención del rendimiento** (5-10%): se mantiene hasta su finalización"
+
+#: ../../user-guide/faq.rst:128
+msgid "**Warranty retention** (5%): Held during warranty period"
+msgstr ""
+"**Retención de garantía** (5%): retenida durante el período de garantía"
+
+#: ../../user-guide/faq.rst:129
+msgid "**Tax withholdings**: Government-required deductions"
+msgstr "**Retenciones de impuestos**: Deducciones requeridas por el gobierno"
+
+#: ../../user-guide/faq.rst:131
+msgid "See :doc:`concepts/retentions` for details."
+msgstr "Consulte :doc:`conceptos/retenciones` para obtener más detalles."
+
+#: ../../user-guide/faq.rst:134
+msgid "How do I fix an incorrect estimate?"
+msgstr "¿Cómo soluciono una estimación incorrecta?"
+
+#: ../../user-guide/faq.rst:136
+msgid ""
+"**If still in draft:** - Edit the estimate directly - Update quantities as "
+"needed"
+msgstr ""
+"**Si aún está en borrador:** - Edite la estimación directamente - Actualice "
+"las cantidades según sea necesario"
+
+#: ../../user-guide/faq.rst:140
+msgid ""
+"**If already approved:** - Create a new estimate - Use negative quantities "
+"to reverse errors - Add corrected quantities - Document in notes"
+msgstr ""
+"**Si ya está aprobado:** - Crear una nueva estimación - Usar cantidades "
+"negativas para revertir errores - Agregar cantidades corregidas - Documentar"
+" en notas"
+
+#: ../../user-guide/faq.rst:147
+msgid "Can I delete an estimate?"
+msgstr "¿Puedo eliminar un presupuesto?"
+
+#: ../../user-guide/faq.rst:149
+msgid "Estimates associated with payments cannot be deleted. Instead:"
+msgstr ""
+"Las estimaciones asociadas con los pagos no se pueden eliminar. En cambio:"
+
+#: ../../user-guide/faq.rst:151
+msgid "Create a correcting estimate (negative quantities)"
+msgstr "Crear una estimación de corrección (cantidades negativas)"
+
+#: ../../user-guide/faq.rst:152
+msgid "Or mark as void and create a new one"
+msgstr "O marcar como nulo y crear uno nuevo."
+
+#: ../../user-guide/faq.rst:153
+msgid "Add notes explaining the correction"
+msgstr "Agregar notas explicando la corrección."
+
+#: ../../user-guide/faq.rst:156
+msgid "Counterparties & Sites"
+msgstr "Contrapartes y sitios"
+
+#: ../../user-guide/faq.rst:159
+msgid "What is a \"Counterparty\" (Contraparte)?"
+msgstr "¿Qué es una \"contraparte\" (Contraparte)?"
+
+#: ../../user-guide/faq.rst:161
+msgid "A **counterparty** is any business entity you work with:"
+msgstr ""
+"Una **contraparte** es cualquier entidad comercial con la que trabaja:"
+
+#: ../../user-guide/faq.rst:163
+msgid "**Cliente** (Client): Companies that hire you"
+msgstr "**Cliente** (Cliente): Empresas que te contratan"
+
+#: ../../user-guide/faq.rst:164
+msgid "**Subcontratista** (Subcontractor): Specialized contractors you hire"
+msgstr ""
+"**Subcontratista** (Subcontratista): Contratistas especializados que "
+"contratas"
+
+#: ../../user-guide/faq.rst:165
+msgid "**Destajista** (Piecework Contractor): Paid by completed units"
+msgstr ""
+"**Destajista** (Contratista a destajo): Pagado por unidades terminadas"
+
+#: ../../user-guide/faq.rst:167
+msgid "See :doc:`concepts/counterparties` for details."
+msgstr "Consulte :doc:`conceptos/contrapartes` para obtener más detalles."
+
+#: ../../user-guide/faq.rst:170
+msgid "Can I have multiple sites for one client?"
+msgstr "¿Puedo tener varios sitios para un cliente?"
+
+#: ../../user-guide/faq.rst:172
+msgid ""
+"Yes! Create as many sites as needed for each client. Each contract is then "
+"associated with a specific site."
+msgstr ""
+"¡Sí! Cree tantos sitios como necesite para cada cliente. Luego, cada "
+"contrato se asocia con un sitio específico."
+
+#: ../../user-guide/faq.rst:174
+msgid ""
+"**Example**: National retail chain with stores in multiple cities - create "
+"one client and multiple sites."
+msgstr ""
+"**Ejemplo**: Cadena minorista nacional con tiendas en varias ciudades: cree "
+"un cliente y varios sitios."
+
+#: ../../user-guide/faq.rst:177
+msgid "What are \"Contacts\" (Destinatarios)?"
+msgstr "¿Qué son los \"Contactos\" (Destinatarios)?"
+
+#: ../../user-guide/faq.rst:179
+msgid ""
+"**Contacts** are individuals who receive documents for a specific contract:"
+msgstr ""
+"**Contactos** son personas que reciben documentos para un contrato "
+"específico:"
+
+#: ../../user-guide/faq.rst:181
+msgid "Project managers"
+msgstr "Gerentes de proyecto"
+
+#: ../../user-guide/faq.rst:182
+msgid "Accounts payable staff"
+msgstr "Personal de cuentas por pagar"
+
+#: ../../user-guide/faq.rst:183
+msgid "Site supervisors"
+msgstr "Supervisores de sitio"
+
+#: ../../user-guide/faq.rst:185
+msgid ""
+"They're contract-specific, so the same person can be a contact on multiple "
+"contracts."
+msgstr ""
+"Son específicos de cada contrato, por lo que la misma persona puede ser un "
+"contacto en varios contratos."
+
+#: ../../user-guide/faq.rst:187
+msgid "See :doc:`concepts/sites-contacts` for details."
+msgstr "Consulte :doc:`concepts/sites-contacts` para obtener más detalles."
+
+#: ../../user-guide/faq.rst:190
+msgid "Data Import/Export"
+msgstr "Importación/exportación de datos"
+
+#: ../../user-guide/faq.rst:193
+msgid "Can I import my existing project catalogs?"
+msgstr "¿Puedo importar mis catálogos de proyectos existentes?"
+
+#: ../../user-guide/faq.rst:195
+msgid "Yes! Import concept catalogs from Excel:"
+msgstr "¡Sí! Importar catálogos de conceptos desde Excel:"
+
+#: ../../user-guide/faq.rst:197
+msgid "Prepare Excel with: Code, Description, Unit, Quantity, Unit Price"
+msgstr ""
+"Prepare Excel con: Código, Descripción, Unidad, Cantidad, Precio Unitario"
+
+#: ../../user-guide/faq.rst:198
+msgid "In contract view, click \"Import from Excel\""
+msgstr "En la vista de contrato, haga clic en \"Importar desde Excel\""
+
+#: ../../user-guide/faq.rst:199
+msgid "Map columns"
+msgstr "Columnas del mapa"
+
+#: ../../user-guide/faq.rst:200
+msgid "Verify and import"
+msgstr "Verificar e importar"
+
+#: ../../user-guide/faq.rst:202
+msgid "See :doc:`concepts/concepts-line-items` (Method 2: Excel Import)."
+msgstr ""
+"Consulte :doc:`concepts/concepts-line-items` (Método 2: Importación de "
+"Excel)."
+
+#: ../../user-guide/faq.rst:205
+msgid "Can I export data to Excel?"
+msgstr "¿Puedo exportar datos a Excel?"
+
+#: ../../user-guide/faq.rst:207
+msgid ""
+"Yes! Most views have an \"Export\" button that generates Excel spreadsheets:"
+msgstr ""
+"¡Sí! La mayoría de las vistas tienen un botón \"Exportar\" que genera hojas "
+"de cálculo de Excel:"
+
+#: ../../user-guide/faq.rst:209
+msgid "Contract lists"
+msgstr "Listas de contratos"
+
+#: ../../user-guide/faq.rst:210
+msgid "Estimate data"
+msgstr "Datos estimados"
+
+#: ../../user-guide/faq.rst:211
+msgid "Financial reports"
+msgstr "Informes financieros"
+
+#: ../../user-guide/faq.rst:212
+msgid "Concept catalogs"
+msgstr "Catálogos de conceptos"
+
+#: ../../user-guide/faq.rst:215
+msgid "What format should my Excel file be?"
+msgstr "¿Qué formato debe tener mi archivo Excel?"
+
+#: ../../user-guide/faq.rst:217
+msgid "**File type**: .xlsx or .xls"
+msgstr "**Tipo de archivo**: .xlsx o .xls"
+
+#: ../../user-guide/faq.rst:218
+msgid ""
+"**Required columns**: Depend on what you're importing (concepts, retentions,"
+" etc.)"
+msgstr ""
+"**Columnas obligatorias**: dependen de lo que importes (conceptos, "
+"retenciones, etc.)"
+
+#: ../../user-guide/faq.rst:219
+msgid "**No merged cells**: Keep it simple"
+msgstr "**Sin celdas combinadas**: hazlo simple"
+
+#: ../../user-guide/faq.rst:220
+msgid "**Header row**: First row should have column names"
+msgstr ""
+"**Fila de encabezado**: la primera fila debe tener nombres de columnas"
+
+#: ../../user-guide/faq.rst:223
+msgid "Troubleshooting"
+msgstr "Solución de problemas"
+
+#: ../../user-guide/faq.rst:226
+msgid "I can't see my contract in the list"
+msgstr "No puedo ver mi contrato en la lista"
+
+#: ../../user-guide/faq.rst:228 ../../user-guide/faq.rst:313
+msgid "Check:"
+msgstr "Controlar:"
+
+#: ../../user-guide/faq.rst:230
+msgid "**Active company**: Are you in the correct company?"
+msgstr "**Empresa activa**: ¿Estás en la empresa correcta?"
+
+#: ../../user-guide/faq.rst:231
+msgid "**Filters**: Any active filters limiting the list?"
+msgstr "**Filtros**: ¿Algún filtro activo que limite la lista?"
+
+#: ../../user-guide/faq.rst:232
+msgid "**Permissions**: Do you have access to view this contract?"
+msgstr "**Permisos**: ¿Tiene acceso para ver este contrato?"
+
+#: ../../user-guide/faq.rst:233
+msgid "**Status**: Is the contract marked as inactive?"
+msgstr "**Estado**: ¿El contrato está marcado como inactivo?"
+
+#: ../../user-guide/faq.rst:236
+msgid "Calculations seem wrong"
+msgstr "Los cálculos parecen incorrectos"
+
+#: ../../user-guide/faq.rst:238
+msgid "Verify:"
+msgstr "Verificar:"
+
+#: ../../user-guide/faq.rst:240
+msgid "**Unit prices**: Check concept unit prices are correct"
+msgstr ""
+"**Precios unitarios**: Verifique que los precios unitarios del concepto sean"
+" correctos"
+
+#: ../../user-guide/faq.rst:241
+msgid "**Quantities**: Ensure quantities are in correct units"
+msgstr ""
+"**Cantidades**: asegúrese de que las cantidades estén en las unidades "
+"correctas"
+
+#: ../../user-guide/faq.rst:242
+msgid "**Retentions**: Verify retention percentages"
+msgstr "**Retenciones**: Verificar porcentajes de retención"
+
+#: ../../user-guide/faq.rst:243
+msgid "**Previous estimates**: Check cumulative totals"
+msgstr "**Estimaciones anteriores**: Verifique los totales acumulados"
+
+#: ../../user-guide/faq.rst:245
+msgid ""
+"If still incorrect, check for: - Decimal place errors - Manual overrides - "
+"Data entry mistakes"
+msgstr ""
+"Si aún es incorrecto, verifique: - Errores de decimales - Anulaciones "
+"manuales - Errores de entrada de datos"
+
+#: ../../user-guide/faq.rst:251
+msgid "I can't generate a PDF"
+msgstr "No puedo generar un PDF"
+
+#: ../../user-guide/faq.rst:253
+msgid "Common causes:"
+msgstr "Causas comunes:"
+
+#: ../../user-guide/faq.rst:255
+msgid "**No line items**: Estimate must have at least one line item"
+msgstr ""
+"**Sin partidas individuales**: la estimación debe tener al menos una partida"
+" individual"
+
+#: ../../user-guide/faq.rst:256
+msgid "**Missing data**: Check all required fields are filled"
+msgstr ""
+"**Faltan datos**: Verifique que todos los campos obligatorios estén "
+"completos"
+
+#: ../../user-guide/faq.rst:257
+msgid "**Permissions**: Verify you have permission to generate PDFs"
+msgstr "**Permisos**: Verifique que tenga permiso para generar archivos PDF"
+
+#: ../../user-guide/faq.rst:258
+msgid "**Template issues**: Contact administrator if template is missing"
+msgstr ""
+"**Problemas con la plantilla**: comuníquese con el administrador si falta la"
+" plantilla"
+
+#: ../../user-guide/faq.rst:261
+msgid "Error messages in Spanish"
+msgstr "Mensajes de error en español"
+
+#: ../../user-guide/faq.rst:263
+msgid ""
+"The application interface uses Spanish terminology, but error messages "
+"should be clear. Common terms:"
+msgstr ""
+"La interfaz de la aplicación utiliza terminología española, pero los "
+"mensajes de error deben ser claros. Términos comunes:"
+
+#: ../../user-guide/faq.rst:265
+msgid "**\"Contrato\"** = Contract"
+msgstr "**\"Contrato\"** = Contrato"
+
+#: ../../user-guide/faq.rst:266
+msgid "**\"Estimación\"** = Estimate"
+msgstr "**\"Estimación\"** = Estimación"
+
+#: ../../user-guide/faq.rst:267
+msgid "**\"Concepto\"** = Concept/Line Item"
+msgstr "**\"Concepto\"** = Concepto/Línea de pedido"
+
+#: ../../user-guide/faq.rst:268
+msgid "**\"Retención\"** = Retention"
+msgstr "**\"Retención\"** = Retención"
+
+#: ../../user-guide/faq.rst:270
+msgid ""
+"See :doc:`/reference/glossary` for complete Spanish-English translations."
+msgstr ""
+"Consulte :doc:`/reference/glossary` para obtener traducciones completas "
+"español-inglés."
+
+#: ../../user-guide/faq.rst:273
+msgid "Permissions & Access"
+msgstr "Permisos y acceso"
+
+#: ../../user-guide/faq.rst:276
+msgid "What are the permission levels?"
+msgstr "¿Cuáles son los niveles de permiso?"
+
+#: ../../user-guide/faq.rst:278
+msgid "Six levels from lowest to highest:"
+msgstr "Seis niveles de menor a mayor:"
+
+#: ../../user-guide/faq.rst:280
+msgid "**Auxiliar** (Assistant): Basic read access"
+msgstr "**Auxiliar** (Asistente): Acceso de lectura básico"
+
+#: ../../user-guide/faq.rst:281
+msgid "**Coordinador** (Coordinator): Create and edit projects"
+msgstr "**Coordinador** (Coordinador): Crear y editar proyectos"
+
+#: ../../user-guide/faq.rst:282
+msgid "**Director**: Approve estimates, full project access"
+msgstr "**Director**: Aprobar estimaciones, acceso completo al proyecto"
+
+#: ../../user-guide/faq.rst:283
+msgid "**Corporativo** (Corporate): Multi-company access"
+msgstr "**Corporativo** (Corporate): Acceso multiempresa"
+
+#: ../../user-guide/faq.rst:284
+msgid "**Soporte** (Support): System support functions"
+msgstr "**Soporte** (Support): Funciones de soporte del sistema"
+
+#: ../../user-guide/faq.rst:285
+msgid "**Superusuario** (Super User): Full system access"
+msgstr "**Superusuario** (Super Usuario): Acceso completo al sistema"
+
+#: ../../user-guide/faq.rst:288
+msgid "I don't have permission to do something"
+msgstr "no tengo permiso para hacer algo"
+
+#: ../../user-guide/faq.rst:290
+msgid "Contact your system administrator or company director to:"
+msgstr ""
+"Póngase en contacto con el administrador de su sistema o director de la "
+"empresa para:"
+
+#: ../../user-guide/faq.rst:292
+msgid "Request higher permission level"
+msgstr "Solicitar un nivel de permiso más alto"
+
+#: ../../user-guide/faq.rst:293
+msgid "Get access to specific companies"
+msgstr "Obtenga acceso a empresas específicas"
+
+#: ../../user-guide/faq.rst:294
+msgid "Request specific feature access"
+msgstr "Solicitar acceso a funciones específicas"
+
+#: ../../user-guide/faq.rst:297
+msgid "Technical Issues"
+msgstr "Problemas técnicos"
+
+#: ../../user-guide/faq.rst:300
+msgid "The page won't load"
+msgstr "La pagina no carga"
+
+#: ../../user-guide/faq.rst:302
+msgid "Try:"
+msgstr "Intentar:"
+
+#: ../../user-guide/faq.rst:304
+msgid "Refresh the page (F5 or Ctrl+R)"
+msgstr "Actualizar la página (F5 o Ctrl+R)"
+
+#: ../../user-guide/faq.rst:305
+msgid "Clear browser cache"
+msgstr "Borrar caché del navegador"
+
+#: ../../user-guide/faq.rst:306
+msgid "Try a different browser"
+msgstr "Pruebe con un navegador diferente"
+
+#: ../../user-guide/faq.rst:307
+msgid "Check internet connection"
+msgstr "comprobar la conexión a internet"
+
+#: ../../user-guide/faq.rst:308
+msgid "Contact IT support if problem persists"
+msgstr "Póngase en contacto con el soporte de TI si el problema persiste"
+
+#: ../../user-guide/faq.rst:311
+msgid "Data isn't saving"
+msgstr "Los datos no se guardan"
+
+#: ../../user-guide/faq.rst:315
+msgid "**Required fields**: All required fields filled?"
+msgstr ""
+"**Campos obligatorios**: ¿Todos los campos obligatorios están completos?"
+
+#: ../../user-guide/faq.rst:316
+msgid "**Validation errors**: Any error messages shown?"
+msgstr "**Errores de validación**: ¿Se muestra algún mensaje de error?"
+
+#: ../../user-guide/faq.rst:317
+msgid "**Permissions**: Do you have save permission?"
+msgstr "**Permisos**: ¿Tiene permiso para guardar?"
+
+#: ../../user-guide/faq.rst:318
+msgid "**Browser console**: Press F12 and check for JavaScript errors"
+msgstr ""
+"**Consola del navegador**: presione F12 y verifique si hay errores de "
+"JavaScript"
+
+#: ../../user-guide/faq.rst:321
+msgid "Getting Help"
+msgstr "Obtener ayuda"
+
+#: ../../user-guide/faq.rst:324
+msgid "Where can I find more documentation?"
+msgstr "¿Dónde puedo encontrar más documentación?"
+
+#: ../../user-guide/faq.rst:326
+msgid "**User Guide**: :doc:`index` (this section)"
+msgstr "**Guía del usuario**: :doc:`index` (esta sección)"
+
+#: ../../user-guide/faq.rst:327
+msgid "**Developer Docs**: :doc:`/developer/index`"
+msgstr "**Documentos del desarrollador**: :doc:`/developer/index`"
+
+#: ../../user-guide/faq.rst:328
+msgid "**Contributor Guide**: :doc:`/contributor/index`"
+msgstr "**Guía para contribuyentes**: :doc:`/contributor/index`"
+
+#: ../../user-guide/faq.rst:329
+msgid "**Glossary**: :doc:`/reference/glossary`"
+msgstr "**Glosario**: :doc:`/referencia/glosario`"
+
+#: ../../user-guide/faq.rst:332
+msgid "How do I report a bug?"
+msgstr "¿Cómo informo un error?"
+
+#: ../../user-guide/faq.rst:334
+msgid "See :doc:`/contributor/issue-reporting` for bug reporting guidelines."
+msgstr ""
+"Consulte :doc:`/contributor/issue-reporting` para conocer las pautas para "
+"informar errores."
+
+#: ../../user-guide/faq.rst:336
+msgid ""
+"Include: - Steps to reproduce - Expected vs actual behavior - Screenshots if"
+" relevant - Your permission level and company"
+msgstr ""
+"Incluye: - Pasos para reproducir - Comportamiento esperado versus real - "
+"Capturas de pantalla si son relevantes - Su nivel de permiso y empresa"
+
+#: ../../user-guide/faq.rst:343
+msgid "How do I request a feature?"
+msgstr "¿Cómo solicito una función?"
+
+#: ../../user-guide/faq.rst:345
+msgid "Open an issue on GitHub with:"
+msgstr "Abra una incidencia en GitHub con:"
+
+#: ../../user-guide/faq.rst:347
+msgid "Clear description of the feature"
+msgstr "Descripción clara de la característica."
+
+#: ../../user-guide/faq.rst:348
+msgid "Use case / business need"
+msgstr "Caso de uso/necesidad empresarial"
+
+#: ../../user-guide/faq.rst:349
+msgid "How it would benefit users"
+msgstr "Cómo beneficiaría a los usuarios"
+
+#: ../../user-guide/faq.rst:352
+msgid "Who do I contact for support?"
+msgstr "¿Con quién me comunico para obtener soporte?"
+
+#: ../../user-guide/faq.rst:354
+msgid "**Technical issues**: Your IT administrator"
+msgstr "**Problemas técnicos**: Su administrador de TI"
+
+#: ../../user-guide/faq.rst:355
+msgid "**Account/Access**: Your company director"
+msgstr "**Cuenta/Acceso**: El director de su empresa"
+
+#: ../../user-guide/faq.rst:356
+msgid "**Bug reports**: GitHub issues"
+msgstr "**Informes de errores**: problemas de GitHub"
+
+#: ../../user-guide/faq.rst:357
+msgid "**Feature requests**: GitHub discussions"
+msgstr "**Solicitudes de funciones**: debates sobre GitHub"
+
+#: ../../user-guide/faq.rst:360
+msgid "Still Have Questions?"
+msgstr "¿Aún tienes preguntas?"
+
+#: ../../user-guide/faq.rst:362
+msgid ""
+"Check other documentation sections: :doc:`concepts/index`, "
+":doc:`workflows/index`, :doc:`features/index`"
+msgstr ""
+"Consulte otras secciones de documentación: :doc:`concepts/index`, "
+":doc:`workflows/index`, :doc:`features/index`"
+
+#: ../../user-guide/faq.rst:363
+msgid "Review the :doc:`/reference/glossary` for terminology"
+msgstr "Revise el :doc:`/reference/glossary` para conocer la terminología"
+
+#: ../../user-guide/faq.rst:364
+msgid "Contact your system administrator"
+msgstr "Póngase en contacto con el administrador de su sistema"
+
+#: ../../user-guide/faq.rst:365
+msgid "Open a discussion on GitHub"
+msgstr "Abrir una discusión en GitHub"
+
+#: ../../user-guide/faq.rst:368
+msgid ""
+"**Can't find your answer?** The search function (top-right) searches all "
+"documentation. Try searching for key terms in English or Spanish."
+msgstr ""
+"**¿No encuentras tu respuesta?** La función de búsqueda (arriba a la "
+"derecha) busca en toda la documentación. Intente buscar términos clave en "
+"inglés o español."
+
+#~ msgid "Common questions and troubleshooting."
+#~ msgstr "Preguntas comunes y solución de problemas."
+
+#~ msgid "[FAQ content to be added]"
+#~ msgstr "[Se agregará contenido de preguntas frecuentes]"

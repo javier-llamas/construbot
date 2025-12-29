@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: es <LL@li.org>\n"
 "Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../user-guide/concepts/sites-contacts.rst:3
@@ -29,898 +29,900 @@ msgstr "**Términos en español:** Sitio, Destinotario"
 
 #: ../../user-guide/concepts/sites-contacts.rst:8
 msgid ""
-"Understanding sites (construction locations) and contacts (recipients) in "
-"Construbot."
+"Understanding sites (construction locations) and contacts (recipients) in"
+" Construbot."
 msgstr ""
-"Comprensión de sitios (lugares de construcción) y contactos (destinatarios) "
-"en Construbot."
+"Comprensión de sitios (lugares de construcción) y contactos "
+"(destinatarios) en Construbot."
 
-#: ../../user-guide/concepts/sites-contacts.rst:12
-msgid "Table of Contents"
-msgstr "Tabla de contenido"
-
-#: ../../user-guide/concepts/sites-contacts.rst:15
+#: ../../user-guide/concepts/sites-contacts.rst:11
 msgid "Overview"
 msgstr "Descripción general"
 
-#: ../../user-guide/concepts/sites-contacts.rst:17
+#: ../../user-guide/concepts/sites-contacts.rst:13
 msgid "Construbot uses two related concepts for location and communication:"
 msgstr ""
 "Construbot utiliza dos conceptos relacionados para localización y "
 "comunicación:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:19
+#: ../../user-guide/concepts/sites-contacts.rst:15
 msgid ""
-"**Sites** (Spanish: **Sitios**) - Physical locations where work is performed"
+"**Sites** (Spanish: **Sitios**) - Physical locations where work is "
+"performed"
 msgstr ""
-"**Sitios** (español: **Sitios**): ubicaciones físicas donde se realiza el "
-"trabajo."
+"**Sitios** (español: **Sitios**): ubicaciones físicas donde se realiza el"
+" trabajo."
 
-#: ../../user-guide/concepts/sites-contacts.rst:20
+#: ../../user-guide/concepts/sites-contacts.rst:16
 msgid ""
 "**Contacts** (Spanish: **Destinatarios**) - Individuals who receive "
 "documents and communications"
 msgstr ""
-"**Contactos** (Español: **Destinatarios**) - Personas físicas que reciben "
-"documentos y comunicaciones"
+"**Contactos** (Español: **Destinatarios**) - Personas físicas que reciben"
+" documentos y comunicaciones"
 
-#: ../../user-guide/concepts/sites-contacts.rst:22
+#: ../../user-guide/concepts/sites-contacts.rst:18
 msgid ""
 "Together, these enable proper project location tracking and document "
 "routing."
 msgstr ""
-"Juntos, estos permiten un seguimiento adecuado de la ubicación del proyecto "
-"y el enrutamiento de documentos."
+"Juntos, estos permiten un seguimiento adecuado de la ubicación del "
+"proyecto y el enrutamiento de documentos."
 
-#: ../../user-guide/concepts/sites-contacts.rst:25
+#: ../../user-guide/concepts/sites-contacts.rst:21
 msgid "Sites (Sitios)"
 msgstr "Sitios (Sitios)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:28
+#: ../../user-guide/concepts/sites-contacts.rst:24
 msgid "What is a Site?"
 msgstr "¿Qué es un sitio?"
 
-#: ../../user-guide/concepts/sites-contacts.rst:30
+#: ../../user-guide/concepts/sites-contacts.rst:26
 msgid ""
 "A **Site** (Spanish: **Sitio**) is a physical construction location "
 "associated with a client. Sites represent:"
 msgstr ""
-"Un **Sitio** (español: **Sitio**) es una ubicación física de construcción "
-"asociada con un cliente. Los sitios representan:"
+"Un **Sitio** (español: **Sitio**) es una ubicación física de construcción"
+" asociada con un cliente. Los sitios representan:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:32
+#: ../../user-guide/concepts/sites-contacts.rst:28
 msgid "Specific job sites or work locations"
 msgstr "Sitios de trabajo o lugares de trabajo específicos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:33
+#: ../../user-guide/concepts/sites-contacts.rst:29
 msgid "Buildings or facilities under construction"
 msgstr "Edificios o instalaciones en construcción"
 
-#: ../../user-guide/concepts/sites-contacts.rst:34
+#: ../../user-guide/concepts/sites-contacts.rst:30
 msgid "Physical addresses where work occurs"
 msgstr "Direcciones físicas donde se realiza el trabajo."
 
-#: ../../user-guide/concepts/sites-contacts.rst:35
+#: ../../user-guide/concepts/sites-contacts.rst:31
 msgid "Locations for contract execution"
 msgstr "Lugares para la ejecución del contrato."
 
-#: ../../user-guide/concepts/sites-contacts.rst:37
+#: ../../user-guide/concepts/sites-contacts.rst:33
 msgid "**Model:** ``construbot.proyectos.models.Sitio``"
 msgstr "**Modelo:** ``construbot.proyectos.models.Sitio``"
 
-#: ../../user-guide/concepts/sites-contacts.rst:39
+#: ../../user-guide/concepts/sites-contacts.rst:35
 msgid "**Key Relationships:**"
 msgstr "**Relaciones clave:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:41
+#: ../../user-guide/concepts/sites-contacts.rst:37
 msgid "Each site belongs to exactly one **Client** counterparty"
 msgstr "Cada sitio pertenece exactamente a una contraparte **Cliente**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:42
+#: ../../user-guide/concepts/sites-contacts.rst:38
 msgid "Multiple sites can belong to the same client"
 msgstr "Varios sitios pueden pertenecer al mismo cliente"
 
-#: ../../user-guide/concepts/sites-contacts.rst:43
+#: ../../user-guide/concepts/sites-contacts.rst:39
 msgid "Contracts are associated with specific sites"
 msgstr "Los contratos están asociados con sitios específicos."
 
-#: ../../user-guide/concepts/sites-contacts.rst:44
+#: ../../user-guide/concepts/sites-contacts.rst:40
 msgid "Sites enable location-based project organization"
-msgstr ""
-"Los sitios permiten la organización de proyectos basada en la ubicación"
+msgstr "Los sitios permiten la organización de proyectos basada en la ubicación"
 
-#: ../../user-guide/concepts/sites-contacts.rst:50
+#: ../../user-guide/concepts/sites-contacts.rst:46
 msgid "Site Information"
 msgstr "Información del sitio"
 
-#: ../../user-guide/concepts/sites-contacts.rst:52
-#: ../../user-guide/concepts/sites-contacts.rst:193
+#: ../../user-guide/concepts/sites-contacts.rst:48
+#: ../../user-guide/concepts/sites-contacts.rst:189
 msgid "**Required fields:**"
 msgstr "**Campos obligatorios:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:54
+#: ../../user-guide/concepts/sites-contacts.rst:50
 msgid "**Name** (nombre) - Descriptive name of the site"
 msgstr "**Name** (nombre) - Nombre descriptivo del sitio"
 
-#: ../../user-guide/concepts/sites-contacts.rst:55
+#: ../../user-guide/concepts/sites-contacts.rst:51
 msgid "**Client** (cliente) - The client counterparty who owns this site"
 msgstr ""
-"**Cliente** (cliente): la contraparte del cliente propietaria de este sitio."
+"**Cliente** (cliente): la contraparte del cliente propietaria de este "
+"sitio."
 
-#: ../../user-guide/concepts/sites-contacts.rst:56
+#: ../../user-guide/concepts/sites-contacts.rst:52
 msgid "**Company** - Your company (for multi-tenant isolation)"
 msgstr "**Empresa**: su empresa (para aislamiento de múltiples inquilinos)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:58
-#: ../../user-guide/concepts/sites-contacts.rst:198
+#: ../../user-guide/concepts/sites-contacts.rst:54
+#: ../../user-guide/concepts/sites-contacts.rst:194
 msgid "**Optional fields:**"
 msgstr "**Campos opcionales:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:60
+#: ../../user-guide/concepts/sites-contacts.rst:56
 msgid "**Address** (dirección) - Full street address"
 msgstr "**Dirección** (dirección) - Dirección completa"
 
-#: ../../user-guide/concepts/sites-contacts.rst:61
+#: ../../user-guide/concepts/sites-contacts.rst:57
 msgid "**City** (ciudad)"
 msgstr "**Ciudad** (ciudad)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:62
+#: ../../user-guide/concepts/sites-contacts.rst:58
 msgid "**State** (estado)"
 msgstr "**Estado**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:63
+#: ../../user-guide/concepts/sites-contacts.rst:59
 msgid "**Postal Code** (código postal)"
 msgstr "**Código Postal** (código postal)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:64
+#: ../../user-guide/concepts/sites-contacts.rst:60
 msgid "**Country** (país)"
 msgstr "**País** (país)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:65
+#: ../../user-guide/concepts/sites-contacts.rst:61
 msgid "**GPS Coordinates** (latitud, longitud)"
 msgstr "**Coordenadas GPS** (latitud, longitud)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:66
+#: ../../user-guide/concepts/sites-contacts.rst:62
 msgid "**Contact Phone** (teléfono)"
 msgstr "**Teléfono de contacto** (teléfono)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:67
+#: ../../user-guide/concepts/sites-contacts.rst:63
 msgid "**Site Manager** - Person responsible for the site"
 msgstr "**Administrador del sitio** - Persona responsable del sitio"
 
-#: ../../user-guide/concepts/sites-contacts.rst:68
-#: ../../user-guide/concepts/sites-contacts.rst:204
+#: ../../user-guide/concepts/sites-contacts.rst:64
+#: ../../user-guide/concepts/sites-contacts.rst:200
 msgid "**Notes** (notas) - Additional information"
 msgstr "**Notas** (notas) - Información adicional"
 
-#: ../../user-guide/concepts/sites-contacts.rst:74
+#: ../../user-guide/concepts/sites-contacts.rst:70
 msgid "Creating a Site"
 msgstr "Creando un sitio"
 
-#: ../../user-guide/concepts/sites-contacts.rst:77
+#: ../../user-guide/concepts/sites-contacts.rst:73
 msgid "Step 1: Navigate to Sites"
 msgstr "Paso 1: navegue a Sitios"
 
-#: ../../user-guide/concepts/sites-contacts.rst:79
+#: ../../user-guide/concepts/sites-contacts.rst:75
 msgid "Log in to Construbot"
 msgstr "Inicia sesión en Construbot"
 
-#: ../../user-guide/concepts/sites-contacts.rst:80
+#: ../../user-guide/concepts/sites-contacts.rst:76
 msgid "Navigate to **Proyectos → Sitios**"
 msgstr "Vaya a **Proyectos → Sitios**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:81
+#: ../../user-guide/concepts/sites-contacts.rst:77
 msgid "Click **\"New Site\"** or **\"Agregar Sitio\"**"
 msgstr "Haga clic en **\"Nuevo sitio\"** o **\"Agregar sitio\"**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:84
+#: ../../user-guide/concepts/sites-contacts.rst:80
 msgid "Step 2: Select Client"
 msgstr "Paso 2: seleccione el cliente"
 
-#: ../../user-guide/concepts/sites-contacts.rst:86
+#: ../../user-guide/concepts/sites-contacts.rst:82
 msgid "Choose the client who owns this site from the dropdown."
 msgstr "Elija el cliente propietario de este sitio en el menú desplegable."
 
-#: ../../user-guide/concepts/sites-contacts.rst:88
+#: ../../user-guide/concepts/sites-contacts.rst:84
 msgid "**Note:** Only **Client** type counterparties appear in this list."
-msgstr ""
-"**Nota:** En esta lista solo aparecen contrapartes de tipo **Cliente**."
+msgstr "**Nota:** En esta lista solo aparecen contrapartes de tipo **Cliente**."
 
-#: ../../user-guide/concepts/sites-contacts.rst:91
+#: ../../user-guide/concepts/sites-contacts.rst:87
 msgid "Step 3: Enter Site Details"
 msgstr "Paso 3: Ingrese los detalles del sitio"
 
-#: ../../user-guide/concepts/sites-contacts.rst:108
+#: ../../user-guide/concepts/sites-contacts.rst:104
 msgid "Step 4: Save"
 msgstr "Paso 4: guardar"
 
-#: ../../user-guide/concepts/sites-contacts.rst:110
+#: ../../user-guide/concepts/sites-contacts.rst:106
 msgid "Click **\"Save\"** or **\"Guardar\"** to create the site."
 msgstr "Haga clic en **\"Guardar\"** o **\"Guardar\"** para crear el sitio."
 
-#: ../../user-guide/concepts/sites-contacts.rst:116
+#: ../../user-guide/concepts/sites-contacts.rst:112
 msgid "Using Sites"
 msgstr "Uso de sitios"
 
-#: ../../user-guide/concepts/sites-contacts.rst:118
+#: ../../user-guide/concepts/sites-contacts.rst:114
 msgid "**In Contracts:**"
 msgstr "**En Contratos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:120
+#: ../../user-guide/concepts/sites-contacts.rst:116
 msgid "When creating a contract for a client, select the specific site:"
 msgstr "Al crear un contrato para un cliente, seleccione el sitio específico:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:122
+#: ../../user-guide/concepts/sites-contacts.rst:118
 msgid "Choose the client counterparty"
 msgstr "Elija la contraparte del cliente"
 
-#: ../../user-guide/concepts/sites-contacts.rst:123
+#: ../../user-guide/concepts/sites-contacts.rst:119
 msgid "Site dropdown automatically filters to show only that client's sites"
 msgstr ""
-"El menú desplegable del sitio se filtra automáticamente para mostrar solo "
-"los sitios de ese cliente"
+"El menú desplegable del sitio se filtra automáticamente para mostrar solo"
+" los sitios de ese cliente"
 
-#: ../../user-guide/concepts/sites-contacts.rst:124
+#: ../../user-guide/concepts/sites-contacts.rst:120
 msgid "Select the appropriate site for this contract"
 msgstr "Seleccione el sitio apropiado para este contrato"
 
-#: ../../user-guide/concepts/sites-contacts.rst:126
+#: ../../user-guide/concepts/sites-contacts.rst:122
 msgid "**Multiple Contracts per Site:**"
 msgstr "**Múltiples contratos por sitio:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:128
+#: ../../user-guide/concepts/sites-contacts.rst:124
 msgid "The same site can have multiple contracts:"
 msgstr "Un mismo sitio puede tener múltiples contratos:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:130
+#: ../../user-guide/concepts/sites-contacts.rst:126
 msgid "Different phases of work"
 msgstr "Diferentes fases del trabajo."
 
-#: ../../user-guide/concepts/sites-contacts.rst:131
+#: ../../user-guide/concepts/sites-contacts.rst:127
 msgid "Separate buildings on same property"
 msgstr "Edificios separados en la misma propiedad"
 
-#: ../../user-guide/concepts/sites-contacts.rst:132
+#: ../../user-guide/concepts/sites-contacts.rst:128
 msgid "Different trade contracts for same location"
 msgstr "Diferentes contratos comerciales para la misma ubicación"
 
-#: ../../user-guide/concepts/sites-contacts.rst:134
+#: ../../user-guide/concepts/sites-contacts.rst:130
 msgid "**Site-Based Reporting:**"
 msgstr "**Informes basados ​​en el sitio:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:136
+#: ../../user-guide/concepts/sites-contacts.rst:132
 msgid "Generate reports by site to see:"
 msgstr "Genera informes por sitio para ver:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:138
+#: ../../user-guide/concepts/sites-contacts.rst:134
 msgid "All contracts for a location"
 msgstr "Todos los contratos para una ubicación."
 
-#: ../../user-guide/concepts/sites-contacts.rst:139
+#: ../../user-guide/concepts/sites-contacts.rst:135
 msgid "Total project value at site"
 msgstr "Valor total del proyecto en el sitio"
 
-#: ../../user-guide/concepts/sites-contacts.rst:140
+#: ../../user-guide/concepts/sites-contacts.rst:136
 msgid "Active work at site"
 msgstr "Trabajo activo en el sitio."
 
-#: ../../user-guide/concepts/sites-contacts.rst:141
+#: ../../user-guide/concepts/sites-contacts.rst:137
 msgid "Payment history for location"
 msgstr "Historial de pagos por ubicación"
 
-#: ../../user-guide/concepts/sites-contacts.rst:144
+#: ../../user-guide/concepts/sites-contacts.rst:140
 msgid "Common Site Scenarios"
 msgstr "Escenarios de sitio comunes"
 
-#: ../../user-guide/concepts/sites-contacts.rst:146
+#: ../../user-guide/concepts/sites-contacts.rst:142
 msgid "**Scenario 1: Single Site Client**"
 msgstr "**Escenario 1: Cliente de sitio único**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:148
+#: ../../user-guide/concepts/sites-contacts.rst:144
 msgid "Client has one office building"
 msgstr "El cliente tiene un edificio de oficinas."
 
-#: ../../user-guide/concepts/sites-contacts.rst:149
+#: ../../user-guide/concepts/sites-contacts.rst:145
 msgid "Create one site: \"Main Office Building\""
 msgstr "Cree un sitio: \"Edificio de oficinas principal\""
 
-#: ../../user-guide/concepts/sites-contacts.rst:150
+#: ../../user-guide/concepts/sites-contacts.rst:146
 msgid "All contracts for this client use this site"
 msgstr "Todos los contratos de este cliente utilizan este sitio."
 
-#: ../../user-guide/concepts/sites-contacts.rst:152
+#: ../../user-guide/concepts/sites-contacts.rst:148
 msgid "**Scenario 2: Multi-Location Client**"
 msgstr "**Escenario 2: Cliente de múltiples ubicaciones**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:154
+#: ../../user-guide/concepts/sites-contacts.rst:150
 msgid "National retail chain client"
 msgstr "Cliente de cadena minorista nacional"
 
-#: ../../user-guide/concepts/sites-contacts.rst:155
+#: ../../user-guide/concepts/sites-contacts.rst:151
 msgid ""
-"Create separate sites: - \"Store #101 - Dallas TX\" - \"Store #102 - Houston"
-" TX\" - \"Store #103 - Austin TX\""
+"Create separate sites: - \"Store #101 - Dallas TX\" - \"Store #102 - "
+"Houston TX\" - \"Store #103 - Austin TX\""
 msgstr ""
 "Cree sitios separados: - \"Tienda #101 - Dallas TX\" - \"Tienda #102 - "
 "Houston TX\" - \"Tienda #103 - Austin TX\""
 
-#: ../../user-guide/concepts/sites-contacts.rst:159
+#: ../../user-guide/concepts/sites-contacts.rst:155
 msgid "Each contract specifies which store"
 msgstr "Cada contrato especifica qué tienda"
 
-#: ../../user-guide/concepts/sites-contacts.rst:161
+#: ../../user-guide/concepts/sites-contacts.rst:157
 msgid "**Scenario 3: Campus or Complex**"
 msgstr "**Escenario 3: Campus o Complejo**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:163
+#: ../../user-guide/concepts/sites-contacts.rst:159
 msgid "University campus with multiple buildings"
 msgstr "Campus universitario con varios edificios"
 
-#: ../../user-guide/concepts/sites-contacts.rst:164
+#: ../../user-guide/concepts/sites-contacts.rst:160
 msgid ""
 "Options: - **One site:** \"University Campus\" (simple) - **Multiple "
 "sites:** \"Science Building\", \"Library\", \"Dorms\" (detailed)"
 msgstr ""
-"Opciones: - **Un sitio:** \"Campus universitario\" (simple) - **Múltiples "
-"sitios:** \"Edificio de ciencias\", \"Biblioteca\", \"Dormitorios\" "
+"Opciones: - **Un sitio:** \"Campus universitario\" (simple) - **Múltiples"
+" sitios:** \"Edificio de ciencias\", \"Biblioteca\", \"Dormitorios\" "
 "(detallado)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:168
+#: ../../user-guide/concepts/sites-contacts.rst:164
 msgid "Choose based on reporting and organization needs."
 msgstr "Elija según las necesidades de informes y organización."
 
-#: ../../user-guide/concepts/sites-contacts.rst:171
+#: ../../user-guide/concepts/sites-contacts.rst:167
 msgid "Contacts (Destinatarios)"
 msgstr "Contactos (Destinatarios)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:174
+#: ../../user-guide/concepts/sites-contacts.rst:170
 msgid "What is a Contact?"
 msgstr "¿Qué es un contacto?"
 
-#: ../../user-guide/concepts/sites-contacts.rst:176
+#: ../../user-guide/concepts/sites-contacts.rst:172
 msgid ""
 "A **Contact** (Spanish: **Destinatario**, literally \"recipient\") is an "
-"individual who receives documents or communications related to a contract. "
-"Contacts represent:"
+"individual who receives documents or communications related to a "
+"contract. Contacts represent:"
 msgstr ""
-"Un **Contacto** (español: **Destinatario**, literalmente \"destinatario\") "
-"es una persona física que recibe documentos o comunicaciones relacionadas "
-"con un contrato. Los contactos representan:"
+"Un **Contacto** (español: **Destinatario**, literalmente "
+"\"destinatario\") es una persona física que recibe documentos o "
+"comunicaciones relacionadas con un contrato. Los contactos representan:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:178
+#: ../../user-guide/concepts/sites-contacts.rst:174
 msgid "People who receive estimates, invoices, reports"
 msgstr "Personas que reciben presupuestos, facturas, informes."
 
-#: ../../user-guide/concepts/sites-contacts.rst:179
+#: ../../user-guide/concepts/sites-contacts.rst:175
 msgid "Project managers or supervisors"
 msgstr "Gerentes o supervisores de proyectos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:180
+#: ../../user-guide/concepts/sites-contacts.rst:176
 msgid "Client representatives"
 msgstr "Representantes del cliente"
 
-#: ../../user-guide/concepts/sites-contacts.rst:181
+#: ../../user-guide/concepts/sites-contacts.rst:177
 msgid "Document approvers"
 msgstr "Aprobadores de documentos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:183
+#: ../../user-guide/concepts/sites-contacts.rst:179
 msgid "**Model:** ``construbot.proyectos.models.Destinatario``"
 msgstr "**Modelo:** ``construbot.proyectos.models.Destinatario``"
 
-#: ../../user-guide/concepts/sites-contacts.rst:185
+#: ../../user-guide/concepts/sites-contacts.rst:181
 msgid ""
-"**Key Concept:** Contacts are specific to a contract, not global. The same "
-"person may be a contact on multiple contracts."
+"**Key Concept:** Contacts are specific to a contract, not global. The "
+"same person may be a contact on multiple contracts."
 msgstr ""
 "**Concepto clave:** Los contactos son específicos de un contrato, no "
 "globales. La misma persona puede ser un contacto en múltiples contratos."
 
-#: ../../user-guide/concepts/sites-contacts.rst:191
+#: ../../user-guide/concepts/sites-contacts.rst:187
 msgid "Contact Information"
 msgstr "Información del contacto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:195
+#: ../../user-guide/concepts/sites-contacts.rst:191
 msgid "**Name** (nombre) - Full name of the person"
 msgstr "**Name** (nombre) - Nombre completo de la persona"
 
-#: ../../user-guide/concepts/sites-contacts.rst:196
+#: ../../user-guide/concepts/sites-contacts.rst:192
 msgid "**Contract** (contrato) - Which contract they're associated with"
 msgstr "**Contrato** (contrato): con qué contrato están asociados."
 
-#: ../../user-guide/concepts/sites-contacts.rst:200
+#: ../../user-guide/concepts/sites-contacts.rst:196
 msgid "**Position** (puesto) - Job title or role"
 msgstr "**Position** (puesto) - Título laboral o función"
 
-#: ../../user-guide/concepts/sites-contacts.rst:201
+#: ../../user-guide/concepts/sites-contacts.rst:197
 msgid "**Email** (correo) - Email address"
 msgstr "**Correo electrónico** (correo) - Dirección de correo electrónico"
 
-#: ../../user-guide/concepts/sites-contacts.rst:202
+#: ../../user-guide/concepts/sites-contacts.rst:198
 msgid "**Phone** (teléfono) - Contact phone number"
 msgstr "**Phone** (teléfono) - Teléfono de contacto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:203
+#: ../../user-guide/concepts/sites-contacts.rst:199
 msgid "**Department** (departamento) - Organizational unit"
 msgstr "**Departamento** (departamento) - Unidad organizativa"
 
-#: ../../user-guide/concepts/sites-contacts.rst:205
+#: ../../user-guide/concepts/sites-contacts.rst:201
 msgid "**Active** (activo) - Whether they should receive documents"
 msgstr "**Active** (activo) - Si deben recibir documentos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:207
+#: ../../user-guide/concepts/sites-contacts.rst:203
 msgid "**Document Delivery:**"
 msgstr "**Entrega de documentos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:209
+#: ../../user-guide/concepts/sites-contacts.rst:205
 msgid ""
-"When generating PDFs or sending emails, the system can automatically include"
-" all active contacts for a contract."
+"When generating PDFs or sending emails, the system can automatically "
+"include all active contacts for a contract."
 msgstr ""
 "Al generar archivos PDF o enviar correos electrónicos, el sistema puede "
 "incluir automáticamente todos los contactos activos de un contrato."
 
-#: ../../user-guide/concepts/sites-contacts.rst:215
+#: ../../user-guide/concepts/sites-contacts.rst:211
 msgid "Creating a Contact"
 msgstr "Crear un contacto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:218
+#: ../../user-guide/concepts/sites-contacts.rst:214
 msgid "Step 1: Access Contract"
 msgstr "Paso 1: Contrato de acceso"
 
-#: ../../user-guide/concepts/sites-contacts.rst:220
+#: ../../user-guide/concepts/sites-contacts.rst:216
 msgid "Contacts are created within a specific contract:"
 msgstr "Los contactos se crean dentro de un contrato específico:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:222
+#: ../../user-guide/concepts/sites-contacts.rst:218
 msgid "Navigate to the contract"
 msgstr "Navegar al contrato"
 
-#: ../../user-guide/concepts/sites-contacts.rst:223
+#: ../../user-guide/concepts/sites-contacts.rst:219
 msgid "Find the **\"Contacts\"** or **\"Destinatarios\"** section"
 msgstr "Encuentra la sección **\"Contactos\"** o **\"Destinatarios\"**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:224
+#: ../../user-guide/concepts/sites-contacts.rst:220
 msgid "Click **\"Add Contact\"** or **\"Agregar Destinatario\"**"
 msgstr "Haga clic en **\"Agregar contacto\"** o **\"Agregar Destinatario\"**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:227
+#: ../../user-guide/concepts/sites-contacts.rst:223
 msgid "Step 2: Enter Contact Details"
 msgstr "Paso 2: Ingrese los datos de contacto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:239
+#: ../../user-guide/concepts/sites-contacts.rst:235
 msgid "Step 3: Save"
 msgstr "Paso 3: guardar"
 
-#: ../../user-guide/concepts/sites-contacts.rst:241
+#: ../../user-guide/concepts/sites-contacts.rst:237
 msgid "Click **\"Save\"** to add this contact to the contract."
 msgstr "Haga clic en **\"Guardar\"** para agregar este contacto al contrato."
 
-#: ../../user-guide/concepts/sites-contacts.rst:243
+#: ../../user-guide/concepts/sites-contacts.rst:239
 msgid "**Repeat** for additional contacts on the same contract."
 msgstr "**Repita** para contactos adicionales en el mismo contrato."
 
-#: ../../user-guide/concepts/sites-contacts.rst:246
+#: ../../user-guide/concepts/sites-contacts.rst:242
 msgid "Using Contacts"
 msgstr "Usar contactos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:248
+#: ../../user-guide/concepts/sites-contacts.rst:244
 msgid "**Document Generation:**"
 msgstr "**Generación de documentos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:250
+#: ../../user-guide/concepts/sites-contacts.rst:246
 msgid "When generating estimate PDFs or reports:"
 msgstr "Al generar informes o PDF de presupuestos:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:252
+#: ../../user-guide/concepts/sites-contacts.rst:248
 msgid "System includes \"To:\" field with all active contacts"
 msgstr "El sistema incluye el campo \"Para:\" con todos los contactos activos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:253
+#: ../../user-guide/concepts/sites-contacts.rst:249
 msgid "Email delivery can CC all contact email addresses"
 msgstr ""
-"La entrega de correo electrónico puede enviar CC a todas las direcciones de "
-"correo electrónico de contacto."
+"La entrega de correo electrónico puede enviar CC a todas las direcciones "
+"de correo electrónico de contacto."
 
-#: ../../user-guide/concepts/sites-contacts.rst:254
+#: ../../user-guide/concepts/sites-contacts.rst:250
 msgid "Each contact receives relevant project documents"
 msgstr "Cada contacto recibe los documentos relevantes del proyecto."
 
-#: ../../user-guide/concepts/sites-contacts.rst:256
+#: ../../user-guide/concepts/sites-contacts.rst:252
 msgid "**Communication Tracking:**"
 msgstr "**Seguimiento de comunicaciones:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:258
+#: ../../user-guide/concepts/sites-contacts.rst:254
 msgid "Contacts help track:"
 msgstr "Seguimiento de ayuda de contactos:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:260
+#: ../../user-guide/concepts/sites-contacts.rst:256
 msgid "Who approved estimates"
 msgstr "¿Quién aprobó las estimaciones?"
 
-#: ../../user-guide/concepts/sites-contacts.rst:261
+#: ../../user-guide/concepts/sites-contacts.rst:257
 msgid "Who received invoices"
 msgstr "¿Quién recibió las facturas?"
 
-#: ../../user-guide/concepts/sites-contacts.rst:262
+#: ../../user-guide/concepts/sites-contacts.rst:258
 msgid "Who to notify of project changes"
 msgstr "A quién notificar sobre cambios en el proyecto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:263
+#: ../../user-guide/concepts/sites-contacts.rst:259
 msgid "Communication history"
 msgstr "Historial de comunicación"
 
-#: ../../user-guide/concepts/sites-contacts.rst:265
+#: ../../user-guide/concepts/sites-contacts.rst:261
 msgid "**Multiple Contacts:**"
 msgstr "**Múltiples contactos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:267
+#: ../../user-guide/concepts/sites-contacts.rst:263
 msgid "Contracts can have multiple contacts for different purposes:"
-msgstr ""
-"Los contratos pueden tener múltiples contactos para diferentes propósitos:"
+msgstr "Los contratos pueden tener múltiples contactos para diferentes propósitos:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:269
+#: ../../user-guide/concepts/sites-contacts.rst:265
 msgid "**Primary Contact:** Main project manager"
 msgstr "**Contacto principal:** Gerente principal del proyecto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:270
+#: ../../user-guide/concepts/sites-contacts.rst:266
 msgid "**Financial Contact:** Accounts payable person"
 msgstr "**Contacto financiero:** Persona de cuentas por pagar"
 
-#: ../../user-guide/concepts/sites-contacts.rst:271
+#: ../../user-guide/concepts/sites-contacts.rst:267
 msgid "**Technical Contact:** Site engineer or supervisor"
 msgstr "**Contacto técnico:** Ingeniero o supervisor de obra"
 
-#: ../../user-guide/concepts/sites-contacts.rst:273
+#: ../../user-guide/concepts/sites-contacts.rst:269
 msgid "Mark all as active or selectively activate based on document type."
 msgstr ""
 "Marque todo como activo o actívelo selectivamente según el tipo de "
 "documento."
 
-#: ../../user-guide/concepts/sites-contacts.rst:279
+#: ../../user-guide/concepts/sites-contacts.rst:275
 msgid "Best Practices"
 msgstr "Mejores prácticas"
 
-#: ../../user-guide/concepts/sites-contacts.rst:282
-#: ../../user-guide/concepts/sites-contacts.rst:410
+#: ../../user-guide/concepts/sites-contacts.rst:278
+#: ../../user-guide/concepts/sites-contacts.rst:406
 msgid "Sites"
 msgstr "Sitios"
 
-#: ../../user-guide/concepts/sites-contacts.rst:284
+#: ../../user-guide/concepts/sites-contacts.rst:280
 msgid "**1. Use descriptive names:**"
 msgstr "**1. Utilice nombres descriptivos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:291
+#: ../../user-guide/concepts/sites-contacts.rst:287
 msgid "**2. Include location identifiers:**"
 msgstr "**2. Incluir identificadores de ubicación:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:293
+#: ../../user-guide/concepts/sites-contacts.rst:289
 msgid "For chains or franchises:"
 msgstr "Para cadenas o franquicias:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:300
+#: ../../user-guide/concepts/sites-contacts.rst:296
 msgid "**3. Keep addresses current:**"
 msgstr "**3. Mantenga las direcciones actualizadas:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:302
+#: ../../user-guide/concepts/sites-contacts.rst:298
 msgid "Update addresses if they change or if initial address was incomplete."
 msgstr ""
 "Actualice las direcciones si cambian o si la dirección inicial estaba "
 "incompleta."
 
-#: ../../user-guide/concepts/sites-contacts.rst:304
+#: ../../user-guide/concepts/sites-contacts.rst:300
 msgid "**4. Use GPS coordinates for remote sites:**"
 msgstr "**4. Utilice coordenadas GPS para sitios remotos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:306
+#: ../../user-guide/concepts/sites-contacts.rst:302
 msgid "Especially useful for:"
 msgstr "Especialmente útil para:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:308
+#: ../../user-guide/concepts/sites-contacts.rst:304
 msgid "Rural construction sites"
 msgstr "Sitios de construcción rurales"
 
-#: ../../user-guide/concepts/sites-contacts.rst:309
+#: ../../user-guide/concepts/sites-contacts.rst:305
 msgid "Sites without formal addresses"
 msgstr "Sitios sin direcciones formales"
 
-#: ../../user-guide/concepts/sites-contacts.rst:310
+#: ../../user-guide/concepts/sites-contacts.rst:306
 msgid "Integration with mapping tools"
 msgstr "Integración con herramientas de mapeo."
 
-#: ../../user-guide/concepts/sites-contacts.rst:312
+#: ../../user-guide/concepts/sites-contacts.rst:308
 msgid "**5. One site per distinct location:**"
 msgstr "**5. Un sitio por ubicación distinta:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:314
+#: ../../user-guide/concepts/sites-contacts.rst:310
 msgid "Don't create duplicate sites for the same physical location."
 msgstr "No cree sitios duplicados para la misma ubicación física."
 
-#: ../../user-guide/concepts/sites-contacts.rst:317
-#: ../../user-guide/concepts/sites-contacts.rst:433
+#: ../../user-guide/concepts/sites-contacts.rst:313
+#: ../../user-guide/concepts/sites-contacts.rst:429
 msgid "Contacts"
 msgstr "Contactos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:319
+#: ../../user-guide/concepts/sites-contacts.rst:315
 msgid "**1. Keep contact info current:**"
 msgstr "**1. Mantenga la información de contacto actualizada:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:321
+#: ../../user-guide/concepts/sites-contacts.rst:317
 msgid "Update email and phone when:"
 msgstr "Actualizar correo electrónico y teléfono cuando:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:323
+#: ../../user-guide/concepts/sites-contacts.rst:319
 msgid "Contact person changes roles"
 msgstr "La persona de contacto cambia de roles"
 
-#: ../../user-guide/concepts/sites-contacts.rst:324
+#: ../../user-guide/concepts/sites-contacts.rst:320
 msgid "New project manager assigned"
 msgstr "Nuevo jefe de proyecto asignado"
 
-#: ../../user-guide/concepts/sites-contacts.rst:325
+#: ../../user-guide/concepts/sites-contacts.rst:321
 msgid "Contact information changes"
 msgstr "Cambios en la información de contacto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:327
+#: ../../user-guide/concepts/sites-contacts.rst:323
 msgid "**2. Use position/department fields:**"
 msgstr "**2. Utilice campos de puesto/departamento:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:329
+#: ../../user-guide/concepts/sites-contacts.rst:325
 msgid "Helps identify contacts when names change:"
 msgstr "Ayuda a identificar contactos cuando cambian los nombres:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:337
+#: ../../user-guide/concepts/sites-contacts.rst:333
 msgid "**3. Mark inactive when appropriate:**"
 msgstr "**3. Marcar como inactivo cuando corresponda:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:339
+#: ../../user-guide/concepts/sites-contacts.rst:335
 msgid "Don't delete contacts (preserves history), mark as inactive instead:"
 msgstr ""
-"No elimine contactos (conserva el historial), márquelos como inactivos en su"
-" lugar:"
+"No elimine contactos (conserva el historial), márquelos como inactivos en"
+" su lugar:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:341
+#: ../../user-guide/concepts/sites-contacts.rst:337
 msgid "Person leaves company"
 msgstr "La persona deja la empresa"
 
-#: ../../user-guide/concepts/sites-contacts.rst:342
+#: ../../user-guide/concepts/sites-contacts.rst:338
 msgid "Contract phase changes"
 msgstr "Cambios de fase del contrato"
 
-#: ../../user-guide/concepts/sites-contacts.rst:343
+#: ../../user-guide/concepts/sites-contacts.rst:339
 msgid "Different person takes over"
 msgstr "Persona diferente se hace cargo"
 
-#: ../../user-guide/concepts/sites-contacts.rst:345
+#: ../../user-guide/concepts/sites-contacts.rst:341
 msgid "**4. Multiple contacts for different purposes:**"
 msgstr "**4. Múltiples contactos para diferentes propósitos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:353
+#: ../../user-guide/concepts/sites-contacts.rst:349
 msgid "**5. Include mobile numbers:**"
 msgstr "**5. Incluir números de móvil:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:355
+#: ../../user-guide/concepts/sites-contacts.rst:351
 msgid "For urgent communication and field contacts."
 msgstr "Para comunicaciones urgentes y contactos de campo."
 
-#: ../../user-guide/concepts/sites-contacts.rst:358
+#: ../../user-guide/concepts/sites-contacts.rst:354
 msgid "Relationship Between Sites and Contacts"
 msgstr "Relación entre sitios y contactos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:360
+#: ../../user-guide/concepts/sites-contacts.rst:356
 msgid "**Independent but Related:**"
 msgstr "**Independiente pero relacionado:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:362
+#: ../../user-guide/concepts/sites-contacts.rst:358
 msgid "**Sites** are associated with **clients** (counterparties)"
 msgstr "**Los sitios** están asociados con **clientes** (contrapartes)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:363
+#: ../../user-guide/concepts/sites-contacts.rst:359
 msgid "**Contacts** are associated with **contracts**"
 msgstr "**Los contactos** están asociados con **contratos**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:364
+#: ../../user-guide/concepts/sites-contacts.rst:360
 msgid "A contract links a client (and their site) with specific contacts"
-msgstr ""
-"Un contrato vincula a un cliente (y su sitio) con contactos específicos"
+msgstr "Un contrato vincula a un cliente (y su sitio) con contactos específicos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:366
+#: ../../user-guide/concepts/sites-contacts.rst:362
 msgid "**Example Flow:**"
 msgstr "**Flujo de ejemplo:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:377
+#: ../../user-guide/concepts/sites-contacts.rst:373
 msgid "When you generate an estimate for contract C-2024-001:"
 msgstr "Al generar un presupuesto para el contrato C-2024-001:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:379
+#: ../../user-guide/concepts/sites-contacts.rst:375
 msgid "**Site information** appears on document header (location)"
 msgstr ""
 "**La información del sitio** aparece en el encabezado del documento "
 "(ubicación)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:380
+#: ../../user-guide/concepts/sites-contacts.rst:376
 msgid "**Contact information** appears in \"To:\" field (recipients)"
 msgstr ""
-"**La información de contacto** aparece en el campo \"Para:\" (destinatarios)"
+"**La información de contacto** aparece en el campo \"Para:\" "
+"(destinatarios)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:386
+#: ../../user-guide/concepts/sites-contacts.rst:382
 msgid "Reporting"
 msgstr "Informes"
 
-#: ../../user-guide/concepts/sites-contacts.rst:389
+#: ../../user-guide/concepts/sites-contacts.rst:385
 msgid "Site-Based Reports"
 msgstr "Informes basados ​​en el sitio"
 
-#: ../../user-guide/concepts/sites-contacts.rst:391
+#: ../../user-guide/concepts/sites-contacts.rst:387
 msgid "Generate reports filtered by site:"
 msgstr "Generar informes filtrados por sitio:"
 
-#: ../../user-guide/concepts/sites-contacts.rst:393
+#: ../../user-guide/concepts/sites-contacts.rst:389
 msgid "**Contracts by Site:** All contracts for a location"
 msgstr "**Contratos por sitio:** Todos los contratos para una ubicación"
 
-#: ../../user-guide/concepts/sites-contacts.rst:394
+#: ../../user-guide/concepts/sites-contacts.rst:390
 msgid "**Financial Summary by Site:** Total revenue per site"
 msgstr "**Resumen financiero por sitio:** Ingresos totales por sitio"
 
-#: ../../user-guide/concepts/sites-contacts.rst:395
+#: ../../user-guide/concepts/sites-contacts.rst:391
 msgid "**Active Projects by Site:** Current work at each location"
 msgstr "**Proyectos activos por sitio:** Trabajo actual en cada ubicación"
 
-#: ../../user-guide/concepts/sites-contacts.rst:396
+#: ../../user-guide/concepts/sites-contacts.rst:392
 msgid "**Site Portfolio:** All sites for a client with contract counts"
 msgstr ""
-"**Cartera de sitios:** Todos los sitios para un cliente con contrato cuentan"
+"**Cartera de sitios:** Todos los sitios para un cliente con contrato "
+"cuentan"
 
-#: ../../user-guide/concepts/sites-contacts.rst:399
+#: ../../user-guide/concepts/sites-contacts.rst:395
 msgid "Contact Reports"
 msgstr "Informes de contacto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:401
+#: ../../user-guide/concepts/sites-contacts.rst:397
 msgid "**Contact List:** All contacts across contracts"
 msgstr "**Lista de contactos:** Todos los contactos entre contratos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:402
+#: ../../user-guide/concepts/sites-contacts.rst:398
 msgid "**Document Distribution:** Who received which documents"
 msgstr "**Distribución de documentos:** Quién recibió qué documentos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:403
+#: ../../user-guide/concepts/sites-contacts.rst:399
 msgid "**Active Contacts:** Currently active recipients"
 msgstr "**Contactos activos:** Destinatarios actualmente activos"
 
-#: ../../user-guide/concepts/sites-contacts.rst:404
+#: ../../user-guide/concepts/sites-contacts.rst:400
 msgid "**Contact History:** Communication tracking over time"
 msgstr ""
 "**Historial de contactos:** Seguimiento de comunicaciones a lo largo del "
 "tiempo"
 
-#: ../../user-guide/concepts/sites-contacts.rst:407
+#: ../../user-guide/concepts/sites-contacts.rst:403
 msgid "Troubleshooting"
 msgstr "Solución de problemas"
 
-#: ../../user-guide/concepts/sites-contacts.rst:412
+#: ../../user-guide/concepts/sites-contacts.rst:408
 msgid "**Can't find site when creating contract:**"
 msgstr "**No puedo encontrar el sitio al crear el contrato:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:414
+#: ../../user-guide/concepts/sites-contacts.rst:410
 msgid "Verify site is associated with correct client counterparty"
 msgstr ""
-"Verificar que el sitio esté asociado con la contraparte del cliente correcta"
+"Verificar que el sitio esté asociado con la contraparte del cliente "
+"correcta"
 
-#: ../../user-guide/concepts/sites-contacts.rst:415
+#: ../../user-guide/concepts/sites-contacts.rst:411
 msgid "Check that site belongs to your active company"
 msgstr "Comprueba que el sitio pertenece a tu empresa activa"
 
-#: ../../user-guide/concepts/sites-contacts.rst:416
+#: ../../user-guide/concepts/sites-contacts.rst:412
 msgid "Ensure client is marked as active"
 msgstr "Asegúrese de que el cliente esté marcado como activo"
 
-#: ../../user-guide/concepts/sites-contacts.rst:418
+#: ../../user-guide/concepts/sites-contacts.rst:414
 msgid "**Duplicate sites appearing:**"
 msgstr "**Aparecen sitios duplicados:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:420
+#: ../../user-guide/concepts/sites-contacts.rst:416
 msgid "Review site names and addresses"
 msgstr "Revisar nombres y direcciones de sitios"
 
-#: ../../user-guide/concepts/sites-contacts.rst:421
+#: ../../user-guide/concepts/sites-contacts.rst:417
 msgid ""
 "Consolidate duplicates by: 1. Updating contracts to use correct site 2. "
-"Marking duplicate site as inactive 3. Adding notes explaining consolidation"
+"Marking duplicate site as inactive 3. Adding notes explaining "
+"consolidation"
 msgstr ""
-"Consolide duplicados: 1. Actualizando contratos para usar el sitio correcto "
-"2. Marcando sitio duplicado como inactivo 3. Agregando notas que expliquen "
-"la consolidación"
+"Consolide duplicados: 1. Actualizando contratos para usar el sitio "
+"correcto 2. Marcando sitio duplicado como inactivo 3. Agregando notas que"
+" expliquen la consolidación"
 
-#: ../../user-guide/concepts/sites-contacts.rst:426
+#: ../../user-guide/concepts/sites-contacts.rst:422
 msgid "**Site address changes:**"
 msgstr "**Cambios de dirección del sitio:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:428
+#: ../../user-guide/concepts/sites-contacts.rst:424
 msgid "Update site address directly"
 msgstr "Actualizar la dirección del sitio directamente"
 
-#: ../../user-guide/concepts/sites-contacts.rst:429
+#: ../../user-guide/concepts/sites-contacts.rst:425
 msgid "Existing contracts automatically reference new address"
 msgstr ""
 "Los contratos existentes hacen referencia automáticamente a la nueva "
 "dirección"
 
-#: ../../user-guide/concepts/sites-contacts.rst:430
+#: ../../user-guide/concepts/sites-contacts.rst:426
 msgid "Consider adding note about address change date"
 msgstr "Considere agregar una nota sobre la fecha del cambio de dirección"
 
-#: ../../user-guide/concepts/sites-contacts.rst:435
+#: ../../user-guide/concepts/sites-contacts.rst:431
 msgid "**Contact not receiving documents:**"
 msgstr "**Contacto que no recibe documentos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:437
+#: ../../user-guide/concepts/sites-contacts.rst:433
 msgid "Verify contact is marked as \"Active\""
 msgstr "Verificar que el contacto esté marcado como \"Activo\""
 
-#: ../../user-guide/concepts/sites-contacts.rst:438
+#: ../../user-guide/concepts/sites-contacts.rst:434
 msgid "Check email address is correct"
 msgstr "Verifique que la dirección de correo electrónico sea correcta"
 
-#: ../../user-guide/concepts/sites-contacts.rst:439
+#: ../../user-guide/concepts/sites-contacts.rst:435
 msgid "Confirm contact is associated with correct contract"
 msgstr "Confirmar que el contacto está asociado con el contrato correcto"
 
-#: ../../user-guide/concepts/sites-contacts.rst:440
+#: ../../user-guide/concepts/sites-contacts.rst:436
 msgid "Review email delivery logs"
 msgstr "Revisar los registros de entrega de correo electrónico"
 
-#: ../../user-guide/concepts/sites-contacts.rst:442
+#: ../../user-guide/concepts/sites-contacts.rst:438
 msgid "**Wrong contact on documents:**"
 msgstr "**Contacto incorrecto en los documentos:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:444
+#: ../../user-guide/concepts/sites-contacts.rst:440
 msgid "Mark incorrect contact as inactive"
 msgstr "Marcar contacto incorrecto como inactivo"
 
-#: ../../user-guide/concepts/sites-contacts.rst:445
+#: ../../user-guide/concepts/sites-contacts.rst:441
 msgid "Add correct contact with accurate information"
 msgstr "Agregue el contacto correcto con información precisa"
 
-#: ../../user-guide/concepts/sites-contacts.rst:446
+#: ../../user-guide/concepts/sites-contacts.rst:442
 msgid "Update any pending documents"
 msgstr "Actualizar cualquier documento pendiente"
 
-#: ../../user-guide/concepts/sites-contacts.rst:448
+#: ../../user-guide/concepts/sites-contacts.rst:444
 msgid "**Contact information outdated:**"
 msgstr "**Información de contacto desactualizada:**"
 
-#: ../../user-guide/concepts/sites-contacts.rst:450
+#: ../../user-guide/concepts/sites-contacts.rst:446
 msgid "Update contact record directly"
 msgstr "Actualizar registro de contacto directamente"
 
-#: ../../user-guide/concepts/sites-contacts.rst:451
+#: ../../user-guide/concepts/sites-contacts.rst:447
 msgid "Changes apply to future documents only"
 msgstr "Los cambios se aplican solo a documentos futuros."
 
-#: ../../user-guide/concepts/sites-contacts.rst:452
+#: ../../user-guide/concepts/sites-contacts.rst:448
 msgid "Past documents retain historical contact info (as intended)"
 msgstr ""
-"Los documentos anteriores conservan información de contacto histórica (según"
-" lo previsto)"
+"Los documentos anteriores conservan información de contacto histórica "
+"(según lo previsto)"
 
-#: ../../user-guide/concepts/sites-contacts.rst:455
+#: ../../user-guide/concepts/sites-contacts.rst:451
 msgid "See Also"
 msgstr "Ver también"
 
-#: ../../user-guide/concepts/sites-contacts.rst:457
+#: ../../user-guide/concepts/sites-contacts.rst:453
 msgid ":doc:`counterparties` - Client counterparties who own sites"
 msgstr ""
 
-#: ../../user-guide/concepts/sites-contacts.rst:458
+#: ../../user-guide/concepts/sites-contacts.rst:454
 msgid ":doc:`projects-contracts` - Contracts using sites and contacts"
 msgstr ""
 
-#: ../../user-guide/concepts/sites-contacts.rst:459
+#: ../../user-guide/concepts/sites-contacts.rst:455
 msgid ""
 ":doc:`/user-guide/workflows/creating-project` - Complete project setup "
 "workflow"
 msgstr ""
 
-#: ../../user-guide/concepts/sites-contacts.rst:460
+#: ../../user-guide/concepts/sites-contacts.rst:456
 msgid ":doc:`/_glossary/domain-terms` - Complete terminology"
 msgstr ""
+
+#~ msgid "Table of Contents"
+#~ msgstr "Tabla de contenido"
+

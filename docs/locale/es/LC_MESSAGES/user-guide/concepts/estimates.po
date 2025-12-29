@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: es <LL@li.org>\n"
 "Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../user-guide/concepts/estimates.rst:3
@@ -31,113 +31,107 @@ msgstr "**Término en español:** Estimación"
 msgid "Understanding estimates (progress payments) in Construbot."
 msgstr "Comprensión de estimaciones (pagos progresivos) en Construbot."
 
-#: ../../user-guide/concepts/estimates.rst:12
-msgid "Table of Contents"
-msgstr "Tabla de contenido"
-
-#: ../../user-guide/concepts/estimates.rst:15
+#: ../../user-guide/concepts/estimates.rst:11
 msgid "What is an Estimate?"
 msgstr "¿Qué es una estimación?"
 
-#: ../../user-guide/concepts/estimates.rst:17
+#: ../../user-guide/concepts/estimates.rst:13
 msgid ""
-"An **Estimate** (Spanish: **Estimación**) is a progress payment request for "
-"completed work on a construction project. Estimates document:"
+"An **Estimate** (Spanish: **Estimación**) is a progress payment request "
+"for completed work on a construction project. Estimates document:"
 msgstr ""
 "Una **Estimación** (español: **Estimación**) es una solicitud de pago "
 "anticipado por el trabajo completado en un proyecto de construcción. "
 "Documento de estimaciones:"
 
-#: ../../user-guide/concepts/estimates.rst:19
+#: ../../user-guide/concepts/estimates.rst:15
 msgid "Work completed during a specific period"
 msgstr "Trabajo realizado durante un período específico."
 
-#: ../../user-guide/concepts/estimates.rst:20
+#: ../../user-guide/concepts/estimates.rst:16
 msgid "Quantities of each concept (line item) executed"
 msgstr "Cantidades de cada concepto (partida) ejecutadas"
 
-#: ../../user-guide/concepts/estimates.rst:21
+#: ../../user-guide/concepts/estimates.rst:17
 msgid "Payment amount owed for the period"
 msgstr "Monto del pago adeudado por el período"
 
-#: ../../user-guide/concepts/estimates.rst:22
+#: ../../user-guide/concepts/estimates.rst:18
 msgid "Cumulative progress tracking"
 msgstr "Seguimiento del progreso acumulado"
 
-#: ../../user-guide/concepts/estimates.rst:24
+#: ../../user-guide/concepts/estimates.rst:20
 msgid "**Model:** ``construbot.proyectos.models.Estimate``"
 msgstr "**Modelo:** ``construbot.proyectos.modelos.Estimate``"
 
-#: ../../user-guide/concepts/estimates.rst:26
+#: ../../user-guide/concepts/estimates.rst:22
 msgid ""
 "**Key Concept:** Estimates are tied to contracts and track incremental "
-"billing as work progresses. Each estimate builds upon previous estimates to "
-"show cumulative project completion."
+"billing as work progresses. Each estimate builds upon previous estimates "
+"to show cumulative project completion."
 msgstr ""
 "**Concepto clave:** Las estimaciones están vinculadas a los contratos y "
-"realizan un seguimiento de la facturación incremental a medida que avanza el"
-" trabajo. Cada estimación se basa en estimaciones anteriores para mostrar la"
-" finalización acumulada del proyecto."
+"realizan un seguimiento de la facturación incremental a medida que avanza"
+" el trabajo. Cada estimación se basa en estimaciones anteriores para "
+"mostrar la finalización acumulada del proyecto."
 
-#: ../../user-guide/concepts/estimates.rst:32
+#: ../../user-guide/concepts/estimates.rst:28
 msgid "Estimate Components"
 msgstr "Estimar componentes"
 
-#: ../../user-guide/concepts/estimates.rst:35
+#: ../../user-guide/concepts/estimates.rst:31
 msgid "Basic Information"
 msgstr "Información básica"
 
-#: ../../user-guide/concepts/estimates.rst:37
+#: ../../user-guide/concepts/estimates.rst:33
 msgid "**Required fields:**"
 msgstr "**Campos obligatorios:**"
 
-#: ../../user-guide/concepts/estimates.rst:39
+#: ../../user-guide/concepts/estimates.rst:35
 msgid "**Contract** (contrato) - The parent contract being billed"
 msgstr "**Contrato** (contrato): el contrato principal que se factura"
 
-#: ../../user-guide/concepts/estimates.rst:40
+#: ../../user-guide/concepts/estimates.rst:36
 msgid "**Estimate Number** (consecutive number) - Sequential identifier"
-msgstr ""
-"**Número de estimación** (número consecutivo) - Identificador secuencial"
+msgstr "**Número de estimación** (número consecutivo) - Identificador secuencial"
 
-#: ../../user-guide/concepts/estimates.rst:41
+#: ../../user-guide/concepts/estimates.rst:37
 msgid "**Period Start Date** (fecha_inicio_estimado)"
 msgstr "**Fecha de inicio del período** (fecha_inicio_estimado)"
 
-#: ../../user-guide/concepts/estimates.rst:42
+#: ../../user-guide/concepts/estimates.rst:38
 msgid "**Period End Date** (fecha_final_estimado)"
 msgstr "**Fecha de finalización del período** (fecha_final_estimado)"
 
-#: ../../user-guide/concepts/estimates.rst:43
+#: ../../user-guide/concepts/estimates.rst:39
 msgid "**Total Amount** (monto) - Calculated from line items"
-msgstr ""
-"**Importe total** (monto): calculado a partir de partidas individuales"
+msgstr "**Importe total** (monto): calculado a partir de partidas individuales"
 
-#: ../../user-guide/concepts/estimates.rst:45
+#: ../../user-guide/concepts/estimates.rst:41
 msgid "**Optional fields:**"
 msgstr "**Campos opcionales:**"
 
-#: ../../user-guide/concepts/estimates.rst:47
+#: ../../user-guide/concepts/estimates.rst:43
 msgid "**Notes** (notas) - Internal notes about the estimate"
 msgstr "**Notas** (notas) - Notas internas sobre el presupuesto"
 
-#: ../../user-guide/concepts/estimates.rst:48
+#: ../../user-guide/concepts/estimates.rst:44
 msgid "**Status** - Draft, submitted, approved, paid"
 msgstr "**Estado** - Borrador, enviado, aprobado, pagado"
 
-#: ../../user-guide/concepts/estimates.rst:49
+#: ../../user-guide/concepts/estimates.rst:45
 msgid "**Approval Date**"
 msgstr "**Fecha de aprobación**"
 
-#: ../../user-guide/concepts/estimates.rst:50
+#: ../../user-guide/concepts/estimates.rst:46
 msgid "**Payment Date**"
 msgstr "**Fecha de pago**"
 
-#: ../../user-guide/concepts/estimates.rst:56
+#: ../../user-guide/concepts/estimates.rst:52
 msgid "Line Items (EstimateLineItems)"
 msgstr "Elementos de línea (EstimateLineItems)"
 
-#: ../../user-guide/concepts/estimates.rst:58
+#: ../../user-guide/concepts/estimates.rst:54
 msgid ""
 "Each estimate contains multiple line items tracking individual concept "
 "progress:"
@@ -145,529 +139,526 @@ msgstr ""
 "Cada estimación contiene múltiples partidas que rastrean el progreso del "
 "concepto individual:"
 
-#: ../../user-guide/concepts/estimates.rst:60
+#: ../../user-guide/concepts/estimates.rst:56
 msgid "**Concept** (concepto) - Reference to catalog concept"
 msgstr "**Concepto** (concepto) - Referencia al concepto del catálogo"
 
-#: ../../user-guide/concepts/estimates.rst:61
-msgid ""
-"**Quantity This Period** (cantidad_estimada) - Work completed this period"
+#: ../../user-guide/concepts/estimates.rst:57
+msgid "**Quantity This Period** (cantidad_estimada) - Work completed this period"
 msgstr ""
 "**Cantidad Este Período** (cantidad_estimada) - Trabajo completado este "
 "período"
 
-#: ../../user-guide/concepts/estimates.rst:62
+#: ../../user-guide/concepts/estimates.rst:58
 msgid "**Cumulative Quantity** (cantidad_acumulada) - Total work to date"
-msgstr ""
-"**Cantidad acumulada** (cantidad_acumulada) - Trabajo total hasta la fecha"
+msgstr "**Cantidad acumulada** (cantidad_acumulada) - Trabajo total hasta la fecha"
 
-#: ../../user-guide/concepts/estimates.rst:63
+#: ../../user-guide/concepts/estimates.rst:59
 msgid "**Unit Price** (precio_unitario) - From contract concept"
 msgstr "**Precio Unitario** (precio_unitario) - Desde concepto de contrato"
 
-#: ../../user-guide/concepts/estimates.rst:64
+#: ../../user-guide/concepts/estimates.rst:60
 msgid "**Subtotal** (subtotal) - Quantity × Unit Price"
 msgstr "**Subtotal** (subtotal) - Cantidad × Precio unitario"
 
-#: ../../user-guide/concepts/estimates.rst:66
+#: ../../user-guide/concepts/estimates.rst:62
 msgid "**Related Model:** ``construbot.proyectos.models.EstimateLineItem``"
-msgstr ""
-"**Modelo relacionado:** ``construbot.proyectos.models.EstimateLineItem``"
+msgstr "**Modelo relacionado:** ``construbot.proyectos.models.EstimateLineItem``"
 
-#: ../../user-guide/concepts/estimates.rst:72
+#: ../../user-guide/concepts/estimates.rst:68
 msgid "Financial Calculations"
 msgstr "Cálculos financieros"
 
-#: ../../user-guide/concepts/estimates.rst:75
+#: ../../user-guide/concepts/estimates.rst:71
 msgid "Estimate Amount Calculation"
 msgstr "Cálculo del monto estimado"
 
-#: ../../user-guide/concepts/estimates.rst:77
+#: ../../user-guide/concepts/estimates.rst:73
 msgid "The estimate total is calculated as:"
 msgstr "El total estimado se calcula como:"
 
-#: ../../user-guide/concepts/estimates.rst:89
+#: ../../user-guide/concepts/estimates.rst:85
 msgid "**Example:**"
 msgstr "**Ejemplo:**"
 
-#: ../../user-guide/concepts/estimates.rst:103
+#: ../../user-guide/concepts/estimates.rst:99
 msgid "Cumulative Tracking"
 msgstr "Seguimiento acumulativo"
 
-#: ../../user-guide/concepts/estimates.rst:105
+#: ../../user-guide/concepts/estimates.rst:101
 msgid "Construbot automatically tracks cumulative quantities:"
 msgstr "Construbot rastrea automáticamente las cantidades acumuladas:"
 
-#: ../../user-guide/concepts/estimates.rst:107
+#: ../../user-guide/concepts/estimates.rst:103
 msgid "**Previous Estimates:** Sum of all prior estimate quantities"
 msgstr ""
 "**Estimaciones anteriores:** Suma de todas las cantidades estimadas "
 "anteriores"
 
-#: ../../user-guide/concepts/estimates.rst:108
+#: ../../user-guide/concepts/estimates.rst:104
 msgid "**This Estimate:** New work completed"
 msgstr "**Esta estimación:** Nuevo trabajo completado"
 
-#: ../../user-guide/concepts/estimates.rst:109
+#: ../../user-guide/concepts/estimates.rst:105
 msgid "**Cumulative Total:** Running total of all work to date"
-msgstr ""
-"**Total acumulado:** Total acumulado de todo el trabajo hasta la fecha"
+msgstr "**Total acumulado:** Total acumulado de todo el trabajo hasta la fecha"
 
-#: ../../user-guide/concepts/estimates.rst:110
+#: ../../user-guide/concepts/estimates.rst:106
 msgid "**Remaining:** Contract quantity - Cumulative total"
 msgstr "**Restante:** Cantidad del contrato - Total acumulado"
 
-#: ../../user-guide/concepts/estimates.rst:112
+#: ../../user-guide/concepts/estimates.rst:108
 msgid "This ensures you never over-bill a contract concept."
 msgstr "Esto garantiza que nunca sobrefacturarás un concepto de contrato."
 
-#: ../../user-guide/concepts/estimates.rst:118
+#: ../../user-guide/concepts/estimates.rst:114
 msgid "Retentions (Withholdings)"
 msgstr "Retenciones (Retenciones)"
 
-#: ../../user-guide/concepts/estimates.rst:120
+#: ../../user-guide/concepts/estimates.rst:116
 msgid "Retentions can be applied to estimates:"
 msgstr "Se pueden aplicar retenciones a las estimaciones:"
 
-#: ../../user-guide/concepts/estimates.rst:122
+#: ../../user-guide/concepts/estimates.rst:118
 #, python-format
 msgid "**Flat percentage:** 10% retention on all work"
 msgstr "**Porcentaje fijo:** 10% de retención en todo el trabajo"
 
-#: ../../user-guide/concepts/estimates.rst:123
+#: ../../user-guide/concepts/estimates.rst:119
 msgid ""
 "**Multiple retentions:** Different percentages for different purposes "
 "(warranty, performance)"
 msgstr ""
-"**Retenciones múltiples:** Diferentes porcentajes para diferentes propósitos"
-" (garantía, desempeño)"
+"**Retenciones múltiples:** Diferentes porcentajes para diferentes "
+"propósitos (garantía, desempeño)"
 
-#: ../../user-guide/concepts/estimates.rst:124
+#: ../../user-guide/concepts/estimates.rst:120
 msgid "**Retention release:** Held until contract completion or milestones"
 msgstr ""
-"**Liberación de retención:** Se mantiene hasta la finalización del contrato "
-"o hitos"
+"**Liberación de retención:** Se mantiene hasta la finalización del "
+"contrato o hitos"
 
-#: ../../user-guide/concepts/estimates.rst:126
+#: ../../user-guide/concepts/estimates.rst:122
 msgid "See :doc:`retentions` for detailed information."
 msgstr "Consulte :doc:`retenciones` para obtener información detallada."
 
-#: ../../user-guide/concepts/estimates.rst:129
+#: ../../user-guide/concepts/estimates.rst:125
 msgid "Creating an Estimate"
 msgstr "Crear una estimación"
 
-#: ../../user-guide/concepts/estimates.rst:132
+#: ../../user-guide/concepts/estimates.rst:128
 msgid "Step 1: Access Contract"
 msgstr "Paso 1: Contrato de acceso"
 
-#: ../../user-guide/concepts/estimates.rst:134
+#: ../../user-guide/concepts/estimates.rst:130
 msgid "Navigate to **Proyectos → Contratos**"
 msgstr "Vaya a **Proyectos → Contratos**"
 
-#: ../../user-guide/concepts/estimates.rst:135
+#: ../../user-guide/concepts/estimates.rst:131
 msgid "Select the contract you want to bill"
 msgstr "Selecciona el contrato que quieres facturar"
 
-#: ../../user-guide/concepts/estimates.rst:136
+#: ../../user-guide/concepts/estimates.rst:132
 msgid "Click **\"Create Estimate\"** or **\"Nueva Estimación\"**"
 msgstr "Haga clic en **\"Crear estimación\"** o **\"Nueva estimación\"**"
 
-#: ../../user-guide/concepts/estimates.rst:142
+#: ../../user-guide/concepts/estimates.rst:138
 msgid "Step 2: Set Estimate Period"
 msgstr "Paso 2: Establecer el período estimado"
 
-#: ../../user-guide/concepts/estimates.rst:151
+#: ../../user-guide/concepts/estimates.rst:147
 msgid "Step 3: Add Line Items"
 msgstr "Paso 3: agregar líneas de pedido"
 
-#: ../../user-guide/concepts/estimates.rst:153
+#: ../../user-guide/concepts/estimates.rst:149
 msgid "For each concept with work completed:"
 msgstr "Para cada concepto con trabajo completado:"
 
-#: ../../user-guide/concepts/estimates.rst:155
+#: ../../user-guide/concepts/estimates.rst:151
 msgid "Select the concept from contract catalog"
 msgstr "Seleccione el concepto del catálogo de contratos"
 
-#: ../../user-guide/concepts/estimates.rst:156
+#: ../../user-guide/concepts/estimates.rst:152
 msgid "Enter **Quantity This Period** (work completed)"
 msgstr "Ingrese **Cantidad este período** (trabajo completado)"
 
-#: ../../user-guide/concepts/estimates.rst:157
+#: ../../user-guide/concepts/estimates.rst:153
 msgid ""
-"System calculates: - Cumulative quantity - Subtotal (quantity × unit price) "
-"- Warnings if exceeding contract quantity"
+"System calculates: - Cumulative quantity - Subtotal (quantity × unit "
+"price) - Warnings if exceeding contract quantity"
 msgstr ""
 "El sistema calcula: - Cantidad acumulada - Subtotal (cantidad × precio "
 "unitario) - Advertencias si se excede la cantidad del contrato"
 
-#: ../../user-guide/concepts/estimates.rst:162
+#: ../../user-guide/concepts/estimates.rst:158
 msgid "**Example Entry:**"
 msgstr "**Entrada de ejemplo:**"
 
-#: ../../user-guide/concepts/estimates.rst:176
+#: ../../user-guide/concepts/estimates.rst:172
 msgid "Step 4: Review Totals"
 msgstr "Paso 4: revisar los totales"
 
-#: ../../user-guide/concepts/estimates.rst:178
+#: ../../user-guide/concepts/estimates.rst:174
 msgid "Before saving, review:"
 msgstr "Antes de guardar, revise:"
 
-#: ../../user-guide/concepts/estimates.rst:180
+#: ../../user-guide/concepts/estimates.rst:176
 msgid "**Subtotal:** Sum of all line items"
 msgstr "**Subtotal:** Suma de todas las partidas"
 
-#: ../../user-guide/concepts/estimates.rst:181
+#: ../../user-guide/concepts/estimates.rst:177
 msgid "**Retentions:** Applied percentages"
 msgstr "**Retenciones:** Porcentajes aplicados"
 
-#: ../../user-guide/concepts/estimates.rst:182
+#: ../../user-guide/concepts/estimates.rst:178
 msgid "**Estimate Total:** Amount to be paid"
 msgstr "**Total estimado:** Monto a pagar"
 
-#: ../../user-guide/concepts/estimates.rst:183
+#: ../../user-guide/concepts/estimates.rst:179
 msgid "**Cumulative Progress:** Overall project completion"
 msgstr "**Progreso acumulativo:** Finalización general del proyecto"
 
-#: ../../user-guide/concepts/estimates.rst:189
+#: ../../user-guide/concepts/estimates.rst:185
 msgid "Step 5: Save and Generate Documents"
 msgstr "Paso 5: guardar y generar documentos"
 
-#: ../../user-guide/concepts/estimates.rst:191
+#: ../../user-guide/concepts/estimates.rst:187
 msgid "Click **\"Save\"** or **\"Guardar\"**"
 msgstr "Haga clic en **\"Guardar\"** o **\"Guardar\"**"
 
-#: ../../user-guide/concepts/estimates.rst:192
+#: ../../user-guide/concepts/estimates.rst:188
 msgid "Generate PDF estimate document"
 msgstr "Generar documento de presupuesto en PDF"
 
-#: ../../user-guide/concepts/estimates.rst:193
+#: ../../user-guide/concepts/estimates.rst:189
 msgid "Submit for approval (if workflow configured)"
 msgstr "Enviar para aprobación (si el flujo de trabajo está configurado)"
 
-#: ../../user-guide/concepts/estimates.rst:194
+#: ../../user-guide/concepts/estimates.rst:190
 msgid "Track payment status"
 msgstr "Seguimiento del estado de pago"
 
-#: ../../user-guide/concepts/estimates.rst:197
+#: ../../user-guide/concepts/estimates.rst:193
 msgid "Estimate Workflow"
 msgstr "Estimar el flujo de trabajo"
 
-#: ../../user-guide/concepts/estimates.rst:200
+#: ../../user-guide/concepts/estimates.rst:196
 msgid "Typical Process"
 msgstr "Proceso típico"
 
-#: ../../user-guide/concepts/estimates.rst:202
+#: ../../user-guide/concepts/estimates.rst:198
 msgid "**Draft:** Initial creation, can be edited"
 msgstr "**Borrador:** Creación inicial, se puede editar"
 
-#: ../../user-guide/concepts/estimates.rst:203
+#: ../../user-guide/concepts/estimates.rst:199
 msgid "**Submitted:** Sent to client for review"
 msgstr "**Enviado:** Enviado al cliente para su revisión"
 
-#: ../../user-guide/concepts/estimates.rst:204
+#: ../../user-guide/concepts/estimates.rst:200
 msgid "**Under Review:** Client reviewing estimate"
 msgstr "**En revisión:** Cliente revisando estimación"
 
-#: ../../user-guide/concepts/estimates.rst:205
+#: ../../user-guide/concepts/estimates.rst:201
 msgid "**Approved:** Client approved, ready for payment"
 msgstr "**Aprobado:** Cliente aprobado, listo para pago"
 
-#: ../../user-guide/concepts/estimates.rst:206
+#: ../../user-guide/concepts/estimates.rst:202
 msgid "**Paid:** Payment received and recorded"
 msgstr "**Pagado:** Pago recibido y registrado"
 
-#: ../../user-guide/concepts/estimates.rst:208
+#: ../../user-guide/concepts/estimates.rst:204
 msgid "**Workflow Configuration:** May vary by company and contract type."
 msgstr ""
-"**Configuración del flujo de trabajo:** Puede variar según la empresa y el "
-"tipo de contrato."
+"**Configuración del flujo de trabajo:** Puede variar según la empresa y "
+"el tipo de contrato."
 
-#: ../../user-guide/concepts/estimates.rst:214
+#: ../../user-guide/concepts/estimates.rst:210
 msgid "Revisions and Corrections"
 msgstr "Revisiones y correcciones"
 
-#: ../../user-guide/concepts/estimates.rst:216
+#: ../../user-guide/concepts/estimates.rst:212
 msgid "If an estimate needs correction:"
 msgstr "Si una estimación necesita corrección:"
 
-#: ../../user-guide/concepts/estimates.rst:218
+#: ../../user-guide/concepts/estimates.rst:214
 msgid "**Option 1: Edit Draft**"
 msgstr "**Opción 1: Editar borrador**"
 
-#: ../../user-guide/concepts/estimates.rst:220
+#: ../../user-guide/concepts/estimates.rst:216
 msgid "If status is still \"Draft\", edit directly"
 msgstr "Si el estado sigue siendo \"Borrador\", edítelo directamente"
 
-#: ../../user-guide/concepts/estimates.rst:221
+#: ../../user-guide/concepts/estimates.rst:217
 msgid "Update line item quantities as needed"
 msgstr "Actualizar las cantidades de artículos en línea según sea necesario"
 
-#: ../../user-guide/concepts/estimates.rst:223
+#: ../../user-guide/concepts/estimates.rst:219
 msgid "**Option 2: Create Adjustment**"
 msgstr "**Opción 2: Crear ajuste**"
 
-#: ../../user-guide/concepts/estimates.rst:225
+#: ../../user-guide/concepts/estimates.rst:221
 msgid "If estimate is approved, create a new estimate"
 msgstr "Si se aprueba el presupuesto, cree un nuevo presupuesto."
 
-#: ../../user-guide/concepts/estimates.rst:226
+#: ../../user-guide/concepts/estimates.rst:222
 msgid "Use negative quantities to reverse errors"
 msgstr "Utilice cantidades negativas para revertir errores"
 
-#: ../../user-guide/concepts/estimates.rst:227
+#: ../../user-guide/concepts/estimates.rst:223
 msgid "Add corrected quantities in same or next estimate"
-msgstr ""
-"Agregar cantidades corregidas en la misma estimación o en la siguiente"
+msgstr "Agregar cantidades corregidas en la misma estimación o en la siguiente"
 
-#: ../../user-guide/concepts/estimates.rst:229
-msgid ""
-"**Best Practice:** Add notes explaining any adjustments for audit trail."
+#: ../../user-guide/concepts/estimates.rst:225
+msgid "**Best Practice:** Add notes explaining any adjustments for audit trail."
 msgstr ""
-"**Mejores prácticas:** Agregue notas que expliquen cualquier ajuste para el "
-"seguimiento de auditoría."
+"**Mejores prácticas:** Agregue notas que expliquen cualquier ajuste para "
+"el seguimiento de auditoría."
 
-#: ../../user-guide/concepts/estimates.rst:232
+#: ../../user-guide/concepts/estimates.rst:228
 msgid "Hierarchical Contracts"
 msgstr "Contratos jerárquicos"
 
-#: ../../user-guide/concepts/estimates.rst:234
+#: ../../user-guide/concepts/estimates.rst:230
 msgid "For subcontracts using hierarchical structure:"
 msgstr "Para subcontratos que utilicen estructura jerárquica:"
 
-#: ../../user-guide/concepts/estimates.rst:236
+#: ../../user-guide/concepts/estimates.rst:232
 msgid "**Parent Contract Estimate:**"
 msgstr "**Estimación del contrato para padres:**"
 
-#: ../../user-guide/concepts/estimates.rst:238
+#: ../../user-guide/concepts/estimates.rst:234
 msgid "Parent estimate includes own work + subcontract estimates"
 msgstr ""
 "La estimación de la matriz incluye trabajo propio + estimaciones de "
 "subcontratos"
 
-#: ../../user-guide/concepts/estimates.rst:239
+#: ../../user-guide/concepts/estimates.rst:235
 msgid "Subcontract estimates roll up automatically"
 msgstr "Las estimaciones de subcontratos se acumulan automáticamente"
 
-#: ../../user-guide/concepts/estimates.rst:240
+#: ../../user-guide/concepts/estimates.rst:236
 msgid "System prevents double-counting"
 msgstr "El sistema evita el doble conteo"
 
-#: ../../user-guide/concepts/estimates.rst:242
+#: ../../user-guide/concepts/estimates.rst:238
 msgid "**Subcontract Estimate:**"
 msgstr "**Estimación de subcontrato:**"
 
-#: ../../user-guide/concepts/estimates.rst:244
+#: ../../user-guide/concepts/estimates.rst:240
 msgid "Created independently for subcontractor work"
 msgstr "Creado de forma independiente para trabajos subcontratados."
 
-#: ../../user-guide/concepts/estimates.rst:245
+#: ../../user-guide/concepts/estimates.rst:241
 msgid "Linked to parent contract estimate"
 msgstr "Vinculado a la estimación del contrato principal"
 
-#: ../../user-guide/concepts/estimates.rst:246
+#: ../../user-guide/concepts/estimates.rst:242
 msgid "Separate billing and payment tracking"
 msgstr "Seguimiento separado de facturación y pagos"
 
-#: ../../user-guide/concepts/estimates.rst:248
+#: ../../user-guide/concepts/estimates.rst:244
 msgid "See :doc:`projects-contracts` for hierarchy details."
 msgstr ""
 "Consulte :doc:`proyectos-contratos` para obtener detalles sobre la "
 "jerarquía."
 
-#: ../../user-guide/concepts/estimates.rst:251
+#: ../../user-guide/concepts/estimates.rst:247
 msgid "Best Practices"
 msgstr "Mejores prácticas"
 
-#: ../../user-guide/concepts/estimates.rst:253
+#: ../../user-guide/concepts/estimates.rst:249
 msgid "**1. Regular billing cycles:**"
 msgstr "**1. Ciclos de facturación regulares:**"
 
-#: ../../user-guide/concepts/estimates.rst:260
+#: ../../user-guide/concepts/estimates.rst:256
 msgid "**2. Document justification:**"
 msgstr "**2. Justificación del documento:**"
 
-#: ../../user-guide/concepts/estimates.rst:262
+#: ../../user-guide/concepts/estimates.rst:258
 msgid ""
-"Add notes explaining: - Unusual quantities - Zero-quantity periods (weather "
-"delays, etc.) - Adjustments or corrections"
+"Add notes explaining: - Unusual quantities - Zero-quantity periods "
+"(weather delays, etc.) - Adjustments or corrections"
 msgstr ""
-"Agregue notas explicando: - Cantidades inusuales - Períodos de cantidad cero"
-" (retrasos climáticos, etc.) - Ajustes o correcciones"
+"Agregue notas explicando: - Cantidades inusuales - Períodos de cantidad "
+"cero (retrasos climáticos, etc.) - Ajustes o correcciones"
 
-#: ../../user-guide/concepts/estimates.rst:267
+#: ../../user-guide/concepts/estimates.rst:263
 msgid "**3. Review cumulative totals:**"
 msgstr "**3. Revisar totales acumulados:**"
 
-#: ../../user-guide/concepts/estimates.rst:269
+#: ../../user-guide/concepts/estimates.rst:265
 msgid ""
 "Before submitting, verify: - No concepts exceed contract quantity - "
-"Cumulative percentages make sense - Previous estimates are correctly summed"
+"Cumulative percentages make sense - Previous estimates are correctly "
+"summed"
 msgstr ""
 "Antes de enviar, verifique: - Ningún concepto excede la cantidad del "
 "contrato - Los porcentajes acumulados tienen sentido - Las estimaciones "
 "anteriores se suman correctamente"
 
-#: ../../user-guide/concepts/estimates.rst:274
+#: ../../user-guide/concepts/estimates.rst:270
 msgid "**4. Coordinate with site progress:**"
 msgstr "**4. Coordinar con el progreso del sitio:**"
 
-#: ../../user-guide/concepts/estimates.rst:276
+#: ../../user-guide/concepts/estimates.rst:272
 msgid "Estimates should reflect actual completed work"
 msgstr "Las estimaciones deben reflejar el trabajo real completado."
 
-#: ../../user-guide/concepts/estimates.rst:277
+#: ../../user-guide/concepts/estimates.rst:273
 msgid "Use site photos or daily reports as backup"
 msgstr "Utilice fotografías del sitio o informes diarios como respaldo"
 
-#: ../../user-guide/concepts/estimates.rst:278
+#: ../../user-guide/concepts/estimates.rst:274
 msgid "Don't estimate work not yet performed"
 msgstr "No estime el trabajo aún no realizado"
 
-#: ../../user-guide/concepts/estimates.rst:280
+#: ../../user-guide/concepts/estimates.rst:276
 msgid "**5. Track payment timing:**"
 msgstr "**5. Seguimiento del momento del pago:**"
 
-#: ../../user-guide/concepts/estimates.rst:282
+#: ../../user-guide/concepts/estimates.rst:278
 msgid "Record when estimate submitted"
 msgstr "Registrar cuando se envía la estimación"
 
-#: ../../user-guide/concepts/estimates.rst:283
+#: ../../user-guide/concepts/estimates.rst:279
 msgid "Follow up on approvals"
 msgstr "Seguimiento de aprobaciones"
 
-#: ../../user-guide/concepts/estimates.rst:284
+#: ../../user-guide/concepts/estimates.rst:280
 msgid "Document payment receipt"
 msgstr "Recibo de pago del documento"
 
-#: ../../user-guide/concepts/estimates.rst:287
+#: ../../user-guide/concepts/estimates.rst:283
 msgid "Reporting and Analysis"
 msgstr "Informes y análisis"
 
-#: ../../user-guide/concepts/estimates.rst:290
+#: ../../user-guide/concepts/estimates.rst:286
 msgid "Estimate Reports"
 msgstr "Informes de estimación"
 
-#: ../../user-guide/concepts/estimates.rst:292
+#: ../../user-guide/concepts/estimates.rst:288
 msgid "Available reports:"
 msgstr "Informes disponibles:"
 
-#: ../../user-guide/concepts/estimates.rst:294
+#: ../../user-guide/concepts/estimates.rst:290
 msgid "**Estimate Summary:** Single estimate with all line items"
 msgstr ""
-"**Resumen de estimación:** Estimación única con todos los artículos de línea"
+"**Resumen de estimación:** Estimación única con todos los artículos de "
+"línea"
 
-#: ../../user-guide/concepts/estimates.rst:295
+#: ../../user-guide/concepts/estimates.rst:291
 msgid ""
 "**Contract Progress:** All estimates for a contract showing cumulative "
 "progress"
 msgstr ""
-"**Progreso del contrato:** Todas las estimaciones de un contrato muestran el"
-" progreso acumulativo"
+"**Progreso del contrato:** Todas las estimaciones de un contrato muestran"
+" el progreso acumulativo"
 
-#: ../../user-guide/concepts/estimates.rst:296
+#: ../../user-guide/concepts/estimates.rst:292
 msgid "**Payment Schedule:** Estimate amounts vs. payment dates"
 msgstr "**Calendario de pagos:** Montos estimados versus fechas de pago"
 
-#: ../../user-guide/concepts/estimates.rst:297
+#: ../../user-guide/concepts/estimates.rst:293
 msgid "**Retention Tracking:** Retained amounts and releases"
 msgstr "**Seguimiento de retención:** Cantidades retenidas y liberaciones"
 
-#: ../../user-guide/concepts/estimates.rst:299
+#: ../../user-guide/concepts/estimates.rst:295
 msgid "**Export Options:** PDF, Excel"
 msgstr "**Opciones de exportación:** PDF, Excel"
 
-#: ../../user-guide/concepts/estimates.rst:305
+#: ../../user-guide/concepts/estimates.rst:301
 msgid "Financial Metrics"
 msgstr "Métricas financieras"
 
-#: ../../user-guide/concepts/estimates.rst:307
+#: ../../user-guide/concepts/estimates.rst:303
 msgid "Track project health:"
 msgstr "Seguimiento del estado del proyecto:"
 
-#: ../../user-guide/concepts/estimates.rst:309
+#: ../../user-guide/concepts/estimates.rst:305
 msgid "**Billing Rate:** Actual billed vs. planned"
 msgstr "**Tasa de facturación:** Facturado real versus planificado"
 
-#: ../../user-guide/concepts/estimates.rst:310
+#: ../../user-guide/concepts/estimates.rst:306
 msgid "**Payment Lag:** Time from estimate submission to payment"
 msgstr ""
-"**Retraso en el pago:** Tiempo desde el envío del presupuesto hasta el pago"
+"**Retraso en el pago:** Tiempo desde el envío del presupuesto hasta el "
+"pago"
 
-#: ../../user-guide/concepts/estimates.rst:311
+#: ../../user-guide/concepts/estimates.rst:307
 msgid "**Retention Balance:** Total retained amounts"
 msgstr "**Saldo de retención:** Montos totales retenidos"
 
-#: ../../user-guide/concepts/estimates.rst:312
-msgid ""
-"**Completion Percentage:** Cumulative quantities vs. contract quantities"
+#: ../../user-guide/concepts/estimates.rst:308
+msgid "**Completion Percentage:** Cumulative quantities vs. contract quantities"
 msgstr ""
-"**Porcentaje de finalización:** Cantidades acumuladas versus cantidades del "
-"contrato"
+"**Porcentaje de finalización:** Cantidades acumuladas versus cantidades "
+"del contrato"
 
-#: ../../user-guide/concepts/estimates.rst:315
+#: ../../user-guide/concepts/estimates.rst:311
 msgid "Common Scenarios"
 msgstr "Escenarios comunes"
 
-#: ../../user-guide/concepts/estimates.rst:318
+#: ../../user-guide/concepts/estimates.rst:314
 msgid "Scenario 1: First Estimate"
 msgstr "Escenario 1: Primera estimación"
 
-#: ../../user-guide/concepts/estimates.rst:320
+#: ../../user-guide/concepts/estimates.rst:316
 msgid "**Setup:**"
 msgstr "**Configuración:**"
 
-#: ../../user-guide/concepts/estimates.rst:322
+#: ../../user-guide/concepts/estimates.rst:318
 msgid "New contract with 10 concepts"
 msgstr "Nuevo contrato con 10 conceptos"
 
-#: ../../user-guide/concepts/estimates.rst:323
+#: ../../user-guide/concepts/estimates.rst:319
 msgid "Work started, first month completed"
 msgstr "Trabajo iniciado, primer mes completado."
 
-#: ../../user-guide/concepts/estimates.rst:324
+#: ../../user-guide/concepts/estimates.rst:320
 msgid "3 concepts have progress"
 msgstr "3 conceptos tienen progreso"
 
-#: ../../user-guide/concepts/estimates.rst:326
+#: ../../user-guide/concepts/estimates.rst:322
 msgid "**Process:**"
 msgstr "**Proceso:**"
 
-#: ../../user-guide/concepts/estimates.rst:328
+#: ../../user-guide/concepts/estimates.rst:324
 msgid "Create Estimate #1 for Month 1"
 msgstr "Cree la estimación n.º 1 para el mes 1"
 
-#: ../../user-guide/concepts/estimates.rst:329
+#: ../../user-guide/concepts/estimates.rst:325
 msgid "Add 3 line items with quantities"
 msgstr "Agregue 3 artículos de línea con cantidades"
 
-#: ../../user-guide/concepts/estimates.rst:330
+#: ../../user-guide/concepts/estimates.rst:326
 msgid "Review subtotal and retentions"
 msgstr "Revisar subtotal y retenciones"
 
-#: ../../user-guide/concepts/estimates.rst:331
+#: ../../user-guide/concepts/estimates.rst:327
 msgid "Generate PDF and submit"
 msgstr "Generar PDF y enviar"
 
-#: ../../user-guide/concepts/estimates.rst:333
+#: ../../user-guide/concepts/estimates.rst:329
 msgid "**Result:** Establishes baseline for cumulative tracking."
 msgstr ""
-"**Resultado:** Establece una línea de base para el seguimiento acumulativo."
+"**Resultado:** Establece una línea de base para el seguimiento "
+"acumulativo."
 
-#: ../../user-guide/concepts/estimates.rst:336
+#: ../../user-guide/concepts/estimates.rst:332
 msgid "Scenario 2: Zero-Work Period"
 msgstr "Escenario 2: Período de trabajo cero"
 
-#: ../../user-guide/concepts/estimates.rst:338
+#: ../../user-guide/concepts/estimates.rst:334
 msgid "**Situation:** Weather delay, no work completed in period"
 msgstr ""
 "**Situación:** Retraso climático, no se completó ningún trabajo en el "
 "período"
 
-#: ../../user-guide/concepts/estimates.rst:340
+#: ../../user-guide/concepts/estimates.rst:336
 msgid "**Options:**"
 msgstr "**Opciones:**"
 
-#: ../../user-guide/concepts/estimates.rst:342
+#: ../../user-guide/concepts/estimates.rst:338
 msgid ""
 "**Skip estimate:** Don't create estimate for period (creates gap in "
 "numbering)"
@@ -675,11 +666,11 @@ msgstr ""
 "**Omitir estimación:** No cree una estimación para el período (crea una "
 "brecha en la numeración)"
 
-#: ../../user-guide/concepts/estimates.rst:343
+#: ../../user-guide/concepts/estimates.rst:339
 msgid "**Zero estimate:** Create estimate with explanation in notes"
 msgstr "**Estimación cero:** Crear estimación con explicación en notas"
 
-#: ../../user-guide/concepts/estimates.rst:345
+#: ../../user-guide/concepts/estimates.rst:341
 msgid ""
 "**Recommendation:** Create zero estimate with notes explaining delay for "
 "complete audit trail."
@@ -687,139 +678,138 @@ msgstr ""
 "**Recomendación:** Cree una estimación cero con notas que expliquen el "
 "retraso para completar el seguimiento de auditoría."
 
-#: ../../user-guide/concepts/estimates.rst:348
+#: ../../user-guide/concepts/estimates.rst:344
 msgid "Scenario 3: Over-Billing Prevention"
 msgstr "Escenario 3: Prevención de sobrefacturación"
 
-#: ../../user-guide/concepts/estimates.rst:350
-msgid ""
-"**Situation:** Trying to bill 200 m³ but only 150 m³ remain on contract"
-msgstr ""
-"**Situación:** Intento facturar 200 m³ pero solo quedan 150 m³ en contrato"
+#: ../../user-guide/concepts/estimates.rst:346
+msgid "**Situation:** Trying to bill 200 m³ but only 150 m³ remain on contract"
+msgstr "**Situación:** Intento facturar 200 m³ pero solo quedan 150 m³ en contrato"
 
-#: ../../user-guide/concepts/estimates.rst:352
+#: ../../user-guide/concepts/estimates.rst:348
 msgid "**System Behavior:**"
 msgstr "**Comportamiento del sistema:**"
 
-#: ../../user-guide/concepts/estimates.rst:354
+#: ../../user-guide/concepts/estimates.rst:350
 msgid "Warning displayed when quantity exceeds remaining"
 msgstr "Advertencia mostrada cuando la cantidad excede el resto"
 
-#: ../../user-guide/concepts/estimates.rst:355
+#: ../../user-guide/concepts/estimates.rst:351
 msgid "Can still save if justified (change orders, variations)"
 msgstr ""
 "Todavía se puede guardar si está justificado (órdenes de cambio, "
 "variaciones)"
 
-#: ../../user-guide/concepts/estimates.rst:356
+#: ../../user-guide/concepts/estimates.rst:352
 msgid "Flags for review"
 msgstr "Banderas para revisión"
 
-#: ../../user-guide/concepts/estimates.rst:358
+#: ../../user-guide/concepts/estimates.rst:354
 msgid "**Resolution:**"
 msgstr "**Resolución:**"
 
-#: ../../user-guide/concepts/estimates.rst:360
+#: ../../user-guide/concepts/estimates.rst:356
 msgid "Adjust quantity to 150 m³, or"
 msgstr "Ajustar la cantidad a 150 m³, o"
 
-#: ../../user-guide/concepts/estimates.rst:361
+#: ../../user-guide/concepts/estimates.rst:357
 msgid "Create change order to increase contract quantity first"
 msgstr "Crear orden de cambio para aumentar la cantidad del contrato primero"
 
-#: ../../user-guide/concepts/estimates.rst:364
+#: ../../user-guide/concepts/estimates.rst:360
 msgid "Troubleshooting"
 msgstr "Solución de problemas"
 
-#: ../../user-guide/concepts/estimates.rst:366
+#: ../../user-guide/concepts/estimates.rst:362
 msgid "**Can't create estimate:**"
 msgstr "**No se puede crear una estimación:**"
 
-#: ../../user-guide/concepts/estimates.rst:368
+#: ../../user-guide/concepts/estimates.rst:364
 msgid "Verify contract has concepts in catalog"
 msgstr "Verificar que el contrato tenga conceptos en el catálogo."
 
-#: ../../user-guide/concepts/estimates.rst:369
+#: ../../user-guide/concepts/estimates.rst:365
 msgid "Check contract status is active"
 msgstr "Comprobar que el estado del contrato está activo"
 
-#: ../../user-guide/concepts/estimates.rst:370
+#: ../../user-guide/concepts/estimates.rst:366
 msgid "Confirm user has permission level (Coordinador or higher)"
-msgstr ""
-"Confirmar que el usuario tiene nivel de permiso (Coordinador o superior)"
+msgstr "Confirmar que el usuario tiene nivel de permiso (Coordinador o superior)"
 
-#: ../../user-guide/concepts/estimates.rst:372
+#: ../../user-guide/concepts/estimates.rst:368
 msgid "**Quantities not calculating:**"
 msgstr "**Cantidades no calculadas:**"
 
-#: ../../user-guide/concepts/estimates.rst:374
+#: ../../user-guide/concepts/estimates.rst:370
 msgid "Ensure unit prices are set on contract concepts"
 msgstr ""
 "Garantizar que los precios unitarios se establezcan en los conceptos del "
 "contrato."
 
-#: ../../user-guide/concepts/estimates.rst:375
+#: ../../user-guide/concepts/estimates.rst:371
 msgid "Verify previous estimates are saved and approved"
 msgstr "Verificar que las estimaciones anteriores estén guardadas y aprobadas"
 
-#: ../../user-guide/concepts/estimates.rst:376
+#: ../../user-guide/concepts/estimates.rst:372
 msgid "Check for database sync issues (rare)"
-msgstr ""
-"Verifique si hay problemas de sincronización de la base de datos (raro)"
+msgstr "Verifique si hay problemas de sincronización de la base de datos (raro)"
 
-#: ../../user-guide/concepts/estimates.rst:378
+#: ../../user-guide/concepts/estimates.rst:374
 msgid "**Retentions incorrect:**"
 msgstr "**Retenciones incorrectas:**"
 
-#: ../../user-guide/concepts/estimates.rst:380
+#: ../../user-guide/concepts/estimates.rst:376
 msgid "Review retention configuration on contract"
 msgstr "Revisar la configuración de retención en el contrato"
 
-#: ../../user-guide/concepts/estimates.rst:381
+#: ../../user-guide/concepts/estimates.rst:377
 msgid "Verify retention percentages are current"
 msgstr "Verificar que los porcentajes de retención estén actualizados"
 
-#: ../../user-guide/concepts/estimates.rst:382
+#: ../../user-guide/concepts/estimates.rst:378
 msgid "Check if retentions should apply to this estimate type"
 msgstr "Compruebe si se deben aplicar retenciones a este tipo de estimación"
 
-#: ../../user-guide/concepts/estimates.rst:384
+#: ../../user-guide/concepts/estimates.rst:380
 msgid "**PDF generation fails:**"
 msgstr "**La generación de PDF falla:**"
 
-#: ../../user-guide/concepts/estimates.rst:386
+#: ../../user-guide/concepts/estimates.rst:382
 msgid "Verify template files exist"
 msgstr "Verificar que existan archivos de plantilla"
 
-#: ../../user-guide/concepts/estimates.rst:387
+#: ../../user-guide/concepts/estimates.rst:383
 msgid "Check media storage permissions"
 msgstr "Verifique los permisos de almacenamiento de medios"
 
-#: ../../user-guide/concepts/estimates.rst:388
+#: ../../user-guide/concepts/estimates.rst:384
 msgid "Review error logs for specific issue"
 msgstr "Revisar los registros de errores para problemas específicos"
 
-#: ../../user-guide/concepts/estimates.rst:391
+#: ../../user-guide/concepts/estimates.rst:387
 msgid "See Also"
 msgstr "Ver también"
 
-#: ../../user-guide/concepts/estimates.rst:393
+#: ../../user-guide/concepts/estimates.rst:389
 msgid ":doc:`projects-contracts` - Parent contracts"
 msgstr ""
 
-#: ../../user-guide/concepts/estimates.rst:394
+#: ../../user-guide/concepts/estimates.rst:390
 msgid ":doc:`concepts-line-items` - Understanding concepts"
 msgstr ""
 
-#: ../../user-guide/concepts/estimates.rst:395
+#: ../../user-guide/concepts/estimates.rst:391
 msgid ":doc:`retentions` - Withholdings and releases"
 msgstr ""
 
-#: ../../user-guide/concepts/estimates.rst:396
-msgid ""
-":doc:`/user-guide/workflows/managing-estimates` - Estimate workflow guide"
+#: ../../user-guide/concepts/estimates.rst:392
+msgid ":doc:`/user-guide/workflows/managing-estimates` - Estimate workflow guide"
 msgstr ""
 
-#: ../../user-guide/concepts/estimates.rst:397
+#: ../../user-guide/concepts/estimates.rst:393
 msgid ":doc:`/_glossary/domain-terms` - Complete terminology"
 msgstr ""
+
+#~ msgid "Table of Contents"
+#~ msgstr "Tabla de contenido"
+

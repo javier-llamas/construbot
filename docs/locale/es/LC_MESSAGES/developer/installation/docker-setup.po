@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: es <LL@li.org>\n"
 "Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/installation/docker-setup.rst:3
@@ -24,17 +24,12 @@ msgid "Docker Setup"
 msgstr "Configuración de la ventana acoplable"
 
 #: ../../developer/installation/docker-setup.rst:5
-msgid ""
-"Complete guide to setting up Construbot with Docker for local development."
+msgid "Complete guide to setting up Construbot with Docker for local development."
 msgstr ""
 "Guía completa para configurar Construbot con Docker para el desarrollo "
 "local."
 
-#: ../../developer/installation/docker-setup.rst:9
-msgid "Table of Contents"
-msgstr "Tabla de contenido"
-
-#: ../../developer/installation/docker-setup.rst:12
+#: ../../developer/installation/docker-setup.rst:8
 msgid ""
 "**Recommended Method:** Docker provides the easiest and most consistent "
 "development environment across all platforms."
@@ -42,90 +37,91 @@ msgstr ""
 "**Método recomendado:** Docker proporciona el entorno de desarrollo más "
 "sencillo y consistente en todas las plataformas."
 
-#: ../../developer/installation/docker-setup.rst:15
+#: ../../developer/installation/docker-setup.rst:11
 msgid "Overview"
 msgstr "Descripción general"
 
-#: ../../developer/installation/docker-setup.rst:17
+#: ../../developer/installation/docker-setup.rst:13
 msgid "The Docker development environment includes:"
 msgstr "El entorno de desarrollo Docker incluye:"
 
-#: ../../developer/installation/docker-setup.rst:19
+#: ../../developer/installation/docker-setup.rst:15
 msgid "**Django:** Web application (port 8000)"
 msgstr "**Django:** Aplicación web (puerto 8000)"
 
-#: ../../developer/installation/docker-setup.rst:20
+#: ../../developer/installation/docker-setup.rst:16
 msgid "**PostgreSQL:** Database (port 5432)"
 msgstr "**PostgreSQL:** Base de datos (puerto 5432)"
 
-#: ../../developer/installation/docker-setup.rst:21
+#: ../../developer/installation/docker-setup.rst:17
 msgid "**Redis:** Cache and Celery broker (port 6379)"
 msgstr "**Redis:** Agente de caché y apio (puerto 6379)"
 
-#: ../../developer/installation/docker-setup.rst:22
+#: ../../developer/installation/docker-setup.rst:18
 msgid "**MailHog:** Email testing interface (port 8025)"
 msgstr "**MailHog:** Interfaz de prueba de correo electrónico (puerto 8025)"
 
-#: ../../developer/installation/docker-setup.rst:23
+#: ../../developer/installation/docker-setup.rst:19
 msgid "**Celery Worker:** Background task processing"
 msgstr "**Trabajador de apio:** Procesamiento de tareas en segundo plano"
 
-#: ../../developer/installation/docker-setup.rst:25
+#: ../../developer/installation/docker-setup.rst:21
 msgid ""
-"All services are orchestrated using Docker Compose with automatic dependency"
-" management."
+"All services are orchestrated using Docker Compose with automatic "
+"dependency management."
 msgstr ""
 "Todos los servicios se organizan mediante Docker Compose con gestión "
 "automática de dependencias."
 
-#: ../../developer/installation/docker-setup.rst:28
+#: ../../developer/installation/docker-setup.rst:24
 msgid "Installation"
 msgstr "Instalación"
 
-#: ../../developer/installation/docker-setup.rst:31
+#: ../../developer/installation/docker-setup.rst:27
 msgid "Step 1: Install Docker Desktop"
 msgstr "Paso 1: instale el escritorio Docker"
 
-#: ../../developer/installation/docker-setup.rst:33
+#: ../../developer/installation/docker-setup.rst:29
 msgid "**macOS:**"
 msgstr "**macOS:**"
 
-#: ../../developer/installation/docker-setup.rst:42
+#: ../../developer/installation/docker-setup.rst:38
 msgid "**Windows:**"
 msgstr "**Windows:**"
 
-#: ../../developer/installation/docker-setup.rst:44
+#: ../../developer/installation/docker-setup.rst:40
 msgid ""
-"Download Docker Desktop from https://www.docker.com/products/docker-desktop"
+"Download Docker Desktop from https://www.docker.com/products/docker-"
+"desktop"
 msgstr ""
 "Descargue Docker Desktop desde https://www.docker.com/products/docker-"
 "desktop"
 
-#: ../../developer/installation/docker-setup.rst:46
+#: ../../developer/installation/docker-setup.rst:42
 msgid "**Linux (Ubuntu/Debian):**"
 msgstr "**Linux (Ubuntu/Debian):**"
 
-#: ../../developer/installation/docker-setup.rst:61
+#: ../../developer/installation/docker-setup.rst:57
 msgid "**Verify installation:**"
 msgstr "**Verificar instalación:**"
 
-#: ../../developer/installation/docker-setup.rst:72
+#: ../../developer/installation/docker-setup.rst:68
 msgid "Step 2: Clone Repository"
 msgstr "Paso 2: clonar repositorio"
 
-#: ../../developer/installation/docker-setup.rst:80
+#: ../../developer/installation/docker-setup.rst:76
 msgid "Step 3: Build and Start"
 msgstr "Paso 3: construir y comenzar"
 
-#: ../../developer/installation/docker-setup.rst:82
+#: ../../developer/installation/docker-setup.rst:78
 msgid "The project includes a Makefile with convenient commands:"
 msgstr "El proyecto incluye un Makefile con comandos convenientes:"
 
-#: ../../developer/installation/docker-setup.rst:89
+#: ../../developer/installation/docker-setup.rst:85
 msgid "This command:"
 msgstr "Este comando:"
 
-#: ../../developer/installation/docker-setup.rst:91
+#: ../../developer/installation/docker-setup.rst:87
 msgid ""
 "Modifies ``.env`` to set "
 "``DJANGO_SETTINGS_MODULE=construbot.config.settings.local``"
@@ -133,587 +129,590 @@ msgstr ""
 "Modifica ``.env`` para establecer "
 "``DJANGO_SETTINGS_MODULE=construbot.config.settings.local``"
 
-#: ../../developer/installation/docker-setup.rst:92
+#: ../../developer/installation/docker-setup.rst:88
 msgid "Sets ``DJANGO_DEBUG=True``"
 msgstr "Establece ``DJANGO_DEBUG=True``"
 
-#: ../../developer/installation/docker-setup.rst:93
+#: ../../developer/installation/docker-setup.rst:89
 msgid "Builds Docker images"
 msgstr "Crea imágenes de Docker"
 
-#: ../../developer/installation/docker-setup.rst:94
+#: ../../developer/installation/docker-setup.rst:90
 msgid "Starts all services (postgres, redis, mailhog, django)"
 msgstr "Inicia todos los servicios (postgres, redis, mailhog, django)"
 
-#: ../../developer/installation/docker-setup.rst:95
+#: ../../developer/installation/docker-setup.rst:91
 msgid "Runs database migrations"
 msgstr "Ejecuta migraciones de bases de datos."
 
-#: ../../developer/installation/docker-setup.rst:96
+#: ../../developer/installation/docker-setup.rst:92
 msgid "Collects static files"
 msgstr "Recopila archivos estáticos"
 
-#: ../../developer/installation/docker-setup.rst:98
+#: ../../developer/installation/docker-setup.rst:94
 msgid "**Expected output:**"
 msgstr "**Resultado esperado:**"
 
-#: ../../developer/installation/docker-setup.rst:115
+#: ../../developer/installation/docker-setup.rst:111
 msgid "Step 4: Create Superuser"
 msgstr "Paso 4: crear superusuario"
 
-#: ../../developer/installation/docker-setup.rst:121
+#: ../../developer/installation/docker-setup.rst:117
 msgid "You'll be prompted for:"
 msgstr "Se le solicitará:"
 
-#: ../../developer/installation/docker-setup.rst:123
+#: ../../developer/installation/docker-setup.rst:119
 msgid "**Email:** Your admin email (used for login)"
 msgstr ""
-"**Correo electrónico:** Su correo electrónico de administrador (utilizado "
-"para iniciar sesión)"
+"**Correo electrónico:** Su correo electrónico de administrador (utilizado"
+" para iniciar sesión)"
 
-#: ../../developer/installation/docker-setup.rst:124
+#: ../../developer/installation/docker-setup.rst:120
 msgid "**Password:** Secure password"
 msgstr "**Contraseña:** Contraseña segura"
 
-#: ../../developer/installation/docker-setup.rst:125
+#: ../../developer/installation/docker-setup.rst:121
 msgid "**Password (again):** Confirmation"
 msgstr "**Contraseña (nuevamente):** Confirmación"
 
-#: ../../developer/installation/docker-setup.rst:135
+#: ../../developer/installation/docker-setup.rst:131
 msgid "Step 5: Access Application"
 msgstr "Paso 5: Acceder a la Aplicación"
 
-#: ../../developer/installation/docker-setup.rst:137
+#: ../../developer/installation/docker-setup.rst:133
 msgid "Open your browser to:"
 msgstr "Abra su navegador para:"
 
-#: ../../developer/installation/docker-setup.rst:139
+#: ../../developer/installation/docker-setup.rst:135
 msgid "**Django Application:** http://localhost:8000"
 msgstr "**Aplicación Django:** http://localhost:8000"
 
-#: ../../developer/installation/docker-setup.rst:140
+#: ../../developer/installation/docker-setup.rst:136
 msgid "**MailHog Interface:** http://localhost:8025 (email testing)"
 msgstr ""
 "**Interfaz de MailHog:** http://localhost:8025 (prueba de correo "
 "electrónico)"
 
-#: ../../developer/installation/docker-setup.rst:142
+#: ../../developer/installation/docker-setup.rst:138
 msgid "Login with the superuser credentials you just created."
-msgstr ""
-"Inicie sesión con las credenciales de superusuario que acaba de crear."
+msgstr "Inicie sesión con las credenciales de superusuario que acaba de crear."
 
-#: ../../developer/installation/docker-setup.rst:145
+#: ../../developer/installation/docker-setup.rst:141
 msgid "Docker Compose Configuration"
 msgstr "Configuración de composición de Docker"
 
-#: ../../developer/installation/docker-setup.rst:147
+#: ../../developer/installation/docker-setup.rst:143
 msgid "The project uses ``docker-compose.yml`` for service orchestration."
 msgstr ""
 "El proyecto utiliza ``docker-compose.yml`` para la orquestación de "
 "servicios."
 
-#: ../../developer/installation/docker-setup.rst:150
+#: ../../developer/installation/docker-setup.rst:146
 msgid "Services Overview"
 msgstr "Descripción general de los servicios"
 
-#: ../../developer/installation/docker-setup.rst:152
+#: ../../developer/installation/docker-setup.rst:148
 msgid "**django:**"
 msgstr "**Django:**"
 
-#: ../../developer/installation/docker-setup.rst:174
+#: ../../developer/installation/docker-setup.rst:170
 msgid "Runs Django development server with auto-reload"
 msgstr "Ejecuta el servidor de desarrollo Django con recarga automática."
 
-#: ../../developer/installation/docker-setup.rst:175
+#: ../../developer/installation/docker-setup.rst:171
 msgid "Mounts current directory for live code changes"
 msgstr "Monta el directorio actual para cambios de código en vivo"
 
-#: ../../developer/installation/docker-setup.rst:176
+#: ../../developer/installation/docker-setup.rst:172
 msgid "Exposes port 8000"
 msgstr "Expone el puerto 8000"
 
-#: ../../developer/installation/docker-setup.rst:178
+#: ../../developer/installation/docker-setup.rst:174
 msgid "**postgres:**"
 msgstr "**postgres:**"
 
-#: ../../developer/installation/docker-setup.rst:194
+#: ../../developer/installation/docker-setup.rst:190
 msgid "Uses PostgreSQL 12 with Alpine Linux"
 msgstr "Utiliza PostgreSQL 12 con Alpine Linux"
 
-#: ../../developer/installation/docker-setup.rst:195
+#: ../../developer/installation/docker-setup.rst:191
 msgid "Persistent data in named volume"
 msgstr "Datos persistentes en volumen con nombre"
 
-#: ../../developer/installation/docker-setup.rst:196
+#: ../../developer/installation/docker-setup.rst:192
 msgid "Default development credentials"
 msgstr "Credenciales de desarrollo predeterminadas"
 
-#: ../../developer/installation/docker-setup.rst:198
+#: ../../developer/installation/docker-setup.rst:194
 msgid "**redis:**"
 msgstr "**redis:**"
 
-#: ../../developer/installation/docker-setup.rst:206
+#: ../../developer/installation/docker-setup.rst:202
 msgid "Redis 6 for caching and Celery broker"
 msgstr "Redis 6 para almacenamiento en caché y corredor de apio"
 
-#: ../../developer/installation/docker-setup.rst:207
+#: ../../developer/installation/docker-setup.rst:203
 msgid "No persistence configured (development only)"
 msgstr "No hay persistencia configurada (solo desarrollo)"
 
-#: ../../developer/installation/docker-setup.rst:209
+#: ../../developer/installation/docker-setup.rst:205
 msgid "**mailhog:**"
 msgstr "**correo:**"
 
-#: ../../developer/installation/docker-setup.rst:219
+#: ../../developer/installation/docker-setup.rst:215
 msgid "Catches all outgoing emails"
 msgstr "Capta todos los correos electrónicos salientes"
 
-#: ../../developer/installation/docker-setup.rst:220
+#: ../../developer/installation/docker-setup.rst:216
 msgid "Web UI at http://localhost:8025"
 msgstr "Interfaz de usuario web en http://localhost:8025"
 
-#: ../../developer/installation/docker-setup.rst:223
+#: ../../developer/installation/docker-setup.rst:219
 msgid "Environment Configuration"
 msgstr "Configuración del entorno"
 
-#: ../../developer/installation/docker-setup.rst:225
+#: ../../developer/installation/docker-setup.rst:221
 msgid "The ``.env`` file controls environment-specific settings."
 msgstr "El archivo ``.env`` controla la configuración específica del entorno."
 
-#: ../../developer/installation/docker-setup.rst:228
+#: ../../developer/installation/docker-setup.rst:224
 msgid "Development Environment Variables"
 msgstr "Variables del entorno de desarrollo"
 
-#: ../../developer/installation/docker-setup.rst:230
+#: ../../developer/installation/docker-setup.rst:226
 msgid "When you run ``make buildev``, these are set automatically:"
 msgstr "Cuando ejecuta ``make buildev``, estos se configuran automáticamente:"
 
-#: ../../developer/installation/docker-setup.rst:258
+#: ../../developer/installation/docker-setup.rst:254
 msgid "Manual Configuration"
 msgstr "Configuración manual"
 
-#: ../../developer/installation/docker-setup.rst:260
+#: ../../developer/installation/docker-setup.rst:256
 msgid "To customize settings, edit ``.env``:"
 msgstr "Para personalizar la configuración, edite ``.env``:"
 
-#: ../../developer/installation/docker-setup.rst:270
+#: ../../developer/installation/docker-setup.rst:266
 msgid "See :doc:`configuration` for complete variable reference."
 msgstr ""
-"Consulte :doc:`configuration` para obtener una referencia completa de las "
-"variables."
+"Consulte :doc:`configuration` para obtener una referencia completa de las"
+" variables."
 
-#: ../../developer/installation/docker-setup.rst:273
+#: ../../developer/installation/docker-setup.rst:269
 msgid "Development Workflow"
 msgstr "Flujo de trabajo de desarrollo"
 
-#: ../../developer/installation/docker-setup.rst:276
+#: ../../developer/installation/docker-setup.rst:272
 msgid "Starting the Environment"
 msgstr "Iniciando el entorno"
 
-#: ../../developer/installation/docker-setup.rst:286
+#: ../../developer/installation/docker-setup.rst:282
 msgid "**This starts services without rebuilding.** Use when:"
 msgstr "**Esto inicia los servicios sin reconstruir.** Úselo cuando:"
 
-#: ../../developer/installation/docker-setup.rst:288
+#: ../../developer/installation/docker-setup.rst:284
 msgid "You've already run ``make buildev``"
 msgstr "Ya has ejecutado ``make buildev``"
 
-#: ../../developer/installation/docker-setup.rst:289
+#: ../../developer/installation/docker-setup.rst:285
 msgid "No dependencies have changed"
 msgstr "Ninguna dependencia ha cambiado."
 
-#: ../../developer/installation/docker-setup.rst:290
+#: ../../developer/installation/docker-setup.rst:286
 msgid "You just want to start the containers"
 msgstr "Solo quieres iniciar los contenedores."
 
-#: ../../developer/installation/docker-setup.rst:293
+#: ../../developer/installation/docker-setup.rst:289
 msgid "Stopping the Environment"
 msgstr "Detener el medio ambiente"
 
-#: ../../developer/installation/docker-setup.rst:303
+#: ../../developer/installation/docker-setup.rst:299
 msgid "Database Migrations"
 msgstr "Migraciones de bases de datos"
 
-#: ../../developer/installation/docker-setup.rst:315
+#: ../../developer/installation/docker-setup.rst:311
 msgid "Accessing Django Shell"
 msgstr "Accediendo a Django Shell"
 
-#: ../../developer/installation/docker-setup.rst:332
+#: ../../developer/installation/docker-setup.rst:328
 msgid "Running Management Commands"
 msgstr "Ejecución de comandos de gestión"
 
-#: ../../developer/installation/docker-setup.rst:343
+#: ../../developer/installation/docker-setup.rst:339
 msgid "Viewing Logs"
 msgstr "Ver registros"
 
-#: ../../developer/installation/docker-setup.rst:357
+#: ../../developer/installation/docker-setup.rst:353
 msgid "Rebuilding Images"
 msgstr "Reconstrucción de imágenes"
 
-#: ../../developer/installation/docker-setup.rst:367
+#: ../../developer/installation/docker-setup.rst:363
 msgid "**When to rebuild:**"
 msgstr "**Cuándo reconstruir:**"
 
-#: ../../developer/installation/docker-setup.rst:369
+#: ../../developer/installation/docker-setup.rst:365
 msgid "After changing ``requirements/*.txt``"
 msgstr "Después de cambiar ``requisitos/*.txt``"
 
-#: ../../developer/installation/docker-setup.rst:370
+#: ../../developer/installation/docker-setup.rst:366
 msgid "After modifying Dockerfiles"
 msgstr "Después de modificar Dockerfiles"
 
-#: ../../developer/installation/docker-setup.rst:371
+#: ../../developer/installation/docker-setup.rst:367
 msgid "After pulling updates from git with dependency changes"
 msgstr "Después de extraer actualizaciones de git con cambios de dependencia"
 
-#: ../../developer/installation/docker-setup.rst:374
+#: ../../developer/installation/docker-setup.rst:370
 msgid "Testing in Docker"
 msgstr "Pruebas en Docker"
 
-#: ../../developer/installation/docker-setup.rst:377
+#: ../../developer/installation/docker-setup.rst:373
 msgid "Running Tests"
 msgstr "Ejecución de pruebas"
 
-#: ../../developer/installation/docker-setup.rst:391
+#: ../../developer/installation/docker-setup.rst:387
 msgid "Test Configuration"
 msgstr "Configuración de prueba"
 
-#: ../../developer/installation/docker-setup.rst:393
+#: ../../developer/installation/docker-setup.rst:389
 msgid "Tests use ``construbot.config.settings.test`` which:"
 msgstr "Las pruebas utilizan ``construbot.config.settings.test`` que:"
 
-#: ../../developer/installation/docker-setup.rst:395
+#: ../../developer/installation/docker-setup.rst:391
 msgid "Uses an in-memory SQLite database (faster)"
 msgstr "Utiliza una base de datos SQLite en memoria (más rápida)"
 
-#: ../../developer/installation/docker-setup.rst:396
+#: ../../developer/installation/docker-setup.rst:392
 msgid "Disables migrations for speed"
 msgstr "Desactiva las migraciones para mayor velocidad."
 
-#: ../../developer/installation/docker-setup.rst:397
+#: ../../developer/installation/docker-setup.rst:393
 msgid "Configures test-specific settings"
 msgstr "Configura ajustes específicos de la prueba"
 
-#: ../../developer/installation/docker-setup.rst:399
+#: ../../developer/installation/docker-setup.rst:395
 msgid "See :doc:`/contributor/testing/running-tests` for more details."
 msgstr ""
 "Consulte :doc:`/contributor/testing/running-tests` para obtener más "
 "detalles."
 
-#: ../../developer/installation/docker-setup.rst:402
+#: ../../developer/installation/docker-setup.rst:398
 msgid "Cleanup and Reset"
 msgstr "Limpieza y reinicio"
 
-#: ../../developer/installation/docker-setup.rst:405
+#: ../../developer/installation/docker-setup.rst:401
 msgid "Remove Containers"
 msgstr "Quitar contenedores"
 
-#: ../../developer/installation/docker-setup.rst:415
+#: ../../developer/installation/docker-setup.rst:411
 msgid "**This preserves:**"
 msgstr "**Esto preserva:**"
 
-#: ../../developer/installation/docker-setup.rst:417
+#: ../../developer/installation/docker-setup.rst:413
 msgid "Database data (in volume)"
 msgstr "Datos de la base de datos (en volumen)"
 
-#: ../../developer/installation/docker-setup.rst:418
+#: ../../developer/installation/docker-setup.rst:414
 msgid "Built images"
 msgstr "Imágenes construidas"
 
-#: ../../developer/installation/docker-setup.rst:421
+#: ../../developer/installation/docker-setup.rst:417
 msgid "Reset Database"
 msgstr "Restablecer base de datos"
 
-#: ../../developer/installation/docker-setup.rst:432
+#: ../../developer/installation/docker-setup.rst:428
 msgid "**Warning:** This deletes all data!"
 msgstr "**Advertencia:** ¡Esto elimina todos los datos!"
 
-#: ../../developer/installation/docker-setup.rst:435
+#: ../../developer/installation/docker-setup.rst:431
 msgid "Complete Cleanup"
 msgstr "Limpieza completa"
 
-#: ../../developer/installation/docker-setup.rst:442
+#: ../../developer/installation/docker-setup.rst:438
 msgid "**Warning:** This removes:"
 msgstr "**Advertencia:** Esto elimina:"
 
-#: ../../developer/installation/docker-setup.rst:444
+#: ../../developer/installation/docker-setup.rst:440
 msgid "All containers"
 msgstr "Todos los contenedores"
 
-#: ../../developer/installation/docker-setup.rst:445
+#: ../../developer/installation/docker-setup.rst:441
 msgid "All volumes (database data)"
 msgstr "Todos los volúmenes (datos de la base de datos)"
 
-#: ../../developer/installation/docker-setup.rst:446
+#: ../../developer/installation/docker-setup.rst:442
 msgid "All built images"
 msgstr "Todas las imágenes construidas"
 
-#: ../../developer/installation/docker-setup.rst:447
+#: ../../developer/installation/docker-setup.rst:443
 msgid "You'll need to run ``make buildev`` to start fresh"
 msgstr "Necesitará ejecutar ``make buildev`` para comenzar de nuevo"
 
-#: ../../developer/installation/docker-setup.rst:450
+#: ../../developer/installation/docker-setup.rst:446
 msgid "Troubleshooting"
 msgstr "Solución de problemas"
 
-#: ../../developer/installation/docker-setup.rst:453
+#: ../../developer/installation/docker-setup.rst:449
 msgid "Port Conflicts"
 msgstr "Conflictos portuarios"
 
-#: ../../developer/installation/docker-setup.rst:455
+#: ../../developer/installation/docker-setup.rst:451
 msgid "**Error:** \"Port 8000 is already allocated\""
 msgstr "**Error:** \"El puerto 8000 ya está asignado\""
 
-#: ../../developer/installation/docker-setup.rst:457
+#: ../../developer/installation/docker-setup.rst:453
 msgid "**Solution 1:** Stop conflicting service"
 msgstr "**Solución 1:** Detener el servicio conflictivo"
 
-#: ../../developer/installation/docker-setup.rst:467
+#: ../../developer/installation/docker-setup.rst:463
 msgid "**Solution 2:** Change port in ``docker-compose.yml``"
 msgstr "**Solución 2:** Cambiar puerto en ``docker-compose.yml``"
 
-#: ../../developer/installation/docker-setup.rst:475
+#: ../../developer/installation/docker-setup.rst:471
 msgid "Then access at http://localhost:8001"
 msgstr "Luego acceda a http://localhost:8001"
 
-#: ../../developer/installation/docker-setup.rst:478
+#: ../../developer/installation/docker-setup.rst:474
 msgid "Container Won't Start"
 msgstr "El contenedor no arranca"
 
-#: ../../developer/installation/docker-setup.rst:480
+#: ../../developer/installation/docker-setup.rst:476
 msgid "**Check logs:**"
 msgstr "**Verificar registros:**"
 
-#: ../../developer/installation/docker-setup.rst:486
+#: ../../developer/installation/docker-setup.rst:482
 msgid "**Common issues:**"
 msgstr "**Problemas comunes:**"
 
-#: ../../developer/installation/docker-setup.rst:488
+#: ../../developer/installation/docker-setup.rst:484
 msgid "**Database not ready:** Wait a few seconds, Django will retry"
 msgstr ""
-"**La base de datos no está lista:** Espere unos segundos, Django lo volverá "
-"a intentar"
+"**La base de datos no está lista:** Espere unos segundos, Django lo "
+"volverá a intentar"
 
-#: ../../developer/installation/docker-setup.rst:489
+#: ../../developer/installation/docker-setup.rst:485
 msgid "**Migration errors:** Run ``make migrations``"
 msgstr "**Errores de migración:** Ejecute ``realizar migraciones``"
 
-#: ../../developer/installation/docker-setup.rst:490
+#: ../../developer/installation/docker-setup.rst:486
 msgid "**Missing dependencies:** Run ``make buildev`` to rebuild"
 msgstr "**Dependencias faltantes:** Ejecute ``make buildev`` para reconstruir"
 
-#: ../../developer/installation/docker-setup.rst:493
+#: ../../developer/installation/docker-setup.rst:489
 msgid "Volume Permission Issues"
 msgstr "Problemas de permisos de volumen"
 
-#: ../../developer/installation/docker-setup.rst:495
+#: ../../developer/installation/docker-setup.rst:491
 msgid "**Error:** \"Permission denied\" when accessing files"
 msgstr "**Error:** \"Permiso denegado\" al acceder a archivos"
 
-#: ../../developer/installation/docker-setup.rst:497
+#: ../../developer/installation/docker-setup.rst:493
 msgid "**Solution (Linux):**"
 msgstr "**Solución (Linux):**"
 
-#: ../../developer/installation/docker-setup.rst:507
+#: ../../developer/installation/docker-setup.rst:503
 msgid "Database Connection Errors"
 msgstr "Errores de conexión a la base de datos"
 
-#: ../../developer/installation/docker-setup.rst:509
+#: ../../developer/installation/docker-setup.rst:505
 msgid "**Error:** \"could not connect to server\""
 msgstr "**Error:** \"no se pudo conectar al servidor\""
 
-#: ../../developer/installation/docker-setup.rst:511
+#: ../../developer/installation/docker-setup.rst:507
 msgid "**Check postgres is running:**"
 msgstr "**Compruebe que Postgres se esté ejecutando:**"
 
-#: ../../developer/installation/docker-setup.rst:517
+#: ../../developer/installation/docker-setup.rst:513
 msgid "**Restart postgres:**"
 msgstr "**Reiniciar postgres:**"
 
-#: ../../developer/installation/docker-setup.rst:523
+#: ../../developer/installation/docker-setup.rst:519
 msgid "**Check DATABASE_URL in .env:**"
 msgstr "**Compruebe DATABASE_URL en .env:**"
 
-#: ../../developer/installation/docker-setup.rst:531
+#: ../../developer/installation/docker-setup.rst:527
 msgid "Out of Disk Space"
 msgstr "Sin espacio en disco"
 
-#: ../../developer/installation/docker-setup.rst:533
+#: ../../developer/installation/docker-setup.rst:529
 msgid "**Error:** \"No space left on device\""
 msgstr "**Error:** \"No queda espacio en el dispositivo\""
 
-#: ../../developer/installation/docker-setup.rst:535
+#: ../../developer/installation/docker-setup.rst:531
 msgid "**Clean up Docker:**"
 msgstr "**Limpiar Docker:**"
 
-#: ../../developer/installation/docker-setup.rst:549
+#: ../../developer/installation/docker-setup.rst:545
 msgid "Advanced Topics"
 msgstr "Temas avanzados"
 
-#: ../../developer/installation/docker-setup.rst:552
+#: ../../developer/installation/docker-setup.rst:548
 msgid "Custom Docker Compose Override"
 msgstr "Anulación de redacción de Docker personalizada"
 
-#: ../../developer/installation/docker-setup.rst:554
+#: ../../developer/installation/docker-setup.rst:550
 msgid "Create ``docker-compose.override.yml`` for local customizations:"
 msgstr "Cree ``docker-compose.override.yml`` para personalizaciones locales:"
 
-#: ../../developer/installation/docker-setup.rst:567
+#: ../../developer/installation/docker-setup.rst:563
 msgid "This file is git-ignored and won't be committed."
 msgstr "Este archivo se ignora por git y no se confirmará."
 
-#: ../../developer/installation/docker-setup.rst:570
+#: ../../developer/installation/docker-setup.rst:566
 msgid "Running Celery Worker"
 msgstr "Trabajador de apio corriendo"
 
-#: ../../developer/installation/docker-setup.rst:572
+#: ../../developer/installation/docker-setup.rst:568
 msgid "The project includes Celery for background tasks. To run a worker:"
 msgstr ""
-"El proyecto incluye Celery para tareas en segundo plano. Para ejecutar un "
-"trabajador:"
+"El proyecto incluye Celery para tareas en segundo plano. Para ejecutar un"
+" trabajador:"
 
-#: ../../developer/installation/docker-setup.rst:579
+#: ../../developer/installation/docker-setup.rst:575
 msgid "Or add to ``docker-compose.yml``:"
 msgstr "O agregue a ``docker-compose.yml``:"
 
-#: ../../developer/installation/docker-setup.rst:593
+#: ../../developer/installation/docker-setup.rst:589
 msgid "Debugging with pdb"
 msgstr "Depurando con pdb"
 
-#: ../../developer/installation/docker-setup.rst:595
+#: ../../developer/installation/docker-setup.rst:591
 msgid "To use Python's debugger:"
 msgstr "Para usar el depurador de Python:"
 
-#: ../../developer/installation/docker-setup.rst:602
+#: ../../developer/installation/docker-setup.rst:598
 msgid "Add breakpoint in code:"
 msgstr "Agregue un punto de interrupción en el código:"
 
-#: ../../developer/installation/docker-setup.rst:608
+#: ../../developer/installation/docker-setup.rst:604
 msgid ""
 "When the breakpoint hits, you'll get an interactive debugger in your "
 "terminal."
 msgstr ""
-"Cuando llegue el punto de interrupción, obtendrá un depurador interactivo en"
-" su terminal."
+"Cuando llegue el punto de interrupción, obtendrá un depurador interactivo"
+" en su terminal."
 
-#: ../../developer/installation/docker-setup.rst:611
+#: ../../developer/installation/docker-setup.rst:607
 msgid "IDE Integration"
 msgstr "Integración IDE"
 
-#: ../../developer/installation/docker-setup.rst:613
+#: ../../developer/installation/docker-setup.rst:609
 msgid "**PyCharm Professional:**"
 msgstr "**PyCharm Profesional:**"
 
-#: ../../developer/installation/docker-setup.rst:615
+#: ../../developer/installation/docker-setup.rst:611
 msgid "Configure Python Interpreter → Docker Compose"
 msgstr "Configurar el intérprete de Python → Docker Compose"
 
-#: ../../developer/installation/docker-setup.rst:616
+#: ../../developer/installation/docker-setup.rst:612
 msgid "Set service: ``django``"
 msgstr "Establecer servicio: ``django``"
 
-#: ../../developer/installation/docker-setup.rst:617
+#: ../../developer/installation/docker-setup.rst:613
 msgid "PyCharm will automatically use the Docker environment"
 msgstr "PyCharm utilizará automáticamente el entorno Docker"
 
-#: ../../developer/installation/docker-setup.rst:619
+#: ../../developer/installation/docker-setup.rst:615
 msgid "**VS Code:**"
 msgstr "**Código VS:**"
 
-#: ../../developer/installation/docker-setup.rst:621
+#: ../../developer/installation/docker-setup.rst:617
 msgid "Install \"Remote - Containers\" extension"
 msgstr "Instalar la extensión \"Remoto - Contenedores\""
 
-#: ../../developer/installation/docker-setup.rst:622
+#: ../../developer/installation/docker-setup.rst:618
 msgid "Create ``.devcontainer/devcontainer.json``"
 msgstr "Crear ``.devcontainer/devcontainer.json``"
 
-#: ../../developer/installation/docker-setup.rst:623
+#: ../../developer/installation/docker-setup.rst:619
 msgid "Reopen in container"
 msgstr "Reabrir en contenedor"
 
-#: ../../developer/installation/docker-setup.rst:625
+#: ../../developer/installation/docker-setup.rst:621
 msgid "**Vim/Neovim:**"
 msgstr "**Vim/Neovim:**"
 
-#: ../../developer/installation/docker-setup.rst:627
+#: ../../developer/installation/docker-setup.rst:623
 msgid "Set up LSP to use Docker:"
 msgstr "Configure LSP para usar Docker:"
 
-#: ../../developer/installation/docker-setup.rst:635
+#: ../../developer/installation/docker-setup.rst:631
 msgid "Performance Optimization"
 msgstr "Optimización del rendimiento"
 
-#: ../../developer/installation/docker-setup.rst:638
+#: ../../developer/installation/docker-setup.rst:634
 msgid "macOS File Sharing"
 msgstr "Compartir archivos macOS"
 
-#: ../../developer/installation/docker-setup.rst:640
+#: ../../developer/installation/docker-setup.rst:636
 msgid "Docker on macOS can be slow with large codebases. Optimize with:"
-msgstr ""
-"Docker en macOS puede ser lento con bases de código grandes. Optimice con:"
+msgstr "Docker en macOS puede ser lento con bases de código grandes. Optimice con:"
 
-#: ../../developer/installation/docker-setup.rst:648
+#: ../../developer/installation/docker-setup.rst:644
 msgid "**consistency modes:**"
 msgstr "**modos de consistencia:**"
 
-#: ../../developer/installation/docker-setup.rst:650
+#: ../../developer/installation/docker-setup.rst:646
 msgid "``cached`` - Host writes are delayed to container (faster reads)"
 msgstr ""
-"``en caché``: las escrituras del host se retrasan en el contenedor (lecturas"
-" más rápidas)"
+"``en caché``: las escrituras del host se retrasan en el contenedor "
+"(lecturas más rápidas)"
 
-#: ../../developer/installation/docker-setup.rst:651
+#: ../../developer/installation/docker-setup.rst:647
 msgid "``delegated`` - Container writes are delayed to host (faster writes)"
 msgstr ""
 "``delegada``: las escrituras del contenedor se retrasan en el host "
 "(escrituras más rápidas)"
 
-#: ../../developer/installation/docker-setup.rst:652
+#: ../../developer/installation/docker-setup.rst:648
 msgid "``consistent`` - Synchronous (default, slowest)"
 msgstr "``consistente`` - Sincrónico (predeterminado, más lento)"
 
-#: ../../developer/installation/docker-setup.rst:655
+#: ../../developer/installation/docker-setup.rst:651
 msgid "Linux Performance"
 msgstr "Rendimiento de Linux"
 
-#: ../../developer/installation/docker-setup.rst:657
+#: ../../developer/installation/docker-setup.rst:653
 msgid "Docker on Linux has native performance, no tuning needed."
 msgstr ""
-"Docker en Linux tiene rendimiento nativo, no es necesario realizar ajustes."
+"Docker en Linux tiene rendimiento nativo, no es necesario realizar "
+"ajustes."
 
-#: ../../developer/installation/docker-setup.rst:660
+#: ../../developer/installation/docker-setup.rst:656
 msgid "Windows (WSL2)"
 msgstr "Ventanas (WSL2)"
 
-#: ../../developer/installation/docker-setup.rst:662
+#: ../../developer/installation/docker-setup.rst:658
 msgid "Use WSL2 backend for best performance:"
 msgstr "Utilice el backend WSL2 para obtener el mejor rendimiento:"
 
-#: ../../developer/installation/docker-setup.rst:664
+#: ../../developer/installation/docker-setup.rst:660
 msgid "Docker Desktop → Settings → General → Use WSL2"
 msgstr "Docker Desktop → Configuración → General → Usar WSL2"
 
-#: ../../developer/installation/docker-setup.rst:665
+#: ../../developer/installation/docker-setup.rst:661
 msgid "Clone repo inside WSL2 filesystem (not /mnt/c/)"
 msgstr "Clonar repositorio dentro del sistema de archivos WSL2 (no /mnt/c/)"
 
-#: ../../developer/installation/docker-setup.rst:668
+#: ../../developer/installation/docker-setup.rst:664
 msgid "See Also"
 msgstr "Ver también"
 
-#: ../../developer/installation/docker-setup.rst:670
+#: ../../developer/installation/docker-setup.rst:666
 msgid ":doc:`local-setup` - Local development without Docker"
 msgstr ""
 
-#: ../../developer/installation/docker-setup.rst:671
+#: ../../developer/installation/docker-setup.rst:667
 msgid ":doc:`configuration` - Environment variable reference"
 msgstr ""
 
-#: ../../developer/installation/docker-setup.rst:672
+#: ../../developer/installation/docker-setup.rst:668
 msgid ":doc:`../deployment/docker-compose` - Production Docker setup"
 msgstr ""
 
-#: ../../developer/installation/docker-setup.rst:673
+#: ../../developer/installation/docker-setup.rst:669
 msgid ":doc:`/reference/makefile-commands` - Complete Makefile reference"
 msgstr ""
+
+#~ msgid "Table of Contents"
+#~ msgstr "Tabla de contenido"
+

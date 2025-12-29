@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: es <LL@li.org>\n"
 "Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/installation/configuration.rst:3
@@ -28,140 +28,136 @@ msgid ""
 "Complete guide to configuring Construbot using environment variables and "
 "settings files."
 msgstr ""
-"Guía completa para configurar Construbot utilizando variables de entorno y "
-"archivos de configuración."
+"Guía completa para configurar Construbot utilizando variables de entorno "
+"y archivos de configuración."
 
-#: ../../developer/installation/configuration.rst:9
-msgid "Table of Contents"
-msgstr "Tabla de contenido"
-
-#: ../../developer/installation/configuration.rst:12
+#: ../../developer/installation/configuration.rst:8
 msgid "Overview"
 msgstr "Descripción general"
 
-#: ../../developer/installation/configuration.rst:14
+#: ../../developer/installation/configuration.rst:10
 msgid "Construbot uses a layered configuration approach:"
 msgstr "Construbot utiliza un enfoque de configuración en capas:"
 
-#: ../../developer/installation/configuration.rst:16
+#: ../../developer/installation/configuration.rst:12
 msgid "**Settings files** - Python modules in ``construbot/config/settings/``"
 msgstr ""
 "**Archivos de configuración** - Módulos de Python en "
 "``construbot/config/settings/``"
 
-#: ../../developer/installation/configuration.rst:17
+#: ../../developer/installation/configuration.rst:13
 msgid ""
-"**Environment variables** - Loaded from ``.env`` file or system environment"
+"**Environment variables** - Loaded from ``.env`` file or system "
+"environment"
 msgstr ""
-"**Variables de entorno** - Cargadas desde el archivo ``.env`` o el entorno "
-"del sistema"
+"**Variables de entorno** - Cargadas desde el archivo ``.env`` o el "
+"entorno del sistema"
 
-#: ../../developer/installation/configuration.rst:18
+#: ../../developer/installation/configuration.rst:14
 msgid "**Runtime configuration** - Django settings controlled by environment"
 msgstr ""
-"**Configuración en tiempo de ejecución**: configuración de Django controlada"
-" por el entorno"
+"**Configuración en tiempo de ejecución**: configuración de Django "
+"controlada por el entorno"
 
-#: ../../developer/installation/configuration.rst:20
+#: ../../developer/installation/configuration.rst:16
 msgid ""
 "This follows the `Twelve-Factor App <https://12factor.net/config>`_ "
 "methodology for configuration management."
 msgstr ""
-"Esto sigue la metodología `Twelve-Factor App <https://12factor.net/config>`_"
-" para la gestión de la configuración."
+"Esto sigue la metodología `Twelve-Factor App "
+"<https://12factor.net/config>`_ para la gestión de la configuración."
 
-#: ../../developer/installation/configuration.rst:23
+#: ../../developer/installation/configuration.rst:19
 msgid "Settings Structure"
 msgstr "Estructura de configuración"
 
-#: ../../developer/installation/configuration.rst:26
+#: ../../developer/installation/configuration.rst:22
 msgid "Settings Files"
 msgstr "Archivos de configuración"
 
-#: ../../developer/installation/configuration.rst:28
+#: ../../developer/installation/configuration.rst:24
 msgid "Located in ``construbot/config/settings/``:"
 msgstr "Ubicado en ``construbot/config/settings/``:"
 
-#: ../../developer/installation/configuration.rst:39
+#: ../../developer/installation/configuration.rst:35
 msgid "**Selection:**"
 msgstr "**Selección:**"
 
-#: ../../developer/installation/configuration.rst:41
-msgid ""
-"The active settings module is controlled by ``DJANGO_SETTINGS_MODULE``:"
+#: ../../developer/installation/configuration.rst:37
+msgid "The active settings module is controlled by ``DJANGO_SETTINGS_MODULE``:"
 msgstr ""
 "El módulo de configuración activo está controlado por "
 "``DJANGO_SETTINGS_MODULE``:"
 
-#: ../../developer/installation/configuration.rst:51
+#: ../../developer/installation/configuration.rst:47
 msgid "**Inheritance:**"
 msgstr "**Herencia:**"
 
-#: ../../developer/installation/configuration.rst:53
+#: ../../developer/installation/configuration.rst:49
 msgid "All environment-specific files inherit from ``base.py``:"
 msgstr "Todos los archivos específicos del entorno heredan de ``base.py``:"
 
-#: ../../developer/installation/configuration.rst:65
+#: ../../developer/installation/configuration.rst:61
 msgid "Environment Variables"
 msgstr "Variables de entorno"
 
-#: ../../developer/installation/configuration.rst:68
+#: ../../developer/installation/configuration.rst:64
 msgid "Loading Variables"
 msgstr "Cargando variables"
 
-#: ../../developer/installation/configuration.rst:70
+#: ../../developer/installation/configuration.rst:66
 msgid "**From .env file (recommended for development):**"
 msgstr "**Desde el archivo .env (recomendado para desarrollo):**"
 
-#: ../../developer/installation/configuration.rst:77
+#: ../../developer/installation/configuration.rst:73
 msgid "Create ``.env`` in project root:"
 msgstr "Cree ``.env`` en la raíz del proyecto:"
 
-#: ../../developer/installation/configuration.rst:86
+#: ../../developer/installation/configuration.rst:82
 msgid "**From system environment:**"
 msgstr "**Desde el entorno del sistema:**"
 
-#: ../../developer/installation/configuration.rst:95
+#: ../../developer/installation/configuration.rst:91
 msgid "**In Docker Compose:**"
 msgstr "**En Docker Compose:**"
 
-#: ../../developer/installation/configuration.rst:108
+#: ../../developer/installation/configuration.rst:104
 msgid "Required Variables"
 msgstr "Variables requeridas"
 
-#: ../../developer/installation/configuration.rst:111
+#: ../../developer/installation/configuration.rst:107
 msgid "Core Configuration"
 msgstr "Configuración central"
 
-#: ../../developer/installation/configuration.rst:113
+#: ../../developer/installation/configuration.rst:109
 msgid "**DJANGO_SETTINGS_MODULE**"
 msgstr "**DJANGO_SETTINGS_MODULE**"
 
-#: ../../developer/installation/configuration.rst:119
+#: ../../developer/installation/configuration.rst:115
 msgid "**Values:**"
 msgstr "**Valores:**"
 
-#: ../../developer/installation/configuration.rst:121
+#: ../../developer/installation/configuration.rst:117
 msgid "``construbot.config.settings.local`` - Development"
 msgstr "``construbot.config.settings.local`` - Desarrollo"
 
-#: ../../developer/installation/configuration.rst:122
+#: ../../developer/installation/configuration.rst:118
 msgid "``construbot.config.settings.test`` - Testing"
 msgstr "``construbot.config.settings.test`` - Pruebas"
 
-#: ../../developer/installation/configuration.rst:123
+#: ../../developer/installation/configuration.rst:119
 msgid "``construbot.config.settings.production`` - Production"
 msgstr "``construbot.config.settings.production`` - Producción"
 
-#: ../../developer/installation/configuration.rst:125
+#: ../../developer/installation/configuration.rst:121
 msgid "**DJANGO_SECRET_KEY**"
 msgstr "**DJANGO_SECRET_KEY**"
 
-#: ../../developer/installation/configuration.rst:131
+#: ../../developer/installation/configuration.rst:127
 msgid "**Generate:**"
 msgstr "**Generar:**"
 
-#: ../../developer/installation/configuration.rst:138
+#: ../../developer/installation/configuration.rst:134
 msgid ""
 "**Never commit SECRET_KEY to version control!** Use different keys for "
 "development and production."
@@ -169,11 +165,11 @@ msgstr ""
 "**¡Nunca envíe SECRET_KEY al control de versiones!** Utilice claves "
 "diferentes para el desarrollo y la producción."
 
-#: ../../developer/installation/configuration.rst:140
+#: ../../developer/installation/configuration.rst:136
 msgid "**DJANGO_DEBUG**"
 msgstr "**DJANGO_DEBUG**"
 
-#: ../../developer/installation/configuration.rst:148
+#: ../../developer/installation/configuration.rst:144
 msgid ""
 "**Always set DEBUG=False in production!** Debug mode exposes sensitive "
 "information."
@@ -181,103 +177,101 @@ msgstr ""
 "**¡Establezca siempre DEBUG=False en producción!** El modo de depuración "
 "expone información confidencial."
 
-#: ../../developer/installation/configuration.rst:151
+#: ../../developer/installation/configuration.rst:147
 msgid "Database Configuration"
 msgstr "Configuración de base de datos"
 
-#: ../../developer/installation/configuration.rst:153
+#: ../../developer/installation/configuration.rst:149
 msgid "**DATABASE_URL**"
 msgstr "**DATABASE_URL**"
 
-#: ../../developer/installation/configuration.rst:170
-msgid ""
-"**Format:** ``postgresql://[user]:[password]@[host]:[port]/[database]``"
+#: ../../developer/installation/configuration.rst:166
+msgid "**Format:** ``postgresql://[user]:[password]@[host]:[port]/[database]``"
 msgstr ""
-"**Formato:** ``postgresql://[usuario]:[contraseña]@[host]:[puerto]/[base de "
-"datos]``"
+"**Formato:** ``postgresql://[usuario]:[contraseña]@[host]:[puerto]/[base "
+"de datos]``"
 
-#: ../../developer/installation/configuration.rst:173
+#: ../../developer/installation/configuration.rst:169
 msgid ""
-"Construbot uses ``django-environ`` to parse ``DATABASE_URL`` into Django's "
-"``DATABASES`` setting."
+"Construbot uses ``django-environ`` to parse ``DATABASE_URL`` into "
+"Django's ``DATABASES`` setting."
 msgstr ""
 "Construbot usa ``django-environ`` para analizar ``DATABASE_URL`` en la "
 "configuración ``DATABASES`` de Django."
 
-#: ../../developer/installation/configuration.rst:176
+#: ../../developer/installation/configuration.rst:172
 msgid "Cache and Queue"
 msgstr "Caché y cola"
 
-#: ../../developer/installation/configuration.rst:178
+#: ../../developer/installation/configuration.rst:174
 msgid "**REDIS_URL**"
 msgstr "**REDIS_URL**"
 
-#: ../../developer/installation/configuration.rst:191
+#: ../../developer/installation/configuration.rst:187
 msgid "**Used for:**"
 msgstr "**Utilizado para:**"
 
-#: ../../developer/installation/configuration.rst:193
+#: ../../developer/installation/configuration.rst:189
 msgid "Django cache backend"
 msgstr "back-end de caché de Django"
 
-#: ../../developer/installation/configuration.rst:194
+#: ../../developer/installation/configuration.rst:190
 msgid "Celery message broker"
 msgstr "Corredor de mensajes de apio"
 
-#: ../../developer/installation/configuration.rst:195
+#: ../../developer/installation/configuration.rst:191
 msgid "Celery result backend"
 msgstr "Backend del resultado del apio"
 
-#: ../../developer/installation/configuration.rst:196
+#: ../../developer/installation/configuration.rst:192
 msgid "Session storage (optional)"
 msgstr "Almacenamiento de sesiones (opcional)"
 
-#: ../../developer/installation/configuration.rst:199
+#: ../../developer/installation/configuration.rst:195
 msgid "Optional Variables"
 msgstr "Variables opcionales"
 
-#: ../../developer/installation/configuration.rst:202
+#: ../../developer/installation/configuration.rst:198
 msgid "Email Configuration"
 msgstr "Configuración de correo electrónico"
 
-#: ../../developer/installation/configuration.rst:204
+#: ../../developer/installation/configuration.rst:200
 msgid "**Development (Console Backend):**"
 msgstr "**Desarrollo (backend de consola):**"
 
-#: ../../developer/installation/configuration.rst:210
+#: ../../developer/installation/configuration.rst:206
 msgid "Emails are printed to console instead of sent."
-msgstr ""
-"Los correos electrónicos se imprimen en la consola en lugar de enviarse."
+msgstr "Los correos electrónicos se imprimen en la consola en lugar de enviarse."
 
-#: ../../developer/installation/configuration.rst:212
+#: ../../developer/installation/configuration.rst:208
 msgid "**Production (SMTP):**"
 msgstr "**Producción (SMTP):**"
 
-#: ../../developer/installation/configuration.rst:223
+#: ../../developer/installation/configuration.rst:219
 msgid "**Using django-anymail (Recommended):**"
 msgstr "**Usando django-anymail (recomendado):**"
 
-#: ../../developer/installation/configuration.rst:242
+#: ../../developer/installation/configuration.rst:238
 msgid "**Default from email:**"
 msgstr "**Predeterminado desde el correo electrónico:**"
 
-#: ../../developer/installation/configuration.rst:250
+#: ../../developer/installation/configuration.rst:246
 msgid "Static and Media Files"
 msgstr "Archivos estáticos y multimedia"
 
-#: ../../developer/installation/configuration.rst:252
+#: ../../developer/installation/configuration.rst:248
 msgid "**Development (default):**"
 msgstr "**Desarrollo (predeterminado):**"
 
-#: ../../developer/installation/configuration.rst:259
+#: ../../developer/installation/configuration.rst:255
 msgid "**Production (S3):**"
 msgstr "**Producción (T3):**"
 
-#: ../../developer/installation/configuration.rst:273
+#: ../../developer/installation/configuration.rst:269
 msgid "**Static files (WhiteNoise):**"
 msgstr "**Archivos estáticos (WhiteNoise):**"
 
-#: ../../developer/installation/configuration.rst:275
+#: ../../developer/installation/configuration.rst:271
 msgid ""
 "No configuration needed. WhiteNoise is enabled by default in production "
 "settings."
@@ -285,344 +279,343 @@ msgstr ""
 "No se necesita configuración. WhiteNoise está habilitado de forma "
 "predeterminada en la configuración de producción."
 
-#: ../../developer/installation/configuration.rst:278
+#: ../../developer/installation/configuration.rst:274
 msgid "Allowed Hosts"
 msgstr "Anfitriones permitidos"
 
-#: ../../developer/installation/configuration.rst:280
+#: ../../developer/installation/configuration.rst:276
 msgid "**DJANGO_ALLOWED_HOSTS**"
 msgstr "**DJANGO_ALLOWED_HOSTS**"
 
-#: ../../developer/installation/configuration.rst:291
+#: ../../developer/installation/configuration.rst:287
 msgid ""
-"**Required in production!** Django will refuse connections from hosts not in"
-" this list."
+"**Required in production!** Django will refuse connections from hosts not"
+" in this list."
 msgstr ""
-"**¡Requerido en producción!** Django rechazará conexiones de hosts que no "
-"estén en esta lista."
+"**¡Requerido en producción!** Django rechazará conexiones de hosts que no"
+" estén en esta lista."
 
-#: ../../developer/installation/configuration.rst:294
+#: ../../developer/installation/configuration.rst:290
 msgid "CORS Configuration"
 msgstr "Configuración CORS"
 
-#: ../../developer/installation/configuration.rst:296
+#: ../../developer/installation/configuration.rst:292
 msgid "**CORS_ALLOWED_ORIGINS**"
 msgstr "**CORS_ALLOWED_ORIGINS**"
 
-#: ../../developer/installation/configuration.rst:303
+#: ../../developer/installation/configuration.rst:299
 msgid "**CORS_ALLOW_ALL_ORIGINS**"
 msgstr "**CORS_ALLOW_ALL_ORIGINS**"
 
-#: ../../developer/installation/configuration.rst:311
+#: ../../developer/installation/configuration.rst:307
 msgid ""
 "**Never use CORS_ALLOW_ALL_ORIGINS in production!** Only allow trusted "
 "origins."
 msgstr ""
-"**¡Nunca uses CORS_ALLOW_ALL_ORIGINS en producción!** Solo permite orígenes "
-"confiables."
+"**¡Nunca uses CORS_ALLOW_ALL_ORIGINS en producción!** Solo permite "
+"orígenes confiables."
 
-#: ../../developer/installation/configuration.rst:314
+#: ../../developer/installation/configuration.rst:310
 msgid "Docker Configuration"
 msgstr "Configuración de la ventana acoplable"
 
-#: ../../developer/installation/configuration.rst:316
+#: ../../developer/installation/configuration.rst:312
 msgid "**USE_DOCKER**"
 msgstr "**USE_DOCKER**"
 
-#: ../../developer/installation/configuration.rst:323
+#: ../../developer/installation/configuration.rst:319
 msgid "This affects:"
 msgstr "Esto afecta:"
 
-#: ../../developer/installation/configuration.rst:325
+#: ../../developer/installation/configuration.rst:321
 msgid "Database host (``postgres`` vs ``localhost``)"
 msgstr "Host de base de datos (``postgres`` vs ``localhost``)"
 
-#: ../../developer/installation/configuration.rst:326
+#: ../../developer/installation/configuration.rst:322
 msgid "Redis host (``redis`` vs ``localhost``)"
 msgstr "Anfitrión de Redis (``redis`` frente a ``localhost``)"
 
-#: ../../developer/installation/configuration.rst:327
+#: ../../developer/installation/configuration.rst:323
 msgid "Email host (``mailhog`` vs localhost SMTP)"
 msgstr "Host de correo electrónico (``mailhog`` vs localhost SMTP)"
 
-#: ../../developer/installation/configuration.rst:330
+#: ../../developer/installation/configuration.rst:326
 msgid "Library Mode"
 msgstr "Modo biblioteca"
 
-#: ../../developer/installation/configuration.rst:332
+#: ../../developer/installation/configuration.rst:328
 msgid "**CONSTRUBOT_AS_LIBRARY**"
 msgstr "**CONSTRUBOT_AS_LIBRARY**"
 
-#: ../../developer/installation/configuration.rst:339
+#: ../../developer/installation/configuration.rst:335
 msgid "When ``True``:"
 msgstr "Cuando es \"Verdadero\":"
 
-#: ../../developer/installation/configuration.rst:341
+#: ../../developer/installation/configuration.rst:337
 msgid "Disables admin interface"
 msgstr "Deshabilita la interfaz de administración"
 
-#: ../../developer/installation/configuration.rst:342
+#: ../../developer/installation/configuration.rst:338
 msgid "Disables account management URLs"
 msgstr "Deshabilita las URL de administración de cuentas"
 
-#: ../../developer/installation/configuration.rst:343
+#: ../../developer/installation/configuration.rst:339
 msgid "Disables standalone authentication"
 msgstr "Deshabilita la autenticación independiente"
 
-#: ../../developer/installation/configuration.rst:344
+#: ../../developer/installation/configuration.rst:340
 msgid "Use Construbot as Django app in your project"
 msgstr "Utilice Construbot como aplicación Django en su proyecto"
 
-#: ../../developer/installation/configuration.rst:346
+#: ../../developer/installation/configuration.rst:342
 msgid "See :doc:`../library-mode` for details."
 msgstr "Consulte :doc:`../library-mode` para obtener más detalles."
 
-#: ../../developer/installation/configuration.rst:349
+#: ../../developer/installation/configuration.rst:345
 msgid "Sentry Integration"
 msgstr "Integración centinela"
 
-#: ../../developer/installation/configuration.rst:351
+#: ../../developer/installation/configuration.rst:347
 msgid "**SENTRY_DSN**"
 msgstr "**SENTRY_DSN**"
 
-#: ../../developer/installation/configuration.rst:357
+#: ../../developer/installation/configuration.rst:353
 msgid "**SENTRY_ENVIRONMENT**"
 msgstr "**SENTRY_ENVIRONMENT**"
 
-#: ../../developer/installation/configuration.rst:363
+#: ../../developer/installation/configuration.rst:359
 msgid "**SENTRY_SAMPLE_RATE**"
 msgstr "**SENTRY_SAMPLE_RATE**"
 
-#: ../../developer/installation/configuration.rst:371
+#: ../../developer/installation/configuration.rst:367
 msgid "Logging"
 msgstr "Explotación florestal"
 
-#: ../../developer/installation/configuration.rst:373
+#: ../../developer/installation/configuration.rst:369
 msgid "**LOG_LEVEL**"
 msgstr "**LOG_LEVEL**"
 
-#: ../../developer/installation/configuration.rst:380
+#: ../../developer/installation/configuration.rst:376
 msgid "**Values:** DEBUG, INFO, WARNING, ERROR, CRITICAL"
 msgstr "**Valores:** DEPURACIÓN, INFORMACIÓN, ADVERTENCIA, ERROR, CRÍTICO"
 
-#: ../../developer/installation/configuration.rst:383
+#: ../../developer/installation/configuration.rst:379
 msgid "Celery Configuration"
 msgstr "Configuración de apio"
 
-#: ../../developer/installation/configuration.rst:385
+#: ../../developer/installation/configuration.rst:381
 msgid "**CELERY_BROKER_URL**"
 msgstr "**APIO_BROKER_URL**"
 
-#: ../../developer/installation/configuration.rst:391
+#: ../../developer/installation/configuration.rst:387
 msgid "Usually same as ``REDIS_URL``."
 msgstr "Generalmente igual que ``REDIS_URL``."
 
-#: ../../developer/installation/configuration.rst:393
+#: ../../developer/installation/configuration.rst:389
 msgid "**CELERY_RESULT_BACKEND**"
 msgstr "**Apio_RESULT_BACKEND**"
 
-#: ../../developer/installation/configuration.rst:399
+#: ../../developer/installation/configuration.rst:395
 msgid "**CELERY_TASK_ALWAYS_EAGER**"
 msgstr "**APIO_TASK_ALWAYS_EAGER**"
 
-#: ../../developer/installation/configuration.rst:407
+#: ../../developer/installation/configuration.rst:403
 msgid "Configuration by Environment"
 msgstr "Configuración por entorno"
 
-#: ../../developer/installation/configuration.rst:410
+#: ../../developer/installation/configuration.rst:406
 msgid "Development (.env)"
 msgstr "Desarrollo (.env)"
 
-#: ../../developer/installation/configuration.rst:412
+#: ../../developer/installation/configuration.rst:408
 msgid "Complete ``.env`` file for local development:"
 msgstr "Archivo ``.env`` completo para desarrollo local:"
 
-#: ../../developer/installation/configuration.rst:448
+#: ../../developer/installation/configuration.rst:444
 msgid "Testing"
 msgstr "Pruebas"
 
-#: ../../developer/installation/configuration.rst:450
+#: ../../developer/installation/configuration.rst:446
 msgid "Environment for running tests:"
 msgstr "Entorno para ejecutar pruebas:"
 
-#: ../../developer/installation/configuration.rst:466
+#: ../../developer/installation/configuration.rst:462
 msgid "Production"
 msgstr "Producción"
 
-#: ../../developer/installation/configuration.rst:468
+#: ../../developer/installation/configuration.rst:464
 msgid "Production environment variables:"
 msgstr "Variables del entorno de producción:"
 
-#: ../../developer/installation/configuration.rst:516
+#: ../../developer/installation/configuration.rst:512
 msgid "Security Settings"
 msgstr "Configuración de seguridad"
 
-#: ../../developer/installation/configuration.rst:519
+#: ../../developer/installation/configuration.rst:515
 msgid "Production Security Checklist"
 msgstr "Lista de verificación de seguridad de producción"
 
-#: ../../developer/installation/configuration.rst:543
+#: ../../developer/installation/configuration.rst:539
 msgid "**Run security check:**"
 msgstr "**Ejecutar control de seguridad:**"
 
-#: ../../developer/installation/configuration.rst:550
+#: ../../developer/installation/configuration.rst:546
 msgid "Managing Configuration"
 msgstr "Gestión de la configuración"
 
-#: ../../developer/installation/configuration.rst:553
+#: ../../developer/installation/configuration.rst:549
 msgid "Environment File Template"
 msgstr "Plantilla de archivo de entorno"
 
-#: ../../developer/installation/configuration.rst:555
+#: ../../developer/installation/configuration.rst:551
 msgid "Create ``.env.example`` as a template:"
 msgstr "Cree ``.env.example`` como plantilla:"
 
-#: ../../developer/installation/configuration.rst:571
+#: ../../developer/installation/configuration.rst:567
 msgid "**Benefits:**"
 msgstr "**Beneficios:**"
 
-#: ../../developer/installation/configuration.rst:573
+#: ../../developer/installation/configuration.rst:569
 msgid "Documents required variables"
 msgstr "Documentos variables requeridas"
 
-#: ../../developer/installation/configuration.rst:574
+#: ../../developer/installation/configuration.rst:570
 msgid "Provides examples for developers"
 msgstr "Proporciona ejemplos para desarrolladores."
 
-#: ../../developer/installation/configuration.rst:575
+#: ../../developer/installation/configuration.rst:571
 msgid "Safe to commit (no secrets)"
 msgstr "Seguro para cometer (sin secretos)"
 
-#: ../../developer/installation/configuration.rst:578
+#: ../../developer/installation/configuration.rst:574
 msgid "Secrets Management"
 msgstr "Gestión de secretos"
 
-#: ../../developer/installation/configuration.rst:580
+#: ../../developer/installation/configuration.rst:576
 msgid "**Development:**"
 msgstr "**Desarrollo:**"
 
-#: ../../developer/installation/configuration.rst:582
+#: ../../developer/installation/configuration.rst:578
 msgid "Use ``.env`` file (git-ignored)"
 msgstr "Utilice el archivo ``.env`` (git-ignorado)"
 
-#: ../../developer/installation/configuration.rst:583
+#: ../../developer/installation/configuration.rst:579
 msgid "Share ``.env.example`` template"
 msgstr "Compartir plantilla ``.env.example``"
 
-#: ../../developer/installation/configuration.rst:585
+#: ../../developer/installation/configuration.rst:581
 msgid "**Production:**"
 msgstr "**Producción:**"
 
-#: ../../developer/installation/configuration.rst:587
+#: ../../developer/installation/configuration.rst:583
 msgid "Use environment variables (not .env file)"
 msgstr "Utilice variables de entorno (no archivos .env)"
 
-#: ../../developer/installation/configuration.rst:588
+#: ../../developer/installation/configuration.rst:584
 msgid "Store secrets in secure vault (AWS Secrets Manager, HashiCorp Vault)"
 msgstr ""
 "Almacenar secretos en una bóveda segura (AWS Secrets Manager, HashiCorp "
 "Vault)"
 
-#: ../../developer/installation/configuration.rst:589
+#: ../../developer/installation/configuration.rst:585
 msgid "Inject secrets at runtime"
 msgstr "Inyectar secretos en tiempo de ejecución"
 
-#: ../../developer/installation/configuration.rst:591
+#: ../../developer/installation/configuration.rst:587
 msgid "**Example with AWS Secrets Manager:**"
 msgstr "**Ejemplo con AWS Secrets Manager:**"
 
-#: ../../developer/installation/configuration.rst:609
+#: ../../developer/installation/configuration.rst:605
 msgid "Validating Configuration"
 msgstr "Validación de configuración"
 
-#: ../../developer/installation/configuration.rst:611
+#: ../../developer/installation/configuration.rst:607
 msgid "**Check required variables:**"
 msgstr "**Verifique las variables requeridas:**"
 
-#: ../../developer/installation/configuration.rst:624
+#: ../../developer/installation/configuration.rst:620
 msgid "**Test email configuration:**"
 msgstr "**Configuración de correo electrónico de prueba:**"
 
-#: ../../developer/installation/configuration.rst:636
+#: ../../developer/installation/configuration.rst:632
 msgid "Troubleshooting"
 msgstr "Solución de problemas"
 
-#: ../../developer/installation/configuration.rst:639
+#: ../../developer/installation/configuration.rst:635
 msgid "Common Issues"
 msgstr "Problemas comunes"
 
-#: ../../developer/installation/configuration.rst:641
+#: ../../developer/installation/configuration.rst:637
 msgid "**\"ImproperlyConfigured: Set the DATABASE_URL environment variable\"**"
 msgstr ""
 "**\"Configurado incorrectamente: establezca la variable de entorno "
 "DATABASE_URL\"**"
 
-#: ../../developer/installation/configuration.rst:651
+#: ../../developer/installation/configuration.rst:647
 msgid "**\"SECRET_KEY is required\"**"
 msgstr "**\"Se requiere SECRET_KEY\"**"
 
-#: ../../developer/installation/configuration.rst:661
+#: ../../developer/installation/configuration.rst:657
 msgid "**\"CommandError: You must set settings.ALLOWED_HOSTS\"**"
 msgstr "**\"CommandError: debes establecer la configuración.ALLOWED_HOSTS\"**"
 
-#: ../../developer/installation/configuration.rst:668
+#: ../../developer/installation/configuration.rst:664
 msgid "**\"DisallowedHost at /\"**"
 msgstr "**\"Host no permitido en /\"**"
 
-#: ../../developer/installation/configuration.rst:675
+#: ../../developer/installation/configuration.rst:671
 msgid "**Variables not loading from .env**"
 msgstr "**Las variables no se cargan desde .env**"
 
-#: ../../developer/installation/configuration.rst:686
+#: ../../developer/installation/configuration.rst:682
 msgid "Variable Precedence"
 msgstr "Prioridad de variables"
 
-#: ../../developer/installation/configuration.rst:688
+#: ../../developer/installation/configuration.rst:684
 msgid "If a variable is set in multiple places, this is the priority order:"
 msgstr ""
 "Si una variable se establece en varios lugares, este es el orden de "
 "prioridad:"
 
-#: ../../developer/installation/configuration.rst:690
+#: ../../developer/installation/configuration.rst:686
 msgid "**System environment variables** (highest priority)"
 msgstr "**Variables de entorno del sistema** (prioridad más alta)"
 
-#: ../../developer/installation/configuration.rst:691
+#: ../../developer/installation/configuration.rst:687
 msgid "**.env file**"
 msgstr "**archivo .env**"
 
-#: ../../developer/installation/configuration.rst:692
+#: ../../developer/installation/configuration.rst:688
 msgid "**Settings file defaults** (lowest priority)"
 msgstr ""
 "**Valores predeterminados del archivo de configuración** (prioridad más "
 "baja)"
 
-#: ../../developer/installation/configuration.rst:694
+#: ../../developer/installation/configuration.rst:690
 msgid "Example:"
 msgstr "Ejemplo:"
 
-#: ../../developer/installation/configuration.rst:707
+#: ../../developer/installation/configuration.rst:703
 msgid "See Also"
 msgstr "Ver también"
 
-#: ../../developer/installation/configuration.rst:709
+#: ../../developer/installation/configuration.rst:705
 msgid ":doc:`docker-setup` - Docker environment configuration"
 msgstr ""
 
-#: ../../developer/installation/configuration.rst:710
+#: ../../developer/installation/configuration.rst:706
 msgid ":doc:`local-setup` - Local environment configuration"
 msgstr ""
 
-#: ../../developer/installation/configuration.rst:711
-msgid ""
-":doc:`../deployment/environment-variables` - Production environment setup"
+#: ../../developer/installation/configuration.rst:707
+msgid ":doc:`../deployment/environment-variables` - Production environment setup"
 msgstr ""
 
-#: ../../developer/installation/configuration.rst:712
+#: ../../developer/installation/configuration.rst:708
 msgid ":doc:`../architecture/settings-structure` - Settings file organization"
 msgstr ""
 
-#: ../../developer/installation/configuration.rst:713
+#: ../../developer/installation/configuration.rst:709
 msgid ""
 "`Django Settings Best Practices "
 "<https://docs.djangoproject.com/en/3.2/topics/settings/>`_"
@@ -630,8 +623,12 @@ msgstr ""
 "`Mejores prácticas de configuración de Django "
 "<https://docs.djangoproject.com/en/3.2/topics/settings/>`_"
 
-#: ../../developer/installation/configuration.rst:714
+#: ../../developer/installation/configuration.rst:710
 msgid "`Twelve-Factor App Config <https://12factor.net/config>`_"
 msgstr ""
 "`Configuración de aplicación de doce factores "
 "<https://12factor.net/config>`_"
+
+#~ msgid "Table of Contents"
+#~ msgstr "Tabla de contenido"
+

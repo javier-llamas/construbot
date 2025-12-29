@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Construbot 1.1.04\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 15:30-0600\n"
+"POT-Creation-Date: 2025-12-29 17:37-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: es <LL@li.org>\n"
 "Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../developer/architecture/index.rst:3
@@ -27,909 +27,911 @@ msgstr "Arquitectura"
 msgid "Technical architecture and design patterns used in Construbot."
 msgstr "Arquitectura técnica y patrones de diseño utilizados en Construbot."
 
-#: ../../developer/architecture/index.rst:9
-msgid "Table of Contents"
-msgstr "Tabla de contenido"
-
-#: ../../developer/architecture/index.rst:12
+#: ../../developer/architecture/index.rst:8
 msgid "Overview"
 msgstr "Descripción general"
 
-#: ../../developer/architecture/index.rst:14
+#: ../../developer/architecture/index.rst:10
 msgid ""
 "Construbot is a Django-based construction management system built with "
-"modern patterns and best practices. This section explains the architectural "
-"decisions, data models, and system design."
+"modern patterns and best practices. This section explains the "
+"architectural decisions, data models, and system design."
 msgstr ""
-"Construbot es un sistema de gestión de construcción basado en Django creado "
-"con patrones modernos y mejores prácticas. Esta sección explica las "
-"decisiones arquitectónicas, los modelos de datos y el diseño del sistema."
+"Construbot es un sistema de gestión de construcción basado en Django "
+"creado con patrones modernos y mejores prácticas. Esta sección explica "
+"las decisiones arquitectónicas, los modelos de datos y el diseño del "
+"sistema."
 
-#: ../../developer/architecture/index.rst:28
+#: ../../developer/architecture/index.rst:24
 msgid "Quick Reference"
 msgstr "Referencia rápida"
 
-#: ../../developer/architecture/index.rst:31
+#: ../../developer/architecture/index.rst:27
 msgid "Technology Stack"
 msgstr "Pila de tecnología"
 
-#: ../../developer/architecture/index.rst:33
+#: ../../developer/architecture/index.rst:29
 msgid "**Backend:**"
 msgstr "**Servidor:**"
 
-#: ../../developer/architecture/index.rst:35
+#: ../../developer/architecture/index.rst:31
 msgid "Django 3.2.19 (LTS)"
 msgstr "Django 3.2.19 (LTS)"
 
-#: ../../developer/architecture/index.rst:36
+#: ../../developer/architecture/index.rst:32
 msgid "Python 3.9.17+"
 msgstr "Pitón 3.9.17+"
 
-#: ../../developer/architecture/index.rst:37
+#: ../../developer/architecture/index.rst:33
 msgid "PostgreSQL 12+"
 msgstr "PostgreSQL 12+"
 
-#: ../../developer/architecture/index.rst:38
+#: ../../developer/architecture/index.rst:34
 msgid "Redis 6+"
 msgstr "Redis 6+"
 
-#: ../../developer/architecture/index.rst:40
+#: ../../developer/architecture/index.rst:36
 msgid "**Task Queue:**"
 msgstr "**Cola de tareas:**"
 
-#: ../../developer/architecture/index.rst:42
+#: ../../developer/architecture/index.rst:38
 msgid "Celery 5.2.7"
 msgstr "Apio 5.2.7"
 
-#: ../../developer/architecture/index.rst:43
+#: ../../developer/architecture/index.rst:39
 msgid "Redis broker"
 msgstr "corredor de Redis"
 
-#: ../../developer/architecture/index.rst:45
-#: ../../developer/architecture/index.rst:466
+#: ../../developer/architecture/index.rst:41
+#: ../../developer/architecture/index.rst:462
 msgid "**API:**"
 msgstr "**API:**"
 
-#: ../../developer/architecture/index.rst:47
+#: ../../developer/architecture/index.rst:43
 msgid "Django REST Framework 3.13.1"
 msgstr "Marco REST de Django 3.13.1"
 
-#: ../../developer/architecture/index.rst:48
+#: ../../developer/architecture/index.rst:44
 msgid "SimpleJWT 5.2.0"
 msgstr "SimpleJWT 5.2.0"
 
-#: ../../developer/architecture/index.rst:50
+#: ../../developer/architecture/index.rst:46
 msgid "**Key Libraries:**"
 msgstr "**Bibliotecas clave:**"
 
-#: ../../developer/architecture/index.rst:52
+#: ../../developer/architecture/index.rst:48
 msgid "django-treebeard 4.5.1 (hierarchical models)"
 msgstr "django-treebeard 4.5.1 (modelos jerárquicos)"
 
-#: ../../developer/architecture/index.rst:53
+#: ../../developer/architecture/index.rst:49
 msgid "django-allauth 0.51.0 (authentication)"
 msgstr "django-allauth 0.51.0 (autenticación)"
 
-#: ../../developer/architecture/index.rst:54
+#: ../../developer/architecture/index.rst:50
 msgid "django-autocomplete-light 3.9.4 (autocomplete widgets)"
 msgstr "django-autocomplete-light 3.9.4 (widgets de autocompletar)"
 
-#: ../../developer/architecture/index.rst:55
+#: ../../developer/architecture/index.rst:51
 msgid "reportlab 3.6.12 (PDF generation)"
 msgstr "reportlab 3.6.12 (generación de PDF)"
 
-#: ../../developer/architecture/index.rst:56
+#: ../../developer/architecture/index.rst:52
 msgid "openpyxl 3.0.10 (Excel import/export)"
 msgstr "openpyxl 3.0.10 (importación/exportación de Excel)"
 
-#: ../../developer/architecture/index.rst:59
+#: ../../developer/architecture/index.rst:55
 msgid "System Components"
 msgstr "Componentes del sistema"
 
-#: ../../developer/architecture/index.rst:62
+#: ../../developer/architecture/index.rst:58
 msgid "Application Layer"
 msgstr "Capa de aplicación"
 
-#: ../../developer/architecture/index.rst:101
+#: ../../developer/architecture/index.rst:97
 msgid "Data Flow"
 msgstr "Flujo de datos"
 
-#: ../../developer/architecture/index.rst:103
+#: ../../developer/architecture/index.rst:99
 msgid "**User Request:**"
 msgstr "**Solicitud de usuario:**"
 
-#: ../../developer/architecture/index.rst:105
+#: ../../developer/architecture/index.rst:101
 msgid "User accesses application → Nginx"
 msgstr "El usuario accede a la aplicación → Nginx"
 
-#: ../../developer/architecture/index.rst:106
+#: ../../developer/architecture/index.rst:102
 msgid "Nginx proxies to Gunicorn"
 msgstr "Nginx representa a Gunicorn"
 
-#: ../../developer/architecture/index.rst:107
+#: ../../developer/architecture/index.rst:103
 msgid "Gunicorn runs Django request/response cycle"
 msgstr "Gunicorn ejecuta el ciclo de solicitud/respuesta de Django"
 
-#: ../../developer/architecture/index.rst:108
+#: ../../developer/architecture/index.rst:104
 msgid "Django queries PostgreSQL for data"
 msgstr "Django consulta PostgreSQL para obtener datos"
 
-#: ../../developer/architecture/index.rst:109
+#: ../../developer/architecture/index.rst:105
 msgid "Django uses Redis for caching"
 msgstr "Django usa Redis para el almacenamiento en caché"
 
-#: ../../developer/architecture/index.rst:110
+#: ../../developer/architecture/index.rst:106
 msgid "Response rendered and returned"
 msgstr "Respuesta emitida y devuelta"
 
-#: ../../developer/architecture/index.rst:112
+#: ../../developer/architecture/index.rst:108
 msgid "**Background Task:**"
 msgstr "**Tarea en segundo plano:**"
 
-#: ../../developer/architecture/index.rst:114
+#: ../../developer/architecture/index.rst:110
 msgid "User action triggers task → Celery delay()"
 msgstr "La acción del usuario desencadena la tarea → Retraso de apio()"
 
-#: ../../developer/architecture/index.rst:115
+#: ../../developer/architecture/index.rst:111
 msgid "Task queued in Redis"
 msgstr "Tarea en cola en Redis"
 
-#: ../../developer/architecture/index.rst:116
+#: ../../developer/architecture/index.rst:112
 msgid "Celery worker picks up task"
 msgstr "El trabajador del apio retoma su tarea"
 
-#: ../../developer/architecture/index.rst:117
+#: ../../developer/architecture/index.rst:113
 msgid "Worker executes task (e.g., send email, generate PDF)"
 msgstr ""
 "El trabajador ejecuta la tarea (por ejemplo, enviar correo electrónico, "
 "generar PDF)"
 
-#: ../../developer/architecture/index.rst:118
+#: ../../developer/architecture/index.rst:114
 msgid "Result stored in Redis (optional)"
 msgstr "Resultado almacenado en Redis (opcional)"
 
-#: ../../developer/architecture/index.rst:121
+#: ../../developer/architecture/index.rst:117
 msgid "Application Structure"
 msgstr "Estructura de la aplicación"
 
-#: ../../developer/architecture/index.rst:124
+#: ../../developer/architecture/index.rst:120
 msgid "Django Apps"
 msgstr "Aplicaciones Django"
 
-#: ../../developer/architecture/index.rst:126
+#: ../../developer/architecture/index.rst:122
 msgid "**construbot.users** - User management"
 msgstr "**construbot.users** - Gestión de usuarios"
 
-#: ../../developer/architecture/index.rst:128
+#: ../../developer/architecture/index.rst:124
 msgid "Custom User model (email-based auth)"
 msgstr ""
-"Modelo de usuario personalizado (autenticación basada en correo electrónico)"
+"Modelo de usuario personalizado (autenticación basada en correo "
+"electrónico)"
 
-#: ../../developer/architecture/index.rst:129
+#: ../../developer/architecture/index.rst:125
 msgid "Company and Customer models"
 msgstr "Modelos de empresa y cliente"
 
-#: ../../developer/architecture/index.rst:130
+#: ../../developer/architecture/index.rst:126
 msgid "Permission levels (NivelAcceso)"
 msgstr "Niveles de permisos (NivelAcceso)"
 
-#: ../../developer/architecture/index.rst:131
+#: ../../developer/architecture/index.rst:127
 msgid "Authentication backends"
 msgstr "Motores de autenticación"
 
-#: ../../developer/architecture/index.rst:133
+#: ../../developer/architecture/index.rst:129
 msgid "**construbot.proyectos** - Core business logic"
 msgstr "**construbot.proyectos** - Lógica empresarial central"
 
-#: ../../developer/architecture/index.rst:135
+#: ../../developer/architecture/index.rst:131
 msgid "Contract management (Contrato)"
 msgstr "Gestión de contratos (Contrato)"
 
-#: ../../developer/architecture/index.rst:136
+#: ../../developer/architecture/index.rst:132
 msgid "Counterparty management (Contraparte)"
 msgstr "Gestión de contraparte (Contraparte)"
 
-#: ../../developer/architecture/index.rst:137
+#: ../../developer/architecture/index.rst:133
 msgid "Estimate tracking (Estimate)"
 msgstr "Seguimiento de estimación (Estimación)"
 
-#: ../../developer/architecture/index.rst:138
+#: ../../developer/architecture/index.rst:134
 msgid "Hierarchical data structures"
 msgstr "Estructuras de datos jerárquicas"
 
-#: ../../developer/architecture/index.rst:139
+#: ../../developer/architecture/index.rst:135
 msgid "Financial calculations"
 msgstr "Cálculos financieros"
 
-#: ../../developer/architecture/index.rst:141
+#: ../../developer/architecture/index.rst:137
 msgid "**construbot.api** - REST API"
 msgstr "**construbot.api** - API REST"
 
-#: ../../developer/architecture/index.rst:143
+#: ../../developer/architecture/index.rst:139
 msgid "JWT authentication"
 msgstr "autenticación JWT"
 
-#: ../../developer/architecture/index.rst:144
+#: ../../developer/architecture/index.rst:140
 msgid "API endpoints for mobile/external access"
 msgstr "Puntos finales API para acceso móvil/externo"
 
-#: ../../developer/architecture/index.rst:145
+#: ../../developer/architecture/index.rst:141
 msgid "Serializers and viewsets"
 msgstr "Serializadores y conjuntos de vistas"
 
-#: ../../developer/architecture/index.rst:146
+#: ../../developer/architecture/index.rst:142
 msgid "Data migration endpoints"
 msgstr "Puntos finales de migración de datos"
 
-#: ../../developer/architecture/index.rst:148
+#: ../../developer/architecture/index.rst:144
 msgid "**construbot.core** - Shared utilities"
 msgstr "**construbot.core** - Utilidades compartidas"
 
-#: ../../developer/architecture/index.rst:150
+#: ../../developer/architecture/index.rst:146
 msgid "Base models and mixins"
 msgstr "Modelos base y mixins."
 
-#: ../../developer/architecture/index.rst:151
-#: ../../developer/architecture/index.rst:298
+#: ../../developer/architecture/index.rst:147
+#: ../../developer/architecture/index.rst:294
 msgid "Custom authentication backend"
 msgstr "Backend de autenticación personalizada"
 
-#: ../../developer/architecture/index.rst:152
+#: ../../developer/architecture/index.rst:148
 msgid "Utility functions"
 msgstr "Funciones de utilidad"
 
-#: ../../developer/architecture/index.rst:153
+#: ../../developer/architecture/index.rst:149
 msgid "Shared templates"
 msgstr "Plantillas compartidas"
 
-#: ../../developer/architecture/index.rst:155
+#: ../../developer/architecture/index.rst:151
 msgid "**construbot.account_config** - Account configuration"
 msgstr "**construbot.account_config** - Configuración de cuenta"
 
-#: ../../developer/architecture/index.rst:157
+#: ../../developer/architecture/index.rst:153
 msgid "Company-specific settings"
 msgstr "Configuraciones específicas de la empresa"
 
-#: ../../developer/architecture/index.rst:158
+#: ../../developer/architecture/index.rst:154
 msgid "Custom login forms"
 msgstr "Formularios de inicio de sesión personalizados"
 
-#: ../../developer/architecture/index.rst:159
+#: ../../developer/architecture/index.rst:155
 msgid "Account preferences"
 msgstr "Preferencias de cuenta"
 
-#: ../../developer/architecture/index.rst:161
+#: ../../developer/architecture/index.rst:157
 msgid "**construbot.taskapp** - Celery configuration"
 msgstr "**construbot.taskapp** - Configuración de apio"
 
-#: ../../developer/architecture/index.rst:163
+#: ../../developer/architecture/index.rst:159
 msgid "Celery app initialization"
 msgstr "Inicialización de la aplicación de apio"
 
-#: ../../developer/architecture/index.rst:164
+#: ../../developer/architecture/index.rst:160
 msgid "Task definitions"
 msgstr "Definiciones de tareas"
 
-#: ../../developer/architecture/index.rst:165
+#: ../../developer/architecture/index.rst:161
 msgid "Periodic task setup"
 msgstr "Configuración de tareas periódicas"
 
-#: ../../developer/architecture/index.rst:168
+#: ../../developer/architecture/index.rst:164
 msgid "Directory Structure"
 msgstr "Estructura del directorio"
 
-#: ../../developer/architecture/index.rst:238
+#: ../../developer/architecture/index.rst:234
 msgid "Design Patterns"
 msgstr "Patrones de diseño"
 
-#: ../../developer/architecture/index.rst:241
+#: ../../developer/architecture/index.rst:237
 msgid "Multi-Tenancy"
 msgstr "Multi-inquilino"
 
-#: ../../developer/architecture/index.rst:243
+#: ../../developer/architecture/index.rst:239
 msgid "**Three-level hierarchy:**"
 msgstr "**Jerarquía de tres niveles:**"
 
-#: ../../developer/architecture/index.rst:251
+#: ../../developer/architecture/index.rst:247
 msgid "**Data isolation:**"
 msgstr "**Aislamiento de datos:**"
 
-#: ../../developer/architecture/index.rst:253
+#: ../../developer/architecture/index.rst:249
 msgid "All business data scoped to Company"
 msgstr "Todos los datos comerciales enfocados a la empresa"
 
-#: ../../developer/architecture/index.rst:254
+#: ../../developer/architecture/index.rst:250
 msgid "Users can belong to multiple Companies"
 msgstr "Los usuarios pueden pertenecer a varias empresas."
 
-#: ../../developer/architecture/index.rst:255
+#: ../../developer/architecture/index.rst:251
 msgid "Active company tracked in session"
 msgstr "Empresa activa rastreada en la sesión"
 
-#: ../../developer/architecture/index.rst:257
+#: ../../developer/architecture/index.rst:253
 msgid "See :doc:`multi-tenancy` for details."
 msgstr "Consulte :doc:`multi-tenancy` para obtener más detalles."
 
-#: ../../developer/architecture/index.rst:260
+#: ../../developer/architecture/index.rst:256
 msgid "Hierarchical Models"
 msgstr "Modelos Jerárquicos"
 
-#: ../../developer/architecture/index.rst:262
+#: ../../developer/architecture/index.rst:258
 msgid "**django-treebeard Materialized Path:**"
 msgstr "**Camino materializado de Django-treebeard:**"
 
-#: ../../developer/architecture/index.rst:264
+#: ../../developer/architecture/index.rst:260
 msgid "Contracts (Contrato) form tree structures:"
 msgstr "Los contratos (Contrato) forman estructuras de árbol:"
 
-#: ../../developer/architecture/index.rst:274
+#: ../../developer/architecture/index.rst:270
 msgid "**Benefits:**"
 msgstr "**Beneficios:**"
 
-#: ../../developer/architecture/index.rst:276
+#: ../../developer/architecture/index.rst:272
 msgid "Efficient parent/child queries"
 msgstr "Consultas eficientes entre padres e hijos"
 
-#: ../../developer/architecture/index.rst:277
+#: ../../developer/architecture/index.rst:273
 msgid "Tree aggregations (sum amounts)"
 msgstr "Agregaciones de árboles (cantidades totales)"
 
-#: ../../developer/architecture/index.rst:278
+#: ../../developer/architecture/index.rst:274
 msgid "Move operations"
 msgstr "Operaciones de movimiento"
 
-#: ../../developer/architecture/index.rst:279
+#: ../../developer/architecture/index.rst:275
 msgid "Path-based queries"
 msgstr "Consultas basadas en rutas"
 
-#: ../../developer/architecture/index.rst:281
+#: ../../developer/architecture/index.rst:277
 msgid "**Implementation:**"
 msgstr "**Implementación:**"
 
-#: ../../developer/architecture/index.rst:292
+#: ../../developer/architecture/index.rst:288
 msgid "Custom Authentication"
 msgstr "Autenticación personalizada"
 
-#: ../../developer/architecture/index.rst:294
+#: ../../developer/architecture/index.rst:290
 msgid "**Email-based authentication:**"
 msgstr "**Autenticación basada en correo electrónico:**"
 
-#: ../../developer/architecture/index.rst:296
+#: ../../developer/architecture/index.rst:292
 msgid "No username field"
 msgstr "Sin campo de nombre de usuario"
 
-#: ../../developer/architecture/index.rst:297
+#: ../../developer/architecture/index.rst:293
 msgid "Email as unique identifier"
 msgstr "Correo electrónico como identificador único"
 
-#: ../../developer/architecture/index.rst:300
+#: ../../developer/architecture/index.rst:296
 msgid "**Multi-company support:**"
 msgstr "**Soporte multiempresa:**"
 
-#: ../../developer/architecture/index.rst:302
+#: ../../developer/architecture/index.rst:298
 msgid "User can access multiple companies"
 msgstr "El usuario puede acceder a múltiples empresas."
 
-#: ../../developer/architecture/index.rst:303
+#: ../../developer/architecture/index.rst:299
 msgid "Company switch without re-login"
 msgstr "Cambio de empresa sin volver a iniciar sesión"
 
-#: ../../developer/architecture/index.rst:304
+#: ../../developer/architecture/index.rst:300
 msgid "Per-company permissions"
 msgstr "Permisos por empresa"
 
-#: ../../developer/architecture/index.rst:306
+#: ../../developer/architecture/index.rst:302
 msgid "See :doc:`authentication` for details."
 msgstr "Consulte :doc:`autenticación` para obtener más detalles."
 
-#: ../../developer/architecture/index.rst:309
+#: ../../developer/architecture/index.rst:305
 msgid "Permission System"
 msgstr "Sistema de permisos"
 
-#: ../../developer/architecture/index.rst:311
+#: ../../developer/architecture/index.rst:307
 msgid "**Six permission levels (NIVELES_ACCESO):**"
 msgstr "**Seis niveles de permisos (NIVELES_ACCESO):**"
 
-#: ../../developer/architecture/index.rst:313
+#: ../../developer/architecture/index.rst:309
 msgid "Auxiliar (1) - View only"
 msgstr "Auxiliar (1) - Ver solo"
 
-#: ../../developer/architecture/index.rst:314
+#: ../../developer/architecture/index.rst:310
 msgid "Coordinador (2) - Create/edit"
 msgstr "Coordinador (2) - Crear/editar"
 
-#: ../../developer/architecture/index.rst:315
+#: ../../developer/architecture/index.rst:311
 msgid "Director (3) - Full CRUD"
 msgstr "Director (3) - CRUD completo"
 
-#: ../../developer/architecture/index.rst:316
+#: ../../developer/architecture/index.rst:312
 msgid "Corporativo (4) - Cross-company"
 msgstr "Corporativo (4) - Multiempresa"
 
-#: ../../developer/architecture/index.rst:317
+#: ../../developer/architecture/index.rst:313
 msgid "Soporte (5) - Support access"
 msgstr "Soporte (5) - Acceso al soporte"
 
-#: ../../developer/architecture/index.rst:318
+#: ../../developer/architecture/index.rst:314
 msgid "Superusuario (6) - Full system access"
 msgstr "Superusuario (6) - Acceso completo al sistema"
 
-#: ../../developer/architecture/index.rst:320
+#: ../../developer/architecture/index.rst:316
 msgid "See :doc:`permission-levels` for details."
 msgstr "Consulte :doc:`permission-levels` para obtener más detalles."
 
-#: ../../developer/architecture/index.rst:323
+#: ../../developer/architecture/index.rst:319
 msgid "Data Access Patterns"
 msgstr "Patrones de acceso a datos"
 
-#: ../../developer/architecture/index.rst:326
+#: ../../developer/architecture/index.rst:322
 msgid "Query Optimization"
 msgstr "Optimización de consultas"
 
-#: ../../developer/architecture/index.rst:328
+#: ../../developer/architecture/index.rst:324
 msgid "**Select Related (foreign keys):**"
 msgstr "**Seleccione Relacionado (claves externas):**"
 
-#: ../../developer/architecture/index.rst:335
+#: ../../developer/architecture/index.rst:331
 msgid "**Prefetch Related (many-to-many):**"
 msgstr "**Relacionado con la captación previa (muchos a muchos):**"
 
-#: ../../developer/architecture/index.rst:342
+#: ../../developer/architecture/index.rst:338
 msgid "**Database indexes:**"
 msgstr "**Índices de bases de datos:**"
 
-#: ../../developer/architecture/index.rst:355
+#: ../../developer/architecture/index.rst:351
 msgid "Caching Strategy"
 msgstr "Estrategia de almacenamiento en caché"
 
-#: ../../developer/architecture/index.rst:357
+#: ../../developer/architecture/index.rst:353
 msgid "**Per-view caching:**"
 msgstr "**Almacenamiento en caché por vista:**"
 
-#: ../../developer/architecture/index.rst:367
+#: ../../developer/architecture/index.rst:363
 msgid "**Template fragment caching:**"
 msgstr "**Almacenamiento en caché de fragmentos de plantilla:**"
 
-#: ../../developer/architecture/index.rst:376
+#: ../../developer/architecture/index.rst:372
 msgid "**Query result caching:**"
 msgstr "**Almacenamiento en caché de resultados de consultas:**"
 
-#: ../../developer/architecture/index.rst:391
+#: ../../developer/architecture/index.rst:387
 msgid "Atomic Transactions"
 msgstr "Transacciones atómicas"
 
-#: ../../developer/architecture/index.rst:393
+#: ../../developer/architecture/index.rst:389
 msgid "**Enabled by default:**"
 msgstr "**Habilitado de forma predeterminada:**"
 
-#: ../../developer/architecture/index.rst:405
+#: ../../developer/architecture/index.rst:401
 msgid "**Manual transaction control:**"
 msgstr "**Control manual de transacciones:**"
 
-#: ../../developer/architecture/index.rst:419
+#: ../../developer/architecture/index.rst:415
 msgid "API Design"
 msgstr "Diseño API"
 
-#: ../../developer/architecture/index.rst:422
+#: ../../developer/architecture/index.rst:418
 msgid "REST API Structure"
 msgstr "Estructura de la API REST"
 
-#: ../../developer/architecture/index.rst:424
+#: ../../developer/architecture/index.rst:420
 msgid "**Base URL:** ``/api/v1/``"
 msgstr "**URL base:** ``/api/v1/``"
 
-#: ../../developer/architecture/index.rst:426
+#: ../../developer/architecture/index.rst:422
 msgid "**Authentication:** JWT tokens"
 msgstr "**Autenticación:** tokens JWT"
 
-#: ../../developer/architecture/index.rst:428
+#: ../../developer/architecture/index.rst:424
 msgid "**Endpoints:**"
 msgstr "**Puntos finales:**"
 
-#: ../../developer/architecture/index.rst:440
+#: ../../developer/architecture/index.rst:436
 msgid "**Response format:**"
 msgstr "**Formato de respuesta:**"
 
-#: ../../developer/architecture/index.rst:451
+#: ../../developer/architecture/index.rst:447
 msgid "See :doc:`../api/index` for complete API documentation."
-msgstr ""
-"Consulte :doc:`../api/index` para obtener la documentación API completa."
+msgstr "Consulte :doc:`../api/index` para obtener la documentación API completa."
 
-#: ../../developer/architecture/index.rst:454
+#: ../../developer/architecture/index.rst:450
 msgid "Security Architecture"
 msgstr "Arquitectura de seguridad"
 
-#: ../../developer/architecture/index.rst:457
+#: ../../developer/architecture/index.rst:453
 msgid "Authentication Flow"
 msgstr "Flujo de autenticación"
 
-#: ../../developer/architecture/index.rst:459
+#: ../../developer/architecture/index.rst:455
 msgid "**Web application:**"
 msgstr "**Aplicación web:**"
 
-#: ../../developer/architecture/index.rst:461
+#: ../../developer/architecture/index.rst:457
 msgid "User submits email/password"
 msgstr "El usuario envía correo electrónico/contraseña"
 
-#: ../../developer/architecture/index.rst:462
+#: ../../developer/architecture/index.rst:458
 msgid "Backend authenticates against User model"
 msgstr "El backend se autentica contra el modelo de usuario"
 
-#: ../../developer/architecture/index.rst:463
+#: ../../developer/architecture/index.rst:459
 msgid "Session created with company context"
 msgstr "Sesión creada con el contexto de la empresa."
 
-#: ../../developer/architecture/index.rst:464
+#: ../../developer/architecture/index.rst:460
 msgid "User redirected to dashboard"
 msgstr "Usuario redirigido al panel"
 
-#: ../../developer/architecture/index.rst:468
+#: ../../developer/architecture/index.rst:464
 msgid "Client posts credentials to ``/api-token-auth/``"
 msgstr "El cliente publica credenciales en ``/api-token-auth/``"
 
-#: ../../developer/architecture/index.rst:469
+#: ../../developer/architecture/index.rst:465
 msgid "Server validates and returns JWT token"
 msgstr "El servidor valida y devuelve el token JWT"
 
-#: ../../developer/architecture/index.rst:470
+#: ../../developer/architecture/index.rst:466
 msgid "Client includes token in ``Authorization: Bearer <token>`` header"
 msgstr ""
 "El cliente incluye el token en el encabezado ``Autorización: Portador "
 "<token>``"
 
-#: ../../developer/architecture/index.rst:471
+#: ../../developer/architecture/index.rst:467
 msgid "Server validates token on each request"
 msgstr "El servidor valida el token en cada solicitud"
 
-#: ../../developer/architecture/index.rst:474
+#: ../../developer/architecture/index.rst:470
 msgid "Authorization Layers"
 msgstr "Capas de autorización"
 
-#: ../../developer/architecture/index.rst:476
+#: ../../developer/architecture/index.rst:472
 msgid "**1. Authentication required:**"
 msgstr "**1. Se requiere autenticación:**"
 
-#: ../../developer/architecture/index.rst:486
+#: ../../developer/architecture/index.rst:482
 msgid "**2. Permission level check:**"
 msgstr "**2. Comprobación del nivel de permiso:**"
 
-#: ../../developer/architecture/index.rst:497
+#: ../../developer/architecture/index.rst:493
 msgid "**3. Company-scoped data:**"
 msgstr "**3. Datos al alcance de la empresa:**"
 
-#: ../../developer/architecture/index.rst:504
+#: ../../developer/architecture/index.rst:500
 msgid "See :doc:`authentication` and :doc:`permission-levels` for details."
 msgstr ""
-"Consulte :doc:`authentication` y :doc:`permission-levels` para obtener más "
-"detalles."
+"Consulte :doc:`authentication` y :doc:`permission-levels` para obtener "
+"más detalles."
 
-#: ../../developer/architecture/index.rst:507
+#: ../../developer/architecture/index.rst:503
 msgid "Performance Considerations"
 msgstr "Consideraciones de rendimiento"
 
-#: ../../developer/architecture/index.rst:510
+#: ../../developer/architecture/index.rst:506
 msgid "Database"
 msgstr "Base de datos"
 
-#: ../../developer/architecture/index.rst:512
+#: ../../developer/architecture/index.rst:508
 msgid "Connection pooling (``CONN_MAX_AGE``)"
 msgstr "Agrupación de conexiones (``CONN_MAX_AGE``)"
 
-#: ../../developer/architecture/index.rst:513
+#: ../../developer/architecture/index.rst:509
 msgid "Query optimization (select_related/prefetch_related)"
 msgstr "Optimización de consultas (select_ related/prefetch_ related)"
 
-#: ../../developer/architecture/index.rst:514
+#: ../../developer/architecture/index.rst:510
 msgid "Database indexes on frequently queried fields"
 msgstr "Índices de bases de datos en campos consultados con frecuencia"
 
-#: ../../developer/architecture/index.rst:515
+#: ../../developer/architecture/index.rst:511
 msgid "Atomic requests for data integrity"
 msgstr "Solicitudes atómicas para la integridad de los datos"
 
-#: ../../developer/architecture/index.rst:518
+#: ../../developer/architecture/index.rst:514
 msgid "Caching"
 msgstr "Almacenamiento en caché"
 
-#: ../../developer/architecture/index.rst:520
+#: ../../developer/architecture/index.rst:516
 msgid "Redis for cache backend"
 msgstr "Redis para backend de caché"
 
-#: ../../developer/architecture/index.rst:521
+#: ../../developer/architecture/index.rst:517
 msgid "Session storage in cache"
 msgstr "Almacenamiento de sesiones en caché"
 
-#: ../../developer/architecture/index.rst:522
+#: ../../developer/architecture/index.rst:518
 msgid "Query result caching"
 msgstr "Almacenamiento en caché de resultados de consultas"
 
-#: ../../developer/architecture/index.rst:523
+#: ../../developer/architecture/index.rst:519
 msgid "Template fragment caching"
 msgstr "Almacenamiento en caché de fragmentos de plantilla"
 
-#: ../../developer/architecture/index.rst:526
+#: ../../developer/architecture/index.rst:522
 msgid "Static Files"
 msgstr "Archivos estáticos"
 
-#: ../../developer/architecture/index.rst:528
+#: ../../developer/architecture/index.rst:524
 msgid "WhiteNoise for efficient serving"
 msgstr "WhiteNoise para un servicio eficiente"
 
-#: ../../developer/architecture/index.rst:529
+#: ../../developer/architecture/index.rst:525
 msgid "Gzip/Brotli compression"
 msgstr "Compresión Gzip/Brotli"
 
-#: ../../developer/architecture/index.rst:530
+#: ../../developer/architecture/index.rst:526
 msgid "Far-future cache headers"
 msgstr "Encabezados de caché de futuro lejano"
 
-#: ../../developer/architecture/index.rst:531
+#: ../../developer/architecture/index.rst:527
 msgid "CDN for high-traffic deployments"
 msgstr "CDN para implementaciones de alto tráfico"
 
-#: ../../developer/architecture/index.rst:534
+#: ../../developer/architecture/index.rst:530
 msgid "Background Tasks"
 msgstr "Tareas en segundo plano"
 
-#: ../../developer/architecture/index.rst:536
+#: ../../developer/architecture/index.rst:532
 msgid "Celery for asynchronous operations"
 msgstr "Apio para operaciones asincrónicas"
 
-#: ../../developer/architecture/index.rst:537
+#: ../../developer/architecture/index.rst:533
 msgid "Email sending in background"
 msgstr "Envío de correo electrónico en segundo plano"
 
-#: ../../developer/architecture/index.rst:538
+#: ../../developer/architecture/index.rst:534
 msgid "PDF generation in background"
 msgstr "Generación de PDF en segundo plano"
 
-#: ../../developer/architecture/index.rst:539
+#: ../../developer/architecture/index.rst:535
 msgid "Scheduled tasks with Celery Beat"
 msgstr "Tareas programadas con Celery Beat"
 
-#: ../../developer/architecture/index.rst:542
+#: ../../developer/architecture/index.rst:538
 msgid "Scalability"
 msgstr "Escalabilidad"
 
-#: ../../developer/architecture/index.rst:545
+#: ../../developer/architecture/index.rst:541
 msgid "Vertical Scaling"
 msgstr "Escalado vertical"
 
-#: ../../developer/architecture/index.rst:547
+#: ../../developer/architecture/index.rst:543
 msgid "Increase server CPU/RAM"
 msgstr "Aumentar la CPU/RAM del servidor"
 
-#: ../../developer/architecture/index.rst:548
+#: ../../developer/architecture/index.rst:544
 msgid "Upgrade database instance"
 msgstr "Actualizar instancia de base de datos"
 
-#: ../../developer/architecture/index.rst:549
+#: ../../developer/architecture/index.rst:545
 msgid "Add Redis memory"
 msgstr "Agregar memoria Redis"
 
-#: ../../developer/architecture/index.rst:552
+#: ../../developer/architecture/index.rst:548
 msgid "Horizontal Scaling"
 msgstr "Escala horizontal"
 
-#: ../../developer/architecture/index.rst:554
+#: ../../developer/architecture/index.rst:550
 msgid "Multiple Django application servers"
 msgstr "Múltiples servidores de aplicaciones Django"
 
-#: ../../developer/architecture/index.rst:555
+#: ../../developer/architecture/index.rst:551
 msgid "Load balancer (ALB/Nginx)"
 msgstr "Equilibrador de carga (ALB/Nginx)"
 
-#: ../../developer/architecture/index.rst:556
+#: ../../developer/architecture/index.rst:552
 msgid "Managed database (RDS with read replicas)"
 msgstr "Base de datos administrada (RDS con réplicas de lectura)"
 
-#: ../../developer/architecture/index.rst:557
+#: ../../developer/architecture/index.rst:553
 msgid "External cache (ElastiCache)"
 msgstr "Caché externo (ElastiCache)"
 
-#: ../../developer/architecture/index.rst:558
+#: ../../developer/architecture/index.rst:554
 msgid "S3 for media files"
 msgstr "S3 para archivos multimedia"
 
-#: ../../developer/architecture/index.rst:560
+#: ../../developer/architecture/index.rst:556
 msgid "**Stateless application servers** enable easy horizontal scaling."
 msgstr ""
 "**Los servidores de aplicaciones sin estado** permiten un fácil escalado "
 "horizontal."
 
-#: ../../developer/architecture/index.rst:563
+#: ../../developer/architecture/index.rst:559
 msgid "Monitoring Points"
 msgstr "Puntos de Monitoreo"
 
-#: ../../developer/architecture/index.rst:566
+#: ../../developer/architecture/index.rst:562
 msgid "Application Metrics"
 msgstr "Métricas de aplicación"
 
-#: ../../developer/architecture/index.rst:568
+#: ../../developer/architecture/index.rst:564
 msgid "Request/response times"
 msgstr "Tiempos de solicitud/respuesta"
 
-#: ../../developer/architecture/index.rst:569
+#: ../../developer/architecture/index.rst:565
 msgid "Error rates (4xx, 5xx)"
 msgstr "Tasas de error (4xx, 5xx)"
 
-#: ../../developer/architecture/index.rst:570
+#: ../../developer/architecture/index.rst:566
 msgid "Database query performance"
 msgstr "Rendimiento de consultas de bases de datos"
 
-#: ../../developer/architecture/index.rst:571
+#: ../../developer/architecture/index.rst:567
 msgid "Cache hit/miss ratio"
 msgstr "Proporción de aciertos/errores de caché"
 
-#: ../../developer/architecture/index.rst:572
+#: ../../developer/architecture/index.rst:568
 msgid "Celery task queue length"
 msgstr "Longitud de la cola de tareas de apio"
 
-#: ../../developer/architecture/index.rst:575
+#: ../../developer/architecture/index.rst:571
 msgid "Infrastructure Metrics"
 msgstr "Métricas de infraestructura"
 
-#: ../../developer/architecture/index.rst:577
+#: ../../developer/architecture/index.rst:573
 msgid "CPU usage"
 msgstr "uso de CPU"
 
-#: ../../developer/architecture/index.rst:578
+#: ../../developer/architecture/index.rst:574
 msgid "Memory usage"
 msgstr "Uso de memoria"
 
-#: ../../developer/architecture/index.rst:579
+#: ../../developer/architecture/index.rst:575
 msgid "Disk I/O"
 msgstr "E/S de disco"
 
-#: ../../developer/architecture/index.rst:580
+#: ../../developer/architecture/index.rst:576
 msgid "Network traffic"
 msgstr "Tráfico de red"
 
-#: ../../developer/architecture/index.rst:581
+#: ../../developer/architecture/index.rst:577
 msgid "Database connections"
 msgstr "Conexiones de bases de datos"
 
-#: ../../developer/architecture/index.rst:584
+#: ../../developer/architecture/index.rst:580
 msgid "Business Metrics"
 msgstr "Métricas comerciales"
 
-#: ../../developer/architecture/index.rst:586
+#: ../../developer/architecture/index.rst:582
 msgid "Active users"
 msgstr "Usuarios activos"
 
-#: ../../developer/architecture/index.rst:587
+#: ../../developer/architecture/index.rst:583
 msgid "Contracts created"
 msgstr "Contratos creados"
 
-#: ../../developer/architecture/index.rst:588
+#: ../../developer/architecture/index.rst:584
 msgid "Estimates generated"
 msgstr "Estimaciones generadas"
 
-#: ../../developer/architecture/index.rst:589
+#: ../../developer/architecture/index.rst:585
 msgid "PDF downloads"
 msgstr "Descargas de PDF"
 
-#: ../../developer/architecture/index.rst:590
+#: ../../developer/architecture/index.rst:586
 msgid "API usage"
 msgstr "Uso de API"
 
-#: ../../developer/architecture/index.rst:592
+#: ../../developer/architecture/index.rst:588
 msgid "See :doc:`../deployment/index` for monitoring setup."
 msgstr ""
 "Consulte :doc:`../deployment/index` para conocer la configuración del "
 "monitoreo."
 
-#: ../../developer/architecture/index.rst:595
+#: ../../developer/architecture/index.rst:591
 msgid "Development Workflow"
 msgstr "Flujo de trabajo de desarrollo"
 
-#: ../../developer/architecture/index.rst:598
+#: ../../developer/architecture/index.rst:594
 msgid "Local Development"
 msgstr "Desarrollo Local"
 
-#: ../../developer/architecture/index.rst:600
+#: ../../developer/architecture/index.rst:596
 msgid "Use Docker Compose for consistent environment"
 msgstr "Utilice Docker Compose para un entorno coherente"
 
-#: ../../developer/architecture/index.rst:601
+#: ../../developer/architecture/index.rst:597
 msgid "Run ``make dev`` to start services"
 msgstr "Ejecute ``make dev`` para iniciar los servicios"
 
-#: ../../developer/architecture/index.rst:602
+#: ../../developer/architecture/index.rst:598
 msgid "Code changes auto-reload (Django development server)"
-msgstr ""
-"Recarga automática de cambios de código (servidor de desarrollo Django)"
+msgstr "Recarga automática de cambios de código (servidor de desarrollo Django)"
 
-#: ../../developer/architecture/index.rst:603
+#: ../../developer/architecture/index.rst:599
 msgid "Use ``make shell`` for Django shell"
 msgstr "Utilice ``make shell`` para Django shell"
 
-#: ../../developer/architecture/index.rst:604
+#: ../../developer/architecture/index.rst:600
 msgid "Run ``make test`` before committing"
 msgstr "Ejecute ``make test`` antes de confirmar"
 
-#: ../../developer/architecture/index.rst:606
+#: ../../developer/architecture/index.rst:602
 msgid "See :doc:`../installation/index` for setup."
 msgstr "Consulte :doc:`../installation/index` para la configuración."
 
-#: ../../developer/architecture/index.rst:609
+#: ../../developer/architecture/index.rst:605
 msgid "Testing Strategy"
 msgstr "Estrategia de prueba"
 
-#: ../../developer/architecture/index.rst:611
+#: ../../developer/architecture/index.rst:607
 msgid "Unit tests for models and utilities"
 msgstr "Pruebas unitarias para modelos y utilidades."
 
-#: ../../developer/architecture/index.rst:612
+#: ../../developer/architecture/index.rst:608
 msgid "Integration tests for views"
 msgstr "Pruebas de integración para vistas."
 
-#: ../../developer/architecture/index.rst:613
+#: ../../developer/architecture/index.rst:609
 msgid "API tests for REST endpoints"
 msgstr "Pruebas API para puntos finales REST"
 
-#: ../../developer/architecture/index.rst:614
+#: ../../developer/architecture/index.rst:610
 msgid "Coverage target: >80%"
 msgstr "Objetivo de cobertura: >80%"
 
-#: ../../developer/architecture/index.rst:616
+#: ../../developer/architecture/index.rst:612
 msgid "See :doc:`/contributor/testing/index` for testing guide."
 msgstr ""
-"Consulte :doc:`/contributor/testing/index` para obtener una guía de prueba."
+"Consulte :doc:`/contributor/testing/index` para obtener una guía de "
+"prueba."
 
-#: ../../developer/architecture/index.rst:619
+#: ../../developer/architecture/index.rst:615
 msgid "Deployment Process"
 msgstr "Proceso de implementación"
 
-#: ../../developer/architecture/index.rst:621
+#: ../../developer/architecture/index.rst:617
 msgid "Run tests (``make test``)"
 msgstr "Ejecutar pruebas (``hacer prueba``)"
 
-#: ../../developer/architecture/index.rst:622
+#: ../../developer/architecture/index.rst:618
 msgid "Build Docker images"
 msgstr "Construir imágenes de Docker"
 
-#: ../../developer/architecture/index.rst:623
+#: ../../developer/architecture/index.rst:619
 msgid "Run database migrations"
 msgstr "Ejecutar migraciones de bases de datos"
 
-#: ../../developer/architecture/index.rst:624
+#: ../../developer/architecture/index.rst:620
 msgid "Collect static files"
 msgstr "Recopilar archivos estáticos"
 
-#: ../../developer/architecture/index.rst:625
+#: ../../developer/architecture/index.rst:621
 msgid "Restart application servers"
 msgstr "Reiniciar los servidores de aplicaciones"
 
-#: ../../developer/architecture/index.rst:626
+#: ../../developer/architecture/index.rst:622
 msgid "Verify deployment"
 msgstr "Verificar implementación"
 
-#: ../../developer/architecture/index.rst:628
+#: ../../developer/architecture/index.rst:624
 msgid "See :doc:`../deployment/index` for deployment guide."
 msgstr ""
-"Consulte :doc:`../deployment/index` para obtener una guía de implementación."
+"Consulte :doc:`../deployment/index` para obtener una guía de "
+"implementación."
 
-#: ../../developer/architecture/index.rst:631
+#: ../../developer/architecture/index.rst:627
 msgid "See Also"
 msgstr "Ver también"
 
-#: ../../developer/architecture/index.rst:633
+#: ../../developer/architecture/index.rst:629
 msgid ":doc:`settings-structure` - Settings organization"
 msgstr ""
 
-#: ../../developer/architecture/index.rst:634
+#: ../../developer/architecture/index.rst:630
 msgid ":doc:`multi-tenancy` - Multi-tenant architecture"
 msgstr ""
 
-#: ../../developer/architecture/index.rst:635
+#: ../../developer/architecture/index.rst:631
 msgid ":doc:`database-schema` - Database design"
 msgstr ""
 
-#: ../../developer/architecture/index.rst:636
+#: ../../developer/architecture/index.rst:632
 msgid ":doc:`url-structure` - URL routing"
 msgstr ""
 
-#: ../../developer/architecture/index.rst:637
+#: ../../developer/architecture/index.rst:633
 msgid ":doc:`../api/index` - API documentation"
 msgstr ""
+
+#~ msgid "Table of Contents"
+#~ msgstr "Tabla de contenido"
+
