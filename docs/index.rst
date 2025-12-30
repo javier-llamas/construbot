@@ -23,7 +23,7 @@ Construbot is a comprehensive Django-based construction management system for tr
 
    🇪🇸 Versión en español: https://construbot.readthedocs.io/es/
 
-   🇬🇧 Spanish version: https://construbot.readthedocs.io/es/
+   🇬🇧 English version: https://construbot.readthedocs.io/
 
 .. note::
    **Language Note:** While the codebase uses Spanish terminology (Contrato, Estimación, etc.), this documentation is primarily in English with Spanish translations available. See :doc:`_glossary/domain-terms` for complete term translations.
