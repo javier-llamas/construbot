@@ -14,7 +14,7 @@ Construbot Documentation
    :target: https://www.gnu.org/licenses/agpl-3.0.en.html
    :alt: License
 
-**Una Solución Operativa para Constructoras** | An Operational Solution for Construction Companies
+**An Operational Solution for Construction Companies**
 
 Construbot is a comprehensive Django-based construction management system for tracking contracts, estimates, counterparties, and financial operations. Built with multi-tenancy, hierarchical data structures, and a powerful REST API.
 

@@ -53,11 +53,9 @@ msgstr "Licencia"
 
 #: ../../index.rst:17
 msgid ""
-"**Una Solución Operativa para Constructoras** | An Operational Solution "
-"for Construction Companies"
+"**An Operational Solution for Construction Companies**"
 msgstr ""
-"**Una Solución Operativa para Constructoras** | Una Solución Operativa "
-"para Empresas Constructoras"
+"**Una Solución Operativa para Constructoras**"
 
 #: ../../index.rst:19
 msgid ""
