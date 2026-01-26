@@ -1,79 +1,53 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 from . import views
 
 app_name = 'construbot.users'
 
 urlpatterns = [
-    url(
-        regex=r'^$',
-        view=views.UserListView.as_view(),
+    re_path(r'^$', views.UserListView.as_view(),
         name='list'
     ),
-    url(
-        regex=r'^remove-is-new/(?P<pk>\d+)/$',
-        view=views.RemoveIsNewUserStatus.as_view(),
+    re_path(r'^remove-is-new/(?P<pk>\d+)/$', views.RemoveIsNewUserStatus.as_view(),
         name='remove_is_new'
     ),
-    url(
-        regex=r'^eliminar/(?P<model>\w+)/(?P<pk>\d+)/$',
-        view=views.UserDeleteView.as_view(),
+    re_path(r'^eliminar/(?P<model>\w+)/(?P<pk>\d+)/$', views.UserDeleteView.as_view(),
         name='delete_user'
     ),
-    url(
-        regex=r'^password/$',
-        view=views.PasswordRedirectView.as_view(),
+    re_path(r'^password/$', views.PasswordRedirectView.as_view(),
         name='password_change_redirect'
     ),
-    url(
-        regex=r'^~redirect/$',
-        view=views.UserRedirectView.as_view(),
+    re_path(r'^~redirect/$', views.UserRedirectView.as_view(),
         name='redirect'
     ),
-    url(
-        regex=r'^new/$',
-        view=views.UserCreateView.as_view(),
+    re_path(r'^new/$', views.UserCreateView.as_view(),
         name='new'
     ),
-    url(
-        regex=r'^nuevo/company/$',
-        view=views.CompanyCreateView.as_view(),
+    re_path(r'^nuevo/company/$', views.CompanyCreateView.as_view(),
         name='new_company'
     ),
-    url(
-        regex=r'^company-update/(?P<pk>\d+)/$',
-        view=views.CompanyEditView.as_view(),
+    re_path(r'^company-update/(?P<pk>\d+)/$', views.CompanyEditView.as_view(),
         name='company_edit'
     ),
-    url(
-        regex=r'^listado/company/$',
-        view=views.CompanyListView.as_view(),
+    re_path(r'^listado/company/$', views.CompanyListView.as_view(),
         name='company_list'
     ),
     # De momento se desactiva la vista.
-    # url(
+    # re_path(
     #     regex=r'^detalle/company/(?P<pk>\d+)/$',
     #     view=views.CompanyDetailView.as_view(),
     #     name='company_detail'
     # ),
-    url(
-        regex=r'^detalle/company/(?P<pk>\d+)/$',
-        view=views.CompanyChangeViewFromList.as_view(),
+    re_path(r'^detalle/company/(?P<pk>\d+)/$', views.CompanyChangeViewFromList.as_view(),
         name='company_detail'
     ),
-    url(
-        regex=r'^detalle/(?:(?P<username>[\w.@+-]+)/)?$',
-        view=views.UserDetailView.as_view(),
+    re_path(r'^detalle/(?:(?P<username>[\w.@+-]+)/)?$', views.UserDetailView.as_view(),
         name='detail'
     ),
-    url(
-        regex=r'^update/(?:(?P<username>[\w.@+-]+)/)?$',
-        view=views.UserUpdateView.as_view(),
+    re_path(r'^update/(?:(?P<username>[\w.@+-]+)/)?$', views.UserUpdateView.as_view(),
         name='update'
     ),
-    url(
-        regex=r'^company-change/(?P<company>[\w ]+)/$',
-        view=views.CompanyChangeView.as_view(),
+    re_path(r'^company-change/(?P<company>[\w ]+)/$', views.CompanyChangeView.as_view(),
         name='company-change'
     ),
 ]

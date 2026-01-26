@@ -305,7 +305,7 @@ class UserCreateViewTest(utils.BaseTestCase):
         query = [repr(x) for x in self.user.company.all()]
         self.assertNotEqual(other_user.customer, self.user.customer)
         self.assertIsInstance(form, UsuarioInterno)
-        self.assertQuerysetEqual(form.fields['company'].queryset, query, ordered=False)
+        self.assertQuerysetEqual(form.fields['company'].queryset, query, ordered=False, transform=repr)
 
     def test_user_creation_correct_success_url(self):
         view = self.get_instance(
@@ -571,7 +571,8 @@ class CompanyListViewTest(utils.BaseTestCase):
         test_companies_qs = [repr(a) for a in self.user.company.order_by('-company_name')]
         self.assertQuerysetEqual(
             self.view.get_queryset(),
-            test_companies_qs
+            test_companies_qs,
+            transform=repr
         )
 
     def test_get_context_data_has_model_name_attr(self):

@@ -1,193 +1,119 @@
-from django.conf.urls import url
+from django.urls import re_path
 
 from . import views
 
 app_name = 'construbot.proyectos'
 
 urlpatterns = [
-    url(
-        regex=r'^$',
-        view=views.ProyectDashboardView.as_view(),
+    re_path(r'^$', views.ProyectDashboardView.as_view(),
         name='proyect_dashboard'
     ),
-    url(
-        regex=r'^listado/contratos/$',
-        view=views.ContratoListView.as_view(),
+    re_path(r'^listado/contratos/$', views.ContratoListView.as_view(),
         name='listado_de_contratos'
     ),
-    url(
-        regex=r'^listado/clientes/$',
-        view=views.ClienteListView.as_view(),
+    re_path(r'^listado/clientes/$', views.ClienteListView.as_view(),
         name='listado_de_clientes'
     ),
-    url(
-        regex=r'^listado/sitios/$',
-        view=views.SitioListView.as_view(),
+    re_path(r'^listado/sitios/$', views.SitioListView.as_view(),
         name='listado_de_sitios'
     ),
-    url(
-        regex=r'^listado/destinatarios/$',
-        view=views.DestinatarioListView.as_view(),
+    re_path(r'^listado/destinatarios/$', views.DestinatarioListView.as_view(),
         name='listado_de_destinatarios'
     ),
-    url(
-        regex=r'^contrato/catalogo-edit/(?P<pk>\d+)/$',
-        view=views.CatalogoConceptosInlineFormView.as_view(),
+    re_path(r'^contrato/catalogo-edit/(?P<pk>\d+)/$', views.CatalogoConceptosInlineFormView.as_view(),
         name='catalogo_conceptos'
     ),
-    url(
-        regex=r'^contrato/retenciones-edit/(?P<pk>\d+)/$',
-        view=views.CatalogoRetencionesInlineFormView.as_view(),
+    re_path(r'^contrato/retenciones-edit/(?P<pk>\d+)/$', views.CatalogoRetencionesInlineFormView.as_view(),
         name='catalogo_retenciones'
     ),
-    url(
-        regex=r'^contrato/catalogo-unidades/$',
-        view=views.CatalogoUnitsInlineFormView.as_view(),
+    re_path(r'^contrato/catalogo-unidades/$', views.CatalogoUnitsInlineFormView.as_view(),
         name='catalogo_de_unidades'
     ),
-    url(
-        regex=r'^contrato/catalogo-conceptos/(?P<pk>\d+)/$',
-        view=views.CatalogoConceptos.as_view(),
+    re_path(r'^contrato/catalogo-conceptos/(?P<pk>\d+)/$', views.CatalogoConceptos.as_view(),
         name='catalogo_conceptos_listado'
     ),
-    url(
-        regex=r'^contrato/detalle/(?P<pk>\d+)/$',
-        view=views.ContratoDetailView.as_view(),
+    re_path(r'^contrato/detalle/(?P<pk>\d+)/$', views.ContratoDetailView.as_view(),
         name='contrato_detail'
     ),
-    url(
-        regex=r'^cliente/detalle/(?P<pk>\d+)/$',
-        view=views.ClienteDetailView.as_view(),
+    re_path(r'^cliente/detalle/(?P<pk>\d+)/$', views.ClienteDetailView.as_view(),
         name='cliente_detail'
     ),
-    url(
-        regex=r'^sitio/detalle/(?P<pk>\d+)/$',
-        view=views.SitioDetailView.as_view(),
+    re_path(r'^sitio/detalle/(?P<pk>\d+)/$', views.SitioDetailView.as_view(),
         name='sitio_detail'
     ),
-    url(
-        regex=r'^destinatario/detalle/(?P<pk>\d+)/$',
-        view=views.DestinatarioDetailView.as_view(),
+    re_path(r'^destinatario/detalle/(?P<pk>\d+)/$', views.DestinatarioDetailView.as_view(),
         name='destinatario_detail'
     ),
-    url(
-        regex=r'^estimacion/detalle/(?P<pk>\d+)/$',
-        view=views.EstimateDetailView.as_view(),
+    re_path(r'^estimacion/detalle/(?P<pk>\d+)/$', views.EstimateDetailView.as_view(),
         name='estimate_detail'
     ),
-    url(
-        regex=r'^estimacion/(?P<pk>\d+)/reporte-subcontratistas/$',
-        view=views.SubcontratosReport.as_view(),
+    re_path(r'^estimacion/(?P<pk>\d+)/reporte-subcontratistas/$', views.SubcontratosReport.as_view(),
         name='reporte-subcontratistas'
     ),
-    url(
-        regex=r'^estimacion/pdf/(?P<pk>\d+)/$',
-        view=views.EstimatePdfPrint.as_view(),
+    re_path(r'^estimacion/pdf/(?P<pk>\d+)/$', views.EstimatePdfPrint.as_view(),
         name='estimate_detailpdf'
     ),
-    url(
-        regex=r'^generador/pdf/(?P<pk>\d+)/$',
-        view=views.GeneratorPdfPrint.as_view(),
+    re_path(r'^generador/pdf/(?P<pk>\d+)/$', views.GeneratorPdfPrint.as_view(),
         name='generator_detailpdf'
     ),
-    url(
-        regex=r'^contrato/nuevo/$',
-        view=views.ContratoCreationView.as_view(),
+    re_path(r'^contrato/nuevo/$', views.ContratoCreationView.as_view(),
         name='nuevo_contrato'
     ),
-    url(
-        regex=r'^subcontrato/nuevo/(?P<pk>\d+)/$',
-        view=views.SubcontratoCreationView.as_view(),
+    re_path(r'^subcontrato/nuevo/(?P<pk>\d+)/$', views.SubcontratoCreationView.as_view(),
         name='nuevo_subcontrato'
     ),
-    url(
-        regex=r'^cliente/nuevo/$',
-        view=views.ClienteCreationView.as_view(),
+    re_path(r'^cliente/nuevo/$', views.ClienteCreationView.as_view(),
         name='nuevo_cliente'
     ),
-    url(
-        regex=r'^sitio/nuevo/$',
-        view=views.SitioCreationView.as_view(),
+    re_path(r'^sitio/nuevo/$', views.SitioCreationView.as_view(),
         name='nuevo_sitio'
     ),
-    url(
-        regex=r'^destinatario/nuevo/$',
-        view=views.DestinatarioCreationView.as_view(),
+    re_path(r'^destinatario/nuevo/$', views.DestinatarioCreationView.as_view(),
         name='nuevo_destinatario'
     ),
-    url(
-        regex=r'^estimacion/nuevo/(?P<pk>\d+)/$',
-        view=views.EstimateCreationView.as_view(),
+    re_path(r'^estimacion/nuevo/(?P<pk>\d+)/$', views.EstimateCreationView.as_view(),
         name='nueva_estimacion'
     ),
-    url(
-        regex=r'^editar/contrato/(?P<pk>\d+)/$',
-        view=views.ContratoEditView.as_view(),
+    re_path(r'^editar/contrato/(?P<pk>\d+)/$', views.ContratoEditView.as_view(),
         name='editar_contrato'
     ),
-    url(
-        regex=r'^editar/cliente/(?P<pk>\d+)/$',
-        view=views.ClienteEditView.as_view(),
+    re_path(r'^editar/cliente/(?P<pk>\d+)/$', views.ClienteEditView.as_view(),
         name='editar_cliente'
     ),
-    url(
-        regex=r'^editar/sitio/(?P<pk>\d+)/$',
-        view=views.SitioEditView.as_view(),
+    re_path(r'^editar/sitio/(?P<pk>\d+)/$', views.SitioEditView.as_view(),
         name='editar_sitio'
     ),
-    url(
-        regex=r'^editar/destinatario/(?P<pk>\d+)/$',
-        view=views.DestinatarioEditView.as_view(),
+    re_path(r'^editar/destinatario/(?P<pk>\d+)/$', views.DestinatarioEditView.as_view(),
         name='editar_destinatario'
     ),
-    url(
-        regex=r'^editar/estimacion/(?P<pk>\d+)/$',
-        view=views.EstimateEditView.as_view(),
+    re_path(r'^editar/estimacion/(?P<pk>\d+)/$', views.EstimateEditView.as_view(),
         name='editar_estimacion'
     ),
-    url(
-        regex=r'^eliminar/(?P<model>\w+)/(?P<pk>\d+)/$',
-        view=views.DynamicDelete.as_view(),
+    re_path(r'^eliminar/(?P<model>\w+)/(?P<pk>\d+)/$', views.DynamicDelete.as_view(),
         name='eliminar'
     ),
-    url(
-        regex=r'cliente-autocomplete/$',
-        view=views.ClienteAutocomplete.as_view(create_field='cliente_name'),
+    re_path(r'cliente-autocomplete/$', views.ClienteAutocomplete.as_view(create_field='cliente_name'),
         name='cliente-autocomplete'
     ),
-    url(
-        regex=r'subcontratista-autocomplete/$',
-        view=views.SubcontratistaAutocomplete.as_view(create_field='cliente_name'),
+    re_path(r'subcontratista-autocomplete/$', views.SubcontratistaAutocomplete.as_view(create_field='cliente_name'),
         name='subcontratista-autocomplete'
     ),
-    url(
-        regex=r'sitio-autocomplete/$',
-        view=views.SitioAutocomplete.as_view(create_field='sitio_name'),
+    re_path(r'sitio-autocomplete/$', views.SitioAutocomplete.as_view(create_field='sitio_name'),
         name='sitio-autocomplete'
     ),
-    url(
-        regex=r'destinatario-autocomplete/$',
-        view=views.DestinatarioAutocomplete.as_view(create_field='destinatario_text'),
+    re_path(r'destinatario-autocomplete/$', views.DestinatarioAutocomplete.as_view(create_field='destinatario_text'),
         name='destinatario-autocomplete'
     ),
-    url(
-        regex=r'^unit-autocomplete/$',
-        view=views.UnitAutocomplete.as_view(create_field='unit'),
+    re_path(r'^unit-autocomplete/$', views.UnitAutocomplete.as_view(create_field='unit'),
         name='unit-autocomplete'
     ),
-    url(
-        regex=r'^user-autocomplete/$',
-        view=views.UserAutocomplete.as_view(),
+    re_path(r'^user-autocomplete/$', views.UserAutocomplete.as_view(),
         name='user-autocomplete'
     ),
-    url(
-        regex=r'^company-autocomplete/$',
-        view=views.CompanyAutocomplete.as_view(),
+    re_path(r'^company-autocomplete/$', views.CompanyAutocomplete.as_view(),
         name='company-autocomplete'
     ),
-    url(
-        regex=r'^nivelacceso-autocomplete/$',
-        view=views.NivelAccesoAutocomplete.as_view(),
+    re_path(r'^nivelacceso-autocomplete/$', views.NivelAccesoAutocomplete.as_view(),
         name='nivelacceso-autocomplete'
     ),
 

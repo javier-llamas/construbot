@@ -67,6 +67,13 @@ class UserFactory(factory.django.DjangoModelFactory):
             for group in extracted:
                 self.groups.add(group)
 
+    @classmethod
+    def _after_postgeneration(cls, instance, create, results=None):
+        """Override to explicitly handle save after postgeneration."""
+        if create:
+            instance.save()
+
     class Meta:
         model = User
         django_get_or_create = ('username', 'nivel_acceso')
+        skip_postgeneration_save = True
