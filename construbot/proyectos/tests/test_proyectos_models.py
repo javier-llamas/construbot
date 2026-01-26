@@ -34,7 +34,7 @@ class ClienteModelTest(CBVTestCase):
         factories.ContratoFactory()
         contratos_ordenados = cliente.get_contratos_ordenados()
         qs_control = [repr(x) for x in sorted([contrato_1, contrato_2], key=lambda x: x.fecha, reverse=True)]
-        self.assertQuerysetEqual(contratos_ordenados, qs_control, transform=repr)
+        self.assertQuerySetEqual(contratos_ordenados, qs_control, transform=repr)
 
 
 class SitioModelTest(CBVTestCase):
@@ -51,7 +51,7 @@ class SitioModelTest(CBVTestCase):
         factories.ContratoFactory()
         contratos_ordenados = sitio.get_contratos_ordenados()
         control = [repr(x) for x in sorted([sitio_contrato_1, sitio_contrato_2], key=lambda x: x.fecha, reverse=True)]
-        self.assertQuerysetEqual(
+        self.assertQuerySetEqual(
             contratos_ordenados,
             control,
             msg='\n\nsitio.get_contratos_ordenados:\n{}.fecha = {}\n{}.fecha = {}'.format(
@@ -316,7 +316,7 @@ class ConceptoSetTest(CBVTestCase):
         imagenes = concepto.anotar_imagenes()
         imagenes_control = models.ImageEstimateConcept.objects.filter(estimateconcept__concept=concepto)
         represetnation_img_control = [repr(x) for x in imagenes_control]
-        self.assertQuerysetEqual(
+        self.assertQuerySetEqual(
             imagenes,
             represetnation_img_control,
             msg='\n{} {}\n{} {}'.format(

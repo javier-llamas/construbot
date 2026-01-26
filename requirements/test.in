@@ -14,4 +14,4 @@ pytest-django==4.9.0
 pytest-sugar==1.0.0
 
 # Coveralls
-coveralls==4.0.1
+coveralls>=4.0.2

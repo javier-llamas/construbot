@@ -1,10 +1,10 @@
-FROM python:3.10.19-alpine3.23
+FROM python:3.13.1-alpine3.21
 
 ENV PYTHONUNBUFFERED 1
 
 ARG SETUPTOOLS_VERSION=75.8.0
-ARG PIP_VERSION=24.3.1
-ARG PIP_TOOLS_VERSION=7.4.1
+ARG PIP_VERSION=25.3
+ARG PIP_TOOLS_VERSION=7.5.2
 
 COPY ./requirements /requirements
 # Paquetes que se ocupan despues de hacer build

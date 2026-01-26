@@ -7,8 +7,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Construbot is a Django-based operational solution for construction companies (Una Solucion operativa para constructoras). The project is licensed under AGPLv3 and can be deployed as a standalone application or used as a library.
 
 **Current Version:** 1.1.04
-**Django Version:** 3.2.25
-**Python Version:** >=3.10 (recommended 3.10.19)
+**Django Version:** 5.2.10 LTS
+**Python Version:** >=3.10 (recommended 3.13.11)
+**PostgreSQL Version:** >=14 (recommended 16+)
 
 ## Development Commands
 
@@ -148,11 +149,11 @@ Key environment variables:
 - `construbot.taskapp` - Celery task configuration
 
 **Key Third-party Apps:**
-- `django-allauth` - User registration and authentication
+- `django-allauth` 65.14.0 - User registration and authentication (v65+ uses new settings format)
 - `django-autocomplete-light` (dal) - Autocomplete widgets (must be loaded before admin)
 - `django-treebeard` - Tree structures for hierarchical data
 - `django-bootstrap4` - Bootstrap 4 integration
-- `rest_framework` - Django REST Framework
+- `rest_framework` 3.16.1 - Django REST Framework
 
 ### URL Structure
 
@@ -177,14 +178,16 @@ The project uses a custom authentication backend at `construbot.core.backends.Mo
 
 ### Database
 
-- **Primary Database:** PostgreSQL
+- **Primary Database:** PostgreSQL 14+ (recommended 16+)
+- **Database Adapter:** psycopg3 (psycopg[binary])
 - **Connection:** Managed via `DATABASE_URL` environment variable
 - **Atomic Requests:** Enabled by default (`ATOMIC_REQUESTS = True`)
+- **Note:** Django 5.2+ requires PostgreSQL 14 or later
 
 ### Task Queue
 
 - **Broker:** Redis (redis://redis:6379/0)
-- **Worker:** Celery 5.2.7
+- **Worker:** Celery 5.4.0
 - **Result Backend:** Redis
 - **Serialization:** JSON
 - **Time Limits:** Task limit 5 minutes, soft limit 60 seconds
@@ -241,3 +244,16 @@ Use the `--tag=current` flag or the `make current` command to run only tests mar
 5. **Password Hashing:** Uses Argon2 as the primary password hasher
 
 6. **Sentry Integration:** Sentry SDK is installed for error tracking in production
+
+7. **Django 5.2 Upgrade Notes:**
+   - Requires PostgreSQL 14 or later (Docker uses PostgreSQL 16)
+   - Uses psycopg3 instead of psycopg2-binary
+   - django-allauth upgraded from 0.63.6 to 65.14.0 with new settings format
+   - Test API changes: `assertQuerysetEqual` → `assertQuerySetEqual`, `assertFormError`/`assertFormsetError` now require form object instead of response
+   - Python 3.13 support requires cffi 2.0+ and argon2-cffi 25.1+
+
+8. **Docker Configuration:**
+   - Python 3.13.1-alpine3.21
+   - PostgreSQL 16-alpine
+   - Redis 7-alpine
+   - pip-tools 7.5.2

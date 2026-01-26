@@ -32,23 +32,23 @@ setup(
     author_email='elyak.123@gmail.com',
     python_requires='>=3.10',
     install_requires=[
-        # Django LTS
-        'django[argon2]==3.2.25',
-        # REST - DRF 3.14 is last version supporting Django 3.2
-        'djangorestframework==3.14.0',
-        'djangorestframework_simplejwt==5.3.1',
+        # Django LTS 5.2
+        'django[argon2]>=5.2,<5.3',
+        # REST - Django REST Framework
+        'djangorestframework>=3.16,<4.0',
+        'djangorestframework_simplejwt>=5.4,<6.0',
         # Configuration
-        'django-environ==0.11.2',
-        'whitenoise==6.8.2',
+        'django-environ>=0.11.2',
+        'whitenoise>=6.8',
         # Models
-        'django-model-utils==4.5.1',
-        'django-treebeard==4.7.1',
+        'django-model-utils>=4.5',
+        'django-treebeard>=4.7',
         # Images
         'Pillow>=11.0.0',
-        # For user registration - 0.63.x is last version supporting Django 3.2
-        'django-allauth==0.63.6',
-        # Python-PostgreSQL Database Adapter
-        'psycopg2-binary==2.9.10',
+        # For user registration
+        'django-allauth>=65.0,<66.0',
+        # Python-PostgreSQL Database Adapter - psycopg3
+        'psycopg[binary]>=3.2,<4.0',
         # Unicode slugification
         'awesome-slugify==1.6.5',
         # Time zones support
@@ -59,8 +59,8 @@ setup(
         # Celery support
         'celery==5.4.0',
         # Compressing static files
-        'rcssmin==1.1.1',
-        'django-compressor==4.4',
+        'rcssmin>=1.1.1',
+        'django-compressor>=4.6',
         # FrontEnd Libraries
         'django-autocomplete-light==3.11.0',
         'django-bootstrap4==23.4',
@@ -78,14 +78,16 @@ setup(
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 3.2',
+        'Framework :: Django :: 5.2',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Affero General Public License v3',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: 3.13',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],

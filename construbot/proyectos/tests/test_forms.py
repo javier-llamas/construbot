@@ -224,8 +224,8 @@ class CatalogoConceptosFormsetTest(BaseFormTest):
         response = self.client.post(
             reverse('proyectos:catalogo_conceptos', kwargs={'pk': contrato.pk}), formset_data
         )
-        self.assertFormsetError(
-            response, 'formset', None, field=None,
+        self.assertFormSetError(
+            response.context['formset'], None, field=None,
             errors=['Por favor, corrija la información duplicada en concept_text.']
         )
         self.assertEqual(response.status_code, 200)
@@ -263,8 +263,8 @@ class CatalogoConceptosFormsetTest(BaseFormTest):
         response = self.client.post(
             reverse('proyectos:catalogo_conceptos', kwargs={'pk': contrato.pk}), formset_data
         )
-        self.assertFormsetError(
-            response, 'formset', 1, field='unit',
+        self.assertFormSetError(
+            response.context['formset'], 1, field='unit',
             errors=['El concepto debe pertenecer a la misma compañia que su unidad.']
         )
         self.assertEqual(response.status_code, 200)

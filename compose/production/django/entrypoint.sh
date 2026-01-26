@@ -34,10 +34,10 @@ export CELERY_BROKER_URL="${REDIS_URL}"
 function postgres_ready(){
 python << END
 import sys
-import psycopg2
+import psycopg
 try:
-    conn = psycopg2.connect(dbname="$POSTGRES_USER", user="$POSTGRES_USER", password="$POSTGRES_PASSWORD", host="$POSTGRES_HOST")
-except psycopg2.OperationalError:
+    conn = psycopg.connect(dbname="$POSTGRES_USER", user="$POSTGRES_USER", password="$POSTGRES_PASSWORD", host="$POSTGRES_HOST")
+except psycopg.OperationalError:
     sys.exit(-1)
 sys.exit(0)
 END

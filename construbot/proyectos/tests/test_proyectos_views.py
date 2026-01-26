@@ -101,7 +101,7 @@ class ContratoListTest(BaseViewTest):
         )
         qs = view.get_queryset()
         qs_test = [repr(y) for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_contrato_same_customer_not_assigned_to_user_doesnt_appear(self):
         company_test = factories.CompanyFactory(customer=self.user.customer)
@@ -118,7 +118,7 @@ class ContratoListTest(BaseViewTest):
         )
         qs = view.get_queryset()
         qs_test = [repr(y) for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_contrato_same_customer_same_company_not_assigned_to_direccion_user_does_appear(self):
         company_test = factories.CompanyFactory(customer=self.user.customer)
@@ -134,7 +134,7 @@ class ContratoListTest(BaseViewTest):
         )
         qs = view.get_queryset()
         qs_test = [repr(y) for y in sorted([contrato, contrato_2, contrato_3], key=lambda x: x.fecha, reverse=True)]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_contrato_same_customer_assigned_to_user_other_company_doesnt_appear(self):
         company_test_1 = factories.CompanyFactory(customer=self.user.customer)
@@ -153,7 +153,7 @@ class ContratoListTest(BaseViewTest):
         )
         qs = view.get_queryset()
         qs_test = [repr(y) for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
 class ClienteListTest(BaseViewTest):
@@ -173,7 +173,7 @@ class ClienteListTest(BaseViewTest):
         )
         qs = view.get_queryset()
         qs_test = [repr(a) for a in sorted([cliente, cliente_2], key=lambda x: repr(x).lower(), reverse=False)]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
 class SitioListTest(BaseViewTest):
@@ -194,7 +194,7 @@ class SitioListTest(BaseViewTest):
         )
         qs = view.get_queryset()
         qs_test = [repr(q) for q in sorted([sitio, sitio_2], key=lambda x: repr(x).lower(), reverse=False)]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
 class DestinatarioListTest(BaseViewTest):
@@ -218,7 +218,7 @@ class DestinatarioListTest(BaseViewTest):
         qs_test = [repr(q) for q in sorted(
             [destinatario, destinatario_2], key=lambda x: repr(x).lower(), reverse=False
         )]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_destinatario_query_same_client_company_coordinador(self):
         destinatario_company = factories.CompanyFactory(customer=self.user.customer)
@@ -243,7 +243,7 @@ class DestinatarioListTest(BaseViewTest):
         qs_test = [repr(q) for q in sorted(
             [destinatario, destinatario_2], key=lambda x: repr(x).lower(), reverse=False
         )]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_destinatario_query_same_client_company_director(self):
         destinatario_company = factories.CompanyFactory(customer=self.user.customer)
@@ -264,7 +264,7 @@ class DestinatarioListTest(BaseViewTest):
         qs_test = [repr(q) for q in sorted(
             [destinatario, destinatario_2, destinatario_3], key=lambda x: repr(x).lower(), reverse=False
         )]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
 class ContratoDetailTest(BaseViewTest):
@@ -493,7 +493,7 @@ class ClienteDetailTest(BaseViewTest):
         qs_test = [repr(q) for q in sorted(
             [contrato2, contrato3], key=lambda x: x.fecha, reverse=True
         )]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
 class SitioDetailTest(BaseViewTest):
@@ -621,7 +621,7 @@ class ContratoCreationTest(BaseViewTest):
             view.context = view.get_context_data(form)
             self.assertFalse(hasattr(view, 'object'))
             self.assertEqual(view.post(request=self.request).status_code, 200)
-            self.assertFormError(view, 'form', None,
+            self.assertFormError(view.context['form'], None,
                                  'Actualmente te encuentras en otra compañia, '
                                  'es necesario recargar y repetir el proceso.'
                                  )
@@ -675,7 +675,7 @@ class ClienteCreationTest(BaseViewTest):
             view.context = view.get_context_data(form)
             self.assertFalse(hasattr(view, 'object'))
             self.assertEqual(view.post(request=self.request).status_code, 200)
-            self.assertFormError(view, 'form', None,
+            self.assertFormError(view.context['form'], None,
                                  'Actualmente te encuentras en otra compañia, '
                                  'es necesario recargar y repetir el proceso.'
                                  )
@@ -906,7 +906,7 @@ class EstimateCreationTest(BaseViewTest):
             'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
         }
         response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
-        self.assertFormError(response, 'form', None, 'Destinatarios y contratos no pueden ser de empresas diferentes')
+        self.assertFormError(response.context['form'], None, 'Destinatarios y contratos no pueden ser de empresas diferentes')
 
     def test_estimate_post_pagada_sin_fecha_pago(self):
         contrato = factories.ContratoFactory()
@@ -944,7 +944,7 @@ class EstimateCreationTest(BaseViewTest):
         }
         response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
         self.assertFormError(
-            response, 'form', 'payment_date', 'Si la estimación fué pagada, es necesaria fecha de pago.'
+            response.context['form'], 'payment_date', 'Si la estimación fué pagada, es necesaria fecha de pago.'
         )
 
     def test_estimate_createview_renders_formset_errors(self):
@@ -983,7 +983,7 @@ class EstimateCreationTest(BaseViewTest):
             'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
         }
         response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
-        self.assertFormsetError(response, 'generator_inline_concept', 0, 'cuantity_estimated', ['Introduzca un número.'])
+        self.assertFormSetError(response.context['generator_inline_concept'], 0, 'cuantity_estimated', ['Introduzca un número.'])
         self.assertEqual(response.status_code, 200)
 
     def test_estimate_auth_by_gen_other_company_fail(self):
@@ -1024,7 +1024,7 @@ class EstimateCreationTest(BaseViewTest):
             'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
         }
         response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
-        self.assertFormError(response, 'form', None, 'Destinatarios y contratos no pueden ser de empresas diferentes')
+        self.assertFormError(response.context['form'], None, 'Destinatarios y contratos no pueden ser de empresas diferentes')
 
 
 class EstimateEditTest(BaseViewTest):
@@ -1193,7 +1193,7 @@ class ContratoEditViewTest(BaseViewTest):
             contrato = Contrato.objects.get(pk=contrato_factory.pk)
             self.assertEqual(contrato.monto, decimal.Decimal('90.00'))
             self.assertEqual(view.post(request=self.request).status_code, 200)
-            self.assertFormError(view, 'form', 'currently_at', 'Este campo es requerido.')
+            self.assertFormError(view.context['form'], 'currently_at', 'Este campo es requerido.')
 
 
 class ClienteEditTest(BaseViewTest):
@@ -1467,7 +1467,7 @@ class CatalogoConceptosTest(BaseViewTest):
         mock_contrato.assert_called_once()
         test_qs = [repr(_contrato)]
         self.assertEqual(_contrato, instance_contrato)
-        self.assertQuerysetEqual(instance_qs, test_qs, transform=repr)
+        self.assertQuerySetEqual(instance_qs, test_qs, transform=repr)
 
     def test_get_contrato(self):
         company = factories.CompanyFactory(customer=self.user.customer)
@@ -1652,7 +1652,7 @@ class ClienteAutocompleteTest(BaseViewTest):
         view.q = "aar"
         qs = view.get_queryset()
         qs_test = [repr(a) for a in [cliente, cliente_2]]
-        self.assertQuerysetEqual(qs, qs_test, ordered=False, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, ordered=False, transform=repr)
 
     def test_if_cliente_autocomplete_returns_none(self):
         company_autocomplete = factories.CompanyFactory(customer=self.user.customer)
@@ -1680,7 +1680,7 @@ class ClienteAutocompleteTest(BaseViewTest):
         view.q = "com"
         qs = view.get_queryset()
         qs_test = [repr(a) for a in [company1, company2]]
-        self.assertQuerysetEqual(qs, qs_test, ordered=False, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, ordered=False, transform=repr)
 
     def test_if_company_autocomplete_returns_none(self):
         company1 = factories.CompanyFactory(company_name="CömPaNy", customer=self.user.customer)
@@ -1752,7 +1752,7 @@ class SitioAutocompleteTest(BaseViewTest):
         view.q = "Pábé"
         qs = view.get_queryset()
         qs_test = [repr(a) for a in [sitio, sitio_2]]
-        self.assertQuerysetEqual(qs, qs_test, ordered=False, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, ordered=False, transform=repr)
 
     def test_if_sitio_autocomplete_returns_none(self):
         company_autocomplete = factories.CompanyFactory(customer=self.user.customer)
@@ -1860,7 +1860,7 @@ class UnitAutocompleteTest(BaseViewTest):
         view.q = "kil"
         qs = view.get_queryset()
         qs_test = [repr(a) for a in [unit, unit_2]]
-        self.assertQuerysetEqual(qs, qs_test, ordered=False, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, ordered=False, transform=repr)
 
     def test_unit_autocomplete_returns_the_correct_key_words_no_create_field(self):
         company_autocomplete = factories.CompanyFactory(customer=self.user.customer)
@@ -1917,7 +1917,7 @@ class UserAutocompleteTest(BaseViewTest):
         instance.request = self.request
         qs = instance.get_queryset()
         qs_test = [repr(a) for a in sorted([self.user])]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_user_email_autocomplete_get_queryset(self):
         instance = views.UserAutocomplete()
@@ -1928,4 +1928,4 @@ class UserAutocompleteTest(BaseViewTest):
         instance.request = self.request
         qs = instance.get_queryset()
         qs_test = [repr(a) for a in sorted([self.request.user])]
-        self.assertQuerysetEqual(qs, qs_test, transform=repr)
+        self.assertQuerySetEqual(qs, qs_test, transform=repr)
