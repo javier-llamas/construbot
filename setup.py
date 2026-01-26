@@ -30,67 +30,62 @@ setup(
     url='https://www.construbot.com.mx/',
     author='Javier Llamas Ramirez',
     author_email='elyak.123@gmail.com',
-    python_requires='>=3.9.17',
+    python_requires='>=3.10',
     install_requires=[
-        # Conservative Django
-        'django[argon2]==3.2.19',
-        # REST
-        'djangorestframework==3.13.1',
-        'djangorestframework_simplejwt==5.2.0',
+        # Django LTS
+        'django[argon2]==3.2.25',
+        # REST - DRF 3.14 is last version supporting Django 3.2
+        'djangorestframework==3.14.0',
+        'djangorestframework_simplejwt==5.3.1',
         # Configuration
-        'django-environ==0.9.0',
-        'whitenoise==6.4.0',
+        'django-environ==0.11.2',
+        'whitenoise==6.8.2',
         # Models
-        'django-model-utils==4.2.0',
-        'django-treebeard==4.5.1',
+        'django-model-utils==4.5.1',
+        'django-treebeard==4.7.1',
         # Images
-        'Pillow>=9.2.0',
-        # For user registration, either via email or social
-        # Well-built with regular release cycles!
-        'django-allauth==0.51.0',
+        'Pillow>=11.0.0',
+        # For user registration - 0.63.x is last version supporting Django 3.2
+        'django-allauth==0.63.6',
         # Python-PostgreSQL Database Adapter
-        'psycopg2==2.8.6',
+        'psycopg2-binary==2.9.10',
         # Unicode slugification
         'awesome-slugify==1.6.5',
         # Time zones support
-        'pytz==2022.1',
+        'pytz==2024.2',
         # Redis support
-        'django-redis==5.2.0',
-        'redis==3.2.1',
+        'django-redis==5.4.0',
+        'redis==5.2.1',
         # Celery support
-        'celery==5.2.7',
+        'celery==5.4.0',
         # Compressing static files
-        'rcssmin==1.1.0',
-        'django-compressor==4.0',
+        'rcssmin==1.1.1',
+        'django-compressor==4.4',
         # FrontEnd Libraries
-        'django-autocomplete-light==3.9.4',
-        'django-bootstrap4==22.1',
+        'django-autocomplete-light==3.11.0',
+        'django-bootstrap4==23.4',
         # xls files handling
-        'openpyxl==2.6.2',
+        'openpyxl==3.1.5',
         # WSGI Handler
-        # ------------------------------------------------
-        'gunicorn==19.7.1',
-
+        'gunicorn==23.0.0',
         # Static and Media Storage
-        # ------------------------------------------------
-        'django-storages[boto3]==1.13.2',
+        'django-storages[boto3]==1.14.4',
         # Email backends for Mailgun, Postmark, SendGrid and more
-        # -------------------------------------------------------
-        'django-anymail>=10.0,<11.0',
-        # --------------------------
+        'django-anymail>=11.0,<12.0',
         # Sentry client
-        'sentry-sdk>=1.14.0',
+        'sentry-sdk>=2.19.2',
     ],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
-        'Framework :: Django :: 2.1',
+        'Framework :: Django :: 3.2',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU Affero General Public License v3'
+        'License :: OSI Approved :: GNU Affero General Public License v3',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],

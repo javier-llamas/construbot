@@ -24,6 +24,7 @@ precision = 2
 sort = -Miss
 omit =
     setup.py
+    docs/*
     */migrations/*
     */config/settings/*
     docs/conf.py

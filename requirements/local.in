@@ -1,35 +1,35 @@
 # Local development dependencies go here
 -r base.txt
 
-coverage==5.5
-django-coverage-plugin==2.0.3
+coverage==7.6.10
+django-coverage-plugin==3.1.0
 
-Sphinx==2.1.1
+Sphinx==8.1.3
 django-extensions==3.2.3
-Werkzeug>=0.15.3
-django-test-plus==2.2.0
-factory-boy==2.9.2
+Werkzeug>=3.1.3
+django-test-plus==2.2.2
+factory-boy==3.3.1
 
-django-debug-toolbar==3.5.0
+# Django debug toolbar 4.x requires Django 4.2+, use 3.x for Django 3.2
+django-debug-toolbar==3.8.1
 
 # improved REPL
-appnope==0.1.3
-ipdb==0.13.9
-prompt_toolkit==3.0.38
+appnope==0.1.4
+ipdb==0.13.13
 
-pytest-django==4.5.2
-pytest-sugar==0.9.0
-
+pytest-django==4.9.0
+pytest-sugar==1.0.0
 
 # Mine....
-coveralls==1.2.0
-selenium==3.12.0
-pip-autoremove==0.9.0
-pipdeptree==2.2.1
-pip-tools==6.13.0
+coveralls==4.0.1
+selenium==4.16.0
+pip-autoremove==0.10.0
+pipdeptree==2.23.4
+pip-tools==7.4.1
 
 # For djangorestframework
-Jinja2>=2.10.1
-coreapi>=1.32.0
-Markdown==2.6.11
-django-filter==22.1
+Jinja2>=3.1.4
+coreapi>=2.3.3
+Markdown==3.7
+# django-filter 24.x requires Django 4.2+, use 23.x for Django 3.2
+django-filter==23.5

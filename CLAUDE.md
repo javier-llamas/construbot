@@ -7,8 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Construbot is a Django-based operational solution for construction companies (Una Solucion operativa para constructoras). The project is licensed under AGPLv3 and can be deployed as a standalone application or used as a library.
 
 **Current Version:** 1.1.04
-**Django Version:** 3.2.19
-**Python Version:** >=3.9.17
+**Django Version:** 3.2.25
+**Python Version:** >=3.10 (recommended 3.10.19)
 
 ## Development Commands
 

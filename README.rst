@@ -11,11 +11,11 @@ An operational solution for construction companies
     :target: https://www.gnu.org/licenses/agpl-3.0
     :alt: License: AGPL v3
 
-.. image:: https://img.shields.io/badge/python-3.9%2B-blue
+.. image:: https://img.shields.io/badge/python-3.10%2B-blue
     :target: https://www.python.org/downloads/
     :alt: Python Version
 
-.. image:: https://img.shields.io/badge/django-3.2.19-green
+.. image:: https://img.shields.io/badge/django-3.2.25-green
     :target: https://www.djangoproject.com/
     :alt: Django Version
 

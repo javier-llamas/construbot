@@ -5,8 +5,8 @@
 
 [![Documentation Status](https://readthedocs.org/projects/construbot/badge/?version=latest)](https://construbot.readthedocs.io/en/latest/?badge=latest)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
-[![Django Version](https://img.shields.io/badge/django-3.2.19-green)](https://www.djangoproject.com/)
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/downloads/)
+[![Django Version](https://img.shields.io/badge/django-3.2.25-green)](https://www.djangoproject.com/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ---
@@ -57,7 +57,7 @@ Construbot addresses these challenges by providing:
 
 ### Prerequisites
 
-- Python 3.9 or higher
+- Python 3.10 or higher
 - PostgreSQL 12+ (recommended) or SQLite for development
 - Redis (for Celery tasks)
 - Docker & Docker Compose (recommended for quick setup)
