@@ -1,6 +1,7 @@
-from construbot.users.tests import factories as user_factories
 from django.urls import reverse
-from django.test import tag
+
+from construbot.users.tests import factories as user_factories
+
 from . import utils
 
 
@@ -18,13 +19,13 @@ class TestProyectsURLsCorrectTemplates(utils.BaseTestCase):
     def test_user_list(self):
         self.user.nivel_acceso = self.director_permission
         self.user.save()
-        self.client.login(username=self.user.username, password='password')
-        response = self.client.get(reverse('users:list'))
-        self.assertTemplateUsed(response, 'users/user_list.html')
+        self.client.login(username=self.user.username, password="password")
+        response = self.client.get(reverse("users:list"))
+        self.assertTemplateUsed(response, "users/user_list.html")
 
     def test_user_detail(self):
         self.user.nivel_acceso = self.director_permission
         self.user.save()
-        self.client.login(username=self.user.username, password='password')
-        response = self.client.get(reverse('users:detail'))
-        self.assertTemplateUsed(response, 'users/user_detail.html')
+        self.client.login(username=self.user.username, password="password")
+        response = self.client.get(reverse("users:detail"))
+        self.assertTemplateUsed(response, "users/user_detail.html")

@@ -1,0 +1,163 @@
+# pyproject.toml
+# Tool configurations only - dependencies are managed in setup.py
+
+# Black configuration
+[tool.black]
+line-length = 88
+target-version = ['py313']
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | __pycache__
+  | \.eggs
+  | \.tox
+  | build
+  | dist
+  | staticfiles
+  | media
+  | migrations
+  | docs
+  | node_modules
+  | \.mypy_cache
+  | \.pytest_cache
+)/
+'''
+
+# isort configuration
+[tool.isort]
+profile = "black"
+line_length = 88
+known_django = ["django"]
+known_first_party = ["construbot"]
+sections = ["FUTURE", "STDLIB", "DJANGO", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+skip_glob = [
+    "*/migrations/*",
+    "*/staticfiles/*",
+    "*/media/*",
+    "*/__pycache__/*",
+    "*/venv/*",
+    "*/.venv/*",
+]
+
+# Ruff configuration
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    ".eggs",
+    ".tox",
+    "build",
+    "dist",
+    "staticfiles",
+    "media",
+    "*/migrations/*",
+    "docs/*",
+    "*/tests/*",
+    "*/functional_tests/*",
+    "node_modules",
+    ".mypy_cache",
+    ".pytest_cache",
+    "construbot/templates/*",
+    "construbot/config/settings/*",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",        # pycodestyle errors
+    "F",        # pyflakes
+    "C90",      # mccabe complexity
+    "PLC0415",  # import-outside-top-level (detects imports inside functions/classes)
+    "PLR0912",  # too-many-branches
+    "PLR0913",  # too-many-arguments
+    "PLR0915",  # too-many-statements
+]
+ignore = [
+    "E501",   # line too long (let Black handle line length)
+    "E203",   # whitespace before ':' (conflicts with Black)
+]
+
+# Per-file ignores
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**/*.py" = [
+    "PLR0913",  # Allow more arguments in test functions (mocks, fixtures)
+    "PLR0915",  # Allow longer test functions (setup + execute + verify)
+]
+"manage.py" = ["E402"]  # Module level import not at top of file
+"**/admin.py" = ["E402"]  # Module level import not at top of file
+"setup.py" = ["E402"]  # Module level import not at top of file
+
+# Coverage configuration
+[tool.coverage.run]
+branch = true
+source = ["construbot"]
+omit = [
+    "*/migrations/*",
+    "*/tests/*",
+    "*.txt",
+    "*.pyc",
+    "*.pyo",
+    "*/__init__.py",
+    "*/apps.py",
+    "*/admin.py",
+    "*/wsgi.py",
+    "*/asgi.py",
+    "*/urls.py",
+    "*/settings.py",
+    "construbot/config/*",
+    "setup.py",
+    "docs/*",
+    "construbot/templates/*",
+    "*/staticfiles/*",
+]
+plugins = ["django_coverage_plugin"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __unicode__",
+    "def __repr__",
+    "if self\\.debug",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+]
+skip_covered = true
+precision = 2
+show_missing = true
+sort = "-Miss"
+
+# Pytest configuration
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "construbot.config.settings.test"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+addopts = "--reuse-db"
+
+# Django-stubs (mypy) configuration
+[tool.django-stubs]
+django_settings_module = "construbot.config.settings.local"
+
+[tool.mypy]
+plugins = ["mypy_django_plugin.main"]
+python_version = "3.13"
+warn_return_any = false
+warn_unused_configs = true
+ignore_missing_imports = true
+exclude = [
+    "migrations",
+    "staticfiles",
+    "media",
+]
+
+[[tool.mypy.overrides]]
+module = [
+    "*.migrations.*",
+    "*.tests.*",
+]
+ignore_errors = true

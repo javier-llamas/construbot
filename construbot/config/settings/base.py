@@ -7,76 +7,83 @@ https://docs.djangoproject.com/en/dev/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
+
 from time import strftime
+
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 4  # (construbot/construbot/config/settings/base.py - 3 = construbot/)
-APPS_DIR = ROOT_DIR.path('construbot')
+ROOT_DIR = (
+    environ.Path(__file__) - 4
+)  # (construbot/construbot/config/settings/base.py - 3 = construbot/)
+APPS_DIR = ROOT_DIR.path("construbot")
 
 # Load operating system environment variables and then prepare to use them
 env = environ.Env()
 
 # .env file, should load only in development environment
-READ_DOT_ENV_FILE = env.bool('DJANGO_READ_DOT_ENV_FILE', default=False)
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
 
 if READ_DOT_ENV_FILE:
     # Operating System Environment variables have precedence over variables defined in the .env file,
     # that is to say variables from the .env files will only be used if not defined
     # as environment variables.
-    env_file = str(ROOT_DIR.path('.env'))
-    print('Loading : {}'.format(env_file))
+    env_file = str(ROOT_DIR.path(".env"))
+    print("Loading : {}".format(env_file))
     env.read_env(env_file)
-    print('The .env file has been loaded. See base.py for more information')
+    print("The .env file has been loaded. See base.py for more information")
 
 # SITE CONFIGURATION
 # ------------------------------------------------------------------------------
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['construbot.com.mx', ])
+ALLOWED_HOSTS = env.list(
+    "DJANGO_ALLOWED_HOSTS",
+    default=[
+        "construbot.com.mx",
+    ],
+)
 # END SITE CONFIGURATION
 
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
 DJANGO_APPS = [
     # Default Django apps:
-    'django.forms',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-
+    "django.forms",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.sites",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
     # Useful template tags:
-    'django.contrib.humanize',
-    'django.contrib.postgres',
-
+    "django.contrib.humanize",
+    "django.contrib.postgres",
     # we needed to put them before django.contrib.admin
     # http://django-autocomplete-light.readthedocs.io/en/master/install.html#configuration
-    'dal',
-    'dal_select2',
+    "dal",
+    "dal_select2",
     # Admin
-    'django.contrib.admin',
+    "django.contrib.admin",
 ]
 THIRD_PARTY_APPS = [
     # 'crispy_forms',  # Form layouts
-    'rest_framework',
-    'bootstrap4',
-    'allauth',  # registration
-    'allauth.account',  # registration
-    'allauth.socialaccount',  # registration
-    'treebeard',
+    "rest_framework",
+    "bootstrap4",
+    "allauth",  # registration
+    "allauth.account",  # registration
+    "allauth.socialaccount",  # registration
+    "treebeard",
 ]
 
 # Apps specific for this project go here.
 LOCAL_APPS = [
     # custom users app
-    'construbot.users.apps.UsersConfig',
+    "construbot.users.apps.UsersConfig",
     # Your stuff: custom apps go here
-    'construbot.proyectos.apps.ProyectosConfig',
-    'construbot.api.apps.ApiConfig',
-    'construbot.account_config.apps.AccountConfigConfig',
-    'construbot.core.apps.CoreConfig'
+    "construbot.proyectos.apps.ProyectosConfig",
+    "construbot.api.apps.ApiConfig",
+    "construbot.account_config.apps.AccountConfigConfig",
+    "construbot.core.apps.CoreConfig",
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -85,56 +92,52 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # MIDDLEWARE CONFIGURATION
 # ------------------------------------------------------------------------------
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'allauth.account.middleware.AccountMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
 # REST_FRAMEWORK
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
     ),
 }
 
 # MIGRATIONS CONFIGURATION
 # ------------------------------------------------------------------------------
-MIGRATION_MODULES = {
-    'sites': 'construbot.contrib.sites.migrations'
-}
+MIGRATION_MODULES = {"sites": "construbot.contrib.sites.migrations"}
 
 # DEBUG
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
-DEBUG = env.bool('DJANGO_DEBUG', False)
+DEBUG = env.bool("DJANGO_DEBUG", False)
 
 # FIXTURE CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-FIXTURE_DIRS
-FIXTURE_DIRS = (
-    str(APPS_DIR.path('fixtures')),
-)
+FIXTURE_DIRS = (str(APPS_DIR.path("fixtures")),)
 
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------
-EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_BACKEND = env(
+    "DJANGO_EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"
+)
 
 # MANAGER CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [
-    ("""Javier Llamas Ramirez""", 'elyak.123@gmail.com'),
+    ("""Javier Llamas Ramirez""", "elyak.123@gmail.com"),
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
@@ -146,9 +149,9 @@ MANAGERS = ADMINS
 # Uses django-environ to accept uri format
 # See: https://django-environ.readthedocs.io/en/latest/#supported-types
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///construbot'),
+    "default": env.db("DATABASE_URL", default="postgres:///construbot"),
 }
-DATABASES['default']['ATOMIC_REQUESTS'] = True
+DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 
 # GENERAL CONFIGURATION
@@ -157,12 +160,12 @@ DATABASES['default']['ATOMIC_REQUESTS'] = True
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Mexico_City'
+TIME_ZONE = "America/Mexico_City"
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
-LANGUAGE_CODE = 'es-MX'
+LANGUAGE_CODE = "es-MX"
 USE_THOUSAND_SEPARATOR = True
-THOUSAND_SEPARATOR = ','
+THOUSAND_SEPARATOR = ","
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
 SITE_ID = 1
@@ -182,83 +185,83 @@ USE_TZ = True
 TEMPLATES = [
     {
         # See: https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-TEMPLATES-BACKEND
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
         # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
-        'DIRS': [
-            str(APPS_DIR.path('templates')),
+        "DIRS": [
+            str(APPS_DIR.path("templates")),
         ],
-        'OPTIONS': {
+        "OPTIONS": {
             # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
-            'debug': DEBUG,
+            "debug": DEBUG,
             # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-loaders
             # https://docs.djangoproject.com/en/dev/ref/templates/api/#loader-types
-            'loaders': [
-                'django.template.loaders.filesystem.Loader',
-                'django.template.loaders.app_directories.Loader',
+            "loaders": [
+                "django.template.loaders.filesystem.Loader",
+                "django.template.loaders.app_directories.Loader",
             ],
             # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.template.context_processors.i18n',
-                'django.template.context_processors.media',
-                'django.template.context_processors.static',
-                'django.template.context_processors.tz',
-                'django.contrib.messages.context_processors.messages',
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
+                "django.template.context_processors.static",
+                "django.template.context_processors.tz",
+                "django.contrib.messages.context_processors.messages",
                 # Your stuff: custom template context processors go here
             ],
         },
     },
 ]
-FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
+FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 
 # See: http://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # STATIC FILE CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-STATIC_ROOT = str(ROOT_DIR('staticfiles'))
+STATIC_ROOT = str(ROOT_DIR("staticfiles"))
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = [
-    str(APPS_DIR.path('static')),
+    str(APPS_DIR.path("static")),
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
 # MEDIA CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-MEDIA_ROOT = str(APPS_DIR('media'))
+MEDIA_ROOT = str(APPS_DIR("media"))
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
-MEDIA_URL = '/media/'
+MEDIA_URL = "/media/"
 
 # URL Configuration
 # ------------------------------------------------------------------------------
-ROOT_URLCONF = 'construbot.config.urls'
+ROOT_URLCONF = "construbot.config.urls"
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
-WSGI_APPLICATION = 'construbot.config.wsgi.application'
+WSGI_APPLICATION = "construbot.config.wsgi.application"
 
 # PASSWORD STORAGE SETTINGS
 # ------------------------------------------------------------------------------
 # See https://docs.djangoproject.com/en/dev/topics/auth/passwords/#using-argon2-with-django
 PASSWORD_HASHERS = [
-    'django.contrib.auth.hashers.Argon2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-    'django.contrib.auth.hashers.BCryptPasswordHasher',
+    "django.contrib.auth.hashers.Argon2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
+    "django.contrib.auth.hashers.BCryptSHA256PasswordHasher",
+    "django.contrib.auth.hashers.BCryptPasswordHasher",
 ]
 
 # PASSWORD VALIDATION
@@ -267,54 +270,52 @@ PASSWORD_HASHERS = [
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
 # AUTHENTICATION CONFIGURATION
 # ------------------------------------------------------------------------------
 AUTHENTICATION_BACKENDS = [
-    'construbot.core.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
+    "construbot.core.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
 # Some really nice defaults
 # Django-allauth 65.x settings
-ACCOUNT_LOGIN_METHODS = {'username'}
-ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_SIGNUP_FORM_CLASS = 'construbot.users.forms.UserForm'
-ACCOUNT_ALLOW_REGISTRATION = env.bool('DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
-ACCOUNT_ADAPTER = 'construbot.users.adapters.AccountAdapter'
-SOCIALACCOUNT_ADAPTER = 'construbot.users.adapters.SocialAccountAdapter'
+ACCOUNT_LOGIN_METHODS = {"username"}
+ACCOUNT_SIGNUP_FIELDS = ["email*", "username*", "password1*", "password2*"]
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_SIGNUP_FORM_CLASS = "construbot.users.forms.UserForm"
+ACCOUNT_ALLOW_REGISTRATION = env.bool("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
+ACCOUNT_ADAPTER = "construbot.users.adapters.AccountAdapter"
+SOCIALACCOUNT_ADAPTER = "construbot.users.adapters.SocialAccountAdapter"
 
 # Custom user app defaults
 # Select the correct user model
-AUTH_USER_MODEL = 'users.User'
-LOGIN_REDIRECT_URL = 'users:redirect'
-LOGIN_URL = 'account_login'
-ACCOUNT_FORMS = {
-   'login': 'construbot.account_config.forms.AccLoginForm'
-}
+AUTH_USER_MODEL = "users.User"
+LOGIN_REDIRECT_URL = "users:redirect"
+LOGIN_URL = "account_login"
+ACCOUNT_FORMS = {"login": "construbot.account_config.forms.AccLoginForm"}
 # SLUGLIFIER
-AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'
+AUTOSLUG_SLUGIFY_FUNCTION = "slugify.slugify"
 
 # ######### CELERY
-INSTALLED_APPS += ['construbot.taskapp.celery.CeleryAppConfig']
+INSTALLED_APPS += ["construbot.taskapp.celery.CeleryAppConfig"]
 if USE_TZ:
     # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-timezone
     CELERY_TIMEZONE = TIME_ZONE
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-broker_url
-CELERY_BROKER_URL = 'redis://redis:6379/0'
+CELERY_BROKER_URL = "redis://redis:6379/0"
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-result_backend
 CELERY_RESULT_BACKEND = CELERY_BROKER_URL
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#std:setting-accept_content
@@ -332,38 +333,40 @@ CELERYD_TASK_SOFT_TIME_LIMIT = 60
 # ######### END CELERY
 # django-compressor
 # ------------------------------------------------------------------------------
-INSTALLED_APPS += ['compressor']
-STATICFILES_FINDERS += ['compressor.finders.CompressorFinder']
+INSTALLED_APPS += ["compressor"]
+STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 
 # Location of root django.contrib.admin URL, use {% url 'admin:index' %}
-ADMIN_URL = r'^admin/'
+ADMIN_URL = r"^admin/"
 
 # New in Django 3.2
 # https://docs.djangoproject.com/en/3.2/releases/3.2/#customizing-type-of-auto-created-primary-keys
 
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
 
-USERNAME_TEST = env('USERNAME_TEST', default='')
+USERNAME_TEST = env("USERNAME_TEST", default="")
 
-CONSTRUBOT_AS_LIBRARY = env.bool('CONSTRUBOT_AS_LIBRARY', False)
+CONSTRUBOT_AS_LIBRARY = env.bool("CONSTRUBOT_AS_LIBRARY", False)
 
-CONSTRUBOT_AUTHORIZATION_CLASS = env('CONSTRUBOT_AUTHORIZATION_CLASS', default='construbot.users.auth')
+CONSTRUBOT_AUTHORIZATION_CLASS = env(
+    "CONSTRUBOT_AUTHORIZATION_CLASS", default="construbot.users.auth"
+)
 
 NIVELES_ACCESO = [
-    {'nombre': 'Auxiliar', 'nivel': 1},
-    {'nombre': 'Coordinador', 'nivel': 2},
-    {'nombre': 'Director', 'nivel': 3},
-    {'nombre': 'Corporativo', 'nivel': 4},
-    {'nombre': 'Soporte', 'nivel': 5},
-    {'nombre': 'Superusuario', 'nivel': 6}
+    {"nombre": "Auxiliar", "nivel": 1},
+    {"nombre": "Coordinador", "nivel": 2},
+    {"nombre": "Director", "nivel": 3},
+    {"nombre": "Corporativo", "nivel": 4},
+    {"nombre": "Soporte", "nivel": 5},
+    {"nombre": "Superusuario", "nivel": 6},
 ]
 
-FAVICON_URL = env('FAVICON_URL', default='')
+FAVICON_URL = env("FAVICON_URL", default="")
 
-DATA_UPLOAD_MAX_NUMBER_FIELDS=10240
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
 
 BOOTSTRAP4 = {
     # The complete URL to the Bootstrap CSS file
@@ -375,14 +378,12 @@ BOOTSTRAP4 = {
         "integrity": "sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn",
         "crossorigin": "anonymous",
     },
-
     # The complete URL to the Bootstrap bundle JavaScript file
     "javascript_url": {
         "url": "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js",
         "integrity": "sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns",
         "crossorigin": "anonymous",
     },
-
     # The URL to the jQuery JavaScript file (full)
     "jquery_url": {
         "url": "https://code.jquery.com/jquery-3.5.1.min.js",

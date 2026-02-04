@@ -4,7 +4,8 @@
 #
 #    pip-compile --output-file=requirements/test.txt requirements/test.in
 #
-amqp==5.1.1
+
+amqp==5.3.1
     # via
     #   -r requirements/base.txt
     #   kombu
@@ -16,14 +17,14 @@ argon2-cffi-bindings==25.1.0
     # via
     #   -r requirements/base.txt
     #   argon2-cffi
-asgiref==3.11.0
+asgiref==3.11.1
     # via
     #   -r requirements/base.txt
     #   django
     #   django-allauth
 awesome-slugify==1.6.5
     # via -r requirements/base.txt
-beautifulsoup4==4.12.2
+beautifulsoup4==4.14.3
     # via
     #   -r requirements/base.txt
     #   django-bootstrap4
@@ -31,18 +32,18 @@ billiard==4.2.4
     # via
     #   -r requirements/base.txt
     #   celery
-boto3==1.26.152
+boto3==1.42.41
     # via
     #   -r requirements/base.txt
     #   django-storages
-botocore==1.29.152
+botocore==1.42.41
     # via
     #   -r requirements/base.txt
     #   boto3
     #   s3transfer
 celery==5.4.0
     # via -r requirements/base.txt
-certifi==2023.5.7
+certifi==2026.1.4
     # via
     #   -r requirements/base.txt
     #   requests
@@ -51,26 +52,26 @@ cffi==2.0.0
     # via
     #   -r requirements/base.txt
     #   argon2-cffi-bindings
-charset-normalizer==3.1.0
+charset-normalizer==3.4.4
     # via
     #   -r requirements/base.txt
     #   requests
-click==8.1.3
+click==8.3.1
     # via
     #   -r requirements/base.txt
     #   celery
     #   click-didyoumean
     #   click-plugins
     #   click-repl
-click-didyoumean==0.3.0
+click-didyoumean==0.3.1
     # via
     #   -r requirements/base.txt
     #   celery
-click-plugins==1.1.1
+click-plugins==1.1.1.2
     # via
     #   -r requirements/base.txt
     #   celery
-click-repl==0.2.0
+click-repl==0.3.0
     # via
     #   -r requirements/base.txt
     #   celery
@@ -81,7 +82,7 @@ coverage[toml]==7.6.10
     #   django-coverage-plugin
 coveralls==4.0.2
     # via -r requirements/test.in
-django[argon2]==5.2.10
+django[argon2]==5.2.11
     # via
     #   -r requirements/base.txt
     #   django-allauth
@@ -100,7 +101,7 @@ django-allauth==65.14.0
     # via -r requirements/base.txt
 django-anymail==11.1
     # via -r requirements/base.txt
-django-appconf==1.0.5
+django-appconf==1.2.0
     # via
     #   -r requirements/base.txt
     #   django-compressor
@@ -112,9 +113,9 @@ django-compressor==4.6.0
     # via -r requirements/base.txt
 django-coverage-plugin==3.1.0
     # via -r requirements/test.in
-django-environ==0.11.2
+django-environ==0.12.0
     # via -r requirements/base.txt
-django-model-utils==4.5.1
+django-model-utils==5.0.0
     # via -r requirements/base.txt
 django-redis==5.4.0
     # via -r requirements/base.txt
@@ -122,7 +123,7 @@ django-storages[boto3]==1.14.4
     # via -r requirements/base.txt
 django-test-plus==2.2.2
     # via -r requirements/test.in
-django-treebeard==4.7.1
+django-treebeard==4.8.0
     # via -r requirements/base.txt
 djangorestframework==3.16.1
     # via
@@ -132,7 +133,7 @@ djangorestframework-simplejwt==5.5.1
     # via -r requirements/base.txt
 docopt==0.6.2
     # via coveralls
-et-xmlfile==1.1.0
+et-xmlfile==2.0.0
     # via
     #   -r requirements/base.txt
     #   openpyxl
@@ -144,13 +145,13 @@ flake8==7.1.1
     # via -r requirements/test.in
 gunicorn==23.0.0
     # via -r requirements/base.txt
-idna==3.4
+idna==3.11
     # via
     #   -r requirements/base.txt
     #   requests
 iniconfig==2.0.0
     # via pytest
-jmespath==1.0.1
+jmespath==1.1.0
     # via
     #   -r requirements/base.txt
     #   boto3
@@ -174,7 +175,7 @@ pillow==12.1.0
     # via -r requirements/base.txt
 pluggy==1.0.0
     # via pytest
-prompt-toolkit==3.0.38
+prompt-toolkit==3.0.52
     # via
     #   -r requirements/base.txt
     #   click-repl
@@ -186,13 +187,13 @@ psycopg-binary==3.3.2
     #   psycopg
 pycodestyle==2.12.1
     # via flake8
-pycparser==2.21
+pycparser==3.0
     # via
     #   -r requirements/base.txt
     #   cffi
 pyflakes==3.2.0
     # via flake8
-pyjwt==2.7.0
+pyjwt==2.11.0
     # via
     #   -r requirements/base.txt
     #   djangorestframework-simplejwt
@@ -204,7 +205,7 @@ pytest-django==4.9.0
     # via -r requirements/test.in
 pytest-sugar==1.0.0
     # via -r requirements/test.in
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   -r requirements/base.txt
     #   botocore
@@ -220,11 +221,11 @@ redis==5.2.1
     # via
     #   -r requirements/base.txt
     #   django-redis
-regex==2023.6.3
+regex==2026.1.15
     # via
     #   -r requirements/base.txt
     #   awesome-slugify
-requests==2.31.0
+requests==2.32.5
     # via
     #   -r requirements/base.txt
     #   coveralls
@@ -233,23 +234,24 @@ rjsmin==1.2.5
     # via
     #   -r requirements/base.txt
     #   django-compressor
-s3transfer==0.6.1
+ruff==0.15.0
+    # via -r requirements/test.in
+s3transfer==0.16.0
     # via
     #   -r requirements/base.txt
     #   boto3
-sentry-sdk==2.50.0
+sentry-sdk==2.51.0
     # via -r requirements/base.txt
-six==1.16.0
+six==1.17.0
     # via
     #   -r requirements/base.txt
-    #   click-repl
     #   faker
     #   python-dateutil
-soupsieve==2.4.1
+soupsieve==2.8.3
     # via
     #   -r requirements/base.txt
     #   beautifulsoup4
-sqlparse==0.4.4
+sqlparse==0.5.5
     # via
     #   -r requirements/base.txt
     #   django
@@ -257,6 +259,10 @@ termcolor==3.3.0
     # via pytest-sugar
 text-unidecode==1.2
     # via faker
+typing-extensions==4.15.0
+    # via
+    #   -r requirements/base.txt
+    #   beautifulsoup4
 tzdata==2025.3
     # via
     #   -r requirements/base.txt
@@ -266,7 +272,7 @@ unidecode==0.4.21
     # via
     #   -r requirements/base.txt
     #   awesome-slugify
-urllib3==1.26.16
+urllib3==2.6.3
     # via
     #   -r requirements/base.txt
     #   botocore
@@ -279,11 +285,11 @@ vine==5.1.0
     #   amqp
     #   celery
     #   kombu
-wcwidth==0.2.6
+wcwidth==0.5.3
     # via
     #   -r requirements/base.txt
     #   prompt-toolkit
-whitenoise==6.8.2
+whitenoise==6.11.0
     # via -r requirements/base.txt
 
 # The following packages are considered to be unsafe in a requirements file:

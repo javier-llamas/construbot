@@ -1,18 +1,19 @@
 from django import forms
-from .models import Concept
 from django.core.exceptions import ObjectDoesNotExist
+
+from .models import Concept
 
 
 class ConceptDummyWidget(forms.Textarea):
     def render(self, name, value, attrs=None, renderer=None):
         """
-            esto se queda asi.... todavia no se porque, espero que se sepa con
-            las pruebas de las vistas.
+        esto se queda asi.... todavia no se porque, espero que se sepa con
+        las pruebas de las vistas.
         """
         try:
             value_instance = Concept.objects.get(pk=value)
             self.value = value_instance
-        except:
+        except Exception:
             self.value = str(Concept.objects.get(concept_text=value).id)
             widget = forms.Select(choices=(self.value,))
             return widget.render(name, self.value, attrs)
@@ -20,13 +21,17 @@ class ConceptDummyWidget(forms.Textarea):
 
     def value_from_datadict(self, data, files, name):
         """
-            Funcion que usa la vista, todavia para pasar los datos al render
-            en algunos casos es un numero, otros es texto, se maneja deacuerdo
-            a como venga.
+        Funcion que usa la vista, todavia para pasar los datos al render
+        en algunos casos es un numero, otros es texto, se maneja deacuerdo
+        a como venga.
         """
         data_name = data.get(name)
         try:
-            value = str(Concept.objects.get(concept_text=data_name, project=int(data['project'])).id)
+            value = str(
+                Concept.objects.get(
+                    concept_text=data_name, project=int(data["project"])
+                ).id
+            )
             return value
         except ObjectDoesNotExist:
             if isinstance(data_name, int):
@@ -36,4 +41,4 @@ class ConceptDummyWidget(forms.Textarea):
 
 
 class FileNestedWidget(forms.ClearableFileInput):
-    template_name = 'proyectos/file_input.html'
+    template_name = "proyectos/file_input.html"

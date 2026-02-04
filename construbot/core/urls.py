@@ -1,10 +1,3 @@
-from django.urls import re_path
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
+app_name = "construbot.core"
 
-from . import views
-
-app_name = 'construbot.core'
-
-urlpatterns = [
-
-]
+urlpatterns = []

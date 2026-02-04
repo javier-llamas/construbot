@@ -1,0 +1,30 @@
+{
+    "include": [
+        "construbot"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/__pycache__",
+        "**/migrations",
+        "staticfiles",
+        "media",
+        ".venv",
+        "venv"
+    ],
+    "pythonVersion": "3.13",
+    "pythonPlatform": "Linux",
+    "executionEnvironments": [
+        {
+            "root": ".",
+            "pythonVersion": "3.13",
+            "extraPaths": [
+                ".",
+                "construbot"
+            ]
+        }
+    ],
+    "typeCheckingMode": "basic",
+    "reportMissingImports": true,
+    "reportMissingTypeStubs": false,
+    "stubPath": "typings"
+}

@@ -1,8 +1,9 @@
 from unittest import mock
-from django.test import tag
+
 from django.test.utils import override_settings
-from construbot.users.tests import utils
+
 from construbot.proyectos.management.commands import poblar
+from construbot.users.tests import utils
 
 
 class BaseCommandTest(utils.BaseTestCase):
@@ -22,28 +23,29 @@ class PoblarCommandTesting(BaseCommandTest):
         with self.assertRaises(poblar.ImproperlyConfigured):
             instance.handle()
 
-    @mock.patch('construbot.proyectos.management.commands.poblar.user_factories.CustomerFactory')
+    @mock.patch(
+        "construbot.proyectos.management.commands.poblar.user_factories.CustomerFactory"
+    )
     def test_create_correct_customer(self, mock_customer_factory):
         instance = poblar.Command()
         instance.create_customer(3)
         calls = [
-            mock.call(customer_name='customer_0'),
-            mock.call(customer_name='customer_1'),
-            mock.call(customer_name='customer_2')
+            mock.call(customer_name="customer_0"),
+            mock.call(customer_name="customer_1"),
+            mock.call(customer_name="customer_2"),
         ]
         self.assertEqual(mock_customer_factory.call_count, 3)
         mock_customer_factory.assert_has_calls(calls, any_order=False)
         self.assertEqual(len(instance.customer), 3)
         self.assertIsInstance(instance.customer, list)
 
-    @mock.patch('construbot.proyectos.management.commands.poblar.user_factories.GroupFactory')
+    @mock.patch(
+        "construbot.proyectos.management.commands.poblar.user_factories.GroupFactory"
+    )
     def test_create_core_groups(self, mock_group_factory):
         instance = poblar.Command()
         instance.create_core_groups()
-        calls = [
-            mock.call(name='Proyectos'),
-            mock.call(name='Users')
-        ]
+        calls = [mock.call(name="Proyectos"), mock.call(name="Users")]
         self.assertEqual(mock_group_factory.call_count, 2)
         self.assertEqual(len(instance.groups), 2)
         mock_group_factory.assert_has_calls(calls, any_order=False)
@@ -61,20 +63,33 @@ class PoblarCommandTesting(BaseCommandTest):
             instance.create_companies(3)
 
     @override_settings(DEBUG=True)
-    @mock.patch('construbot.proyectos.management.commands.poblar.call_command')
-    @mock.patch('construbot.proyectos.management.commands.poblar.establish_access_levels')
-    @mock.patch.object(poblar.Command, 'create_customer')
-    @mock.patch.object(poblar.Command, 'create_core_groups')
-    @mock.patch.object(poblar.Command, 'create_user')
-    @mock.patch.object(poblar.Command, 'create_companies')
-    @mock.patch.object(poblar.Command, 'create_clientes')
-    @mock.patch.object(poblar.Command, 'create_sitios')
-    @mock.patch.object(poblar.Command, 'create_destinatarios')
-    @mock.patch.object(poblar.Command, 'create_contratos')
-    @mock.patch.object(poblar.Command, 'create_concepts')
+    @mock.patch("construbot.proyectos.management.commands.poblar.call_command")
+    @mock.patch(
+        "construbot.proyectos.management.commands.poblar.establish_access_levels"
+    )
+    @mock.patch.object(poblar.Command, "create_customer")
+    @mock.patch.object(poblar.Command, "create_core_groups")
+    @mock.patch.object(poblar.Command, "create_user")
+    @mock.patch.object(poblar.Command, "create_companies")
+    @mock.patch.object(poblar.Command, "create_clientes")
+    @mock.patch.object(poblar.Command, "create_sitios")
+    @mock.patch.object(poblar.Command, "create_destinatarios")
+    @mock.patch.object(poblar.Command, "create_contratos")
+    @mock.patch.object(poblar.Command, "create_concepts")
     def test_handle(
-            self, concepts, contratos, destinatarios, sitios, clientes,
-            companies, users, groups, customer, levels, call_poblar):
+        self,
+        concepts,
+        contratos,
+        destinatarios,
+        sitios,
+        clientes,
+        companies,
+        users,
+        groups,
+        customer,
+        levels,
+        call_poblar,
+    ):
         manager = mock.MagicMock()
         concepts.return_value = mock.MagicMock()
         contratos.return_value = mock.MagicMock()
@@ -88,15 +103,15 @@ class PoblarCommandTesting(BaseCommandTest):
         levels.return_value = mock.MagicMock()
         call_poblar.Command.return_value = mock.MagicMock()
         attrs = {
-            'create_customer': customer,
-            'create_core_groups': groups,
-            'create_user': users,
-            'create_companies': companies,
-            'create_clientes': clientes,
-            'create_sitios': sitios,
-            'create_destinatarios': destinatarios,
-            'create_contratos': contratos,
-            'create_concepts': concepts,
+            "create_customer": customer,
+            "create_core_groups": groups,
+            "create_user": users,
+            "create_companies": companies,
+            "create_clientes": clientes,
+            "create_sitios": sitios,
+            "create_destinatarios": destinatarios,
+            "create_contratos": contratos,
+            "create_concepts": concepts,
         }
         manager.configure_mock(**attrs)
         command = poblar.Command()

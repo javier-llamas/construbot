@@ -1,28 +1,35 @@
-import tempfile
-import string
 import datetime
+import string
+import tempfile
+
+from django.core.files.images import ImageFile
+
 import factory
 import factory.fuzzy
-from django.core.files.images import ImageFile
-from construbot.users.tests.factories import CompanyFactory, UserFactory
+
 from construbot.proyectos import models
+from construbot.users.tests.factories import CompanyFactory, UserFactory
 
 
 class ClienteFactory(factory.django.DjangoModelFactory):
-    cliente_name = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters, prefix='cliente_')
+    cliente_name = factory.fuzzy.FuzzyText(
+        length=8, chars=string.ascii_letters, prefix="cliente_"
+    )
     company = factory.SubFactory(CompanyFactory)
-    tipo = 'CLIENTE'
+    tipo = "CLIENTE"
 
     class Meta:
         model = models.Contraparte
 
 
 class SubcontratistaFactory(ClienteFactory):
-    tipo = 'SUBCONTRATISTA'
+    tipo = "SUBCONTRATISTA"
 
 
 class SitioFactory(factory.django.DjangoModelFactory):
-    sitio_name = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters, prefix='sitio_')
+    sitio_name = factory.fuzzy.FuzzyText(
+        length=8, chars=string.ascii_letters, prefix="sitio_"
+    )
     cliente = factory.SubFactory(ClienteFactory)
 
     class Meta:
@@ -30,7 +37,9 @@ class SitioFactory(factory.django.DjangoModelFactory):
 
 
 class DestinatarioFactory(factory.django.DjangoModelFactory):
-    destinatario_text = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters, prefix='destinatario_')
+    destinatario_text = factory.fuzzy.FuzzyText(
+        length=8, chars=string.ascii_letters, prefix="destinatario_"
+    )
     puesto = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters)
     contraparte = factory.SubFactory(ClienteFactory)
 
@@ -43,14 +52,10 @@ class ContratoFactory(factory.django.DjangoModelFactory):
     code = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters + string.digits)
     fecha = factory.fuzzy.FuzzyDate(datetime.date(2008, 1, 1))
     contrato_name = factory.fuzzy.FuzzyText(
-        length=8,
-        chars=string.ascii_letters + string.digits,
-        prefix='nombre_'
+        length=8, chars=string.ascii_letters + string.digits, prefix="nombre_"
     )
     contrato_shortName = factory.fuzzy.FuzzyText(
-        length=8,
-        chars=string.ascii_letters + string.digits,
-        prefix='short_'
+        length=8, chars=string.ascii_letters + string.digits, prefix="short_"
     )
     status = True
     monto = factory.fuzzy.FuzzyDecimal(100000.76, 10000000.56, precision=2)
@@ -72,10 +77,10 @@ class SubContratoFactory(ContratoFactory):
     @classmethod
     def _create(cls, model_class, *args, **kwargs):
         try:
-            parent = kwargs.pop('parent')
+            parent = kwargs.pop("parent")
             instance = parent.add_child(**kwargs)
         except KeyError:
-            raise TypeError('Es necesario incorporar parent en la llamada.')
+            raise TypeError("Es necesario incorporar parent en la llamada.")
         return instance
 
 
@@ -96,7 +101,7 @@ class EstimateFactory(factory.django.DjangoModelFactory):
 
 
 class UnitFactory(factory.django.DjangoModelFactory):
-    unit = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters, prefix='unit_')
+    unit = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters, prefix="unit_")
     company = factory.SubFactory(CompanyFactory)
 
     class Meta:
@@ -105,7 +110,9 @@ class UnitFactory(factory.django.DjangoModelFactory):
 
 class ConceptoFactory(factory.django.DjangoModelFactory):
     code = factory.Sequence(lambda n: n)
-    concept_text = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters, prefix='text_')
+    concept_text = factory.fuzzy.FuzzyText(
+        length=8, chars=string.ascii_letters, prefix="text_"
+    )
     project = factory.SubFactory(ContratoFactory)
     unit = factory.SubFactory(UnitFactory)
     total_cuantity = factory.fuzzy.FuzzyDecimal(1, 35, precision=2)
@@ -119,7 +126,9 @@ class EstimateConceptFactory(factory.django.DjangoModelFactory):
     estimate = factory.SubFactory(EstimateFactory)
     concept = factory.SubFactory(ConceptoFactory)
     cuantity_estimated = factory.fuzzy.FuzzyDecimal(1, 25, precision=2)
-    observations = factory.fuzzy.FuzzyText(length=140, chars=string.ascii_letters, prefix='observacion_')
+    observations = factory.fuzzy.FuzzyText(
+        length=140, chars=string.ascii_letters, prefix="observacion_"
+    )
 
     class Meta:
         model = models.EstimateConcept
@@ -131,8 +140,8 @@ class FuzzyImage(factory.fuzzy.BaseFuzzyAttribute):
         super(FuzzyImage, self).__init__(*args, **kwargs)
 
     def fuzz(self):
-        file = tempfile.NamedTemporaryFile(suffix='.png')
-        image = ImageFile(file, name='file.png')
+        file = tempfile.NamedTemporaryFile(suffix=".png")
+        image = ImageFile(file, name="file.png")
         return image
 
 

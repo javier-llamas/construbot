@@ -4,7 +4,7 @@ mkenv:
 
 pipcompile:
 	@pip-compile --help > /dev/null
-	@pip-compile --resolver=backtracking --output-file requirements/base.txt
+	@pip-compile --resolver=backtracking setup.py --output-file requirements/base.txt
 	@pip-compile --resolver=backtracking requirements/local.in --output-file requirements/local.txt
 	@pip-compile --resolver=backtracking requirements/test.in --output-file requirements/test.txt
 
@@ -82,3 +82,19 @@ runserver:
 localtest:
 	@sed -i.bak s/USE_DOCKER=yes/USE_DOCKER=no/g .env
 	@python manage.py test
+
+# Code quality targets
+format:
+	@echo "Running isort..."
+	@isort construbot/
+	@echo "Running black..."
+	@black construbot/
+	@echo "Code formatting complete!"
+
+lint:
+	@echo "Running ruff with auto-fix..."
+	@ruff check construbot/ --fix
+	@echo "Auto-fix complete!"
+
+check: format lint
+	@echo "All code quality checks complete!"

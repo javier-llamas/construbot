@@ -1,14 +1,17 @@
-import json
 import decimal
+import json
 from io import StringIO
 from unittest import mock
+
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import reverse
-from django.test import RequestFactory, tag
-from construbot.users.tests import utils
+from django.test import RequestFactory
+
 from construbot.proyectos import views
-from construbot.proyectos.models import Destinatario, Contrato, Estimate
+from construbot.proyectos.models import Contrato, Destinatario, Estimate
 from construbot.users.tests import factories as user_factories
+from construbot.users.tests import utils
+
 from . import factories
 
 
@@ -27,13 +30,13 @@ class BaseViewTest(utils.BaseTestCase):
 
 class BaseViewTestTest(utils.BaseTestCase):
 
-    @mock.patch.object(BaseViewTest, 'fail')
+    @mock.patch.object(BaseViewTest, "fail")
     def test_assert_not_raises(self, mock_fail):
         my_function = mock.Mock()
         function_result = mock.MagicMock()
         my_function.return_value = function_result
         instance = BaseViewTest()
-        instance.assertNotRaises(my_function(), Exception, 'Not raised')
+        instance.assertNotRaises(my_function(), Exception, "Not raised")
         my_function.assert_called_with()
         mock_fail.assert_not_called()
 
@@ -43,14 +46,11 @@ class ProyectDashboardViewTest(BaseViewTest):
     def test_view_gets_correct_object(self):
         company_test = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = company_test
-        view = self.get_instance(
-            views.ProyectDashboardView,
-            request=self.request
-        )
+        view = self.get_instance(views.ProyectDashboardView, request=self.request)
         view.user_groups = [self.proyectos_group]
         view.nivel_permiso_usuario = self.request.user.nivel_acceso.nivel
         obj = view.get_context_data()
-        self.assertEqual(obj['object'], company_test)
+        self.assertEqual(obj["object"], company_test)
 
 
 class DynamicListTest(BaseViewTest):
@@ -58,30 +58,24 @@ class DynamicListTest(BaseViewTest):
     def test_context_contains_models_name(self):
         company_test = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = company_test
-        view = self.get_instance(
-            views.DynamicList,
-            request=self.request
-        )
+        view = self.get_instance(views.DynamicList, request=self.request)
         view.model = mock.Mock()
-        view.model.__name__ = 'Foo'
+        view.model.__name__ = "Foo"
         view.get_menu = lambda: {}
-        view.app_label_name = 'proyectos'
+        view.app_label_name = "proyectos"
         view.nivel_permiso_usuario = self.request.user.nivel_acceso.nivel
         view.object_list = []
         context = view.get_context_data()
-        self.assertIn('model', context)
-        self.assertEqual(context['model'], 'Foo')
+        self.assertIn("model", context)
+        self.assertEqual(context["model"], "Foo")
 
 
 class DynamicDetailTest(BaseViewTest):
 
     def test_DynamicDetailView_returns_correct_object_name_for_template(self):
-        view = self.get_instance(
-            views.DynamicDetail,
-            request=self.request
-        )
+        view = self.get_instance(views.DynamicDetail, request=self.request)
         object_name = view.get_context_object_name(Contrato())
-        self.assertEqual(object_name, 'contrato')
+        self.assertEqual(object_name, "contrato")
 
 
 class ContratoListTest(BaseViewTest):
@@ -95,12 +89,12 @@ class ContratoListTest(BaseViewTest):
         factories.ContratoFactory()  # Contrato # 2
         contrato_3 = factories.ContratoFactory(contraparte=cliente_test)
         contrato_3.users.add(self.user)
-        view = self.get_instance(
-            views.ContratoListView,
-            request=self.request
-        )
+        view = self.get_instance(views.ContratoListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(y) for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)]
+        qs_test = [
+            repr(y)
+            for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_contrato_same_customer_not_assigned_to_user_doesnt_appear(self):
@@ -112,28 +106,34 @@ class ContratoListTest(BaseViewTest):
         factories.ContratoFactory(contraparte=cliente_test)  # Contrato # 2
         contrato_3 = factories.ContratoFactory(contraparte=cliente_test)
         contrato_3.users.add(self.user)
-        view = self.get_instance(
-            views.ContratoListView,
-            request=self.request
-        )
+        view = self.get_instance(views.ContratoListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(y) for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)]
+        qs_test = [
+            repr(y)
+            for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
-    def test_contrato_same_customer_same_company_not_assigned_to_direccion_user_does_appear(self):
+    def test_contrato_same_customer_same_company_not_assigned_to_direccion_user_does_appear(
+        self,
+    ):
         company_test = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = company_test
         self.user.nivel_acceso = self.director_permission
         self.user.save()
         contrato = factories.ContratoFactory(contraparte__company=company_test)
-        contrato_2 = factories.ContratoFactory(contraparte__company=company_test)  # Contrato # 2
+        contrato_2 = factories.ContratoFactory(
+            contraparte__company=company_test
+        )  # Contrato # 2
         contrato_3 = factories.ContratoFactory(contraparte__company=company_test)
-        view = self.get_instance(
-            views.ContratoListView,
-            request=self.request
-        )
+        view = self.get_instance(views.ContratoListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(y) for y in sorted([contrato, contrato_2, contrato_3], key=lambda x: x.fecha, reverse=True)]
+        qs_test = [
+            repr(y)
+            for y in sorted(
+                [contrato, contrato_2, contrato_3], key=lambda x: x.fecha, reverse=True
+            )
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_contrato_same_customer_assigned_to_user_other_company_doesnt_appear(self):
@@ -147,12 +147,12 @@ class ContratoListTest(BaseViewTest):
         contrato_3 = factories.ContratoFactory(contraparte=cliente_test)
         contrato_3.users.add(self.user)
         contrato_2.users.add(self.user)
-        view = self.get_instance(
-            views.ContratoListView,
-            request=self.request
-        )
+        view = self.get_instance(views.ContratoListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(y) for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)]
+        qs_test = [
+            repr(y)
+            for y in sorted([contrato, contrato_3], key=lambda x: x.fecha, reverse=True)
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
@@ -161,18 +161,24 @@ class ClienteListTest(BaseViewTest):
     def test_cliente_query_only_same_client(self):
         cliente_company = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = cliente_company
-        cliente = factories.ClienteFactory(company=cliente_company, cliente_name='cliente_bLdYMUBC')
-        cliente_2 = factories.ClienteFactory(company=cliente_company, cliente_name='cliente_JBFQADJV')
+        cliente = factories.ClienteFactory(
+            company=cliente_company, cliente_name="cliente_bLdYMUBC"
+        )
+        cliente_2 = factories.ClienteFactory(
+            company=cliente_company, cliente_name="cliente_JBFQADJV"
+        )
         factories.ClienteFactory()
         contrato_1 = factories.ContratoFactory(contraparte=cliente)
         contrato_2 = factories.ContratoFactory(contraparte=cliente_2)
         self.user.contrato_set.add(contrato_1, contrato_2)
-        view = self.get_instance(
-            views.ClienteListView,
-            request=self.request
-        )
+        view = self.get_instance(views.ClienteListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(a) for a in sorted([cliente, cliente_2], key=lambda x: repr(x).lower(), reverse=False)]
+        qs_test = [
+            repr(a)
+            for a in sorted(
+                [cliente, cliente_2], key=lambda x: repr(x).lower(), reverse=False
+            )
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
@@ -188,12 +194,14 @@ class SitioListTest(BaseViewTest):
         contrato_1 = factories.ContratoFactory(sitio=sitio)
         contrato_2 = factories.ContratoFactory(sitio=sitio_2)
         self.user.contrato_set.add(contrato_1, contrato_2)
-        view = self.get_instance(
-            views.SitioListView,
-            request=self.request
-        )
+        view = self.get_instance(views.SitioListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(q) for q in sorted([sitio, sitio_2], key=lambda x: repr(x).lower(), reverse=False)]
+        qs_test = [
+            repr(q)
+            for q in sorted(
+                [sitio, sitio_2], key=lambda x: repr(x).lower(), reverse=False
+            )
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
@@ -205,19 +213,23 @@ class DestinatarioListTest(BaseViewTest):
         destinatario_cliente = factories.ClienteFactory(company=destinatario_company)
         destinatario_cliente_2 = factories.ClienteFactory(company=destinatario_company)
         destinatario = factories.DestinatarioFactory(contraparte=destinatario_cliente)
-        destinatario_2 = factories.DestinatarioFactory(contraparte=destinatario_cliente_2)
+        destinatario_2 = factories.DestinatarioFactory(
+            contraparte=destinatario_cliente_2
+        )
         destinatario_3 = factories.DestinatarioFactory()
         contrato_1 = factories.ContratoFactory(contraparte=destinatario_cliente)
         contrato_2 = factories.ContratoFactory(contraparte=destinatario_cliente_2)
         self.user.contrato_set.add(contrato_1, contrato_2)
-        view = self.get_instance(
-            views.DestinatarioListView,
-            request=self.request
-        )
+        view = self.get_instance(views.DestinatarioListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(q) for q in sorted(
-            [destinatario, destinatario_2], key=lambda x: repr(x).lower(), reverse=False
-        )]
+        qs_test = [
+            repr(q)
+            for q in sorted(
+                [destinatario, destinatario_2],
+                key=lambda x: repr(x).lower(),
+                reverse=False,
+            )
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_destinatario_query_same_client_company_coordinador(self):
@@ -225,24 +237,36 @@ class DestinatarioListTest(BaseViewTest):
         self.request.user.currently_at = destinatario_company
         self.request.user.nivel_acceso = self.coordinador_permission
         self.request.user.save()
-        destinatario_cliente = factories.ClienteFactory(company=destinatario_company, tipo='CLIENTE')
-        destinatario_cliente_2 = factories.ClienteFactory(company=destinatario_company, tipo='CLIENTE')
-        destinatario_cliente_3 = factories.ClienteFactory(company=destinatario_company, tipo='CLIENTE')
+        destinatario_cliente = factories.ClienteFactory(
+            company=destinatario_company, tipo="CLIENTE"
+        )
+        destinatario_cliente_2 = factories.ClienteFactory(
+            company=destinatario_company, tipo="CLIENTE"
+        )
+        destinatario_cliente_3 = factories.ClienteFactory(
+            company=destinatario_company, tipo="CLIENTE"
+        )
         destinatario = factories.DestinatarioFactory(contraparte=destinatario_cliente)
-        destinatario_2 = factories.DestinatarioFactory(contraparte=destinatario_cliente_2)
-        destinatario_3 = factories.DestinatarioFactory(contraparte=destinatario_cliente_3)
+        destinatario_2 = factories.DestinatarioFactory(
+            contraparte=destinatario_cliente_2
+        )
+        destinatario_3 = factories.DestinatarioFactory(
+            contraparte=destinatario_cliente_3
+        )
         contrato_1 = factories.ContratoFactory(contraparte=destinatario_cliente)
         contrato_2 = factories.ContratoFactory(contraparte=destinatario_cliente_2)
         contrato_3 = factories.ContratoFactory(contraparte=destinatario_cliente_3)
         self.user.contrato_set.add(contrato_1, contrato_2)
-        view = self.get_instance(
-            views.DestinatarioListView,
-            request=self.request
-        )
+        view = self.get_instance(views.DestinatarioListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(q) for q in sorted(
-            [destinatario, destinatario_2], key=lambda x: repr(x).lower(), reverse=False
-        )]
+        qs_test = [
+            repr(q)
+            for q in sorted(
+                [destinatario, destinatario_2],
+                key=lambda x: repr(x).lower(),
+                reverse=False,
+            )
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
     def test_destinatario_query_same_client_company_director(self):
@@ -250,20 +274,32 @@ class DestinatarioListTest(BaseViewTest):
         self.request.user.currently_at = destinatario_company
         self.request.user.nivel_acceso = self.director_permission
         self.request.user.save()
-        destinatario_cliente = factories.ClienteFactory(company=destinatario_company, tipo='CLIENTE')
-        destinatario_cliente_2 = factories.ClienteFactory(company=destinatario_company, tipo='CLIENTE')
-        destinatario_cliente_3 = factories.ClienteFactory(company=destinatario_company, tipo='CLIENTE')
-        destinatario = factories.DestinatarioFactory(contraparte=destinatario_cliente)
-        destinatario_2 = factories.DestinatarioFactory(contraparte=destinatario_cliente_2)
-        destinatario_3 = factories.DestinatarioFactory(contraparte=destinatario_cliente_3)
-        view = self.get_instance(
-            views.DestinatarioListView,
-            request=self.request
+        destinatario_cliente = factories.ClienteFactory(
+            company=destinatario_company, tipo="CLIENTE"
         )
+        destinatario_cliente_2 = factories.ClienteFactory(
+            company=destinatario_company, tipo="CLIENTE"
+        )
+        destinatario_cliente_3 = factories.ClienteFactory(
+            company=destinatario_company, tipo="CLIENTE"
+        )
+        destinatario = factories.DestinatarioFactory(contraparte=destinatario_cliente)
+        destinatario_2 = factories.DestinatarioFactory(
+            contraparte=destinatario_cliente_2
+        )
+        destinatario_3 = factories.DestinatarioFactory(
+            contraparte=destinatario_cliente_3
+        )
+        view = self.get_instance(views.DestinatarioListView, request=self.request)
         qs = view.get_queryset()
-        qs_test = [repr(q) for q in sorted(
-            [destinatario, destinatario_2, destinatario_3], key=lambda x: repr(x).lower(), reverse=False
-        )]
+        qs_test = [
+            repr(q)
+            for q in sorted(
+                [destinatario, destinatario_2, destinatario_3],
+                key=lambda x: repr(x).lower(),
+                reverse=False,
+            )
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
@@ -276,33 +312,31 @@ class ContratoDetailTest(BaseViewTest):
         contrato = factories.ContratoFactory(contraparte=contrato_cliente)
         contrato.users.add(self.request.user)
         view = self.get_instance(
-            views.ContratoDetailView,
-            pk=contrato.pk,
-            request=self.request
+            views.ContratoDetailView, pk=contrato.pk, request=self.request
         )
         obj = view.get_object()
         self.assertEqual(obj, contrato)
 
-    def test_assert_request_returns_correct_contrato_object_not_assigned_admin_user(self):
+    def test_assert_request_returns_correct_contrato_object_not_assigned_admin_user(
+        self,
+    ):
         contrato_company = factories.CompanyFactory(customer=self.user.customer)
         self.request.user.currently_at = contrato_company
         contrato_cliente = factories.ClienteFactory(company=contrato_company)
         contrato = factories.ContratoFactory(contraparte=contrato_cliente)
         self.request.user.groups.add(self.admin_group)
         view = self.get_instance(
-            views.ContratoDetailView,
-            pk=contrato.pk,
-            request=self.request
+            views.ContratoDetailView, pk=contrato.pk, request=self.request
         )
         obj = view.get_object()
         self.assertEqual(obj, contrato)
 
     def test_assert_contrato_request_returns_permissiondenied_without_its_company(self):
-        contrato = factories.ContratoFactory(contraparte__company__customer=self.user.customer)
+        contrato = factories.ContratoFactory(
+            contraparte__company__customer=self.user.customer
+        )
         view = self.get_instance(
-            views.ContratoDetailView,
-            pk=contrato.pk,
-            request=self.request
+            views.ContratoDetailView, pk=contrato.pk, request=self.request
         )
         with self.assertRaises(PermissionDenied):
             view.get_object()
@@ -310,88 +344,123 @@ class ContratoDetailTest(BaseViewTest):
 
 class SubcontratosReportTest(BaseViewTest):
 
-    @mock.patch.object(views.DynamicDetail, 'get_context_data')
-    @mock.patch.object(Estimate, 'especial')
-    @mock.patch.object(views.SubcontratosReport, 'test_func', return_value=True)
-    def test_report_context_data_complete(self, mock_test_func, mock_especial, mock_context):
-        with mock.patch('construbot.proyectos.views.path_processing') as path_processing:
-            path_processing.return_value = 'somepath'
+    @mock.patch.object(views.DynamicDetail, "get_context_data")
+    @mock.patch.object(Estimate, "especial")
+    @mock.patch.object(views.SubcontratosReport, "test_func", return_value=True)
+    def test_report_context_data_complete(
+        self, mock_test_func, mock_especial, mock_context
+    ):
+        with mock.patch(
+            "construbot.proyectos.views.path_processing"
+        ) as path_processing:
+            path_processing.return_value = "somepath"
             mock_context.return_value = {}
             estimate_especial_reporte_subestimaciones = mock.Mock()
-            estimate_especial_reporte_subestimaciones.return_value = "reporte_subestimaciones"
+            estimate_especial_reporte_subestimaciones.return_value = (
+                "reporte_subestimaciones"
+            )
             estimate_especial_total_acumulado_subestimaciones = mock.Mock()
-            estimate_especial_total_acumulado_subestimaciones.return_value = ["acumulado_subestimaciones"]
+            estimate_especial_total_acumulado_subestimaciones.return_value = [
+                "acumulado_subestimaciones"
+            ]
             estimate_especial_total_actual_subestimaciones = mock.Mock()
-            estimate_especial_total_actual_subestimaciones.return_value = ["total_actual_subestimaciones"]
+            estimate_especial_total_actual_subestimaciones.return_value = [
+                "total_actual_subestimaciones"
+            ]
             estimate_especial_total_anterior_subestimaciones = mock.Mock()
-            estimate_especial_total_anterior_subestimaciones.return_value = ["anterior_subestimaciones"]
+            estimate_especial_total_anterior_subestimaciones.return_value = [
+                "anterior_subestimaciones"
+            ]
             estimate_especial_total_contratado_subestimaciones = mock.Mock()
-            estimate_especial_total_contratado_subestimaciones.return_value = ["total_contratado_subestimaciones"]
-            mock_especial.reporte_subestimaciones = estimate_especial_reporte_subestimaciones
-            mock_especial.total_acumulado_subestimaciones = estimate_especial_total_acumulado_subestimaciones
-            mock_especial.total_actual_subestimaciones = estimate_especial_total_actual_subestimaciones
-            mock_especial.total_anterior_subestimaciones = estimate_especial_total_anterior_subestimaciones
-            mock_especial.total_contratado_subestimaciones = estimate_especial_total_contratado_subestimaciones
+            estimate_especial_total_contratado_subestimaciones.return_value = [
+                "total_contratado_subestimaciones"
+            ]
+            mock_especial.reporte_subestimaciones = (
+                estimate_especial_reporte_subestimaciones
+            )
+            mock_especial.total_acumulado_subestimaciones = (
+                estimate_especial_total_acumulado_subestimaciones
+            )
+            mock_especial.total_actual_subestimaciones = (
+                estimate_especial_total_actual_subestimaciones
+            )
+            mock_especial.total_anterior_subestimaciones = (
+                estimate_especial_total_anterior_subestimaciones
+            )
+            mock_especial.total_contratado_subestimaciones = (
+                estimate_especial_total_contratado_subestimaciones
+            )
             view = self.get_instance(
-                views.SubcontratosReport,
-                pk=1,
-                request=self.request
+                views.SubcontratosReport, pk=1, request=self.request
             )
             estimate_object = mock.Mock()
-            estimate_object.path = 'blabla'
+            estimate_object.path = "blabla"
             view.object = estimate_object
             control_dict = {
-                'subestimaciones': 'reporte_subestimaciones',
-                'acumulado': 'acumulado_subestimaciones',
-                'actual': 'total_actual_subestimaciones',
-                'anterior': 'anterior_subestimaciones',
-                'contratado': 'total_contratado_subestimaciones'
+                "subestimaciones": "reporte_subestimaciones",
+                "acumulado": "acumulado_subestimaciones",
+                "actual": "total_actual_subestimaciones",
+                "anterior": "anterior_subestimaciones",
+                "contratado": "total_contratado_subestimaciones",
             }
             self.assertDictEqual(view.get_context_data(), control_dict)
             estimate_especial_reporte_subestimaciones.assert_called_with(
-                view.object.start_date, view.object.finish_date, view.object.project.depth, 'somepath'
+                view.object.start_date,
+                view.object.finish_date,
+                view.object.project.depth,
+                "somepath",
             )
             estimate_especial_total_acumulado_subestimaciones.assert_called_with(
-                view.object.start_date, view.object.finish_date, view.object.project.depth, 'somepath'
+                view.object.start_date,
+                view.object.finish_date,
+                view.object.project.depth,
+                "somepath",
             )
             estimate_especial_total_actual_subestimaciones.assert_called_with(
-                view.object.start_date, view.object.finish_date, view.object.project.depth, 'somepath'
+                view.object.start_date,
+                view.object.finish_date,
+                view.object.project.depth,
+                "somepath",
             )
             estimate_especial_total_anterior_subestimaciones.assert_called_with(
-                view.object.start_date, view.object.finish_date, view.object.project.depth, 'somepath'
+                view.object.start_date,
+                view.object.finish_date,
+                view.object.project.depth,
+                "somepath",
             )
             estimate_especial_total_contratado_subestimaciones.assert_called_with(
-                view.object.start_date, view.object.finish_date, view.object.project.depth, 'somepath'
+                view.object.start_date,
+                view.object.finish_date,
+                view.object.project.depth,
+                "somepath",
             )
 
 
 class SubcContratoCreationTest(utils.CBVTestCase):
 
-    @mock.patch.object(Contrato.objects, 'get')
-    @mock.patch.object(views.SubcontratosReport, 'test_func', return_value=True)
-    @mock.patch.object(views.ContratoCreationView, 'dispatch')
-    def test_subcontratocreation_dispatch_hascontrato_instance(self, mock_dispatch, mock_test_func, mock_contrato_get):
+    @mock.patch.object(Contrato.objects, "get")
+    @mock.patch.object(views.SubcontratosReport, "test_func", return_value=True)
+    @mock.patch.object(views.ContratoCreationView, "dispatch")
+    def test_subcontratocreation_dispatch_hascontrato_instance(
+        self, mock_dispatch, mock_test_func, mock_contrato_get
+    ):
         mock_dispatch.return_value = mock.Mock()
         mock_contrato = mock.Mock()
         mock_contrato_get.return_value = mock_contrato
         view = self.get_instance(
-            views.SubcontratoCreationView,
-            pk=1,
-            request=self.request
+            views.SubcontratoCreationView, pk=1, request=self.request
         )
         view.dispatch(view.request)
         self.assertEqual(view.contrato, mock_contrato)
         mock_contrato_get.assert_called_with(pk=1)
 
-    @mock.patch.object(views.ContratoCreationView, 'get_form')
+    @mock.patch.object(views.ContratoCreationView, "get_form")
     def test_subcontratocreattion_get_form_hascontrato(self, mock_get_form):
         mock_form = mock.Mock()
         mock_get_form.return_value = mock_form
         mock_contrato = mock.Mock()
         view = self.get_instance(
-            views.SubcontratoCreationView,
-            pk=1,
-            request=self.request
+            views.SubcontratoCreationView, pk=1, request=self.request
         )
         view.contrato = mock_contrato
         form = view.get_form()
@@ -399,9 +468,7 @@ class SubcContratoCreationTest(utils.CBVTestCase):
 
     def test_subcontratocreation_max_id_executes_children_count(self):
         view = self.get_instance(
-            views.SubcontratoCreationView,
-            pk=1,
-            request=self.request
+            views.SubcontratoCreationView, pk=1, request=self.request
         )
         mock_contrato = mock.Mock()
         contrato_get_children_count = mock.Mock()
@@ -413,9 +480,7 @@ class SubcContratoCreationTest(utils.CBVTestCase):
 
     def test_get_depth_subcontrato(self):
         view = self.get_instance(
-            views.SubcontratoCreationView,
-            pk=1,
-            request=self.request
+            views.SubcontratoCreationView, pk=1, request=self.request
         )
         mock_contrato = mock.Mock()
         contrato_get_depth = mock.Mock()
@@ -425,29 +490,25 @@ class SubcContratoCreationTest(utils.CBVTestCase):
         self.assertEqual(view.get_depth(), 2)
         contrato_get_depth.assert_called_once()
 
-    @mock.patch.object(views.ContratoCreationView, 'get_initial', return_value={})
+    @mock.patch.object(views.ContratoCreationView, "get_initial", return_value={})
     def test_subcontratocreation_get_initial(self, mock_initial):
         view = self.get_instance(
-            views.SubcontratoCreationView,
-            pk=1,
-            request=self.request
+            views.SubcontratoCreationView, pk=1, request=self.request
         )
         mock_contrato = mock.Mock()
         mock_contrato_sitio = mock.Mock()
         mock_contrato.sitio = mock_contrato_sitio
         view.contrato = mock_contrato
         obj = view.get_initial()
-        self.assertDictEqual(obj, {'sitio': mock_contrato.sitio})
+        self.assertDictEqual(obj, {"sitio": mock_contrato.sitio})
 
-    @mock.patch.object(views.ProyectosMenuMixin, 'get_context_data', return_value={})
+    @mock.patch.object(views.ProyectosMenuMixin, "get_context_data", return_value={})
     def test_get_context_data_subcontrato(self, mock_initial):
         view = self.get_instance(
-            views.SubcontratoCreationView,
-            pk=1,
-            request=self.request
+            views.SubcontratoCreationView, pk=1, request=self.request
         )
         context = view.get_context_data()
-        self.assertTrue(context.get('subcontrato'))
+        self.assertTrue(context.get("subcontrato"))
 
 
 class ClienteDetailTest(BaseViewTest):
@@ -457,9 +518,7 @@ class ClienteDetailTest(BaseViewTest):
         self.request.user.currently_at = cliente_company
         cliente = factories.ClienteFactory(company=cliente_company)
         view = self.get_instance(
-            views.ClienteDetailView,
-            pk=cliente.pk,
-            request=self.request
+            views.ClienteDetailView, pk=cliente.pk, request=self.request
         )
         obj = view.get_object()
         self.assertEqual(obj, cliente)
@@ -467,9 +526,7 @@ class ClienteDetailTest(BaseViewTest):
     def test_assert_cliente_request_raises_permissiondenied_with_no_currently_at(self):
         cliente = factories.ClienteFactory(company__customer=self.user.customer)
         view = self.get_instance(
-            views.ClienteDetailView,
-            pk=cliente.pk,
-            request=self.request
+            views.ClienteDetailView, pk=cliente.pk, request=self.request
         )
         with self.assertRaises(PermissionDenied):
             view.get_object()
@@ -484,15 +541,14 @@ class ClienteDetailTest(BaseViewTest):
         self.user.currently_at = cliente.company
         self.user.save()
         view = self.get_instance(
-            views.ClienteDetailView,
-            pk=cliente.pk,
-            request=self.request
+            views.ClienteDetailView, pk=cliente.pk, request=self.request
         )
         view.object = cliente
         qs = view.contratos_ordenados()
-        qs_test = [repr(q) for q in sorted(
-            [contrato2, contrato3], key=lambda x: x.fecha, reverse=True
-        )]
+        qs_test = [
+            repr(q)
+            for q in sorted([contrato2, contrato3], key=lambda x: x.fecha, reverse=True)
+        ]
         self.assertQuerySetEqual(qs, qs_test, transform=repr)
 
 
@@ -503,9 +559,7 @@ class SitioDetailTest(BaseViewTest):
         self.request.user.currently_at = sitio_company
         sitio = factories.SitioFactory(cliente=sitio_cliente)
         view = self.get_instance(
-            views.SitioDetailView,
-            pk=sitio.pk,
-            request=self.request
+            views.SitioDetailView, pk=sitio.pk, request=self.request
         )
         obj = view.get_object()
         self.assertEqual(obj, sitio)
@@ -515,9 +569,7 @@ class SitioDetailTest(BaseViewTest):
         sitio_cliente = factories.ClienteFactory(company=sitio_company)
         sitio = factories.SitioFactory(cliente=sitio_cliente)
         view = self.get_instance(
-            views.SitioDetailView,
-            pk=sitio.pk,
-            request=self.request
+            views.SitioDetailView, pk=sitio.pk, request=self.request
         )
         with self.assertRaises(PermissionDenied):
             view.get_object()
@@ -531,19 +583,19 @@ class DestinatarioDetailTest(BaseViewTest):
         destinatario_cliente = factories.ClienteFactory(company=destinatario_company)
         destinatario = factories.DestinatarioFactory(contraparte=destinatario_cliente)
         view = self.get_instance(
-            views.DestinatarioDetailView,
-            pk=destinatario.pk,
-            request=self.request
+            views.DestinatarioDetailView, pk=destinatario.pk, request=self.request
         )
         obj = view.get_object()
         self.assertEqual(obj, destinatario)
 
-    def test_destinatario_assert_request_returns_permissiondenied_without_its_company(self):
-        destinatario = factories.DestinatarioFactory(contraparte__company__customer=self.user.customer)
+    def test_destinatario_assert_request_returns_permissiondenied_without_its_company(
+        self,
+    ):
+        destinatario = factories.DestinatarioFactory(
+            contraparte__company__customer=self.user.customer
+        )
         view = self.get_instance(
-            views.DestinatarioDetailView,
-            pk=destinatario.pk,
-            request=self.request
+            views.DestinatarioDetailView, pk=destinatario.pk, request=self.request
         )
         with self.assertRaises(PermissionDenied):
             view.get_object()
@@ -557,9 +609,13 @@ class ContratoCreationTest(BaseViewTest):
         self.request.user.company.add(contrato_company)
         self.request.user.groups.add(self.admin_group)
         dicc = {
-            'currently_at': contrato_company.company_name, 'folio': 1, 'users': [self.request.user.id],
-            'depth': 1, 'path': 'random', 'numchild': 0,
-            }
+            "currently_at": contrato_company.company_name,
+            "folio": 1,
+            "users": [self.request.user.id],
+            "depth": 1,
+            "path": "random",
+            "numchild": 0,
+        }
         view = self.get_instance(
             views.ContratoCreationView,
             request=self.request,
@@ -574,30 +630,26 @@ class ContratoCreationTest(BaseViewTest):
         self.request.user.company.add(contrato_company)
         self.request.user.groups.add(self.admin_group)
         dicc = {
-            'currently_at': contrato_company.company_name,
-            'folio': contrato.folio + 1,
-            'users': [self.request.user.id],
-            'depth': 1, 'path': 'random', 'numchild': 0,
+            "currently_at": contrato_company.company_name,
+            "folio": contrato.folio + 1,
+            "users": [self.request.user.id],
+            "depth": 1,
+            "path": "random",
+            "numchild": 0,
         }
-        view = self.get_instance(
-            views.ContratoCreationView,
-            request=self.request
-        )
+        view = self.get_instance(views.ContratoCreationView, request=self.request)
         dicc_test = view.get_initial()
         self.assertDictEqual(dicc_test, dicc)
 
     def test_get_context_data_has_same_company_that_currently_at(self):
         contrato_company = factories.CompanyFactory(customer=self.user.customer)
         self.request.user.currently_at = contrato_company
-        view = self.get_instance(
-            views.ContratoCreationView,
-            request=self.request
-        )
+        view = self.get_instance(views.ContratoCreationView, request=self.request)
         view.get_menu = lambda: []
         view.nivel_permiso_usuario = self.request.user.nivel_acceso.nivel
         view.object = None
         dicc_test = view.get_context_data()
-        self.assertEqual(dicc_test['company'], contrato_company)
+        self.assertEqual(dicc_test["company"], contrato_company)
 
     def test_contrato_form_creation_is_not_valid_with_another_company(self):
         contrato_company = factories.CompanyFactory(customer=self.user.customer)
@@ -605,34 +657,41 @@ class ContratoCreationTest(BaseViewTest):
         contrato_company_2 = factories.CompanyFactory(customer=self.user.customer)
         contrato_cliente = factories.ClienteFactory(company=contrato_company)
         contrato_sitio = factories.SitioFactory(cliente=contrato_cliente)
-        form_data = {'folio': 1, 'code': 'TEST-1', 'fecha': '1999-12-1', 'contrato_name': 'TEST CONTRATO 1',
-                     'contrato_shortName': 'TC1', 'cliente': contrato_cliente.id, 'sitio': contrato_sitio.id,
-                     'monto': 1222.12,
-                     'currently_at': contrato_company_2.company_name,
-                     }
-        with mock.patch('construbot.proyectos.views.ContratoCreationView.get_form_kwargs') as get_form_mock:
-            view = self.get_instance(
-                views.ContratoCreationView,
-                request=self.request
-            )
-            get_form_mock.return_value = {'data': form_data}
+        form_data = {
+            "folio": 1,
+            "code": "TEST-1",
+            "fecha": "1999-12-1",
+            "contrato_name": "TEST CONTRATO 1",
+            "contrato_shortName": "TC1",
+            "cliente": contrato_cliente.id,
+            "sitio": contrato_sitio.id,
+            "monto": 1222.12,
+            "currently_at": contrato_company_2.company_name,
+        }
+        with mock.patch(
+            "construbot.proyectos.views.ContratoCreationView.get_form_kwargs"
+        ) as get_form_mock:
+            view = self.get_instance(views.ContratoCreationView, request=self.request)
+            get_form_mock.return_value = {"data": form_data}
             form = view.get_form()
-            view.get_context_data = lambda form: {'form': form}
+            view.get_context_data = lambda form: {"form": form}
             view.context = view.get_context_data(form)
-            self.assertFalse(hasattr(view, 'object'))
+            self.assertFalse(hasattr(view, "object"))
             self.assertEqual(view.post(request=self.request).status_code, 200)
-            self.assertFormError(view.context['form'], None,
-                                 'Actualmente te encuentras en otra compañia, '
-                                 'es necesario recargar y repetir el proceso.'
-                                 )
+            self.assertFormError(
+                view.context["form"],
+                None,
+                "Actualmente te encuentras en otra compañia, "
+                "es necesario recargar y repetir el proceso.",
+            )
 
     def test_contrato_creation_denied_user_auxiliar(self):
         company = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = company
         self.user.save()
         self.user.company.add(company)
-        self.client.login(username=self.user.username, password='password')
-        response = self.client.get(reverse('proyectos:nuevo_contrato'))
+        self.client.login(username=self.user.username, password="password")
+        response = self.client.get(reverse("proyectos:nuevo_contrato"))
         self.assertEqual(response.status_code, 403)
 
     def test_contrato_creation_granted_user_coordinador(self):
@@ -642,8 +701,8 @@ class ContratoCreationTest(BaseViewTest):
         self.user.nivel_acceso = self.coordinador_permission
         self.user.save()
         self.user.company.add(company)
-        self.client.login(username=self.user.username, password='password')
-        response = self.client.get(reverse('proyectos:nuevo_contrato'))
+        self.client.login(username=self.user.username, password="password")
+        response = self.client.get(reverse("proyectos:nuevo_contrato"))
         self.assertEqual(response.status_code, 200)
 
 
@@ -652,10 +711,7 @@ class ClienteCreationTest(BaseViewTest):
         cliente_company = factories.CompanyFactory(customer=self.user.customer)
         self.request.user.currently_at = cliente_company
         dicc = {"company": cliente_company}
-        view = self.get_instance(
-            views.ClienteCreationView,
-            request=self.request
-        )
+        view = self.get_instance(views.ClienteCreationView, request=self.request)
         dicc_test = view.get_initial()
         self.assertDictEqual(dicc_test, dicc)
 
@@ -663,22 +719,23 @@ class ClienteCreationTest(BaseViewTest):
         cliente_company = factories.CompanyFactory(customer=self.user.customer)
         cliente_company_2 = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = cliente_company
-        form_data = {'cliente_name': "Juanito", 'company': cliente_company_2.id}
-        with mock.patch('construbot.proyectos.views.ClienteCreationView.get_form_kwargs') as get_form_mock:
-            view = self.get_instance(
-                views.ClienteCreationView,
-                request=self.request
-            )
-            get_form_mock.return_value = {'data': form_data}
+        form_data = {"cliente_name": "Juanito", "company": cliente_company_2.id}
+        with mock.patch(
+            "construbot.proyectos.views.ClienteCreationView.get_form_kwargs"
+        ) as get_form_mock:
+            view = self.get_instance(views.ClienteCreationView, request=self.request)
+            get_form_mock.return_value = {"data": form_data}
             form = view.get_form()
-            view.get_context_data = lambda form: {'form': form}
+            view.get_context_data = lambda form: {"form": form}
             view.context = view.get_context_data(form)
-            self.assertFalse(hasattr(view, 'object'))
+            self.assertFalse(hasattr(view, "object"))
             self.assertEqual(view.post(request=self.request).status_code, 200)
-            self.assertFormError(view.context['form'], None,
-                                 'Actualmente te encuentras en otra compañia, '
-                                 'es necesario recargar y repetir el proceso.'
-                                 )
+            self.assertFormError(
+                view.context["form"],
+                None,
+                "Actualmente te encuentras en otra compañia, "
+                "es necesario recargar y repetir el proceso.",
+            )
 
 
 class SitioCreationTest(BaseViewTest):
@@ -686,10 +743,7 @@ class SitioCreationTest(BaseViewTest):
         sitio_company = factories.CompanyFactory(customer=self.user.customer)
         self.request.user.currently_at = sitio_company
         dicc = {"company": sitio_company}
-        view = self.get_instance(
-            views.SitioCreationView,
-            request=self.request
-        )
+        view = self.get_instance(views.SitioCreationView, request=self.request)
         dicc_test = view.get_initial()
         self.assertDictEqual(dicc_test, dicc)
 
@@ -699,34 +753,42 @@ class DestinatarioCreationTest(BaseViewTest):
         destinatario_company = factories.CompanyFactory(customer=self.user.customer)
         self.request.user.currently_at = destinatario_company
         dicc = {"company": destinatario_company}
-        view = self.get_instance(
-            views.DestinatarioCreationView,
-            request=self.request
-        )
+        view = self.get_instance(views.DestinatarioCreationView, request=self.request)
         dicc_test = view.get_initial()
         self.assertDictEqual(dicc_test, dicc)
 
-    @mock.patch('construbot.proyectos.views.DestinatarioDetailView.get_context_data')
+    @mock.patch("construbot.proyectos.views.DestinatarioDetailView.get_context_data")
     def test_destinatario_form_redirects_correctly(self, mock_detail_context):
-        with mock.patch('construbot.proyectos.views.DestinatarioCreationView.test_func') as mock_test_func:
+        with mock.patch(
+            "construbot.proyectos.views.DestinatarioCreationView.test_func"
+        ) as mock_test_func:
             destinatario_company = factories.CompanyFactory(customer=self.user.customer)
-            destinatario_cliente = factories.ClienteFactory(company=destinatario_company)
+            destinatario_cliente = factories.ClienteFactory(
+                company=destinatario_company
+            )
             self.user.currently_at = destinatario_company
             self.user.save()
             self.user.company.add(destinatario_company)
             form_data = {
-                'company': destinatario_company.id,
-                'destinatario_text': 'Un wey',
-                'contraparte': destinatario_cliente.id
+                "company": destinatario_company.id,
+                "destinatario_text": "Un wey",
+                "contraparte": destinatario_cliente.id,
             }
-            self.client.login(username=self.user.username, password='password')
+            self.client.login(username=self.user.username, password="password")
             mock_test_func.return_value = True
-            response = self.client.post(self.reverse('proyectos:nuevo_destinatario'), data=form_data)
-            new_destinatario = Destinatario.objects.get(destinatario_text='Un wey')
-            with mock.patch('construbot.proyectos.views.DestinatarioDetailView.test_func') as detail_mock:
+            response = self.client.post(
+                self.reverse("proyectos:nuevo_destinatario"), data=form_data
+            )
+            new_destinatario = Destinatario.objects.get(destinatario_text="Un wey")
+            with mock.patch(
+                "construbot.proyectos.views.DestinatarioDetailView.test_func"
+            ) as detail_mock:
                 mock_detail_context.return_value = {}
                 detail_mock.return_value = True
-                self.assertRedirects(response, '/proyectos/destinatario/detalle/%s/' % new_destinatario.id)
+                self.assertRedirects(
+                    response,
+                    "/proyectos/destinatario/detalle/%s/" % new_destinatario.id,
+                )
 
 
 class EstimateCreationTest(BaseViewTest):
@@ -742,39 +804,41 @@ class EstimateCreationTest(BaseViewTest):
         self.user.company.add(contrato_company)
         self.user.currently_at = contrato_company
         self.user.groups.add(self.proyectos_group)
-        self.client.login(username=self.user.username, password='password')
+        self.client.login(username=self.user.username, password="password")
         form_data = {
-            'consecutive': '3',
-            'supervised_by': str(self.user.id),
-            'start_date': '2018-04-29',
-            'finish_date': '2018-05-15',
-            'draft_by': str(self.user.id),
-            'project': str(contrato.id),
-            'auth_by': str(destinatario.id),
-            'auth_date': '2018-05-15',
-            'estimateconcept_set-TOTAL_FORMS': '1',
-            'estimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-MAX_NUM_FORMS': '5',
-            'estimateconcept_set-0-concept': concepto_1.concept_text,
-            'estimateconcept_set-0-vertices_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MAX_NUM_FORMS': '1000',
-            'estimateconcept_set-0-cuantity_estimated': '2',
-            'estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
+            "consecutive": "3",
+            "supervised_by": str(self.user.id),
+            "start_date": "2018-04-29",
+            "finish_date": "2018-05-15",
+            "draft_by": str(self.user.id),
+            "project": str(contrato.id),
+            "auth_by": str(destinatario.id),
+            "auth_date": "2018-05-15",
+            "estimateconcept_set-TOTAL_FORMS": "1",
+            "estimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-MAX_NUM_FORMS": "5",
+            "estimateconcept_set-0-concept": concepto_1.concept_text,
+            "estimateconcept_set-0-vertices_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MAX_NUM_FORMS": "1000",
+            "estimateconcept_set-0-cuantity_estimated": "2",
+            "estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS": "1000",
         }
-        response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
+        response = self.client.post(
+            reverse("proyectos:nueva_estimacion", kwargs={"pk": contrato.pk}), form_data
+        )
         self.assertNotRaises(
             lambda: Estimate.objects.get(project=contrato),
             Estimate.DoesNotExist,
-            'La estimacion no fue creada.'
+            "La estimacion no fue creada.",
         )
         self.assertRedirects(
-            response, reverse('proyectos:contrato_detail', kwargs={'pk': contrato.pk})
+            response, reverse("proyectos:contrato_detail", kwargs={"pk": contrato.pk})
         )
 
     def test_estimate_post_concept_same_text_not_raises(self):
@@ -789,39 +853,41 @@ class EstimateCreationTest(BaseViewTest):
         self.user.company.add(contrato_company)
         self.user.currently_at = contrato_company
         self.user.groups.add(self.proyectos_group)
-        self.client.login(username=self.user.username, password='password')
+        self.client.login(username=self.user.username, password="password")
         form_data = {
-            'consecutive': '3',
-            'supervised_by': str(self.user.id),
-            'start_date': '2018-04-29',
-            'finish_date': '2018-05-15',
-            'draft_by': str(self.user.id),
-            'project': str(contrato.id),
-            'auth_by': str(destinatario.id),
-            'auth_date': '2018-05-15',
-            'estimateconcept_set-TOTAL_FORMS': '1',
-            'estimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-MAX_NUM_FORMS': '5',
-            'estimateconcept_set-0-concept': concepto_1.concept_text,
-            'estimateconcept_set-0-vertices_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MAX_NUM_FORMS': '1000',
-            'estimateconcept_set-0-cuantity_estimated': '2',
-            'estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
+            "consecutive": "3",
+            "supervised_by": str(self.user.id),
+            "start_date": "2018-04-29",
+            "finish_date": "2018-05-15",
+            "draft_by": str(self.user.id),
+            "project": str(contrato.id),
+            "auth_by": str(destinatario.id),
+            "auth_date": "2018-05-15",
+            "estimateconcept_set-TOTAL_FORMS": "1",
+            "estimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-MAX_NUM_FORMS": "5",
+            "estimateconcept_set-0-concept": concepto_1.concept_text,
+            "estimateconcept_set-0-vertices_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MAX_NUM_FORMS": "1000",
+            "estimateconcept_set-0-cuantity_estimated": "2",
+            "estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS": "1000",
         }
-        response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
+        response = self.client.post(
+            reverse("proyectos:nueva_estimacion", kwargs={"pk": contrato.pk}), form_data
+        )
         self.assertNotRaises(
             lambda: Estimate.objects.get(project=contrato),
             Estimate.DoesNotExist,
-            'La estimacion no fue creada.'
+            "La estimacion no fue creada.",
         )
         self.assertRedirects(
-            response, reverse('proyectos:contrato_detail', kwargs={'pk': contrato.pk})
+            response, reverse("proyectos:contrato_detail", kwargs={"pk": contrato.pk})
         )
 
     def test_estimate_post_correctly_admin_user_not_assigned(self):
@@ -836,77 +902,87 @@ class EstimateCreationTest(BaseViewTest):
         self.user.groups.add(self.proyectos_group)
         self.user.nivel_acceso = self.director_permission
         self.user.save()
-        self.client.login(username=self.user.username, password='password')
+        self.client.login(username=self.user.username, password="password")
         form_data = {
-            'consecutive': '3',
-            'supervised_by': str(self.user.id),
-            'start_date': '2018-04-29',
-            'finish_date': '2018-05-15',
-            'draft_by': str(self.user.id),
-            'project': str(contrato.id),
-            'auth_by': str(destinatario.id),
-            'auth_date': '2018-05-15',
-            'estimateconcept_set-TOTAL_FORMS': '1',
-            'estimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-MAX_NUM_FORMS': '5',
-            'estimateconcept_set-0-concept': concepto_1.concept_text,
-            'estimateconcept_set-0-vertices_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MAX_NUM_FORMS': '1000',
-            'estimateconcept_set-0-cuantity_estimated': '2',
-            'estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
+            "consecutive": "3",
+            "supervised_by": str(self.user.id),
+            "start_date": "2018-04-29",
+            "finish_date": "2018-05-15",
+            "draft_by": str(self.user.id),
+            "project": str(contrato.id),
+            "auth_by": str(destinatario.id),
+            "auth_date": "2018-05-15",
+            "estimateconcept_set-TOTAL_FORMS": "1",
+            "estimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-MAX_NUM_FORMS": "5",
+            "estimateconcept_set-0-concept": concepto_1.concept_text,
+            "estimateconcept_set-0-vertices_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MAX_NUM_FORMS": "1000",
+            "estimateconcept_set-0-cuantity_estimated": "2",
+            "estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS": "1000",
         }
-        response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
+        response = self.client.post(
+            reverse("proyectos:nueva_estimacion", kwargs={"pk": contrato.pk}), form_data
+        )
         self.assertNotRaises(
             lambda: Estimate.objects.get(project=contrato),
             Estimate.DoesNotExist,
-            'La estimacion no fue creada.'
+            "La estimacion no fue creada.",
         )
         self.assertRedirects(
-            response, reverse('proyectos:contrato_detail', kwargs={'pk': contrato.pk})
+            response, reverse("proyectos:contrato_detail", kwargs={"pk": contrato.pk})
         )
 
     def test_estimate_post_renders_errors(self):
         contrato_company = factories.CompanyFactory(customer=self.user.customer)
         contrato = factories.ContratoFactory(contraparte__company=contrato_company)
         factories.ClienteFactory(company=contrato_company)
-        destinatario = factories.DestinatarioFactory(contraparte=factories.ClienteFactory())
+        destinatario = factories.DestinatarioFactory(
+            contraparte=factories.ClienteFactory()
+        )
         concepto_1 = factories.ConceptoFactory(project=contrato)
         self.user.company.add(contrato_company)
         self.user.currently_at = contrato_company
         self.user.groups.add(self.proyectos_group)
-        self.client.login(username=self.user.username, password='password')
+        self.client.login(username=self.user.username, password="password")
         form_data = {
-            'consecutive': '3',
-            'supervised_by': str(self.user.id),
-            'start_date': '2018-04-29',
-            'finish_date': '2018-05-15',
-            'draft_by': str(self.user.id),
-            'project': str(contrato.id),
-            'auth_by': str(destinatario.id),
-            'auth_date': '2018-05-15',
-            'estimateconcept_set-TOTAL_FORMS': '1',
-            'estimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-MAX_NUM_FORMS': '5',
-            'estimateconcept_set-0-concept': concepto_1.concept_text,
-            'estimateconcept_set-0-cuantity_estimated': '2',
-            'estimateconcept_set-0-vertices_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MAX_NUM_FORMS': '1000',
-            'estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
+            "consecutive": "3",
+            "supervised_by": str(self.user.id),
+            "start_date": "2018-04-29",
+            "finish_date": "2018-05-15",
+            "draft_by": str(self.user.id),
+            "project": str(contrato.id),
+            "auth_by": str(destinatario.id),
+            "auth_date": "2018-05-15",
+            "estimateconcept_set-TOTAL_FORMS": "1",
+            "estimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-MAX_NUM_FORMS": "5",
+            "estimateconcept_set-0-concept": concepto_1.concept_text,
+            "estimateconcept_set-0-cuantity_estimated": "2",
+            "estimateconcept_set-0-vertices_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MAX_NUM_FORMS": "1000",
+            "estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS": "1000",
         }
-        response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
-        self.assertFormError(response.context['form'], None, 'Destinatarios y contratos no pueden ser de empresas diferentes')
+        response = self.client.post(
+            reverse("proyectos:nueva_estimacion", kwargs={"pk": contrato.pk}), form_data
+        )
+        self.assertFormError(
+            response.context["form"],
+            None,
+            "Destinatarios y contratos no pueden ser de empresas diferentes",
+        )
 
     def test_estimate_post_pagada_sin_fecha_pago(self):
         contrato = factories.ContratoFactory()
@@ -915,36 +991,40 @@ class EstimateCreationTest(BaseViewTest):
         self.user.company.add(contrato.contraparte.company)
         self.user.currently_at = contrato.contraparte.company
         self.user.groups.add(self.proyectos_group)
-        self.client.login(username=self.user.username, password='password')
+        self.client.login(username=self.user.username, password="password")
         form_data = {
-            'consecutive': '3',
-            'supervised_by': str(self.user.id),
-            'start_date': '2018-04-29',
-            'finish_date': '2018-05-15',
-            'draft_by': str(self.user.id),
-            'project': str(contrato.id),
-            'auth_by': str(destinatario.id),
-            'auth_date': '2018-05-15',
-            'paid': True,
-            'payment_date': '',
-            'estimateconcept_set-TOTAL_FORMS': '1',
-            'estimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-MAX_NUM_FORMS': '5',
-            'estimateconcept_set-0-concept': concepto_1.concept_text,
-            'estimateconcept_set-0-cuantity_estimated': '2',
-            'estimateconcept_set-0-vertices_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MAX_NUM_FORMS': '1000',
-            'estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
+            "consecutive": "3",
+            "supervised_by": str(self.user.id),
+            "start_date": "2018-04-29",
+            "finish_date": "2018-05-15",
+            "draft_by": str(self.user.id),
+            "project": str(contrato.id),
+            "auth_by": str(destinatario.id),
+            "auth_date": "2018-05-15",
+            "paid": True,
+            "payment_date": "",
+            "estimateconcept_set-TOTAL_FORMS": "1",
+            "estimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-MAX_NUM_FORMS": "5",
+            "estimateconcept_set-0-concept": concepto_1.concept_text,
+            "estimateconcept_set-0-cuantity_estimated": "2",
+            "estimateconcept_set-0-vertices_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MAX_NUM_FORMS": "1000",
+            "estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS": "1000",
         }
-        response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
+        response = self.client.post(
+            reverse("proyectos:nueva_estimacion", kwargs={"pk": contrato.pk}), form_data
+        )
         self.assertFormError(
-            response.context['form'], 'payment_date', 'Si la estimación fué pagada, es necesaria fecha de pago.'
+            response.context["form"],
+            "payment_date",
+            "Si la estimación fué pagada, es necesaria fecha de pago.",
         )
 
     def test_estimate_createview_renders_formset_errors(self):
@@ -957,33 +1037,40 @@ class EstimateCreationTest(BaseViewTest):
         self.user.company.add(contrato_company)
         self.user.currently_at = contrato_company
         self.user.groups.add(self.proyectos_group)
-        self.client.login(username=self.user.username, password='password')
+        self.client.login(username=self.user.username, password="password")
         form_data = {
-            'consecutive': '3',
-            'supervised_by': str(self.user.id),
-            'start_date': '2018-04-29',
-            'finish_date': '2018-05-15',
-            'draft_by': str(self.user.id),
-            'project': str(contrato.id),
-            'auth_by': str(destinatario.id),
-            'auth_date': '2018-05-15',
-            'estimateconcept_set-TOTAL_FORMS': '1',
-            'estimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-MAX_NUM_FORMS': '5',
-            'estimateconcept_set-0-concept': concepto_1.concept_text,
-            'estimateconcept_set-0-cuantity_estimated': 'a',
-            'estimateconcept_set-0-vertices_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MAX_NUM_FORMS': '1000',
-            'estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
+            "consecutive": "3",
+            "supervised_by": str(self.user.id),
+            "start_date": "2018-04-29",
+            "finish_date": "2018-05-15",
+            "draft_by": str(self.user.id),
+            "project": str(contrato.id),
+            "auth_by": str(destinatario.id),
+            "auth_date": "2018-05-15",
+            "estimateconcept_set-TOTAL_FORMS": "1",
+            "estimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-MAX_NUM_FORMS": "5",
+            "estimateconcept_set-0-concept": concepto_1.concept_text,
+            "estimateconcept_set-0-cuantity_estimated": "a",
+            "estimateconcept_set-0-vertices_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MAX_NUM_FORMS": "1000",
+            "estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS": "1000",
         }
-        response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
-        self.assertFormSetError(response.context['generator_inline_concept'], 0, 'cuantity_estimated', ['Introduzca un número.'])
+        response = self.client.post(
+            reverse("proyectos:nueva_estimacion", kwargs={"pk": contrato.pk}), form_data
+        )
+        self.assertFormSetError(
+            response.context["generator_inline_concept"],
+            0,
+            "cuantity_estimated",
+            ["Introduzca un número."],
+        )
         self.assertEqual(response.status_code, 200)
 
     def test_estimate_auth_by_gen_other_company_fail(self):
@@ -992,39 +1079,47 @@ class EstimateCreationTest(BaseViewTest):
         contrato = factories.ContratoFactory(contraparte=contrato_cliente)
         cliente_contrato = factories.ClienteFactory(company=contrato_company)
         destinatario = factories.DestinatarioFactory(contraparte=contrato_cliente)
-        destinatario2 = factories.DestinatarioFactory(contraparte=factories.ClienteFactory())
+        destinatario2 = factories.DestinatarioFactory(
+            contraparte=factories.ClienteFactory()
+        )
         concepto_1 = factories.ConceptoFactory(project=contrato)
         self.user.company.add(contrato_company)
         self.user.currently_at = contrato_company
         self.user.groups.add(self.proyectos_group)
-        self.client.login(username=self.user.username, password='password')
+        self.client.login(username=self.user.username, password="password")
         form_data = {
-            'consecutive': '3',
-            'supervised_by': str(self.user.id),
-            'start_date': '2018-04-29',
-            'finish_date': '2018-05-15',
-            'draft_by': str(self.user.id),
-            'project': str(contrato.id),
-            'auth_by': str(destinatario.id),
-            'auth_by_gen': str(destinatario2.id),
-            'auth_date': '2018-05-15',
-            'estimateconcept_set-TOTAL_FORMS': '1',
-            'estimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-MAX_NUM_FORMS': '5',
-            'estimateconcept_set-0-concept': concepto_1.concept_text,
-            'estimateconcept_set-0-cuantity_estimated': '2',
-            'estimateconcept_set-0-vertices_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-vertices_set-MAX_NUM_FORMS': '1000',
-            'estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS': '0',
-            'estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS': '1000'
+            "consecutive": "3",
+            "supervised_by": str(self.user.id),
+            "start_date": "2018-04-29",
+            "finish_date": "2018-05-15",
+            "draft_by": str(self.user.id),
+            "project": str(contrato.id),
+            "auth_by": str(destinatario.id),
+            "auth_by_gen": str(destinatario2.id),
+            "auth_date": "2018-05-15",
+            "estimateconcept_set-TOTAL_FORMS": "1",
+            "estimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-MAX_NUM_FORMS": "5",
+            "estimateconcept_set-0-concept": concepto_1.concept_text,
+            "estimateconcept_set-0-cuantity_estimated": "2",
+            "estimateconcept_set-0-vertices_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-vertices_set-MAX_NUM_FORMS": "1000",
+            "estimateconcept_set-0-imageestimateconcept_set-TOTAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-INITIAL_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MIN_NUM_FORMS": "0",
+            "estimateconcept_set-0-imageestimateconcept_set-MAX_NUM_FORMS": "1000",
         }
-        response = self.client.post(reverse('proyectos:nueva_estimacion', kwargs={'pk': contrato.pk}), form_data)
-        self.assertFormError(response.context['form'], None, 'Destinatarios y contratos no pueden ser de empresas diferentes')
+        response = self.client.post(
+            reverse("proyectos:nueva_estimacion", kwargs={"pk": contrato.pk}), form_data
+        )
+        self.assertFormError(
+            response.context["form"],
+            None,
+            "Destinatarios y contratos no pueden ser de empresas diferentes",
+        )
 
 
 class EstimateEditTest(BaseViewTest):
@@ -1035,19 +1130,19 @@ class EstimateEditTest(BaseViewTest):
         estimacion = factories.EstimateFactory(
             project=contrato,
             draft_by=self.user,  # se ocupa porque si no truena
-            supervised_by=self.user
+            supervised_by=self.user,
         )
         request = RequestFactory().post(
-            reverse('proyectos:editar_estimacion', kwargs={'pk': estimacion.pk}),
-            data={'dato': 'dato'}
+            reverse("proyectos:editar_estimacion", kwargs={"pk": estimacion.pk}),
+            data={"dato": "dato"},
         )
         view = self.get_instance(
-            views.EstimateEditView,
-            request=request,
-            pk=contrato.pk
+            views.EstimateEditView, request=request, pk=contrato.pk
         )
         view.object = estimacion
-        with mock.patch('construbot.proyectos.forms.estimateConceptInlineForm') as mock_function:
+        with mock.patch(
+            "construbot.proyectos.forms.estimateConceptInlineForm"
+        ) as mock_function:
             mock_formset_instance = mock.Mock()
             mock_formset = mock_formset_instance()
             mock_formset.is_valid.return_value = True
@@ -1061,7 +1156,7 @@ class EstimateEditTest(BaseViewTest):
         self.assertTrue(mock_formset.is_valid.called)
         self.assertTrue(mock_formset.save.called)
 
-    @mock.patch.object(views.EstimateEditView, 'form_invalid')
+    @mock.patch.object(views.EstimateEditView, "form_invalid")
     def test_estimate_edit_executes_form_invalid_on_formset_invalid(self, mock_method):
         company = factories.CompanyFactory(customer=self.user.customer)
         cliente = factories.ClienteFactory(company=company)
@@ -1069,19 +1164,19 @@ class EstimateEditTest(BaseViewTest):
         estimacion = factories.EstimateFactory(
             project=contrato,
             draft_by=self.user,  # se ocupa porque si no truena
-            supervised_by=self.user
+            supervised_by=self.user,
         )
         request = RequestFactory().post(
-            reverse('proyectos:editar_estimacion', kwargs={'pk': estimacion.pk}),
-            data={'dato': 'dato'}
+            reverse("proyectos:editar_estimacion", kwargs={"pk": estimacion.pk}),
+            data={"dato": "dato"},
         )
         view = self.get_instance(
-            views.EstimateEditView,
-            request=request,
-            pk=contrato.pk
+            views.EstimateEditView, request=request, pk=contrato.pk
         )
         view.object = estimacion
-        with mock.patch('construbot.proyectos.forms.estimateConceptInlineForm') as mock_function:
+        with mock.patch(
+            "construbot.proyectos.forms.estimateConceptInlineForm"
+        ) as mock_function:
             mock_formset_instance = mock.Mock()
             mock_formset = mock_formset_instance()
             mock_formset.is_valid.return_value = False
@@ -1093,7 +1188,7 @@ class EstimateEditTest(BaseViewTest):
         self.assertFalse(mock_formset.save.called)
         self.assertTrue(mock_method.caled)
 
-    @mock.patch.object(views.EstimateEditView, 'form_invalid')
+    @mock.patch.object(views.EstimateEditView, "form_invalid")
     def test_estimate_edit_returns_same_formset_on_errors(self, mock_method):
         company = factories.CompanyFactory(customer=self.user.customer)
         cliente = factories.ClienteFactory(company=company)
@@ -1101,15 +1196,15 @@ class EstimateEditTest(BaseViewTest):
         estimacion = factories.EstimateFactory(
             project=contrato,
             draft_by=self.user,  # se ocupa porque si no truena
-            supervised_by=self.user
+            supervised_by=self.user,
         )
         view = self.get_instance(
-            views.EstimateEditView,
-            request=self.request,
-            pk=contrato.pk
+            views.EstimateEditView, request=self.request, pk=contrato.pk
         )
         view.object = estimacion
-        with mock.patch('construbot.proyectos.forms.estimateConceptInlineForm') as mock_function:
+        with mock.patch(
+            "construbot.proyectos.forms.estimateConceptInlineForm"
+        ) as mock_function:
             mock_formset_klass = mock.Mock()
             # mock_formset = mock_formset_klass()
             mock_formset = mock.Mock()
@@ -1125,9 +1220,7 @@ class EstimateEditTest(BaseViewTest):
         # son dos llamados, una por la prueba y otra por la sentencia anterior...
         self.assertEqual(mock_function.call_count, 2)
         mock_formset_klass.assert_called_with(
-            self.request.POST,
-            self.request.FILES,
-            instance=estimacion
+            self.request.POST, self.request.FILES, instance=estimacion
         )
         mock_formset_klass.assert_called_once()
         mock_formset.is_valid.assert_called_once()
@@ -1136,7 +1229,9 @@ class EstimateEditTest(BaseViewTest):
 class ContratoEditViewTest(BaseViewTest):
 
     def test_obtiene_objeto_correctamente(self):
-        contrato = factories.ContratoFactory(contraparte__company__customer=self.user.customer)
+        contrato = factories.ContratoFactory(
+            contraparte__company__customer=self.user.customer
+        )
         self.user.currently_at = contrato.contraparte.company
         contrato.users.add(self.request.user)
         view = self.get_instance(
@@ -1148,52 +1243,62 @@ class ContratoEditViewTest(BaseViewTest):
         self.assertEqual(obj, contrato)
 
     def test_get_object_raises_permissiondenied_without_its_company(self):
-        contrato = factories.ContratoFactory(contraparte__company__customer=self.user.customer)
+        contrato = factories.ContratoFactory(
+            contraparte__company__customer=self.user.customer
+        )
         view = self.get_instance(
-            views.ContratoEditView,
-            request=self.request,
-            pk=contrato.pk
+            views.ContratoEditView, request=self.request, pk=contrato.pk
         )
         with self.assertRaises(PermissionDenied):
             view.get_object()
 
     def test_get_initial_has_currently_at(self):
-        contrato = factories.ContratoFactory(contraparte__company__customer=self.user.customer)
+        contrato = factories.ContratoFactory(
+            contraparte__company__customer=self.user.customer
+        )
         self.user.currently_at = contrato.contraparte.company
         view = self.get_instance(
-            views.ContratoEditView,
-            request=self.request,
-            pk=contrato.pk
+            views.ContratoEditView, request=self.request, pk=contrato.pk
         )
         init_obj = view.get_initial()
-        self.assertTrue('currently_at' in init_obj)
-        self.assertEqual(init_obj['currently_at'], self.user.currently_at.company_name)
+        self.assertTrue("currently_at" in init_obj)
+        self.assertEqual(init_obj["currently_at"], self.user.currently_at.company_name)
 
     def test_contrato_edit_not_currently_returns_invalid(self):
         contrato_company = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = contrato_company
         contrato_cliente = factories.ClienteFactory(company=contrato_company)
         contrato_sitio = factories.SitioFactory(cliente=contrato_cliente)
-        contrato_factory = factories.ContratoFactory(contraparte=contrato_cliente, sitio=contrato_sitio, monto=90.00)
+        contrato_factory = factories.ContratoFactory(
+            contraparte=contrato_cliente, sitio=contrato_sitio, monto=90.00
+        )
         contrato_factory.users.add(self.request.user)
-        form_data = {'folio': 1, 'code': 'TEST-1', 'fecha': '1999-12-1', 'contrato_name': 'TEST CONTRATO 1',
-                     'contrato_shortName': 'TC1', 'cliente': contrato_cliente.id, 'sitio': contrato_sitio.id,
-                     'monto': 1222.12,
-                     }
-        with mock.patch('construbot.proyectos.views.ContratoEditView.get_form_kwargs') as get_form_mock:
+        form_data = {
+            "folio": 1,
+            "code": "TEST-1",
+            "fecha": "1999-12-1",
+            "contrato_name": "TEST CONTRATO 1",
+            "contrato_shortName": "TC1",
+            "cliente": contrato_cliente.id,
+            "sitio": contrato_sitio.id,
+            "monto": 1222.12,
+        }
+        with mock.patch(
+            "construbot.proyectos.views.ContratoEditView.get_form_kwargs"
+        ) as get_form_mock:
             view = self.get_instance(
-                views.ContratoEditView,
-                request=self.request,
-                pk=contrato_factory.pk
+                views.ContratoEditView, request=self.request, pk=contrato_factory.pk
             )
-            get_form_mock.return_value = {'data': form_data}
+            get_form_mock.return_value = {"data": form_data}
             form = view.get_form()
-            view.get_context_data = lambda form: {'form': form}
+            view.get_context_data = lambda form: {"form": form}
             view.context = view.get_context_data(form)
             contrato = Contrato.objects.get(pk=contrato_factory.pk)
-            self.assertEqual(contrato.monto, decimal.Decimal('90.00'))
+            self.assertEqual(contrato.monto, decimal.Decimal("90.00"))
             self.assertEqual(view.post(request=self.request).status_code, 200)
-            self.assertFormError(view.context['form'], 'currently_at', 'Este campo es requerido.')
+            self.assertFormError(
+                view.context["form"], "currently_at", "Este campo es requerido."
+            )
 
 
 class ClienteEditTest(BaseViewTest):
@@ -1227,8 +1332,8 @@ class ClienteEditTest(BaseViewTest):
             pk=cliente.pk,
         )
         init_obj = view.get_initial()
-        self.assertTrue('company' in init_obj)
-        self.assertEqual(init_obj['company'], self.user.currently_at)
+        self.assertTrue("company" in init_obj)
+        self.assertEqual(init_obj["company"], self.user.currently_at)
 
 
 class SitioEditTest(BaseViewTest):
@@ -1262,8 +1367,8 @@ class SitioEditTest(BaseViewTest):
             pk=sitio.pk,
         )
         init = view.get_initial()
-        self.assertTrue('company' in init)
-        self.assertEqual(init['company'], self.user.currently_at)
+        self.assertTrue("company" in init)
+        self.assertEqual(init["company"], self.user.currently_at)
 
 
 class DestinatarioEditTest(BaseViewTest):
@@ -1297,8 +1402,8 @@ class DestinatarioEditTest(BaseViewTest):
             pk=destinatario.pk,
         )
         init = view.get_initial()
-        self.assertTrue('company' in init)
-        self.assertEqual(init['company'], self.user.currently_at)
+        self.assertTrue("company" in init)
+        self.assertEqual(init["company"], self.user.currently_at)
 
 
 class CatalogoConceptosInlineFormTest(BaseViewTest):
@@ -1311,7 +1416,7 @@ class CatalogoConceptosInlineFormTest(BaseViewTest):
         view = self.get_instance(
             views.CatalogoConceptosInlineFormView,
             request=self.request,
-            pk=contrato_inline.pk
+            pk=contrato_inline.pk,
         )
         test_obj = view.get_object()
         self.assertEqual(test_obj, contrato_inline)
@@ -1324,71 +1429,83 @@ class CatalogoConceptosInlineFormTest(BaseViewTest):
         view = self.get_instance(
             views.CatalogoConceptosInlineFormView,
             request=self.request,
-            pk=contrato_inline.pk
+            pk=contrato_inline.pk,
         )
-        test_url = '/proyectos/contrato/detalle/%i/' % contrato_inline.pk
+        test_url = "/proyectos/contrato/detalle/%i/" % contrato_inline.pk
         self.assertEqual(view.get_success_url(), test_url)
 
 
 class CatalogoRetencionesInlineFormTest(utils.BaseTestCase):
 
-    @mock.patch('construbot.proyectos.views.shortcuts.get_object_or_404')
-    @mock.patch('construbot.proyectos.views.load_workbook')
-    @mock.patch.object(views.Retenciones.objects, 'create')
-    def test_importar_excel_guarda_retenciones(self, mock_create, mock_workbook, mock_404):
+    @mock.patch("construbot.proyectos.views.shortcuts.get_object_or_404")
+    @mock.patch("construbot.proyectos.views.load_workbook")
+    @mock.patch.object(views.Retenciones.objects, "create")
+    def test_importar_excel_guarda_retenciones(
+        self, mock_create, mock_workbook, mock_404
+    ):
         mock_contrato = mock.Mock()
         mock_404.return_value = mock_contrato
         workbook_active = mock.Mock()
         workbook_active_iter_rows = mock.Mock()
-        workbook_active_iter_rows.return_value = [['Nombre', 'PORCENTAJE', 50]]
+        workbook_active_iter_rows.return_value = [["Nombre", "PORCENTAJE", 50]]
         workbook_active.iter_rows = workbook_active_iter_rows
         ws = mock.Mock()
         ws.active = workbook_active
         mock_workbook.return_value = ws
-        request = self.factory.post('bla/bla', data={'contrato': 2, 'excel-file': StringIO('test')})
+        request = self.factory.post(
+            "bla/bla", data={"contrato": 2, "excel-file": StringIO("test")}
+        )
         mock_user = mock.Mock()
         user_currently_at = mock.Mock()
         mock_user.currently_at = user_currently_at
         request.user = mock_user
         view = self.get_instance(
-            views.CatalogoRetencionesInlineFormView,
-            request=request
+            views.CatalogoRetencionesInlineFormView, request=request
         )
         view.importar_excel()
-        mock_create.assert_called_once_with(nombre='Nombre', valor=50, tipo='PERCENTAGE', project=mock_contrato)
+        mock_create.assert_called_once_with(
+            nombre="Nombre", valor=50, tipo="PERCENTAGE", project=mock_contrato
+        )
 
-    @mock.patch('construbot.proyectos.views.shortcuts.get_object_or_404')
-    @mock.patch('construbot.proyectos.views.load_workbook')
-    @mock.patch.object(views.Retenciones.objects, 'create')
-    def test_importar_excel_guarda_retenciones_monto(self, mock_create, mock_workbook, mock_404):
+    @mock.patch("construbot.proyectos.views.shortcuts.get_object_or_404")
+    @mock.patch("construbot.proyectos.views.load_workbook")
+    @mock.patch.object(views.Retenciones.objects, "create")
+    def test_importar_excel_guarda_retenciones_monto(
+        self, mock_create, mock_workbook, mock_404
+    ):
         mock_contrato = mock.Mock()
         mock_404.return_value = mock_contrato
         workbook_active = mock.Mock()
         workbook_active_iter_rows = mock.Mock()
-        workbook_active_iter_rows.return_value = [['Nombre', 'monto', 50]]
+        workbook_active_iter_rows.return_value = [["Nombre", "monto", 50]]
         workbook_active.iter_rows = workbook_active_iter_rows
         ws = mock.Mock()
         ws.active = workbook_active
         mock_workbook.return_value = ws
-        request = self.factory.post('bla/bla', data={'contrato': 2, 'excel-file': StringIO('test')})
+        request = self.factory.post(
+            "bla/bla", data={"contrato": 2, "excel-file": StringIO("test")}
+        )
         mock_user = mock.Mock()
         user_currently_at = mock.Mock()
         mock_user.currently_at = user_currently_at
         request.user = mock_user
         view = self.get_instance(
-            views.CatalogoRetencionesInlineFormView,
-            request=request
+            views.CatalogoRetencionesInlineFormView, request=request
         )
         view.importar_excel()
-        mock_create.assert_called_once_with(nombre='Nombre', valor=50, tipo='AMOUNT', project=mock_contrato)
+        mock_create.assert_called_once_with(
+            nombre="Nombre", valor=50, tipo="AMOUNT", project=mock_contrato
+        )
 
 
 class CatalogoConceptosTest(BaseViewTest):
 
-    @mock.patch.object(views.CatalogosView, 'importar_excel')
-    @mock.patch.object(views.UpdateView, 'post')
-    def test_importar_excel_excecuted_on_excelfile_in_request(self, mock_post, mock_importar):
-        factory = self.factory.post('bla/bla', data={'excel-file': StringIO('test')})
+    @mock.patch.object(views.CatalogosView, "importar_excel")
+    @mock.patch.object(views.UpdateView, "post")
+    def test_importar_excel_excecuted_on_excelfile_in_request(
+        self, mock_post, mock_importar
+    ):
+        factory = self.factory.post("bla/bla", data={"excel-file": StringIO("test")})
         self.post(views.CatalogosView, request=factory)
         mock_importar.assert_called_with()
         mock_post.assert_called_with(factory)
@@ -1396,13 +1513,13 @@ class CatalogoConceptosTest(BaseViewTest):
     def test_json_formed_correctly(self):
         company = factories.CompanyFactory(customer=self.user.customer)
         self.request.user.currently_at = company
-        unit = factories.UnitFactory(unit='meter')
+        unit = factories.UnitFactory(unit="meter")
         cliente = factories.ClienteFactory(company=company)
         contrato = factories.ContratoFactory(contraparte=cliente)
         for iterator in range(3):
             factories.ConceptoFactory(
                 code=str(iterator),
-                concept_text='text_%s' % iterator,
+                concept_text="text_%s" % iterator,
                 unit=unit,
                 total_cuantity=1000 + iterator,
                 unit_price=2 + iterator,
@@ -1415,45 +1532,48 @@ class CatalogoConceptosTest(BaseViewTest):
         instance.contrato = contrato
         response = instance.get(self.request)
         JSON_test = {
-            'conceptos': [
+            "conceptos": [
                 {
-                    'code': '0',
-                    'concept_text': 'text_0',
-                    'unit': 'meter',
-                    'cuantity': '1000.00',
-                    'unit_price': '2.00',
+                    "code": "0",
+                    "concept_text": "text_0",
+                    "unit": "meter",
+                    "cuantity": "1000.00",
+                    "unit_price": "2.00",
                 },
                 {
-                    'code': '1',
-                    'concept_text': 'text_1',
-                    'unit': 'meter',
-                    'cuantity': '1001.00',
-                    'unit_price': '3.00',
+                    "code": "1",
+                    "concept_text": "text_1",
+                    "unit": "meter",
+                    "cuantity": "1001.00",
+                    "unit_price": "3.00",
                 },
                 {
-                    'code': '2',
-                    'concept_text': 'text_2',
-                    'unit': 'meter',
-                    'cuantity': '1002.00',
-                    'unit_price': '4.00',
+                    "code": "2",
+                    "concept_text": "text_2",
+                    "unit": "meter",
+                    "cuantity": "1002.00",
+                    "unit_price": "4.00",
                 },
-
             ],
         }
         JSON_test = json.dumps(JSON_test)
-        JSON_view = str(response.content, encoding='utf-8')
+        JSON_view = str(response.content, encoding="utf-8")
         self.assertJSONEqual(JSON_view, JSON_test)
 
     def test_catalogo_edit_raises_permission_denied(self):
         company_test = user_factories.CompanyFactory(customer=self.user.customer)
         self.user.company.add(company_test)
         self.user.currently_at = company_test
-        contrato_factory = factories.ContratoFactory(contraparte__company=self.user.company.first())
-        self.client.login(username=self.user.username, password='password')
-        request = self.client.get(reverse('proyectos:catalogo_conceptos', kwargs={'pk': contrato_factory.pk}))
+        contrato_factory = factories.ContratoFactory(
+            contraparte__company=self.user.company.first()
+        )
+        self.client.login(username=self.user.username, password="password")
+        request = self.client.get(
+            reverse("proyectos:catalogo_conceptos", kwargs={"pk": contrato_factory.pk})
+        )
         self.assertEqual(request.status_code, 403)
 
-    @mock.patch.object(views.CatalogoConceptos, 'get_contrato')
+    @mock.patch.object(views.CatalogoConceptos, "get_contrato")
     def test_get_assignment_args(self, mock_contrato):
         _contrato = factories.ContratoFactory()
         mock_contrato.return_value = _contrato
@@ -1475,9 +1595,7 @@ class CatalogoConceptosTest(BaseViewTest):
         self.user.currently_at = company
         contrato.users.add(self.user)
         instance = self.get_instance(
-            views.CatalogoConceptos,
-            request=self.request,
-            pk=contrato.pk
+            views.CatalogoConceptos, request=self.request, pk=contrato.pk
         )
         instance_contrato = instance.get_contrato()
         self.assertEqual(instance_contrato, contrato)
@@ -1485,16 +1603,13 @@ class CatalogoConceptosTest(BaseViewTest):
 
 class DynamicDeleteTest(BaseViewTest):
 
-    @mock.patch('django.shortcuts.get_object_or_404')
+    @mock.patch("django.shortcuts.get_object_or_404")
     def test_get_object_calls_get_obj_or_404(self, mock_404):
         contrato = factories.ContratoFactory()
         mock_404.return_value = contrato
         self.user.currently_at = contrato.contraparte.company
         view = self.get_instance(
-            views.DynamicDelete,
-            request=self.request,
-            model='Contrato',
-            pk=contrato.pk
+            views.DynamicDelete, request=self.request, model="Contrato", pk=contrato.pk
         )
         obj = view.get_object()
         self.assertEqual(obj, contrato)
@@ -1502,33 +1617,43 @@ class DynamicDeleteTest(BaseViewTest):
 
     def test_dynamic_delete_gets_object(self):
         company_delete = factories.CompanyFactory(customer=self.user.customer)
-        cliente_delete = factories.ClienteFactory(company=company_delete, tipo='CLIENTE')
+        cliente_delete = factories.ClienteFactory(
+            company=company_delete, tipo="CLIENTE"
+        )
         contrato_object = factories.ContratoFactory(folio=1, contraparte=cliente_delete)
         contrato_object.users.add(self.request.user)
         request = RequestFactory().post(
-            reverse('proyectos:eliminar', kwargs={'model': 'Contrato', 'pk': contrato_object.pk}),
-            data={'value': 'confirm'}
+            reverse(
+                "proyectos:eliminar",
+                kwargs={"model": "Contrato", "pk": contrato_object.pk},
+            ),
+            data={"value": "confirm"},
         )
         request.user = self.user
         self.user.currently_at = company_delete
         view = self.get_instance(
             views.DynamicDelete,
             request=request,
-            model='Contrato',
-            pk=contrato_object.pk
+            model="Contrato",
+            pk=contrato_object.pk,
         )
         view_obj = view.get_object()
         self.assertEqual(contrato_object, view_obj)
 
-    @mock.patch.object(views.DynamicDelete, 'get_object')
+    @mock.patch.object(views.DynamicDelete, "get_object")
     def test_delete_method_calls_functions_for_Contrato(self, mock_object):
-        with mock.patch.object(views.DynamicDelete, 'folio_handling', return_value=None) as mock_folio:
+        with mock.patch.object(
+            views.DynamicDelete, "folio_handling", return_value=None
+        ) as mock_folio:
             contrato_delete = mock.Mock()
             contrato_delete.pk = 1
             contrato_delete.folio = 1
             request = RequestFactory().post(
-                reverse('proyectos:eliminar', kwargs={'model': 'Contrato', 'pk': contrato_delete.pk}),
-                data={'value': 'confirm'}
+                reverse(
+                    "proyectos:eliminar",
+                    kwargs={"model": "Contrato", "pk": contrato_delete.pk},
+                ),
+                data={"value": "confirm"},
             )
             view = self.get_instance(
                 views.DynamicDelete,
@@ -1536,17 +1661,22 @@ class DynamicDeleteTest(BaseViewTest):
             )
             response = view.delete(request)
         mock_object.assert_called_once()
-        self.assertJSONEqual(str(response.content, encoding='utf8'), {"exito": True})
+        self.assertJSONEqual(str(response.content, encoding="utf8"), {"exito": True})
 
-    @mock.patch.object(views.DynamicDelete, 'get_object')
+    @mock.patch.object(views.DynamicDelete, "get_object")
     def test_delete_method_calls_functions_for_Estimate(self, mock_object):
-        with mock.patch.object(views.DynamicDelete, 'folio_handling', return_value=None) as mock_folio:
+        with mock.patch.object(
+            views.DynamicDelete, "folio_handling", return_value=None
+        ) as mock_folio:
             estimate_delete = mock.Mock()
             estimate_delete.pk = 1
             estimate_delete.consecutive = 1
             request = RequestFactory().post(
-                reverse('proyectos:eliminar', kwargs={'model': 'Estimate', 'pk': estimate_delete.pk}),
-                data={'value': 'confirm'}
+                reverse(
+                    "proyectos:eliminar",
+                    kwargs={"model": "Estimate", "pk": estimate_delete.pk},
+                ),
+                data={"value": "confirm"},
             )
             view = self.get_instance(
                 views.DynamicDelete,
@@ -1554,31 +1684,42 @@ class DynamicDeleteTest(BaseViewTest):
             )
             response = view.delete(request)
         mock_object.assert_called_once()
-        self.assertJSONEqual(str(response.content, encoding='utf8'), {"exito": True})
+        self.assertJSONEqual(str(response.content, encoding="utf8"), {"exito": True})
 
-    @mock.patch.object(views.DynamicDelete, 'get_company_query')
+    @mock.patch.object(views.DynamicDelete, "get_company_query")
     def test_folio_handling_perfoms_correct_qs(self, mock_query):
         company_delete = factories.CompanyFactory(customer=self.user.customer)
         cliente_delete = factories.ClienteFactory(company=company_delete)
         contrato_delete = factories.ContratoFactory(folio=1, contraparte=cliente_delete)
-        contrato_delete_2 = factories.ContratoFactory(folio=2, contraparte=cliente_delete)
-        contrato_delete_3 = factories.ContratoFactory(folio=3, contraparte=cliente_delete)
+        contrato_delete_2 = factories.ContratoFactory(
+            folio=2, contraparte=cliente_delete
+        )
+        contrato_delete_3 = factories.ContratoFactory(
+            folio=3, contraparte=cliente_delete
+        )
         self.user.currently_at = company_delete
         request = RequestFactory().post(
-            reverse('proyectos:eliminar', kwargs={'model': 'Contrato', 'pk': contrato_delete.pk}),
-            data={'value': 'confirm'}
+            reverse(
+                "proyectos:eliminar",
+                kwargs={"model": "Contrato", "pk": contrato_delete.pk},
+            ),
+            data={"value": "confirm"},
         )
         request.user = self.user
         view = self.get_instance(
             views.DynamicDelete,
             request=request,
-            model='Contrato',
-            pk=contrato_delete.pk
+            model="Contrato",
+            pk=contrato_delete.pk,
         )
         view.object = contrato_delete
         view.model = contrato_delete._meta.model
         mock_query.return_value = (
-            {'contraparte__company': self.user.currently_at, 'folio__gt': view.object.folio}, 'folio'
+            {
+                "contraparte__company": self.user.currently_at,
+                "folio__gt": view.object.folio,
+            },
+            "folio",
         )
         view.folio_handling()
         contrato_delete_2.refresh_from_db()
@@ -1587,55 +1728,52 @@ class DynamicDeleteTest(BaseViewTest):
         self.assertEqual(contrato_delete_2.folio, 1)
         self.assertEqual(contrato_delete_3.folio, 2)
 
-    @mock.patch.object(views.DynamicDelete, 'get_object')
+    @mock.patch.object(views.DynamicDelete, "get_object")
     def test_get_company_query_with_estimate(self, mock_object):
         estimate = factories.EstimateFactory(
-            draft_by=self.user,  # se ocupa porque si no truena
-            supervised_by=self.user
+            draft_by=self.user, supervised_by=self.user  # se ocupa porque si no truena
         )
         mock_object.return_value = estimate
         request = RequestFactory().post(
-            reverse('proyectos:eliminar', kwargs={'model': 'Estimate', 'pk': estimate.pk}),
-            data={'value': 'confirm'}
+            reverse(
+                "proyectos:eliminar", kwargs={"model": "Estimate", "pk": estimate.pk}
+            ),
+            data={"value": "confirm"},
         )
         self.user.currently_at = estimate.project.contraparte.company
         request.user = self.user
         view = self.get_instance(
-            views.DynamicDelete,
-            request=request,
-            model='Estimate',
-            pk=estimate.pk
+            views.DynamicDelete, request=request, model="Estimate", pk=estimate.pk
         )
         view.object = view.get_object()
         control_dict = {
-            'project__contraparte__company': self.request.user.currently_at,
-            'consecutive__gt': estimate.consecutive
+            "project__contraparte__company": self.request.user.currently_at,
+            "consecutive__gt": estimate.consecutive,
         }
-        kwargs, field = view.get_company_query('Estimate')
+        kwargs, field = view.get_company_query("Estimate")
         self.assertDictEqual(kwargs, control_dict)
 
-    @mock.patch.object(views.DynamicDelete, 'get_object')
+    @mock.patch.object(views.DynamicDelete, "get_object")
     def test_get_company_query_with_contrato(self, mock_object):
         contrato = factories.ContratoFactory()
         mock_object.return_value = contrato
         request = RequestFactory().post(
-            reverse('proyectos:eliminar', kwargs={'model': 'Estimate', 'pk': contrato.pk}),
-            data={'value': 'confirm'}
+            reverse(
+                "proyectos:eliminar", kwargs={"model": "Estimate", "pk": contrato.pk}
+            ),
+            data={"value": "confirm"},
         )
         self.user.currently_at = contrato.contraparte.company
         request.user = self.user
         view = self.get_instance(
-            views.DynamicDelete,
-            request=request,
-            model='Estimate',
-            pk=contrato.pk
+            views.DynamicDelete, request=request, model="Estimate", pk=contrato.pk
         )
         view.object = view.get_object()
         control_dict = {
-            'contraparte__company': self.request.user.currently_at,
-            'folio__gt': contrato.folio
+            "contraparte__company": self.request.user.currently_at,
+            "folio__gt": contrato.folio,
         }
-        kwargs, field = view.get_company_query('Contrato')
+        kwargs, field = view.get_company_query("Contrato")
         self.assertDictEqual(kwargs, control_dict)
 
 
@@ -1643,8 +1781,12 @@ class ClienteAutocompleteTest(BaseViewTest):
     def test_autocomplete_returns_the_correct_cliente_object(self):
         company_autocomplete = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = company_autocomplete
-        cliente = factories.ClienteFactory(cliente_name="ÁáRón", company=company_autocomplete)
-        cliente_2 = factories.ClienteFactory(cliente_name="äAROn", company=company_autocomplete)
+        cliente = factories.ClienteFactory(
+            cliente_name="ÁáRón", company=company_autocomplete
+        )
+        cliente_2 = factories.ClienteFactory(
+            cliente_name="äAROn", company=company_autocomplete
+        )
         view = self.get_instance(
             views.ClienteAutocomplete,
             request=self.request,
@@ -1668,8 +1810,12 @@ class ClienteAutocompleteTest(BaseViewTest):
         self.assertIsNone(qs)
 
     def test_autocomplete_returns_the_correct_company_object(self):
-        company1 = factories.CompanyFactory(company_name="CömPaNy", customer=self.user.customer)
-        company2 = factories.CompanyFactory(company_name="CóMPaNy", customer=self.user.customer)
+        company1 = factories.CompanyFactory(
+            company_name="CömPaNy", customer=self.user.customer
+        )
+        company2 = factories.CompanyFactory(
+            company_name="CóMPaNy", customer=self.user.customer
+        )
         self.user.company.add(company1)
         self.user.company.add(company2)
         self.user.currently_at = company1
@@ -1683,8 +1829,12 @@ class ClienteAutocompleteTest(BaseViewTest):
         self.assertQuerySetEqual(qs, qs_test, ordered=False, transform=repr)
 
     def test_if_company_autocomplete_returns_none(self):
-        company1 = factories.CompanyFactory(company_name="CömPaNy", customer=self.user.customer)
-        company2 = factories.CompanyFactory(company_name="CóMPaNy", customer=self.user.customer)
+        company1 = factories.CompanyFactory(
+            company_name="CömPaNy", customer=self.user.customer
+        )
+        company2 = factories.CompanyFactory(
+            company_name="CóMPaNy", customer=self.user.customer
+        )
         self.user.currently_at = company1
         view = self.get_instance(
             views.CompanyAutocomplete,
@@ -1696,14 +1846,16 @@ class ClienteAutocompleteTest(BaseViewTest):
 
     def test_cliente_get_key_words_returns_correct_dict(self):
         instance = views.ClienteAutocomplete()
-        instance.q = 'hola'
-        instance.create_field = 'cliente_name'
-        self.request.user.currently_at = factories.CompanyFactory(customer=self.user.customer)
+        instance.q = "hola"
+        instance.create_field = "cliente_name"
+        self.request.user.currently_at = factories.CompanyFactory(
+            customer=self.user.customer
+        )
         instance.request = self.request
         dict_control = {
-            'cliente_name__unaccent__icontains': 'hola',
-            'company': self.request.user.currently_at,
-            'tipo': 'CLIENTE'
+            "cliente_name__unaccent__icontains": "hola",
+            "company": self.request.user.currently_at,
+            "tipo": "CLIENTE",
         }
         self.assertDictEqual(instance.get_key_words(), dict_control)
 
@@ -1712,29 +1864,26 @@ class ClienteAutocompleteTest(BaseViewTest):
         company = factories.CompanyFactory(customer=self.user.customer)
         self.request.user.currently_at = company
         instance.request = self.request
-        instance.q = 'hola'
-        dict_control = {
-            'company': self.request.user.currently_at,
-            'tipo': 'CLIENTE'
-        }
+        instance.q = "hola"
+        dict_control = {"company": self.request.user.currently_at, "tipo": "CLIENTE"}
         self.assertDictEqual(instance.get_post_key_words(), dict_control)
 
     def test_autocomplete_create_object_saves_db(self):
         company_autocomplete = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = company_autocomplete
         request = RequestFactory().post(
-            reverse('proyectos:cliente-autocomplete', kwargs={}),
-            data={'text': 'nombre de cliente'}
+            reverse("proyectos:cliente-autocomplete", kwargs={}),
+            data={"text": "nombre de cliente"},
         )
         request.user = self.user
         view = self.get_instance(
             views.ClienteAutocomplete,
             request=request,
         )
-        view.q = request.GET.get('q', '')
-        view.create_field = 'cliente_name'
-        obj = view.create_object(request.POST.get('text'))
-        self.assertEqual(obj.cliente_name, 'nombre de cliente')
+        view.q = request.GET.get("q", "")
+        view.create_field = "cliente_name"
+        obj = view.create_object(request.POST.get("text"))
+        self.assertEqual(obj.cliente_name, "nombre de cliente")
         self.assertTrue(isinstance(obj.pk, int))
 
 
@@ -1743,8 +1892,12 @@ class SitioAutocompleteTest(BaseViewTest):
         company_autocomplete = factories.CompanyFactory(customer=self.user.customer)
         cliente_autocomplete = factories.ClienteFactory(company=company_autocomplete)
         self.user.currently_at = company_autocomplete
-        sitio = factories.SitioFactory(sitio_name="PÁbellón de Arteaga", cliente=cliente_autocomplete)
-        sitio_2 = factories.SitioFactory(sitio_name="Pabéllón del Sol", cliente=cliente_autocomplete)
+        sitio = factories.SitioFactory(
+            sitio_name="PÁbellón de Arteaga", cliente=cliente_autocomplete
+        )
+        sitio_2 = factories.SitioFactory(
+            sitio_name="Pabéllón del Sol", cliente=cliente_autocomplete
+        )
         view = self.get_instance(
             views.SitioAutocomplete,
             request=self.request,
@@ -1758,8 +1911,12 @@ class SitioAutocompleteTest(BaseViewTest):
         company_autocomplete = factories.CompanyFactory(customer=self.user.customer)
         cliente_autocomplete = factories.ClienteFactory(company=company_autocomplete)
         self.user.currently_at = company_autocomplete
-        factories.SitioFactory(sitio_name="PÁbellón de Arteaga", cliente=cliente_autocomplete)
-        factories.SitioFactory(sitio_name="Pabéllón del Sol", cliente=cliente_autocomplete)
+        factories.SitioFactory(
+            sitio_name="PÁbellón de Arteaga", cliente=cliente_autocomplete
+        )
+        factories.SitioFactory(
+            sitio_name="Pabéllón del Sol", cliente=cliente_autocomplete
+        )
         view = self.get_instance(
             views.SitioAutocomplete,
             request=self.request,
@@ -1773,9 +1930,9 @@ class SitioAutocompleteTest(BaseViewTest):
         cliente = factories.ClienteFactory(company__customer=self.user.customer)
         self.user.currently_at = cliente.company
         instance.request = self.request
-        instance.q = 'bla bla'
-        instance.forwarded = {'contraparte': str(cliente.id)}
-        dict_control = {'cliente': cliente}
+        instance.q = "bla bla"
+        instance.forwarded = {"contraparte": str(cliente.id)}
+        dict_control = {"cliente": cliente}
         self.assertDictEqual(instance.get_post_key_words(), dict_control)
 
     def test_integration_for_post_in_sitio(self):
@@ -1783,19 +1940,19 @@ class SitioAutocompleteTest(BaseViewTest):
         cliente_autocomplete = factories.ClienteFactory(company=company_autocomplete)
         self.user.currently_at = company_autocomplete
         request = RequestFactory().post(
-            reverse('proyectos:sitio-autocomplete', kwargs={}),
-            data={'text': 'nombre del sitio'}
+            reverse("proyectos:sitio-autocomplete", kwargs={}),
+            data={"text": "nombre del sitio"},
         )
         request.user = self.user
         view = self.get_instance(
             views.SitioAutocomplete,
             request=request,
         )
-        view.forwarded = {'contraparte': str(cliente_autocomplete.id)}
-        view.q = request.GET.get('q', '')
-        view.create_field = 'sitio_name'
-        obj = view.create_object(request.POST.get('text'))
-        self.assertEqual(obj.sitio_name, 'nombre del sitio')
+        view.forwarded = {"contraparte": str(cliente_autocomplete.id)}
+        view.q = request.GET.get("q", "")
+        view.create_field = "sitio_name"
+        obj = view.create_object(request.POST.get("text"))
+        self.assertEqual(obj.sitio_name, "nombre del sitio")
         self.assertTrue(isinstance(obj.pk, int))
 
 
@@ -1803,26 +1960,34 @@ class DestinatarioAutocompleteTest(BaseViewTest):
 
     def test_destinatario_autocomplete_returns_correct_dict(self):
         instance = views.DestinatarioAutocomplete()
-        instance.q = 'hola'
-        instance.create_field = 'destinatario_text'
-        self.request.user.currently_at = factories.CompanyFactory(customer=self.user.customer)
+        instance.q = "hola"
+        instance.create_field = "destinatario_text"
+        self.request.user.currently_at = factories.CompanyFactory(
+            customer=self.user.customer
+        )
         instance.request = self.request
-        contrato = factories.ContratoFactory(contraparte__company=self.request.user.currently_at)
-        instance.forwarded = {'project': contrato.id}
+        contrato = factories.ContratoFactory(
+            contraparte__company=self.request.user.currently_at
+        )
+        instance.forwarded = {"project": contrato.id}
         dict_control = {
-            'destinatario_text__unaccent__icontains': 'hola',
-            'contraparte': contrato.contraparte
+            "destinatario_text__unaccent__icontains": "hola",
+            "contraparte": contrato.contraparte,
         }
         self.assertDictEqual(instance.get_key_words(), dict_control)
 
     def test_destinatario_get_post_keywords_correct_dict(self):
         instance = views.DestinatarioAutocomplete()
-        instance.create_field = 'destinatario_text'
-        self.request.user.currently_at = factories.CompanyFactory(customer=self.user.customer)
+        instance.create_field = "destinatario_text"
+        self.request.user.currently_at = factories.CompanyFactory(
+            customer=self.user.customer
+        )
         instance.request = self.request
-        contrato = factories.ContratoFactory(contraparte__company=self.request.user.currently_at)
-        instance.forwarded = {'project': contrato.id}
-        dict_control = {'contraparte': contrato.contraparte}
+        contrato = factories.ContratoFactory(
+            contraparte__company=self.request.user.currently_at
+        )
+        instance.forwarded = {"project": contrato.id}
+        dict_control = {"contraparte": contrato.contraparte}
         self.assertDictEqual(instance.get_post_key_words(), dict_control)
 
     def test_integration_for_post_in_destinatario(self):
@@ -1830,19 +1995,19 @@ class DestinatarioAutocompleteTest(BaseViewTest):
         self.user.currently_at = company_autocomplete
         contrato = factories.ContratoFactory(contraparte__company=company_autocomplete)
         request = RequestFactory().post(
-            reverse('proyectos:destinatario-autocomplete', kwargs={}),
-            data={'text': 'nombre del destinatario'}
+            reverse("proyectos:destinatario-autocomplete", kwargs={}),
+            data={"text": "nombre del destinatario"},
         )
         request.user = self.user
         view = self.get_instance(
             views.DestinatarioAutocomplete,
             request=request,
         )
-        view.forwarded = {'project': contrato.id}
-        view.q = request.GET.get('q', '')
-        view.create_field = 'destinatario_text'
-        obj = view.create_object(request.POST.get('text'))
-        self.assertEqual(obj.destinatario_text, 'nombre del destinatario')
+        view.forwarded = {"project": contrato.id}
+        view.q = request.GET.get("q", "")
+        view.create_field = "destinatario_text"
+        obj = view.create_object(request.POST.get("text"))
+        self.assertEqual(obj.destinatario_text, "nombre del destinatario")
         self.assertTrue(isinstance(obj.pk, int))
 
 
@@ -1870,7 +2035,7 @@ class UnitAutocompleteTest(BaseViewTest):
             request=self.request,
         )
         view.q = "some search"
-        dicc = {'unit__unaccent__icontains': view.q, 'company': company_autocomplete}
+        dicc = {"unit__unaccent__icontains": view.q, "company": company_autocomplete}
         dicc_test = view.get_key_words()
         self.assertDictEqual(dicc, dicc_test)
 
@@ -1882,8 +2047,8 @@ class UnitAutocompleteTest(BaseViewTest):
             request=self.request,
         )
         view.q = "some search"
-        view.create_field = 'unit'
-        dicc = {'unit__unaccent__icontains': view.q, 'company': company_autocomplete}
+        view.create_field = "unit"
+        dicc = {"unit__unaccent__icontains": view.q, "company": company_autocomplete}
         dicc_test = view.get_key_words()
         self.assertDictEqual(dicc, dicc_test)
 
@@ -1891,18 +2056,17 @@ class UnitAutocompleteTest(BaseViewTest):
         company_autocomplete = factories.CompanyFactory(customer=self.user.customer)
         self.user.currently_at = company_autocomplete
         request = RequestFactory().post(
-            reverse('proyectos:unit-autocomplete', kwargs={}),
-            data={'text': 'Kg'}
+            reverse("proyectos:unit-autocomplete", kwargs={}), data={"text": "Kg"}
         )
         request.user = self.user
         view = self.get_instance(
             views.UnitAutocomplete,
             request=request,
         )
-        view.q = request.GET.get('q', '')
-        view.create_field = 'unit'
-        obj = view.create_object(request.POST.get('text'))
-        self.assertEqual(obj.unit, 'Kg')
+        view.q = request.GET.get("q", "")
+        view.create_field = "unit"
+        obj = view.create_object(request.POST.get("text"))
+        self.assertEqual(obj.unit, "Kg")
         self.assertTrue(isinstance(obj.pk, int))
 
 
@@ -1910,7 +2074,7 @@ class UserAutocompleteTest(BaseViewTest):
 
     def test_user_username_autocomplete_get_queryset(self):
         instance = views.UserAutocomplete()
-        instance.q = 'user-'
+        instance.q = "user-"
         company_test = factories.CompanyFactory(customer=self.request.user.customer)
         self.request.user.company.add(company_test)
         self.request.user.currently_at = company_test
@@ -1921,7 +2085,7 @@ class UserAutocompleteTest(BaseViewTest):
 
     def test_user_email_autocomplete_get_queryset(self):
         instance = views.UserAutocomplete()
-        instance.q = '@example'
+        instance.q = "@example"
         company_test = factories.CompanyFactory(customer=self.request.user.customer)
         self.request.user.company.add(company_test)
         self.request.user.currently_at = company_test

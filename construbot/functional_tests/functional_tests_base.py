@@ -1,23 +1,24 @@
-import os
 import time
-from random import random
 from datetime import datetime, timedelta
+from random import random
+
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.test import override_settings
-from django.contrib.auth.models import Permission
+
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.keys import Keys
-from construbot.users.tests import factories as user_factories
-from construbot.proyectos.tests import factories
-from construbot.proyectos.models import Company, Sitio, Destinatario, Contrato
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
+
+from construbot.proyectos.models import Contrato
+from construbot.proyectos.tests import factories
+from construbot.users.tests import factories as user_factories
 
 MAX_WAIT = 10
 
 
-@override_settings(ACCOUNT_EMAIL_VERIFICATION='none')
+@override_settings(ACCOUNT_EMAIL_VERIFICATION="none")
 class FunctionalTest(StaticLiveServerTestCase):
     def setUp(self):
         self.browser = webdriver.Firefox()
@@ -25,9 +26,9 @@ class FunctionalTest(StaticLiveServerTestCase):
         self.user_factory = user_factories.UserFactory
         self.user = self.user_factory()
         company_test = user_factories.CompanyFactory(customer=self.user.customer)
-        admin = user_factories.GroupFactory(name='Administrators')
-        users = user_factories.GroupFactory(name='users')
-        proyects = user_factories.GroupFactory(name='proyectos')
+        admin = user_factories.GroupFactory(name="Administrators")
+        users = user_factories.GroupFactory(name="users")
+        proyects = user_factories.GroupFactory(name="proyectos")
         for group in admin, users, proyects:
             self.user.groups.add(group)
         self.user.company.add(company_test)
@@ -37,32 +38,43 @@ class FunctionalTest(StaticLiveServerTestCase):
         self.user2.currently_at = company_test
 
     def user_login(self, username, password):
-        url = self.live_server_url + '/accounts/login/'
+        url = self.live_server_url + "/accounts/login/"
         self.browser.get(url)
-        username_field = self.browser.find_element_by_name('login')
-        password_field = self.browser.find_element_by_name('password')
+        username_field = self.browser.find_element_by_name("login")
+        password_field = self.browser.find_element_by_name("password")
         username_field.send_keys(username)
         password_field.send_keys(password)
         password_field.send_keys(Keys.ENTER)
 
-    def create_proyect_objects(self, n_clientsitios, n_destinatarios, n_contratos, n_companies):
+    def create_proyect_objects(
+        self, n_clientsitios, n_destinatarios, n_contratos, n_companies
+    ):
         clientes = []
         sitios = []
         for i in range(0, n_clientsitios):
-            clientes.append(factories.ClienteFactory(
-                company=self.user.currently_at, cliente_name='cliente_{0}'.format(i))
+            clientes.append(
+                factories.ClienteFactory(
+                    company=self.user.currently_at, cliente_name="cliente_{0}".format(i)
+                )
             )
-            sitios.append(factories.SitioFactory(
-                cliente=clientes[round(random() * len(clientes)-1)], sitio_name='sitio_{0}'.format(i)))
+            sitios.append(
+                factories.SitioFactory(
+                    cliente=clientes[round(random() * len(clientes) - 1)],
+                    sitio_name="sitio_{0}".format(i),
+                )
+            )
 
         destinatarios = []
         for i in range(0, n_destinatarios):
-            destinatarios.append(factories.DestinatarioFactory(
-                cliente=clientes[round(random() * n_clientsitios-1)], destinatario_text='destinatario_{0}'.format(i))
+            destinatarios.append(
+                factories.DestinatarioFactory(
+                    cliente=clientes[round(random() * n_clientsitios - 1)],
+                    destinatario_text="destinatario_{0}".format(i),
+                )
             )
 
         if n_companies:
-            company=[]
+            company = []
             for i in range(0, n_companies):
                 company = user_factories.CompanyFactory(customer=self.user.customer)
                 self.user.company.add(company)
@@ -71,26 +83,28 @@ class FunctionalTest(StaticLiveServerTestCase):
         if n_contratos:
             date = datetime.now()
             comp = clientes[0].company
-            contratos=[]
+            contratos = []
             for i in range(0, n_contratos):
                 date += timedelta(days=1)
                 max_id = len(Contrato.objects.filter(cliente__company=comp))
-                contratos.append(factories.ContratoFactory(
-                    folio=max_id + 1,
-                    code="CON{0}".format(i),
-                    fecha=date,
-                    contrato_name='Contrato numero {0}'.format(i),
-                    contrato_shortName="ConNum{0}".format(i),
-                    cliente=clientes[0],
-                    sitio=sitios[0],
-                ))
+                contratos.append(
+                    factories.ContratoFactory(
+                        folio=max_id + 1,
+                        code="CON{0}".format(i),
+                        fecha=date,
+                        contrato_name="Contrato numero {0}".format(i),
+                        contrato_shortName="ConNum{0}".format(i),
+                        cliente=clientes[0],
+                        sitio=sitios[0],
+                    )
+                )
             return contratos
 
     def fast_multiselect(self, element_id, labels):
-            select = Select(self.browser.find_element_by_id(element_id))
-            select.deselect_all()
-            for label in labels:
-                select.select_by_visible_text(label)
+        select = Select(self.browser.find_element_by_id(element_id))
+        select.deselect_all()
+        for label in labels:
+            select.select_by_visible_text(label)
 
     def tearDown(self):
         self.browser.quit()

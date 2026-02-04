@@ -1,5 +1,6 @@
-from django.db.utils import IntegrityError
 from django.conf import settings
+from django.db.utils import IntegrityError
+
 from .models import NivelAcceso
 
 

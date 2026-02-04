@@ -1,16 +1,24 @@
-import string
+import datetime as dt
 from decimal import Decimal
+from typing import TYPE_CHECKING, ClassVar, Literal, cast
+
 from django.conf import settings
-from django.db import models
-from django.urls import reverse
 from django.core.exceptions import ValidationError
 from django.core.validators import FileExtensionValidator
-from django.db import connection
-from django.db.models import Sum, F, Value as V
+from django.db import connection, models
+from django.db.models import F, Sum
+from django.db.models import Value as V
 from django.db.models.functions import Coalesce
-from treebeard.mp_tree import MP_Node, get_result_class
+from django.urls import reverse
+from treebeard.mp_tree import MP_Node
+
 from construbot.core import utils
 from construbot.users.models import Company
+
+if TYPE_CHECKING:
+    from django.db.models.query import ValuesQuerySet
+
+    from construbot.users.models import User
 
 
 # Create your models here.
@@ -18,22 +26,31 @@ class Contraparte(models.Model):
     """El modelo que representa la relación entre una
     empresa (Company) perteneciente al comprador (Customer)
     y su contraparte en relaciones comerciales (modelo actual)"""
-    TIPOS = (
-        ('CLIENTE', 'Cliente'), ('DESTAJISTA', 'Destajista'), ('SUBCONTRATISTA', 'Subcontratista')
+
+    TIPOS: ClassVar[tuple[tuple[str, str], ...]] = (
+        ("CLIENTE", "Cliente"),
+        ("DESTAJISTA", "Destajista"),
+        ("SUBCONTRATISTA", "Subcontratista"),
     )
-    cliente_name = models.CharField(max_length=80, unique=True)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
-    tipo = models.CharField(max_length=14, choices=TIPOS, default='CLIENTE')
+    cliente_name: "models.CharField[str]" = models.CharField(max_length=80, unique=True)
+    company: "models.ForeignKey[Company]" = models.ForeignKey(
+        Company, on_delete=models.CASCADE
+    )
+    tipo: "models.CharField[str]" = models.CharField(
+        max_length=14, choices=TIPOS, default="CLIENTE"
+    )
+
+    contrato_set: ClassVar[models.QuerySet["Contrato"]]
 
     @property
-    def tipo_display(self):
+    def tipo_display(self) -> str:
         return dict(self.TIPOS)[self.tipo]
 
-    def get_absolute_url(self):
-        return reverse('proyectos:cliente_detail', kwargs={'pk': self.id})
+    def get_absolute_url(self) -> str:
+        return reverse("proyectos:cliente_detail", kwargs={"pk": self.pk})
 
-    def get_contratos_ordenados(self):
-        return self.contrato_set.all().order_by('-fecha')
+    def get_contratos_ordenados(self) -> models.QuerySet:
+        return self.contrato_set.all().order_by("-fecha")
 
     class Meta:
         verbose_name = "Contraparte"
@@ -44,38 +61,50 @@ class Contraparte(models.Model):
 
 
 class Units(models.Model):
-    unit = models.CharField(max_length=50)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    unit: "models.CharField[str]" = models.CharField(max_length=50)
+    company: "models.ForeignKey[Company]" = models.ForeignKey(
+        Company, on_delete=models.CASCADE
+    )
 
     class Meta:
-        unique_together = ('unit', 'company')
-        verbose_name = 'Unidad'
-        verbose_name_plural = 'Unidades'
+        unique_together = ("unit", "company")
+        verbose_name = "Unidad"
+        verbose_name_plural = "Unidades"
 
     def __str__(self):
         return self.unit
 
 
 class Sitio(models.Model):
-    sitio_name = models.CharField(max_length=80)
-    sitio_location = models.CharField(max_length=80, null=True, blank=True)
-    cliente = models.ForeignKey(Contraparte, on_delete=models.CASCADE)
+    sitio_name: "models.CharField[str]" = models.CharField(max_length=80)
+    sitio_location: "models.CharField[str | None]" = models.CharField(
+        max_length=80, null=True, blank=True
+    )
+    cliente: "models.ForeignKey[Contraparte]" = models.ForeignKey(
+        "Contraparte", on_delete=models.CASCADE
+    )
+
+    contrato_set: ClassVar[models.QuerySet["Contrato"]]
 
     def clean(self):
-        if self.cliente.tipo != 'CLIENTE':
+        if self.cliente.tipo != "CLIENTE":
             raise ValidationError(
-                {'cliente': 'La contraparte debe de ser CLIENTE y no {}'.format(self.cliente.tipo)}
+                {
+                    "cliente": "La contraparte debe de ser CLIENTE y no {}".format(
+                        self.cliente.tipo
+                    )
+                }
             )
 
     @property
-    def company(self):
+    def company(self) -> "Company":
         return self.cliente.company
 
-    def get_absolute_url(self):
-        return reverse('proyectos:sitio_detail', kwargs={'pk': self.id})
+    def get_absolute_url(self) -> str:
+        return reverse("proyectos:sitio_detail", kwargs={"pk": self.pk})
 
-    def get_contratos_ordenados(self):
-        return self.contrato_set.all().order_by('-fecha')
+    def get_contratos_ordenados(self) -> models.QuerySet:
+        return self.contrato_set.all().order_by("-fecha")
 
     class Meta:
         verbose_name = "Sitio"
@@ -86,17 +115,21 @@ class Sitio(models.Model):
 
 
 class Destinatario(models.Model):
-    destinatario_text = models.CharField(max_length=80)
-    puesto = models.CharField(max_length=50, null=True, blank=True)
+    destinatario_text: "models.CharField[str]" = models.CharField(max_length=80)
+    puesto: "models.CharField[str | None]" = models.CharField(
+        max_length=50, null=True, blank=True
+    )
     # TODO: cambiar este campo a contra parte.
-    contraparte = models.ForeignKey(Contraparte, on_delete=models.CASCADE)
+    contraparte: "models.ForeignKey[Contraparte]" = models.ForeignKey(
+        "Contraparte", on_delete=models.CASCADE
+    )
 
     @property
-    def company(self):
+    def company(self) -> "Company":
         return self.contraparte.company
 
-    def get_absolute_url(self):
-        return reverse('proyectos:destinatario_detail', kwargs={'pk': self.id})
+    def get_absolute_url(self) -> str:
+        return reverse("proyectos:destinatario_detail", kwargs={"pk": self.pk})
 
     class Meta:
         verbose_name = "Destinatario"
@@ -106,72 +139,99 @@ class Destinatario(models.Model):
         return self.destinatario_text
 
 
-class ContratoSet(models.QuerySet):
+class ContratoSet(models.Manager):
 
-    def asignaciones(self, user, model):
+    def asignaciones(self, user: "User", model: models.Model):
         # asumimos que el atributo en el modelo Contrato
         # se llama igual que el modelo pasado como parametro.
-        kw = {model.__name__.lower(): models.OuterRef('pk'), 'users': user}
+        kw = {model.__name__.lower(): models.OuterRef("pk"), "users": user}
         contratos = self.filter(**kw)
-        return model.objects.annotate(asignado=models.Exists(contratos)).filter(asignado=True)
+        return model.objects.annotate(asignado=models.Exists(contratos)).filter(
+            asignado=True
+        )
 
 
 class Contrato(MP_Node):
-    steplen = 9
-    folio = models.IntegerField()
-    code = models.CharField(max_length=35, null=True, blank=True)
-    fecha = models.DateField()
-    contrato_name = models.CharField(max_length=300)
-    contrato_shortName = models.CharField(max_length=80)
-    contraparte = models.ForeignKey(Contraparte, on_delete=models.CASCADE)
-    sitio = models.ForeignKey(Sitio, on_delete=models.CASCADE)
-    status = models.BooleanField(default=True)
-    file = models.FileField(
-        upload_to=utils.get_directory_path, blank=True, null=True,
-        validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
-    monto = models.DecimalField('monto', max_digits=12, decimal_places=2, default=0.0)
-    users = models.ManyToManyField(settings.AUTH_USER_MODEL)
-    anticipo = models.DecimalField('anticipo', max_digits=4, decimal_places=2, default=0.0)
+    steplen: ClassVar[int] = 9
+    folio: "models.IntegerField[int]" = models.IntegerField()
+    code: "models.CharField[str | None]" = models.CharField(
+        max_length=35, null=True, blank=True
+    )
+    fecha: "models.DateField[dt.date]" = models.DateField()
+    contrato_name: "models.CharField[str]" = models.CharField(max_length=300)
+    contrato_shortName: "models.CharField[str]" = models.CharField(max_length=80)
+    contraparte: "models.ForeignKey[Contraparte]" = models.ForeignKey(
+        "Contraparte", on_delete=models.CASCADE
+    )
+    sitio: "models.ForeignKey[Sitio]" = models.ForeignKey(
+        "Sitio", on_delete=models.CASCADE
+    )
+    status: "models.BooleanField[bool]" = models.BooleanField(default=True)
+    file: "models.FileField" = models.FileField(
+        upload_to=utils.get_directory_path,
+        blank=True,
+        null=True,
+        validators=[FileExtensionValidator(allowed_extensions=["pdf"])],
+    )
+    monto: "models.DecimalField[Decimal]" = models.DecimalField(
+        "monto", max_digits=12, decimal_places=2, default=Decimal("0.00")
+    )
+    users: "models.ManyToManyField" = models.ManyToManyField(settings.AUTH_USER_MODEL)
+    anticipo: "models.DecimalField[Decimal]" = models.DecimalField(
+        "anticipo", max_digits=4, decimal_places=2, default=Decimal("0.00")
+    )
 
-    objects = models.Manager()
-    especial = ContratoSet.as_manager()
+    objects: ClassVar[models.Manager] = models.Manager()
+    especial: ClassVar[ContratoSet] = ContratoSet()
+
+    concept_set: ClassVar[models.QuerySet["Concept"]]
+    estimate_set: ClassVar[models.QuerySet["Estimate"]]
+    retenciones_set: ClassVar[models.QuerySet["Retenciones"]]
 
     @classmethod
-    def get_last_root_node(cls):
+    def get_last_root_node(cls) -> "Contrato | None":
         """
         :returns:
 
             The last root node in the tree or ``None`` if it is empty.
         """
         try:
-            return cls.get_root_nodes().order_by('-pk')[0]
+            contrato = cast(Contrato, cls.get_root_nodes().order_by("-pk")[0])
+            return contrato
         except IndexError:
             return None
 
     @property
-    def company(self):
+    def company(self) -> "Company":
         return self.contraparte.company
 
-    def conceptosordenados(self):
+    def conceptosordenados(self) -> models.QuerySet["Concept"]:
         # Asumimos que si el formset inserta en orden correcto....
-        return self.concept_set.all().select_related('unit').order_by('pk')
+        return self.concept_set.all().select_related("unit").order_by("pk")
 
-    def get_absolute_url(self):
-        return reverse('construbot.proyectos:contrato_detail', kwargs={'pk': self.id})
+    def get_absolute_url(self) -> str:
+        return reverse("construbot.proyectos:contrato_detail", kwargs={"pk": self.pk})
 
-    def get_estimaciones(self):
-        return self.estimate_set.all().order_by('consecutive')
+    def get_estimaciones(self) -> models.QuerySet["Estimate"]:
+        return self.estimate_set.all().order_by("consecutive")
 
     def get_top_10_children(self):
         query = self.get_children()
-        return query.order_by('-monto')[:10]
+        return query.order_by("-monto")[:10]
 
-    def ejercido_acumulado(self):
+    def ejercido_acumulado(self) -> Decimal:
         conceptos = self.concept_set.all()
         return conceptos.aggregate(
-            total=Coalesce(utils.Round(
-                Sum(models.F('estimateconcept__cuantity_estimated') * models.F('unit_price'))), V(Decimal('0.00')))
-        )['total']
+            total=Coalesce(
+                utils.Round(
+                    Sum(
+                        models.F("estimateconcept__cuantity_estimated")
+                        * models.F("unit_price")
+                    )
+                ),
+                V(Decimal("0.00")),
+            )
+        )["total"]
 
     class Meta:
         verbose_name = "Contrato"
@@ -182,20 +242,24 @@ class Contrato(MP_Node):
 
 
 class Retenciones(models.Model):
-    TYPES = (
-        ('AMOUNT', 'Monto'),
-        ('PERCENTAGE', 'Porcentaje'),
+    TYPES: ClassVar[tuple[tuple[str, str], ...]] = (
+        ("AMOUNT", "Monto"),
+        ("PERCENTAGE", "Porcentaje"),
     )
-    nombre = models.CharField(max_length=80)
-    valor = models.DecimalField('valor', max_digits=12, decimal_places=2, default=0.0)
-    tipo = models.CharField(
-        max_length=21, choices=TYPES, default='PERCENTAGE'
+    nombre: "models.CharField[str]" = models.CharField(max_length=80)
+    valor: "models.DecimalField[Decimal]" = models.DecimalField(
+        "valor", max_digits=12, decimal_places=2, default=Decimal("0.0")
     )
-    project = models.ForeignKey(Contrato, on_delete=models.CASCADE)
+    tipo: "models.CharField[str]" = models.CharField(
+        max_length=21, choices=TYPES, default="PERCENTAGE"
+    )
+    project: "models.ForeignKey[Contrato]" = models.ForeignKey(
+        "Contrato", on_delete=models.CASCADE
+    )
 
     class Meta:
-        verbose_name = 'Retención'
-        verbose_name_plural = 'Retenciones'
+        verbose_name = "Retención"
+        verbose_name_plural = "Retenciones"
 
     def __str__(self):
         return self.nombre
@@ -203,7 +267,9 @@ class Retenciones(models.Model):
 
 class EstimateSet(models.QuerySet):
 
-    def reporte_subestimaciones(self, start_date, finish_date, depth, path):
+    def reporte_subestimaciones(
+        self, start_date: dt.datetime, finish_date: dt.datetime, depth: int, path: str
+    ):
         sql = """
             SELECT  U1."id", U1."consecutive", U3."contrato_shortName",
                 COALESCE(ROUND(SUM(U0."cuantity_estimated" * U2."unit_price"), 2), 0) AS "estimado", (
@@ -243,13 +309,18 @@ class EstimateSet(models.QuerySet):
             GROUP BY U1."id", U3."id"
         """
         return self.raw(
-            sql, params={
-                'start_date': start_date,
-                'finish_date': finish_date, 'path': path, 'depth': depth
-            }
+            sql,
+            params={
+                "start_date": start_date,
+                "finish_date": finish_date,
+                "path": path,
+                "depth": depth,
+            },
         )
 
-    def total_acumulado_subestimaciones(self, start_date, finish_date, depth, path):
+    def total_acumulado_subestimaciones(
+        self, start_date: dt.datetime, finish_date: dt.datetime, depth: int, path: str
+    ) -> tuple[Decimal | None] | None:
         sql = """
            SELECT  SUM("acumulado")
            FROM (SELECT U1."id",
@@ -273,14 +344,21 @@ class EstimateSet(models.QuerySet):
            ) AS "cont"
         """
         with connection.cursor() as cursor:
-            cursor.execute(sql, {
-                'start_date': start_date,
-                'finish_date': finish_date, 'path': path, 'depth': depth
-            })
+            cursor.execute(
+                sql,
+                {
+                    "start_date": start_date,
+                    "finish_date": finish_date,
+                    "path": path,
+                    "depth": depth,
+                },
+            )
             row = cursor.fetchone()
         return row
 
-    def total_contratado_subestimaciones(self, start_date, finish_date, depth, path):
+    def total_contratado_subestimaciones(
+        self, start_date: dt.datetime, finish_date: dt.datetime, depth: int, path: str
+    ) -> tuple[Decimal | None] | None:
         sql = """
            SELECT  SUM("contratado")
            FROM (SELECT U1."id",
@@ -305,14 +383,21 @@ class EstimateSet(models.QuerySet):
            ) AS "cont"
         """
         with connection.cursor() as cursor:
-            cursor.execute(sql, {
-                'start_date': start_date,
-                'finish_date': finish_date, 'path': path, 'depth': depth
-            })
+            cursor.execute(
+                sql,
+                {
+                    "start_date": start_date,
+                    "finish_date": finish_date,
+                    "path": path,
+                    "depth": depth,
+                },
+            )
             row = cursor.fetchone()
         return row
 
-    def total_anterior_subestimaciones(self, start_date, finish_date, depth, path):
+    def total_anterior_subestimaciones(
+        self, start_date: dt.datetime, finish_date: dt.datetime, depth: int, path: str
+    ) -> tuple[Decimal | None] | None:
         sql = """
            SELECT  COALESCE(SUM("anterior"), 0) as anterior
            FROM (SELECT U1."id",
@@ -337,14 +422,21 @@ class EstimateSet(models.QuerySet):
            ) AS "cont"
         """
         with connection.cursor() as cursor:
-            cursor.execute(sql, {
-                'start_date': start_date,
-                'finish_date': finish_date, 'path': path, 'depth': depth
-            })
+            cursor.execute(
+                sql,
+                {
+                    "start_date": start_date,
+                    "finish_date": finish_date,
+                    "path": path,
+                    "depth": depth,
+                },
+            )
             row = cursor.fetchone()
         return row
 
-    def total_actual_subestimaciones(self, start_date, finish_date, depth, path):
+    def total_actual_subestimaciones(
+        self, start_date: dt.datetime, finish_date: dt.datetime, depth: int, path: str
+    ) -> tuple[Decimal | None] | None:
         sql = """
            SELECT  SUM("estimado")
            FROM (SELECT U1."id", COALESCE(ROUND(SUM(U0."cuantity_estimated" * U2."unit_price"), 2), 0) AS "estimado"
@@ -360,78 +452,115 @@ class EstimateSet(models.QuerySet):
            ) AS "cont"
         """
         with connection.cursor() as cursor:
-            cursor.execute(sql, {
-                'start_date': start_date,
-                'finish_date': finish_date, 'path': path, 'depth': depth
-            })
+            cursor.execute(
+                sql,
+                {
+                    "start_date": start_date,
+                    "finish_date": finish_date,
+                    "path": path,
+                    "depth": depth,
+                },
+            )
             row = cursor.fetchone()
         return row
 
 
 class Estimate(models.Model):
-    project = models.ForeignKey(Contrato, on_delete=models.CASCADE)
-    consecutive = models.IntegerField()
-    draft_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='draft_by', on_delete=models.CASCADE)
-    supervised_by = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='supervised_by', on_delete=models.CASCADE)
-    start_date = models.DateField('start_date')
-    finish_date = models.DateField('finish_date')
-    draft_date = models.DateField('draft_date', auto_now=True)
-    auth_by = models.ManyToManyField(Destinatario, blank=True)
-    auth_by_gen = models.ManyToManyField(Destinatario, blank=True, related_name='generator')
-    auth_date = models.DateField(null=True, blank=True)
-    paid = models.BooleanField(default=False)
-    invoiced = models.BooleanField(default=False)
-    payment_date = models.DateField(null=True, blank=True)
-    mostrar_anticipo = models.BooleanField(default=False)
-    mostrar_retenciones = models.BooleanField(default=False)
+    project: "models.ForeignKey['Contrato']" = models.ForeignKey(
+        "Contrato", on_delete=models.CASCADE
+    )
+    consecutive: "models.IntegerField[int]" = models.IntegerField()
+    draft_by: "models.ForeignKey[User]" = models.ForeignKey(
+        settings.AUTH_USER_MODEL, related_name="draft_by", on_delete=models.CASCADE
+    )
+    supervised_by: "models.ForeignKey[User]" = models.ForeignKey(
+        settings.AUTH_USER_MODEL, related_name="supervised_by", on_delete=models.CASCADE
+    )
+    start_date: "models.DateField[dt.date]" = models.DateField("start_date")
+    finish_date: "models.DateField[dt.date]" = models.DateField("finish_date")
+    draft_date: "models.DateField[dt.date]" = models.DateField(
+        "draft_date", auto_now=True
+    )
+    auth_by: "models.ManyToManyField['Destinatario', 'Destinatario']" = (
+        models.ManyToManyField("Destinatario", blank=True)
+    )
+    auth_by_gen: "models.ManyToManyField['Destinatario', 'Destinatario']" = (
+        models.ManyToManyField("Destinatario", blank=True, related_name="generator")
+    )
+    auth_date: "models.DateField[dt.date | None]" = models.DateField(
+        null=True, blank=True
+    )
+    paid: "models.BooleanField[bool]" = models.BooleanField(default=False)
+    invoiced: "models.BooleanField[bool]" = models.BooleanField(default=False)
+    payment_date: "models.DateField[dt.date | None]" = models.DateField(
+        null=True, blank=True
+    )
+    mostrar_anticipo: "models.BooleanField[bool]" = models.BooleanField(default=False)
+    mostrar_retenciones: "models.BooleanField[bool]" = models.BooleanField(
+        default=False
+    )
 
-    objects = models.Manager()
-    especial = EstimateSet.as_manager()
+    objects: "ClassVar[models.Manager]" = models.Manager()
+    especial: "ClassVar[EstimateSet]" = EstimateSet.as_manager()
+
+    estimateconcept_set: "ClassVar[models.QuerySet['EstimateConcept']]"
 
     @property
     def company(self):
         return self.project.contraparte.company
 
     def get_absolute_url(self):
-        return str(reverse('proyectos:contrato_detail', kwargs={'pk': self.project.id}))
+        return str(reverse("proyectos:contrato_detail", kwargs={"pk": self.project.pk}))
 
-    def total_estimate(self):
-        self.total = self.estimateconcept_set.all().aggregate(
-            total=utils.Round(Sum(F('cuantity_estimated') * F('concept__unit_price'))))
-        if not self.total['total']:
-            self.total['total'] = Decimal(0)
+    def total_estimate(self) -> dict[Literal["total"], Decimal]:
+        self.total = cast(
+            dict[Literal["total"], Decimal],
+            self.estimateconcept_set.all().aggregate(
+                total=utils.Round(
+                    Sum(F("cuantity_estimated") * F("concept__unit_price"))
+                )
+            ),
+        )
+        if not self.total["total"]:
+            self.total["total"] = Decimal(0)
         return self.total
 
-    def amortizacion_anticipo(self):
-        self.total_acumulado = self.conceptos.importe_total_acumulado()['total'] or Decimal('0.00')
-        self.total_contratado = self.conceptos.importe_total_contratado()['total'] or Decimal('0.00')
+    def amortizacion_anticipo(self) -> Decimal:
+        self.total_acumulado = self.conceptos.importe_total_acumulado()[
+            "total"
+        ] or Decimal("0.00")
+        self.total_contratado = self.conceptos.importe_total_contratado()[
+            "total"
+        ] or Decimal("0.00")
         diff = self.total_acumulado - self.total_contratado
-        if not hasattr(self, 'total'):
+        if not hasattr(self, "total"):
             self.total = self.total_estimate()
         if diff > 0:
-            self.amortizacion = ((self.total['total'] - diff) * self.project.anticipo) / 100
+            self.amortizacion = (
+                (self.total["total"] - diff) * self.project.anticipo
+            ) / 100
             return self.amortizacion
-        self.amortizacion = self.total['total'] * self.project.anticipo / 100
+        self.amortizacion = self.total["total"] * self.project.anticipo / 100
         return self.amortizacion
 
     def get_subtotal(self):
-        if not hasattr(self, 'total'):
+        if not hasattr(self, "total"):
             self.total = self.total_estimate()
-        if hasattr(self, 'amortizacion'):
-            return self.total['total'] - self.amortizacion
-        self.subtotal = self.total['total'] - self.amortizacion_anticipo()
+        if hasattr(self, "amortizacion"):
+            return self.total["total"] - self.amortizacion
+        self.subtotal = self.total["total"] - self.amortizacion_anticipo()
         return self.subtotal
 
     def get_total_retenciones(self):
         total_retenciones = 0
-        if not hasattr(self, 'subtotal'):
+        if not hasattr(self, "subtotal"):
             self.subtotal = self.get_subtotal()
         for retencion in self.project.retenciones_set.all():
-            if retencion.tipo == 'AMOUNT':
+            if retencion.tipo == "AMOUNT":
                 aux = retencion.valor
             else:
-                aux = self.subtotal * (retencion.valor/100)
-            total_retenciones = total_retenciones+aux
+                aux = self.subtotal * (retencion.valor / 100)
+            total_retenciones = total_retenciones + aux
         return total_retenciones
 
     def get_retenciones(self):
@@ -439,48 +568,50 @@ class Estimate(models.Model):
         aux = {}
         subtotal = self.get_subtotal()
         for retencion in self.project.retenciones_set.all():
-            aux['descripcion'] = retencion.nombre
-            aux['valor'] = retencion.valor
-            if retencion.tipo == 'AMOUNT':
-                aux['monto'] = retencion.valor
+            aux["descripcion"] = retencion.nombre
+            aux["valor"] = retencion.valor
+            if retencion.tipo == "AMOUNT":
+                aux["monto"] = retencion.valor
             else:
-                aux['monto'] = subtotal * (retencion.valor/100)
+                aux["monto"] = subtotal * (retencion.valor / 100)
             retenciones.append(aux.copy())
         return retenciones
 
     def get_total_final(self):
-        if not hasattr(self, 'subtotal'):
+        if not hasattr(self, "subtotal"):
             self.subtotal = self.get_subtotal()
         total_retenciones = self.get_total_retenciones()
         return self.subtotal - total_retenciones
 
     def anotaciones_conceptos(self):
-        conceptos = Concept.especial.filter(estimate_concept=self).order_by('pk')
+        conceptos = Concept.especial.filter(estimate_concept=self).order_by("pk")
         self.conceptos = conceptos.add_estimateconcept_properties(self.consecutive)
         return self.conceptos
 
     class Meta:
-        verbose_name = 'Estimacion'
-        verbose_name_plural = 'Estimaciones'
+        verbose_name = "Estimacion"
+        verbose_name_plural = "Estimaciones"
 
 
 class ConceptSet(models.QuerySet):
 
     def estimado_a_la_fecha(self, estimate_consecutive):
-        estimateconcept = EstimateConcept.especial.estimado_a_la_fecha(estimate_consecutive)
+        estimateconcept = EstimateConcept.especial.estimado_a_la_fecha(
+            estimate_consecutive
+        )
         return self.annotate(
             acumulado=models.Subquery(
-                estimateconcept,
-                output_field=models.DecimalField()
+                estimateconcept, output_field=models.DecimalField()
             )
         )
 
     def estimado_anterior(self, estimate_consecutive):
-        estimateconcept = EstimateConcept.especial.estimado_anterior(estimate_consecutive)
+        estimateconcept = EstimateConcept.especial.estimado_anterior(
+            estimate_consecutive
+        )
         return self.annotate(
             anterior=models.Subquery(
-                estimateconcept,
-                output_field=models.DecimalField()
+                estimateconcept, output_field=models.DecimalField()
             )
         )
 
@@ -488,15 +619,16 @@ class ConceptSet(models.QuerySet):
         estimateconcept = EstimateConcept.especial.esta_estimacion(estimate_consecutive)
         return self.annotate(
             estaestimacion=models.Subquery(
-                estimateconcept,
-                output_field=models.DecimalField()
+                estimateconcept, output_field=models.DecimalField()
             )
         )
 
     def add_estimateconcept_ids(self, estimate_consecutive):
-        conceptos_estimacion = EstimateConcept.especial.filtro_esta_estimacion(estimate_consecutive).filter(
-            concept=models.OuterRef('pk')
-        ).values('id')
+        conceptos_estimacion = (
+            EstimateConcept.especial.filtro_esta_estimacion(estimate_consecutive)
+            .filter(concept=models.OuterRef("pk"))
+            .values("id")
+        )
         return self.annotate(
             conceptoestimacion=models.Subquery(
                 conceptos_estimacion, output_field=models.IntegerField()
@@ -504,15 +636,21 @@ class ConceptSet(models.QuerySet):
         )
 
     def concept_image_count(self):
-        return self.annotate(image_count=models.Count('estimateconcept__imageestimateconcept'))
+        return self.annotate(
+            image_count=models.Count("estimateconcept__imageestimateconcept")
+        )
 
     def concept_vertice_count(self):
-        return self.annotate(vertice_count=models.Count('estimateconcept__vertices', distinct=True))
+        return self.annotate(
+            vertice_count=models.Count("estimateconcept__vertices", distinct=True)
+        )
 
     def get_observations(self, estimate_consecutive):
-        conceptos_estimacion = EstimateConcept.especial.filtro_esta_estimacion(estimate_consecutive).filter(
-            concept=models.OuterRef('pk')
-        ).values('observations')
+        conceptos_estimacion = (
+            EstimateConcept.especial.filtro_esta_estimacion(estimate_consecutive)
+            .filter(concept=models.OuterRef("pk"))
+            .values("observations")
+        )
         return self.annotate(
             observations=models.Subquery(
                 conceptos_estimacion, output_field=models.TextField()
@@ -520,53 +658,65 @@ class ConceptSet(models.QuerySet):
         )
 
     def total_imagenes_estimacion(self):
-        return self.aggregate(total_images=models.Sum('image_count'))
+        return self.aggregate(total_images=models.Sum("image_count"))
 
     def importe_total_esta_estimacion(self):
-        return self.aggregate(total=Sum('estaestimacion'))
+        return self.aggregate(total=Sum("estaestimacion"))
 
     def importe_total_anterior(self):
-        return self.aggregate(total=Sum('anterior'))
+        return self.aggregate(total=Sum("anterior"))
 
     def importe_total_acumulado(self):
-        return self.aggregate(total=Sum('acumulado'))
+        return self.aggregate(total=Sum("acumulado"))
 
     def importe_total_contratado(self):
-        return self.aggregate(total=Sum(F('unit_price') * F('total_cuantity')))
+        return self.aggregate(total=Sum(F("unit_price") * F("total_cuantity")))
 
     def add_estimateconcept_properties(self, estimate_consecutive):
         return (
-                self
-                .estimado_a_la_fecha(estimate_consecutive)
-                .estimado_anterior(estimate_consecutive)
-                .esta_estimacion(estimate_consecutive)
-                .add_estimateconcept_ids(estimate_consecutive)
-                .concept_image_count()
-                .concept_vertice_count()
-                .get_observations(estimate_consecutive)
-                .select_related('unit')
+            self.estimado_a_la_fecha(estimate_consecutive)
+            .estimado_anterior(estimate_consecutive)
+            .esta_estimacion(estimate_consecutive)
+            .add_estimateconcept_ids(estimate_consecutive)
+            .concept_image_count()
+            .concept_vertice_count()
+            .get_observations(estimate_consecutive)
+            .select_related("unit")
         )
 
 
 class Concept(models.Model):
     """
-        Model that represents an estimate concept
+    Model that represents an estimate concept
     """
-    code = models.CharField(max_length=50)
-    concept_text = models.TextField()
-    project = models.ForeignKey(Contrato, on_delete=models.CASCADE)
-    estimate_concept = models.ManyToManyField(Estimate, through='EstimateConcept')
-    unit = models.ForeignKey(Units, on_delete=models.CASCADE)
-    total_cuantity = models.DecimalField('cuantity', max_digits=12, decimal_places=2, default=0.0)
-    unit_price = models.DecimalField('unit_price', max_digits=12, decimal_places=2, default=0.0)
 
-    objects = models.Manager()
-    especial = ConceptSet.as_manager()
+    code: "models.CharField[str]" = models.CharField(max_length=50)
+    concept_text: "models.TextField[str]" = models.TextField()
+    project: "models.ForeignKey[Contrato]" = models.ForeignKey(
+        Contrato, on_delete=models.CASCADE
+    )
+    estimate_concept: "models.ManyToManyField[Estimate, Estimate]" = (
+        models.ManyToManyField(Estimate, through="EstimateConcept")
+    )
+    unit: "models.ForeignKey[Units]" = models.ForeignKey(
+        Units, on_delete=models.CASCADE
+    )
+    total_cuantity: "models.DecimalField[Decimal]" = models.DecimalField(
+        "cuantity", max_digits=12, decimal_places=2, default=Decimal(0.0)
+    )
+    unit_price: "models.DecimalField[Decimal]" = models.DecimalField(
+        "unit_price", max_digits=12, decimal_places=2, default=Decimal(0.0)
+    )
+
+    objects: "ClassVar[models.Manager]" = models.Manager()
+    especial: "ClassVar[ConceptSet]" = ConceptSet.as_manager()
+
+    conceptoestimacion: "ClassVar[models.QuerySet['EstimateConcept']]"
 
     class Meta:
-        verbose_name = 'Concepto'
-        verbose_name_plural = 'Conceptos'
-        unique_together = ('concept_text', 'project')
+        verbose_name = "Concepto"
+        verbose_name_plural = "Conceptos"
+        unique_together = ("concept_text", "project")
 
     def __str__(self):
         return self.concept_text
@@ -575,7 +725,7 @@ class Concept(models.Model):
         if not self.unit.company == self.project.contraparte.company:
             raise ValidationError(
                 {
-                    'unit': 'El concepto debe pertenecer a la misma compañia que su unidad.'
+                    "unit": "El concepto debe pertenecer a la misma compañia que su unidad."
                 }
             )
 
@@ -587,122 +737,187 @@ class Concept(models.Model):
             new_attr = getattr(self, attr)
         else:
             raise AttributeError(
-                'El atributo %s no existe en %s, es necesario ejecutar '
-                'add_estimateconcept_properties desde la instancia'
-                'de una Estimación.' % (attr, self.concept_text)
-                )
+                "El atributo %s no existe en %s, es necesario ejecutar "
+                "add_estimateconcept_properties desde la instancia"
+                "de una Estimación." % (attr, self.concept_text)
+            )
         if new_attr is not None:
             return new_attr / self.unit_price
         else:
-            return Decimal('0.00')
+            return Decimal("0.00")
 
     def cantidad_estimado_anterior(self):
-        return self.unit_price_operations('anterior')
+        return self.unit_price_operations("anterior")
 
     def cantidad_estimado_ala_fecha(self):
-        return self.unit_price_operations('acumulado')
+        return self.unit_price_operations("acumulado")
 
     def cantidad_esta_estimacion(self):
-        return self.unit_price_operations('estaestimacion')
+        return self.unit_price_operations("estaestimacion")
 
     def anotar_imagenes(self):
-        if hasattr(self, 'conceptoestimacion'):
-            return ImageEstimateConcept.objects.filter(estimateconcept=self.conceptoestimacion)
+        if hasattr(self, "conceptoestimacion"):
+            return ImageEstimateConcept.objects.filter(
+                estimateconcept=self.conceptoestimacion
+            )
         else:
-            raise AttributeError('No es posible realizar la operación porque es necesario '
-                                 'que se ejecute add_estimateconcept_properties o al menos '
-                                 'add_estimateconcept_ids desde la instancia de un QuerySet '
-                                 'con el manejador ConceptSet')
+            raise AttributeError(
+                "No es posible realizar la operación porque es necesario "
+                "que se ejecute add_estimateconcept_properties o al menos "
+                "add_estimateconcept_ids desde la instancia de un QuerySet "
+                "con el manejador ConceptSet"
+            )
 
     def anotar_vertices(self):
-        if hasattr(self, 'conceptoestimacion'):
+        if hasattr(self, "conceptoestimacion"):
             return Vertices.objects.filter(estimateconcept=self.conceptoestimacion)
         else:
-            raise AttributeError('No es posible realizar la operación porque es necesario '
-                                 'que se ejecute add_estimateconcept_properties o al menos '
-                                 'add_estimateconcept_ids desde la instancia de un QuerySet '
-                                 'con el manejador ConceptSet')
+            raise AttributeError(
+                "No es posible realizar la operación porque es necesario "
+                "que se ejecute add_estimateconcept_properties o al menos "
+                "add_estimateconcept_ids desde la instancia de un QuerySet "
+                "con el manejador ConceptSet"
+            )
 
 
 class ECSet(models.QuerySet):
 
     def apuntar_total_estimado(self):
-        return self.annotate(
-            estimado=Sum(F('cuantity_estimated') * F('concept__unit_price')),
-        ).values('estimado').filter(concept=models.OuterRef('pk'))
+        return (
+            self.annotate(
+                estimado=Sum(F("cuantity_estimated") * F("concept__unit_price")),
+            )
+            .values("estimado")
+            .filter(concept=models.OuterRef("pk"))
+        )
 
-    def filtro_estimado_a_la_fecha(self, estimate_consecutive):
-        return self.filter(
+    def filtro_estimado_a_la_fecha(
+        self, estimate_consecutive: int
+    ) -> "ValuesQuerySet[EstimateConcept, dict[str, int]]":
+        return (
+            self.filter(
                 estimate__consecutive__lte=estimate_consecutive,
-                # concept=models.OuterRef('pk')
-            ).order_by().values('concept')
+            )
+            .order_by()
+            .values("concept")
+        )
 
-    def filtro_estimado_anterior(self, estimate_consecutive):
+    def filtro_estimado_anterior(
+        self, estimate_consecutive: int
+    ) -> "ValuesQuerySet[EstimateConcept, dict[str, int]]":
         consecutivo = estimate_consecutive - 1
-        return self.filter(
+        return (
+            self.filter(
                 estimate__consecutive=consecutivo,
-                # concept=models.OuterRef('pk')
-            ).order_by().values('concept')
+            )
+            .order_by()
+            .values("concept")
+        )
 
-    def filtro_esta_estimacion(self, estimate_consecutive):
-        return self.filter(
+    def filtro_esta_estimacion(
+        self, estimate_consecutive: int
+    ) -> "ValuesQuerySet[EstimateConcept, dict[str, int]]":
+        return (
+            self.filter(
                 estimate__consecutive=estimate_consecutive,
-                # concept=models.OuterRef('pk')
-            ).order_by().values('concept')
+            )
+            .order_by()
+            .values("concept")
+        )
 
-    def estimado_anterior(self, estimate_consecutive):
-        return self.filtro_estimado_anterior(estimate_consecutive).apuntar_total_estimado()
+    def estimado_anterior(
+        self, estimate_consecutive: int
+    ) -> "ValuesQuerySet[EstimateConcept, dict[str, int]]":
+        return self.filtro_estimado_anterior(
+            estimate_consecutive
+        ).apuntar_total_estimado()
 
-    def estimado_a_la_fecha(self, estimate_consecutive):
-        return self.filtro_estimado_a_la_fecha(estimate_consecutive).apuntar_total_estimado()
+    def estimado_a_la_fecha(
+        self, estimate_consecutive
+    ) -> "ValuesQuerySet[EstimateConcept, dict[str, int]]":
+        return self.filtro_estimado_a_la_fecha(
+            estimate_consecutive
+        ).apuntar_total_estimado()
 
-    def esta_estimacion(self, estimate_consecutive):
-        return self.filtro_esta_estimacion(estimate_consecutive).apuntar_total_estimado()
+    def esta_estimacion(
+        self, estimate_consecutive
+    ) -> "ValuesQuerySet[EstimateConcept, dict[str, int]]":
+        return self.filtro_esta_estimacion(
+            estimate_consecutive
+        ).apuntar_total_estimado()
 
 
 class EstimateConcept(models.Model):
     """
-        Intermediate model for ManytoManyField between Concept and Estimate
+    Intermediate model for ManytoManyField between Concept and Estimate
     """
-    estimate = models.ForeignKey(Estimate, on_delete=models.CASCADE)
-    concept = models.ForeignKey(Concept, on_delete=models.CASCADE)
-    cuantity_estimated = models.DecimalField('cuantity_estimated', max_digits=20, decimal_places=8)
-    observations = models.TextField(blank=True, null=True)
-    objects = models.Manager()
-    especial = ECSet.as_manager()
+
+    estimate: "models.ForeignKey[Estimate]" = models.ForeignKey(
+        Estimate, on_delete=models.CASCADE
+    )
+    concept: "models.ForeignKey[Concept]" = models.ForeignKey(
+        Concept, on_delete=models.CASCADE
+    )
+    cuantity_estimated: "models.DecimalField[Decimal]" = models.DecimalField(
+        "cuantity_estimated", max_digits=20, decimal_places=8
+    )
+    observations: "models.TextField[str | None]" = models.TextField(
+        blank=True, null=True
+    )
+
+    objects: "ClassVar[models.Manager['EstimateConcept']]" = models.Manager()
+    especial: "ClassVar[ECSet]" = ECSet.as_manager()
 
     class Meta:
-        verbose_name = 'Estimado por Concepto'
-        verbose_name_plural = 'Estimaciones por Conceptos'
+        verbose_name = "Estimado por Concepto"
+        verbose_name_plural = "Estimaciones por Conceptos"
 
     def __str__(self):
         return self.concept.concept_text + str(self.cuantity_estimated)
 
 
 class Vertices(models.Model):
-    nombre = models.CharField('Nombre del Vertice', max_length=80)
-    largo = models.DecimalField('largo', max_digits=10, decimal_places=2, default=0)
-    ancho = models.DecimalField('ancho', max_digits=10, decimal_places=2, default=0)
-    alto = models.DecimalField('alto', max_digits=10, decimal_places=2, default=0)
-    piezas = models.DecimalField('número de piezas', max_digits=10, decimal_places=2, default=0)
-    estimateconcept = models.ForeignKey(EstimateConcept, on_delete=models.CASCADE)
+    nombre: "models.CharField[str]" = models.CharField(
+        "Nombre del Vertice", max_length=80
+    )
+    largo: "models.DecimalField[Decimal]" = models.DecimalField(
+        "largo", max_digits=10, decimal_places=2, default=Decimal("0.00")
+    )
+    ancho: "models.DecimalField[Decimal]" = models.DecimalField(
+        "ancho", max_digits=10, decimal_places=2, default=Decimal("0.00")
+    )
+    alto: "models.DecimalField[Decimal]" = models.DecimalField(
+        "alto", max_digits=10, decimal_places=2, default=Decimal("0.00")
+    )
+    piezas: "models.DecimalField[Decimal]" = models.DecimalField(
+        "número de piezas", max_digits=10, decimal_places=2, default=Decimal("0.00")
+    )
+    estimateconcept: "models.ForeignKey[EstimateConcept]" = models.ForeignKey(
+        EstimateConcept, on_delete=models.CASCADE
+    )
 
 
 class ImageEstimateConceptSet(models.QuerySet):
 
-    def size_per_customer(self, customer):
+    def size_per_customer(self, customer) -> int | None:
         return self.filter(
-                estimateconcept__concept__project__cliente__company__customer=customer
-            ).aggregate(Sum('size'))['size__sum']
+            estimateconcept__concept__project__cliente__company__customer=customer
+        ).aggregate(Sum("size"))["size__sum"]
 
 
 class ImageEstimateConcept(models.Model):
-    image = models.ImageField(upload_to=utils.get_image_directory_path)
-    estimateconcept = models.ForeignKey(EstimateConcept, on_delete=models.CASCADE)
-    size = models.BigIntegerField('Tamaño del archivo en kb', null=True)
+    image: "models.ImageField" = models.ImageField(
+        upload_to=utils.get_image_directory_path
+    )
+    estimateconcept: "models.ForeignKey[EstimateConcept]" = models.ForeignKey(
+        EstimateConcept, on_delete=models.CASCADE
+    )
+    size: "models.BigIntegerField[int | None]" = models.BigIntegerField(
+        "Tamaño del archivo en kb", null=True
+    )
 
-    objects = models.Manager()
-    especial = ImageEstimateConceptSet.as_manager()
+    objects: "ClassVar[models.Manager]" = models.Manager()
+    especial: "ClassVar[ImageEstimateConceptSet]" = ImageEstimateConceptSet.as_manager()
 
     def save(self, *args, **kwargs):
         # Resize/modify the image
@@ -712,8 +927,15 @@ class ImageEstimateConcept(models.Model):
         super(ImageEstimateConcept, self).save(*args, **kwargs)
 
     class Meta:
-        verbose_name = 'Imagen_generador'
-        verbose_name_plural = 'Imagenes_generadores'
+        verbose_name = "Imagen_generador"
+        verbose_name_plural = "Imagenes_generadores"
 
     def __str__(self):
-        return '{} {}'.format(self.id, repr(self.estimateconcept))
+        return "{} {}".format(self.pk, repr(self.estimateconcept))
+        return "{} {}".format(self.pk, repr(self.estimateconcept))
+        return "{} {}".format(self.pk, repr(self.estimateconcept))
+        return "{} {}".format(self.pk, repr(self.estimateconcept))
+        return "{} {}".format(self.pk, repr(self.estimateconcept))
+        return "{} {}".format(self.pk, repr(self.estimateconcept))
+        return "{} {}".format(self.pk, repr(self.estimateconcept))
+        return "{} {}".format(self.pk, repr(self.estimateconcept))

@@ -1,29 +1,32 @@
 import string
+
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import Group
+
 import factory
 import factory.fuzzy
-from django.contrib.auth import get_user_model
-from construbot.users.models import Customer, Company, NivelAcceso
-from django.contrib.auth.models import Group
+
+from construbot.users.models import Company, Customer, NivelAcceso
 
 User = get_user_model()
 
 
 class CustomerFactory(factory.django.DjangoModelFactory):
-    customer_name = factory.Sequence(lambda n: 'customer-{0}'.format(n))
+    customer_name = factory.Sequence(lambda n: "customer-{0}".format(n))
 
     class Meta:
         model = Customer
 
 
 class GroupFactory(factory.django.DjangoModelFactory):
-    name = factory.Sequence(lambda n: 'group-{0}'.format(n))
+    name = factory.Sequence(lambda n: "group-{0}".format(n))
 
     class Meta:
         model = Group
 
 
 class CompanyFactory(factory.django.DjangoModelFactory):
-    company_name = factory.Sequence(lambda n: 'company-{0}'.format(n))
+    company_name = factory.Sequence(lambda n: "company-{0}".format(n))
     customer = factory.SubFactory(CustomerFactory)
 
     class Meta:
@@ -32,16 +35,18 @@ class CompanyFactory(factory.django.DjangoModelFactory):
 
 class NivelAccesoFactory(factory.django.DjangoModelFactory):
     nivel = factory.fuzzy.FuzzyInteger(0, 5)
-    nombre = factory.fuzzy.FuzzyText(length=8, chars=string.ascii_letters, prefix='nivel_')
+    nombre = factory.fuzzy.FuzzyText(
+        length=8, chars=string.ascii_letters, prefix="nivel_"
+    )
 
     class Meta:
         model = NivelAcceso
 
 
 class UserFactory(factory.django.DjangoModelFactory):
-    username = factory.Sequence(lambda n: 'user-{0}'.format(n))
-    email = factory.Sequence(lambda n: 'user-{0}@example.com'.format(n))
-    password = factory.PostGenerationMethodCall('set_password', 'password')
+    username = factory.Sequence(lambda n: "user-{0}".format(n))
+    email = factory.Sequence(lambda n: "user-{0}@example.com".format(n))
+    password = factory.PostGenerationMethodCall("set_password", "password")
     customer = factory.SubFactory(CustomerFactory)
     nivel_acceso = factory.SubFactory(NivelAccesoFactory)
 
@@ -75,5 +80,5 @@ class UserFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = User
-        django_get_or_create = ('username', 'nivel_acceso')
+        django_get_or_create = ("username", "nivel_acceso")
         skip_postgeneration_save = True
