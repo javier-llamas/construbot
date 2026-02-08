@@ -4,26 +4,25 @@
 #
 #    pip-compile --output-file=requirements/local.txt requirements/local.in
 #
-
 alabaster==1.0.0
     # via sphinx
 amqp==5.3.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   kombu
 appnope==0.1.4
-    # via -r requirements/local.in
+    # via -r local.in
 argon2-cffi==25.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
 argon2-cffi-bindings==25.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   argon2-cffi
 asgiref==3.11.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
     #   django-allauth
 asttokens==2.2.1
@@ -33,51 +32,51 @@ attrs==25.4.0
     #   outcome
     #   trio
 awesome-slugify==1.6.5
-    # via -r requirements/base.txt
+    # via -r base.txt
 babel==2.17.0
     # via sphinx
 backcall==0.2.0
     # via ipython
 beautifulsoup4==4.14.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-bootstrap4
 billiard==4.2.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 black==26.1.0
-    # via -r requirements/local.in
+    # via -r local.in
 boto3==1.42.41
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-storages
 botocore==1.42.41
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   boto3
     #   s3transfer
 build==1.4.0
     # via pip-tools
 celery==5.4.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 certifi==2026.1.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
     #   selenium
     #   sentry-sdk
 cffi==2.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   argon2-cffi-bindings
 charset-normalizer==3.4.4
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
 click==8.3.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   black
     #   celery
     #   click-didyoumean
@@ -86,34 +85,34 @@ click==8.3.1
     #   pip-tools
 click-didyoumean==0.3.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 click-plugins==1.1.1.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 click-repl==0.3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 coreapi==2.3.3
-    # via -r requirements/local.in
+    # via -r local.in
 coreschema==0.0.4
     # via coreapi
 coverage[toml]==7.6.10
     # via
-    #   -r requirements/local.in
+    #   -r local.in
     #   coveralls
     #   django-coverage-plugin
 coveralls==4.0.2
-    # via -r requirements/local.in
+    # via -r local.in
 decorator==5.1.1
     # via
     #   ipdb
     #   ipython
 django[argon2]==5.2.11
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-allauth
     #   django-anymail
     #   django-appconf
@@ -130,66 +129,66 @@ django[argon2]==5.2.11
     #   djangorestframework
     #   djangorestframework-simplejwt
 django-allauth==65.14.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-anymail==11.1
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-appconf==1.2.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-compressor
 django-autocomplete-light==3.11.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-bootstrap4==23.4
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-compressor==4.6.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-coverage-plugin==3.1.0
-    # via -r requirements/local.in
+    # via -r local.in
 django-debug-toolbar==6.2.0
-    # via -r requirements/local.in
+    # via -r local.in
 django-environ==0.12.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-extensions==3.2.3
-    # via -r requirements/local.in
+    # via -r local.in
 django-filter==25.2
-    # via -r requirements/local.in
+    # via -r local.in
 django-model-utils==5.0.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-redis==5.4.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-storages[boto3]==1.14.4
-    # via -r requirements/base.txt
+    # via -r base.txt
 django-test-plus==2.2.2
-    # via -r requirements/local.in
+    # via -r local.in
 django-treebeard==4.8.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 djangorestframework==3.16.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   djangorestframework-simplejwt
 djangorestframework-simplejwt==5.5.1
-    # via -r requirements/base.txt
+    # via -r base.txt
 docopt==0.6.2
     # via coveralls
 docutils==0.20.1
     # via sphinx
 et-xmlfile==2.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   openpyxl
 executing==1.2.0
     # via stack-data
 factory-boy==3.3.1
-    # via -r requirements/local.in
+    # via -r local.in
 faker==18.10.1
     # via factory-boy
 gunicorn==23.0.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 h11==0.16.0
     # via wsproto
 idna==3.11
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   requests
     #   trio
 imagesize==1.4.1
@@ -197,31 +196,31 @@ imagesize==1.4.1
 iniconfig==2.0.0
     # via pytest
 ipdb==0.13.13
-    # via -r requirements/local.in
+    # via -r local.in
 ipython==8.14.0
     # via ipdb
 isort==7.0.0
-    # via -r requirements/local.in
+    # via -r local.in
 itypes==1.2.0
     # via coreapi
 jedi==0.18.2
     # via ipython
 jinja2==3.1.6
     # via
-    #   -r requirements/local.in
+    #   -r local.in
     #   coreschema
     #   sphinx
 jmespath==1.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   boto3
     #   botocore
 kombu==5.6.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
 markdown==3.7
-    # via -r requirements/local.in
+    # via -r local.in
 markupsafe==2.1.3
     # via
     #   jinja2
@@ -231,14 +230,14 @@ matplotlib-inline==0.1.6
 mypy-extensions==1.1.0
     # via black
 openpyxl==3.1.5
-    # via -r requirements/base.txt
+    # via -r base.txt
 outcome==1.3.0.post0
     # via
     #   trio
     #   trio-websocket
 packaging==26.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   black
     #   build
     #   gunicorn
@@ -247,6 +246,7 @@ packaging==26.0
     #   pytest
     #   pytest-sugar
     #   sphinx
+    #   wheel
 parso==0.8.3
     # via jedi
 pathspec==1.0.4
@@ -256,27 +256,27 @@ pexpect==4.8.0
 pickleshare==0.7.5
     # via ipython
 pillow==12.1.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 pip-autoremove==0.10.0
-    # via -r requirements/local.in
+    # via -r local.in
 pip-tools==7.5.2
-    # via -r requirements/local.in
+    # via -r local.in
 pipdeptree==2.23.4
-    # via -r requirements/local.in
+    # via -r local.in
 platformdirs==4.5.1
     # via black
 pluggy==1.0.0
     # via pytest
 prompt-toolkit==3.0.52
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   click-repl
     #   ipython
 psycopg[binary]==3.3.2
-    # via -r requirements/base.txt
+    # via -r base.txt
 psycopg-binary==3.3.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   psycopg
 ptyprocess==0.7.0
     # via pexpect
@@ -284,7 +284,7 @@ pure-eval==0.2.2
     # via stack-data
 pycparser==3.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   cffi
 pygments==2.19.2
     # via
@@ -292,7 +292,7 @@ pygments==2.19.2
     #   sphinx
 pyjwt==2.11.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   djangorestframework-simplejwt
 pyproject-hooks==1.0.0
     # via
@@ -305,55 +305,55 @@ pytest==7.3.2
     #   pytest-django
     #   pytest-sugar
 pytest-django==4.9.0
-    # via -r requirements/local.in
+    # via -r local.in
 pytest-sugar==1.0.0
-    # via -r requirements/local.in
+    # via -r local.in
 python-dateutil==2.9.0.post0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   botocore
     #   celery
     #   faker
 pytokens==0.4.1
     # via black
 pytz==2024.2
-    # via -r requirements/base.txt
+    # via -r base.txt
 rcssmin==1.2.2
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-compressor
 redis==5.2.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-redis
 regex==2026.1.15
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   awesome-slugify
 requests==2.32.5
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   coreapi
     #   coveralls
     #   django-anymail
     #   sphinx
 rjsmin==1.2.5
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django-compressor
 ruff==0.15.0
-    # via -r requirements/local.in
+    # via -r local.in
 s3transfer==0.16.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   boto3
 selenium==4.16.0
-    # via -r requirements/local.in
+    # via -r local.in
 sentry-sdk==2.51.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 six==1.17.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   asttokens
     #   python-dateutil
 sniffio==1.3.1
@@ -364,10 +364,10 @@ sortedcontainers==2.4.0
     # via trio
 soupsieve==2.8.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   beautifulsoup4
 sphinx==8.1.3
-    # via -r requirements/local.in
+    # via -r local.in
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
 sphinxcontrib-devhelp==2.0.0
@@ -382,7 +382,7 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 sqlparse==0.5.5
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
     #   django-debug-toolbar
 stack-data==0.6.2
@@ -400,29 +400,29 @@ trio==0.32.0
 trio-websocket==0.12.2
     # via selenium
 types-pytz==2025.2.0.20251108
-    # via -r requirements/local.in
+    # via -r local.in
 types-requests==2.31.0.6
-    # via -r requirements/local.in
+    # via -r local.in
 types-urllib3==1.26.25.14
     # via types-requests
 typing-extensions==4.15.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   beautifulsoup4
 tzdata==2025.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   celery
     #   kombu
 unidecode==0.4.21
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   awesome-slugify
 uritemplate==4.1.1
     # via coreapi
 urllib3[socks]==2.6.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   botocore
     #   django-anymail
     #   requests
@@ -430,20 +430,20 @@ urllib3[socks]==2.6.3
     #   sentry-sdk
 vine==5.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   amqp
     #   celery
     #   kombu
 wcwidth==0.5.3
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   prompt-toolkit
 werkzeug==3.1.5
-    # via -r requirements/local.in
-wheel==0.40.0
+    # via -r local.in
+wheel==0.46.2
     # via pip-tools
 whitenoise==6.11.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 wsproto==1.3.2
     # via trio-websocket
 
